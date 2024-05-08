@@ -11,6 +11,1673 @@
   },
   "snippets": [
     {
+      "regionTag": "cloudkms_v1_generated_Autokey_CreateKeyHandle_sync",
+      "title": "CreateKeyHandleRequestObject",
+      "description": "Snippet for CreateKeyHandle",
+      "file": "AutokeyClient.CreateKeyHandleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateKeyHandle",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.CreateKeyHandle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateKeyHandleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.KeyHandle, Google.Cloud.Kms.V1.CreateKeyHandleMetadata>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "CreateKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.CreateKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_CreateKeyHandle_async",
+      "title": "CreateKeyHandleRequestObjectAsync",
+      "description": "Snippet for CreateKeyHandleAsync",
+      "file": "AutokeyClient.CreateKeyHandleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateKeyHandleAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.CreateKeyHandleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateKeyHandleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.KeyHandle, Google.Cloud.Kms.V1.CreateKeyHandleMetadata>>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "CreateKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.CreateKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_CreateKeyHandle_sync_flattened",
+      "title": "CreateKeyHandle",
+      "description": "Snippet for CreateKeyHandle",
+      "file": "AutokeyClient.CreateKeyHandleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateKeyHandle",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.CreateKeyHandle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyHandle",
+            "name": "keyHandle"
+          },
+          {
+            "type": "System.String",
+            "name": "keyHandleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.KeyHandle, Google.Cloud.Kms.V1.CreateKeyHandleMetadata>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "CreateKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.CreateKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_CreateKeyHandle_async_flattened",
+      "title": "CreateKeyHandleAsync",
+      "description": "Snippet for CreateKeyHandleAsync",
+      "file": "AutokeyClient.CreateKeyHandleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateKeyHandleAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.CreateKeyHandleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyHandle",
+            "name": "keyHandle"
+          },
+          {
+            "type": "System.String",
+            "name": "keyHandleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.KeyHandle, Google.Cloud.Kms.V1.CreateKeyHandleMetadata>>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "CreateKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.CreateKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_CreateKeyHandle_sync_flattened_resourceNames",
+      "title": "CreateKeyHandleResourceNames",
+      "description": "Snippet for CreateKeyHandle",
+      "file": "AutokeyClient.CreateKeyHandleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateKeyHandle",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.CreateKeyHandle",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyHandle",
+            "name": "keyHandle"
+          },
+          {
+            "type": "System.String",
+            "name": "keyHandleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.KeyHandle, Google.Cloud.Kms.V1.CreateKeyHandleMetadata>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "CreateKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.CreateKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_CreateKeyHandle_async_flattened_resourceNames",
+      "title": "CreateKeyHandleResourceNamesAsync",
+      "description": "Snippet for CreateKeyHandleAsync",
+      "file": "AutokeyClient.CreateKeyHandleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateKeyHandleAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.CreateKeyHandleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyHandle",
+            "name": "keyHandle"
+          },
+          {
+            "type": "System.String",
+            "name": "keyHandleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.KeyHandle, Google.Cloud.Kms.V1.CreateKeyHandleMetadata>>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "CreateKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.CreateKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_GetKeyHandle_sync",
+      "title": "GetKeyHandleRequestObject",
+      "description": "Snippet for GetKeyHandle",
+      "file": "AutokeyClient.GetKeyHandleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetKeyHandle",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.GetKeyHandle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetKeyHandleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.KeyHandle",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "GetKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.GetKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_GetKeyHandle_async",
+      "title": "GetKeyHandleRequestObjectAsync",
+      "description": "Snippet for GetKeyHandleAsync",
+      "file": "AutokeyClient.GetKeyHandleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetKeyHandleAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.GetKeyHandleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetKeyHandleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyHandle>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "GetKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.GetKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_GetKeyHandle_sync_flattened",
+      "title": "GetKeyHandle",
+      "description": "Snippet for GetKeyHandle",
+      "file": "AutokeyClient.GetKeyHandleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetKeyHandle",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.GetKeyHandle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.KeyHandle",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "GetKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.GetKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_GetKeyHandle_async_flattened",
+      "title": "GetKeyHandleAsync",
+      "description": "Snippet for GetKeyHandleAsync",
+      "file": "AutokeyClient.GetKeyHandleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetKeyHandleAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.GetKeyHandleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyHandle>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "GetKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.GetKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_GetKeyHandle_sync_flattened_resourceNames",
+      "title": "GetKeyHandleResourceNames",
+      "description": "Snippet for GetKeyHandle",
+      "file": "AutokeyClient.GetKeyHandleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetKeyHandle",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.GetKeyHandle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyHandleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.KeyHandle",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "GetKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.GetKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_GetKeyHandle_async_flattened_resourceNames",
+      "title": "GetKeyHandleResourceNamesAsync",
+      "description": "Snippet for GetKeyHandleAsync",
+      "file": "AutokeyClient.GetKeyHandleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetKeyHandleAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.GetKeyHandleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyHandleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyHandle>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "GetKeyHandle",
+          "fullName": "google.cloud.kms.v1.Autokey.GetKeyHandle",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_ListKeyHandles_sync",
+      "title": "ListKeyHandlesRequestObject",
+      "description": "Snippet for ListKeyHandles",
+      "file": "AutokeyClient.ListKeyHandlesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListKeyHandles",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.ListKeyHandles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListKeyHandlesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ListKeyHandlesResponse",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "ListKeyHandles",
+          "fullName": "google.cloud.kms.v1.Autokey.ListKeyHandles",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_ListKeyHandles_async",
+      "title": "ListKeyHandlesRequestObjectAsync",
+      "description": "Snippet for ListKeyHandlesAsync",
+      "file": "AutokeyClient.ListKeyHandlesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListKeyHandlesAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.ListKeyHandlesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListKeyHandlesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ListKeyHandlesResponse>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "ListKeyHandles",
+          "fullName": "google.cloud.kms.v1.Autokey.ListKeyHandles",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_ListKeyHandles_sync_flattened",
+      "title": "ListKeyHandles",
+      "description": "Snippet for ListKeyHandles",
+      "file": "AutokeyClient.ListKeyHandlesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListKeyHandles",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.ListKeyHandles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ListKeyHandlesResponse",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "ListKeyHandles",
+          "fullName": "google.cloud.kms.v1.Autokey.ListKeyHandles",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_ListKeyHandles_async_flattened",
+      "title": "ListKeyHandlesAsync",
+      "description": "Snippet for ListKeyHandlesAsync",
+      "file": "AutokeyClient.ListKeyHandlesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListKeyHandlesAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.ListKeyHandlesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ListKeyHandlesResponse>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "ListKeyHandles",
+          "fullName": "google.cloud.kms.v1.Autokey.ListKeyHandles",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_ListKeyHandles_sync_flattened_resourceNames",
+      "title": "ListKeyHandlesResourceNames",
+      "description": "Snippet for ListKeyHandles",
+      "file": "AutokeyClient.ListKeyHandlesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListKeyHandles",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.ListKeyHandles",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ListKeyHandlesResponse",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "ListKeyHandles",
+          "fullName": "google.cloud.kms.v1.Autokey.ListKeyHandles",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_Autokey_ListKeyHandles_async_flattened_resourceNames",
+      "title": "ListKeyHandlesResourceNamesAsync",
+      "description": "Snippet for ListKeyHandlesAsync",
+      "file": "AutokeyClient.ListKeyHandlesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListKeyHandlesAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyClient.ListKeyHandlesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ListKeyHandlesResponse>",
+        "client": {
+          "shortName": "AutokeyClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
+        },
+        "method": {
+          "shortName": "ListKeyHandles",
+          "fullName": "google.cloud.kms.v1.Autokey.ListKeyHandles",
+          "service": {
+            "shortName": "Autokey",
+            "fullName": "google.cloud.kms.v1.Autokey"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_UpdateAutokeyConfig_sync",
+      "title": "UpdateAutokeyConfigRequestObject",
+      "description": "Snippet for UpdateAutokeyConfig",
+      "file": "AutokeyAdminClient.UpdateAutokeyConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.UpdateAutokeyConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateAutokeyConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.AutokeyConfig",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.UpdateAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_UpdateAutokeyConfig_async",
+      "title": "UpdateAutokeyConfigRequestObjectAsync",
+      "description": "Snippet for UpdateAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.UpdateAutokeyConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.UpdateAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateAutokeyConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AutokeyConfig>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.UpdateAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_UpdateAutokeyConfig_sync_flattened",
+      "title": "UpdateAutokeyConfig",
+      "description": "Snippet for UpdateAutokeyConfig",
+      "file": "AutokeyAdminClient.UpdateAutokeyConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.UpdateAutokeyConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AutokeyConfig",
+            "name": "autokeyConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.AutokeyConfig",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.UpdateAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_UpdateAutokeyConfig_async_flattened",
+      "title": "UpdateAutokeyConfigAsync",
+      "description": "Snippet for UpdateAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.UpdateAutokeyConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.UpdateAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AutokeyConfig",
+            "name": "autokeyConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AutokeyConfig>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.UpdateAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_GetAutokeyConfig_sync",
+      "title": "GetAutokeyConfigRequestObject",
+      "description": "Snippet for GetAutokeyConfig",
+      "file": "AutokeyAdminClient.GetAutokeyConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.GetAutokeyConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetAutokeyConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.AutokeyConfig",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "GetAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.GetAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_GetAutokeyConfig_async",
+      "title": "GetAutokeyConfigRequestObjectAsync",
+      "description": "Snippet for GetAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.GetAutokeyConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.GetAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetAutokeyConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AutokeyConfig>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "GetAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.GetAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_GetAutokeyConfig_sync_flattened",
+      "title": "GetAutokeyConfig",
+      "description": "Snippet for GetAutokeyConfig",
+      "file": "AutokeyAdminClient.GetAutokeyConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.GetAutokeyConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.AutokeyConfig",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "GetAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.GetAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_GetAutokeyConfig_async_flattened",
+      "title": "GetAutokeyConfigAsync",
+      "description": "Snippet for GetAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.GetAutokeyConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.GetAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AutokeyConfig>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "GetAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.GetAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_GetAutokeyConfig_sync_flattened_resourceNames",
+      "title": "GetAutokeyConfigResourceNames",
+      "description": "Snippet for GetAutokeyConfig",
+      "file": "AutokeyAdminClient.GetAutokeyConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.GetAutokeyConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AutokeyConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.AutokeyConfig",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "GetAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.GetAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_GetAutokeyConfig_async_flattened_resourceNames",
+      "title": "GetAutokeyConfigResourceNamesAsync",
+      "description": "Snippet for GetAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.GetAutokeyConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.GetAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AutokeyConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AutokeyConfig>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "GetAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.GetAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_ShowEffectiveAutokeyConfig_sync",
+      "title": "ShowEffectiveAutokeyConfigRequestObject",
+      "description": "Snippet for ShowEffectiveAutokeyConfig",
+      "file": "AutokeyAdminClient.ShowEffectiveAutokeyConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.ShowEffectiveAutokeyConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.ShowEffectiveAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_ShowEffectiveAutokeyConfig_async",
+      "title": "ShowEffectiveAutokeyConfigRequestObjectAsync",
+      "description": "Snippet for ShowEffectiveAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.ShowEffectiveAutokeyConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.ShowEffectiveAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.ShowEffectiveAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_ShowEffectiveAutokeyConfig_sync_flattened",
+      "title": "ShowEffectiveAutokeyConfig",
+      "description": "Snippet for ShowEffectiveAutokeyConfig",
+      "file": "AutokeyAdminClient.ShowEffectiveAutokeyConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.ShowEffectiveAutokeyConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.ShowEffectiveAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_ShowEffectiveAutokeyConfig_async_flattened",
+      "title": "ShowEffectiveAutokeyConfigAsync",
+      "description": "Snippet for ShowEffectiveAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.ShowEffectiveAutokeyConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.ShowEffectiveAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.ShowEffectiveAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_ShowEffectiveAutokeyConfig_sync_flattened_resourceNames",
+      "title": "ShowEffectiveAutokeyConfigResourceNames",
+      "description": "Snippet for ShowEffectiveAutokeyConfig",
+      "file": "AutokeyAdminClient.ShowEffectiveAutokeyConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveAutokeyConfig",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.ShowEffectiveAutokeyConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.ShowEffectiveAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_AutokeyAdmin_ShowEffectiveAutokeyConfig_async_flattened_resourceNames",
+      "title": "ShowEffectiveAutokeyConfigResourceNamesAsync",
+      "description": "Snippet for ShowEffectiveAutokeyConfigAsync",
+      "file": "AutokeyAdminClient.ShowEffectiveAutokeyConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveAutokeyConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient.ShowEffectiveAutokeyConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse>",
+        "client": {
+          "shortName": "AutokeyAdminClient",
+          "fullName": "Google.Cloud.Kms.V1.AutokeyAdminClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveAutokeyConfig",
+          "fullName": "google.cloud.kms.v1.AutokeyAdmin.ShowEffectiveAutokeyConfig",
+          "service": {
+            "shortName": "AutokeyAdmin",
+            "fullName": "google.cloud.kms.v1.AutokeyAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_EkmService_ListEkmConnections_sync",
       "title": "ListEkmConnectionsRequestObject",
       "description": "Snippet for ListEkmConnections",
