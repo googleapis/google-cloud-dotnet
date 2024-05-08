@@ -578,9 +578,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int SchemaOverrideFieldNumber = 8;
     private global::Google.Cloud.DocumentAI.V1.DocumentSchema schemaOverride_;
     /// <summary>
-    /// Optional. Override the schema of the [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion]. Will return an Invalid
-    /// Argument error if this field is set when the underlying
-    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] doesn't support schema override.
+    /// Optional. Override the schema of the
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion]. Will
+    /// return an Invalid Argument error if this field is set when the underlying
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] doesn't
+    /// support schema override.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1075,7 +1077,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] method.
+  /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessRequest : pb::IMessage<ProcessRequest>
@@ -1187,11 +1190,15 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [Processor][google.cloud.documentai.v1.Processor] or
+    /// Required. The resource name of the
+    /// [Processor][google.cloud.documentai.v1.Processor] or
     /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion]
-    /// to use for processing. If a [Processor][google.cloud.documentai.v1.Processor] is specified, the server will use
-    /// its [default version][google.cloud.documentai.v1.Processor.default_processor_version]. Format:
-    /// `projects/{project}/locations/{location}/processors/{processor}`, or
+    /// to use for processing. If a
+    /// [Processor][google.cloud.documentai.v1.Processor] is specified, the server
+    /// will use its [default
+    /// version][google.cloud.documentai.v1.Processor.default_processor_version].
+    /// Format: `projects/{project}/locations/{location}/processors/{processor}`,
+    /// or
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1223,7 +1230,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int FieldMaskFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// Specifies which fields to include in the [ProcessResponse.document][google.cloud.documentai.v1.ProcessResponse.document]
+    /// Specifies which fields to include in the
+    /// [ProcessResponse.document][google.cloud.documentai.v1.ProcessResponse.document]
     /// output. Only supports top-level document and pages field, so it must be in
     /// the form of `{document_field_name}` or `pages.{page_field_name}`.
     /// </summary>
@@ -1730,9 +1738,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     private string humanReviewOperation_ = "";
     /// <summary>
     /// The name of the operation triggered by the processed document. This field
-    /// is populated only when the [state][google.cloud.documentai.v1.HumanReviewStatus.state] is `HUMAN_REVIEW_IN_PROGRESS`. It has
-    /// the same response type and metadata as the long-running operation returned
-    /// by [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument].
+    /// is populated only when the
+    /// [state][google.cloud.documentai.v1.HumanReviewStatus.state] is
+    /// `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as
+    /// the long-running operation returned by
+    /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1951,7 +1961,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         [pbr::OriginalName("IN_PROGRESS")] InProgress = 3,
         /// <summary>
         /// Some error happened during triggering human review, see the
-        /// [state_message][google.cloud.documentai.v1.HumanReviewStatus.state_message] for details.
+        /// [state_message][google.cloud.documentai.v1.HumanReviewStatus.state_message]
+        /// for details.
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 4,
       }
@@ -1963,7 +1974,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] method.
+  /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessResponse : pb::IMessage<ProcessResponse>
@@ -2275,7 +2287,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of [Processor][google.cloud.documentai.v1.Processor] or
+    /// Required. The resource name of
+    /// [Processor][google.cloud.documentai.v1.Processor] or
     /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
     /// Format: `projects/{project}/locations/{location}/processors/{processor}`,
     /// or
@@ -3258,8 +3271,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int InputGcsSourceFieldNumber = 1;
         private string inputGcsSource_ = "";
         /// <summary>
-        /// The source of the document, same as the [input_gcs_source][google.cloud.documentai.v1.BatchProcessMetadata.IndividualProcessStatus.input_gcs_source] field in the
-        /// request when the batch process started.
+        /// The source of the document, same as the
+        /// [input_gcs_source][google.cloud.documentai.v1.BatchProcessMetadata.IndividualProcessStatus.input_gcs_source]
+        /// field in the request when the batch process started.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3290,8 +3304,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         private string outputGcsDestination_ = "";
         /// <summary>
         /// The Cloud Storage output destination (in the request as
-        /// [DocumentOutputConfig.GcsOutputConfig.gcs_uri][google.cloud.documentai.v1.DocumentOutputConfig.GcsOutputConfig.gcs_uri]) of the processed
-        /// document if it was successful, otherwise empty.
+        /// [DocumentOutputConfig.GcsOutputConfig.gcs_uri][google.cloud.documentai.v1.DocumentOutputConfig.GcsOutputConfig.gcs_uri])
+        /// of the processed document if it was successful, otherwise empty.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3547,8 +3561,9 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes] method.
-  /// Some processor types may require the project be added to an allowlist.
+  /// [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes]
+  /// method. Some processor types may require the project be added to an
+  /// allowlist.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchProcessorTypesRequest : pb::IMessage<FetchProcessorTypesRequest>
@@ -3746,7 +3761,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes] method.
+  /// [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchProcessorTypesResponse : pb::IMessage<FetchProcessorTypesResponse>
@@ -3932,8 +3948,9 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes] method.
-  /// Some processor types may require the project be added to an allowlist.
+  /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+  /// method. Some processor types may require the project be added to an
+  /// allowlist.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProcessorTypesRequest : pb::IMessage<ListProcessorTypesRequest>
@@ -4213,7 +4230,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes] method.
+  /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProcessorTypesResponse : pb::IMessage<ListProcessorTypesResponse>
@@ -4491,8 +4509,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) which owns this collection of Processors.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The parent (project and location) which owns this collection of
+    /// Processors. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4719,7 +4737,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [ListProcessors][google.cloud.documentai.v1.DocumentProcessorService.ListProcessors] method.
+  /// [ListProcessors][google.cloud.documentai.v1.DocumentProcessorService.ListProcessors]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProcessorsResponse : pb::IMessage<ListProcessorsResponse>
@@ -4945,7 +4964,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [GetProcessorType][google.cloud.documentai.v1.DocumentProcessorService.GetProcessorType] method.
+  /// [GetProcessorType][google.cloud.documentai.v1.DocumentProcessorService.GetProcessorType]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProcessorTypeRequest : pb::IMessage<GetProcessorTypeRequest>
@@ -5141,7 +5161,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the [GetProcessor][google.cloud.documentai.v1.DocumentProcessorService.GetProcessor]
+  /// Request message for the
+  /// [GetProcessor][google.cloud.documentai.v1.DocumentProcessorService.GetProcessor]
   /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5339,7 +5360,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [GetProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.GetProcessorVersion] method.
+  /// [GetProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.GetProcessorVersion]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProcessorVersionRequest : pb::IMessage<GetProcessorVersionRequest>
@@ -5588,8 +5610,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project, location and processor) to list all versions.
-    /// Format: `projects/{project}/locations/{location}/processors/{processor}`
+    /// Required. The parent (project, location and processor) to list all
+    /// versions. Format:
+    /// `projects/{project}/locations/{location}/processors/{processor}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7574,9 +7597,10 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [CreateProcessor][google.cloud.documentai.v1.DocumentProcessorService.CreateProcessor] method. Notice
-  /// this request is sent to a regionalized backend service. If the
-  /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] isn't available in that region, the creation fails.
+  /// [CreateProcessor][google.cloud.documentai.v1.DocumentProcessorService.CreateProcessor]
+  /// method. Notice this request is sent to a regionalized backend service. If the
+  /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] isn't available in
+  /// that region, the creation fails.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProcessorRequest : pb::IMessage<CreateProcessorRequest>
@@ -7628,8 +7652,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) under which to create the processor.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The parent (project and location) under which to create the
+    /// processor. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7644,8 +7668,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessorFieldNumber = 2;
     private global::Google.Cloud.DocumentAI.V1.Processor processor_;
     /// <summary>
-    /// Required. The processor to be created, requires [Processor.type][google.cloud.documentai.v1.Processor.type] and
-    /// [Processor.display_name][google.cloud.documentai.v1.Processor.display_name] to be set. Also, the [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+    /// Required. The processor to be created, requires
+    /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+    /// [Processor.display_name][google.cloud.documentai.v1.Processor.display_name]
+    /// to be set. Also, the
+    /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
     /// field must be set if the processor is under CMEK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7825,7 +7852,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [DeleteProcessor][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessor] method.
+  /// [DeleteProcessor][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessor]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProcessorRequest : pb::IMessage<DeleteProcessorRequest>
@@ -8022,7 +8050,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// The long-running operation metadata for the
-  /// [DeleteProcessor][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessor] method.
+  /// [DeleteProcessor][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessor]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProcessorMetadata : pb::IMessage<DeleteProcessorMetadata>
@@ -8228,7 +8257,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor] method.
+  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableProcessorRequest : pb::IMessage<EnableProcessorRequest>
@@ -8425,8 +8455,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor] method.
-  /// Intentionally empty proto for adding fields in future.
+  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor]
+  /// method. Intentionally empty proto for adding fields in future.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableProcessorResponse : pb::IMessage<EnableProcessorResponse>
@@ -8583,7 +8613,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// The long-running operation metadata for the
-  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor] method.
+  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableProcessorMetadata : pb::IMessage<EnableProcessorMetadata>
@@ -8789,7 +8820,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor] method.
+  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableProcessorRequest : pb::IMessage<DisableProcessorRequest>
@@ -8986,8 +9018,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor] method.
-  /// Intentionally empty proto for adding fields in future.
+  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor]
+  /// method. Intentionally empty proto for adding fields in future.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableProcessorResponse : pb::IMessage<DisableProcessorResponse>
@@ -9144,7 +9176,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// The long-running operation metadata for the
-  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor] method.
+  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableProcessorMetadata : pb::IMessage<DisableProcessorMetadata>
@@ -9403,7 +9436,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessorFieldNumber = 1;
     private string processor_ = "";
     /// <summary>
-    /// Required. The resource name of the [Processor][google.cloud.documentai.v1.Processor] to change default version.
+    /// Required. The resource name of the
+    /// [Processor][google.cloud.documentai.v1.Processor] to change default
+    /// version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9418,8 +9453,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int DefaultProcessorVersionFieldNumber = 2;
     private string defaultProcessorVersion_ = "";
     /// <summary>
-    /// Required. The resource name of child [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to use as default.
-    /// Format:
+    /// Required. The resource name of child
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to use as
+    /// default. Format:
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{version}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10050,8 +10086,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project, location and processor) to create the new version for.
-    /// Format: `projects/{project}/locations/{location}/processors/{processor}`.
+    /// Required. The parent (project, location and processor) to create the new
+    /// version for. Format:
+    /// `projects/{project}/locations/{location}/processors/{processor}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10096,7 +10133,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int InputDataFieldNumber = 4;
     private global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest.Types.InputData inputData_;
     /// <summary>
-    /// Optional. The input data used to train the [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
+    /// Optional. The input data used to train the
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10111,8 +10149,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int BaseProcessorVersionFieldNumber = 8;
     private string baseProcessorVersion_ = "";
     /// <summary>
-    /// Optional. The processor version to use as a base for training. This processor version
-    /// must be a child of `parent`. Format:
+    /// Optional. The processor version to use as a base for training. This
+    /// processor version must be a child of `parent`. Format:
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10484,7 +10522,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The input data used to train a new [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
+      /// The input data used to train a new
+      /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InputData : pb::IMessage<InputData>
@@ -11005,8 +11044,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int TrainStepsFieldNumber = 2;
         private int trainSteps_;
         /// <summary>
-        /// Optional. The number of steps to run for model tuning. Valid values are between
-        /// 1 and 400. If not provided, recommended steps will be used.
+        /// Optional. The number of steps to run for model tuning. Valid values are
+        /// between 1 and 400. If not provided, recommended steps will be used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11021,9 +11060,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int LearningRateMultiplierFieldNumber = 3;
         private float learningRateMultiplier_;
         /// <summary>
-        /// Optional. The multiplier to apply to the recommended learning rate. Valid values
-        /// are between 0.1 and 10. If not provided, recommended learning rate will
-        /// be used.
+        /// Optional. The multiplier to apply to the recommended learning rate. Valid
+        /// values are between 0.1 and 10. If not provided, recommended learning rate
+        /// will be used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12005,7 +12044,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Request message for the
-  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument] method.
+  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReviewDocumentRequest : pb::IMessage<ReviewDocumentRequest>
@@ -12080,8 +12120,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int HumanReviewConfigFieldNumber = 1;
     private string humanReviewConfig_ = "";
     /// <summary>
-    /// Required. The resource name of the [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the document will be
-    /// reviewed with.
+    /// Required. The resource name of the
+    /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+    /// document will be reviewed with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12438,7 +12479,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// Response message for the
-  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument] method.
+  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReviewDocumentResponse : pb::IMessage<ReviewDocumentResponse>
@@ -12742,7 +12784,8 @@ namespace Google.Cloud.DocumentAI.V1 {
 
   /// <summary>
   /// The long-running operation metadata for the
-  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument] method.
+  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReviewDocumentOperationMetadata : pb::IMessage<ReviewDocumentOperationMetadata>
@@ -12987,7 +13030,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Evaluates the given [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] against the supplied documents.
+  /// Evaluates the given
+  /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] against the
+  /// supplied documents.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluateProcessorVersionRequest : pb::IMessage<EvaluateProcessorVersionRequest>
@@ -13039,7 +13084,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessorVersionFieldNumber = 1;
     private string processorVersion_ = "";
     /// <summary>
-    /// Required. The resource name of the [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to evaluate.
+    /// Required. The resource name of the
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+    /// evaluate.
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13055,8 +13102,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int EvaluationDocumentsFieldNumber = 3;
     private global::Google.Cloud.DocumentAI.V1.BatchDocumentsInputConfig evaluationDocuments_;
     /// <summary>
-    /// Optional. The documents used in the evaluation. If unspecified, use the processor's
-    /// dataset as evaluation input.
+    /// Optional. The documents used in the evaluation. If unspecified, use the
+    /// processor's dataset as evaluation input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13690,7 +13737,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+    /// Required. The resource name of the
+    /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13836,7 +13884,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Retrieves a list of evaluations for a given [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
+  /// Retrieves a list of evaluations for a given
+  /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEvaluationsRequest : pb::IMessage<ListEvaluationsRequest>
@@ -13889,7 +13938,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to list evaluations for.
+    /// Required. The resource name of the
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to list
+    /// evaluations for.
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
