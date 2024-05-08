@@ -917,8 +917,8 @@ namespace GoogleCSharpSnippets
             ImportDataRequest request = new ImportDataRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                SourceGcsUri = "",
-                DestinationPath = "",
+                SourceGcsBucket = new SourceGcsBucket(),
+                DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
             };
             // Make the request
@@ -953,8 +953,8 @@ namespace GoogleCSharpSnippets
             ImportDataRequest request = new ImportDataRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                SourceGcsUri = "",
-                DestinationPath = "",
+                SourceGcsBucket = new SourceGcsBucket(),
+                DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
             };
             // Make the request
@@ -988,8 +988,8 @@ namespace GoogleCSharpSnippets
             ExportDataRequest request = new ExportDataRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                SourcePath = "",
-                DestinationGcsUri = "",
+                SourceParallelstore = new SourceParallelstore(),
+                DestinationGcsBucket = new DestinationGcsBucket(),
                 RequestId = "",
             };
             // Make the request
@@ -1024,8 +1024,8 @@ namespace GoogleCSharpSnippets
             ExportDataRequest request = new ExportDataRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                SourcePath = "",
-                DestinationGcsUri = "",
+                SourceParallelstore = new SourceParallelstore(),
+                DestinationGcsBucket = new DestinationGcsBucket(),
                 RequestId = "",
             };
             // Make the request

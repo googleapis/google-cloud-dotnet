@@ -77,79 +77,88 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             "A+BBAxITCgZ0YXJnZXQYAyABKAlCA+BBAxIRCgR2ZXJiGAQgASgJQgPgQQMS",
             "GwoOc3RhdHVzX21lc3NhZ2UYBSABKAlCA+BBAxIjChZyZXF1ZXN0ZWRfY2Fu",
             "Y2VsbGF0aW9uGAYgASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24YByABKAlCA+BB",
-            "AyLFAQoRSW1wb3J0RGF0YVJlcXVlc3QSGAoOc291cmNlX2djc191cmkYAiAB",
-            "KAlIABIfChBkZXN0aW5hdGlvbl9wYXRoGAMgASgJQgPgQQFIARI7CgRuYW1l",
-            "GAEgASgJQi3gQQL6QScKJXBhcmFsbGVsc3RvcmUuZ29vZ2xlYXBpcy5jb20v",
-            "SW5zdGFuY2USHwoKcmVxdWVzdF9pZBgEIAEoCUIL4EEB4ozP1wgCCAFCCAoG",
-            "c291cmNlQg0KC2Rlc3RpbmF0aW9uIsUBChFFeHBvcnREYXRhUmVxdWVzdBIa",
-            "Cgtzb3VyY2VfcGF0aBgCIAEoCUID4EEBSAASHQoTZGVzdGluYXRpb25fZ2Nz",
-            "X3VyaRgDIAEoCUgBEjsKBG5hbWUYASABKAlCLeBBAvpBJwolcGFyYWxsZWxz",
-            "dG9yZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIfCgpyZXF1ZXN0X2lkGAQg",
-            "ASgJQgvgQQHijM/XCAIIAUIICgZzb3VyY2VCDQoLZGVzdGluYXRpb24iFAoS",
-            "SW1wb3J0RGF0YVJlc3BvbnNlIm4KEkltcG9ydERhdGFNZXRhZGF0YRJYChJv",
-            "cGVyYXRpb25fbWV0YWRhdGEYASABKAsyPC5nb29nbGUuY2xvdWQucGFyYWxs",
-            "ZWxzdG9yZS52MWJldGEuVHJhbnNmZXJPcGVyYXRpb25NZXRhZGF0YSIUChJF",
-            "eHBvcnREYXRhUmVzcG9uc2UibgoSRXhwb3J0RGF0YU1ldGFkYXRhElgKEm9w",
-            "ZXJhdGlvbl9tZXRhZGF0YRgBIAEoCzI8Lmdvb2dsZS5jbG91ZC5wYXJhbGxl",
-            "bHN0b3JlLnYxYmV0YS5UcmFuc2Zlck9wZXJhdGlvbk1ldGFkYXRhIsICChlU",
-            "cmFuc2Zlck9wZXJhdGlvbk1ldGFkYXRhEjQKC2NyZWF0ZV90aW1lGAEgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKCGNv",
-            "dW50ZXJzGAMgASgLMjMuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFi",
-            "ZXRhLlRyYW5zZmVyQ291bnRlcnMSEwoGc291cmNlGAQgASgJQgPgQQISGAoL",
-            "ZGVzdGluYXRpb24YBSABKAlCA+BBAhJGCg10cmFuc2Zlcl90eXBlGAYgASgO",
-            "Mi8uZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLlRyYW5zZmVy",
-            "VHlwZSKcAQoQVHJhbnNmZXJDb3VudGVycxIVCg1vYmplY3RzX2ZvdW5kGAEg",
-            "ASgDEhMKC2J5dGVzX2ZvdW5kGAIgASgDEhcKD29iamVjdHNfc2tpcHBlZBgD",
-            "IAEoAxIVCg1ieXRlc19za2lwcGVkGAQgASgDEhYKDm9iamVjdHNfY29waWVk",
-            "GAUgASgDEhQKDGJ5dGVzX2NvcGllZBgGIAEoAypFCgxUcmFuc2ZlclR5cGUS",
-            "HQoZVFJBTlNGRVJfVFlQRV9VTlNQRUNJRklFRBAAEgoKBklNUE9SVBABEgoK",
-            "BkVYUE9SVBACMs0MCg1QYXJhbGxlbHN0b3JlEsYBCg1MaXN0SW5zdGFuY2Vz",
-            "EjcuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLkxpc3RJbnN0",
-            "YW5jZXNSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFi",
-            "ZXRhLkxpc3RJbnN0YW5jZXNSZXNwb25zZSJC2kEGcGFyZW50gtPkkwIzEjEv",
-            "djFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFu",
-            "Y2VzErMBCgtHZXRJbnN0YW5jZRI1Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0",
-            "b3JlLnYxYmV0YS5HZXRJbnN0YW5jZVJlcXVlc3QaKy5nb29nbGUuY2xvdWQu",
-            "cGFyYWxsZWxzdG9yZS52MWJldGEuSW5zdGFuY2UiQNpBBG5hbWWC0+STAjMS",
-            "MS92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5j",
-            "ZXMvKn0S7QEKDkNyZWF0ZUluc3RhbmNlEjguZ29vZ2xlLmNsb3VkLnBhcmFs",
-            "bGVsc3RvcmUudjFiZXRhLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24igQHKQR0KCEluc3RhbmNlEhFPcGVy",
-            "YXRpb25NZXRhZGF0YdpBG3BhcmVudCxpbnN0YW5jZSxpbnN0YW5jZV9pZILT",
-            "5JMCPSIxL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L2luc3RhbmNlczoIaW5zdGFuY2US7wEKDlVwZGF0ZUluc3RhbmNlEjguZ29v",
-            "Z2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLlVwZGF0ZUluc3RhbmNl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igwHKQR0K",
-            "CEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YdpBFGluc3RhbmNlLHVwZGF0",
-            "ZV9tYXNrgtPkkwJGMjovdjFiZXRhL3tpbnN0YW5jZS5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZRLYAQoORGVs",
-            "ZXRlSW5zdGFuY2USOC5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJl",
-            "dGEuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiJtykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJh",
-            "dGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCMyoxL3YxYmV0YS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfRLVAQoKSW1wb3J0RGF0",
-            "YRI0Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5JbXBvcnRE",
-            "YXRhUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icspB",
-            "KAoSSW1wb3J0RGF0YVJlc3BvbnNlEhJJbXBvcnREYXRhTWV0YWRhdGGC0+ST",
-            "AkEiPC92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
-            "YW5jZXMvKn06aW1wb3J0RGF0YToBKhLVAQoKRXhwb3J0RGF0YRI0Lmdvb2ds",
-            "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5FeHBvcnREYXRhUmVxdWVz",
-            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icspBKAoSRXhwb3J0",
-            "RGF0YVJlc3BvbnNlEhJFeHBvcnREYXRhTWV0YWRhdGGC0+STAkEiPC92MWJl",
-            "dGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06",
-            "ZXhwb3J0RGF0YToBKhpQykEccGFyYWxsZWxzdG9yZS5nb29nbGVhcGlzLmNv",
-            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm1CpgMKJWNvbS5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJl",
-            "dGFCElBhcmFsbGVsc3RvcmVQcm90b1ABWktjbG91ZC5nb29nbGUuY29tL2dv",
-            "L3BhcmFsbGVsc3RvcmUvYXBpdjFiZXRhL3BhcmFsbGVsc3RvcmVwYjtwYXJh",
-            "bGxlbHN0b3JlcGKqAiFHb29nbGUuQ2xvdWQuUGFyYWxsZWxzdG9yZS5WMUJl",
-            "dGHKAiFHb29nbGVcQ2xvdWRcUGFyYWxsZWxzdG9yZVxWMWJldGHqAiRHb29n",
-            "bGU6OkNsb3VkOjpQYXJhbGxlbHN0b3JlOjpWMWJldGHqQU4KHmNvbXB1dGUu",
-            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIscHJvamVjdHMve3Byb2plY3R9L2ds",
-            "b2JhbC9uZXR3b3Jrcy97bmV0d29ya33qQVkKHmNvbXB1dGUuZ29vZ2xlYXBp",
-            "cy5jb20vQWRkcmVzcxI3cHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMve3Jl",
-            "Z2lvbn0vYWRkcmVzc2VzL3thZGRyZXNzfWIGcHJvdG8z"));
+            "AyIjCg9Tb3VyY2VHY3NCdWNrZXQSEAoDdXJpGAEgASgJQgPgQQIiKAoURGVz",
+            "dGluYXRpb25HY3NCdWNrZXQSEAoDdXJpGAEgASgJQgPgQQIiKAoTU291cmNl",
+            "UGFyYWxsZWxzdG9yZRIRCgRwYXRoGAEgASgJQgPgQQEiLQoYRGVzdGluYXRp",
+            "b25QYXJhbGxlbHN0b3JlEhEKBHBhdGgYASABKAlCA+BBASK9AgoRSW1wb3J0",
+            "RGF0YVJlcXVlc3QSTwoRc291cmNlX2djc19idWNrZXQYAiABKAsyMi5nb29n",
+            "bGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuU291cmNlR2NzQnVja2V0",
+            "SAASYAoZZGVzdGluYXRpb25fcGFyYWxsZWxzdG9yZRgDIAEoCzI7Lmdvb2ds",
+            "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5EZXN0aW5hdGlvblBhcmFs",
+            "bGVsc3RvcmVIARI7CgRuYW1lGAEgASgJQi3gQQL6QScKJXBhcmFsbGVsc3Rv",
+            "cmUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USHwoKcmVxdWVzdF9pZBgEIAEo",
+            "CUIL4EEB4ozP1wgCCAFCCAoGc291cmNlQg0KC2Rlc3RpbmF0aW9uIr0CChFF",
+            "eHBvcnREYXRhUmVxdWVzdBJWChRzb3VyY2VfcGFyYWxsZWxzdG9yZRgCIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5Tb3VyY2VQ",
+            "YXJhbGxlbHN0b3JlSAASWQoWZGVzdGluYXRpb25fZ2NzX2J1Y2tldBgDIAEo",
+            "CzI3Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5EZXN0aW5h",
+            "dGlvbkdjc0J1Y2tldEgBEjsKBG5hbWUYASABKAlCLeBBAvpBJwolcGFyYWxs",
+            "ZWxzdG9yZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIfCgpyZXF1ZXN0X2lk",
+            "GAQgASgJQgvgQQHijM/XCAIIAUIICgZzb3VyY2VCDQoLZGVzdGluYXRpb24i",
+            "FAoSSW1wb3J0RGF0YVJlc3BvbnNlIm4KEkltcG9ydERhdGFNZXRhZGF0YRJY",
+            "ChJvcGVyYXRpb25fbWV0YWRhdGEYASABKAsyPC5nb29nbGUuY2xvdWQucGFy",
+            "YWxsZWxzdG9yZS52MWJldGEuVHJhbnNmZXJPcGVyYXRpb25NZXRhZGF0YSIU",
+            "ChJFeHBvcnREYXRhUmVzcG9uc2UibgoSRXhwb3J0RGF0YU1ldGFkYXRhElgK",
+            "Em9wZXJhdGlvbl9tZXRhZGF0YRgBIAEoCzI8Lmdvb2dsZS5jbG91ZC5wYXJh",
+            "bGxlbHN0b3JlLnYxYmV0YS5UcmFuc2Zlck9wZXJhdGlvbk1ldGFkYXRhIsIC",
+            "ChlUcmFuc2Zlck9wZXJhdGlvbk1ldGFkYXRhEjQKC2NyZWF0ZV90aW1lGAEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90",
+            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUK",
+            "CGNvdW50ZXJzGAMgASgLMjMuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUu",
+            "djFiZXRhLlRyYW5zZmVyQ291bnRlcnMSEwoGc291cmNlGAQgASgJQgPgQQIS",
+            "GAoLZGVzdGluYXRpb24YBSABKAlCA+BBAhJGCg10cmFuc2Zlcl90eXBlGAYg",
+            "ASgOMi8uZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLlRyYW5z",
+            "ZmVyVHlwZSKcAQoQVHJhbnNmZXJDb3VudGVycxIVCg1vYmplY3RzX2ZvdW5k",
+            "GAEgASgDEhMKC2J5dGVzX2ZvdW5kGAIgASgDEhcKD29iamVjdHNfc2tpcHBl",
+            "ZBgDIAEoAxIVCg1ieXRlc19za2lwcGVkGAQgASgDEhYKDm9iamVjdHNfY29w",
+            "aWVkGAUgASgDEhQKDGJ5dGVzX2NvcGllZBgGIAEoAypFCgxUcmFuc2ZlclR5",
+            "cGUSHQoZVFJBTlNGRVJfVFlQRV9VTlNQRUNJRklFRBAAEgoKBklNUE9SVBAB",
+            "EgoKBkVYUE9SVBACMs0MCg1QYXJhbGxlbHN0b3JlEsYBCg1MaXN0SW5zdGFu",
+            "Y2VzEjcuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLkxpc3RJ",
+            "bnN0YW5jZXNSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUu",
+            "djFiZXRhLkxpc3RJbnN0YW5jZXNSZXNwb25zZSJC2kEGcGFyZW50gtPkkwIz",
+            "EjEvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5z",
+            "dGFuY2VzErMBCgtHZXRJbnN0YW5jZRI1Lmdvb2dsZS5jbG91ZC5wYXJhbGxl",
+            "bHN0b3JlLnYxYmV0YS5HZXRJbnN0YW5jZVJlcXVlc3QaKy5nb29nbGUuY2xv",
+            "dWQucGFyYWxsZWxzdG9yZS52MWJldGEuSW5zdGFuY2UiQNpBBG5hbWWC0+ST",
+            "AjMSMS92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
+            "YW5jZXMvKn0S7QEKDkNyZWF0ZUluc3RhbmNlEjguZ29vZ2xlLmNsb3VkLnBh",
+            "cmFsbGVsc3RvcmUudjFiZXRhLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igQHKQR0KCEluc3RhbmNlEhFP",
+            "cGVyYXRpb25NZXRhZGF0YdpBG3BhcmVudCxpbnN0YW5jZSxpbnN0YW5jZV9p",
+            "ZILT5JMCPSIxL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L2luc3RhbmNlczoIaW5zdGFuY2US7wEKDlVwZGF0ZUluc3RhbmNlEjgu",
+            "Z29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLlVwZGF0ZUluc3Rh",
+            "bmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igwHK",
+            "QR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YdpBFGluc3RhbmNlLHVw",
+            "ZGF0ZV9tYXNrgtPkkwJGMjovdjFiZXRhL3tpbnN0YW5jZS5uYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZRLYAQoO",
+            "RGVsZXRlSW5zdGFuY2USOC5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52",
+            "MWJldGEuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiJtykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9w",
+            "ZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCMyoxL3YxYmV0YS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfRLVAQoKSW1wb3J0",
+            "RGF0YRI0Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5JbXBv",
+            "cnREYXRhUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "cspBKAoSSW1wb3J0RGF0YVJlc3BvbnNlEhJJbXBvcnREYXRhTWV0YWRhdGGC",
+            "0+STAkEiPC92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9p",
+            "bnN0YW5jZXMvKn06aW1wb3J0RGF0YToBKhLVAQoKRXhwb3J0RGF0YRI0Lmdv",
+            "b2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5FeHBvcnREYXRhUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icspBKAoSRXhw",
+            "b3J0RGF0YVJlc3BvbnNlEhJFeHBvcnREYXRhTWV0YWRhdGGC0+STAkEiPC92",
+            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMv",
+            "Kn06ZXhwb3J0RGF0YToBKhpQykEccGFyYWxsZWxzdG9yZS5nb29nbGVhcGlz",
+            "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm1CpgMKJWNvbS5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52",
+            "MWJldGFCElBhcmFsbGVsc3RvcmVQcm90b1ABWktjbG91ZC5nb29nbGUuY29t",
+            "L2dvL3BhcmFsbGVsc3RvcmUvYXBpdjFiZXRhL3BhcmFsbGVsc3RvcmVwYjtw",
+            "YXJhbGxlbHN0b3JlcGKqAiFHb29nbGUuQ2xvdWQuUGFyYWxsZWxzdG9yZS5W",
+            "MUJldGHKAiFHb29nbGVcQ2xvdWRcUGFyYWxsZWxzdG9yZVxWMWJldGHqAiRH",
+            "b29nbGU6OkNsb3VkOjpQYXJhbGxlbHN0b3JlOjpWMWJldGHqQU4KHmNvbXB1",
+            "dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIscHJvamVjdHMve3Byb2plY3R9",
+            "L2dsb2JhbC9uZXR3b3Jrcy97bmV0d29ya33qQVkKHmNvbXB1dGUuZ29vZ2xl",
+            "YXBpcy5jb20vQWRkcmVzcxI3cHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMv",
+            "e3JlZ2lvbn0vYWRkcmVzc2VzL3thZGRyZXNzfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Parallelstore.V1Beta.TransferType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -161,8 +170,12 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.UpdateInstanceRequest), global::Google.Cloud.Parallelstore.V1Beta.UpdateInstanceRequest.Parser, new[]{ "UpdateMask", "Instance", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.DeleteInstanceRequest), global::Google.Cloud.Parallelstore.V1Beta.DeleteInstanceRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.OperationMetadata), global::Google.Cloud.Parallelstore.V1Beta.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest), global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest.Parser, new[]{ "SourceGcsUri", "DestinationPath", "Name", "RequestId" }, new[]{ "Source", "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest), global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest.Parser, new[]{ "SourcePath", "DestinationGcsUri", "Name", "RequestId" }, new[]{ "Source", "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket), global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket), global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore), global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore.Parser, new[]{ "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore), global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore.Parser, new[]{ "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest), global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest.Parser, new[]{ "SourceGcsBucket", "DestinationParallelstore", "Name", "RequestId" }, new[]{ "Source", "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest), global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest.Parser, new[]{ "SourceParallelstore", "DestinationGcsBucket", "Name", "RequestId" }, new[]{ "Source", "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ImportDataResponse), global::Google.Cloud.Parallelstore.V1Beta.ImportDataResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ImportDataMetadata), global::Google.Cloud.Parallelstore.V1Beta.ImportDataMetadata.Parser, new[]{ "OperationMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Parallelstore.V1Beta.ExportDataResponse), global::Google.Cloud.Parallelstore.V1Beta.ExportDataResponse.Parser, null, null, null, null, null),
@@ -3070,6 +3083,794 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
+  /// Google Cloud Storage as a source.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SourceGcsBucket : pb::IMessage<SourceGcsBucket>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SourceGcsBucket> _parser = new pb::MessageParser<SourceGcsBucket>(() => new SourceGcsBucket());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SourceGcsBucket> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceGcsBucket() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceGcsBucket(SourceGcsBucket other) : this() {
+      uri_ = other.uri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceGcsBucket Clone() {
+      return new SourceGcsBucket(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// Required. URI to a Cloud Storage object in format:
+    /// 'gs://&lt;bucket_name>/&lt;path_inside_bucket>'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SourceGcsBucket);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SourceGcsBucket other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SourceGcsBucket other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Google Cloud Storage as a destination.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DestinationGcsBucket : pb::IMessage<DestinationGcsBucket>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DestinationGcsBucket> _parser = new pb::MessageParser<DestinationGcsBucket>(() => new DestinationGcsBucket());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DestinationGcsBucket> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationGcsBucket() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationGcsBucket(DestinationGcsBucket other) : this() {
+      uri_ = other.uri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationGcsBucket Clone() {
+      return new DestinationGcsBucket(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// Required. URI to a Cloud Storage object in format:
+    /// 'gs://&lt;bucket_name>/&lt;path_inside_bucket>'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DestinationGcsBucket);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DestinationGcsBucket other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DestinationGcsBucket other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Pa as a source.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SourceParallelstore : pb::IMessage<SourceParallelstore>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SourceParallelstore> _parser = new pb::MessageParser<SourceParallelstore>(() => new SourceParallelstore());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SourceParallelstore> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceParallelstore() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceParallelstore(SourceParallelstore other) : this() {
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceParallelstore Clone() {
+      return new SourceParallelstore(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private string path_ = "";
+    /// <summary>
+    /// Optional. Root directory path to the Paralellstore filesystem, starting
+    /// with '/'. Defaults to '/' if unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SourceParallelstore);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SourceParallelstore other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SourceParallelstore other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Parallelstore as a destination.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DestinationParallelstore : pb::IMessage<DestinationParallelstore>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DestinationParallelstore> _parser = new pb::MessageParser<DestinationParallelstore>(() => new DestinationParallelstore());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DestinationParallelstore> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationParallelstore() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationParallelstore(DestinationParallelstore other) : this() {
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationParallelstore Clone() {
+      return new DestinationParallelstore(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private string path_ = "";
+    /// <summary>
+    /// Optional. Root directory path to the Paralellstore filesystem, starting
+    /// with '/'. Defaults to '/' if unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DestinationParallelstore);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DestinationParallelstore other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DestinationParallelstore other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message representing the request importing data from parallelstore to Cloud
   /// Storage.
   /// </summary>
@@ -3088,7 +3889,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3111,14 +3912,14 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       name_ = other.name_;
       requestId_ = other.requestId_;
       switch (other.SourceCase) {
-        case SourceOneofCase.SourceGcsUri:
-          SourceGcsUri = other.SourceGcsUri;
+        case SourceOneofCase.SourceGcsBucket:
+          SourceGcsBucket = other.SourceGcsBucket.Clone();
           break;
       }
 
       switch (other.DestinationCase) {
-        case DestinationOneofCase.DestinationPath:
-          DestinationPath = other.DestinationPath;
+        case DestinationOneofCase.DestinationParallelstore:
+          DestinationParallelstore = other.DestinationParallelstore.Clone();
           break;
       }
 
@@ -3131,63 +3932,33 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       return new ImportDataRequest(this);
     }
 
-    /// <summary>Field number for the "source_gcs_uri" field.</summary>
-    public const int SourceGcsUriFieldNumber = 2;
+    /// <summary>Field number for the "source_gcs_bucket" field.</summary>
+    public const int SourceGcsBucketFieldNumber = 2;
     /// <summary>
-    /// URI to a Cloud Storage object in format:
-    /// 'gs://&lt;bucket_name>/&lt;path_inside_bucket>'.
+    /// Cloud Storage source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourceGcsUri {
-      get { return HasSourceGcsUri ? (string) source_ : ""; }
+    public global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket SourceGcsBucket {
+      get { return sourceCase_ == SourceOneofCase.SourceGcsBucket ? (global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket) source_ : null; }
       set {
-        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        sourceCase_ = SourceOneofCase.SourceGcsUri;
-      }
-    }
-    /// <summary>Gets whether the "source_gcs_uri" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSourceGcsUri {
-      get { return sourceCase_ == SourceOneofCase.SourceGcsUri; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "source_gcs_uri" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSourceGcsUri() {
-      if (HasSourceGcsUri) {
-        ClearSource();
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.SourceGcsBucket;
       }
     }
 
-    /// <summary>Field number for the "destination_path" field.</summary>
-    public const int DestinationPathFieldNumber = 3;
+    /// <summary>Field number for the "destination_parallelstore" field.</summary>
+    public const int DestinationParallelstoreFieldNumber = 3;
     /// <summary>
-    /// Optional. Root directory path to the Paralellstore filesystem, starting
-    /// with '/'. Sets to '/' if no value is set.
+    /// Parallelstore destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DestinationPath {
-      get { return HasDestinationPath ? (string) destination_ : ""; }
+    public global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore DestinationParallelstore {
+      get { return destinationCase_ == DestinationOneofCase.DestinationParallelstore ? (global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore) destination_ : null; }
       set {
-        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        destinationCase_ = DestinationOneofCase.DestinationPath;
-      }
-    }
-    /// <summary>Gets whether the "destination_path" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasDestinationPath {
-      get { return destinationCase_ == DestinationOneofCase.DestinationPath; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "destination_path" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDestinationPath() {
-      if (HasDestinationPath) {
-        ClearDestination();
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.DestinationParallelstore;
       }
     }
 
@@ -3237,7 +4008,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
       None = 0,
-      SourceGcsUri = 2,
+      SourceGcsBucket = 2,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3257,7 +4028,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
       None = 0,
-      DestinationPath = 3,
+      DestinationParallelstore = 3,
     }
     private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3288,8 +4059,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SourceGcsUri != other.SourceGcsUri) return false;
-      if (DestinationPath != other.DestinationPath) return false;
+      if (!object.Equals(SourceGcsBucket, other.SourceGcsBucket)) return false;
+      if (!object.Equals(DestinationParallelstore, other.DestinationParallelstore)) return false;
       if (Name != other.Name) return false;
       if (RequestId != other.RequestId) return false;
       if (SourceCase != other.SourceCase) return false;
@@ -3301,8 +4072,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasSourceGcsUri) hash ^= SourceGcsUri.GetHashCode();
-      if (HasDestinationPath) hash ^= DestinationPath.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.SourceGcsBucket) hash ^= SourceGcsBucket.GetHashCode();
+      if (destinationCase_ == DestinationOneofCase.DestinationParallelstore) hash ^= DestinationParallelstore.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -3329,13 +4100,13 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (HasSourceGcsUri) {
+      if (sourceCase_ == SourceOneofCase.SourceGcsBucket) {
         output.WriteRawTag(18);
-        output.WriteString(SourceGcsUri);
+        output.WriteMessage(SourceGcsBucket);
       }
-      if (HasDestinationPath) {
+      if (destinationCase_ == DestinationOneofCase.DestinationParallelstore) {
         output.WriteRawTag(26);
-        output.WriteString(DestinationPath);
+        output.WriteMessage(DestinationParallelstore);
       }
       if (RequestId.Length != 0) {
         output.WriteRawTag(34);
@@ -3355,13 +4126,13 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (HasSourceGcsUri) {
+      if (sourceCase_ == SourceOneofCase.SourceGcsBucket) {
         output.WriteRawTag(18);
-        output.WriteString(SourceGcsUri);
+        output.WriteMessage(SourceGcsBucket);
       }
-      if (HasDestinationPath) {
+      if (destinationCase_ == DestinationOneofCase.DestinationParallelstore) {
         output.WriteRawTag(26);
-        output.WriteString(DestinationPath);
+        output.WriteMessage(DestinationParallelstore);
       }
       if (RequestId.Length != 0) {
         output.WriteRawTag(34);
@@ -3377,11 +4148,11 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasSourceGcsUri) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceGcsUri);
+      if (sourceCase_ == SourceOneofCase.SourceGcsBucket) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceGcsBucket);
       }
-      if (HasDestinationPath) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationPath);
+      if (destinationCase_ == DestinationOneofCase.DestinationParallelstore) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestinationParallelstore);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -3408,14 +4179,20 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         RequestId = other.RequestId;
       }
       switch (other.SourceCase) {
-        case SourceOneofCase.SourceGcsUri:
-          SourceGcsUri = other.SourceGcsUri;
+        case SourceOneofCase.SourceGcsBucket:
+          if (SourceGcsBucket == null) {
+            SourceGcsBucket = new global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket();
+          }
+          SourceGcsBucket.MergeFrom(other.SourceGcsBucket);
           break;
       }
 
       switch (other.DestinationCase) {
-        case DestinationOneofCase.DestinationPath:
-          DestinationPath = other.DestinationPath;
+        case DestinationOneofCase.DestinationParallelstore:
+          if (DestinationParallelstore == null) {
+            DestinationParallelstore = new global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore();
+          }
+          DestinationParallelstore.MergeFrom(other.DestinationParallelstore);
           break;
       }
 
@@ -3439,11 +4216,21 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             break;
           }
           case 18: {
-            SourceGcsUri = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket();
+            if (sourceCase_ == SourceOneofCase.SourceGcsBucket) {
+              subBuilder.MergeFrom(SourceGcsBucket);
+            }
+            input.ReadMessage(subBuilder);
+            SourceGcsBucket = subBuilder;
             break;
           }
           case 26: {
-            DestinationPath = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore();
+            if (destinationCase_ == DestinationOneofCase.DestinationParallelstore) {
+              subBuilder.MergeFrom(DestinationParallelstore);
+            }
+            input.ReadMessage(subBuilder);
+            DestinationParallelstore = subBuilder;
             break;
           }
           case 34: {
@@ -3470,11 +4257,21 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             break;
           }
           case 18: {
-            SourceGcsUri = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.SourceGcsBucket();
+            if (sourceCase_ == SourceOneofCase.SourceGcsBucket) {
+              subBuilder.MergeFrom(SourceGcsBucket);
+            }
+            input.ReadMessage(subBuilder);
+            SourceGcsBucket = subBuilder;
             break;
           }
           case 26: {
-            DestinationPath = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.DestinationParallelstore();
+            if (destinationCase_ == DestinationOneofCase.DestinationParallelstore) {
+              subBuilder.MergeFrom(DestinationParallelstore);
+            }
+            input.ReadMessage(subBuilder);
+            DestinationParallelstore = subBuilder;
             break;
           }
           case 34: {
@@ -3507,7 +4304,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3530,14 +4327,14 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       name_ = other.name_;
       requestId_ = other.requestId_;
       switch (other.SourceCase) {
-        case SourceOneofCase.SourcePath:
-          SourcePath = other.SourcePath;
+        case SourceOneofCase.SourceParallelstore:
+          SourceParallelstore = other.SourceParallelstore.Clone();
           break;
       }
 
       switch (other.DestinationCase) {
-        case DestinationOneofCase.DestinationGcsUri:
-          DestinationGcsUri = other.DestinationGcsUri;
+        case DestinationOneofCase.DestinationGcsBucket:
+          DestinationGcsBucket = other.DestinationGcsBucket.Clone();
           break;
       }
 
@@ -3550,63 +4347,33 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       return new ExportDataRequest(this);
     }
 
-    /// <summary>Field number for the "source_path" field.</summary>
-    public const int SourcePathFieldNumber = 2;
+    /// <summary>Field number for the "source_parallelstore" field.</summary>
+    public const int SourceParallelstoreFieldNumber = 2;
     /// <summary>
-    /// Optional. Root directory path to the Paralellstore filesystem, starting
-    /// with '/'. Sets to '/' if no value is set.
+    /// Parallelstore source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourcePath {
-      get { return HasSourcePath ? (string) source_ : ""; }
+    public global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore SourceParallelstore {
+      get { return sourceCase_ == SourceOneofCase.SourceParallelstore ? (global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore) source_ : null; }
       set {
-        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        sourceCase_ = SourceOneofCase.SourcePath;
-      }
-    }
-    /// <summary>Gets whether the "source_path" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSourcePath {
-      get { return sourceCase_ == SourceOneofCase.SourcePath; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "source_path" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSourcePath() {
-      if (HasSourcePath) {
-        ClearSource();
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.SourceParallelstore;
       }
     }
 
-    /// <summary>Field number for the "destination_gcs_uri" field.</summary>
-    public const int DestinationGcsUriFieldNumber = 3;
+    /// <summary>Field number for the "destination_gcs_bucket" field.</summary>
+    public const int DestinationGcsBucketFieldNumber = 3;
     /// <summary>
-    /// URI to a Cloud Storage object in format:
-    /// 'gs://&lt;bucket_name>/&lt;path_inside_bucket>'.
+    /// Cloud Storage destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DestinationGcsUri {
-      get { return HasDestinationGcsUri ? (string) destination_ : ""; }
+    public global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket DestinationGcsBucket {
+      get { return destinationCase_ == DestinationOneofCase.DestinationGcsBucket ? (global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket) destination_ : null; }
       set {
-        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        destinationCase_ = DestinationOneofCase.DestinationGcsUri;
-      }
-    }
-    /// <summary>Gets whether the "destination_gcs_uri" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasDestinationGcsUri {
-      get { return destinationCase_ == DestinationOneofCase.DestinationGcsUri; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "destination_gcs_uri" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDestinationGcsUri() {
-      if (HasDestinationGcsUri) {
-        ClearDestination();
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.DestinationGcsBucket;
       }
     }
 
@@ -3656,7 +4423,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
       None = 0,
-      SourcePath = 2,
+      SourceParallelstore = 2,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3676,7 +4443,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
       None = 0,
-      DestinationGcsUri = 3,
+      DestinationGcsBucket = 3,
     }
     private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3707,8 +4474,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SourcePath != other.SourcePath) return false;
-      if (DestinationGcsUri != other.DestinationGcsUri) return false;
+      if (!object.Equals(SourceParallelstore, other.SourceParallelstore)) return false;
+      if (!object.Equals(DestinationGcsBucket, other.DestinationGcsBucket)) return false;
       if (Name != other.Name) return false;
       if (RequestId != other.RequestId) return false;
       if (SourceCase != other.SourceCase) return false;
@@ -3720,8 +4487,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasSourcePath) hash ^= SourcePath.GetHashCode();
-      if (HasDestinationGcsUri) hash ^= DestinationGcsUri.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.SourceParallelstore) hash ^= SourceParallelstore.GetHashCode();
+      if (destinationCase_ == DestinationOneofCase.DestinationGcsBucket) hash ^= DestinationGcsBucket.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -3748,13 +4515,13 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (HasSourcePath) {
+      if (sourceCase_ == SourceOneofCase.SourceParallelstore) {
         output.WriteRawTag(18);
-        output.WriteString(SourcePath);
+        output.WriteMessage(SourceParallelstore);
       }
-      if (HasDestinationGcsUri) {
+      if (destinationCase_ == DestinationOneofCase.DestinationGcsBucket) {
         output.WriteRawTag(26);
-        output.WriteString(DestinationGcsUri);
+        output.WriteMessage(DestinationGcsBucket);
       }
       if (RequestId.Length != 0) {
         output.WriteRawTag(34);
@@ -3774,13 +4541,13 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (HasSourcePath) {
+      if (sourceCase_ == SourceOneofCase.SourceParallelstore) {
         output.WriteRawTag(18);
-        output.WriteString(SourcePath);
+        output.WriteMessage(SourceParallelstore);
       }
-      if (HasDestinationGcsUri) {
+      if (destinationCase_ == DestinationOneofCase.DestinationGcsBucket) {
         output.WriteRawTag(26);
-        output.WriteString(DestinationGcsUri);
+        output.WriteMessage(DestinationGcsBucket);
       }
       if (RequestId.Length != 0) {
         output.WriteRawTag(34);
@@ -3796,11 +4563,11 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasSourcePath) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourcePath);
+      if (sourceCase_ == SourceOneofCase.SourceParallelstore) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceParallelstore);
       }
-      if (HasDestinationGcsUri) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationGcsUri);
+      if (destinationCase_ == DestinationOneofCase.DestinationGcsBucket) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestinationGcsBucket);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -3827,14 +4594,20 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         RequestId = other.RequestId;
       }
       switch (other.SourceCase) {
-        case SourceOneofCase.SourcePath:
-          SourcePath = other.SourcePath;
+        case SourceOneofCase.SourceParallelstore:
+          if (SourceParallelstore == null) {
+            SourceParallelstore = new global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore();
+          }
+          SourceParallelstore.MergeFrom(other.SourceParallelstore);
           break;
       }
 
       switch (other.DestinationCase) {
-        case DestinationOneofCase.DestinationGcsUri:
-          DestinationGcsUri = other.DestinationGcsUri;
+        case DestinationOneofCase.DestinationGcsBucket:
+          if (DestinationGcsBucket == null) {
+            DestinationGcsBucket = new global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket();
+          }
+          DestinationGcsBucket.MergeFrom(other.DestinationGcsBucket);
           break;
       }
 
@@ -3858,11 +4631,21 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             break;
           }
           case 18: {
-            SourcePath = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore();
+            if (sourceCase_ == SourceOneofCase.SourceParallelstore) {
+              subBuilder.MergeFrom(SourceParallelstore);
+            }
+            input.ReadMessage(subBuilder);
+            SourceParallelstore = subBuilder;
             break;
           }
           case 26: {
-            DestinationGcsUri = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket();
+            if (destinationCase_ == DestinationOneofCase.DestinationGcsBucket) {
+              subBuilder.MergeFrom(DestinationGcsBucket);
+            }
+            input.ReadMessage(subBuilder);
+            DestinationGcsBucket = subBuilder;
             break;
           }
           case 34: {
@@ -3889,11 +4672,21 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             break;
           }
           case 18: {
-            SourcePath = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.SourceParallelstore();
+            if (sourceCase_ == SourceOneofCase.SourceParallelstore) {
+              subBuilder.MergeFrom(SourceParallelstore);
+            }
+            input.ReadMessage(subBuilder);
+            SourceParallelstore = subBuilder;
             break;
           }
           case 26: {
-            DestinationGcsUri = input.ReadString();
+            global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket subBuilder = new global::Google.Cloud.Parallelstore.V1Beta.DestinationGcsBucket();
+            if (destinationCase_ == DestinationOneofCase.DestinationGcsBucket) {
+              subBuilder.MergeFrom(DestinationGcsBucket);
+            }
+            input.ReadMessage(subBuilder);
+            DestinationGcsBucket = subBuilder;
             break;
           }
           case 34: {
@@ -3925,7 +4718,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4081,7 +4874,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4286,7 +5079,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4442,7 +5235,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4647,7 +5440,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5071,7 +5864,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Parallelstore.V1Beta.ParallelstoreReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

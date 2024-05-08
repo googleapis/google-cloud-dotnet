@@ -39,8 +39,8 @@ namespace GoogleCSharpSnippets
             ImportDataRequest request = new ImportDataRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                SourceGcsUri = "",
-                DestinationPath = "",
+                SourceGcsBucket = new SourceGcsBucket(),
+                DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
             };
             // Make the request
