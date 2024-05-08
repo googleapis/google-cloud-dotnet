@@ -3610,7 +3610,7 @@
     },
     {
       "id": "Google.Cloud.Parallelstore.V1Beta",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Parallelstore",
       "productUrl": "http://cloud/parallelstore?hl=en",
