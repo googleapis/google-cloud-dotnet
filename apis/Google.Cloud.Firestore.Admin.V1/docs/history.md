@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.9.0, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Allow 14 week backup retention for Firestore daily backups ([commit 484b7d9](https://github.com/googleapis/google-cloud-dotnet/commit/484b7d946753effa6c5faa8ebd1192f57846e624))
+- Correct BackupSchedule recurrence docs that mentioned specific time of day ([commit d41af41](https://github.com/googleapis/google-cloud-dotnet/commit/d41af41616ae720d5b96e640f9d0a50d83582f3e))
+
 ## Version 3.8.0, released 2024-03-26
 
 ### New features
