@@ -82,10 +82,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.Delivery.V1.GetTaskRequest> __Marshaller_maps_fleetengine_delivery_v1_GetTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.Delivery.V1.GetTaskRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest> __Marshaller_maps_fleetengine_delivery_v1_SearchTasksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse> __Marshaller_maps_fleetengine_delivery_v1_SearchTasksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest> __Marshaller_maps_fleetengine_delivery_v1_UpdateTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.Delivery.V1.ListTasksRequest> __Marshaller_maps_fleetengine_delivery_v1_ListTasksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.Delivery.V1.ListTasksRequest.Parser));
@@ -147,14 +143,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         "GetTask",
         __Marshaller_maps_fleetengine_delivery_v1_GetTaskRequest,
         __Marshaller_maps_fleetengine_delivery_v1_Task);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest, global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse> __Method_SearchTasks = new grpc::Method<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest, global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "SearchTasks",
-        __Marshaller_maps_fleetengine_delivery_v1_SearchTasksRequest,
-        __Marshaller_maps_fleetengine_delivery_v1_SearchTasksResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest, global::Google.Maps.FleetEngine.Delivery.V1.Task> __Method_UpdateTask = new grpc::Method<global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest, global::Google.Maps.FleetEngine.Delivery.V1.Task>(
@@ -272,19 +260,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.FleetEngine.Delivery.V1.Task> GetTask(global::Google.Maps.FleetEngine.Delivery.V1.GetTaskRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Deprecated: Use `GetTaskTrackingInfo` instead.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.ObsoleteAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse> SearchTasks(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -679,58 +654,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetTask, null, options, request);
       }
       /// <summary>
-      /// Deprecated: Use `GetTaskTrackingInfo` instead.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.ObsoleteAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse SearchTasks(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return SearchTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deprecated: Use `GetTaskTrackingInfo` instead.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.ObsoleteAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse SearchTasks(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_SearchTasks, null, options, request);
-      }
-      /// <summary>
-      /// Deprecated: Use `GetTaskTrackingInfo` instead.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.ObsoleteAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse> SearchTasksAsync(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return SearchTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deprecated: Use `GetTaskTrackingInfo` instead.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.ObsoleteAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse> SearchTasksAsync(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_SearchTasks, null, options, request);
-      }
-      /// <summary>
       /// Updates `Task` data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -942,7 +865,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
           .AddMethod(__Method_BatchCreateTasks, serviceImpl.BatchCreateTasks)
           .AddMethod(__Method_CreateTask, serviceImpl.CreateTask)
           .AddMethod(__Method_GetTask, serviceImpl.GetTask)
-          .AddMethod(__Method_SearchTasks, serviceImpl.SearchTasks)
           .AddMethod(__Method_UpdateTask, serviceImpl.UpdateTask)
           .AddMethod(__Method_ListTasks, serviceImpl.ListTasks)
           .AddMethod(__Method_GetTaskTrackingInfo, serviceImpl.GetTaskTrackingInfo)
@@ -962,7 +884,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       serviceBinder.AddMethod(__Method_BatchCreateTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.BatchCreateTasksRequest, global::Google.Maps.FleetEngine.Delivery.V1.BatchCreateTasksResponse>(serviceImpl.BatchCreateTasks));
       serviceBinder.AddMethod(__Method_CreateTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.CreateTaskRequest, global::Google.Maps.FleetEngine.Delivery.V1.Task>(serviceImpl.CreateTask));
       serviceBinder.AddMethod(__Method_GetTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.GetTaskRequest, global::Google.Maps.FleetEngine.Delivery.V1.Task>(serviceImpl.GetTask));
-      serviceBinder.AddMethod(__Method_SearchTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest, global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse>(serviceImpl.SearchTasks));
       serviceBinder.AddMethod(__Method_UpdateTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest, global::Google.Maps.FleetEngine.Delivery.V1.Task>(serviceImpl.UpdateTask));
       serviceBinder.AddMethod(__Method_ListTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.ListTasksRequest, global::Google.Maps.FleetEngine.Delivery.V1.ListTasksResponse>(serviceImpl.ListTasks));
       serviceBinder.AddMethod(__Method_GetTaskTrackingInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.Delivery.V1.GetTaskTrackingInfoRequest, global::Google.Maps.FleetEngine.Delivery.V1.TaskTrackingInfo>(serviceImpl.GetTaskTrackingInfo));

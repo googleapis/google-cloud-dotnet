@@ -48,11 +48,9 @@ namespace Google.Maps.FleetEngine.V1
             CreateVehicleSettings = existing.CreateVehicleSettings;
             GetVehicleSettings = existing.GetVehicleSettings;
             UpdateVehicleSettings = existing.UpdateVehicleSettings;
-            UpdateVehicleLocationSettings = existing.UpdateVehicleLocationSettings;
             UpdateVehicleAttributesSettings = existing.UpdateVehicleAttributesSettings;
             ListVehiclesSettings = existing.ListVehiclesSettings;
             SearchVehiclesSettings = existing.SearchVehiclesSettings;
-            SearchFuzzedVehiclesSettings = existing.SearchFuzzedVehiclesSettings;
             OnCopy(existing);
         }
 
@@ -114,19 +112,6 @@ namespace Google.Maps.FleetEngine.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VehicleServiceClient.UpdateVehicleLocation</c> and <c>VehicleServiceClient.UpdateVehicleLocationAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateVehicleLocationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>VehicleServiceClient.UpdateVehicleAttributes</c> and <c>VehicleServiceClient.UpdateVehicleAttributesAsync</c>
         /// .
         /// </summary>
@@ -173,18 +158,6 @@ namespace Google.Maps.FleetEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SearchVehiclesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VehicleServiceClient.SearchFuzzedVehicles</c> and <c>VehicleServiceClient.SearchFuzzedVehiclesAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings SearchFuzzedVehiclesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VehicleServiceSettings"/> object.</returns>
@@ -538,45 +511,6 @@ namespace Google.Maps.FleetEngine.V1
             UpdateVehicleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deprecated: Use the `UpdateVehicle` method instead.
-        /// UpdateVehicleLocation updates the location of the vehicle.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual VehicleLocation UpdateVehicleLocation(UpdateVehicleLocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
-#pragma warning restore CS0612
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deprecated: Use the `UpdateVehicle` method instead.
-        /// UpdateVehicleLocation updates the location of the vehicle.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual stt::Task<VehicleLocation> UpdateVehicleLocationAsync(UpdateVehicleLocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
-#pragma warning restore CS0612
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deprecated: Use the `UpdateVehicle` method instead.
-        /// UpdateVehicleLocation updates the location of the vehicle.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual stt::Task<VehicleLocation> UpdateVehicleLocationAsync(UpdateVehicleLocationRequest request, st::CancellationToken cancellationToken) =>
-#pragma warning restore CS0612
-            UpdateVehicleLocationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Partially updates a vehicle's attributes.
         /// Only the attributes mentioned in the request will be updated, other
         /// attributes will NOT be altered. Note: this is different in `UpdateVehicle`,
@@ -661,36 +595,6 @@ namespace Google.Maps.FleetEngine.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SearchVehiclesResponse> SearchVehiclesAsync(SearchVehiclesRequest request, st::CancellationToken cancellationToken) =>
             SearchVehiclesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deprecated: Use `SearchVehicles` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual SearchVehiclesResponse SearchFuzzedVehicles(SearchVehiclesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deprecated: Use `SearchVehicles` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<SearchVehiclesResponse> SearchFuzzedVehiclesAsync(SearchVehiclesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deprecated: Use `SearchVehicles` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<SearchVehiclesResponse> SearchFuzzedVehiclesAsync(SearchVehiclesRequest request, st::CancellationToken cancellationToken) =>
-            SearchFuzzedVehiclesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VehicleService client wrapper implementation, for convenient use.</summary>
@@ -705,17 +609,11 @@ namespace Google.Maps.FleetEngine.V1
 
         private readonly gaxgrpc::ApiCall<UpdateVehicleRequest, Vehicle> _callUpdateVehicle;
 
-#pragma warning disable CS0612
-        private readonly gaxgrpc::ApiCall<UpdateVehicleLocationRequest, VehicleLocation> _callUpdateVehicleLocation;
-#pragma warning restore CS0612
-
         private readonly gaxgrpc::ApiCall<UpdateVehicleAttributesRequest, UpdateVehicleAttributesResponse> _callUpdateVehicleAttributes;
 
         private readonly gaxgrpc::ApiCall<ListVehiclesRequest, ListVehiclesResponse> _callListVehicles;
 
         private readonly gaxgrpc::ApiCall<SearchVehiclesRequest, SearchVehiclesResponse> _callSearchVehicles;
-
-        private readonly gaxgrpc::ApiCall<SearchVehiclesRequest, SearchVehiclesResponse> _callSearchFuzzedVehicles;
 
         /// <summary>
         /// Constructs a client wrapper for the VehicleService service, with the specified gRPC client and settings.
@@ -741,11 +639,6 @@ namespace Google.Maps.FleetEngine.V1
             _callUpdateVehicle = clientHelper.BuildApiCall<UpdateVehicleRequest, Vehicle>("UpdateVehicle", grpcClient.UpdateVehicleAsync, grpcClient.UpdateVehicle, effectiveSettings.UpdateVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callUpdateVehicle);
             Modify_UpdateVehicleApiCall(ref _callUpdateVehicle);
-#pragma warning disable CS0612
-            _callUpdateVehicleLocation = clientHelper.BuildApiCall<UpdateVehicleLocationRequest, VehicleLocation>("UpdateVehicleLocation", grpcClient.UpdateVehicleLocationAsync, grpcClient.UpdateVehicleLocation, effectiveSettings.UpdateVehicleLocationSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateVehicleLocationRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
-#pragma warning restore CS0612
-            Modify_ApiCall(ref _callUpdateVehicleLocation);
-            Modify_UpdateVehicleLocationApiCall(ref _callUpdateVehicleLocation);
             _callUpdateVehicleAttributes = clientHelper.BuildApiCall<UpdateVehicleAttributesRequest, UpdateVehicleAttributesResponse>("UpdateVehicleAttributes", grpcClient.UpdateVehicleAttributesAsync, grpcClient.UpdateVehicleAttributes, effectiveSettings.UpdateVehicleAttributesSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateVehicleAttributesRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callUpdateVehicleAttributes);
             Modify_UpdateVehicleAttributesApiCall(ref _callUpdateVehicleAttributes);
@@ -755,11 +648,6 @@ namespace Google.Maps.FleetEngine.V1
             _callSearchVehicles = clientHelper.BuildApiCall<SearchVehiclesRequest, SearchVehiclesResponse>("SearchVehicles", grpcClient.SearchVehiclesAsync, grpcClient.SearchVehicles, effectiveSettings.SearchVehiclesSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SearchVehiclesRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callSearchVehicles);
             Modify_SearchVehiclesApiCall(ref _callSearchVehicles);
-#pragma warning disable CS0612
-            _callSearchFuzzedVehicles = clientHelper.BuildApiCall<SearchVehiclesRequest, SearchVehiclesResponse>("SearchFuzzedVehicles", grpcClient.SearchFuzzedVehiclesAsync, grpcClient.SearchFuzzedVehicles, effectiveSettings.SearchFuzzedVehiclesSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SearchVehiclesRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Parent));
-#pragma warning restore CS0612
-            Modify_ApiCall(ref _callSearchFuzzedVehicles);
-            Modify_SearchFuzzedVehiclesApiCall(ref _callSearchFuzzedVehicles);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -771,17 +659,11 @@ namespace Google.Maps.FleetEngine.V1
 
         partial void Modify_UpdateVehicleApiCall(ref gaxgrpc::ApiCall<UpdateVehicleRequest, Vehicle> call);
 
-#pragma warning disable CS0612
-        partial void Modify_UpdateVehicleLocationApiCall(ref gaxgrpc::ApiCall<UpdateVehicleLocationRequest, VehicleLocation> call);
-#pragma warning restore CS0612
-
         partial void Modify_UpdateVehicleAttributesApiCall(ref gaxgrpc::ApiCall<UpdateVehicleAttributesRequest, UpdateVehicleAttributesResponse> call);
 
         partial void Modify_ListVehiclesApiCall(ref gaxgrpc::ApiCall<ListVehiclesRequest, ListVehiclesResponse> call);
 
         partial void Modify_SearchVehiclesApiCall(ref gaxgrpc::ApiCall<SearchVehiclesRequest, SearchVehiclesResponse> call);
-
-        partial void Modify_SearchFuzzedVehiclesApiCall(ref gaxgrpc::ApiCall<SearchVehiclesRequest, SearchVehiclesResponse> call);
 
         partial void OnConstruction(VehicleService.VehicleServiceClient grpcClient, VehicleServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -793,10 +675,6 @@ namespace Google.Maps.FleetEngine.V1
         partial void Modify_GetVehicleRequest(ref GetVehicleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateVehicleRequest(ref UpdateVehicleRequest request, ref gaxgrpc::CallSettings settings);
-
-#pragma warning disable CS0612
-        partial void Modify_UpdateVehicleLocationRequest(ref UpdateVehicleLocationRequest request, ref gaxgrpc::CallSettings settings);
-#pragma warning restore CS0612
 
         partial void Modify_UpdateVehicleAttributesRequest(ref UpdateVehicleAttributesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -963,38 +841,6 @@ namespace Google.Maps.FleetEngine.V1
         }
 
         /// <summary>
-        /// Deprecated: Use the `UpdateVehicle` method instead.
-        /// UpdateVehicleLocation updates the location of the vehicle.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public override VehicleLocation UpdateVehicleLocation(UpdateVehicleLocationRequest request, gaxgrpc::CallSettings callSettings = null)
-#pragma warning restore CS0612
-        {
-            Modify_UpdateVehicleLocationRequest(ref request, ref callSettings);
-            return _callUpdateVehicleLocation.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deprecated: Use the `UpdateVehicle` method instead.
-        /// UpdateVehicleLocation updates the location of the vehicle.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public override stt::Task<VehicleLocation> UpdateVehicleLocationAsync(UpdateVehicleLocationRequest request, gaxgrpc::CallSettings callSettings = null)
-#pragma warning restore CS0612
-        {
-            Modify_UpdateVehicleLocationRequest(ref request, ref callSettings);
-            return _callUpdateVehicleLocation.Async(request, callSettings);
-        }
-
-        /// <summary>
         /// Partially updates a vehicle's attributes.
         /// Only the attributes mentioned in the request will be updated, other
         /// attributes will NOT be altered. Note: this is different in `UpdateVehicle`,
@@ -1074,32 +920,6 @@ namespace Google.Maps.FleetEngine.V1
         {
             Modify_SearchVehiclesRequest(ref request, ref callSettings);
             return _callSearchVehicles.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deprecated: Use `SearchVehicles` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public override SearchVehiclesResponse SearchFuzzedVehicles(SearchVehiclesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_SearchVehiclesRequest(ref request, ref callSettings);
-            return _callSearchFuzzedVehicles.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deprecated: Use `SearchVehicles` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public override stt::Task<SearchVehiclesResponse> SearchFuzzedVehiclesAsync(SearchVehiclesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_SearchVehiclesRequest(ref request, ref callSettings);
-            return _callSearchFuzzedVehicles.Async(request, callSettings);
         }
     }
 

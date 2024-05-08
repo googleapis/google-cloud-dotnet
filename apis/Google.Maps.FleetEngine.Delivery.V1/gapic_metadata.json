@@ -58,12 +58,6 @@
                 "ListTasksAsync"
               ]
             },
-            "SearchTasks": {
-              "methods": [
-                "SearchTasks",
-                "SearchTasksAsync"
-              ]
-            },
             "UpdateDeliveryVehicle": {
               "methods": [
                 "UpdateDeliveryVehicle",
