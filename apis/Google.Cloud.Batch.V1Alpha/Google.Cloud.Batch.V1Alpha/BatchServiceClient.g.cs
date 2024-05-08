@@ -53,6 +53,7 @@ namespace Google.Cloud.Batch.V1Alpha
             GetJobSettings = existing.GetJobSettings;
             DeleteJobSettings = existing.DeleteJobSettings;
             DeleteJobOperationsSettings = existing.DeleteJobOperationsSettings.Clone();
+            UpdateJobSettings = existing.UpdateJobSettings;
             ListJobsSettings = existing.ListJobsSettings;
             GetTaskSettings = existing.GetTaskSettings;
             ListTasksSettings = existing.ListTasksSettings;
@@ -127,6 +128,18 @@ namespace Google.Cloud.Batch.V1Alpha
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BatchServiceClient.UpdateJob</c> and <c>BatchServiceClient.UpdateJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>BatchServiceClient.ListJobs</c>
@@ -818,6 +831,95 @@ namespace Google.Cloud.Batch.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteJobAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Job UpdateJob(UpdateJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> UpdateJobAsync(UpdateJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> UpdateJobAsync(UpdateJobRequest request, st::CancellationToken cancellationToken) =>
+            UpdateJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="job">
+        /// Required. The Job to update.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// 
+        /// UpdateJob request now only supports update on `task_count` field in a job's
+        /// first task group. Other fields will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Job UpdateJob(Job job, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateJob(new UpdateJobRequest
+            {
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="job">
+        /// Required. The Job to update.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// 
+        /// UpdateJob request now only supports update on `task_count` field in a job's
+        /// first task group. Other fields will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> UpdateJobAsync(Job job, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateJobAsync(new UpdateJobRequest
+            {
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="job">
+        /// Required. The Job to update.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// 
+        /// UpdateJob request now only supports update on `task_count` field in a job's
+        /// first task group. Other fields will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> UpdateJobAsync(Job job, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateJobAsync(job, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// List all Jobs for a project within a region.
@@ -1794,6 +1896,8 @@ namespace Google.Cloud.Batch.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteJobRequest, lro::Operation> _callDeleteJob;
 
+        private readonly gaxgrpc::ApiCall<UpdateJobRequest, Job> _callUpdateJob;
+
         private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
 
         private readonly gaxgrpc::ApiCall<GetTaskRequest, Task> _callGetTask;
@@ -1837,6 +1941,9 @@ namespace Google.Cloud.Batch.V1Alpha
             _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, lro::Operation>("DeleteJob", grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteJob);
             Modify_DeleteJobApiCall(ref _callDeleteJob);
+            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>("UpdateJob", grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("job.name", request => request.Job?.Name);
+            Modify_ApiCall(ref _callUpdateJob);
+            Modify_UpdateJobApiCall(ref _callUpdateJob);
             _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
@@ -1872,6 +1979,8 @@ namespace Google.Cloud.Batch.V1Alpha
 
         partial void Modify_DeleteJobApiCall(ref gaxgrpc::ApiCall<DeleteJobRequest, lro::Operation> call);
 
+        partial void Modify_UpdateJobApiCall(ref gaxgrpc::ApiCall<UpdateJobRequest, Job> call);
+
         partial void Modify_ListJobsApiCall(ref gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> call);
 
         partial void Modify_GetTaskApiCall(ref gaxgrpc::ApiCall<GetTaskRequest, Task> call);
@@ -1901,6 +2010,8 @@ namespace Google.Cloud.Batch.V1Alpha
         partial void Modify_GetJobRequest(ref GetJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteJobRequest(ref DeleteJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateJobRequest(ref UpdateJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1991,6 +2102,30 @@ namespace Google.Cloud.Batch.V1Alpha
         {
             Modify_DeleteJobRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteJob.Async(request, callSettings).ConfigureAwait(false), DeleteJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Job UpdateJob(UpdateJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateJobRequest(ref request, ref callSettings);
+            return _callUpdateJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Job> UpdateJobAsync(UpdateJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateJobRequest(ref request, ref callSettings);
+            return _callUpdateJob.Async(request, callSettings);
         }
 
         /// <summary>
