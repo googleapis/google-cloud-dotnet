@@ -52,7 +52,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             BatchCreateTasksSettings = existing.BatchCreateTasksSettings;
             CreateTaskSettings = existing.CreateTaskSettings;
             GetTaskSettings = existing.GetTaskSettings;
-            SearchTasksSettings = existing.SearchTasksSettings;
             UpdateTaskSettings = existing.UpdateTaskSettings;
             ListTasksSettings = existing.ListTasksSettings;
             GetTaskTrackingInfoSettings = existing.GetTaskTrackingInfoSettings;
@@ -171,24 +170,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTaskSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>DeliveryServiceClient.SearchTasks</c> and <c>DeliveryServiceClient.SearchTasksAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings SearchTasksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1090,88 +1071,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             GetTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deprecated: Use `GetTaskTrackingInfo` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Task"/> resources.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual gax::PagedEnumerable<SearchTasksResponse, Task> SearchTasks(SearchTasksRequest request, gaxgrpc::CallSettings callSettings = null) =>
-#pragma warning restore CS0612
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deprecated: Use `GetTaskTrackingInfo` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Task"/> resources.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual gax::PagedAsyncEnumerable<SearchTasksResponse, Task> SearchTasksAsync(SearchTasksRequest request, gaxgrpc::CallSettings callSettings = null) =>
-#pragma warning restore CS0612
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deprecated: Use `GetTaskTrackingInfo` instead.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Must be in the format `providers/{provider}`.
-        /// The provider must be the Google Cloud Project ID. For example,
-        /// `sample-cloud-project`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Task"/> resources.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual gax::PagedEnumerable<SearchTasksResponse, Task> SearchTasks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchTasks(new SearchTasksRequest
-#pragma warning restore CS0612
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Deprecated: Use `GetTaskTrackingInfo` instead.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Must be in the format `providers/{provider}`.
-        /// The provider must be the Google Cloud Project ID. For example,
-        /// `sample-cloud-project`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Task"/> resources.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public virtual gax::PagedAsyncEnumerable<SearchTasksResponse, Task> SearchTasksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchTasksAsync(new SearchTasksRequest
-#pragma warning restore CS0612
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
         /// Updates `Task` data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1697,10 +1596,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
 
         private readonly gaxgrpc::ApiCall<GetTaskRequest, Task> _callGetTask;
 
-#pragma warning disable CS0612
-        private readonly gaxgrpc::ApiCall<SearchTasksRequest, SearchTasksResponse> _callSearchTasks;
-#pragma warning restore CS0612
-
         private readonly gaxgrpc::ApiCall<UpdateTaskRequest, Task> _callUpdateTask;
 
         private readonly gaxgrpc::ApiCall<ListTasksRequest, ListTasksResponse> _callListTasks;
@@ -1742,11 +1637,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             _callGetTask = clientHelper.BuildApiCall<GetTaskRequest, Task>("GetTask", grpcClient.GetTaskAsync, grpcClient.GetTask, effectiveSettings.GetTaskSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetTaskRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callGetTask);
             Modify_GetTaskApiCall(ref _callGetTask);
-#pragma warning disable CS0612
-            _callSearchTasks = clientHelper.BuildApiCall<SearchTasksRequest, SearchTasksResponse>("SearchTasks", grpcClient.SearchTasksAsync, grpcClient.SearchTasks, effectiveSettings.SearchTasksSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SearchTasksRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Parent));
-#pragma warning restore CS0612
-            Modify_ApiCall(ref _callSearchTasks);
-            Modify_SearchTasksApiCall(ref _callSearchTasks);
             _callUpdateTask = clientHelper.BuildApiCall<UpdateTaskRequest, Task>("UpdateTask", grpcClient.UpdateTaskAsync, grpcClient.UpdateTask, effectiveSettings.UpdateTaskSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateTaskRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Task?.Name));
             Modify_ApiCall(ref _callUpdateTask);
             Modify_UpdateTaskApiCall(ref _callUpdateTask);
@@ -1776,10 +1666,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
 
         partial void Modify_GetTaskApiCall(ref gaxgrpc::ApiCall<GetTaskRequest, Task> call);
 
-#pragma warning disable CS0612
-        partial void Modify_SearchTasksApiCall(ref gaxgrpc::ApiCall<SearchTasksRequest, SearchTasksResponse> call);
-#pragma warning restore CS0612
-
         partial void Modify_UpdateTaskApiCall(ref gaxgrpc::ApiCall<UpdateTaskRequest, Task> call);
 
         partial void Modify_ListTasksApiCall(ref gaxgrpc::ApiCall<ListTasksRequest, ListTasksResponse> call);
@@ -1804,10 +1690,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         partial void Modify_CreateTaskRequest(ref CreateTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTaskRequest(ref GetTaskRequest request, ref gaxgrpc::CallSettings settings);
-
-#pragma warning disable CS0612
-        partial void Modify_SearchTasksRequest(ref SearchTasksRequest request, ref gaxgrpc::CallSettings settings);
-#pragma warning restore CS0612
 
         partial void Modify_UpdateTaskRequest(ref UpdateTaskRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1974,40 +1856,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         }
 
         /// <summary>
-        /// Deprecated: Use `GetTaskTrackingInfo` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Task"/> resources.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public override gax::PagedEnumerable<SearchTasksResponse, Task> SearchTasks(SearchTasksRequest request, gaxgrpc::CallSettings callSettings = null)
-#pragma warning restore CS0612
-        {
-            Modify_SearchTasksRequest(ref request, ref callSettings);
-#pragma warning disable CS0612
-            return new gaxgrpc::GrpcPagedEnumerable<SearchTasksRequest, SearchTasksResponse, Task>(_callSearchTasks, request, callSettings);
-#pragma warning restore CS0612
-        }
-
-        /// <summary>
-        /// Deprecated: Use `GetTaskTrackingInfo` instead.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Task"/> resources.</returns>
-        [sys::ObsoleteAttribute]
-#pragma warning disable CS0612
-        public override gax::PagedAsyncEnumerable<SearchTasksResponse, Task> SearchTasksAsync(SearchTasksRequest request, gaxgrpc::CallSettings callSettings = null)
-#pragma warning restore CS0612
-        {
-            Modify_SearchTasksRequest(ref request, ref callSettings);
-#pragma warning disable CS0612
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchTasksRequest, SearchTasksResponse, Task>(_callSearchTasks, request, callSettings);
-#pragma warning restore CS0612
-        }
-
-        /// <summary>
         /// Updates `Task` data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2104,24 +1952,12 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         }
     }
 
-    public partial class SearchTasksRequest : gaxgrpc::IPageRequest
-    {
-    }
-
     public partial class ListTasksRequest : gaxgrpc::IPageRequest
     {
     }
 
     public partial class ListDeliveryVehiclesRequest : gaxgrpc::IPageRequest
     {
-    }
-
-    public partial class SearchTasksResponse : gaxgrpc::IPageResponse<Task>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Task> GetEnumerator() => Tasks.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListTasksResponse : gaxgrpc::IPageResponse<Task>

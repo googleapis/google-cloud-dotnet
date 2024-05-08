@@ -74,95 +74,83 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "kQEKDkdldFRhc2tSZXF1ZXN0EkgKBmhlYWRlchgBIAEoCzIzLm1hcHMuZmxl",
             "ZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVhZGVyQgPg",
             "QQESNQoEbmFtZRgDIAEoCUIn4EEC+kEhCh9mbGVldGVuZ2luZS5nb29nbGVh",
-            "cGlzLmNvbS9UYXNrIsIBChJTZWFyY2hUYXNrc1JlcXVlc3QSSAoGaGVhZGVy",
-            "GAEgASgLMjMubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVy",
-            "eVJlcXVlc3RIZWFkZXJCA+BBARITCgZwYXJlbnQYAyABKAlCA+BBAhIYCgt0",
-            "cmFja2luZ19pZBgEIAEoCUID4EECEhYKCXBhZ2Vfc2l6ZRgFIAEoBUID4EEB",
-            "EhcKCnBhZ2VfdG9rZW4YBiABKAlCA+BBAToCGAEiZQoTU2VhcmNoVGFza3NS",
-            "ZXNwb25zZRIxCgV0YXNrcxgBIAMoCzIiLm1hcHMuZmxlZXRlbmdpbmUuZGVs",
-            "aXZlcnkudjEuVGFzaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAk6AhgBIsoB",
-            "ChFVcGRhdGVUYXNrUmVxdWVzdBJICgZoZWFkZXIYASABKAsyMy5tYXBzLmZs",
-            "ZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID",
-            "4EEBEjUKBHRhc2sYAyABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5",
-            "LnYxLlRhc2tCA+BBAhI0Cgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBAiLbAQoQTGlzdFRhc2tzUmVxdWVzdBJI",
-            "CgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYx",
-            "LkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBEjcKBnBhcmVudBgDIAEoCUIn",
-            "4EEC+kEhEh9mbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9UYXNrEhYKCXBh",
-            "Z2Vfc2l6ZRgEIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBSABKAlCA+BBARIT",
-            "CgZmaWx0ZXIYBiABKAlCA+BBASJzChFMaXN0VGFza3NSZXNwb25zZRIxCgV0",
-            "YXNrcxgBIAMoCzIiLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGFz",
-            "axIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEo",
-            "AyKpAQoaR2V0VGFza1RyYWNraW5nSW5mb1JlcXVlc3QSSAoGaGVhZGVyGAEg",
-            "ASgLMjMubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVJl",
-            "cXVlc3RIZWFkZXJCA+BBARJBCgRuYW1lGAMgASgJQjPgQQL6QS0KK2ZsZWV0",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Rhc2tUcmFja2luZ0luZm8y5RQKD0Rl",
-            "bGl2ZXJ5U2VydmljZRKhAgoVQ3JlYXRlRGVsaXZlcnlWZWhpY2xlEjoubWFw",
-            "cy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5DcmVhdGVEZWxpdmVyeVZlaGlj",
-            "bGVSZXF1ZXN0Gi0ubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxp",
-            "dmVyeVZlaGljbGUinAHaQStwYXJlbnQsZGVsaXZlcnlfdmVoaWNsZSxkZWxp",
-            "dmVyeV92ZWhpY2xlX2lkgtPkkwI9IikvdjEve3BhcmVudD1wcm92aWRlcnMv",
-            "Kn0vZGVsaXZlcnlWZWhpY2xlczoQZGVsaXZlcnlfdmVoaWNsZYrT5JMCJRIj",
-            "CgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0S3wEKEkdldERl",
-            "bGl2ZXJ5VmVoaWNsZRI3Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEu",
-            "R2V0RGVsaXZlcnlWZWhpY2xlUmVxdWVzdBotLm1hcHMuZmxlZXRlbmdpbmUu",
-            "ZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlImHaQQRuYW1lgtPkkwIrEikv",
-            "djEve25hbWU9cHJvdmlkZXJzLyovZGVsaXZlcnlWZWhpY2xlcy8qfYrT5JMC",
-            "IxIhCgRuYW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9ErICChVVcGRh",
-            "dGVEZWxpdmVyeVZlaGljbGUSOi5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5",
-            "LnYxLlVwZGF0ZURlbGl2ZXJ5VmVoaWNsZVJlcXVlc3QaLS5tYXBzLmZsZWV0",
-            "ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5VmVoaWNsZSKtAdpBHGRlbGl2",
-            "ZXJ5X3ZlaGljbGUsdXBkYXRlX21hc2uC0+STAk4yOi92MS97ZGVsaXZlcnlf",
-            "dmVoaWNsZS5uYW1lPXByb3ZpZGVycy8qL2RlbGl2ZXJ5VmVoaWNsZXMvKn06",
-            "EGRlbGl2ZXJ5X3ZlaGljbGWK0+STAjQSMgoVZGVsaXZlcnlfdmVoaWNsZS5u",
-            "YW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9EuMBChBCYXRjaENyZWF0",
-            "ZVRhc2tzEjUubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5CYXRjaENy",
-            "ZWF0ZVRhc2tzUmVxdWVzdBo2Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnku",
-            "djEuQmF0Y2hDcmVhdGVUYXNrc1Jlc3BvbnNlImCC0+STAi8iKi92MS97cGFy",
-            "ZW50PXByb3ZpZGVycy8qfS90YXNrczpiYXRjaENyZWF0ZToBKorT5JMCJRIj",
-            "CgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0S0AEKCkNyZWF0",
-            "ZVRhc2sSLy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkNyZWF0ZVRh",
-            "c2tSZXF1ZXN0GiIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5UYXNr",
-            "Im3aQRNwYXJlbnQsdGFzayx0YXNrX2lkgtPkkwImIh4vdjEve3BhcmVudD1w",
-            "cm92aWRlcnMvKn0vdGFza3M6BHRhc2uK0+STAiUSIwoGcGFyZW50Ehl7cHJv",
-            "dmlkZXJfaWQ9cHJvdmlkZXJzLyp9ErMBCgdHZXRUYXNrEiwubWFwcy5mbGVl",
-            "dGVuZ2luZS5kZWxpdmVyeS52MS5HZXRUYXNrUmVxdWVzdBoiLm1hcHMuZmxl",
-            "ZXRlbmdpbmUuZGVsaXZlcnkudjEuVGFzayJW2kEEbmFtZYLT5JMCIBIeL3Yx",
-            "L3tuYW1lPXByb3ZpZGVycy8qL3Rhc2tzLyp9itPkkwIjEiEKBG5hbWUSGXtw",
-            "cm92aWRlcl9pZD1wcm92aWRlcnMvKn0S2AEKC1NlYXJjaFRhc2tzEjAubWFw",
-            "cy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5TZWFyY2hUYXNrc1JlcXVlc3Qa",
-            "MS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlNlYXJjaFRhc2tzUmVz",
-            "cG9uc2UiZIgCAdpBBnBhcmVudILT5JMCJxIlL3YxL3twYXJlbnQ9cHJvdmlk",
-            "ZXJzLyp9L3Rhc2tzOnNlYXJjaIrT5JMCJRIjCgZwYXJlbnQSGXtwcm92aWRl",
-            "cl9pZD1wcm92aWRlcnMvKn0S1QEKClVwZGF0ZVRhc2sSLy5tYXBzLmZsZWV0",
-            "ZW5naW5lLmRlbGl2ZXJ5LnYxLlVwZGF0ZVRhc2tSZXF1ZXN0GiIubWFwcy5m",
-            "bGVldGVuZ2luZS5kZWxpdmVyeS52MS5UYXNrInLaQRB0YXNrLHVwZGF0ZV9t",
-            "YXNrgtPkkwIrMiMvdjEve3Rhc2submFtZT1wcm92aWRlcnMvKi90YXNrcy8q",
-            "fToEdGFza4rT5JMCKBImCgl0YXNrLm5hbWUSGXtwcm92aWRlcl9pZD1wcm92",
-            "aWRlcnMvKn0SyAEKCUxpc3RUYXNrcxIuLm1hcHMuZmxlZXRlbmdpbmUuZGVs",
-            "aXZlcnkudjEuTGlzdFRhc2tzUmVxdWVzdBovLm1hcHMuZmxlZXRlbmdpbmUu",
-            "ZGVsaXZlcnkudjEuTGlzdFRhc2tzUmVzcG9uc2UiWtpBBnBhcmVudILT5JMC",
-            "IBIeL3YxL3twYXJlbnQ9cHJvdmlkZXJzLyp9L3Rhc2tzitPkkwIlEiMKBnBh",
-            "cmVudBIZe3Byb3ZpZGVyX2lkPXByb3ZpZGVycy8qfRLiAQoTR2V0VGFza1Ry",
-            "YWNraW5nSW5mbxI4Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuR2V0",
-            "VGFza1RyYWNraW5nSW5mb1JlcXVlc3QaLi5tYXBzLmZsZWV0ZW5naW5lLmRl",
-            "bGl2ZXJ5LnYxLlRhc2tUcmFja2luZ0luZm8iYdpBBG5hbWWC0+STAisSKS92",
-            "MS97bmFtZT1wcm92aWRlcnMvKi90YXNrVHJhY2tpbmdJbmZvLyp9itPkkwIj",
-            "EiEKBG5hbWUSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0S9AEKFExpc3RE",
-            "ZWxpdmVyeVZlaGljbGVzEjkubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52",
-            "MS5MaXN0RGVsaXZlcnlWZWhpY2xlc1JlcXVlc3QaOi5tYXBzLmZsZWV0ZW5n",
-            "aW5lLmRlbGl2ZXJ5LnYxLkxpc3REZWxpdmVyeVZlaGljbGVzUmVzcG9uc2Ui",
-            "ZdpBBnBhcmVudILT5JMCKxIpL3YxL3twYXJlbnQ9cHJvdmlkZXJzLyp9L2Rl",
-            "bGl2ZXJ5VmVoaWNsZXOK0+STAiUSIwoGcGFyZW50Ehl7cHJvdmlkZXJfaWQ9",
-            "cHJvdmlkZXJzLyp9Gk7KQRpmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbdJB",
-            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1ClAIKI2dvb2dsZS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQgtE",
-            "ZWxpdmVyeUFwaVABWkljbG91ZC5nb29nbGUuY29tL2dvL21hcHMvZmxlZXRl",
-            "bmdpbmUvZGVsaXZlcnkvYXBpdjEvZGVsaXZlcnlwYjtkZWxpdmVyeXBiogIE",
-            "Q0ZFRKoCI0dvb2dsZS5NYXBzLkZsZWV0RW5naW5lLkRlbGl2ZXJ5LlYx6gIn",
-            "R29vZ2xlOjpNYXBzOjpGbGVldEVuZ2luZTo6RGVsaXZlcnk6OlYx6kE7CiNm",
-            "bGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9Qcm92aWRlchIUcHJvdmlkZXJz",
-            "L3twcm92aWRlcn1iBnByb3RvMw=="));
+            "cGlzLmNvbS9UYXNrIsoBChFVcGRhdGVUYXNrUmVxdWVzdBJICgZoZWFkZXIY",
+            "ASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5",
+            "UmVxdWVzdEhlYWRlckID4EEBEjUKBHRhc2sYAyABKAsyIi5tYXBzLmZsZWV0",
+            "ZW5naW5lLmRlbGl2ZXJ5LnYxLlRhc2tCA+BBAhI0Cgt1cGRhdGVfbWFzaxgE",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiLbAQoQTGlz",
+            "dFRhc2tzUmVxdWVzdBJICgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5n",
+            "aW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBEjcK",
+            "BnBhcmVudBgDIAEoCUIn4EEC+kEhEh9mbGVldGVuZ2luZS5nb29nbGVhcGlz",
+            "LmNvbS9UYXNrEhYKCXBhZ2Vfc2l6ZRgEIAEoBUID4EEBEhcKCnBhZ2VfdG9r",
+            "ZW4YBSABKAlCA+BBARITCgZmaWx0ZXIYBiABKAlCA+BBASJzChFMaXN0VGFz",
+            "a3NSZXNwb25zZRIxCgV0YXNrcxgBIAMoCzIiLm1hcHMuZmxlZXRlbmdpbmUu",
+            "ZGVsaXZlcnkudjEuVGFzaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoK",
+            "dG90YWxfc2l6ZRgDIAEoAyKpAQoaR2V0VGFza1RyYWNraW5nSW5mb1JlcXVl",
+            "c3QSSAoGaGVhZGVyGAEgASgLMjMubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVy",
+            "eS52MS5EZWxpdmVyeVJlcXVlc3RIZWFkZXJCA+BBARJBCgRuYW1lGAMgASgJ",
+            "QjPgQQL6QS0KK2ZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Rhc2tUcmFj",
+            "a2luZ0luZm8yihMKD0RlbGl2ZXJ5U2VydmljZRKhAgoVQ3JlYXRlRGVsaXZl",
+            "cnlWZWhpY2xlEjoubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5DcmVh",
+            "dGVEZWxpdmVyeVZlaGljbGVSZXF1ZXN0Gi0ubWFwcy5mbGVldGVuZ2luZS5k",
+            "ZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGUinAHaQStwYXJlbnQsZGVsaXZl",
+            "cnlfdmVoaWNsZSxkZWxpdmVyeV92ZWhpY2xlX2lkgtPkkwI9IikvdjEve3Bh",
+            "cmVudD1wcm92aWRlcnMvKn0vZGVsaXZlcnlWZWhpY2xlczoQZGVsaXZlcnlf",
+            "dmVoaWNsZYrT5JMCJRIjCgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRl",
+            "cnMvKn0S3wEKEkdldERlbGl2ZXJ5VmVoaWNsZRI3Lm1hcHMuZmxlZXRlbmdp",
+            "bmUuZGVsaXZlcnkudjEuR2V0RGVsaXZlcnlWZWhpY2xlUmVxdWVzdBotLm1h",
+            "cHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlImHa",
+            "QQRuYW1lgtPkkwIrEikvdjEve25hbWU9cHJvdmlkZXJzLyovZGVsaXZlcnlW",
+            "ZWhpY2xlcy8qfYrT5JMCIxIhCgRuYW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlk",
+            "ZXJzLyp9ErICChVVcGRhdGVEZWxpdmVyeVZlaGljbGUSOi5tYXBzLmZsZWV0",
+            "ZW5naW5lLmRlbGl2ZXJ5LnYxLlVwZGF0ZURlbGl2ZXJ5VmVoaWNsZVJlcXVl",
+            "c3QaLS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5VmVo",
+            "aWNsZSKtAdpBHGRlbGl2ZXJ5X3ZlaGljbGUsdXBkYXRlX21hc2uC0+STAk4y",
+            "Oi92MS97ZGVsaXZlcnlfdmVoaWNsZS5uYW1lPXByb3ZpZGVycy8qL2RlbGl2",
+            "ZXJ5VmVoaWNsZXMvKn06EGRlbGl2ZXJ5X3ZlaGljbGWK0+STAjQSMgoVZGVs",
+            "aXZlcnlfdmVoaWNsZS5uYW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9",
+            "EuMBChBCYXRjaENyZWF0ZVRhc2tzEjUubWFwcy5mbGVldGVuZ2luZS5kZWxp",
+            "dmVyeS52MS5CYXRjaENyZWF0ZVRhc2tzUmVxdWVzdBo2Lm1hcHMuZmxlZXRl",
+            "bmdpbmUuZGVsaXZlcnkudjEuQmF0Y2hDcmVhdGVUYXNrc1Jlc3BvbnNlImCC",
+            "0+STAi8iKi92MS97cGFyZW50PXByb3ZpZGVycy8qfS90YXNrczpiYXRjaENy",
+            "ZWF0ZToBKorT5JMCJRIjCgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRl",
+            "cnMvKn0S0AEKCkNyZWF0ZVRhc2sSLy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2",
+            "ZXJ5LnYxLkNyZWF0ZVRhc2tSZXF1ZXN0GiIubWFwcy5mbGVldGVuZ2luZS5k",
+            "ZWxpdmVyeS52MS5UYXNrIm3aQRNwYXJlbnQsdGFzayx0YXNrX2lkgtPkkwIm",
+            "Ih4vdjEve3BhcmVudD1wcm92aWRlcnMvKn0vdGFza3M6BHRhc2uK0+STAiUS",
+            "IwoGcGFyZW50Ehl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9ErMBCgdHZXRU",
+            "YXNrEiwubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5HZXRUYXNrUmVx",
+            "dWVzdBoiLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGFzayJW2kEE",
+            "bmFtZYLT5JMCIBIeL3YxL3tuYW1lPXByb3ZpZGVycy8qL3Rhc2tzLyp9itPk",
+            "kwIjEiEKBG5hbWUSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0S1QEKClVw",
+            "ZGF0ZVRhc2sSLy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlVwZGF0",
+            "ZVRhc2tSZXF1ZXN0GiIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5U",
+            "YXNrInLaQRB0YXNrLHVwZGF0ZV9tYXNrgtPkkwIrMiMvdjEve3Rhc2submFt",
+            "ZT1wcm92aWRlcnMvKi90YXNrcy8qfToEdGFza4rT5JMCKBImCgl0YXNrLm5h",
+            "bWUSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0SyAEKCUxpc3RUYXNrcxIu",
+            "Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuTGlzdFRhc2tzUmVxdWVz",
+            "dBovLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuTGlzdFRhc2tzUmVz",
+            "cG9uc2UiWtpBBnBhcmVudILT5JMCIBIeL3YxL3twYXJlbnQ9cHJvdmlkZXJz",
+            "Lyp9L3Rhc2tzitPkkwIlEiMKBnBhcmVudBIZe3Byb3ZpZGVyX2lkPXByb3Zp",
+            "ZGVycy8qfRLiAQoTR2V0VGFza1RyYWNraW5nSW5mbxI4Lm1hcHMuZmxlZXRl",
+            "bmdpbmUuZGVsaXZlcnkudjEuR2V0VGFza1RyYWNraW5nSW5mb1JlcXVlc3Qa",
+            "Li5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlRhc2tUcmFja2luZ0lu",
+            "Zm8iYdpBBG5hbWWC0+STAisSKS92MS97bmFtZT1wcm92aWRlcnMvKi90YXNr",
+            "VHJhY2tpbmdJbmZvLyp9itPkkwIjEiEKBG5hbWUSGXtwcm92aWRlcl9pZD1w",
+            "cm92aWRlcnMvKn0S9AEKFExpc3REZWxpdmVyeVZlaGljbGVzEjkubWFwcy5m",
+            "bGVldGVuZ2luZS5kZWxpdmVyeS52MS5MaXN0RGVsaXZlcnlWZWhpY2xlc1Jl",
+            "cXVlc3QaOi5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkxpc3REZWxp",
+            "dmVyeVZlaGljbGVzUmVzcG9uc2UiZdpBBnBhcmVudILT5JMCKxIpL3YxL3tw",
+            "YXJlbnQ9cHJvdmlkZXJzLyp9L2RlbGl2ZXJ5VmVoaWNsZXOK0+STAiUSIwoG",
+            "cGFyZW50Ehl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9Gk7KQRpmbGVldGVu",
+            "Z2luZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClAIKI2dvb2dsZS5tYXBzLmZsZWV0",
+            "ZW5naW5lLmRlbGl2ZXJ5LnYxQgtEZWxpdmVyeUFwaVABWkljbG91ZC5nb29n",
+            "bGUuY29tL2dvL21hcHMvZmxlZXRlbmdpbmUvZGVsaXZlcnkvYXBpdjEvZGVs",
+            "aXZlcnlwYjtkZWxpdmVyeXBiogIEQ0ZFRKoCI0dvb2dsZS5NYXBzLkZsZWV0",
+            "RW5naW5lLkRlbGl2ZXJ5LlYx6gInR29vZ2xlOjpNYXBzOjpGbGVldEVuZ2lu",
+            "ZTo6RGVsaXZlcnk6OlYx6kE7CiNmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNv",
+            "bS9Qcm92aWRlchIUcHJvdmlkZXJzL3twcm92aWRlcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehiclesReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.HeaderReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TaskTrackingInfoReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TasksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -175,8 +163,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.BatchCreateTasksResponse), global::Google.Maps.FleetEngine.Delivery.V1.BatchCreateTasksResponse.Parser, new[]{ "Tasks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.CreateTaskRequest), global::Google.Maps.FleetEngine.Delivery.V1.CreateTaskRequest.Parser, new[]{ "Header", "Parent", "TaskId", "Task" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.GetTaskRequest), global::Google.Maps.FleetEngine.Delivery.V1.GetTaskRequest.Parser, new[]{ "Header", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest), global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksRequest.Parser, new[]{ "Header", "Parent", "TrackingId", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse), global::Google.Maps.FleetEngine.Delivery.V1.SearchTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest), global::Google.Maps.FleetEngine.Delivery.V1.UpdateTaskRequest.Parser, new[]{ "Header", "Task", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.ListTasksRequest), global::Google.Maps.FleetEngine.Delivery.V1.ListTasksRequest.Parser, new[]{ "Header", "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.ListTasksResponse), global::Google.Maps.FleetEngine.Delivery.V1.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken", "TotalSize" }, null, null, null, null),
@@ -2875,620 +2861,6 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
   }
 
   /// <summary>
-  /// Deprecated: Issue `GetTaskTrackingInfoRequest`s to `GetTaskTrackingInfo`
-  /// instead.
-  /// </summary>
-  [global::System.ObsoleteAttribute]
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SearchTasksRequest : pb::IMessage<SearchTasksRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<SearchTasksRequest> _parser = new pb::MessageParser<SearchTasksRequest>(() => new SearchTasksRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SearchTasksRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[9]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SearchTasksRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SearchTasksRequest(SearchTasksRequest other) : this() {
-      header_ = other.header_ != null ? other.header_.Clone() : null;
-      parent_ = other.parent_;
-      trackingId_ = other.trackingId_;
-      pageSize_ = other.pageSize_;
-      pageToken_ = other.pageToken_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SearchTasksRequest Clone() {
-      return new SearchTasksRequest(this);
-    }
-
-    /// <summary>Field number for the "header" field.</summary>
-    public const int HeaderFieldNumber = 1;
-    private global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader header_;
-    /// <summary>
-    /// Optional. The standard Delivery API request header.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader Header {
-      get { return header_; }
-      set {
-        header_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "parent" field.</summary>
-    public const int ParentFieldNumber = 3;
-    private string parent_ = "";
-    /// <summary>
-    /// Required. Must be in the format `providers/{provider}`.
-    /// The provider must be the Google Cloud Project ID. For example,
-    /// `sample-cloud-project`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Parent {
-      get { return parent_; }
-      set {
-        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "tracking_id" field.</summary>
-    public const int TrackingIdFieldNumber = 4;
-    private string trackingId_ = "";
-    /// <summary>
-    /// Required. The identifier of the set of related Tasks being requested.
-    /// Tracking IDs are subject to the following restrictions:
-    ///
-    /// * Must be a valid Unicode string.
-    /// * Limited to a maximum length of 64 characters.
-    /// * Normalized according to [Unicode Normalization Form C]
-    /// (http://www.unicode.org/reports/tr15/).
-    /// * May not contain any of the following ASCII characters: '/', ':', '?',
-    /// ',', or '#'.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string TrackingId {
-      get { return trackingId_; }
-      set {
-        trackingId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "page_size" field.</summary>
-    public const int PageSizeFieldNumber = 5;
-    private int pageSize_;
-    /// <summary>
-    /// Optional. The maximum number of Tasks to return. The service may return
-    /// fewer than this value. If you don't specify this value, then the server
-    /// determines the number of results to return.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int PageSize {
-      get { return pageSize_; }
-      set {
-        pageSize_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "page_token" field.</summary>
-    public const int PageTokenFieldNumber = 6;
-    private string pageToken_ = "";
-    /// <summary>
-    /// Optional. A page token, received from a previous `SearchTasks` call. You
-    /// must provide this value to retrieve the subsequent page.
-    ///
-    /// When paginating, all other parameters provided to `SearchTasks` must match
-    /// the call that provided the page token.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PageToken {
-      get { return pageToken_; }
-      set {
-        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as SearchTasksRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SearchTasksRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Header, other.Header)) return false;
-      if (Parent != other.Parent) return false;
-      if (TrackingId != other.TrackingId) return false;
-      if (PageSize != other.PageSize) return false;
-      if (PageToken != other.PageToken) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (header_ != null) hash ^= Header.GetHashCode();
-      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (TrackingId.Length != 0) hash ^= TrackingId.GetHashCode();
-      if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (header_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Header);
-      }
-      if (Parent.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Parent);
-      }
-      if (TrackingId.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(TrackingId);
-      }
-      if (PageSize != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(PageSize);
-      }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(PageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (header_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Header);
-      }
-      if (Parent.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Parent);
-      }
-      if (TrackingId.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(TrackingId);
-      }
-      if (PageSize != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(PageSize);
-      }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(PageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (header_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
-      }
-      if (Parent.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
-      }
-      if (TrackingId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrackingId);
-      }
-      if (PageSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
-      }
-      if (PageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SearchTasksRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.header_ != null) {
-        if (header_ == null) {
-          Header = new global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader();
-        }
-        Header.MergeFrom(other.Header);
-      }
-      if (other.Parent.Length != 0) {
-        Parent = other.Parent;
-      }
-      if (other.TrackingId.Length != 0) {
-        TrackingId = other.TrackingId;
-      }
-      if (other.PageSize != 0) {
-        PageSize = other.PageSize;
-      }
-      if (other.PageToken.Length != 0) {
-        PageToken = other.PageToken;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (header_ == null) {
-              Header = new global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader();
-            }
-            input.ReadMessage(Header);
-            break;
-          }
-          case 26: {
-            Parent = input.ReadString();
-            break;
-          }
-          case 34: {
-            TrackingId = input.ReadString();
-            break;
-          }
-          case 40: {
-            PageSize = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            PageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (header_ == null) {
-              Header = new global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader();
-            }
-            input.ReadMessage(Header);
-            break;
-          }
-          case 26: {
-            Parent = input.ReadString();
-            break;
-          }
-          case 34: {
-            TrackingId = input.ReadString();
-            break;
-          }
-          case 40: {
-            PageSize = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            PageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// The `SearchTasks` response. It contains the set of Tasks that meet the search
-  /// criteria in the `SearchTasksRequest`.
-  /// </summary>
-  [global::System.ObsoleteAttribute]
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SearchTasksResponse : pb::IMessage<SearchTasksResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<SearchTasksResponse> _parser = new pb::MessageParser<SearchTasksResponse>(() => new SearchTasksResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SearchTasksResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[10]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SearchTasksResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SearchTasksResponse(SearchTasksResponse other) : this() {
-      tasks_ = other.tasks_.Clone();
-      nextPageToken_ = other.nextPageToken_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SearchTasksResponse Clone() {
-      return new SearchTasksResponse(this);
-    }
-
-    /// <summary>Field number for the "tasks" field.</summary>
-    public const int TasksFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Maps.FleetEngine.Delivery.V1.Task> _repeated_tasks_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Maps.FleetEngine.Delivery.V1.Task.Parser);
-    private readonly pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.Task> tasks_ = new pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.Task>();
-    /// <summary>
-    /// The set of Tasks for the requested `tracking_id`. A successful response can
-    /// also be empty. An empty response indicates that no Tasks are associated
-    /// with the supplied `tracking_id`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.Task> Tasks {
-      get { return tasks_; }
-    }
-
-    /// <summary>Field number for the "next_page_token" field.</summary>
-    public const int NextPageTokenFieldNumber = 2;
-    private string nextPageToken_ = "";
-    /// <summary>
-    /// Pass this token in the `SearchTasksRequest` to continue to
-    /// list results. If all results have been returned, then this field is either
-    /// an empty string, or it doesn't appear in the response.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NextPageToken {
-      get { return nextPageToken_; }
-      set {
-        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as SearchTasksResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SearchTasksResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!tasks_.Equals(other.tasks_)) return false;
-      if (NextPageToken != other.NextPageToken) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= tasks_.GetHashCode();
-      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      tasks_.WriteTo(output, _repeated_tasks_codec);
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(NextPageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      tasks_.WriteTo(ref output, _repeated_tasks_codec);
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(NextPageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += tasks_.CalculateSize(_repeated_tasks_codec);
-      if (NextPageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SearchTasksResponse other) {
-      if (other == null) {
-        return;
-      }
-      tasks_.Add(other.tasks_);
-      if (other.NextPageToken.Length != 0) {
-        NextPageToken = other.NextPageToken;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            tasks_.AddEntriesFrom(input, _repeated_tasks_codec);
-            break;
-          }
-          case 18: {
-            NextPageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            tasks_.AddEntriesFrom(ref input, _repeated_tasks_codec);
-            break;
-          }
-          case 18: {
-            NextPageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// The `UpdateTask` request message.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3506,7 +2878,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3828,7 +3200,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4206,7 +3578,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4477,7 +3849,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Maps.FleetEngine.Delivery.V1.DeliveryApiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

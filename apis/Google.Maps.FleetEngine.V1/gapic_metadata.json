@@ -67,12 +67,6 @@
                 "ListVehiclesAsync"
               ]
             },
-            "SearchFuzzedVehicles": {
-              "methods": [
-                "SearchFuzzedVehicles",
-                "SearchFuzzedVehiclesAsync"
-              ]
-            },
             "SearchVehicles": {
               "methods": [
                 "SearchVehicles",
@@ -89,12 +83,6 @@
               "methods": [
                 "UpdateVehicleAttributes",
                 "UpdateVehicleAttributesAsync"
-              ]
-            },
-            "UpdateVehicleLocation": {
-              "methods": [
-                "UpdateVehicleLocation",
-                "UpdateVehicleLocationAsync"
               ]
             }
           }
