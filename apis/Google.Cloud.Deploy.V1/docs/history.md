@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.16.0, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Small corrections to Cloud Deploy API documentation ([commit b2e5459](https://github.com/googleapis/google-cloud-dotnet/commit/b2e54591eb14e8ea6ad017e8f9593bc4bda0baf8))
+
 ## Version 2.15.0, released 2024-04-22
 
 ### New features
