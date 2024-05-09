@@ -2858,7 +2858,7 @@
     },
     {
       "id": "Google.Cloud.Language.V2",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Cloud Natural Language",
       "productUrl": "https://cloud.google.com/natural-language/docs",
