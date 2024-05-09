@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.11.0, released 2024-05-08
+
+### New features
+
+- Add client library for KMS Autokey service, which enables automated KMS key provision and management ([commit 5ff96b3](https://github.com/googleapis/google-cloud-dotnet/commit/5ff96b3bb71b5732b4bc9d0a21f195440a7ac1d3))
+- Introduce Long-Running Operations (LRO) for KMS ([commit 3020530](https://github.com/googleapis/google-cloud-dotnet/commit/3020530fd4cac7f9c8185059b9e69091eb89afe6))
+- Support the ED25519 asymmetric signing algorithm ([commit 820f2ec](https://github.com/googleapis/google-cloud-dotnet/commit/820f2ec4dc8134c0a63434a93b930bb88e3788e1))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- In google.cloud.kms.v1.PublicKey, pem field is always populated ([commit 790ddc8](https://github.com/googleapis/google-cloud-dotnet/commit/790ddc8e9191b3652679ab54e7cf8c5f74518002))
+
 ## Version 3.10.0, released 2024-03-26
 
 ### New features
