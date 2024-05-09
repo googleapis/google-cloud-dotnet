@@ -2365,7 +2365,7 @@
       "listingDescription": "Firestore Administration (e.g. index management)",
       "productName": "Firestore Admin",
       "productUrl": "https://firebase.google.com",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Firestore Admin API.",
       "tags": [
