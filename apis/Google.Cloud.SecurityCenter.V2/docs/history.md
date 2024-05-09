@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Fixed backtick and double quotes mismatch in security_marks.proto ([commit 7a4b88a](https://github.com/googleapis/google-cloud-dotnet/commit/7a4b88a644382a0dc6d39033de78e49ad1cb0362))
+
 ## Version 1.0.0-beta02, released 2024-03-26
 
 ### New features
