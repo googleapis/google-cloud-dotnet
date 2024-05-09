@@ -1381,8 +1381,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     /// <summary>
     /// Required. The location of the stop. Note that the locations in the `Task`s
     /// might not exactly match this location, but will be within a short distance
-    /// of it. This field won't be populated in the response of either a `GetTask`,
-    /// or a `SearchTasks` call.
+    /// of it. This field won't be populated in the response of a `GetTask` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1400,7 +1399,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     private readonly pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.TaskInfo> tasks_ = new pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.TaskInfo>();
     /// <summary>
     /// The list of `Task`s to be performed at this stop. This field won't be
-    /// populated in the response of either a `GetTask` or `SearchTasks` call.
+    /// populated in the response of a `GetTask` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1413,7 +1412,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     private global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.State state_ = global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.State.Unspecified;
     /// <summary>
     /// The state of the `VehicleStop`. This field won't be populated in the
-    /// response of either a `GetTask`, or a `SearchTasks` call.
+    /// response of a `GetTask` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1684,9 +1683,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         public const int TaskIdFieldNumber = 1;
         private string taskId_ = "";
         /// <summary>
-        /// The Task ID. This field won't be populated in the response of either a
-        /// `GetTask`, or a `SearchTasks` call. Task IDs are subject to the following
-        /// restrictions:
+        /// The Task ID. This field won't be populated in the response of a `GetTask`
+        /// call. Task IDs are subject to the following restrictions:
         ///
         /// * Must be a valid Unicode string.
         /// * Limited to a maximum length of 64 characters.
