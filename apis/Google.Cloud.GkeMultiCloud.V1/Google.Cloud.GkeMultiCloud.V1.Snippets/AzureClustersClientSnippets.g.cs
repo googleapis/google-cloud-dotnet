@@ -1478,6 +1478,7 @@ namespace GoogleCSharpSnippets
                 AllowMissing = false,
                 ValidateOnly = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureCluster(request);
@@ -1514,6 +1515,7 @@ namespace GoogleCSharpSnippets
                 AllowMissing = false,
                 ValidateOnly = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClusterAsync(request);
@@ -2441,6 +2443,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureNodePool(request);
@@ -2477,6 +2480,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureNodePoolAsync(request);

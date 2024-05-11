@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 AllowMissing = false,
                 ValidateOnly = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureCluster(request);
