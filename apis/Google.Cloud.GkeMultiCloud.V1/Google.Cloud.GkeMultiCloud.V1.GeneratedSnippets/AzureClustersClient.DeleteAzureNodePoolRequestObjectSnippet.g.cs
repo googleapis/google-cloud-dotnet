@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureNodePool(request);

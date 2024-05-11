@@ -5627,8 +5627,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int IamInstanceProfileFieldNumber = 6;
     private string iamInstanceProfile_ = "";
     /// <summary>
-    /// Required. The name or ARN of the AWS IAM role assigned to nodes in the
-    /// pool.
+    /// Required. The name or ARN of the AWS IAM instance profile to assign to
+    /// nodes in the pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

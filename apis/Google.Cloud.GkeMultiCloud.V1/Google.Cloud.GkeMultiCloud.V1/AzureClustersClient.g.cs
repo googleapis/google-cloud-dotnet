@@ -3860,7 +3860,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="azureCluster">
         /// Required. The AzureCluster, which owns the JsonWebKeys.
         /// Format:
-        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3877,7 +3877,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="azureCluster">
         /// Required. The AzureCluster, which owns the JsonWebKeys.
         /// Format:
-        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3894,7 +3894,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="azureCluster">
         /// Required. The AzureCluster, which owns the JsonWebKeys.
         /// Format:
-        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3908,7 +3908,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="azureCluster">
         /// Required. The AzureCluster, which owns the JsonWebKeys.
         /// Format:
-        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3925,7 +3925,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="azureCluster">
         /// Required. The AzureCluster, which owns the JsonWebKeys.
         /// Format:
-        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3942,7 +3942,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="azureCluster">
         /// Required. The AzureCluster, which owns the JsonWebKeys.
         /// Format:
-        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
