@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProtos", "TestProtos\Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManualListenCalls", "ManualListenCalls\ManualListenCalls.csproj", "{CEF61941-BDA9-4970-ACBE-40FEDF7C01C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawGrpcStubs", "RawGrpcStubs\RawGrpcStubs.csproj", "{53125ED6-39E0-4ACE-BE71-A579D876FCA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawGrpcStubs", "RawGrpcStubs\RawGrpcStubs.csproj", "{53125ED6-39E0-4ACE-BE71-A579D876FCA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workaround", "Workaround\Workaround.csproj", "{980BD6A8-E8AB-4497-B037-4E26BB6F8810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{53125ED6-39E0-4ACE-BE71-A579D876FCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53125ED6-39E0-4ACE-BE71-A579D876FCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53125ED6-39E0-4ACE-BE71-A579D876FCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980BD6A8-E8AB-4497-B037-4E26BB6F8810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980BD6A8-E8AB-4497-B037-4E26BB6F8810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980BD6A8-E8AB-4497-B037-4E26BB6F8810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980BD6A8-E8AB-4497-B037-4E26BB6F8810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
