@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_UpdateTensorboardTimeSeries_async]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
@@ -38,8 +39,37 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateTensorboardTimeSeriesRequest request = new UpdateTensorboardTimeSeriesRequest
             {
-                UpdateMask = new FieldMask(),
-                TensorboardTimeSeries = new TensorboardTimeSeries(),
+                UpdateMask = new FieldMask { Paths = { "", }, },
+                TensorboardTimeSeries = new TensorboardTimeSeries
+                {
+                    TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
+                    DisplayName = "",
+                    Description = "",
+                    ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    PluginName = "",
+                    PluginData = ByteString.Empty,
+                    Metadata = new TensorboardTimeSeries.Types.Metadata
+                    {
+                        MaxStep = 0L,
+                        MaxWallTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        MaxBlobSequenceLength = 0L,
+                    },
+                },
             };
             // Make the request
             TensorboardTimeSeries response = await tensorboardServiceClient.UpdateTensorboardTimeSeriesAsync(request);

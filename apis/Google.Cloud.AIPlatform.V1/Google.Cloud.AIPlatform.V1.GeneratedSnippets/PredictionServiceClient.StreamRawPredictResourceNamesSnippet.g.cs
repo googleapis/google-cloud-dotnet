@@ -20,6 +20,8 @@ namespace GoogleCSharpSnippets
     using Google.Api;
     using Google.Api.Gax.Grpc;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedPredictionServiceClientSnippets
@@ -38,7 +40,19 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            HttpBody httpBody = new HttpBody();
+            HttpBody httpBody = new HttpBody
+            {
+                ContentType = "",
+                Data = ByteString.Empty,
+                Extensions =
+                {
+                    new Any
+                    {
+                        TypeUrl = "",
+                        Value = ByteString.Empty,
+                    },
+                },
+            };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamRawPredictStream response = predictionServiceClient.StreamRawPredict(endpoint, httpBody);
 

@@ -14,13 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_EndpointService_MutateDeployedModel_async_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedEndpointServiceClientSnippets
     {
@@ -38,8 +40,275 @@ namespace GoogleCSharpSnippets
             EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            DeployedModel deployedModel = new DeployedModel();
-            FieldMask updateMask = new FieldMask();
+            DeployedModel deployedModel = new DeployedModel
+            {
+                Id = "",
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "",
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                DedicatedResources = new DedicatedResources
+                {
+                    MachineSpec = new MachineSpec
+                    {
+                        MachineType = "",
+                        AcceleratorType = AcceleratorType.Unspecified,
+                        AcceleratorCount = 0,
+                        TpuTopology = "",
+                    },
+                    MinReplicaCount = 0,
+                    MaxReplicaCount = 0,
+                    AutoscalingMetricSpecs =
+                    {
+                        new AutoscalingMetricSpec
+                        {
+                            MetricName = "",
+                            Target = 0,
+                        },
+                    },
+                },
+                AutomaticResources = new AutomaticResources
+                {
+                    MinReplicaCount = 0,
+                    MaxReplicaCount = 0,
+                },
+                ExplanationSpec = new ExplanationSpec
+                {
+                    Parameters = new ExplanationParameters
+                    {
+                        SampledShapleyAttribution = new SampledShapleyAttribution { PathCount = 0, },
+                        IntegratedGradientsAttribution = new IntegratedGradientsAttribution
+                        {
+                            StepCount = 0,
+                            SmoothGradConfig = new SmoothGradConfig
+                            {
+                                NoiseSigma = 0F,
+                                FeatureNoiseSigma = new FeatureNoiseSigma
+                                {
+                                    NoiseSigma =
+                                    {
+                                        new FeatureNoiseSigma.Types.NoiseSigmaForFeature { Name = "", Sigma = 0F, },
+                                    },
+                                },
+                                NoisySampleCount = 0,
+                            },
+                            BlurBaselineConfig = new BlurBaselineConfig { MaxBlurSigma = 0F, },
+                        },
+                        XraiAttribution = new XraiAttribution
+                        {
+                            StepCount = 0,
+                            SmoothGradConfig = new SmoothGradConfig
+                            {
+                                NoiseSigma = 0F,
+                                FeatureNoiseSigma = new FeatureNoiseSigma
+                                {
+                                    NoiseSigma =
+                                    {
+                                        new FeatureNoiseSigma.Types.NoiseSigmaForFeature { Name = "", Sigma = 0F, },
+                                    },
+                                },
+                                NoisySampleCount = 0,
+                            },
+                            BlurBaselineConfig = new BlurBaselineConfig { MaxBlurSigma = 0F, },
+                        },
+                        TopK = 0,
+                        OutputIndices = new wkt::ListValue
+                        {
+                            Values =
+                            {
+                                new wkt::Value
+                                {
+                                    NullValue = wkt::NullValue.NullValue,
+                                    NumberValue = 0,
+                                    StringValue = "",
+                                    BoolValue = false,
+                                    StructValue = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value { }
+                                            },
+                                        },
+                                    },
+                                    ListValue = new wkt::ListValue { },
+                                },
+                            },
+                        },
+                        Examples = new Examples
+                        {
+                            NearestNeighborSearchConfig = new wkt::Value
+                            {
+                                NullValue = wkt::NullValue.NullValue,
+                                NumberValue = 0,
+                                StringValue = "",
+                                BoolValue = false,
+                                StructValue = new wkt::Struct
+                                {
+                                    Fields =
+                                    {
+                                        {
+                                            "",
+                                            new wkt::Value { }
+                                        },
+                                    },
+                                },
+                                ListValue = new wkt::ListValue
+                                {
+                                    Values = { new wkt::Value { }, },
+                                },
+                            },
+                            NeighborCount = 0,
+                            Presets = new Presets
+                            {
+                                Query = Presets.Types.Query.Precise,
+                                Modality = Presets.Types.Modality.Unspecified,
+                            },
+                            ExampleGcsSource = new Examples.Types.ExampleGcsSource
+                            {
+                                DataFormat = Examples.Types.ExampleGcsSource.Types.DataFormat.Unspecified,
+                                GcsSource = new GcsSource { Uris = { "", }, },
+                            },
+                        },
+                    },
+                    Metadata = new ExplanationMetadata
+                    {
+                        Inputs =
+                        {
+                            {
+                                "",
+                                new ExplanationMetadata.Types.InputMetadata
+                                {
+                                    InputBaselines =
+                                    {
+                                        new wkt::Value
+                                        {
+                                            NullValue = wkt::NullValue.NullValue,
+                                            NumberValue = 0,
+                                            StringValue = "",
+                                            BoolValue = false,
+                                            StructValue = new wkt::Struct
+                                            {
+                                                Fields =
+                                                {
+                                                    {
+                                                        "",
+                                                        new wkt::Value { }
+                                                    },
+                                                },
+                                            },
+                                            ListValue = new wkt::ListValue
+                                            {
+                                                Values = { new wkt::Value { }, },
+                                            },
+                                        },
+                                    },
+                                    InputTensorName = "",
+                                    Encoding = ExplanationMetadata.Types.InputMetadata.Types.Encoding.Unspecified,
+                                    Modality = "",
+                                    FeatureValueDomain = new ExplanationMetadata.Types.InputMetadata.Types.FeatureValueDomain
+                                    {
+                                        MinValue = 0F,
+                                        MaxValue = 0F,
+                                        OriginalMean = 0F,
+                                        OriginalStddev = 0F,
+                                    },
+                                    IndicesTensorName = "",
+                                    DenseShapeTensorName = "",
+                                    IndexFeatureMapping = { "", },
+                                    EncodedTensorName = "",
+                                    EncodedBaselines =
+                                    {
+                                        new wkt::Value
+                                        {
+                                            NullValue = wkt::NullValue.NullValue,
+                                            NumberValue = 0,
+                                            StringValue = "",
+                                            BoolValue = false,
+                                            StructValue = new wkt::Struct
+                                            {
+                                                Fields =
+                                                {
+                                                    {
+                                                        "",
+                                                        new wkt::Value { }
+                                                    },
+                                                },
+                                            },
+                                            ListValue = new wkt::ListValue
+                                            {
+                                                Values = { new wkt::Value { }, },
+                                            },
+                                        },
+                                    },
+                                    Visualization = new ExplanationMetadata.Types.InputMetadata.Types.Visualization
+                                    {
+                                        Type = ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.Type.Unspecified,
+                                        Polarity = ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.Polarity.Unspecified,
+                                        ColorMap = ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.ColorMap.Unspecified,
+                                        ClipPercentUpperbound = 0F,
+                                        ClipPercentLowerbound = 0F,
+                                        OverlayType = ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.OverlayType.Unspecified,
+                                    },
+                                    GroupName = "",
+                                }
+                            },
+                        },
+                        Outputs =
+                        {
+                            {
+                                "",
+                                new ExplanationMetadata.Types.OutputMetadata
+                                {
+                                    IndexDisplayNameMapping = new wkt::Value
+                                    {
+                                        NullValue = wkt::NullValue.NullValue,
+                                        NumberValue = 0,
+                                        StringValue = "",
+                                        BoolValue = false,
+                                        StructValue = new wkt::Struct
+                                        {
+                                            Fields =
+                                            {
+                                                {
+                                                    "",
+                                                    new wkt::Value { }
+                                                },
+                                            },
+                                        },
+                                        ListValue = new wkt::ListValue
+                                        {
+                                            Values = { new wkt::Value { }, },
+                                        },
+                                    },
+                                    DisplayNameMappingKey = "",
+                                    OutputTensorName = "",
+                                }
+                            },
+                        },
+                        FeatureAttributionsSchemaUri = "",
+                        LatentSpaceSource = "",
+                    },
+                },
+                ServiceAccount = "",
+                EnableAccessLogging = false,
+                PrivateEndpoints = new PrivateEndpoints
+                {
+                    PredictHttpUri = "",
+                    ExplainHttpUri = "",
+                    HealthHttpUri = "",
+                    ServiceAttachment = "",
+                },
+                DisableContainerLogging = false,
+                SharedResourcesAsDeploymentResourcePoolName = DeploymentResourcePoolName.FromProjectLocationDeploymentResourcePool("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_RESOURCE_POOL]"),
+                ModelVersionId = "",
+                DisableExplanations = false,
+            };
+            wkt::FieldMask updateMask = new wkt::FieldMask { Paths = { "", }, };
             // Make the request
             Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = await endpointServiceClient.MutateDeployedModelAsync(endpoint, deployedModel, updateMask);
 

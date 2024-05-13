@@ -36,8 +36,53 @@ namespace GoogleCSharpSnippets
             // Create client
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Feature feature = new Feature();
-            FieldMask updateMask = new FieldMask();
+            Feature feature = new Feature
+            {
+                FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
+                Description = "",
+                ValueType = Feature.Types.ValueType.Unspecified,
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                Etag = "",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly
+                    {
+                        Objective = Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified,
+                        FeatureStatsAnomaly = new FeatureStatsAnomaly
+                        {
+                            Score = 0,
+                            StatsUri = "",
+                            AnomalyUri = "",
+                            DistributionDeviation = 0,
+                            StartTime = new Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            EndTime = new Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            AnomalyDetectionThreshold = 0,
+                        },
+                    },
+                },
+                DisableMonitoring = false,
+                VersionColumnName = "",
+                PointOfContact = "",
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             Feature response = await featurestoreServiceClient.UpdateFeatureAsync(feature, updateMask);
         }

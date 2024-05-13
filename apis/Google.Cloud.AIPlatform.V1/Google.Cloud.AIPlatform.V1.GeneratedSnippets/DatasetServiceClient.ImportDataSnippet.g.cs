@@ -39,7 +39,13 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
             IEnumerable<ImportDataConfig> importConfigs = new ImportDataConfig[]
             {
-                new ImportDataConfig(),
+                new ImportDataConfig
+                {
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                    DataItemLabels = { { "", "" }, },
+                    AnnotationLabels = { { "", "" }, },
+                    ImportSchemaUri = "",
+                },
             };
             // Make the request
             Operation<ImportDataResponse, ImportDataOperationMetadata> response = datasetServiceClient.ImportData(name, importConfigs);

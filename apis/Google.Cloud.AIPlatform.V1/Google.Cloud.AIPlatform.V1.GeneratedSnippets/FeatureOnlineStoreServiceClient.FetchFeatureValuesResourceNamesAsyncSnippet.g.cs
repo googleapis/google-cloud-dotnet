@@ -36,7 +36,11 @@ namespace GoogleCSharpSnippets
             FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = await FeatureOnlineStoreServiceClient.CreateAsync();
             // Initialize request argument(s)
             FeatureViewName featureView = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]");
-            FeatureViewDataKey dataKey = new FeatureViewDataKey();
+            FeatureViewDataKey dataKey = new FeatureViewDataKey
+            {
+                Key = "",
+                CompositeKey = new FeatureViewDataKey.Types.CompositeKey { Parts = { "", }, },
+            };
             // Make the request
             FetchFeatureValuesResponse response = await featureOnlineStoreServiceClient.FetchFeatureValuesAsync(featureView, dataKey);
         }

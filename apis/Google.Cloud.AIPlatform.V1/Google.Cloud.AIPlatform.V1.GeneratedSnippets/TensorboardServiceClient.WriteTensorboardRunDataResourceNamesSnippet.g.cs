@@ -18,6 +18,8 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_WriteTensorboardRunData_sync_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
 
     public sealed partial class GeneratedTensorboardServiceClientSnippets
@@ -38,7 +40,40 @@ namespace GoogleCSharpSnippets
             TensorboardRunName tensorboardRun = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]");
             IEnumerable<TimeSeriesData> timeSeriesData = new TimeSeriesData[]
             {
-                new TimeSeriesData(),
+                new TimeSeriesData
+                {
+                    TensorboardTimeSeriesId = "",
+                    ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                    Values =
+                    {
+                        new TimeSeriesDataPoint
+                        {
+                            WallTime = new Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            Step = 0L,
+                            Scalar = new Scalar { Value = 0, },
+                            Tensor = new TensorboardTensor
+                            {
+                                Value = ByteString.Empty,
+                                VersionNumber = 0,
+                            },
+                            Blobs = new TensorboardBlobSequence
+                            {
+                                Values =
+                                {
+                                    new TensorboardBlob
+                                    {
+                                        Id = "",
+                                        Data = ByteString.Empty,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             WriteTensorboardRunDataResponse response = tensorboardServiceClient.WriteTensorboardRunData(tensorboardRun, timeSeriesData);

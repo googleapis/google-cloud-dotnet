@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             ListDeploymentResourcePoolsRequest request = new ListDeploymentResourcePoolsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> response = deploymentResourcePoolServiceClient.ListDeploymentResourcePools(request);

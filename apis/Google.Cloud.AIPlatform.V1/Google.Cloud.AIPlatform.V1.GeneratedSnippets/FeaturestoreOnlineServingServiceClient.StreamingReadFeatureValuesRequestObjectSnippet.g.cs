@@ -40,7 +40,10 @@ namespace GoogleCSharpSnippets
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
                 EntityIds = { "", },
-                FeatureSelector = new FeatureSelector(),
+                FeatureSelector = new FeatureSelector
+                {
+                    IdMatcher = new IdMatcher { Ids = { "", }, },
+                },
             };
             // Make the request, returning a streaming response
             using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);

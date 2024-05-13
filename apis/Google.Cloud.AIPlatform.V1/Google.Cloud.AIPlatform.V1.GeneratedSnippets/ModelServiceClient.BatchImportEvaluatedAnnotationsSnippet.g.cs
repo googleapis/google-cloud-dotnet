@@ -14,11 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_ModelService_BatchImportEvaluatedAnnotations_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
     using System.Collections.Generic;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedModelServiceClientSnippets
     {
@@ -38,7 +41,148 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]/slices/[SLICE]";
             IEnumerable<EvaluatedAnnotation> evaluatedAnnotations = new EvaluatedAnnotation[]
             {
-                new EvaluatedAnnotation(),
+                new EvaluatedAnnotation
+                {
+                    Type = EvaluatedAnnotation.Types.EvaluatedAnnotationType.Unspecified,
+                    Predictions =
+                    {
+                        new wkt::Value
+                        {
+                            NullValue = wkt::NullValue.NullValue,
+                            NumberValue = 0,
+                            StringValue = "",
+                            BoolValue = false,
+                            StructValue = new wkt::Struct
+                            {
+                                Fields =
+                                {
+                                    {
+                                        "",
+                                        new wkt::Value { }
+                                    },
+                                },
+                            },
+                            ListValue = new wkt::ListValue
+                            {
+                                Values = { new wkt::Value { }, },
+                            },
+                        },
+                    },
+                    GroundTruths =
+                    {
+                        new wkt::Value
+                        {
+                            NullValue = wkt::NullValue.NullValue,
+                            NumberValue = 0,
+                            StringValue = "",
+                            BoolValue = false,
+                            StructValue = new wkt::Struct
+                            {
+                                Fields =
+                                {
+                                    {
+                                        "",
+                                        new wkt::Value { }
+                                    },
+                                },
+                            },
+                            ListValue = new wkt::ListValue
+                            {
+                                Values = { new wkt::Value { }, },
+                            },
+                        },
+                    },
+                    DataItemPayload = new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                        NumberValue = 0,
+                        StringValue = "",
+                        BoolValue = false,
+                        StructValue = new wkt::Struct
+                        {
+                            Fields =
+                            {
+                                {
+                                    "",
+                                    new wkt::Value { }
+                                },
+                            },
+                        },
+                        ListValue = new wkt::ListValue
+                        {
+                            Values = { new wkt::Value { }, },
+                        },
+                    },
+                    EvaluatedDataItemViewId = "",
+                    Explanations =
+                    {
+                        new EvaluatedAnnotationExplanation
+                        {
+                            ExplanationType = "",
+                            Explanation = new Explanation
+                            {
+                                Attributions =
+                                {
+                                    new Attribution
+                                    {
+                                        BaselineOutputValue = 0,
+                                        InstanceOutputValue = 0,
+                                        FeatureAttributions = new wkt::Value
+                                        {
+                                            NullValue = wkt::NullValue.NullValue,
+                                            NumberValue = 0,
+                                            StringValue = "",
+                                            BoolValue = false,
+                                            StructValue = new wkt::Struct
+                                            {
+                                                Fields =
+                                                {
+                                                    {
+                                                        "",
+                                                        new wkt::Value { }
+                                                    },
+                                                },
+                                            },
+                                            ListValue = new wkt::ListValue
+                                            {
+                                                Values = { new wkt::Value { }, },
+                                            },
+                                        },
+                                        OutputIndex = { 0, },
+                                        OutputDisplayName = "",
+                                        ApproximationError = 0,
+                                        OutputName = "",
+                                    },
+                                },
+                                Neighbors =
+                                {
+                                    new Neighbor
+                                    {
+                                        NeighborId = "",
+                                        NeighborDistance = 0,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ErrorAnalysisAnnotations =
+                    {
+                        new ErrorAnalysisAnnotation
+                        {
+                            AttributedItems =
+                            {
+                                new ErrorAnalysisAnnotation.Types.AttributedItem
+                                {
+                                    AnnotationResourceName = "",
+                                    Distance = 0,
+                                },
+                            },
+                            QueryType = ErrorAnalysisAnnotation.Types.QueryType.Unspecified,
+                            OutlierScore = 0,
+                            OutlierThreshold = 0,
+                        },
+                    },
+                },
             };
             // Make the request
             BatchImportEvaluatedAnnotationsResponse response = modelServiceClient.BatchImportEvaluatedAnnotations(parent, evaluatedAnnotations);

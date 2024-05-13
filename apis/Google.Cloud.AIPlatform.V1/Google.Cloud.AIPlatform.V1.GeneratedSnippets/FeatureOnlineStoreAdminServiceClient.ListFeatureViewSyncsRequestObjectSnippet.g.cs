@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
                 Filter = "",
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
             };
             // Make the request

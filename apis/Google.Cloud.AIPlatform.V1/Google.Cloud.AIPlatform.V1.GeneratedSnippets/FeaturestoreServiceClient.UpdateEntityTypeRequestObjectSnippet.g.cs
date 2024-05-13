@@ -37,8 +37,41 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
-                EntityType = new EntityType(),
-                UpdateMask = new FieldMask(),
+                EntityType = new EntityType
+                {
+                    EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                    Description = "",
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Labels = { { "", "" }, },
+                    Etag = "",
+                    MonitoringConfig = new FeaturestoreMonitoringConfig
+                    {
+                        SnapshotAnalysis = new FeaturestoreMonitoringConfig.Types.SnapshotAnalysis
+                        {
+                            Disabled = false,
+                            MonitoringIntervalDays = 0,
+                            StalenessDays = 0,
+                        },
+                        ImportFeaturesAnalysis = new FeaturestoreMonitoringConfig.Types.ImportFeaturesAnalysis
+                        {
+                            State = FeaturestoreMonitoringConfig.Types.ImportFeaturesAnalysis.Types.State.Unspecified,
+                            AnomalyDetectionBaseline = FeaturestoreMonitoringConfig.Types.ImportFeaturesAnalysis.Types.Baseline.Unspecified,
+                        },
+                        NumericalThresholdConfig = new FeaturestoreMonitoringConfig.Types.ThresholdConfig { Value = 0, },
+                        CategoricalThresholdConfig = new FeaturestoreMonitoringConfig.Types.ThresholdConfig { Value = 0, },
+                    },
+                    OfflineStorageTtlDays = 0,
+                },
+                UpdateMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             EntityType response = featurestoreServiceClient.UpdateEntityType(request);

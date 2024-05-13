@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_AddExecutionEvents_sync_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
@@ -36,7 +37,21 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
             ExecutionName execution = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]");
-            IEnumerable<Event> events = new Event[] { new Event(), };
+            IEnumerable<Event> events = new Event[]
+            {
+                new Event
+                {
+                    ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
+                    ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
+                    EventTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Type = Event.Types.Type.Unspecified,
+                    Labels = { { "", "" }, },
+                },
+            };
             // Make the request
             AddExecutionEventsResponse response = metadataServiceClient.AddExecutionEvents(execution, events);
         }

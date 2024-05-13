@@ -39,8 +39,51 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
-            wkt::Value parameters = new wkt::Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[]
+            {
+                new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                    NumberValue = 0,
+                    StringValue = "",
+                    BoolValue = false,
+                    StructValue = new wkt::Struct
+                    {
+                        Fields =
+                        {
+                            {
+                                "",
+                                new wkt::Value { }
+                            },
+                        },
+                    },
+                    ListValue = new wkt::ListValue
+                    {
+                        Values = { new wkt::Value { }, },
+                    },
+                },
+            };
+            wkt::Value parameters = new wkt::Value
+            {
+                NullValue = wkt::NullValue.NullValue,
+                NumberValue = 0,
+                StringValue = "",
+                BoolValue = false,
+                StructValue = new wkt::Struct
+                {
+                    Fields =
+                    {
+                        {
+                            "",
+                            new wkt::Value { }
+                        },
+                    },
+                },
+                ListValue = new wkt::ListValue
+                {
+                    Values = { new wkt::Value { }, },
+                },
+            };
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(endpoint, instances, parameters);
         }

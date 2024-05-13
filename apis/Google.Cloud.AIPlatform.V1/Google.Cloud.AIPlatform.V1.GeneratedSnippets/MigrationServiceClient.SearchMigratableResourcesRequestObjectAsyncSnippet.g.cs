@@ -42,6 +42,8 @@ namespace GoogleCSharpSnippets
             SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PageSize = 0,
+                PageToken = "",
                 Filter = "",
             };
             // Make the request

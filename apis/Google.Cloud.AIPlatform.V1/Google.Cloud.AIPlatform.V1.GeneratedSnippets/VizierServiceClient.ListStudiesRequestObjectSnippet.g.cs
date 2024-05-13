@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             ListStudiesRequest request = new ListStudiesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PageToken = "",
+                PageSize = 0,
             };
             // Make the request
             PagedEnumerable<ListStudiesResponse, Study> response = vizierServiceClient.ListStudies(request);

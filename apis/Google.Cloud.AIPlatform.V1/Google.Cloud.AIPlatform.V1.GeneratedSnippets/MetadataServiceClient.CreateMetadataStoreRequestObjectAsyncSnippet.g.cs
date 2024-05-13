@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
@@ -40,7 +41,26 @@ namespace GoogleCSharpSnippets
             CreateMetadataStoreRequest request = new CreateMetadataStoreRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                MetadataStore = new MetadataStore(),
+                MetadataStore = new MetadataStore
+                {
+                    MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                    Description = "",
+                    State = new MetadataStore.Types.MetadataStoreState
+                    {
+                        DiskUtilizationBytes = 0L,
+                    },
+                },
                 MetadataStoreId = "",
             };
             // Make the request

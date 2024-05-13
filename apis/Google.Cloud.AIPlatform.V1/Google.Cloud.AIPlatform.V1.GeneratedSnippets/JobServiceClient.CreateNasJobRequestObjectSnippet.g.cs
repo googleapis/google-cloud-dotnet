@@ -19,6 +19,9 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_JobService_CreateNasJob_sync]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
+    using Google.Rpc;
 
     public sealed partial class GeneratedJobServiceClientSnippets
     {
@@ -38,7 +41,308 @@ namespace GoogleCSharpSnippets
             CreateNasJobRequest request = new CreateNasJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                NasJob = new NasJob(),
+                NasJob = new NasJob
+                {
+                    NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+                    DisplayName = "",
+                    NasJobSpec = new NasJobSpec
+                    {
+                        SearchSpaceSpec = "",
+                        MultiTrialAlgorithmSpec = new NasJobSpec.Types.MultiTrialAlgorithmSpec
+                        {
+                            MultiTrialAlgorithm = NasJobSpec.Types.MultiTrialAlgorithmSpec.Types.MultiTrialAlgorithm.Unspecified,
+                            Metric = new NasJobSpec.Types.MultiTrialAlgorithmSpec.Types.MetricSpec
+                            {
+                                MetricId = "",
+                                Goal = NasJobSpec.Types.MultiTrialAlgorithmSpec.Types.MetricSpec.Types.GoalType.Unspecified,
+                            },
+                            SearchTrialSpec = new NasJobSpec.Types.MultiTrialAlgorithmSpec.Types.SearchTrialSpec
+                            {
+                                SearchTrialJobSpec = new CustomJobSpec
+                                {
+                                    WorkerPoolSpecs =
+                                    {
+                                        new WorkerPoolSpec
+                                        {
+                                            MachineSpec = new MachineSpec
+                                            {
+                                                MachineType = "",
+                                                AcceleratorType = AcceleratorType.Unspecified,
+                                                AcceleratorCount = 0,
+                                                TpuTopology = "",
+                                            },
+                                            ReplicaCount = 0L,
+                                            NfsMounts =
+                                            {
+                                                new NfsMount
+                                                {
+                                                    Server = "",
+                                                    Path = "",
+                                                    MountPoint = "",
+                                                },
+                                            },
+                                            DiskSpec = new DiskSpec
+                                            {
+                                                BootDiskType = "",
+                                                BootDiskSizeGb = 0,
+                                            },
+                                            ContainerSpec = new ContainerSpec
+                                            {
+                                                ImageUri = "",
+                                                Command = { "", },
+                                                Args = { "", },
+                                                Env =
+                                                {
+                                                    new EnvVar { Name = "", Value = "", },
+                                                },
+                                            },
+                                            PythonPackageSpec = new PythonPackageSpec
+                                            {
+                                                ExecutorImageUri = "",
+                                                PackageUris = { "", },
+                                                PythonModule = "",
+                                                Args = { "", },
+                                                Env =
+                                                {
+                                                    new EnvVar { Name = "", Value = "", },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Scheduling = new Scheduling
+                                    {
+                                        Timeout = new Duration
+                                        {
+                                            Seconds = 0L,
+                                            Nanos = 0,
+                                        },
+                                        RestartJobOnWorkerRestart = false,
+                                        DisableRetries = false,
+                                    },
+                                    ServiceAccount = "",
+                                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                                    BaseOutputDirectory = new GcsDestination
+                                    {
+                                        OutputUriPrefix = "",
+                                    },
+                                    TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+                                    EnableWebAccess = false,
+                                    ReservedIpRanges = { "", },
+                                    PersistentResourceIdAsPersistentResourceName = PersistentResourceName.FromProjectLocationPersistentResource("[PROJECT]", "[LOCATION]", "[PERSISTENT_RESOURCE]"),
+                                    EnableDashboardAccess = false,
+                                    ExperimentAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                                    ExperimentRunAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                                    ProtectedArtifactLocationId = "",
+                                    ModelsAsModelNames =
+                                    {
+                                        ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                                    },
+                                },
+                                MaxTrialCount = 0,
+                                MaxParallelTrialCount = 0,
+                                MaxFailedTrialCount = 0,
+                            },
+                            TrainTrialSpec = new NasJobSpec.Types.MultiTrialAlgorithmSpec.Types.TrainTrialSpec
+                            {
+                                TrainTrialJobSpec = new CustomJobSpec
+                                {
+                                    WorkerPoolSpecs =
+                                    {
+                                        new WorkerPoolSpec
+                                        {
+                                            MachineSpec = new MachineSpec
+                                            {
+                                                MachineType = "",
+                                                AcceleratorType = AcceleratorType.Unspecified,
+                                                AcceleratorCount = 0,
+                                                TpuTopology = "",
+                                            },
+                                            ReplicaCount = 0L,
+                                            NfsMounts =
+                                            {
+                                                new NfsMount
+                                                {
+                                                    Server = "",
+                                                    Path = "",
+                                                    MountPoint = "",
+                                                },
+                                            },
+                                            DiskSpec = new DiskSpec
+                                            {
+                                                BootDiskType = "",
+                                                BootDiskSizeGb = 0,
+                                            },
+                                            ContainerSpec = new ContainerSpec
+                                            {
+                                                ImageUri = "",
+                                                Command = { "", },
+                                                Args = { "", },
+                                                Env =
+                                                {
+                                                    new EnvVar { Name = "", Value = "", },
+                                                },
+                                            },
+                                            PythonPackageSpec = new PythonPackageSpec
+                                            {
+                                                ExecutorImageUri = "",
+                                                PackageUris = { "", },
+                                                PythonModule = "",
+                                                Args = { "", },
+                                                Env =
+                                                {
+                                                    new EnvVar { Name = "", Value = "", },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Scheduling = new Scheduling
+                                    {
+                                        Timeout = new Duration
+                                        {
+                                            Seconds = 0L,
+                                            Nanos = 0,
+                                        },
+                                        RestartJobOnWorkerRestart = false,
+                                        DisableRetries = false,
+                                    },
+                                    ServiceAccount = "",
+                                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                                    BaseOutputDirectory = new GcsDestination
+                                    {
+                                        OutputUriPrefix = "",
+                                    },
+                                    TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+                                    EnableWebAccess = false,
+                                    ReservedIpRanges = { "", },
+                                    PersistentResourceIdAsPersistentResourceName = PersistentResourceName.FromProjectLocationPersistentResource("[PROJECT]", "[LOCATION]", "[PERSISTENT_RESOURCE]"),
+                                    EnableDashboardAccess = false,
+                                    ExperimentAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                                    ExperimentRunAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                                    ProtectedArtifactLocationId = "",
+                                    ModelsAsModelNames =
+                                    {
+                                        ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                                    },
+                                },
+                                MaxParallelTrialCount = 0,
+                                Frequency = 0,
+                            },
+                        },
+                        ResumeNasJobId = "",
+                    },
+                    NasJobOutput = new NasJobOutput
+                    {
+                        MultiTrialJobOutput = new NasJobOutput.Types.MultiTrialJobOutput
+                        {
+                            SearchTrials =
+                            {
+                                new NasTrial
+                                {
+                                    Id = "",
+                                    State = NasTrial.Types.State.Unspecified,
+                                    FinalMeasurement = new Measurement
+                                    {
+                                        ElapsedDuration = new Duration
+                                        {
+                                            Seconds = 0L,
+                                            Nanos = 0,
+                                        },
+                                        StepCount = 0L,
+                                        Metrics =
+                                        {
+                                            new Measurement.Types.Metric
+                                            {
+                                                MetricId = "",
+                                                Value = 0,
+                                            },
+                                        },
+                                    },
+                                    StartTime = new Timestamp
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                    EndTime = new Timestamp
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                },
+                            },
+                            TrainTrials =
+                            {
+                                new NasTrial
+                                {
+                                    Id = "",
+                                    State = NasTrial.Types.State.Unspecified,
+                                    FinalMeasurement = new Measurement
+                                    {
+                                        ElapsedDuration = new Duration
+                                        {
+                                            Seconds = 0L,
+                                            Nanos = 0,
+                                        },
+                                        StepCount = 0L,
+                                        Metrics =
+                                        {
+                                            new Measurement.Types.Metric
+                                            {
+                                                MetricId = "",
+                                                Value = 0,
+                                            },
+                                        },
+                                    },
+                                    StartTime = new Timestamp
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                    EndTime = new Timestamp
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    State = JobState.Unspecified,
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    StartTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    EndTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Error = new Status
+                    {
+                        Code = 0,
+                        Message = "",
+                        Details =
+                        {
+                            new Any
+                            {
+                                TypeUrl = "",
+                                Value = ByteString.Empty,
+                            },
+                        },
+                    },
+                    Labels = { { "", "" }, },
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                },
             };
             // Make the request
             NasJob response = jobServiceClient.CreateNasJob(request);

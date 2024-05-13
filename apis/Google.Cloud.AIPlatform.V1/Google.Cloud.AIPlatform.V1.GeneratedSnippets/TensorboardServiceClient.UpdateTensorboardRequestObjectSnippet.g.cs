@@ -38,8 +38,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateTensorboardRequest request = new UpdateTensorboardRequest
             {
-                UpdateMask = new FieldMask(),
-                Tensorboard = new Tensorboard(),
+                UpdateMask = new FieldMask { Paths = { "", }, },
+                Tensorboard = new Tensorboard
+                {
+                    TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+                    DisplayName = "",
+                    Description = "",
+                    RunCount = 0,
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Labels = { { "", "" }, },
+                    Etag = "",
+                    BlobStoragePathPrefix = "",
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                    IsDefault = false,
+                },
             };
             // Make the request
             Operation<Tensorboard, UpdateTensorboardOperationMetadata> response = tensorboardServiceClient.UpdateTensorboard(request);

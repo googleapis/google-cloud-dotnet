@@ -42,6 +42,8 @@ namespace GoogleCSharpSnippets
             ListMetadataStoresRequest request = new ListMetadataStoresRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListMetadataStoresResponse, MetadataStore> response = metadataServiceClient.ListMetadataStoresAsync(request);

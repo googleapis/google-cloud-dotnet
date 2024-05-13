@@ -43,6 +43,8 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
             };
             // Make the request

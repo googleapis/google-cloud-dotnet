@@ -14,11 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_PredictionService_GenerateContent_async]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedPredictionServiceClientSnippets
     {
@@ -37,15 +41,291 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GenerateContentRequest request = new GenerateContentRequest
             {
-                Contents = { new Content(), },
+                Contents =
+                {
+                    new Content
+                    {
+                        Role = "",
+                        Parts =
+                        {
+                            new Part
+                            {
+                                Text = "",
+                                InlineData = new Blob
+                                {
+                                    MimeType = "",
+                                    Data = ByteString.Empty,
+                                },
+                                FileData = new FileData
+                                {
+                                    MimeType = "",
+                                    FileUri = "",
+                                },
+                                VideoMetadata = new VideoMetadata
+                                {
+                                    StartOffset = new wkt::Duration
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                    EndOffset = new wkt::Duration
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                },
+                                FunctionCall = new FunctionCall
+                                {
+                                    Name = "",
+                                    Args = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value
+                                                {
+                                                    NullValue = wkt::NullValue.NullValue,
+                                                    NumberValue = 0,
+                                                    StringValue = "",
+                                                    BoolValue = false,
+                                                    StructValue = new wkt::Struct { },
+                                                    ListValue = new wkt::ListValue
+                                                    {
+                                                        Values = { new wkt::Value { }, },
+                                                    },
+                                                }
+                                            },
+                                        },
+                                    },
+                                },
+                                FunctionResponse = new FunctionResponse
+                                {
+                                    Name = "",
+                                    Response = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value
+                                                {
+                                                    NullValue = wkt::NullValue.NullValue,
+                                                    NumberValue = 0,
+                                                    StringValue = "",
+                                                    BoolValue = false,
+                                                    StructValue = new wkt::Struct { },
+                                                    ListValue = new wkt::ListValue
+                                                    {
+                                                        Values = { new wkt::Value { }, },
+                                                    },
+                                                }
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 SafetySettings =
                 {
-                    new SafetySetting(),
+                    new SafetySetting
+                    {
+                        Category = HarmCategory.Unspecified,
+                        Threshold = SafetySetting.Types.HarmBlockThreshold.Unspecified,
+                        Method = SafetySetting.Types.HarmBlockMethod.Unspecified,
+                    },
                 },
-                GenerationConfig = new GenerationConfig(),
+                GenerationConfig = new GenerationConfig
+                {
+                    Temperature = 0F,
+                    TopP = 0F,
+                    TopK = 0F,
+                    CandidateCount = 0,
+                    MaxOutputTokens = 0,
+                    StopSequences = { "", },
+                    PresencePenalty = 0F,
+                    FrequencyPenalty = 0F,
+                    ResponseMimeType = "",
+                },
                 Model = "",
-                Tools = { new Tool(), },
-                SystemInstruction = new Content(),
+                Tools =
+                {
+                    new Tool
+                    {
+                        FunctionDeclarations =
+                        {
+                            new FunctionDeclaration
+                            {
+                                Name = "",
+                                Description = "",
+                                Parameters = new OpenApiSchema
+                                {
+                                    Type = Type.Unspecified,
+                                    Items = new OpenApiSchema { },
+                                    Properties =
+                                    {
+                                        {
+                                            "",
+                                            new OpenApiSchema { }
+                                        },
+                                    },
+                                    Example = new wkt::Value
+                                    {
+                                        NullValue = wkt::NullValue.NullValue,
+                                        NumberValue = 0,
+                                        StringValue = "",
+                                        BoolValue = false,
+                                        StructValue = new wkt::Struct
+                                        {
+                                            Fields =
+                                            {
+                                                {
+                                                    "",
+                                                    new wkt::Value { }
+                                                },
+                                            },
+                                        },
+                                        ListValue = new wkt::ListValue
+                                        {
+                                            Values = { new wkt::Value { }, },
+                                        },
+                                    },
+                                    Required = { "", },
+                                    Nullable = false,
+                                    Format = "",
+                                    Description = "",
+                                    Enum = { "", },
+                                    MinProperties = 0L,
+                                    MaxProperties = 0L,
+                                    Minimum = 0,
+                                    Maximum = 0,
+                                    MinLength = 0L,
+                                    MaxLength = 0L,
+                                    Pattern = "",
+                                    MinItems = 0L,
+                                    MaxItems = 0L,
+                                    Default = new wkt::Value
+                                    {
+                                        NullValue = wkt::NullValue.NullValue,
+                                        NumberValue = 0,
+                                        StringValue = "",
+                                        BoolValue = false,
+                                        StructValue = new wkt::Struct
+                                        {
+                                            Fields =
+                                            {
+                                                {
+                                                    "",
+                                                    new wkt::Value { }
+                                                },
+                                            },
+                                        },
+                                        ListValue = new wkt::ListValue
+                                        {
+                                            Values = { new wkt::Value { }, },
+                                        },
+                                    },
+                                    Title = "",
+                                },
+                            },
+                        },
+                        Retrieval = new Retrieval
+                        {
+                            VertexAiSearch = new VertexAISearch { Datastore = "", },
+                            DisableAttribution = false,
+                        },
+                        GoogleSearchRetrieval = new GoogleSearchRetrieval
+                        {
+                            DisableAttribution = false,
+                        },
+                    },
+                },
+                SystemInstruction = new Content
+                {
+                    Role = "",
+                    Parts =
+                    {
+                        new Part
+                        {
+                            Text = "",
+                            InlineData = new Blob
+                            {
+                                MimeType = "",
+                                Data = ByteString.Empty,
+                            },
+                            FileData = new FileData
+                            {
+                                MimeType = "",
+                                FileUri = "",
+                            },
+                            VideoMetadata = new VideoMetadata
+                            {
+                                StartOffset = new wkt::Duration
+                                {
+                                    Seconds = 0L,
+                                    Nanos = 0,
+                                },
+                                EndOffset = new wkt::Duration
+                                {
+                                    Seconds = 0L,
+                                    Nanos = 0,
+                                },
+                            },
+                            FunctionCall = new FunctionCall
+                            {
+                                Name = "",
+                                Args = new wkt::Struct
+                                {
+                                    Fields =
+                                    {
+                                        {
+                                            "",
+                                            new wkt::Value
+                                            {
+                                                NullValue = wkt::NullValue.NullValue,
+                                                NumberValue = 0,
+                                                StringValue = "",
+                                                BoolValue = false,
+                                                StructValue = new wkt::Struct { },
+                                                ListValue = new wkt::ListValue
+                                                {
+                                                    Values = { new wkt::Value { }, },
+                                                },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                            FunctionResponse = new FunctionResponse
+                            {
+                                Name = "",
+                                Response = new wkt::Struct
+                                {
+                                    Fields =
+                                    {
+                                        {
+                                            "",
+                                            new wkt::Value
+                                            {
+                                                NullValue = wkt::NullValue.NullValue,
+                                                NumberValue = 0,
+                                                StringValue = "",
+                                                BoolValue = false,
+                                                StructValue = new wkt::Struct { },
+                                                ListValue = new wkt::ListValue
+                                                {
+                                                    Values = { new wkt::Value { }, },
+                                                },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(request);

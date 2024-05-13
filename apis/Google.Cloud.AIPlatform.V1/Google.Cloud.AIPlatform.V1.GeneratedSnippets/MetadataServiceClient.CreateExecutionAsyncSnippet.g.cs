@@ -14,11 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_CreateExecution_async_flattened]
     using Google.Cloud.AIPlatform.V1;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
     {
@@ -36,7 +39,48 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]";
-            Execution execution = new Execution();
+            Execution execution = new Execution
+            {
+                ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
+                DisplayName = "",
+                State = Execution.Types.State.Unspecified,
+                Etag = "",
+                Labels = { { "", "" }, },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                SchemaTitle = "",
+                SchemaVersion = "",
+                Metadata = new wkt::Struct
+                {
+                    Fields =
+                    {
+                        {
+                            "",
+                            new wkt::Value
+                            {
+                                NullValue = wkt::NullValue.NullValue,
+                                NumberValue = 0,
+                                StringValue = "",
+                                BoolValue = false,
+                                StructValue = new wkt::Struct { },
+                                ListValue = new wkt::ListValue
+                                {
+                                    Values = { new wkt::Value { }, },
+                                },
+                            }
+                        },
+                    },
+                },
+                Description = "",
+            };
             string executionId = "";
             // Make the request
             Execution response = await metadataServiceClient.CreateExecutionAsync(parent, execution, executionId);

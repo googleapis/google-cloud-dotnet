@@ -18,6 +18,8 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_BatchCreateTensorboardTimeSeries_async_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -39,7 +41,41 @@ namespace GoogleCSharpSnippets
             TensorboardExperimentName parent = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]");
             IEnumerable<CreateTensorboardTimeSeriesRequest> requests = new CreateTensorboardTimeSeriesRequest[]
             {
-                new CreateTensorboardTimeSeriesRequest(),
+                new CreateTensorboardTimeSeriesRequest
+                {
+                    ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
+                    TensorboardTimeSeries = new TensorboardTimeSeries
+                    {
+                        TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
+                        DisplayName = "",
+                        Description = "",
+                        ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                        CreateTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        UpdateTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        Etag = "",
+                        PluginName = "",
+                        PluginData = ByteString.Empty,
+                        Metadata = new TensorboardTimeSeries.Types.Metadata
+                        {
+                            MaxStep = 0L,
+                            MaxWallTime = new Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            MaxBlobSequenceLength = 0L,
+                        },
+                    },
+                    TensorboardTimeSeriesId = "",
+                },
             };
             // Make the request
             BatchCreateTensorboardTimeSeriesResponse response = await tensorboardServiceClient.BatchCreateTensorboardTimeSeriesAsync(parent, requests);

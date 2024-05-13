@@ -19,6 +19,8 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_FeaturestoreService_DeleteFeatureValues_sync]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
+    using Google.Type;
 
     public sealed partial class GeneratedFeaturestoreServiceClientSnippets
     {
@@ -38,7 +40,38 @@ namespace GoogleCSharpSnippets
             DeleteFeatureValuesRequest request = new DeleteFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
-                SelectEntity = new DeleteFeatureValuesRequest.Types.SelectEntity(),
+                SelectEntity = new DeleteFeatureValuesRequest.Types.SelectEntity
+                {
+                    EntityIdSelector = new EntityIdSelector
+                    {
+                        CsvSource = new CsvSource
+                        {
+                            GcsSource = new GcsSource { Uris = { "", }, },
+                        },
+                        EntityIdField = "",
+                    },
+                },
+                SelectTimeRangeAndFeature = new DeleteFeatureValuesRequest.Types.SelectTimeRangeAndFeature
+                {
+                    TimeRange = new Interval
+                    {
+                        StartTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        EndTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                    },
+                    FeatureSelector = new FeatureSelector
+                    {
+                        IdMatcher = new IdMatcher { Ids = { "", }, },
+                    },
+                    SkipOnlineStorageDelete = false,
+                },
             };
             // Make the request
             Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = featurestoreServiceClient.DeleteFeatureValues(request);

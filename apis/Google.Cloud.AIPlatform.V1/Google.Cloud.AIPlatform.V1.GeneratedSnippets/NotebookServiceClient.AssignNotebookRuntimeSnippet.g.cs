@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedNotebookServiceClientSnippets
     {
@@ -37,7 +38,41 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             string notebookRuntimeTemplate = "projects/[PROJECT]/locations/[LOCATION]/notebookRuntimeTemplates/[NOTEBOOK_RUNTIME_TEMPLATE]";
-            NotebookRuntime notebookRuntime = new NotebookRuntime();
+            NotebookRuntime notebookRuntime = new NotebookRuntime
+            {
+                NotebookRuntimeName = NotebookRuntimeName.FromProjectLocationNotebookRuntime("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME]"),
+                RuntimeUser = "",
+                NotebookRuntimeTemplateRef = new NotebookRuntimeTemplateRef
+                {
+                    NotebookRuntimeTemplateAsNotebookRuntimeTemplateName = NotebookRuntimeTemplateName.FromProjectLocationNotebookRuntimeTemplate("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME_TEMPLATE]"),
+                },
+                ProxyUri = "",
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                HealthState = NotebookRuntime.Types.HealthState.Unspecified,
+                DisplayName = "",
+                Description = "",
+                ServiceAccount = "",
+                RuntimeState = NotebookRuntime.Types.RuntimeState.Unspecified,
+                IsUpgradable = false,
+                Labels = { { "", "" }, },
+                ExpirationTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Version = "",
+                NotebookRuntimeType = NotebookRuntimeType.Unspecified,
+                NetworkTags = { "", },
+            };
             string notebookRuntimeId = "";
             // Make the request
             Operation<NotebookRuntime, AssignNotebookRuntimeOperationMetadata> response = notebookServiceClient.AssignNotebookRuntime(parent, notebookRuntimeTemplate, notebookRuntime, notebookRuntimeId);

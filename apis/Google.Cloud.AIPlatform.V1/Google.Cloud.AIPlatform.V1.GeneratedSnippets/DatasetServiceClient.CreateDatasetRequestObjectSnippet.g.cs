@@ -14,12 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_DatasetService_CreateDataset_sync]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDatasetServiceClientSnippets
     {
@@ -39,7 +42,93 @@ namespace GoogleCSharpSnippets
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                    DisplayName = "",
+                    MetadataSchemaUri = "",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    Metadata = new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                        NumberValue = 0,
+                        StringValue = "",
+                        BoolValue = false,
+                        StructValue = new wkt::Struct
+                        {
+                            Fields =
+                            {
+                                {
+                                    "",
+                                    new wkt::Value { }
+                                },
+                            },
+                        },
+                        ListValue = new wkt::ListValue
+                        {
+                            Values = { new wkt::Value { }, },
+                        },
+                    },
+                    SavedQueries =
+                    {
+                        new SavedQuery
+                        {
+                            SavedQueryName = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]"),
+                            DisplayName = "",
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            AnnotationFilter = "",
+                            ProblemType = "",
+                            Etag = "",
+                            SupportAutomlTraining = false,
+                            AnnotationSpecCount = 0,
+                            Metadata = new wkt::Value
+                            {
+                                NullValue = wkt::NullValue.NullValue,
+                                NumberValue = 0,
+                                StringValue = "",
+                                BoolValue = false,
+                                StructValue = new wkt::Struct
+                                {
+                                    Fields =
+                                    {
+                                        {
+                                            "",
+                                            new wkt::Value { }
+                                        },
+                                    },
+                                },
+                                ListValue = new wkt::ListValue
+                                {
+                                    Values = { new wkt::Value { }, },
+                                },
+                            },
+                        },
+                    },
+                    DataItemCount = 0L,
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                    Description = "",
+                    MetadataArtifact = "",
+                },
             };
             // Make the request
             Operation<Dataset, CreateDatasetOperationMetadata> response = datasetServiceClient.CreateDataset(request);

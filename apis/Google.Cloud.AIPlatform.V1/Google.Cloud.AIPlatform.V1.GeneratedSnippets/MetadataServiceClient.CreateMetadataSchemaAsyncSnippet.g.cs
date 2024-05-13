@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_CreateMetadataSchema_async_flattened]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
@@ -36,7 +37,19 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]";
-            MetadataSchema metadataSchema = new MetadataSchema();
+            MetadataSchema metadataSchema = new MetadataSchema
+            {
+                MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
+                SchemaVersion = "",
+                Schema = "",
+                SchemaType = MetadataSchema.Types.MetadataSchemaType.Unspecified,
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Description = "",
+            };
             string metadataSchemaId = "";
             // Make the request
             MetadataSchema response = await metadataServiceClient.CreateMetadataSchemaAsync(parent, metadataSchema, metadataSchemaId);

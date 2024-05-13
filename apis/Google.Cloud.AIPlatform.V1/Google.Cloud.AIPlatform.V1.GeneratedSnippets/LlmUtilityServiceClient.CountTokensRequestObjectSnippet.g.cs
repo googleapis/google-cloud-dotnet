@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_LlmUtilityService_CountTokens_sync]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
     using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedLlmUtilityServiceClientSnippets
@@ -40,9 +41,118 @@ namespace GoogleCSharpSnippets
             CountTokensRequest request = new CountTokensRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new wkt::Value(), },
+                Instances =
+                {
+                    new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                        NumberValue = 0,
+                        StringValue = "",
+                        BoolValue = false,
+                        StructValue = new wkt::Struct
+                        {
+                            Fields =
+                            {
+                                {
+                                    "",
+                                    new wkt::Value { }
+                                },
+                            },
+                        },
+                        ListValue = new wkt::ListValue
+                        {
+                            Values = { new wkt::Value { }, },
+                        },
+                    },
+                },
                 Model = "",
-                Contents = { new Content(), },
+                Contents =
+                {
+                    new Content
+                    {
+                        Role = "",
+                        Parts =
+                        {
+                            new Part
+                            {
+                                Text = "",
+                                InlineData = new Blob
+                                {
+                                    MimeType = "",
+                                    Data = ByteString.Empty,
+                                },
+                                FileData = new FileData
+                                {
+                                    MimeType = "",
+                                    FileUri = "",
+                                },
+                                VideoMetadata = new VideoMetadata
+                                {
+                                    StartOffset = new wkt::Duration
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                    EndOffset = new wkt::Duration
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                },
+                                FunctionCall = new FunctionCall
+                                {
+                                    Name = "",
+                                    Args = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value
+                                                {
+                                                    NullValue = wkt::NullValue.NullValue,
+                                                    NumberValue = 0,
+                                                    StringValue = "",
+                                                    BoolValue = false,
+                                                    StructValue = new wkt::Struct { },
+                                                    ListValue = new wkt::ListValue
+                                                    {
+                                                        Values = { new wkt::Value { }, },
+                                                    },
+                                                }
+                                            },
+                                        },
+                                    },
+                                },
+                                FunctionResponse = new FunctionResponse
+                                {
+                                    Name = "",
+                                    Response = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value
+                                                {
+                                                    NullValue = wkt::NullValue.NullValue,
+                                                    NumberValue = 0,
+                                                    StringValue = "",
+                                                    BoolValue = false,
+                                                    StructValue = new wkt::Struct { },
+                                                    ListValue = new wkt::ListValue
+                                                    {
+                                                        Values = { new wkt::Value { }, },
+                                                    },
+                                                }
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             CountTokensResponse response = llmUtilityServiceClient.CountTokens(request);

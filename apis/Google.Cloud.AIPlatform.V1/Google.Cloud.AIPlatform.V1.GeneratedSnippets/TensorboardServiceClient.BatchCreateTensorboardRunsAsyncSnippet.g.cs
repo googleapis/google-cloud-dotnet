@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_BatchCreateTensorboardRuns_async_flattened]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -39,7 +40,29 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]";
             IEnumerable<CreateTensorboardRunRequest> requests = new CreateTensorboardRunRequest[]
             {
-                new CreateTensorboardRunRequest(),
+                new CreateTensorboardRunRequest
+                {
+                    ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                    TensorboardRun = new TensorboardRun
+                    {
+                        TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                        DisplayName = "",
+                        Description = "",
+                        CreateTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        UpdateTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        Labels = { { "", "" }, },
+                        Etag = "",
+                    },
+                    TensorboardRunId = "",
+                },
             };
             // Make the request
             BatchCreateTensorboardRunsResponse response = await tensorboardServiceClient.BatchCreateTensorboardRunsAsync(parent, requests);

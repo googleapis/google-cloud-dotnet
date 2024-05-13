@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_VizierService_CompleteTrial_async]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedVizierServiceClientSnippets
@@ -38,7 +39,23 @@ namespace GoogleCSharpSnippets
             CompleteTrialRequest request = new CompleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
-                FinalMeasurement = new Measurement(),
+                FinalMeasurement = new Measurement
+                {
+                    ElapsedDuration = new Duration
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    StepCount = 0L,
+                    Metrics =
+                    {
+                        new Measurement.Types.Metric
+                        {
+                            MetricId = "",
+                            Value = 0,
+                        },
+                    },
+                },
                 TrialInfeasible = false,
                 InfeasibleReason = "",
             };

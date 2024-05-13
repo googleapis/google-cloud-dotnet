@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_BatchCreateTensorboardRuns_async]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedTensorboardServiceClientSnippets
@@ -40,7 +41,29 @@ namespace GoogleCSharpSnippets
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
                 Requests =
                 {
-                    new CreateTensorboardRunRequest(),
+                    new CreateTensorboardRunRequest
+                    {
+                        ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                        TensorboardRun = new TensorboardRun
+                        {
+                            TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                            DisplayName = "",
+                            Description = "",
+                            CreateTime = new Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            UpdateTime = new Timestamp
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            Labels = { { "", "" }, },
+                            Etag = "",
+                        },
+                        TensorboardRunId = "",
+                    },
                 },
             };
             // Make the request

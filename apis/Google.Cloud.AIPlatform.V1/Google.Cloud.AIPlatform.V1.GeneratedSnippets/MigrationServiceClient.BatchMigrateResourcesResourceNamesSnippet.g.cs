@@ -40,7 +40,37 @@ namespace GoogleCSharpSnippets
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             IEnumerable<MigrateResourceRequest> migrateResourceRequests = new MigrateResourceRequest[]
             {
-                new MigrateResourceRequest(),
+                new MigrateResourceRequest
+                {
+                    MigrateMlEngineModelVersionConfig = new MigrateResourceRequest.Types.MigrateMlEngineModelVersionConfig
+                    {
+                        Endpoint = "",
+                        ModelVersionAsVersionName = VersionName.FromProjectModelVersion("[PROJECT]", "[MODEL]", "[VERSION]"),
+                        ModelDisplayName = "",
+                    },
+                    MigrateAutomlModelConfig = new MigrateResourceRequest.Types.MigrateAutomlModelConfig
+                    {
+                        ModelAsAutoMLModelName = AutoMLModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                        ModelDisplayName = "",
+                    },
+                    MigrateAutomlDatasetConfig = new MigrateResourceRequest.Types.MigrateAutomlDatasetConfig
+                    {
+                        DatasetAsAutoMLDatasetName = AutoMLDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                        DatasetDisplayName = "",
+                    },
+                    MigrateDataLabelingDatasetConfig = new MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig
+                    {
+                        DatasetAsDataLabelingDatasetName = DataLabelingDatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                        DatasetDisplayName = "",
+                        MigrateDataLabelingAnnotatedDatasetConfigs =
+                        {
+                            new MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig.Types.MigrateDataLabelingAnnotatedDatasetConfig
+                            {
+                                AnnotatedDatasetAsAnnotatedDatasetName = AnnotatedDatasetName.FromProjectDatasetAnnotatedDataset("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]"),
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             Operation<BatchMigrateResourcesResponse, BatchMigrateResourcesOperationMetadata> response = migrationServiceClient.BatchMigrateResources(parent, migrateResourceRequests);

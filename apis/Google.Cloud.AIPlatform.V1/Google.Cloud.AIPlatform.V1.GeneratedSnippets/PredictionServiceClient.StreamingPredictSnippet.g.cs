@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_PredictionService_StreamingPredict_sync]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedPredictionServiceClientSnippets
@@ -62,8 +63,43 @@ namespace GoogleCSharpSnippets
                 StreamingPredictRequest request = new StreamingPredictRequest
                 {
                     EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                    Inputs = { new Tensor(), },
-                    Parameters = new Tensor(),
+                    Inputs =
+                    {
+                        new Tensor
+                        {
+                            Dtype = Tensor.Types.DataType.Unspecified,
+                            Shape = { 0L, },
+                            BoolVal = { false, },
+                            FloatVal = { 0F, },
+                            DoubleVal = { 0, },
+                            IntVal = { 0, },
+                            Int64Val = { 0L, },
+                            UintVal = { 0U, },
+                            Uint64Val = { 0UL, },
+                            ListVal = { new Tensor { }, },
+                            StructVal = { { "", new Tensor { } }, },
+                            TensorVal = ByteString.Empty,
+                            StringVal = { "", },
+                            BytesVal = { ByteString.Empty, },
+                        },
+                    },
+                    Parameters = new Tensor
+                    {
+                        Dtype = Tensor.Types.DataType.Unspecified,
+                        Shape = { 0L, },
+                        BoolVal = { false, },
+                        FloatVal = { 0F, },
+                        DoubleVal = { 0, },
+                        IntVal = { 0, },
+                        Int64Val = { 0L, },
+                        UintVal = { 0U, },
+                        Uint64Val = { 0UL, },
+                        ListVal = { new Tensor { }, },
+                        StructVal = { { "", new Tensor { } }, },
+                        TensorVal = ByteString.Empty,
+                        StringVal = { "", },
+                        BytesVal = { ByteString.Empty, },
+                    },
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

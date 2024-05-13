@@ -14,11 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_async]
     using Google.Cloud.AIPlatform.V1;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedModelServiceClientSnippets
     {
@@ -40,7 +43,97 @@ namespace GoogleCSharpSnippets
                 ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
                 ModelEvaluationSlices =
                 {
-                    new ModelEvaluationSlice(),
+                    new ModelEvaluationSlice
+                    {
+                        ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
+                        Slice = new ModelEvaluationSlice.Types.Slice
+                        {
+                            Dimension = "",
+                            Value = "",
+                            SliceSpec = new ModelEvaluationSlice.Types.Slice.Types.SliceSpec
+                            {
+                                Configs =
+                                {
+                                    {
+                                        "",
+                                        new ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig
+                                        {
+                                            Value = new ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value
+                                            {
+                                                StringValue = "",
+                                                FloatValue = 0F,
+                                            },
+                                            Range = new ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range { Low = 0F, High = 0F, },
+                                            AllValues = false,
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                        MetricsSchemaUri = "",
+                        Metrics = new wkt::Value
+                        {
+                            NullValue = wkt::NullValue.NullValue,
+                            NumberValue = 0,
+                            StringValue = "",
+                            BoolValue = false,
+                            StructValue = new wkt::Struct
+                            {
+                                Fields =
+                                {
+                                    {
+                                        "",
+                                        new wkt::Value { }
+                                    },
+                                },
+                            },
+                            ListValue = new wkt::ListValue
+                            {
+                                Values = { new wkt::Value { }, },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        ModelExplanation = new ModelExplanation
+                        {
+                            MeanAttributions =
+                            {
+                                new Attribution
+                                {
+                                    BaselineOutputValue = 0,
+                                    InstanceOutputValue = 0,
+                                    FeatureAttributions = new wkt::Value
+                                    {
+                                        NullValue = wkt::NullValue.NullValue,
+                                        NumberValue = 0,
+                                        StringValue = "",
+                                        BoolValue = false,
+                                        StructValue = new wkt::Struct
+                                        {
+                                            Fields =
+                                            {
+                                                {
+                                                    "",
+                                                    new wkt::Value { }
+                                                },
+                                            },
+                                        },
+                                        ListValue = new wkt::ListValue
+                                        {
+                                            Values = { new wkt::Value { }, },
+                                        },
+                                    },
+                                    OutputIndex = { 0, },
+                                    OutputDisplayName = "",
+                                    ApproximationError = 0,
+                                    OutputName = "",
+                                },
+                            },
+                        },
+                    },
                 },
             };
             // Make the request

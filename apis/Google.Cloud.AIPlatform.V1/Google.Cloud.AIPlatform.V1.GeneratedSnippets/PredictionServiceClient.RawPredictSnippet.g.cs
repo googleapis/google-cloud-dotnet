@@ -19,6 +19,8 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_PredictionService_RawPredict_sync_flattened]
     using Google.Api;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedPredictionServiceClientSnippets
     {
@@ -36,7 +38,19 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            HttpBody httpBody = new HttpBody();
+            HttpBody httpBody = new HttpBody
+            {
+                ContentType = "",
+                Data = ByteString.Empty,
+                Extensions =
+                {
+                    new Any
+                    {
+                        TypeUrl = "",
+                        Value = ByteString.Empty,
+                    },
+                },
+            };
             // Make the request
             HttpBody response = predictionServiceClient.RawPredict(endpoint, httpBody);
         }

@@ -14,10 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_VizierService_CreateTrial_sync]
     using Google.Cloud.AIPlatform.V1;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedVizierServiceClientSnippets
     {
@@ -37,7 +40,91 @@ namespace GoogleCSharpSnippets
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
-                Trial = new Trial(),
+                Trial = new Trial
+                {
+                    TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
+                    Id = "",
+                    State = Trial.Types.State.Unspecified,
+                    Parameters =
+                    {
+                        new Trial.Types.Parameter
+                        {
+                            ParameterId = "",
+                            Value = new wkt::Value
+                            {
+                                NullValue = wkt::NullValue.NullValue,
+                                NumberValue = 0,
+                                StringValue = "",
+                                BoolValue = false,
+                                StructValue = new wkt::Struct
+                                {
+                                    Fields =
+                                    {
+                                        {
+                                            "",
+                                            new wkt::Value { }
+                                        },
+                                    },
+                                },
+                                ListValue = new wkt::ListValue
+                                {
+                                    Values = { new wkt::Value { }, },
+                                },
+                            },
+                        },
+                    },
+                    FinalMeasurement = new Measurement
+                    {
+                        ElapsedDuration = new wkt::Duration
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        StepCount = 0L,
+                        Metrics =
+                        {
+                            new Measurement.Types.Metric
+                            {
+                                MetricId = "",
+                                Value = 0,
+                            },
+                        },
+                    },
+                    Measurements =
+                    {
+                        new Measurement
+                        {
+                            ElapsedDuration = new wkt::Duration
+                            {
+                                Seconds = 0L,
+                                Nanos = 0,
+                            },
+                            StepCount = 0L,
+                            Metrics =
+                            {
+                                new Measurement.Types.Metric
+                                {
+                                    MetricId = "",
+                                    Value = 0,
+                                },
+                            },
+                        },
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    ClientId = "",
+                    InfeasibleReason = "",
+                    CustomJobAsCustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
+                    WebAccessUris = { { "", "" }, },
+                },
             };
             // Make the request
             Trial response = vizierServiceClient.CreateTrial(request);

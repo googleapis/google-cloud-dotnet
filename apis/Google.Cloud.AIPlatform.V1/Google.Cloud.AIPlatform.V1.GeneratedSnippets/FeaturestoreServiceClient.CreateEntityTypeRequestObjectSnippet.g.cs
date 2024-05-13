@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_FeaturestoreService_CreateEntityType_sync]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFeaturestoreServiceClientSnippets
     {
@@ -38,7 +39,40 @@ namespace GoogleCSharpSnippets
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsFeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
-                EntityType = new EntityType(),
+                EntityType = new EntityType
+                {
+                    EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                    Description = "",
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Labels = { { "", "" }, },
+                    Etag = "",
+                    MonitoringConfig = new FeaturestoreMonitoringConfig
+                    {
+                        SnapshotAnalysis = new FeaturestoreMonitoringConfig.Types.SnapshotAnalysis
+                        {
+                            Disabled = false,
+                            MonitoringIntervalDays = 0,
+                            StalenessDays = 0,
+                        },
+                        ImportFeaturesAnalysis = new FeaturestoreMonitoringConfig.Types.ImportFeaturesAnalysis
+                        {
+                            State = FeaturestoreMonitoringConfig.Types.ImportFeaturesAnalysis.Types.State.Unspecified,
+                            AnomalyDetectionBaseline = FeaturestoreMonitoringConfig.Types.ImportFeaturesAnalysis.Types.Baseline.Unspecified,
+                        },
+                        NumericalThresholdConfig = new FeaturestoreMonitoringConfig.Types.ThresholdConfig { Value = 0, },
+                        CategoricalThresholdConfig = new FeaturestoreMonitoringConfig.Types.ThresholdConfig { Value = 0, },
+                    },
+                    OfflineStorageTtlDays = 0,
+                },
                 EntityTypeId = "",
             };
             // Make the request

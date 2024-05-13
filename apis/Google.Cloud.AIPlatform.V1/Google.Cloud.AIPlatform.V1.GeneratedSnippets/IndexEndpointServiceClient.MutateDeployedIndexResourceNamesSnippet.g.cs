@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_IndexEndpointService_MutateDeployedIndex_sync_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedIndexEndpointServiceClientSnippets
     {
@@ -36,7 +37,72 @@ namespace GoogleCSharpSnippets
             IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
             // Initialize request argument(s)
             IndexEndpointName indexEndpoint = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]");
-            DeployedIndex deployedIndex = new DeployedIndex();
+            DeployedIndex deployedIndex = new DeployedIndex
+            {
+                Id = "",
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                DisplayName = "",
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                PrivateEndpoints = new IndexPrivateEndpoints
+                {
+                    MatchGrpcAddress = "",
+                    ServiceAttachment = "",
+                    PscAutomatedEndpoints =
+                    {
+                        new PscAutomatedEndpoints
+                        {
+                            ProjectId = "",
+                            Network = "",
+                            MatchAddress = "",
+                        },
+                    },
+                },
+                IndexSyncTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                AutomaticResources = new AutomaticResources
+                {
+                    MinReplicaCount = 0,
+                    MaxReplicaCount = 0,
+                },
+                EnableAccessLogging = false,
+                DeployedIndexAuthConfig = new DeployedIndexAuthConfig
+                {
+                    AuthProvider = new DeployedIndexAuthConfig.Types.AuthProvider
+                    {
+                        Audiences = { "", },
+                        AllowedIssuers = { "", },
+                    },
+                },
+                ReservedIpRanges = { "", },
+                DeploymentGroup = "",
+                DedicatedResources = new DedicatedResources
+                {
+                    MachineSpec = new MachineSpec
+                    {
+                        MachineType = "",
+                        AcceleratorType = AcceleratorType.Unspecified,
+                        AcceleratorCount = 0,
+                        TpuTopology = "",
+                    },
+                    MinReplicaCount = 0,
+                    MaxReplicaCount = 0,
+                    AutoscalingMetricSpecs =
+                    {
+                        new AutoscalingMetricSpec
+                        {
+                            MetricName = "",
+                            Target = 0,
+                        },
+                    },
+                },
+            };
             // Make the request
             Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = indexEndpointServiceClient.MutateDeployedIndex(indexEndpoint, deployedIndex);
 

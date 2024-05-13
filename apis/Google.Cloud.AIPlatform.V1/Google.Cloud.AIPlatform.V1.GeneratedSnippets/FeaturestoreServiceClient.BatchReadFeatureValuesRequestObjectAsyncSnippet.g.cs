@@ -40,17 +40,57 @@ namespace GoogleCSharpSnippets
             BatchReadFeatureValuesRequest request = new BatchReadFeatureValuesRequest
             {
                 FeaturestoreAsFeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
-                CsvReadInstances = new CsvSource(),
-                Destination = new FeatureValueDestination(),
+                CsvReadInstances = new CsvSource
+                {
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                },
+                Destination = new FeatureValueDestination
+                {
+                    BigqueryDestination = new BigQueryDestination { OutputUri = "", },
+                    TfrecordDestination = new TFRecordDestination
+                    {
+                        GcsDestination = new GcsDestination
+                        {
+                            OutputUriPrefix = "",
+                        },
+                    },
+                    CsvDestination = new CsvDestination
+                    {
+                        GcsDestination = new GcsDestination
+                        {
+                            OutputUriPrefix = "",
+                        },
+                    },
+                },
+                BigqueryReadInstances = new BigQuerySource { InputUri = "", },
                 EntityTypeSpecs =
                 {
-                    new BatchReadFeatureValuesRequest.Types.EntityTypeSpec(),
+                    new BatchReadFeatureValuesRequest.Types.EntityTypeSpec
+                    {
+                        EntityTypeId = "",
+                        FeatureSelector = new FeatureSelector
+                        {
+                            IdMatcher = new IdMatcher { Ids = { "", }, },
+                        },
+                        Settings =
+                        {
+                            new DestinationFeatureSetting
+                            {
+                                FeatureId = "",
+                                DestinationField = "",
+                            },
+                        },
+                    },
                 },
                 PassThroughFields =
                 {
-                    new BatchReadFeatureValuesRequest.Types.PassThroughField(),
+                    new BatchReadFeatureValuesRequest.Types.PassThroughField { FieldName = "", },
                 },
-                StartTime = new Timestamp(),
+                StartTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
             };
             // Make the request
             Operation<BatchReadFeatureValuesResponse, BatchReadFeatureValuesOperationMetadata> response = await featurestoreServiceClient.BatchReadFeatureValuesAsync(request);

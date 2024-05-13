@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
                 Filter = "",
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
             };
             // Make the request

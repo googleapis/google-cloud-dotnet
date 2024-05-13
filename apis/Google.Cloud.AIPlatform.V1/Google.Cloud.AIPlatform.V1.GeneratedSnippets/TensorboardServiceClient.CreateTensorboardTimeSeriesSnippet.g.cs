@@ -18,6 +18,8 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_CreateTensorboardTimeSeries_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedTensorboardServiceClientSnippets
     {
@@ -35,7 +37,36 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]/runs/[RUN]/timeSeries/[TIME_SERIES]";
-            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries();
+            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries
+            {
+                TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
+                DisplayName = "",
+                Description = "",
+                ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Etag = "",
+                PluginName = "",
+                PluginData = ByteString.Empty,
+                Metadata = new TensorboardTimeSeries.Types.Metadata
+                {
+                    MaxStep = 0L,
+                    MaxWallTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    MaxBlobSequenceLength = 0L,
+                },
+            };
             // Make the request
             TensorboardTimeSeries response = tensorboardServiceClient.CreateTensorboardTimeSeries(parent, tensorboardTimeSeries);
         }

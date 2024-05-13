@@ -37,7 +37,15 @@ namespace GoogleCSharpSnippets
             ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
             // Initialize request argument(s)
             ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
-            ExportModelRequest.Types.OutputConfig outputConfig = new ExportModelRequest.Types.OutputConfig();
+            ExportModelRequest.Types.OutputConfig outputConfig = new ExportModelRequest.Types.OutputConfig
+            {
+                ExportFormatId = "",
+                ArtifactDestination = new GcsDestination
+                {
+                    OutputUriPrefix = "",
+                },
+                ImageDestination = new ContainerRegistryDestination { OutputUri = "", },
+            };
             // Make the request
             Operation<ExportModelResponse, ExportModelOperationMetadata> response = await modelServiceClient.ExportModelAsync(name, outputConfig);
 

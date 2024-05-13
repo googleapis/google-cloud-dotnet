@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_FeaturestoreService_ExportFeatureValues_sync]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFeaturestoreServiceClientSnippets
     {
@@ -38,12 +39,61 @@ namespace GoogleCSharpSnippets
             ExportFeatureValuesRequest request = new ExportFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
-                SnapshotExport = new ExportFeatureValuesRequest.Types.SnapshotExport(),
-                Destination = new FeatureValueDestination(),
-                FeatureSelector = new FeatureSelector(),
+                SnapshotExport = new ExportFeatureValuesRequest.Types.SnapshotExport
+                {
+                    SnapshotTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    StartTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                },
+                Destination = new FeatureValueDestination
+                {
+                    BigqueryDestination = new BigQueryDestination { OutputUri = "", },
+                    TfrecordDestination = new TFRecordDestination
+                    {
+                        GcsDestination = new GcsDestination
+                        {
+                            OutputUriPrefix = "",
+                        },
+                    },
+                    CsvDestination = new CsvDestination
+                    {
+                        GcsDestination = new GcsDestination
+                        {
+                            OutputUriPrefix = "",
+                        },
+                    },
+                },
+                FeatureSelector = new FeatureSelector
+                {
+                    IdMatcher = new IdMatcher { Ids = { "", }, },
+                },
                 Settings =
                 {
-                    new DestinationFeatureSetting(),
+                    new DestinationFeatureSetting
+                    {
+                        FeatureId = "",
+                        DestinationField = "",
+                    },
+                },
+                FullExport = new ExportFeatureValuesRequest.Types.FullExport
+                {
+                    EndTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    StartTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
                 },
             };
             // Make the request

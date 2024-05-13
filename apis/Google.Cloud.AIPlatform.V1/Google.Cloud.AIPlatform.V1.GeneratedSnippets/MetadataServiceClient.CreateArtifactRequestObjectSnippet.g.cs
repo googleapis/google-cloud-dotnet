@@ -14,10 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_CreateArtifact_sync]
     using Google.Cloud.AIPlatform.V1;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
     {
@@ -37,7 +40,49 @@ namespace GoogleCSharpSnippets
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
-                Artifact = new Artifact(),
+                Artifact = new Artifact
+                {
+                    ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
+                    DisplayName = "",
+                    Uri = "",
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    State = Artifact.Types.State.Unspecified,
+                    SchemaTitle = "",
+                    SchemaVersion = "",
+                    Metadata = new wkt::Struct
+                    {
+                        Fields =
+                        {
+                            {
+                                "",
+                                new wkt::Value
+                                {
+                                    NullValue = wkt::NullValue.NullValue,
+                                    NumberValue = 0,
+                                    StringValue = "",
+                                    BoolValue = false,
+                                    StructValue = new wkt::Struct { },
+                                    ListValue = new wkt::ListValue
+                                    {
+                                        Values = { new wkt::Value { }, },
+                                    },
+                                }
+                            },
+                        },
+                    },
+                    Description = "",
+                },
                 ArtifactId = "",
             };
             // Make the request

@@ -14,11 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_UpdateArtifact_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
-    using Google.Protobuf.WellKnownTypes;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
     {
@@ -35,8 +37,50 @@ namespace GoogleCSharpSnippets
             // Create client
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
-            Artifact artifact = new Artifact();
-            FieldMask updateMask = new FieldMask();
+            Artifact artifact = new Artifact
+            {
+                ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
+                DisplayName = "",
+                Uri = "",
+                Etag = "",
+                Labels = { { "", "" }, },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                State = Artifact.Types.State.Unspecified,
+                SchemaTitle = "",
+                SchemaVersion = "",
+                Metadata = new wkt::Struct
+                {
+                    Fields =
+                    {
+                        {
+                            "",
+                            new wkt::Value
+                            {
+                                NullValue = wkt::NullValue.NullValue,
+                                NumberValue = 0,
+                                StringValue = "",
+                                BoolValue = false,
+                                StructValue = new wkt::Struct { },
+                                ListValue = new wkt::ListValue
+                                {
+                                    Values = { new wkt::Value { }, },
+                                },
+                            }
+                        },
+                    },
+                },
+                Description = "",
+            };
+            wkt::FieldMask updateMask = new wkt::FieldMask { Paths = { "", }, };
             // Make the request
             Artifact response = metadataServiceClient.UpdateArtifact(artifact, updateMask);
         }

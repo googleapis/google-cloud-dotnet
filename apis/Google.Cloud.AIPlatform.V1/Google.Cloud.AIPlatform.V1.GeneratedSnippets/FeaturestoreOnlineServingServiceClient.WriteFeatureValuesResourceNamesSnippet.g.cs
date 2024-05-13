@@ -18,6 +18,8 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_FeaturestoreOnlineServingService_WriteFeatureValues_sync_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
 
     public sealed partial class GeneratedFeaturestoreOnlineServingServiceClientSnippets
@@ -38,7 +40,36 @@ namespace GoogleCSharpSnippets
             EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
             IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
             {
-                new WriteFeatureValuesPayload(),
+                new WriteFeatureValuesPayload
+                {
+                    EntityId = "",
+                    FeatureValues =
+                    {
+                        {
+                            "",
+                            new FeatureValue
+                            {
+                                BoolValue = false,
+                                DoubleValue = 0,
+                                Int64Value = 0L,
+                                StringValue = "",
+                                BoolArrayValue = new BoolArray { Values = { false, }, },
+                                DoubleArrayValue = new DoubleArray { Values = { 0, }, },
+                                Int64ArrayValue = new Int64Array { Values = { 0L, }, },
+                                StringArrayValue = new StringArray { Values = { "", }, },
+                                BytesValue = ByteString.Empty,
+                                Metadata = new FeatureValue.Types.Metadata
+                                {
+                                    GenerateTime = new Timestamp
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                },
+                            }
+                        },
+                    },
+                },
             };
             // Make the request
             WriteFeatureValuesResponse response = featurestoreOnlineServingServiceClient.WriteFeatureValues(entityType, payloads);

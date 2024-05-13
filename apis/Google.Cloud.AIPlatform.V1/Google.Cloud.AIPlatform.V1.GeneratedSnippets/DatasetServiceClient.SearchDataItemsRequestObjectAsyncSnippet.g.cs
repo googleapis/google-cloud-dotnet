@@ -44,10 +44,17 @@ namespace GoogleCSharpSnippets
                 DatasetAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DataLabelingJob = "",
                 DataItemFilter = "",
-                FieldMask = new FieldMask(),
+                FieldMask = new FieldMask { Paths = { "", }, },
                 AnnotationsLimit = 0,
+                PageSize = 0,
+                PageToken = "",
                 AnnotationFilters = { "", },
                 OrderByDataItem = "",
+                OrderByAnnotation = new SearchDataItemsRequest.Types.OrderByAnnotation
+                {
+                    SavedQuery = "",
+                    OrderBy = "",
+                },
             };
             // Make the request
             PagedAsyncEnumerable<SearchDataItemsResponse, DataItemView> response = datasetServiceClient.SearchDataItemsAsync(request);

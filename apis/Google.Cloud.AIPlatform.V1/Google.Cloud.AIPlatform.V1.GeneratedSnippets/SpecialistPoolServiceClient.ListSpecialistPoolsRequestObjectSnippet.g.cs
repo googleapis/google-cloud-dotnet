@@ -41,7 +41,9 @@ namespace GoogleCSharpSnippets
             ListSpecialistPoolsRequest request = new ListSpecialistPoolsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ReadMask = new FieldMask(),
+                PageSize = 0,
+                PageToken = "",
+                ReadMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             PagedEnumerable<ListSpecialistPoolsResponse, SpecialistPool> response = specialistPoolServiceClient.ListSpecialistPools(request);

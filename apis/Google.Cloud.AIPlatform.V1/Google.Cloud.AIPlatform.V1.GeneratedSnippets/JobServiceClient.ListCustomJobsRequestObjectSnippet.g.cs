@@ -42,7 +42,9 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                PageSize = 0,
+                PageToken = "",
+                ReadMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             PagedEnumerable<ListCustomJobsResponse, CustomJob> response = jobServiceClient.ListCustomJobs(request);

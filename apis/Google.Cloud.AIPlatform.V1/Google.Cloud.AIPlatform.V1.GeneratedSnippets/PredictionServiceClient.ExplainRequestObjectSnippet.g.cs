@@ -40,10 +40,205 @@ namespace GoogleCSharpSnippets
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new wkt::Value(), },
+                Instances =
+                {
+                    new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                        NumberValue = 0,
+                        StringValue = "",
+                        BoolValue = false,
+                        StructValue = new wkt::Struct
+                        {
+                            Fields =
+                            {
+                                {
+                                    "",
+                                    new wkt::Value { }
+                                },
+                            },
+                        },
+                        ListValue = new wkt::ListValue
+                        {
+                            Values = { new wkt::Value { }, },
+                        },
+                    },
+                },
                 DeployedModelId = "",
-                Parameters = new wkt::Value(),
-                ExplanationSpecOverride = new ExplanationSpecOverride(),
+                Parameters = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                    NumberValue = 0,
+                    StringValue = "",
+                    BoolValue = false,
+                    StructValue = new wkt::Struct
+                    {
+                        Fields =
+                        {
+                            {
+                                "",
+                                new wkt::Value { }
+                            },
+                        },
+                    },
+                    ListValue = new wkt::ListValue
+                    {
+                        Values = { new wkt::Value { }, },
+                    },
+                },
+                ExplanationSpecOverride = new ExplanationSpecOverride
+                {
+                    Parameters = new ExplanationParameters
+                    {
+                        SampledShapleyAttribution = new SampledShapleyAttribution { PathCount = 0, },
+                        IntegratedGradientsAttribution = new IntegratedGradientsAttribution
+                        {
+                            StepCount = 0,
+                            SmoothGradConfig = new SmoothGradConfig
+                            {
+                                NoiseSigma = 0F,
+                                FeatureNoiseSigma = new FeatureNoiseSigma
+                                {
+                                    NoiseSigma =
+                                    {
+                                        new FeatureNoiseSigma.Types.NoiseSigmaForFeature { Name = "", Sigma = 0F, },
+                                    },
+                                },
+                                NoisySampleCount = 0,
+                            },
+                            BlurBaselineConfig = new BlurBaselineConfig { MaxBlurSigma = 0F, },
+                        },
+                        XraiAttribution = new XraiAttribution
+                        {
+                            StepCount = 0,
+                            SmoothGradConfig = new SmoothGradConfig
+                            {
+                                NoiseSigma = 0F,
+                                FeatureNoiseSigma = new FeatureNoiseSigma
+                                {
+                                    NoiseSigma =
+                                    {
+                                        new FeatureNoiseSigma.Types.NoiseSigmaForFeature { Name = "", Sigma = 0F, },
+                                    },
+                                },
+                                NoisySampleCount = 0,
+                            },
+                            BlurBaselineConfig = new BlurBaselineConfig { MaxBlurSigma = 0F, },
+                        },
+                        TopK = 0,
+                        OutputIndices = new wkt::ListValue
+                        {
+                            Values =
+                            {
+                                new wkt::Value
+                                {
+                                    NullValue = wkt::NullValue.NullValue,
+                                    NumberValue = 0,
+                                    StringValue = "",
+                                    BoolValue = false,
+                                    StructValue = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value { }
+                                            },
+                                        },
+                                    },
+                                    ListValue = new wkt::ListValue { },
+                                },
+                            },
+                        },
+                        Examples = new Examples
+                        {
+                            NearestNeighborSearchConfig = new wkt::Value
+                            {
+                                NullValue = wkt::NullValue.NullValue,
+                                NumberValue = 0,
+                                StringValue = "",
+                                BoolValue = false,
+                                StructValue = new wkt::Struct
+                                {
+                                    Fields =
+                                    {
+                                        {
+                                            "",
+                                            new wkt::Value { }
+                                        },
+                                    },
+                                },
+                                ListValue = new wkt::ListValue
+                                {
+                                    Values = { new wkt::Value { }, },
+                                },
+                            },
+                            NeighborCount = 0,
+                            Presets = new Presets
+                            {
+                                Query = Presets.Types.Query.Precise,
+                                Modality = Presets.Types.Modality.Unspecified,
+                            },
+                            ExampleGcsSource = new Examples.Types.ExampleGcsSource
+                            {
+                                DataFormat = Examples.Types.ExampleGcsSource.Types.DataFormat.Unspecified,
+                                GcsSource = new GcsSource { Uris = { "", }, },
+                            },
+                        },
+                    },
+                    Metadata = new ExplanationMetadataOverride
+                    {
+                        Inputs =
+                        {
+                            {
+                                "",
+                                new ExplanationMetadataOverride.Types.InputMetadataOverride
+                                {
+                                    InputBaselines =
+                                    {
+                                        new wkt::Value
+                                        {
+                                            NullValue = wkt::NullValue.NullValue,
+                                            NumberValue = 0,
+                                            StringValue = "",
+                                            BoolValue = false,
+                                            StructValue = new wkt::Struct
+                                            {
+                                                Fields =
+                                                {
+                                                    {
+                                                        "",
+                                                        new wkt::Value { }
+                                                    },
+                                                },
+                                            },
+                                            ListValue = new wkt::ListValue
+                                            {
+                                                Values = { new wkt::Value { }, },
+                                            },
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                    },
+                    ExamplesOverride = new ExamplesOverride
+                    {
+                        NeighborCount = 0,
+                        CrowdingCount = 0,
+                        Restrictions =
+                        {
+                            new ExamplesRestrictionsNamespace
+                            {
+                                NamespaceName = "",
+                                Allow = { "", },
+                                Deny = { "", },
+                            },
+                        },
+                        ReturnEmbeddings = false,
+                        DataFormat = ExamplesOverride.Types.DataFormat.Unspecified,
+                    },
+                },
             };
             // Make the request
             ExplainResponse response = predictionServiceClient.Explain(request);

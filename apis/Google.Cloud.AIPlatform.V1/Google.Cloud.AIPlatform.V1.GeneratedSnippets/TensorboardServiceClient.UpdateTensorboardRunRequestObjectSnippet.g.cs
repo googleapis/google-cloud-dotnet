@@ -37,8 +37,25 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateTensorboardRunRequest request = new UpdateTensorboardRunRequest
             {
-                UpdateMask = new FieldMask(),
-                TensorboardRun = new TensorboardRun(),
+                UpdateMask = new FieldMask { Paths = { "", }, },
+                TensorboardRun = new TensorboardRun
+                {
+                    TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                    DisplayName = "",
+                    Description = "",
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Labels = { { "", "" }, },
+                    Etag = "",
+                },
             };
             // Make the request
             TensorboardRun response = tensorboardServiceClient.UpdateTensorboardRun(request);

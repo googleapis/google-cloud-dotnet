@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListMetadataSchemasRequest request = new ListMetadataSchemasRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
+                PageSize = 0,
+                PageToken = "",
                 Filter = "",
             };
             // Make the request

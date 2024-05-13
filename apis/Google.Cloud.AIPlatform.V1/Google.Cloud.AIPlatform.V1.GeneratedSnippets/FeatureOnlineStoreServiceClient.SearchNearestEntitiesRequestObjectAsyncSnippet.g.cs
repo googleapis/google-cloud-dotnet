@@ -38,7 +38,27 @@ namespace GoogleCSharpSnippets
             SearchNearestEntitiesRequest request = new SearchNearestEntitiesRequest
             {
                 FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
-                Query = new NearestNeighborQuery(),
+                Query = new NearestNeighborQuery
+                {
+                    EntityId = "",
+                    Embedding = new NearestNeighborQuery.Types.Embedding { Value = { 0F, }, },
+                    NeighborCount = 0,
+                    StringFilters =
+                    {
+                        new NearestNeighborQuery.Types.StringFilter
+                        {
+                            Name = "",
+                            AllowTokens = { "", },
+                            DenyTokens = { "", },
+                        },
+                    },
+                    PerCrowdingAttributeNeighborCount = 0,
+                    Parameters = new NearestNeighborQuery.Types.Parameters
+                    {
+                        ApproximateNeighborCandidates = 0,
+                        LeafNodesSearchFraction = 0,
+                    },
+                },
                 ReturnFullEntity = false,
             };
             // Make the request

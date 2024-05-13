@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
             {
                 ParentAsNasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetailsAsync(request);

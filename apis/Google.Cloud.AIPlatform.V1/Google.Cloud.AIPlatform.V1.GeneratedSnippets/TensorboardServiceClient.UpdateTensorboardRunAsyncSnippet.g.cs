@@ -36,8 +36,25 @@ namespace GoogleCSharpSnippets
             // Create client
             TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TensorboardRun tensorboardRun = new TensorboardRun();
-            FieldMask updateMask = new FieldMask();
+            TensorboardRun tensorboardRun = new TensorboardRun
+            {
+                TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                DisplayName = "",
+                Description = "",
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                Etag = "",
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             TensorboardRun response = await tensorboardServiceClient.UpdateTensorboardRunAsync(tensorboardRun, updateMask);
         }

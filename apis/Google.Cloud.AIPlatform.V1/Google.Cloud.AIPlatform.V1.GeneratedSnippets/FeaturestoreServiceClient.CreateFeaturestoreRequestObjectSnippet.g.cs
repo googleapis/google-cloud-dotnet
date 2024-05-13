@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFeaturestoreServiceClientSnippets
     {
@@ -39,7 +40,35 @@ namespace GoogleCSharpSnippets
             CreateFeaturestoreRequest request = new CreateFeaturestoreRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Featurestore = new Featurestore(),
+                Featurestore = new Featurestore
+                {
+                    FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    OnlineServingConfig = new Featurestore.Types.OnlineServingConfig
+                    {
+                        FixedNodeCount = 0,
+                        Scaling = new Featurestore.Types.OnlineServingConfig.Types.Scaling
+                        {
+                            MinNodeCount = 0,
+                            MaxNodeCount = 0,
+                            CpuUtilizationTarget = 0,
+                        },
+                    },
+                    State = Featurestore.Types.State.Unspecified,
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                    OnlineStorageTtlDays = 0,
+                },
                 FeaturestoreId = "",
             };
             // Make the request

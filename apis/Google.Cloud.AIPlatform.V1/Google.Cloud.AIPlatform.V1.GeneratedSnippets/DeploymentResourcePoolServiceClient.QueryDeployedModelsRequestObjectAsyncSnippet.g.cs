@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             QueryDeployedModelsRequest request = new QueryDeployedModelsRequest
             {
                 DeploymentResourcePool = "",
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedAsyncEnumerable<QueryDeployedModelsResponse, DeployedModelRef> response = deploymentResourcePoolServiceClient.QueryDeployedModelsAsync(request);

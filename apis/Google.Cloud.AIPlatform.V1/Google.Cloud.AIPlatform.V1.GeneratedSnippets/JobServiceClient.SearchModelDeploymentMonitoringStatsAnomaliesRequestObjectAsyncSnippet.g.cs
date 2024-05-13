@@ -46,10 +46,24 @@ namespace GoogleCSharpSnippets
                 FeatureDisplayName = "",
                 Objectives =
                 {
-                    new SearchModelDeploymentMonitoringStatsAnomaliesRequest.Types.StatsAnomaliesObjective(),
+                    new SearchModelDeploymentMonitoringStatsAnomaliesRequest.Types.StatsAnomaliesObjective
+                    {
+                        Type = ModelDeploymentMonitoringObjectiveType.Unspecified,
+                        TopFeatureCount = 0,
+                    },
                 },
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                PageSize = 0,
+                PageToken = "",
+                StartTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                EndTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
             };
             // Make the request
             PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync(request);

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_FeaturestoreService_ImportFeatureValues_async]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedFeaturestoreServiceClientSnippets
@@ -39,12 +40,29 @@ namespace GoogleCSharpSnippets
             ImportFeatureValuesRequest request = new ImportFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
-                AvroSource = new AvroSource(),
+                AvroSource = new AvroSource
+                {
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                },
+                BigquerySource = new BigQuerySource { InputUri = "", },
+                CsvSource = new CsvSource
+                {
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                },
                 EntityIdField = "",
                 FeatureTimeField = "",
+                FeatureTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
                 FeatureSpecs =
                 {
-                    new ImportFeatureValuesRequest.Types.FeatureSpec(),
+                    new ImportFeatureValuesRequest.Types.FeatureSpec
+                    {
+                        Id = "",
+                        SourceField = "",
+                    },
                 },
                 DisableOnlineServing = false,
                 WorkerCount = 0,

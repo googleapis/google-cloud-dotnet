@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_AddExecutionEvents_async]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
@@ -38,7 +39,21 @@ namespace GoogleCSharpSnippets
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
-                Events = { new Event(), },
+                Events =
+                {
+                    new Event
+                    {
+                        ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
+                        ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
+                        EventTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        Type = Event.Types.Type.Unspecified,
+                        Labels = { { "", "" }, },
+                    },
+                },
             };
             // Make the request
             AddExecutionEventsResponse response = await metadataServiceClient.AddExecutionEventsAsync(request);

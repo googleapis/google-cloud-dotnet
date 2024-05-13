@@ -41,8 +41,10 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
                 Filter = "",
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             PagedEnumerable<ListTensorboardRunsResponse, TensorboardRun> response = tensorboardServiceClient.ListTensorboardRuns(request);

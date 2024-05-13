@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_CreateTensorboardExperiment_async_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedTensorboardServiceClientSnippets
@@ -36,7 +37,25 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
             // Initialize request argument(s)
             TensorboardExperimentName parent = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]");
-            TensorboardExperiment tensorboardExperiment = new TensorboardExperiment();
+            TensorboardExperiment tensorboardExperiment = new TensorboardExperiment
+            {
+                TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
+                DisplayName = "",
+                Description = "",
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                Etag = "",
+                Source = "",
+            };
             string tensorboardExperimentId = "";
             // Make the request
             TensorboardExperiment response = await tensorboardServiceClient.CreateTensorboardExperimentAsync(parent, tensorboardExperiment, tensorboardExperimentId);

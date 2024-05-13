@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListTrialsRequest request = new ListTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
+                PageToken = "",
+                PageSize = 0,
             };
             // Make the request
             PagedEnumerable<ListTrialsResponse, Trial> response = vizierServiceClient.ListTrials(request);

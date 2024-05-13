@@ -37,8 +37,16 @@ namespace GoogleCSharpSnippets
             // Create client
             SpecialistPoolServiceClient specialistPoolServiceClient = await SpecialistPoolServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SpecialistPool specialistPool = new SpecialistPool();
-            FieldMask updateMask = new FieldMask();
+            SpecialistPool specialistPool = new SpecialistPool
+            {
+                SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
+                DisplayName = "",
+                SpecialistManagersCount = 0,
+                SpecialistManagerEmails = { "", },
+                PendingDataLabelingJobs = { "", },
+                SpecialistWorkerEmails = { "", },
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             Operation<SpecialistPool, UpdateSpecialistPoolOperationMetadata> response = await specialistPoolServiceClient.UpdateSpecialistPoolAsync(specialistPool, updateMask);
 

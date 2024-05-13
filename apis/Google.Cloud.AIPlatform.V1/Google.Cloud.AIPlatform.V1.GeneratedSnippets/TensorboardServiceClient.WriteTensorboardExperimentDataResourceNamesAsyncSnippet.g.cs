@@ -18,6 +18,8 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_WriteTensorboardExperimentData_async_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -39,7 +41,47 @@ namespace GoogleCSharpSnippets
             TensorboardExperimentName tensorboardExperiment = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]");
             IEnumerable<WriteTensorboardRunDataRequest> writeRunDataRequests = new WriteTensorboardRunDataRequest[]
             {
-                new WriteTensorboardRunDataRequest(),
+                new WriteTensorboardRunDataRequest
+                {
+                    TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                    TimeSeriesData =
+                    {
+                        new TimeSeriesData
+                        {
+                            TensorboardTimeSeriesId = "",
+                            ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                            Values =
+                            {
+                                new TimeSeriesDataPoint
+                                {
+                                    WallTime = new Timestamp
+                                    {
+                                        Seconds = 0L,
+                                        Nanos = 0,
+                                    },
+                                    Step = 0L,
+                                    Scalar = new Scalar { Value = 0, },
+                                    Tensor = new TensorboardTensor
+                                    {
+                                        Value = ByteString.Empty,
+                                        VersionNumber = 0,
+                                    },
+                                    Blobs = new TensorboardBlobSequence
+                                    {
+                                        Values =
+                                        {
+                                            new TensorboardBlob
+                                            {
+                                                Id = "",
+                                                Data = ByteString.Empty,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             WriteTensorboardExperimentDataResponse response = await tensorboardServiceClient.WriteTensorboardExperimentDataAsync(tensorboardExperiment, writeRunDataRequests);

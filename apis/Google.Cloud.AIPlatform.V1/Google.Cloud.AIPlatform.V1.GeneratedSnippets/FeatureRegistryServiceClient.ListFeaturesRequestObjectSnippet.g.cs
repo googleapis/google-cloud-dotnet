@@ -41,8 +41,10 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
                 Filter = "",
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { Paths = { "", }, },
                 LatestStatsCount = 0,
             };
             // Make the request

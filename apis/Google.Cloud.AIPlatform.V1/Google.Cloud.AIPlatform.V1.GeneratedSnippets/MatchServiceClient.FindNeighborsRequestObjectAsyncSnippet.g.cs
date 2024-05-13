@@ -41,7 +41,42 @@ namespace GoogleCSharpSnippets
                 DeployedIndexId = "",
                 Queries =
                 {
-                    new FindNeighborsRequest.Types.Query(),
+                    new FindNeighborsRequest.Types.Query
+                    {
+                        Datapoint = new IndexDatapoint
+                        {
+                            DatapointId = "",
+                            FeatureVector = { 0F, },
+                            Restricts =
+                            {
+                                new IndexDatapoint.Types.Restriction
+                                {
+                                    Namespace = "",
+                                    AllowList = { "", },
+                                    DenyList = { "", },
+                                },
+                            },
+                            CrowdingTag = new IndexDatapoint.Types.CrowdingTag
+                            {
+                                CrowdingAttribute = "",
+                            },
+                            NumericRestricts =
+                            {
+                                new IndexDatapoint.Types.NumericRestriction
+                                {
+                                    Namespace = "",
+                                    ValueInt = 0L,
+                                    ValueFloat = 0F,
+                                    ValueDouble = 0,
+                                    Op = IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified,
+                                },
+                            },
+                        },
+                        NeighborCount = 0,
+                        PerCrowdingAttributeNeighborCount = 0,
+                        ApproximateNeighborCount = 0,
+                        FractionLeafNodesToSearchOverride = 0,
+                    },
                 },
                 ReturnFullDatapoint = false,
             };

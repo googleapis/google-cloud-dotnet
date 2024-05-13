@@ -14,12 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_VizierService_SuggestTrials_async]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedVizierServiceClientSnippets
     {
@@ -41,7 +44,41 @@ namespace GoogleCSharpSnippets
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
                 SuggestionCount = 0,
                 ClientId = "",
-                Contexts = { new TrialContext(), },
+                Contexts =
+                {
+                    new TrialContext
+                    {
+                        Description = "",
+                        Parameters =
+                        {
+                            new Trial.Types.Parameter
+                            {
+                                ParameterId = "",
+                                Value = new wkt::Value
+                                {
+                                    NullValue = wkt::NullValue.NullValue,
+                                    NumberValue = 0,
+                                    StringValue = "",
+                                    BoolValue = false,
+                                    StructValue = new wkt::Struct
+                                    {
+                                        Fields =
+                                        {
+                                            {
+                                                "",
+                                                new wkt::Value { }
+                                            },
+                                        },
+                                    },
+                                    ListValue = new wkt::ListValue
+                                    {
+                                        Values = { new wkt::Value { }, },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             Operation<SuggestTrialsResponse, SuggestTrialsMetadata> response = await vizierServiceClient.SuggestTrialsAsync(request);

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_FeatureOnlineStoreAdminService_CreateFeatureView_sync]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFeatureOnlineStoreAdminServiceClientSnippets
     {
@@ -38,7 +39,53 @@ namespace GoogleCSharpSnippets
             CreateFeatureViewRequest request = new CreateFeatureViewRequest
             {
                 ParentAsFeatureOnlineStoreName = FeatureOnlineStoreName.FromProjectLocationFeatureOnlineStore("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]"),
-                FeatureView = new FeatureView(),
+                FeatureView = new FeatureView
+                {
+                    FeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    BigQuerySource = new FeatureView.Types.BigQuerySource
+                    {
+                        Uri = "",
+                        EntityIdColumns = { "", },
+                    },
+                    SyncConfig = new FeatureView.Types.SyncConfig { Cron = "", },
+                    FeatureRegistrySource = new FeatureView.Types.FeatureRegistrySource
+                    {
+                        FeatureGroups =
+                        {
+                            new FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup
+                            {
+                                FeatureGroupId = "",
+                                FeatureIds = { "", },
+                            },
+                        },
+                        ProjectNumber = 0L,
+                    },
+                    IndexConfig = new FeatureView.Types.IndexConfig
+                    {
+                        EmbeddingColumn = "",
+                        FilterColumns = { "", },
+                        CrowdingColumn = "",
+                        EmbeddingDimension = 0,
+                        DistanceMeasureType = FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified,
+                        TreeAhConfig = new FeatureView.Types.IndexConfig.Types.TreeAHConfig
+                        {
+                            LeafNodeEmbeddingCount = 0L,
+                        },
+                        BruteForceConfig = new FeatureView.Types.IndexConfig.Types.BruteForceConfig { },
+                    },
+                },
                 FeatureViewId = "",
                 RunSyncImmediately = false,
             };

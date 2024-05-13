@@ -38,7 +38,29 @@ namespace GoogleCSharpSnippets
             ExportDataRequest request = new ExportDataRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
-                ExportConfig = new ExportDataConfig(),
+                ExportConfig = new ExportDataConfig
+                {
+                    GcsDestination = new GcsDestination
+                    {
+                        OutputUriPrefix = "",
+                    },
+                    AnnotationsFilter = "",
+                    ExportUse = ExportDataConfig.Types.ExportUse.Unspecified,
+                    FractionSplit = new ExportFractionSplit
+                    {
+                        TrainingFraction = 0,
+                        ValidationFraction = 0,
+                        TestFraction = 0,
+                    },
+                    FilterSplit = new ExportFilterSplit
+                    {
+                        TrainingFilter = "",
+                        ValidationFilter = "",
+                        TestFilter = "",
+                    },
+                    SavedQueryId = "",
+                    AnnotationSchemaUri = "",
+                },
             };
             // Make the request
             Operation<ExportDataResponse, ExportDataOperationMetadata> response = datasetServiceClient.ExportData(request);

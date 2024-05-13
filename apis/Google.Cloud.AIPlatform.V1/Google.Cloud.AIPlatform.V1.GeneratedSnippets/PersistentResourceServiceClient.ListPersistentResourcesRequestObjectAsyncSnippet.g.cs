@@ -42,6 +42,8 @@ namespace GoogleCSharpSnippets
             ListPersistentResourcesRequest request = new ListPersistentResourcesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListPersistentResourcesResponse, PersistentResource> response = persistentResourceServiceClient.ListPersistentResourcesAsync(request);

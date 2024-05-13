@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedEnumerable<ListTuningJobsResponse, TuningJob> response = genAiTuningServiceClient.ListTuningJobs(request);

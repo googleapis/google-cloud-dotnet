@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_IndexService_CreateIndex_async]
@@ -21,6 +23,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedIndexServiceClientSnippets
     {
@@ -40,7 +43,62 @@ namespace GoogleCSharpSnippets
             CreateIndexRequest request = new CreateIndexRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Index = new Index(),
+                Index = new Index
+                {
+                    IndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                    DisplayName = "",
+                    Description = "",
+                    MetadataSchemaUri = "",
+                    Metadata = new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                        NumberValue = 0,
+                        StringValue = "",
+                        BoolValue = false,
+                        StructValue = new wkt::Struct
+                        {
+                            Fields =
+                            {
+                                {
+                                    "",
+                                    new wkt::Value { }
+                                },
+                            },
+                        },
+                        ListValue = new wkt::ListValue
+                        {
+                            Values = { new wkt::Value { }, },
+                        },
+                    },
+                    DeployedIndexes =
+                    {
+                        new DeployedIndexRef
+                        {
+                            IndexEndpointAsIndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
+                            DeployedIndexId = "",
+                            DisplayName = "",
+                        },
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    IndexStats = new IndexStats
+                    {
+                        VectorsCount = 0L,
+                        ShardsCount = 0,
+                    },
+                    IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                },
             };
             // Make the request
             Operation<Index, CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(request);

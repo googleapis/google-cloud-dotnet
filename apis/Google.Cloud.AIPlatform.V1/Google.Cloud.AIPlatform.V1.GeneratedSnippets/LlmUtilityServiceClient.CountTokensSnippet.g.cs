@@ -39,7 +39,30 @@ namespace GoogleCSharpSnippets
             LlmUtilityServiceClient llmUtilityServiceClient = LlmUtilityServiceClient.Create();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            IEnumerable<wkt::Value> instances = new wkt::Value[]
+            {
+                new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                    NumberValue = 0,
+                    StringValue = "",
+                    BoolValue = false,
+                    StructValue = new wkt::Struct
+                    {
+                        Fields =
+                        {
+                            {
+                                "",
+                                new wkt::Value { }
+                            },
+                        },
+                    },
+                    ListValue = new wkt::ListValue
+                    {
+                        Values = { new wkt::Value { }, },
+                    },
+                },
+            };
             // Make the request
             CountTokensResponse response = llmUtilityServiceClient.CountTokens(endpoint, instances);
         }

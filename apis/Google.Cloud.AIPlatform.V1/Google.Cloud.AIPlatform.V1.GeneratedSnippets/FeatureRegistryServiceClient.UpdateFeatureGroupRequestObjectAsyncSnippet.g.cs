@@ -39,8 +39,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateFeatureGroupRequest request = new UpdateFeatureGroupRequest
             {
-                FeatureGroup = new FeatureGroup(),
-                UpdateMask = new FieldMask(),
+                FeatureGroup = new FeatureGroup
+                {
+                    FeatureGroupName = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]"),
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    Description = "",
+                    BigQuery = new FeatureGroup.Types.BigQuery
+                    {
+                        BigQuerySource = new BigQuerySource { InputUri = "", },
+                        EntityIdColumns = { "", },
+                    },
+                },
+                UpdateMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             Operation<FeatureGroup, UpdateFeatureGroupOperationMetadata> response = await featureRegistryServiceClient.UpdateFeatureGroupAsync(request);

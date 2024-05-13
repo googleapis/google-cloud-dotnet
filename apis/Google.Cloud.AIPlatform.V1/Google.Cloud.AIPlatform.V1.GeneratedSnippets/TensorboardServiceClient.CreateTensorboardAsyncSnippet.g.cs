@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_TensorboardService_CreateTensorboard_async_flattened]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedTensorboardServiceClientSnippets
@@ -37,7 +38,28 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
-            Tensorboard tensorboard = new Tensorboard();
+            Tensorboard tensorboard = new Tensorboard
+            {
+                TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+                DisplayName = "",
+                Description = "",
+                RunCount = 0,
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                Etag = "",
+                BlobStoragePathPrefix = "",
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                IsDefault = false,
+            };
             // Make the request
             Operation<Tensorboard, CreateTensorboardOperationMetadata> response = await tensorboardServiceClient.CreateTensorboardAsync(parent, tensorboard);
 

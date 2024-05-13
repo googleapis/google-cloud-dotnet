@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedFeatureOnlineStoreAdminServiceClientSnippets
@@ -40,7 +41,37 @@ namespace GoogleCSharpSnippets
             CreateFeatureOnlineStoreRequest request = new CreateFeatureOnlineStoreRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                FeatureOnlineStore = new FeatureOnlineStore(),
+                FeatureOnlineStore = new FeatureOnlineStore
+                {
+                    FeatureOnlineStoreName = FeatureOnlineStoreName.FromProjectLocationFeatureOnlineStore("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]"),
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    State = FeatureOnlineStore.Types.State.Unspecified,
+                    Bigtable = new FeatureOnlineStore.Types.Bigtable
+                    {
+                        AutoScaling = new FeatureOnlineStore.Types.Bigtable.Types.AutoScaling
+                        {
+                            MinNodeCount = 0,
+                            MaxNodeCount = 0,
+                            CpuUtilizationTarget = 0,
+                        },
+                    },
+                    DedicatedServingEndpoint = new FeatureOnlineStore.Types.DedicatedServingEndpoint
+                    {
+                        PublicEndpointDomainName = "",
+                    },
+                    Optimized = new FeatureOnlineStore.Types.Optimized { },
+                },
                 FeatureOnlineStoreId = "",
             };
             // Make the request

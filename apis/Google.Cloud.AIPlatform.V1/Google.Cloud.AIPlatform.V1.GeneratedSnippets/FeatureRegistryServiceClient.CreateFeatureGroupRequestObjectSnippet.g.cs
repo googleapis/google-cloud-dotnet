@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFeatureRegistryServiceClientSnippets
     {
@@ -39,7 +40,28 @@ namespace GoogleCSharpSnippets
             CreateFeatureGroupRequest request = new CreateFeatureGroupRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                FeatureGroup = new FeatureGroup(),
+                FeatureGroup = new FeatureGroup
+                {
+                    FeatureGroupName = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]"),
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    Description = "",
+                    BigQuery = new FeatureGroup.Types.BigQuery
+                    {
+                        BigQuerySource = new BigQuerySource { InputUri = "", },
+                        EntityIdColumns = { "", },
+                    },
+                },
                 FeatureGroupId = "",
             };
             // Make the request

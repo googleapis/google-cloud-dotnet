@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedIndexEndpointServiceClientSnippets
     {
@@ -37,7 +38,102 @@ namespace GoogleCSharpSnippets
             IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            IndexEndpoint indexEndpoint = new IndexEndpoint();
+            IndexEndpoint indexEndpoint = new IndexEndpoint
+            {
+                IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
+                DisplayName = "",
+                Description = "",
+                DeployedIndexes =
+                {
+                    new DeployedIndex
+                    {
+                        Id = "",
+                        IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                        DisplayName = "",
+                        CreateTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        PrivateEndpoints = new IndexPrivateEndpoints
+                        {
+                            MatchGrpcAddress = "",
+                            ServiceAttachment = "",
+                            PscAutomatedEndpoints =
+                            {
+                                new PscAutomatedEndpoints
+                                {
+                                    ProjectId = "",
+                                    Network = "",
+                                    MatchAddress = "",
+                                },
+                            },
+                        },
+                        IndexSyncTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        AutomaticResources = new AutomaticResources
+                        {
+                            MinReplicaCount = 0,
+                            MaxReplicaCount = 0,
+                        },
+                        EnableAccessLogging = false,
+                        DeployedIndexAuthConfig = new DeployedIndexAuthConfig
+                        {
+                            AuthProvider = new DeployedIndexAuthConfig.Types.AuthProvider
+                            {
+                                Audiences = { "", },
+                                AllowedIssuers = { "", },
+                            },
+                        },
+                        ReservedIpRanges = { "", },
+                        DeploymentGroup = "",
+                        DedicatedResources = new DedicatedResources
+                        {
+                            MachineSpec = new MachineSpec
+                            {
+                                MachineType = "",
+                                AcceleratorType = AcceleratorType.Unspecified,
+                                AcceleratorCount = 0,
+                                TpuTopology = "",
+                            },
+                            MinReplicaCount = 0,
+                            MaxReplicaCount = 0,
+                            AutoscalingMetricSpecs =
+                            {
+                                new AutoscalingMetricSpec
+                                {
+                                    MetricName = "",
+                                    Target = 0,
+                                },
+                            },
+                        },
+                    },
+                },
+                Etag = "",
+                Labels = { { "", "" }, },
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Network = "",
+                PrivateServiceConnectConfig = new PrivateServiceConnectConfig
+                {
+                    EnablePrivateServiceConnect = false,
+                    ProjectAllowlist = { "", },
+                },
+                PublicEndpointEnabled = false,
+                PublicEndpointDomainName = "",
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+            };
             // Make the request
             Operation<IndexEndpoint, CreateIndexEndpointOperationMetadata> response = indexEndpointServiceClient.CreateIndexEndpoint(parent, indexEndpoint);
 

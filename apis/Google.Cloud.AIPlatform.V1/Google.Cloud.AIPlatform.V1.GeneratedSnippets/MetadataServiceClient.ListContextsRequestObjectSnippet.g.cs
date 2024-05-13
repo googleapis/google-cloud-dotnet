@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
+                PageSize = 0,
+                PageToken = "",
                 Filter = "",
                 OrderBy = "",
             };

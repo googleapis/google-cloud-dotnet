@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedNotebookServiceClientSnippets
     {
@@ -38,7 +39,41 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             NotebookRuntimeTemplateName notebookRuntimeTemplate = NotebookRuntimeTemplateName.FromProjectLocationNotebookRuntimeTemplate("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME_TEMPLATE]");
-            NotebookRuntime notebookRuntime = new NotebookRuntime();
+            NotebookRuntime notebookRuntime = new NotebookRuntime
+            {
+                NotebookRuntimeName = NotebookRuntimeName.FromProjectLocationNotebookRuntime("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME]"),
+                RuntimeUser = "",
+                NotebookRuntimeTemplateRef = new NotebookRuntimeTemplateRef
+                {
+                    NotebookRuntimeTemplateAsNotebookRuntimeTemplateName = NotebookRuntimeTemplateName.FromProjectLocationNotebookRuntimeTemplate("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME_TEMPLATE]"),
+                },
+                ProxyUri = "",
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                HealthState = NotebookRuntime.Types.HealthState.Unspecified,
+                DisplayName = "",
+                Description = "",
+                ServiceAccount = "",
+                RuntimeState = NotebookRuntime.Types.RuntimeState.Unspecified,
+                IsUpgradable = false,
+                Labels = { { "", "" }, },
+                ExpirationTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Version = "",
+                NotebookRuntimeType = NotebookRuntimeType.Unspecified,
+                NetworkTags = { "", },
+            };
             string notebookRuntimeId = "";
             // Make the request
             Operation<NotebookRuntime, AssignNotebookRuntimeOperationMetadata> response = notebookServiceClient.AssignNotebookRuntime(parent, notebookRuntimeTemplate, notebookRuntime, notebookRuntimeId);

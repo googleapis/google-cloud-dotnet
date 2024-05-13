@@ -40,9 +40,37 @@ namespace GoogleCSharpSnippets
                 IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
                 Datapoints =
                 {
-                    new IndexDatapoint(),
+                    new IndexDatapoint
+                    {
+                        DatapointId = "",
+                        FeatureVector = { 0F, },
+                        Restricts =
+                        {
+                            new IndexDatapoint.Types.Restriction
+                            {
+                                Namespace = "",
+                                AllowList = { "", },
+                                DenyList = { "", },
+                            },
+                        },
+                        CrowdingTag = new IndexDatapoint.Types.CrowdingTag
+                        {
+                            CrowdingAttribute = "",
+                        },
+                        NumericRestricts =
+                        {
+                            new IndexDatapoint.Types.NumericRestriction
+                            {
+                                Namespace = "",
+                                ValueInt = 0L,
+                                ValueFloat = 0F,
+                                ValueDouble = 0,
+                                Op = IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified,
+                            },
+                        },
+                    },
                 },
-                UpdateMask = new FieldMask(),
+                UpdateMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             UpsertDatapointsResponse response = indexServiceClient.UpsertDatapoints(request);

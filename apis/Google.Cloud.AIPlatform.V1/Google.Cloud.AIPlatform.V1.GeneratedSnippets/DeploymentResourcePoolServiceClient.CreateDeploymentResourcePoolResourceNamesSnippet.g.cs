@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDeploymentResourcePoolServiceClientSnippets
     {
@@ -37,7 +38,35 @@ namespace GoogleCSharpSnippets
             DeploymentResourcePoolServiceClient deploymentResourcePoolServiceClient = DeploymentResourcePoolServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DeploymentResourcePool deploymentResourcePool = new DeploymentResourcePool();
+            DeploymentResourcePool deploymentResourcePool = new DeploymentResourcePool
+            {
+                DeploymentResourcePoolName = DeploymentResourcePoolName.FromProjectLocationDeploymentResourcePool("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_RESOURCE_POOL]"),
+                DedicatedResources = new DedicatedResources
+                {
+                    MachineSpec = new MachineSpec
+                    {
+                        MachineType = "",
+                        AcceleratorType = AcceleratorType.Unspecified,
+                        AcceleratorCount = 0,
+                        TpuTopology = "",
+                    },
+                    MinReplicaCount = 0,
+                    MaxReplicaCount = 0,
+                    AutoscalingMetricSpecs =
+                    {
+                        new AutoscalingMetricSpec
+                        {
+                            MetricName = "",
+                            Target = 0,
+                        },
+                    },
+                },
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+            };
             string deploymentResourcePoolId = "";
             // Make the request
             Operation<DeploymentResourcePool, CreateDeploymentResourcePoolOperationMetadata> response = deploymentResourcePoolServiceClient.CreateDeploymentResourcePool(parent, deploymentResourcePool, deploymentResourcePoolId);

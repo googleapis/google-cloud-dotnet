@@ -36,8 +36,54 @@ namespace GoogleCSharpSnippets
             // Create client
             FeatureOnlineStoreAdminServiceClient featureOnlineStoreAdminServiceClient = FeatureOnlineStoreAdminServiceClient.Create();
             // Initialize request argument(s)
-            FeatureView featureView = new FeatureView();
-            FieldMask updateMask = new FieldMask();
+            FeatureView featureView = new FeatureView
+            {
+                FeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Etag = "",
+                Labels = { { "", "" }, },
+                BigQuerySource = new FeatureView.Types.BigQuerySource
+                {
+                    Uri = "",
+                    EntityIdColumns = { "", },
+                },
+                SyncConfig = new FeatureView.Types.SyncConfig { Cron = "", },
+                FeatureRegistrySource = new FeatureView.Types.FeatureRegistrySource
+                {
+                    FeatureGroups =
+                    {
+                        new FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup
+                        {
+                            FeatureGroupId = "",
+                            FeatureIds = { "", },
+                        },
+                    },
+                    ProjectNumber = 0L,
+                },
+                IndexConfig = new FeatureView.Types.IndexConfig
+                {
+                    EmbeddingColumn = "",
+                    FilterColumns = { "", },
+                    CrowdingColumn = "",
+                    EmbeddingDimension = 0,
+                    DistanceMeasureType = FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified,
+                    TreeAhConfig = new FeatureView.Types.IndexConfig.Types.TreeAHConfig
+                    {
+                        LeafNodeEmbeddingCount = 0L,
+                    },
+                    BruteForceConfig = new FeatureView.Types.IndexConfig.Types.BruteForceConfig { },
+                },
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             Operation<FeatureView, UpdateFeatureViewOperationMetadata> response = featureOnlineStoreAdminServiceClient.UpdateFeatureView(featureView, updateMask);
 

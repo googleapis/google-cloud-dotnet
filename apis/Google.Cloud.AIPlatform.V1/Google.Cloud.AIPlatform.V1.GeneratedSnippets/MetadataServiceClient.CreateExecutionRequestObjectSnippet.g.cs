@@ -14,10 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_MetadataService_CreateExecution_sync]
     using Google.Cloud.AIPlatform.V1;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
     {
@@ -37,7 +40,48 @@ namespace GoogleCSharpSnippets
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
+                    DisplayName = "",
+                    State = Execution.Types.State.Unspecified,
+                    Etag = "",
+                    Labels = { { "", "" }, },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    SchemaTitle = "",
+                    SchemaVersion = "",
+                    Metadata = new wkt::Struct
+                    {
+                        Fields =
+                        {
+                            {
+                                "",
+                                new wkt::Value
+                                {
+                                    NullValue = wkt::NullValue.NullValue,
+                                    NumberValue = 0,
+                                    StringValue = "",
+                                    BoolValue = false,
+                                    StructValue = new wkt::Struct { },
+                                    ListValue = new wkt::ListValue
+                                    {
+                                        Values = { new wkt::Value { }, },
+                                    },
+                                }
+                            },
+                        },
+                    },
+                    Description = "",
+                },
                 ExecutionId = "",
             };
             // Make the request

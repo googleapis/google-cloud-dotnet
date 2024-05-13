@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_MetadataService_CreateMetadataStore_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedMetadataServiceClientSnippets
     {
@@ -36,7 +37,26 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            MetadataStore metadataStore = new MetadataStore();
+            MetadataStore metadataStore = new MetadataStore
+            {
+                MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                Description = "",
+                State = new MetadataStore.Types.MetadataStoreState
+                {
+                    DiskUtilizationBytes = 0L,
+                },
+            };
             string metadataStoreId = "";
             // Make the request
             Operation<MetadataStore, CreateMetadataStoreOperationMetadata> response = metadataServiceClient.CreateMetadataStore(parent, metadataStore, metadataStoreId);

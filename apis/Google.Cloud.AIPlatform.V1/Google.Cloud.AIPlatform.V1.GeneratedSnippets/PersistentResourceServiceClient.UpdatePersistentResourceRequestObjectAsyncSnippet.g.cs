@@ -19,7 +19,9 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_PersistentResourceService_UpdatePersistentResource_async]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
+    using Google.Rpc;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedPersistentResourceServiceClientSnippets
@@ -39,8 +41,81 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdatePersistentResourceRequest request = new UpdatePersistentResourceRequest
             {
-                PersistentResource = new PersistentResource(),
-                UpdateMask = new FieldMask(),
+                PersistentResource = new PersistentResource
+                {
+                    PersistentResourceName = PersistentResourceName.FromProjectLocationPersistentResource("[PROJECT]", "[LOCATION]", "[PERSISTENT_RESOURCE]"),
+                    DisplayName = "",
+                    ResourcePools =
+                    {
+                        new ResourcePool
+                        {
+                            Id = "",
+                            MachineSpec = new MachineSpec
+                            {
+                                MachineType = "",
+                                AcceleratorType = AcceleratorType.Unspecified,
+                                AcceleratorCount = 0,
+                                TpuTopology = "",
+                            },
+                            ReplicaCount = 0L,
+                            DiskSpec = new DiskSpec
+                            {
+                                BootDiskType = "",
+                                BootDiskSizeGb = 0,
+                            },
+                            UsedReplicaCount = 0L,
+                            AutoscalingSpec = new ResourcePool.Types.AutoscalingSpec
+                            {
+                                MinReplicaCount = 0L,
+                                MaxReplicaCount = 0L,
+                            },
+                        },
+                    },
+                    State = PersistentResource.Types.State.Unspecified,
+                    Error = new Status
+                    {
+                        Code = 0,
+                        Message = "",
+                        Details =
+                        {
+                            new Any
+                            {
+                                TypeUrl = "",
+                                Value = ByteString.Empty,
+                            },
+                        },
+                    },
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    StartTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    UpdateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Labels = { { "", "" }, },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                    ResourceRuntimeSpec = new ResourceRuntimeSpec
+                    {
+                        RaySpec = new RaySpec { },
+                        ServiceAccountSpec = new ServiceAccountSpec
+                        {
+                            EnableCustomServiceAccount = false,
+                            ServiceAccount = "",
+                        },
+                    },
+                    ResourceRuntime = new ResourceRuntime { },
+                    ReservedIpRanges = { "", },
+                },
+                UpdateMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             Operation<PersistentResource, UpdatePersistentResourceOperationMetadata> response = await persistentResourceServiceClient.UpdatePersistentResourceAsync(request);

@@ -36,8 +36,36 @@ namespace GoogleCSharpSnippets
             // Create client
             FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
             // Initialize request argument(s)
-            Featurestore featurestore = new Featurestore();
-            FieldMask updateMask = new FieldMask();
+            Featurestore featurestore = new Featurestore
+            {
+                FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Etag = "",
+                Labels = { { "", "" }, },
+                OnlineServingConfig = new Featurestore.Types.OnlineServingConfig
+                {
+                    FixedNodeCount = 0,
+                    Scaling = new Featurestore.Types.OnlineServingConfig.Types.Scaling
+                    {
+                        MinNodeCount = 0,
+                        MaxNodeCount = 0,
+                        CpuUtilizationTarget = 0,
+                    },
+                },
+                State = Featurestore.Types.State.Unspecified,
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                OnlineStorageTtlDays = 0,
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             Operation<Featurestore, UpdateFeaturestoreOperationMetadata> response = featurestoreServiceClient.UpdateFeaturestore(featurestore, updateMask);
 

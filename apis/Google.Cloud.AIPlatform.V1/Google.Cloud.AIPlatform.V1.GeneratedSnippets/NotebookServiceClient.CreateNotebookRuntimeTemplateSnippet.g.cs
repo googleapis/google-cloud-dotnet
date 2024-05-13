@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedNotebookServiceClientSnippets
     {
@@ -36,7 +37,64 @@ namespace GoogleCSharpSnippets
             NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate();
+            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate
+            {
+                NotebookRuntimeTemplateName = NotebookRuntimeTemplateName.FromProjectLocationNotebookRuntimeTemplate("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME_TEMPLATE]"),
+                DisplayName = "",
+                Description = "",
+                IsDefault = false,
+                MachineSpec = new MachineSpec
+                {
+                    MachineType = "",
+                    AcceleratorType = AcceleratorType.Unspecified,
+                    AcceleratorCount = 0,
+                    TpuTopology = "",
+                },
+                DataPersistentDiskSpec = new PersistentDiskSpec
+                {
+                    DiskType = "",
+                    DiskSizeGb = 0L,
+                },
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                NetworkSpec = new NetworkSpec
+                {
+                    EnableInternetAccess = false,
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    SubnetworkAsSubnetworkName = SubnetworkName.FromProjectRegionSubnetwork("[PROJECT]", "[REGION]", "[SUBNETWORK]"),
+                },
+                ServiceAccount = "",
+                Etag = "",
+                Labels = { { "", "" }, },
+                IdleShutdownConfig = new NotebookIdleShutdownConfig
+                {
+                    IdleTimeout = new Duration
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    IdleShutdownDisabled = false,
+                },
+                EucConfig = new NotebookEucConfig
+                {
+                    EucDisabled = false,
+                    BypassActasCheck = false,
+                },
+                NotebookRuntimeType = NotebookRuntimeType.Unspecified,
+                ShieldedVmConfig = new ShieldedVmConfig
+                {
+                    EnableSecureBoot = false,
+                },
+                NetworkTags = { "", },
+            };
             string notebookRuntimeTemplateId = "";
             // Make the request
             Operation<NotebookRuntimeTemplate, CreateNotebookRuntimeTemplateOperationMetadata> response = notebookServiceClient.CreateNotebookRuntimeTemplate(parent, notebookRuntimeTemplate, notebookRuntimeTemplateId);

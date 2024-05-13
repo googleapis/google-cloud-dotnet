@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_VizierService_AddTrialMeasurement_sync]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedVizierServiceClientSnippets
     {
@@ -37,7 +38,23 @@ namespace GoogleCSharpSnippets
             AddTrialMeasurementRequest request = new AddTrialMeasurementRequest
             {
                 TrialNameAsTrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
-                Measurement = new Measurement(),
+                Measurement = new Measurement
+                {
+                    ElapsedDuration = new Duration
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    StepCount = 0L,
+                    Metrics =
+                    {
+                        new Measurement.Types.Metric
+                        {
+                            MetricId = "",
+                            Value = 0,
+                        },
+                    },
+                },
             };
             // Make the request
             Trial response = vizierServiceClient.AddTrialMeasurement(request);

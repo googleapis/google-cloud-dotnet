@@ -37,8 +37,29 @@ namespace GoogleCSharpSnippets
             // Create client
             TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Tensorboard tensorboard = new Tensorboard();
-            FieldMask updateMask = new FieldMask();
+            Tensorboard tensorboard = new Tensorboard
+            {
+                TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+                DisplayName = "",
+                Description = "",
+                RunCount = 0,
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                Etag = "",
+                BlobStoragePathPrefix = "",
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                IsDefault = false,
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             Operation<Tensorboard, UpdateTensorboardOperationMetadata> response = await tensorboardServiceClient.UpdateTensorboardAsync(tensorboard, updateMask);
 

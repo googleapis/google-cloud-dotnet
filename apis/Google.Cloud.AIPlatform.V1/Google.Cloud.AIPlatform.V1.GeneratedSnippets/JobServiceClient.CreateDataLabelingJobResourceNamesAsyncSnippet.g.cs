@@ -14,12 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_JobService_CreateDataLabelingJob_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf;
+    using Google.Rpc;
+    using Google.Type;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedJobServiceClientSnippets
     {
@@ -37,7 +43,89 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DataLabelingJob dataLabelingJob = new DataLabelingJob();
+            DataLabelingJob dataLabelingJob = new DataLabelingJob
+            {
+                DataLabelingJobName = DataLabelingJobName.FromProjectLocationDataLabelingJob("[PROJECT]", "[LOCATION]", "[DATA_LABELING_JOB]"),
+                DisplayName = "",
+                DatasetsAsDatasetNames =
+                {
+                    DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                },
+                LabelerCount = 0,
+                InstructionUri = "",
+                InputsSchemaUri = "",
+                Inputs = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                    NumberValue = 0,
+                    StringValue = "",
+                    BoolValue = false,
+                    StructValue = new wkt::Struct
+                    {
+                        Fields =
+                        {
+                            {
+                                "",
+                                new wkt::Value { }
+                            },
+                        },
+                    },
+                    ListValue = new wkt::ListValue
+                    {
+                        Values = { new wkt::Value { }, },
+                    },
+                },
+                State = JobState.Unspecified,
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                AnnotationLabels = { { "", "" }, },
+                LabelingProgress = 0,
+                CurrentSpend = new Money
+                {
+                    CurrencyCode = "",
+                    Units = 0L,
+                    Nanos = 0,
+                },
+                SpecialistPools = { "", },
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
+                ActiveLearningConfig = new ActiveLearningConfig
+                {
+                    MaxDataItemCount = 0L,
+                    MaxDataItemPercentage = 0,
+                    SampleConfig = new SampleConfig
+                    {
+                        InitialBatchSamplePercentage = 0,
+                        FollowingBatchSamplePercentage = 0,
+                        SampleStrategy = SampleConfig.Types.SampleStrategy.Unspecified,
+                    },
+                    TrainingConfig = new TrainingConfig
+                    {
+                        TimeoutTrainingMilliHours = 0L,
+                    },
+                },
+                Error = new Status
+                {
+                    Code = 0,
+                    Message = "",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "",
+                            Value = ByteString.Empty,
+                        },
+                    },
+                },
+            };
             // Make the request
             DataLabelingJob response = await jobServiceClient.CreateDataLabelingJobAsync(parent, dataLabelingJob);
         }

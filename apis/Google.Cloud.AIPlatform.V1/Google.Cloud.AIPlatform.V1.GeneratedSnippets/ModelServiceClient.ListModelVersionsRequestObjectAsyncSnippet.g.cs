@@ -42,8 +42,10 @@ namespace GoogleCSharpSnippets
             ListModelVersionsRequest request = new ListModelVersionsRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                PageSize = 0,
+                PageToken = "",
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { Paths = { "", }, },
                 OrderBy = "",
             };
             // Make the request

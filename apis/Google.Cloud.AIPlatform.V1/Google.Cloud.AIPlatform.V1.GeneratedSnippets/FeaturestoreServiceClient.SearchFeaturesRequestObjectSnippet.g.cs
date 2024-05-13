@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             {
                 LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Query = "",
+                PageSize = 0,
+                PageToken = "",
             };
             // Make the request
             PagedEnumerable<SearchFeaturesResponse, Feature> response = featurestoreServiceClient.SearchFeatures(request);
