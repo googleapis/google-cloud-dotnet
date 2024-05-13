@@ -40,7 +40,10 @@ namespace GoogleCSharpSnippets
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                Options = new GetPolicyOptions(),
+                Options = new GetPolicyOptions
+                {
+                    RequestedPolicyVersion = 0,
+                },
             };
             // Make the request
             Policy response = await secretManagerServiceClient.GetIamPolicyAsync(request);

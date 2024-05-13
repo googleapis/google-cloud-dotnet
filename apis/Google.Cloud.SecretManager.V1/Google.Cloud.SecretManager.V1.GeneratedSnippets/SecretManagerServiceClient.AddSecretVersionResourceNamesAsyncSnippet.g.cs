@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START secretmanager_v1_generated_SecretManagerService_AddSecretVersion_async_flattened_resourceNames]
     using Google.Cloud.SecretManager.V1;
+    using Google.Protobuf;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
@@ -36,7 +37,11 @@ namespace GoogleCSharpSnippets
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
-            SecretPayload payload = new SecretPayload();
+            SecretPayload payload = new SecretPayload
+            {
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
+            };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.AddSecretVersionAsync(parent, payload);
         }

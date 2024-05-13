@@ -42,6 +42,8 @@ namespace GoogleCSharpSnippets
             ListSecretsRequest request = new ListSecretsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PageSize = 0,
+                PageToken = "",
                 Filter = "",
             };
             // Make the request

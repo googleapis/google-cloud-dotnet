@@ -20,7 +20,9 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
     using Google.Cloud.SecretManager.V1;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
+    using Google.Type;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
@@ -41,8 +43,42 @@ namespace GoogleCSharpSnippets
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                Policy = new Policy(),
-                UpdateMask = new FieldMask(),
+                Policy = new Policy
+                {
+                    Version = 0,
+                    Etag = ByteString.Empty,
+                    Bindings =
+                    {
+                        new Binding
+                        {
+                            Role = "",
+                            Members = { "", },
+                            Condition = new Expr
+                            {
+                                Expression = "",
+                                Title = "",
+                                Description = "",
+                                Location = "",
+                            },
+                        },
+                    },
+                    AuditConfigs =
+                    {
+                        new AuditConfig
+                        {
+                            Service = "",
+                            AuditLogConfigs =
+                            {
+                                new AuditLogConfig
+                                {
+                                    LogType = AuditLogConfig.Types.LogType.Unspecified,
+                                    ExemptedMembers = { "", },
+                                },
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new FieldMask { Paths = { "", }, },
             };
             // Make the request
             Policy response = await secretManagerServiceClient.SetIamPolicyAsync(request);

@@ -36,8 +36,74 @@ namespace GoogleCSharpSnippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Secret secret = new Secret();
-            FieldMask updateMask = new FieldMask();
+            Secret secret = new Secret
+            {
+                SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption { KmsKeyName = "", },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "",
+                                CustomerManagedEncryption = new CustomerManagedEncryption { KmsKeyName = "", },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Labels = { { "", "" }, },
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new Timestamp
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Ttl = new Duration
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                Etag = "",
+                Rotation = new Rotation
+                {
+                    NextRotationTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    RotationPeriod = new Duration
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                },
+                VersionAliases = { { "", 0L }, },
+                Annotations = { { "", "" }, },
+                VersionDestroyTtl = new Duration
+                {
+                    Seconds = 0L,
+                    Nanos = 0,
+                },
+                CustomerManagedEncryption = new CustomerManagedEncryption { KmsKeyName = "", },
+            };
+            FieldMask updateMask = new FieldMask { Paths = { "", }, };
             // Make the request
             Secret response = await secretManagerServiceClient.UpdateSecretAsync(secret, updateMask);
         }

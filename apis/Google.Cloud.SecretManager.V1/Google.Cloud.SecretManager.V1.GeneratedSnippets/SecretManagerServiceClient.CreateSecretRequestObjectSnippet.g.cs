@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_sync]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecretManager.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
     {
@@ -39,7 +40,73 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 SecretId = "",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption { KmsKeyName = "", },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption { KmsKeyName = "", },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Labels = { { "", "" }, },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new Timestamp
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Ttl = new Duration
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    Etag = "",
+                    Rotation = new Rotation
+                    {
+                        NextRotationTime = new Timestamp
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                        RotationPeriod = new Duration
+                        {
+                            Seconds = 0L,
+                            Nanos = 0,
+                        },
+                    },
+                    VersionAliases = { { "", 0L }, },
+                    Annotations = { { "", "" }, },
+                    VersionDestroyTtl = new Duration
+                    {
+                        Seconds = 0L,
+                        Nanos = 0,
+                    },
+                    CustomerManagedEncryption = new CustomerManagedEncryption { KmsKeyName = "", },
+                },
             };
             // Make the request
             Secret response = secretManagerServiceClient.CreateSecret(request);

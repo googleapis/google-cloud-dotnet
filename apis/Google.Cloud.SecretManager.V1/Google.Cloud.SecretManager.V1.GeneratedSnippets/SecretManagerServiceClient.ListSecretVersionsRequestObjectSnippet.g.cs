@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                PageSize = 0,
+                PageToken = "",
                 Filter = "",
             };
             // Make the request
