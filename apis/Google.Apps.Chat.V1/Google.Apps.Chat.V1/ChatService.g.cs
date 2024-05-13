@@ -137,11 +137,11 @@ namespace Google.Apps.Chat.V1 {
             "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jaGF0LnNwYWNlcy5yZWFkb25seSxo",
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NoYXQudXNlcnMucmVh",
             "ZHN0YXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2hhdC51",
-            "c2Vycy5yZWFkc3RhdGUucmVhZG9ubHlCmwEKEmNvbS5nb29nbGUuY2hhdC52",
+            "c2Vycy5yZWFkc3RhdGUucmVhZG9ubHlCqQEKEmNvbS5nb29nbGUuY2hhdC52",
             "MUIQQ2hhdFNlcnZpY2VQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2No",
-            "YXQvYXBpdjEvY2hhdHBiO2NoYXRwYqoCE0dvb2dsZS5BcHBzLkNoYXQuVjHK",
-            "AhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpW",
-            "MWIGcHJvdG8z"));
+            "YXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29vZ2xl",
+            "LkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6",
+            "OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.MembershipReflection.Descriptor, global::Google.Apps.Chat.V1.MessageReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReadStateReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceSetupReflection.Descriptor, global::Google.Apps.Chat.V1.ThreadReadStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));

@@ -33,24 +33,24 @@ namespace Google.Apps.Chat.V1 {
             "Y3Rpb24SNnNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNzYWdlfS9yZWFj",
             "dGlvbnMve3JlYWN0aW9ufSJfCgVFbW9qaRIRCgd1bmljb2RlGAEgASgJSAAS",
             "OAoMY3VzdG9tX2Vtb2ppGAIgASgLMhsuZ29vZ2xlLmNoYXQudjEuQ3VzdG9t",
-            "RW1vamlCA+BBA0gAQgkKB2NvbnRlbnQiGgoLQ3VzdG9tRW1vamkSCwoDdWlk",
-            "GAEgASgJImwKFEVtb2ppUmVhY3Rpb25TdW1tYXJ5EiQKBWVtb2ppGAEgASgL",
-            "MhUuZ29vZ2xlLmNoYXQudjEuRW1vamkSGwoOcmVhY3Rpb25fY291bnQYAiAB",
-            "KAVIAIgBAUIRCg9fcmVhY3Rpb25fY291bnQifgoVQ3JlYXRlUmVhY3Rpb25S",
-            "ZXF1ZXN0EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEeEhxjaGF0Lmdvb2dsZWFw",
-            "aXMuY29tL1JlYWN0aW9uEi8KCHJlYWN0aW9uGAIgASgLMhguZ29vZ2xlLmNo",
-            "YXQudjEuUmVhY3Rpb25CA+BBAiKSAQoUTGlzdFJlYWN0aW9uc1JlcXVlc3QS",
-            "NAoGcGFyZW50GAEgASgJQiTgQQL6QR4SHGNoYXQuZ29vZ2xlYXBpcy5jb20v",
-            "UmVhY3Rpb24SFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBIl0KFUxpc3RSZWFj",
-            "dGlvbnNSZXNwb25zZRIrCglyZWFjdGlvbnMYASADKAsyGC5nb29nbGUuY2hh",
-            "dC52MS5SZWFjdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiSwoVRGVs",
-            "ZXRlUmVhY3Rpb25SZXF1ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocY2hh",
-            "dC5nb29nbGVhcGlzLmNvbS9SZWFjdGlvbkKYAQoSY29tLmdvb2dsZS5jaGF0",
-            "LnYxQg1SZWFjdGlvblByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hh",
-            "dC9hcGl2MS9jaGF0cGI7Y2hhdHBiqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoC",
-            "E0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYx",
-            "YgZwcm90bzM="));
+            "RW1vamlCA+BBA0gAQgkKB2NvbnRlbnQiHwoLQ3VzdG9tRW1vamkSEAoDdWlk",
+            "GAEgASgJQgPgQQMibAoURW1vamlSZWFjdGlvblN1bW1hcnkSJAoFZW1vamkY",
+            "ASABKAsyFS5nb29nbGUuY2hhdC52MS5FbW9qaRIbCg5yZWFjdGlvbl9jb3Vu",
+            "dBgCIAEoBUgAiAEBQhEKD19yZWFjdGlvbl9jb3VudCJ+ChVDcmVhdGVSZWFj",
+            "dGlvblJlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6QR4SHGNoYXQuZ29v",
+            "Z2xlYXBpcy5jb20vUmVhY3Rpb24SLwoIcmVhY3Rpb24YAiABKAsyGC5nb29n",
+            "bGUuY2hhdC52MS5SZWFjdGlvbkID4EECIpIBChRMaXN0UmVhY3Rpb25zUmVx",
+            "dWVzdBI0CgZwYXJlbnQYASABKAlCJOBBAvpBHhIcY2hhdC5nb29nbGVhcGlz",
+            "LmNvbS9SZWFjdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
+            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEiXQoVTGlz",
+            "dFJlYWN0aW9uc1Jlc3BvbnNlEisKCXJlYWN0aW9ucxgBIAMoCzIYLmdvb2ds",
+            "ZS5jaGF0LnYxLlJlYWN0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJL",
+            "ChVEZWxldGVSZWFjdGlvblJlcXVlc3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEe",
+            "ChxjaGF0Lmdvb2dsZWFwaXMuY29tL1JlYWN0aW9uQqYBChJjb20uZ29vZ2xl",
+            "LmNoYXQudjFCDVJlYWN0aW9uUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dv",
+            "b2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29v",
+            "Z2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -712,7 +712,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UidFieldNumber = 1;
     private string uid_ = "";
     /// <summary>
-    /// Unique key for the custom emoji resource.
+    /// Output only. Unique key for the custom emoji resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

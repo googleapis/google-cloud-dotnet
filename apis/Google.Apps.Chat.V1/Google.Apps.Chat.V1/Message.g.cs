@@ -117,11 +117,11 @@ namespace Google.Apps.Chat.V1 {
             "HC5nb29nbGUuY2hhdC52MS5BY3Rpb25TdGF0dXNCA+BBBEIICgZhY3Rpb24i",
             "NgoGRGlhbG9nEiwKBGJvZHkYASABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYx",
             "LkNhcmRCA+BBBCJGCgpDYXJkV2l0aElkEg8KB2NhcmRfaWQYASABKAkSJwoE",
-            "Y2FyZBgCIAEoCzIZLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZEKXAQoSY29t",
+            "Y2FyZBgCIAEoCzIZLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZEKlAQoSY29t",
             "Lmdvb2dsZS5jaGF0LnYxQgxNZXNzYWdlUHJvdG9QAVosY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKqAhNHb29nbGUuQXBw",
-            "cy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBw",
-            "czo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "LmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90",
+            "b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx",
+            "6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Card.V1.CardReflection.Descriptor, global::Google.Apps.Chat.V1.ActionStatusReflection.Descriptor, global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ContextualAddonReflection.Descriptor, global::Google.Apps.Chat.V1.DeletionMetadataReflection.Descriptor, global::Google.Apps.Chat.V1.MatchedUrlReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.SlashCommandReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

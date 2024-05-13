@@ -30,11 +30,11 @@ namespace Google.Apps.Chat.V1 {
             "YWNlLnByb3RvIo0BChFTZXRVcFNwYWNlUmVxdWVzdBIpCgVzcGFjZRgBIAEo",
             "CzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlQgPgQQISFwoKcmVxdWVzdF9pZBgC",
             "IAEoCUID4EEBEjQKC21lbWJlcnNoaXBzGAQgAygLMhouZ29vZ2xlLmNoYXQu",
-            "djEuTWVtYmVyc2hpcEID4EEBQpoBChJjb20uZ29vZ2xlLmNoYXQudjFCD1Nw",
+            "djEuTWVtYmVyc2hpcEID4EEBQqgBChJjb20uZ29vZ2xlLmNoYXQudjFCD1Nw",
             "YWNlU2V0dXBQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBp",
-            "djEvY2hhdHBiO2NoYXRwYqoCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29n",
-            "bGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJv",
-            "dG8z"));
+            "djEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29vZ2xlLkFwcHMu",
+            "Q2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6",
+            "OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Apps.Chat.V1.MembershipReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -163,14 +163,14 @@ namespace Google.Apps.Chat.V1 {
     ///
     /// The set currently allows up to 20 memberships (in addition to the caller).
     ///
-    /// The `Membership.member` field must contain a `user` with `name` populated
-    /// (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only
-    /// add human users when setting up a space (adding Chat apps is only supported
-    /// for direct message setup with the calling app). You can also add members
-    /// using the user's email as an alias for {user}. For example, the `user.name`
-    /// can be `users/example@gmail.com`." To invite Gmail users or users from
-    /// external Google Workspace domains, user's email must be used for
-    /// `{user}`.
+    /// For human membership, the `Membership.member` field must contain a `user`
+    /// with `name` populated (format: `users/{user}`) and `type` set to
+    /// `User.Type.HUMAN`. You can only add human users when setting up a space
+    /// (adding Chat apps is only supported for direct message setup with the
+    /// calling app). You can also add members using the user's email as an alias
+    /// for {user}. For example, the `user.name` can be `users/example@gmail.com`.
+    /// To invite Gmail users or users from external Google Workspace domains,
+    /// user's email must be used for `{user}`.
     ///
     /// Optional when setting `Space.spaceType` to `SPACE`.
     ///

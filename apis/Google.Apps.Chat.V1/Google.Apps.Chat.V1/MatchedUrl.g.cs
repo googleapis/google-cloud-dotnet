@@ -26,11 +26,11 @@ namespace Google.Apps.Chat.V1 {
           string.Concat(
             "CiBnb29nbGUvY2hhdC92MS9tYXRjaGVkX3VybC5wcm90bxIOZ29vZ2xlLmNo",
             "YXQudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iHgoKTWF0",
-            "Y2hlZFVybBIQCgN1cmwYAiABKAlCA+BBA0KaAQoSY29tLmdvb2dsZS5jaGF0",
+            "Y2hlZFVybBIQCgN1cmwYAiABKAlCA+BBA0KoAQoSY29tLmdvb2dsZS5jaGF0",
             "LnYxQg9NYXRjaGVkVXJsUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9j",
-            "aGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKqAhNHb29nbGUuQXBwcy5DaGF0LlYx",
-            "ygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6",
-            "VjFiBnByb3RvMw=="));
+            "aGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2ds",
+            "ZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xl",
+            "OjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -60,10 +60,11 @@ namespace Google.Apps.Chat.V1 {
             "ZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29v",
             "Z2xlYXBpcy5jb20vTWVtYmVyc2hpcCJPChdEZWxldGVNZW1iZXJzaGlwUmVx",
             "dWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29vZ2xlYXBpcy5j",
-            "b20vTWVtYmVyc2hpcEKaAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9NZW1iZXJz",
+            "b20vTWVtYmVyc2hpcEKoAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9NZW1iZXJz",
             "aGlwUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2No",
-            "YXRwYjtjaGF0cGKqAhNHb29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFw",
-            "cHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "YXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQu",
+            "VjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -216,8 +217,8 @@ namespace Google.Apps.Chat.V1 {
     public const int GroupMemberFieldNumber = 5;
     /// <summary>
     /// The Google Group the membership corresponds to.
-    /// Only supports read operations. Other operations, like creating or
-    /// updating a membership, aren't currently supported.
+    /// Only supports read operations. Other operations, like
+    /// creating or updating a membership, aren't currently supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1926,8 +1927,9 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>
     /// Required. Resource name of the membership to retrieve.
     ///
-    /// To get the app's own membership, you can optionally use
-    /// `spaces/{space}/members/app`.
+    /// To get the app's own membership [by using user
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
+    /// you can optionally use `spaces/{space}/members/app`.
     ///
     /// Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
     ///
