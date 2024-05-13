@@ -1219,7 +1219,7 @@
     },
     {
       "id": "Google.Cloud.CertificateManager.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Certificate Manager",
       "productUrl": "https://cloud.google.com/certificate-manager/docs",
