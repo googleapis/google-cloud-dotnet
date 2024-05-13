@@ -25,11 +25,11 @@ namespace Google.Apps.Chat.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2hhdC92MS9zbGFzaF9jb21tYW5kLnByb3RvEg5nb29nbGUu",
-            "Y2hhdC52MSIiCgxTbGFzaENvbW1hbmQSEgoKY29tbWFuZF9pZBgBIAEoA0Kc",
+            "Y2hhdC52MSIiCgxTbGFzaENvbW1hbmQSEgoKY29tbWFuZF9pZBgBIAEoA0Kq",
             "AQoSY29tLmdvb2dsZS5jaGF0LnYxQhFTbGFzaENvbW1hbmRQcm90b1ABWixj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqoC",
-            "E0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIW",
-            "R29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
+            "bG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqIC",
+            "C0RZTkFQSVByb3RvqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxB",
+            "cHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

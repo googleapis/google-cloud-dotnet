@@ -364,7 +364,8 @@ namespace Google.Apps.Chat.V1 {
     public abstract partial class ChatServiceBase
     {
       /// <summary>
-      /// Creates a message in a Google Chat space. For an example, see [Send a
+      /// Creates a message in a Google Chat space. The maximum message size,
+      /// including text and cards, is 32,000 bytes. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
       /// Calling this method requires
@@ -644,17 +645,17 @@ namespace Google.Apps.Chat.V1 {
       /// members](https://developers.google.com/workspace/chat/set-up-spaces).
       ///
       /// To specify the human members to add, add memberships with the appropriate
-      /// `member.name` in the `SetUpSpaceRequest`. To add a human user, use
-      /// `users/{user}`, where `{user}` can be the email address for the user. For
-      /// users in the same Workspace organization `{user}` can also be the `id` for
-      /// the person from the People API, or the `id` for the user in the Directory
-      /// API. For example, if the People API Person profile ID for
-      /// `user@example.com` is `123456789`, you can add the user to the space by
-      /// setting the `membership.member.name` to `users/user@example.com` or
-      /// `users/123456789`.
+      /// `membership.member.name`. To add a human user, use `users/{user}`, where
+      /// `{user}` can be the email address for the user. For users in the same
+      /// Workspace organization `{user}` can also be the `id` for the person from
+      /// the People API, or the `id` for the user in the Directory API. For example,
+      /// if the People API Person profile ID for `user@example.com` is `123456789`,
+      /// you can add the user to the space by setting the `membership.member.name`
+      /// to `users/user@example.com` or `users/123456789`.
       ///
-      /// For a space or group chat, if the caller blocks or is blocked by some
-      /// members, then those members aren't added to the created space.
+      /// For a named space or group chat, if the caller blocks, or is blocked
+      /// by some members, or doesn't have permission to add some members, then
+      /// those members aren't added to the created space.
       ///
       /// To create a direct message (DM) between the calling user and another human
       /// user, specify exactly one membership to represent the human user. If
@@ -786,8 +787,8 @@ namespace Google.Apps.Chat.V1 {
       /// directly to the specified space. Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` in the
-      /// `CreateMembershipRequest`:
+      /// To specify the member to add, set the `membership.member.name` for the
+      /// human or app member.
       ///
       /// - To add the calling app to a space or a direct message between two human
       ///   users, use `users/app`. Unable to add other
@@ -811,8 +812,11 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
-      /// Updates a membership. Requires [user
-      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// Updates a membership. For an example, see [Update a user's membership in
+      /// a space](https://developers.google.com/workspace/chat/update-members).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -892,7 +896,9 @@ namespace Google.Apps.Chat.V1 {
 
       /// <summary>
       /// Returns details about a user's read state within a space, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// space read
+      /// state](https://developers.google.com/workspace/chat/get-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -908,7 +914,8 @@ namespace Google.Apps.Chat.V1 {
 
       /// <summary>
       /// Updates a user's read state within a space, used to identify read and
-      /// unread messages.
+      /// unread messages. For an example, see [Update a user's space read
+      /// state](https://developers.google.com/workspace/chat/update-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -924,7 +931,9 @@ namespace Google.Apps.Chat.V1 {
 
       /// <summary>
       /// Returns details about a user's read state within a thread, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// thread read
+      /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -968,7 +977,8 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
-      /// Creates a message in a Google Chat space. For an example, see [Send a
+      /// Creates a message in a Google Chat space. The maximum message size,
+      /// including text and cards, is 32,000 bytes. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
       /// Calling this method requires
@@ -991,7 +1001,8 @@ namespace Google.Apps.Chat.V1 {
         return CreateMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a message in a Google Chat space. For an example, see [Send a
+      /// Creates a message in a Google Chat space. The maximum message size,
+      /// including text and cards, is 32,000 bytes. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
       /// Calling this method requires
@@ -1012,7 +1023,8 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMessage, null, options, request);
       }
       /// <summary>
-      /// Creates a message in a Google Chat space. For an example, see [Send a
+      /// Creates a message in a Google Chat space. The maximum message size,
+      /// including text and cards, is 32,000 bytes. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
       /// Calling this method requires
@@ -1035,7 +1047,8 @@ namespace Google.Apps.Chat.V1 {
         return CreateMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a message in a Google Chat space. For an example, see [Send a
+      /// Creates a message in a Google Chat space. The maximum message size,
+      /// including text and cards, is 32,000 bytes. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
       /// Calling this method requires
@@ -2067,17 +2080,17 @@ namespace Google.Apps.Chat.V1 {
       /// members](https://developers.google.com/workspace/chat/set-up-spaces).
       ///
       /// To specify the human members to add, add memberships with the appropriate
-      /// `member.name` in the `SetUpSpaceRequest`. To add a human user, use
-      /// `users/{user}`, where `{user}` can be the email address for the user. For
-      /// users in the same Workspace organization `{user}` can also be the `id` for
-      /// the person from the People API, or the `id` for the user in the Directory
-      /// API. For example, if the People API Person profile ID for
-      /// `user@example.com` is `123456789`, you can add the user to the space by
-      /// setting the `membership.member.name` to `users/user@example.com` or
-      /// `users/123456789`.
+      /// `membership.member.name`. To add a human user, use `users/{user}`, where
+      /// `{user}` can be the email address for the user. For users in the same
+      /// Workspace organization `{user}` can also be the `id` for the person from
+      /// the People API, or the `id` for the user in the Directory API. For example,
+      /// if the People API Person profile ID for `user@example.com` is `123456789`,
+      /// you can add the user to the space by setting the `membership.member.name`
+      /// to `users/user@example.com` or `users/123456789`.
       ///
-      /// For a space or group chat, if the caller blocks or is blocked by some
-      /// members, then those members aren't added to the created space.
+      /// For a named space or group chat, if the caller blocks, or is blocked
+      /// by some members, or doesn't have permission to add some members, then
+      /// those members aren't added to the created space.
       ///
       /// To create a direct message (DM) between the calling user and another human
       /// user, specify exactly one membership to represent the human user. If
@@ -2120,17 +2133,17 @@ namespace Google.Apps.Chat.V1 {
       /// members](https://developers.google.com/workspace/chat/set-up-spaces).
       ///
       /// To specify the human members to add, add memberships with the appropriate
-      /// `member.name` in the `SetUpSpaceRequest`. To add a human user, use
-      /// `users/{user}`, where `{user}` can be the email address for the user. For
-      /// users in the same Workspace organization `{user}` can also be the `id` for
-      /// the person from the People API, or the `id` for the user in the Directory
-      /// API. For example, if the People API Person profile ID for
-      /// `user@example.com` is `123456789`, you can add the user to the space by
-      /// setting the `membership.member.name` to `users/user@example.com` or
-      /// `users/123456789`.
+      /// `membership.member.name`. To add a human user, use `users/{user}`, where
+      /// `{user}` can be the email address for the user. For users in the same
+      /// Workspace organization `{user}` can also be the `id` for the person from
+      /// the People API, or the `id` for the user in the Directory API. For example,
+      /// if the People API Person profile ID for `user@example.com` is `123456789`,
+      /// you can add the user to the space by setting the `membership.member.name`
+      /// to `users/user@example.com` or `users/123456789`.
       ///
-      /// For a space or group chat, if the caller blocks or is blocked by some
-      /// members, then those members aren't added to the created space.
+      /// For a named space or group chat, if the caller blocks, or is blocked
+      /// by some members, or doesn't have permission to add some members, then
+      /// those members aren't added to the created space.
       ///
       /// To create a direct message (DM) between the calling user and another human
       /// user, specify exactly one membership to represent the human user. If
@@ -2171,17 +2184,17 @@ namespace Google.Apps.Chat.V1 {
       /// members](https://developers.google.com/workspace/chat/set-up-spaces).
       ///
       /// To specify the human members to add, add memberships with the appropriate
-      /// `member.name` in the `SetUpSpaceRequest`. To add a human user, use
-      /// `users/{user}`, where `{user}` can be the email address for the user. For
-      /// users in the same Workspace organization `{user}` can also be the `id` for
-      /// the person from the People API, or the `id` for the user in the Directory
-      /// API. For example, if the People API Person profile ID for
-      /// `user@example.com` is `123456789`, you can add the user to the space by
-      /// setting the `membership.member.name` to `users/user@example.com` or
-      /// `users/123456789`.
+      /// `membership.member.name`. To add a human user, use `users/{user}`, where
+      /// `{user}` can be the email address for the user. For users in the same
+      /// Workspace organization `{user}` can also be the `id` for the person from
+      /// the People API, or the `id` for the user in the Directory API. For example,
+      /// if the People API Person profile ID for `user@example.com` is `123456789`,
+      /// you can add the user to the space by setting the `membership.member.name`
+      /// to `users/user@example.com` or `users/123456789`.
       ///
-      /// For a space or group chat, if the caller blocks or is blocked by some
-      /// members, then those members aren't added to the created space.
+      /// For a named space or group chat, if the caller blocks, or is blocked
+      /// by some members, or doesn't have permission to add some members, then
+      /// those members aren't added to the created space.
       ///
       /// To create a direct message (DM) between the calling user and another human
       /// user, specify exactly one membership to represent the human user. If
@@ -2224,17 +2237,17 @@ namespace Google.Apps.Chat.V1 {
       /// members](https://developers.google.com/workspace/chat/set-up-spaces).
       ///
       /// To specify the human members to add, add memberships with the appropriate
-      /// `member.name` in the `SetUpSpaceRequest`. To add a human user, use
-      /// `users/{user}`, where `{user}` can be the email address for the user. For
-      /// users in the same Workspace organization `{user}` can also be the `id` for
-      /// the person from the People API, or the `id` for the user in the Directory
-      /// API. For example, if the People API Person profile ID for
-      /// `user@example.com` is `123456789`, you can add the user to the space by
-      /// setting the `membership.member.name` to `users/user@example.com` or
-      /// `users/123456789`.
+      /// `membership.member.name`. To add a human user, use `users/{user}`, where
+      /// `{user}` can be the email address for the user. For users in the same
+      /// Workspace organization `{user}` can also be the `id` for the person from
+      /// the People API, or the `id` for the user in the Directory API. For example,
+      /// if the People API Person profile ID for `user@example.com` is `123456789`,
+      /// you can add the user to the space by setting the `membership.member.name`
+      /// to `users/user@example.com` or `users/123456789`.
       ///
-      /// For a space or group chat, if the caller blocks or is blocked by some
-      /// members, then those members aren't added to the created space.
+      /// For a named space or group chat, if the caller blocks, or is blocked
+      /// by some members, or doesn't have permission to add some members, then
+      /// those members aren't added to the created space.
       ///
       /// To create a direct message (DM) between the calling user and another human
       /// user, specify exactly one membership to represent the human user. If
@@ -2626,8 +2639,8 @@ namespace Google.Apps.Chat.V1 {
       /// directly to the specified space. Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` in the
-      /// `CreateMembershipRequest`:
+      /// To specify the member to add, set the `membership.member.name` for the
+      /// human or app member.
       ///
       /// - To add the calling app to a space or a direct message between two human
       ///   users, use `users/app`. Unable to add other
@@ -2662,8 +2675,8 @@ namespace Google.Apps.Chat.V1 {
       /// directly to the specified space. Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` in the
-      /// `CreateMembershipRequest`:
+      /// To specify the member to add, set the `membership.member.name` for the
+      /// human or app member.
       ///
       /// - To add the calling app to a space or a direct message between two human
       ///   users, use `users/app`. Unable to add other
@@ -2696,8 +2709,8 @@ namespace Google.Apps.Chat.V1 {
       /// directly to the specified space. Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` in the
-      /// `CreateMembershipRequest`:
+      /// To specify the member to add, set the `membership.member.name` for the
+      /// human or app member.
       ///
       /// - To add the calling app to a space or a direct message between two human
       ///   users, use `users/app`. Unable to add other
@@ -2732,8 +2745,8 @@ namespace Google.Apps.Chat.V1 {
       /// directly to the specified space. Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` in the
-      /// `CreateMembershipRequest`:
+      /// To specify the member to add, set the `membership.member.name` for the
+      /// human or app member.
       ///
       /// - To add the calling app to a space or a direct message between two human
       ///   users, use `users/app`. Unable to add other
@@ -2756,8 +2769,11 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMembership, null, options, request);
       }
       /// <summary>
-      /// Updates a membership. Requires [user
-      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// Updates a membership. For an example, see [Update a user's membership in
+      /// a space](https://developers.google.com/workspace/chat/update-members).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2770,8 +2786,11 @@ namespace Google.Apps.Chat.V1 {
         return UpdateMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a membership. Requires [user
-      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// Updates a membership. For an example, see [Update a user's membership in
+      /// a space](https://developers.google.com/workspace/chat/update-members).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2782,8 +2801,11 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateMembership, null, options, request);
       }
       /// <summary>
-      /// Updates a membership. Requires [user
-      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// Updates a membership. For an example, see [Update a user's membership in
+      /// a space](https://developers.google.com/workspace/chat/update-members).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2796,8 +2818,11 @@ namespace Google.Apps.Chat.V1 {
         return UpdateMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a membership. Requires [user
-      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// Updates a membership. For an example, see [Update a user's membership in
+      /// a space](https://developers.google.com/workspace/chat/update-members).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3077,7 +3102,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a space, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// space read
+      /// state](https://developers.google.com/workspace/chat/get-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3094,7 +3121,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a space, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// space read
+      /// state](https://developers.google.com/workspace/chat/get-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3109,7 +3138,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a space, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// space read
+      /// state](https://developers.google.com/workspace/chat/get-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3126,7 +3157,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a space, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// space read
+      /// state](https://developers.google.com/workspace/chat/get-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3141,7 +3174,8 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Updates a user's read state within a space, used to identify read and
-      /// unread messages.
+      /// unread messages. For an example, see [Update a user's space read
+      /// state](https://developers.google.com/workspace/chat/update-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3158,7 +3192,8 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Updates a user's read state within a space, used to identify read and
-      /// unread messages.
+      /// unread messages. For an example, see [Update a user's space read
+      /// state](https://developers.google.com/workspace/chat/update-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3173,7 +3208,8 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Updates a user's read state within a space, used to identify read and
-      /// unread messages.
+      /// unread messages. For an example, see [Update a user's space read
+      /// state](https://developers.google.com/workspace/chat/update-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3190,7 +3226,8 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Updates a user's read state within a space, used to identify read and
-      /// unread messages.
+      /// unread messages. For an example, see [Update a user's space read
+      /// state](https://developers.google.com/workspace/chat/update-space-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3205,7 +3242,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a thread, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// thread read
+      /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3222,7 +3261,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a thread, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// thread read
+      /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3237,7 +3278,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a thread, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// thread read
+      /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3254,7 +3297,9 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Returns details about a user's read state within a thread, used to identify
-      /// read and unread messages.
+      /// read and unread messages. For an example, see [Get details about a user's
+      /// thread read
+      /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).

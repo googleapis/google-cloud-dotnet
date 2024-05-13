@@ -65,10 +65,10 @@ namespace Google.Apps.Chat.V1 {
             "dGVJbXBvcnRTcGFjZVJlcXVlc3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChlj",
             "aGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlIkMKG0NvbXBsZXRlSW1wb3J0U3Bh",
             "Y2VSZXNwb25zZRIkCgVzcGFjZRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNw",
-            "YWNlQpUBChJjb20uZ29vZ2xlLmNoYXQudjFCClNwYWNlUHJvdG9QAVosY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKqAhNH",
-            "b29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdv",
-            "b2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "YWNlQqMBChJjb20uZ29vZ2xlLmNoYXQudjFCClNwYWNlUHJvdG9QAVosY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtE",
+            "WU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBw",
+            "c1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -376,13 +376,12 @@ namespace Google.Apps.Chat.V1 {
     public const int AdminInstalledFieldNumber = 19;
     private bool adminInstalled_;
     /// <summary>
-    /// Output only. Whether the Chat app was installed by a Google Workspace
-    /// administrator. Administrators can install a Chat app for their domain,
-    /// organizational unit, or a group of users.
+    /// Output only. For direct message (DM) spaces with a Chat app, whether the
+    /// space was created by a Google Workspace administrator. Administrators can
+    /// install and set up a direct message with a Chat app on behalf of users in
+    /// their organization.
     ///
-    /// Administrators can only install Chat apps for direct messaging between
-    /// users and the app. To support admin install, your app must feature direct
-    /// messaging.
+    /// To support admin install, your Chat app must feature direct messaging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
