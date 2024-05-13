@@ -39,7 +39,62 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            ForwardingRule forwardingRuleResource = new ForwardingRule();
+            ForwardingRule forwardingRuleResource = new ForwardingRule
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                IPAddress = "",
+                NoAutomateDnsZone = false,
+                Ports = { "", },
+                SourceIpRanges = { "", },
+                IsMirroringCollector = false,
+                Region = "",
+                IpCollection = "",
+                LabelFingerprint = "",
+                PscConnectionStatus = "",
+                Target = "",
+                PortRange = "",
+                ServiceDirectoryRegistrations =
+                {
+                    new ForwardingRuleServiceDirectoryRegistration
+                    {
+                        ServiceDirectoryRegion = "",
+                        Namespace = "",
+                        Service = "",
+                    },
+                },
+                Network = "",
+                Fingerprint = "",
+                AllowPscGlobalAccess = false,
+                PscConnectionId = 0UL,
+                IpVersion = "",
+                BackendService = "",
+                Subnetwork = "",
+                ServiceName = "",
+                LoadBalancingScheme = "",
+                ServiceLabel = "",
+                Description = "",
+                AllPorts = false,
+                SelfLink = "",
+                MetadataFilters =
+                {
+                    new MetadataFilter
+                    {
+                        FilterMatchCriteria = "",
+                        FilterLabels =
+                        {
+                            new MetadataFilterLabelMatch { Name = "", Value = "", },
+                        },
+                    },
+                },
+                IPProtocol = "",
+                AllowGlobalAccess = false,
+                Labels = { { "", "" }, },
+                NetworkTier = "",
+                BaseForwardingRule = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = forwardingRulesClient.Insert(project, region, forwardingRuleResource);
 

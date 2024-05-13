@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListTargetSslProxiesRequest request = new ListTargetSslProxiesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

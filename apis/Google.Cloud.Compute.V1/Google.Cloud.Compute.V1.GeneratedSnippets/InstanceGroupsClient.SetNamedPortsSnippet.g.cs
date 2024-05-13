@@ -40,7 +40,14 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroup = "";
-            InstanceGroupsSetNamedPortsRequest instanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest();
+            InstanceGroupsSetNamedPortsRequest instanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest
+            {
+                Fingerprint = "",
+                NamedPorts =
+                {
+                    new NamedPort { Name = "", Port = 0, },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupsClient.SetNamedPorts(project, zone, instanceGroup, instanceGroupsSetNamedPortsRequestResource);
 

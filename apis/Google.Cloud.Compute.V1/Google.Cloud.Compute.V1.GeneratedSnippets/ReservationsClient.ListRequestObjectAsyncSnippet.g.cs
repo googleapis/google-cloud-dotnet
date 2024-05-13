@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListReservationsRequest request = new ListReservationsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

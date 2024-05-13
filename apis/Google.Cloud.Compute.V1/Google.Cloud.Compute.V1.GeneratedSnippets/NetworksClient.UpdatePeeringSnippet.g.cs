@@ -39,7 +39,24 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string network = "";
-            NetworksUpdatePeeringRequest networksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest();
+            NetworksUpdatePeeringRequest networksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest
+            {
+                NetworkPeering = new NetworkPeering
+                {
+                    Name = "",
+                    ImportSubnetRoutesWithPublicIp = false,
+                    ExchangeSubnetRoutes = false,
+                    AutoCreateRoutes = false,
+                    ExportCustomRoutes = false,
+                    PeerMtu = 0,
+                    StateDetails = "",
+                    ExportSubnetRoutesWithPublicIp = false,
+                    State = "",
+                    ImportCustomRoutes = false,
+                    Network = "",
+                    StackType = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = networksClient.UpdatePeering(project, network, networksUpdatePeeringRequestResource);
 

@@ -40,7 +40,45 @@ namespace GoogleCSharpSnippets
             InsertNodeTemplateRequest request = new InsertNodeTemplateRequest
             {
                 RequestId = "",
-                NodeTemplateResource = new NodeTemplate(),
+                NodeTemplateResource = new NodeTemplate
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    Disks =
+                    {
+                        new LocalDisk
+                        {
+                            DiskType = "",
+                            DiskCount = 0,
+                            DiskSizeGb = 0,
+                        },
+                    },
+                    Region = "",
+                    Status = "",
+                    ServerBinding = new ServerBinding { Type = "", },
+                    CpuOvercommitType = "",
+                    Accelerators =
+                    {
+                        new AcceleratorConfig
+                        {
+                            AcceleratorType = "",
+                            AcceleratorCount = 0,
+                        },
+                    },
+                    StatusMessage = "",
+                    NodeTypeFlexibility = new NodeTemplateNodeTypeFlexibility
+                    {
+                        Cpus = "",
+                        LocalSsd = "",
+                        Memory = "",
+                    },
+                    NodeAffinityLabels = { { "", "" }, },
+                    Description = "",
+                    SelfLink = "",
+                    NodeType = "",
+                },
                 Region = "",
                 Project = "",
             };

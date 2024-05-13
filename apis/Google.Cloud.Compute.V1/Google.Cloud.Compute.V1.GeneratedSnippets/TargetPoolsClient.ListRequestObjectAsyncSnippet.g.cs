@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListTargetPoolsRequest request = new ListTargetPoolsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",

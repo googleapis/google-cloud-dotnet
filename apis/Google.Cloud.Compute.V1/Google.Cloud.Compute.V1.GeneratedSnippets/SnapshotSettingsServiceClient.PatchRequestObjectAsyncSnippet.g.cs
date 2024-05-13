@@ -42,7 +42,20 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                SnapshotSettingsResource = new SnapshotSettings(),
+                SnapshotSettingsResource = new SnapshotSettings
+                {
+                    StorageLocation = new SnapshotSettingsStorageLocationSettings
+                    {
+                        Policy = "",
+                        Locations =
+                        {
+                            {
+                                "",
+                                new SnapshotSettingsStorageLocationSettingsStorageLocationPreference { Name = "", }
+                            },
+                        },
+                    },
+                },
                 UpdateMask = "",
             };
             // Make the request

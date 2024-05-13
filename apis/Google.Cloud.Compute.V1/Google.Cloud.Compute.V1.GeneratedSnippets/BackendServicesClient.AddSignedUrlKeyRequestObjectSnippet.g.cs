@@ -42,7 +42,11 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 BackendService = "",
-                SignedUrlKeyResource = new SignedUrlKey(),
+                SignedUrlKeyResource = new SignedUrlKey
+                {
+                    KeyName = "",
+                    KeyValue = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = backendServicesClient.AddSignedUrlKey(request);

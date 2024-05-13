@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string targetInstance = "";
-            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference { SecurityPolicy = "", };
             // Make the request
             lro::Operation<Operation, Operation> response = targetInstancesClient.SetSecurityPolicy(project, zone, targetInstance, securityPolicyReferenceResource);
 

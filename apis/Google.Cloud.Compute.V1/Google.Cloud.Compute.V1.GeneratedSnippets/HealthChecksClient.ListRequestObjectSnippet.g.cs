@@ -38,6 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListHealthChecksRequest request = new ListHealthChecksRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

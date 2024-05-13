@@ -40,7 +40,10 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersSetInstanceTemplateRequest instanceGroupManagersSetInstanceTemplateRequestResource = new InstanceGroupManagersSetInstanceTemplateRequest();
+            InstanceGroupManagersSetInstanceTemplateRequest instanceGroupManagersSetInstanceTemplateRequestResource = new InstanceGroupManagersSetInstanceTemplateRequest
+            {
+                InstanceTemplate = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetInstanceTemplate(project, zone, instanceGroupManager, instanceGroupManagersSetInstanceTemplateRequestResource);
 

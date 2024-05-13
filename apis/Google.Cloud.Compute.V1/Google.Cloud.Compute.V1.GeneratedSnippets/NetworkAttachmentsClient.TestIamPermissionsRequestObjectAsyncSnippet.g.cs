@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Resource = "",
                 Project = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
+                TestPermissionsRequestResource = new TestPermissionsRequest { Permissions = { "", }, },
             };
             // Make the request
             TestPermissionsResponse response = await networkAttachmentsClient.TestIamPermissionsAsync(request);

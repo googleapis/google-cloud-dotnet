@@ -40,7 +40,64 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersCreateInstancesRequest instanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest();
+            InstanceGroupManagersCreateInstancesRequest instanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest
+            {
+                Instances =
+                {
+                    new PerInstanceConfig
+                    {
+                        PreservedState = new PreservedState
+                        {
+                            Metadata = { { "", "" }, },
+                            Disks =
+                            {
+                                {
+                                    "",
+                                    new PreservedStatePreservedDisk
+                                    {
+                                        Mode = "",
+                                        Source = "",
+                                        AutoDelete = "",
+                                    }
+                                },
+                            },
+                            InternalIPs =
+                            {
+                                {
+                                    "",
+                                    new PreservedStatePreservedNetworkIp
+                                    {
+                                        IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                        {
+                                            Literal = "",
+                                            Address = "",
+                                        },
+                                        AutoDelete = "",
+                                    }
+                                },
+                            },
+                            ExternalIPs =
+                            {
+                                {
+                                    "",
+                                    new PreservedStatePreservedNetworkIp
+                                    {
+                                        IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                        {
+                                            Literal = "",
+                                            Address = "",
+                                        },
+                                        AutoDelete = "",
+                                    }
+                                },
+                            },
+                        },
+                        Name = "",
+                        Status = "",
+                        Fingerprint = "",
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.CreateInstances(project, zone, instanceGroupManager, instanceGroupManagersCreateInstancesRequestResource);
 

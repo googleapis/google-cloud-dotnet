@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListRegionOperationsRequest request = new ListRegionOperationsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",

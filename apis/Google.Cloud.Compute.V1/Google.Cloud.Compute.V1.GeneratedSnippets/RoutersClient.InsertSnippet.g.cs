@@ -39,7 +39,152 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Router routerResource = new Router();
+            Router routerResource = new Router
+            {
+                Id = 0UL,
+                Bgp = new RouterBgp
+                {
+                    Asn = 0U,
+                    AdvertisedGroups = { "", },
+                    AdvertisedIpRanges =
+                    {
+                        new RouterAdvertisedIpRange
+                        {
+                            Range = "",
+                            Description = "",
+                        },
+                    },
+                    KeepaliveInterval = 0U,
+                    AdvertiseMode = "",
+                    IdentifierRange = "",
+                },
+                Kind = "",
+                Name = "",
+                Nats =
+                {
+                    new RouterNat
+                    {
+                        Name = "",
+                        Type = "",
+                        IcmpIdleTimeoutSec = 0,
+                        UdpIdleTimeoutSec = 0,
+                        Rules =
+                        {
+                            new RouterNatRule
+                            {
+                                Match = "",
+                                Action = new RouterNatRuleAction
+                                {
+                                    SourceNatDrainRanges = { "", },
+                                    SourceNatActiveRanges = { "", },
+                                    SourceNatActiveIps = { "", },
+                                    SourceNatDrainIps = { "", },
+                                },
+                                Description = "",
+                                RuleNumber = 0U,
+                            },
+                        },
+                        NatIps = { "", },
+                        MinPortsPerVm = 0,
+                        TcpTransitoryIdleTimeoutSec = 0,
+                        TcpEstablishedIdleTimeoutSec = 0,
+                        MaxPortsPerVm = 0,
+                        SourceSubnetworkIpRangesToNat = "",
+                        EnableEndpointIndependentMapping = false,
+                        AutoNetworkTier = "",
+                        LogConfig = new RouterNatLogConfig
+                        {
+                            Enable = false,
+                            Filter = "",
+                        },
+                        Subnetworks =
+                        {
+                            new RouterNatSubnetworkToNat
+                            {
+                                Name = "",
+                                SecondaryIpRangeNames = { "", },
+                                SourceIpRangesToNat = { "", },
+                            },
+                        },
+                        NatIpAllocateOption = "",
+                        EndpointTypes = { "", },
+                        DrainNatIps = { "", },
+                        TcpTimeWaitTimeoutSec = 0,
+                        EnableDynamicPortAllocation = false,
+                    },
+                },
+                Interfaces =
+                {
+                    new RouterInterface
+                    {
+                        Name = "",
+                        PrivateIpAddress = "",
+                        IpRange = "",
+                        ManagementType = "",
+                        IpVersion = "",
+                        Subnetwork = "",
+                        LinkedVpnTunnel = "",
+                        LinkedInterconnectAttachment = "",
+                        RedundantInterface = "",
+                    },
+                },
+                CreationTimestamp = "",
+                Md5AuthenticationKeys =
+                {
+                    new RouterMd5AuthenticationKey { Key = "", Name = "", },
+                },
+                Region = "",
+                Network = "",
+                EncryptedInterconnectRouter = false,
+                Description = "",
+                BgpPeers =
+                {
+                    new RouterBgpPeer
+                    {
+                        Bfd = new RouterBgpPeerBfd
+                        {
+                            SessionInitializationMode = "",
+                            MinReceiveInterval = 0U,
+                            Multiplier = 0U,
+                            MinTransmitInterval = 0U,
+                        },
+                        Name = "",
+                        Ipv4NexthopAddress = "",
+                        AdvertisedGroups = { "", },
+                        Ipv6NexthopAddress = "",
+                        AdvertisedIpRanges =
+                        {
+                            new RouterAdvertisedIpRange
+                            {
+                                Range = "",
+                                Description = "",
+                            },
+                        },
+                        PeerAsn = 0U,
+                        ExportPolicies = { "", },
+                        ManagementType = "",
+                        EnableIpv4 = false,
+                        EnableIpv6 = false,
+                        AdvertisedRoutePriority = 0U,
+                        PeerIpAddress = "",
+                        Md5AuthenticationKeyName = "",
+                        Enable = "",
+                        AdvertiseMode = "",
+                        CustomLearnedRoutePriority = 0,
+                        IpAddress = "",
+                        InterfaceName = "",
+                        ImportPolicies = { "", },
+                        RouterApplianceInstance = "",
+                        PeerIpv4NexthopAddress = "",
+                        CustomLearnedIpRanges =
+                        {
+                            new RouterBgpPeerCustomLearnedIpRange { Range = "", },
+                        },
+                        PeerIpv6NexthopAddress = "",
+                    },
+                },
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = routersClient.Insert(project, region, routerResource);
 

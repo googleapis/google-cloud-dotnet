@@ -39,7 +39,20 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request = new AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest
             {
-                GlobalNetworkEndpointGroupsAttachEndpointsRequestResource = new GlobalNetworkEndpointGroupsAttachEndpointsRequest(),
+                GlobalNetworkEndpointGroupsAttachEndpointsRequestResource = new GlobalNetworkEndpointGroupsAttachEndpointsRequest
+                {
+                    NetworkEndpoints =
+                    {
+                        new NetworkEndpoint
+                        {
+                            Fqdn = "",
+                            Port = 0,
+                            Instance = "",
+                            Annotations = { { "", "" }, },
+                            IpAddress = "",
+                        },
+                    },
+                },
                 RequestId = "",
                 Project = "",
                 NetworkEndpointGroup = "",

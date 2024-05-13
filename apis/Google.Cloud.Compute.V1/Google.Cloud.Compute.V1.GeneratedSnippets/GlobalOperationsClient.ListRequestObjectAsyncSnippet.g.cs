@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListGlobalOperationsRequest request = new ListGlobalOperationsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

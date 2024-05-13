@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListVpnTunnelsRequest request = new ListVpnTunnelsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",

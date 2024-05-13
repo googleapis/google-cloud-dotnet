@@ -38,6 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListRegionTargetHttpsProxiesRequest request = new ListRegionTargetHttpsProxiesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",

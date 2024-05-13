@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListManagedInstancesRegionInstanceGroupManagersRequest request = new ListManagedInstancesRegionInstanceGroupManagersRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",

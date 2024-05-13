@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListMachineTypesRequest request = new ListMachineTypesRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

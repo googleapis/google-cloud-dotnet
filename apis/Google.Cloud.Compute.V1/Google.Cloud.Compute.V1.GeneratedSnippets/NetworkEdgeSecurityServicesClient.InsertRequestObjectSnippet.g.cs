@@ -43,7 +43,19 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 ValidateOnly = false,
-                NetworkEdgeSecurityServiceResource = new NetworkEdgeSecurityService(),
+                NetworkEdgeSecurityServiceResource = new NetworkEdgeSecurityService
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    SelfLinkWithId = "",
+                    Region = "",
+                    SecurityPolicy = "",
+                    Fingerprint = "",
+                    Description = "",
+                    SelfLink = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = networkEdgeSecurityServicesClient.Insert(request);

@@ -41,7 +41,10 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string subnetwork = "";
-            SubnetworksSetPrivateIpGoogleAccessRequest subnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest();
+            SubnetworksSetPrivateIpGoogleAccessRequest subnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest
+            {
+                PrivateIpGoogleAccess = false,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await subnetworksClient.SetPrivateIpGoogleAccessAsync(project, region, subnetwork, subnetworksSetPrivateIpGoogleAccessRequestResource);
 

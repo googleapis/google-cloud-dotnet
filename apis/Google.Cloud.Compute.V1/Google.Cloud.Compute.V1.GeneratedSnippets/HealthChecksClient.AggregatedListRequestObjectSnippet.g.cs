@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListHealthChecksRequest request = new AggregatedListHealthChecksRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

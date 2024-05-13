@@ -40,7 +40,12 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            ShieldedInstanceConfig shieldedInstanceConfigResource = new ShieldedInstanceConfig();
+            ShieldedInstanceConfig shieldedInstanceConfigResource = new ShieldedInstanceConfig
+            {
+                EnableSecureBoot = false,
+                EnableVtpm = false,
+                EnableIntegrityMonitoring = false,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.UpdateShieldedInstanceConfig(project, zone, instance, shieldedInstanceConfigResource);
 

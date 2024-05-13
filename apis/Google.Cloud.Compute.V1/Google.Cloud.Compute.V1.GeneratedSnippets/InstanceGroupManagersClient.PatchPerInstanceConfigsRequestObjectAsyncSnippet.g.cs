@@ -44,7 +44,64 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
-                InstanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq(),
+                InstanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq
+                {
+                    PerInstanceConfigs =
+                    {
+                        new PerInstanceConfig
+                        {
+                            PreservedState = new PreservedState
+                            {
+                                Metadata = { { "", "" }, },
+                                Disks =
+                                {
+                                    {
+                                        "",
+                                        new PreservedStatePreservedDisk
+                                        {
+                                            Mode = "",
+                                            Source = "",
+                                            AutoDelete = "",
+                                        }
+                                    },
+                                },
+                                InternalIPs =
+                                {
+                                    {
+                                        "",
+                                        new PreservedStatePreservedNetworkIp
+                                        {
+                                            IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                            {
+                                                Literal = "",
+                                                Address = "",
+                                            },
+                                            AutoDelete = "",
+                                        }
+                                    },
+                                },
+                                ExternalIPs =
+                                {
+                                    {
+                                        "",
+                                        new PreservedStatePreservedNetworkIp
+                                        {
+                                            IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                            {
+                                                Literal = "",
+                                                Address = "",
+                                            },
+                                            AutoDelete = "",
+                                        }
+                                    },
+                                },
+                            },
+                            Name = "",
+                            Status = "",
+                            Fingerprint = "",
+                        },
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchPerInstanceConfigsAsync(request);

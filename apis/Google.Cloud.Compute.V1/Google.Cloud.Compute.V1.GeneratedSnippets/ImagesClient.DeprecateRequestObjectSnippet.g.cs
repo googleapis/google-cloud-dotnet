@@ -42,7 +42,14 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Image = "",
                 Project = "",
-                DeprecationStatusResource = new DeprecationStatus(),
+                DeprecationStatusResource = new DeprecationStatus
+                {
+                    State = "",
+                    Obsolete = "",
+                    Replacement = "",
+                    Deleted = "",
+                    Deprecated = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = imagesClient.Deprecate(request);

@@ -38,7 +38,20 @@ namespace GoogleCSharpSnippets
             TargetSslProxiesClient targetSslProxiesClient = TargetSslProxiesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            TargetSslProxy targetSslProxyResource = new TargetSslProxy();
+            TargetSslProxy targetSslProxyResource = new TargetSslProxy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                CertificateMap = "",
+                ProxyHeader = "",
+                SslPolicy = "",
+                SslCertificates = { "", },
+                Service = "",
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = targetSslProxiesClient.Insert(project, targetSslProxyResource);
 

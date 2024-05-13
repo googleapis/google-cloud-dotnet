@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string resource = "";
-            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest { Permissions = { "", }, };
             // Make the request
             TestPermissionsResponse response = await machineImagesClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
         }

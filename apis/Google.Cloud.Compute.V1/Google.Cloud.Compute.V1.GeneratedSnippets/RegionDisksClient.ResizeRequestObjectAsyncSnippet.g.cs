@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
+                RegionDisksResizeRequestResource = new RegionDisksResizeRequest { SizeGb = 0L, },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.ResizeAsync(request);

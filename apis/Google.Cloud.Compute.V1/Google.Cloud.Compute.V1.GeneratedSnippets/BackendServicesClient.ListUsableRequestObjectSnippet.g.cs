@@ -38,6 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListUsableBackendServicesRequest request = new ListUsableBackendServicesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

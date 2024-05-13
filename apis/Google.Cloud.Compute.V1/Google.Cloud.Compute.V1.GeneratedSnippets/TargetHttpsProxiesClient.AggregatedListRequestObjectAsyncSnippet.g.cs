@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListTargetHttpsProxiesRequest request = new AggregatedListTargetHttpsProxiesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

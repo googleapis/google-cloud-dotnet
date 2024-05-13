@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListInterconnectAttachmentsRequest request = new AggregatedListInterconnectAttachmentsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

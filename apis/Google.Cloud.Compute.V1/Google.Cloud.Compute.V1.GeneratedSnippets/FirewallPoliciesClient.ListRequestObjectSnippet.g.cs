@@ -38,6 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",

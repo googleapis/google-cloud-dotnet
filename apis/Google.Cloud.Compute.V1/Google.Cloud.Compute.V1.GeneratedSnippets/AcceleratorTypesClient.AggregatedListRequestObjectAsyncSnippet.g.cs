@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListAcceleratorTypesRequest request = new AggregatedListAcceleratorTypesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

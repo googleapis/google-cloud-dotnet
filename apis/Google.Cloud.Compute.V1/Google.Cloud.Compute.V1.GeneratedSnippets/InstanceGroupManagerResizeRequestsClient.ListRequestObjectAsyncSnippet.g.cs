@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListInstanceGroupManagerResizeRequestsRequest request = new ListInstanceGroupManagerResizeRequestsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 InstanceGroupManager = "",

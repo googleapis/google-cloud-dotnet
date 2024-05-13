@@ -38,6 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSslCertificatesRequest request = new ListSslCertificatesRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

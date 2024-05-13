@@ -40,7 +40,10 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource = new RegionDisksStartAsyncReplicationRequest();
+            RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource = new RegionDisksStartAsyncReplicationRequest
+            {
+                AsyncSecondaryDisk = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = regionDisksClient.StartAsyncReplication(project, region, disk, regionDisksStartAsyncReplicationRequestResource);
 

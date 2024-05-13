@@ -40,7 +40,19 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            TargetTcpProxy targetTcpProxyResource = new TargetTcpProxy();
+            TargetTcpProxy targetTcpProxyResource = new TargetTcpProxy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                Region = "",
+                ProxyHeader = "",
+                ProxyBind = false,
+                Service = "",
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionTargetTcpProxiesClient.InsertAsync(project, region, targetTcpProxyResource);
 

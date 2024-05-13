@@ -43,7 +43,28 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                NotificationEndpointResource = new NotificationEndpoint(),
+                NotificationEndpointResource = new NotificationEndpoint
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    Region = "",
+                    Description = "",
+                    GrpcSettings = new NotificationEndpointGrpcSettings
+                    {
+                        RetryDurationSec = 0U,
+                        Endpoint = "",
+                        PayloadName = "",
+                        Authority = "",
+                        ResendInterval = new Duration
+                        {
+                            Nanos = 0,
+                            Seconds = 0L,
+                        },
+                    },
+                    SelfLink = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.InsertAsync(request);

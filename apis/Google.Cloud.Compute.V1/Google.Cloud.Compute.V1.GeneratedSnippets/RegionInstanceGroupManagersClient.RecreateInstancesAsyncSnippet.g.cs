@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string instanceGroupManager = "";
-            RegionInstanceGroupManagersRecreateRequest regionInstanceGroupManagersRecreateRequestResource = new RegionInstanceGroupManagersRecreateRequest();
+            RegionInstanceGroupManagersRecreateRequest regionInstanceGroupManagersRecreateRequestResource = new RegionInstanceGroupManagersRecreateRequest { Instances = { "", }, };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.RecreateInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersRecreateRequestResource);
 

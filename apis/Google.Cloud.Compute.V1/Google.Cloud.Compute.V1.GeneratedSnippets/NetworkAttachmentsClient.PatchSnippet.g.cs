@@ -40,7 +40,36 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string networkAttachment = "";
-            NetworkAttachment networkAttachmentResource = new NetworkAttachment();
+            NetworkAttachment networkAttachmentResource = new NetworkAttachment
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                ProducerRejectLists = { "", },
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                Region = "",
+                ProducerAcceptLists = { "", },
+                Network = "",
+                Fingerprint = "",
+                ConnectionPreference = "",
+                ConnectionEndpoints =
+                {
+                    new NetworkAttachmentConnectedEndpoint
+                    {
+                        SecondaryIpCidrRanges = { "", },
+                        Status = "",
+                        Subnetwork = "",
+                        Ipv6Address = "",
+                        ProjectIdOrNum = "",
+                        SubnetworkCidrRange = "",
+                        IpAddress = "",
+                    },
+                },
+                Subnetworks = { "", },
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = networkAttachmentsClient.Patch(project, region, networkAttachment, networkAttachmentResource);
 

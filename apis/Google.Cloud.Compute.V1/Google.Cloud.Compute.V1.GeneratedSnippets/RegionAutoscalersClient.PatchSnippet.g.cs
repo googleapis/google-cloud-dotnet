@@ -39,7 +39,92 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Autoscaler autoscalerResource = new Autoscaler();
+            Autoscaler autoscalerResource = new Autoscaler
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Zone = "",
+                CreationTimestamp = "",
+                Region = "",
+                Status = "",
+                Target = "",
+                AutoscalingPolicy = new AutoscalingPolicy
+                {
+                    Mode = "",
+                    MaxNumReplicas = 0,
+                    CoolDownPeriodSec = 0,
+                    CustomMetricUtilizations =
+                    {
+                        new AutoscalingPolicyCustomMetricUtilization
+                        {
+                            UtilizationTarget = 0,
+                            Filter = "",
+                            UtilizationTargetType = "",
+                            SingleInstanceAssignment = 0,
+                            Metric = "",
+                        },
+                    },
+                    ScalingSchedules =
+                    {
+                        {
+                            "",
+                            new AutoscalingPolicyScalingSchedule
+                            {
+                                TimeZone = "",
+                                DurationSec = 0,
+                                Disabled = false,
+                                MinRequiredReplicas = 0,
+                                Schedule = "",
+                                Description = "",
+                            }
+                        },
+                    },
+                    CpuUtilization = new AutoscalingPolicyCpuUtilization
+                    {
+                        UtilizationTarget = 0,
+                        PredictiveMethod = "",
+                    },
+                    LoadBalancingUtilization = new AutoscalingPolicyLoadBalancingUtilization
+                    {
+                        UtilizationTarget = 0,
+                    },
+                    ScaleInControl = new AutoscalingPolicyScaleInControl
+                    {
+                        TimeWindowSec = 0,
+                        MaxScaledInReplicas = new FixedOrPercent
+                        {
+                            Fixed = 0,
+                            Percent = 0,
+                            Calculated = 0,
+                        },
+                    },
+                    MinNumReplicas = 0,
+                },
+                RecommendedSize = 0,
+                StatusDetails =
+                {
+                    new AutoscalerStatusDetails
+                    {
+                        Type = "",
+                        Message = "",
+                    },
+                },
+                Description = "",
+                SelfLink = "",
+                ScalingScheduleStatus =
+                {
+                    {
+                        "",
+                        new ScalingScheduleStatus
+                        {
+                            LastStartTime = "",
+                            NextStartTime = "",
+                            State = "",
+                        }
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = regionAutoscalersClient.Patch(project, region, autoscalerResource);
 

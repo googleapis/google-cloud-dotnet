@@ -40,7 +40,116 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            Disk diskResource = new Disk();
+            Disk diskResource = new Disk
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Type = "",
+                Zone = "",
+                SourceConsistencyGroupPolicy = "",
+                ResourcePolicies = { "", },
+                CreationTimestamp = "",
+                LastAttachTimestamp = "",
+                LicenseCodes = { 0L, },
+                ReplicaZones = { "", },
+                SourceImage = "",
+                SourceImageId = "",
+                LastDetachTimestamp = "",
+                Params = new DiskParams
+                {
+                    ResourceManagerTags = { { "", "" }, },
+                },
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature { Type = "", },
+                },
+                SourceSnapshotId = "",
+                EnableConfidentialCompute = false,
+                Users = { "", },
+                SourceSnapshot = "",
+                Region = "",
+                LabelFingerprint = "",
+                AsyncPrimaryDisk = new DiskAsyncReplication
+                {
+                    ConsistencyGroupPolicy = "",
+                    Disk = "",
+                    DiskId = "",
+                    ConsistencyGroupPolicyId = "",
+                },
+                Status = "",
+                ProvisionedIops = 0L,
+                SourceInstantSnapshot = "",
+                SourceStorageObject = "",
+                ResourceStatus = new DiskResourceStatus
+                {
+                    AsyncPrimaryDisk = new DiskResourceStatusAsyncReplicationStatus { State = "", },
+                    AsyncSecondaryDisks =
+                    {
+                        {
+                            "",
+                            new DiskResourceStatusAsyncReplicationStatus { State = "", }
+                        },
+                    },
+                },
+                SourceConsistencyGroupPolicyId = "",
+                DiskEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                SourceInstantSnapshotId = "",
+                Architecture = "",
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                AsyncSecondaryDisks =
+                {
+                    {
+                        "",
+                        new DiskAsyncReplicationList
+                        {
+                            AsyncReplicationDisk = new DiskAsyncReplication
+                            {
+                                ConsistencyGroupPolicy = "",
+                                Disk = "",
+                                DiskId = "",
+                                ConsistencyGroupPolicyId = "",
+                            },
+                        }
+                    },
+                },
+                Licenses = { "", },
+                LocationHint = "",
+                StoragePool = "",
+                Options = "",
+                SourceImageEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                PhysicalBlockSizeBytes = 0L,
+                Description = "",
+                SourceDisk = "",
+                SourceDiskId = "",
+                SelfLink = "",
+                SatisfiesPzi = false,
+                SatisfiesPzs = false,
+                SizeGb = 0L,
+                Labels = { { "", "" }, },
+                ProvisionedThroughput = 0L,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = regionDisksClient.Update(project, region, disk, diskResource);
 

@@ -43,7 +43,11 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Resource = "",
                 Project = "",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest
+                {
+                    LabelFingerprint = "",
+                    Labels = { { "", "" }, },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstantSnapshotsClient.SetLabels(request);

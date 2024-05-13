@@ -37,7 +37,583 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string urlMap = "";
-            RegionUrlMapsValidateRequest regionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest();
+            RegionUrlMapsValidateRequest regionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest
+            {
+                Resource = new UrlMap
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    Tests =
+                    {
+                        new UrlMapTest
+                        {
+                            Host = "",
+                            Path = "",
+                            ExpectedRedirectResponseCode = 0,
+                            Headers =
+                            {
+                                new UrlMapTestHeader { Name = "", Value = "", },
+                            },
+                            Service = "",
+                            Description = "",
+                            ExpectedOutputUrl = "",
+                        },
+                    },
+                    Region = "",
+                    Fingerprint = "",
+                    PathMatchers =
+                    {
+                        new PathMatcher
+                        {
+                            Name = "",
+                            PathRules =
+                            {
+                                new PathRule
+                                {
+                                    Paths = { "", },
+                                    Service = "",
+                                    UrlRedirect = new HttpRedirectAction
+                                    {
+                                        StripQuery = false,
+                                        HostRedirect = "",
+                                        HttpsRedirect = false,
+                                        PathRedirect = "",
+                                        RedirectResponseCode = "",
+                                        PrefixRedirect = "",
+                                    },
+                                    RouteAction = new HttpRouteAction
+                                    {
+                                        RetryPolicy = new HttpRetryPolicy
+                                        {
+                                            RetryConditions = { "", },
+                                            NumRetries = 0U,
+                                            PerTryTimeout = new Duration
+                                            {
+                                                Nanos = 0,
+                                                Seconds = 0L,
+                                            },
+                                        },
+                                        MaxStreamDuration = new Duration
+                                        {
+                                            Nanos = 0,
+                                            Seconds = 0L,
+                                        },
+                                        RequestMirrorPolicy = new RequestMirrorPolicy { BackendService = "", },
+                                        UrlRewrite = new UrlRewrite
+                                        {
+                                            PathPrefixRewrite = "",
+                                            HostRewrite = "",
+                                            PathTemplateRewrite = "",
+                                        },
+                                        Timeout = new Duration
+                                        {
+                                            Nanos = 0,
+                                            Seconds = 0L,
+                                        },
+                                        WeightedBackendServices =
+                                        {
+                                            new WeightedBackendService
+                                            {
+                                                Weight = 0U,
+                                                BackendService = "",
+                                                HeaderAction = new HttpHeaderAction
+                                                {
+                                                    ResponseHeadersToAdd =
+                                                    {
+                                                        new HttpHeaderOption
+                                                        {
+                                                            Replace = false,
+                                                            HeaderName = "",
+                                                            HeaderValue = "",
+                                                        },
+                                                    },
+                                                    RequestHeadersToAdd =
+                                                    {
+                                                        new HttpHeaderOption
+                                                        {
+                                                            Replace = false,
+                                                            HeaderName = "",
+                                                            HeaderValue = "",
+                                                        },
+                                                    },
+                                                    ResponseHeadersToRemove = { "", },
+                                                    RequestHeadersToRemove = { "", },
+                                                },
+                                            },
+                                        },
+                                        CorsPolicy = new CorsPolicy
+                                        {
+                                            AllowHeaders = { "", },
+                                            AllowOrigins = { "", },
+                                            AllowMethods = { "", },
+                                            AllowOriginRegexes = { "", },
+                                            ExposeHeaders = { "", },
+                                            Disabled = false,
+                                            MaxAge = 0,
+                                            AllowCredentials = false,
+                                        },
+                                        FaultInjectionPolicy = new HttpFaultInjection
+                                        {
+                                            Abort = new HttpFaultAbort
+                                            {
+                                                Percentage = 0,
+                                                HttpStatus = 0U,
+                                            },
+                                            Delay = new HttpFaultDelay
+                                            {
+                                                Percentage = 0,
+                                                FixedDelay = new Duration
+                                                {
+                                                    Nanos = 0,
+                                                    Seconds = 0L,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            HeaderAction = new HttpHeaderAction
+                            {
+                                ResponseHeadersToAdd =
+                                {
+                                    new HttpHeaderOption
+                                    {
+                                        Replace = false,
+                                        HeaderName = "",
+                                        HeaderValue = "",
+                                    },
+                                },
+                                RequestHeadersToAdd =
+                                {
+                                    new HttpHeaderOption
+                                    {
+                                        Replace = false,
+                                        HeaderName = "",
+                                        HeaderValue = "",
+                                    },
+                                },
+                                ResponseHeadersToRemove = { "", },
+                                RequestHeadersToRemove = { "", },
+                            },
+                            DefaultUrlRedirect = new HttpRedirectAction
+                            {
+                                StripQuery = false,
+                                HostRedirect = "",
+                                HttpsRedirect = false,
+                                PathRedirect = "",
+                                RedirectResponseCode = "",
+                                PrefixRedirect = "",
+                            },
+                            DefaultService = "",
+                            RouteRules =
+                            {
+                                new HttpRouteRule
+                                {
+                                    HeaderAction = new HttpHeaderAction
+                                    {
+                                        ResponseHeadersToAdd =
+                                        {
+                                            new HttpHeaderOption
+                                            {
+                                                Replace = false,
+                                                HeaderName = "",
+                                                HeaderValue = "",
+                                            },
+                                        },
+                                        RequestHeadersToAdd =
+                                        {
+                                            new HttpHeaderOption
+                                            {
+                                                Replace = false,
+                                                HeaderName = "",
+                                                HeaderValue = "",
+                                            },
+                                        },
+                                        ResponseHeadersToRemove = { "", },
+                                        RequestHeadersToRemove = { "", },
+                                    },
+                                    Service = "",
+                                    MatchRules =
+                                    {
+                                        new HttpRouteRuleMatch
+                                        {
+                                            RegexMatch = "",
+                                            FullPathMatch = "",
+                                            PrefixMatch = "",
+                                            QueryParameterMatches =
+                                            {
+                                                new HttpQueryParameterMatch
+                                                {
+                                                    Name = "",
+                                                    PresentMatch = false,
+                                                    RegexMatch = "",
+                                                    ExactMatch = "",
+                                                },
+                                            },
+                                            PathTemplateMatch = "",
+                                            HeaderMatches =
+                                            {
+                                                new HttpHeaderMatch
+                                                {
+                                                    PresentMatch = false,
+                                                    RangeMatch = new Int64RangeMatch
+                                                    {
+                                                        RangeStart = 0L,
+                                                        RangeEnd = 0L,
+                                                    },
+                                                    RegexMatch = "",
+                                                    HeaderName = "",
+                                                    PrefixMatch = "",
+                                                    SuffixMatch = "",
+                                                    ExactMatch = "",
+                                                    InvertMatch = false,
+                                                },
+                                            },
+                                            IgnoreCase = false,
+                                            MetadataFilters =
+                                            {
+                                                new MetadataFilter
+                                                {
+                                                    FilterMatchCriteria = "",
+                                                    FilterLabels =
+                                                    {
+                                                        new MetadataFilterLabelMatch { Name = "", Value = "", },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    UrlRedirect = new HttpRedirectAction
+                                    {
+                                        StripQuery = false,
+                                        HostRedirect = "",
+                                        HttpsRedirect = false,
+                                        PathRedirect = "",
+                                        RedirectResponseCode = "",
+                                        PrefixRedirect = "",
+                                    },
+                                    Description = "",
+                                    RouteAction = new HttpRouteAction
+                                    {
+                                        RetryPolicy = new HttpRetryPolicy
+                                        {
+                                            RetryConditions = { "", },
+                                            NumRetries = 0U,
+                                            PerTryTimeout = new Duration
+                                            {
+                                                Nanos = 0,
+                                                Seconds = 0L,
+                                            },
+                                        },
+                                        MaxStreamDuration = new Duration
+                                        {
+                                            Nanos = 0,
+                                            Seconds = 0L,
+                                        },
+                                        RequestMirrorPolicy = new RequestMirrorPolicy { BackendService = "", },
+                                        UrlRewrite = new UrlRewrite
+                                        {
+                                            PathPrefixRewrite = "",
+                                            HostRewrite = "",
+                                            PathTemplateRewrite = "",
+                                        },
+                                        Timeout = new Duration
+                                        {
+                                            Nanos = 0,
+                                            Seconds = 0L,
+                                        },
+                                        WeightedBackendServices =
+                                        {
+                                            new WeightedBackendService
+                                            {
+                                                Weight = 0U,
+                                                BackendService = "",
+                                                HeaderAction = new HttpHeaderAction
+                                                {
+                                                    ResponseHeadersToAdd =
+                                                    {
+                                                        new HttpHeaderOption
+                                                        {
+                                                            Replace = false,
+                                                            HeaderName = "",
+                                                            HeaderValue = "",
+                                                        },
+                                                    },
+                                                    RequestHeadersToAdd =
+                                                    {
+                                                        new HttpHeaderOption
+                                                        {
+                                                            Replace = false,
+                                                            HeaderName = "",
+                                                            HeaderValue = "",
+                                                        },
+                                                    },
+                                                    ResponseHeadersToRemove = { "", },
+                                                    RequestHeadersToRemove = { "", },
+                                                },
+                                            },
+                                        },
+                                        CorsPolicy = new CorsPolicy
+                                        {
+                                            AllowHeaders = { "", },
+                                            AllowOrigins = { "", },
+                                            AllowMethods = { "", },
+                                            AllowOriginRegexes = { "", },
+                                            ExposeHeaders = { "", },
+                                            Disabled = false,
+                                            MaxAge = 0,
+                                            AllowCredentials = false,
+                                        },
+                                        FaultInjectionPolicy = new HttpFaultInjection
+                                        {
+                                            Abort = new HttpFaultAbort
+                                            {
+                                                Percentage = 0,
+                                                HttpStatus = 0U,
+                                            },
+                                            Delay = new HttpFaultDelay
+                                            {
+                                                Percentage = 0,
+                                                FixedDelay = new Duration
+                                                {
+                                                    Nanos = 0,
+                                                    Seconds = 0L,
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Priority = 0,
+                                },
+                            },
+                            DefaultRouteAction = new HttpRouteAction
+                            {
+                                RetryPolicy = new HttpRetryPolicy
+                                {
+                                    RetryConditions = { "", },
+                                    NumRetries = 0U,
+                                    PerTryTimeout = new Duration
+                                    {
+                                        Nanos = 0,
+                                        Seconds = 0L,
+                                    },
+                                },
+                                MaxStreamDuration = new Duration
+                                {
+                                    Nanos = 0,
+                                    Seconds = 0L,
+                                },
+                                RequestMirrorPolicy = new RequestMirrorPolicy { BackendService = "", },
+                                UrlRewrite = new UrlRewrite
+                                {
+                                    PathPrefixRewrite = "",
+                                    HostRewrite = "",
+                                    PathTemplateRewrite = "",
+                                },
+                                Timeout = new Duration
+                                {
+                                    Nanos = 0,
+                                    Seconds = 0L,
+                                },
+                                WeightedBackendServices =
+                                {
+                                    new WeightedBackendService
+                                    {
+                                        Weight = 0U,
+                                        BackendService = "",
+                                        HeaderAction = new HttpHeaderAction
+                                        {
+                                            ResponseHeadersToAdd =
+                                            {
+                                                new HttpHeaderOption
+                                                {
+                                                    Replace = false,
+                                                    HeaderName = "",
+                                                    HeaderValue = "",
+                                                },
+                                            },
+                                            RequestHeadersToAdd =
+                                            {
+                                                new HttpHeaderOption
+                                                {
+                                                    Replace = false,
+                                                    HeaderName = "",
+                                                    HeaderValue = "",
+                                                },
+                                            },
+                                            ResponseHeadersToRemove = { "", },
+                                            RequestHeadersToRemove = { "", },
+                                        },
+                                    },
+                                },
+                                CorsPolicy = new CorsPolicy
+                                {
+                                    AllowHeaders = { "", },
+                                    AllowOrigins = { "", },
+                                    AllowMethods = { "", },
+                                    AllowOriginRegexes = { "", },
+                                    ExposeHeaders = { "", },
+                                    Disabled = false,
+                                    MaxAge = 0,
+                                    AllowCredentials = false,
+                                },
+                                FaultInjectionPolicy = new HttpFaultInjection
+                                {
+                                    Abort = new HttpFaultAbort
+                                    {
+                                        Percentage = 0,
+                                        HttpStatus = 0U,
+                                    },
+                                    Delay = new HttpFaultDelay
+                                    {
+                                        Percentage = 0,
+                                        FixedDelay = new Duration
+                                        {
+                                            Nanos = 0,
+                                            Seconds = 0L,
+                                        },
+                                    },
+                                },
+                            },
+                            Description = "",
+                        },
+                    },
+                    HostRules =
+                    {
+                        new HostRule
+                        {
+                            Hosts = { "", },
+                            PathMatcher = "",
+                            Description = "",
+                        },
+                    },
+                    HeaderAction = new HttpHeaderAction
+                    {
+                        ResponseHeadersToAdd =
+                        {
+                            new HttpHeaderOption
+                            {
+                                Replace = false,
+                                HeaderName = "",
+                                HeaderValue = "",
+                            },
+                        },
+                        RequestHeadersToAdd =
+                        {
+                            new HttpHeaderOption
+                            {
+                                Replace = false,
+                                HeaderName = "",
+                                HeaderValue = "",
+                            },
+                        },
+                        ResponseHeadersToRemove = { "", },
+                        RequestHeadersToRemove = { "", },
+                    },
+                    DefaultUrlRedirect = new HttpRedirectAction
+                    {
+                        StripQuery = false,
+                        HostRedirect = "",
+                        HttpsRedirect = false,
+                        PathRedirect = "",
+                        RedirectResponseCode = "",
+                        PrefixRedirect = "",
+                    },
+                    DefaultService = "",
+                    DefaultRouteAction = new HttpRouteAction
+                    {
+                        RetryPolicy = new HttpRetryPolicy
+                        {
+                            RetryConditions = { "", },
+                            NumRetries = 0U,
+                            PerTryTimeout = new Duration
+                            {
+                                Nanos = 0,
+                                Seconds = 0L,
+                            },
+                        },
+                        MaxStreamDuration = new Duration
+                        {
+                            Nanos = 0,
+                            Seconds = 0L,
+                        },
+                        RequestMirrorPolicy = new RequestMirrorPolicy { BackendService = "", },
+                        UrlRewrite = new UrlRewrite
+                        {
+                            PathPrefixRewrite = "",
+                            HostRewrite = "",
+                            PathTemplateRewrite = "",
+                        },
+                        Timeout = new Duration
+                        {
+                            Nanos = 0,
+                            Seconds = 0L,
+                        },
+                        WeightedBackendServices =
+                        {
+                            new WeightedBackendService
+                            {
+                                Weight = 0U,
+                                BackendService = "",
+                                HeaderAction = new HttpHeaderAction
+                                {
+                                    ResponseHeadersToAdd =
+                                    {
+                                        new HttpHeaderOption
+                                        {
+                                            Replace = false,
+                                            HeaderName = "",
+                                            HeaderValue = "",
+                                        },
+                                    },
+                                    RequestHeadersToAdd =
+                                    {
+                                        new HttpHeaderOption
+                                        {
+                                            Replace = false,
+                                            HeaderName = "",
+                                            HeaderValue = "",
+                                        },
+                                    },
+                                    ResponseHeadersToRemove = { "", },
+                                    RequestHeadersToRemove = { "", },
+                                },
+                            },
+                        },
+                        CorsPolicy = new CorsPolicy
+                        {
+                            AllowHeaders = { "", },
+                            AllowOrigins = { "", },
+                            AllowMethods = { "", },
+                            AllowOriginRegexes = { "", },
+                            ExposeHeaders = { "", },
+                            Disabled = false,
+                            MaxAge = 0,
+                            AllowCredentials = false,
+                        },
+                        FaultInjectionPolicy = new HttpFaultInjection
+                        {
+                            Abort = new HttpFaultAbort
+                            {
+                                Percentage = 0,
+                                HttpStatus = 0U,
+                            },
+                            Delay = new HttpFaultDelay
+                            {
+                                Percentage = 0,
+                                FixedDelay = new Duration
+                                {
+                                    Nanos = 0,
+                                    Seconds = 0L,
+                                },
+                            },
+                        },
+                    },
+                    Description = "",
+                    SelfLink = "",
+                },
+            };
             // Make the request
             UrlMapsValidateResponse response = regionUrlMapsClient.Validate(project, region, urlMap, regionUrlMapsValidateRequestResource);
         }

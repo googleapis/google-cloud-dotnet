@@ -41,7 +41,52 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string storagePool = "";
-            StoragePool storagePoolResource = new StoragePool();
+            StoragePool storagePoolResource = new StoragePool
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Zone = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                State = "",
+                PoolProvisionedIops = 0L,
+                PoolProvisionedThroughput = 0L,
+                LabelFingerprint = "",
+                Status = new StoragePoolResourceStatus
+                {
+                    TotalProvisionedDiskIops = 0L,
+                    PoolUsedIops = 0L,
+                    MaxTotalProvisionedDiskCapacityGb = 0L,
+                    DiskCount = 0L,
+                    PoolUsedThroughput = 0L,
+                    PoolUserWrittenBytes = 0L,
+                    TotalProvisionedDiskThroughput = 0L,
+                    LastResizeTimestamp = "",
+                    PoolUsedCapacityBytes = 0L,
+                    TotalProvisionedDiskCapacityGb = 0L,
+                },
+                ResourceStatus = new StoragePoolResourceStatus
+                {
+                    TotalProvisionedDiskIops = 0L,
+                    PoolUsedIops = 0L,
+                    MaxTotalProvisionedDiskCapacityGb = 0L,
+                    DiskCount = 0L,
+                    PoolUsedThroughput = 0L,
+                    PoolUserWrittenBytes = 0L,
+                    TotalProvisionedDiskThroughput = 0L,
+                    LastResizeTimestamp = "",
+                    PoolUsedCapacityBytes = 0L,
+                    TotalProvisionedDiskCapacityGb = 0L,
+                },
+                CapacityProvisioningType = "",
+                StoragePoolType = "",
+                Description = "",
+                SelfLink = "",
+                PerformanceProvisioningType = "",
+                PoolProvisionedCapacityGb = 0L,
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await storagePoolsClient.UpdateAsync(project, zone, storagePool, storagePoolResource);
 

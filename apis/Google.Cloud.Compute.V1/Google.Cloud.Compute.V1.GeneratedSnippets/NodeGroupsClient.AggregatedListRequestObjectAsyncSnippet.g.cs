@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListNodeGroupsRequest request = new AggregatedListNodeGroupsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

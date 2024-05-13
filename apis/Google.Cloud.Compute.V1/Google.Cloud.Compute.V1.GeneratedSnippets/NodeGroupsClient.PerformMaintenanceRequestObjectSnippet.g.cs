@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest(),
+                NodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest
+                {
+                    StartTime = "",
+                    Nodes = { "", },
+                },
                 Project = "",
                 NodeGroup = "",
             };

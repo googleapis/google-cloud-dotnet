@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListPacketMirroringsRequest request = new AggregatedListPacketMirroringsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

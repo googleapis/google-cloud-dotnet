@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListManagedInstancesInstanceGroupManagersRequest request = new ListManagedInstancesInstanceGroupManagersRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 InstanceGroupManager = "",

@@ -43,7 +43,29 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                AddressResource = new Address(),
+                AddressResource = new Address
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    Ipv6EndpointType = "",
+                    Users = { "", },
+                    Region = "",
+                    LabelFingerprint = "",
+                    Status = "",
+                    Network = "",
+                    AddressType = "",
+                    IpVersion = "",
+                    Subnetwork = "",
+                    Purpose = "",
+                    Description = "",
+                    PrefixLength = 0,
+                    SelfLink = "",
+                    Address_ = "",
+                    Labels = { { "", "" }, },
+                    NetworkTier = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await addressesClient.InsertAsync(request);

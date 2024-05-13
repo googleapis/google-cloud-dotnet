@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListErrorsInstanceGroupManagersRequest request = new ListErrorsInstanceGroupManagersRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 InstanceGroupManager = "",

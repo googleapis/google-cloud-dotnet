@@ -38,7 +38,29 @@ namespace GoogleCSharpSnippets
             GlobalAddressesClient globalAddressesClient = GlobalAddressesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            Address addressResource = new Address();
+            Address addressResource = new Address
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                Ipv6EndpointType = "",
+                Users = { "", },
+                Region = "",
+                LabelFingerprint = "",
+                Status = "",
+                Network = "",
+                AddressType = "",
+                IpVersion = "",
+                Subnetwork = "",
+                Purpose = "",
+                Description = "",
+                PrefixLength = 0,
+                SelfLink = "",
+                Address_ = "",
+                Labels = { { "", "" }, },
+                NetworkTier = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = globalAddressesClient.Insert(project, addressResource);
 

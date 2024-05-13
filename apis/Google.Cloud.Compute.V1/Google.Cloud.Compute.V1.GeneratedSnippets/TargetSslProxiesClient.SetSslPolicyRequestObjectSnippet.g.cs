@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                SslPolicyReferenceResource = new SslPolicyReference(),
+                SslPolicyReferenceResource = new SslPolicyReference { SslPolicy = "", },
                 TargetSslProxy = "",
             };
             // Make the request

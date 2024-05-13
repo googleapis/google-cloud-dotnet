@@ -40,7 +40,31 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            InstantSnapshot instantSnapshotResource = new InstantSnapshot();
+            InstantSnapshot instantSnapshotResource = new InstantSnapshot
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Zone = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                Region = "",
+                LabelFingerprint = "",
+                Status = "",
+                ResourceStatus = new InstantSnapshotResourceStatus
+                {
+                    StorageSizeBytes = 0L,
+                },
+                Architecture = "",
+                DiskSizeGb = 0L,
+                Description = "",
+                SourceDisk = "",
+                SourceDiskId = "",
+                SelfLink = "",
+                SatisfiesPzi = false,
+                SatisfiesPzs = false,
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstantSnapshotsClient.InsertAsync(project, region, instantSnapshotResource);
 

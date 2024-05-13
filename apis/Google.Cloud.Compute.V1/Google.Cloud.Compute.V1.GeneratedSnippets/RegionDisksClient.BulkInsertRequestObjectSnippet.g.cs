@@ -42,7 +42,10 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                BulkInsertDiskResourceResource = new BulkInsertDiskResource(),
+                BulkInsertDiskResourceResource = new BulkInsertDiskResource
+                {
+                    SourceConsistencyGroupPolicy = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionDisksClient.BulkInsert(request);

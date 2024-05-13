@@ -43,7 +43,20 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                TargetInstanceResource = new TargetInstance(),
+                TargetInstanceResource = new TargetInstance
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Zone = "",
+                    Instance = "",
+                    CreationTimestamp = "",
+                    SecurityPolicy = "",
+                    Network = "",
+                    Description = "",
+                    SelfLink = "",
+                    NatPolicy = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetInstancesClient.InsertAsync(request);

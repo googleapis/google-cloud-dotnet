@@ -39,7 +39,27 @@ namespace GoogleCSharpSnippets
             ExternalVpnGatewaysClient externalVpnGatewaysClient = await ExternalVpnGatewaysClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            ExternalVpnGateway externalVpnGatewayResource = new ExternalVpnGateway();
+            ExternalVpnGateway externalVpnGatewayResource = new ExternalVpnGateway
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Interfaces =
+                {
+                    new ExternalVpnGatewayInterface
+                    {
+                        Id = 0U,
+                        Ipv6Address = "",
+                        IpAddress = "",
+                    },
+                },
+                CreationTimestamp = "",
+                LabelFingerprint = "",
+                RedundancyType = "",
+                Description = "",
+                SelfLink = "",
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.InsertAsync(project, externalVpnGatewayResource);
 

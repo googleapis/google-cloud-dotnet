@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListDisksStoragePoolsRequest request = new ListDisksStoragePoolsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

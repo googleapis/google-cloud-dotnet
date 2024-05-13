@@ -40,7 +40,11 @@ namespace GoogleCSharpSnippets
             SetTargetPoolsRegionInstanceGroupManagerRequest request = new SetTargetPoolsRegionInstanceGroupManagerRequest
             {
                 RequestId = "",
-                RegionInstanceGroupManagersSetTargetPoolsRequestResource = new RegionInstanceGroupManagersSetTargetPoolsRequest(),
+                RegionInstanceGroupManagersSetTargetPoolsRequestResource = new RegionInstanceGroupManagersSetTargetPoolsRequest
+                {
+                    Fingerprint = "",
+                    TargetPools = { "", },
+                },
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",

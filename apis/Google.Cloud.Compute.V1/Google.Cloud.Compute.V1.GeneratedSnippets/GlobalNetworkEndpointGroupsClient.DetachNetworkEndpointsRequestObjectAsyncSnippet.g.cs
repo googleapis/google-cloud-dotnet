@@ -40,7 +40,20 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request = new DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest
             {
-                GlobalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest(),
+                GlobalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest
+                {
+                    NetworkEndpoints =
+                    {
+                        new NetworkEndpoint
+                        {
+                            Fqdn = "",
+                            Port = 0,
+                            Instance = "",
+                            Annotations = { { "", "" }, },
+                            IpAddress = "",
+                        },
+                    },
+                },
                 RequestId = "",
                 Project = "",
                 NetworkEndpointGroup = "",

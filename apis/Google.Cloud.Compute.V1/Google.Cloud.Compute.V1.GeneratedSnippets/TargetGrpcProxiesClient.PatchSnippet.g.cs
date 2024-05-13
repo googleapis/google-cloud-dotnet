@@ -39,7 +39,19 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetGrpcProxy = "";
-            TargetGrpcProxy targetGrpcProxyResource = new TargetGrpcProxy();
+            TargetGrpcProxy targetGrpcProxyResource = new TargetGrpcProxy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                ValidateForProxyless = false,
+                Fingerprint = "",
+                UrlMap = "",
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = targetGrpcProxiesClient.Patch(project, targetGrpcProxy, targetGrpcProxyResource);
 

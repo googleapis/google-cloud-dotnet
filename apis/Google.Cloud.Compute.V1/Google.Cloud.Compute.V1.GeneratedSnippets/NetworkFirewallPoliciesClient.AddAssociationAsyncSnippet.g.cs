@@ -40,7 +40,14 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string firewallPolicy = "";
-            FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation();
+            FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation
+            {
+                Name = "",
+                DisplayName = "",
+                AttachmentTarget = "",
+                FirewallPolicyId = "",
+                ShortName = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.AddAssociationAsync(project, firewallPolicy, firewallPolicyAssociationResource);
 

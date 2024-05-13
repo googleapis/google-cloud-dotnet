@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListRegionCommitmentsRequest request = new AggregatedListRegionCommitmentsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

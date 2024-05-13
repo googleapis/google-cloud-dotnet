@@ -41,7 +41,13 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string targetPool = "";
-            TargetPoolsRemoveInstanceRequest targetPoolsRemoveInstanceRequestResource = new TargetPoolsRemoveInstanceRequest();
+            TargetPoolsRemoveInstanceRequest targetPoolsRemoveInstanceRequestResource = new TargetPoolsRemoveInstanceRequest
+            {
+                Instances =
+                {
+                    new InstanceReference { Instance = "", },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetPoolsClient.RemoveInstanceAsync(project, region, targetPool, targetPoolsRemoveInstanceRequestResource);
 

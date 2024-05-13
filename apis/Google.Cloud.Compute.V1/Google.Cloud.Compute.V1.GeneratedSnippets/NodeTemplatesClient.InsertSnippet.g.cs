@@ -39,7 +39,45 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NodeTemplate nodeTemplateResource = new NodeTemplate();
+            NodeTemplate nodeTemplateResource = new NodeTemplate
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                Disks =
+                {
+                    new LocalDisk
+                    {
+                        DiskType = "",
+                        DiskCount = 0,
+                        DiskSizeGb = 0,
+                    },
+                },
+                Region = "",
+                Status = "",
+                ServerBinding = new ServerBinding { Type = "", },
+                CpuOvercommitType = "",
+                Accelerators =
+                {
+                    new AcceleratorConfig
+                    {
+                        AcceleratorType = "",
+                        AcceleratorCount = 0,
+                    },
+                },
+                StatusMessage = "",
+                NodeTypeFlexibility = new NodeTemplateNodeTypeFlexibility
+                {
+                    Cpus = "",
+                    LocalSsd = "",
+                    Memory = "",
+                },
+                NodeAffinityLabels = { { "", "" }, },
+                Description = "",
+                SelfLink = "",
+                NodeType = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = nodeTemplatesClient.Insert(project, region, nodeTemplateResource);
 

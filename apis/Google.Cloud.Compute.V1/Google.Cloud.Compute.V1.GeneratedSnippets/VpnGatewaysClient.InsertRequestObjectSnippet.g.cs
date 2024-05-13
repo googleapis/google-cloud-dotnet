@@ -41,7 +41,31 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                VpnGatewayResource = new VpnGateway(),
+                VpnGatewayResource = new VpnGateway
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    GatewayIpVersion = "",
+                    VpnInterfaces =
+                    {
+                        new VpnGatewayVpnGatewayInterface
+                        {
+                            Id = 0U,
+                            InterconnectAttachment = "",
+                            Ipv6Address = "",
+                            IpAddress = "",
+                        },
+                    },
+                    Region = "",
+                    LabelFingerprint = "",
+                    Network = "",
+                    Description = "",
+                    StackType = "",
+                    SelfLink = "",
+                    Labels = { { "", "" }, },
+                },
                 Project = "",
             };
             // Make the request

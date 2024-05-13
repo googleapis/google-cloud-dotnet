@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListTargetInstancesRequest request = new ListTargetInstancesRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

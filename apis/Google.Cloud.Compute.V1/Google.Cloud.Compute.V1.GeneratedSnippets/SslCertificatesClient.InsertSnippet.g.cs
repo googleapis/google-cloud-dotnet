@@ -38,7 +38,32 @@ namespace GoogleCSharpSnippets
             SslCertificatesClient sslCertificatesClient = SslCertificatesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            SslCertificate sslCertificateResource = new SslCertificate();
+            SslCertificate sslCertificateResource = new SslCertificate
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Type = "",
+                CreationTimestamp = "",
+                Region = "",
+                Managed = new SslCertificateManagedSslCertificate
+                {
+                    Status = "",
+                    Domains = { "", },
+                    DomainStatus = { { "", "" }, },
+                },
+                SelfManaged = new SslCertificateSelfManagedSslCertificate
+                {
+                    Certificate = "",
+                    PrivateKey = "",
+                },
+                Certificate = "",
+                PrivateKey = "",
+                Description = "",
+                ExpireTime = "",
+                SelfLink = "",
+                SubjectAlternativeNames = { "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = sslCertificatesClient.Insert(project, sslCertificateResource);
 

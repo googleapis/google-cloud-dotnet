@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListNetworkEndpointsRegionNetworkEndpointGroupsRequest request = new ListNetworkEndpointsRegionNetworkEndpointGroupsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",

@@ -41,7 +41,20 @@ namespace GoogleCSharpSnippets
             InsertTargetSslProxyRequest request = new InsertTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxyResource = new TargetSslProxy(),
+                TargetSslProxyResource = new TargetSslProxy
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    CertificateMap = "",
+                    ProxyHeader = "",
+                    SslPolicy = "",
+                    SslCertificates = { "", },
+                    Service = "",
+                    Description = "",
+                    SelfLink = "",
+                },
                 Project = "",
             };
             // Make the request

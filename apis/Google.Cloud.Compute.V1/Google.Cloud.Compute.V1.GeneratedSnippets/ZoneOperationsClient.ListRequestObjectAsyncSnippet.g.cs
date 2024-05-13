@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListZoneOperationsRequest request = new ListZoneOperationsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

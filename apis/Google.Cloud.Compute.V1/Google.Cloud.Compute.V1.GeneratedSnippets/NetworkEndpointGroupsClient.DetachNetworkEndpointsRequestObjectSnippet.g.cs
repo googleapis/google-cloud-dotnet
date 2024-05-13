@@ -43,7 +43,20 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 NetworkEndpointGroup = "",
-                NetworkEndpointGroupsDetachEndpointsRequestResource = new NetworkEndpointGroupsDetachEndpointsRequest(),
+                NetworkEndpointGroupsDetachEndpointsRequestResource = new NetworkEndpointGroupsDetachEndpointsRequest
+                {
+                    NetworkEndpoints =
+                    {
+                        new NetworkEndpoint
+                        {
+                            Fqdn = "",
+                            Port = 0,
+                            Instance = "",
+                            Annotations = { { "", "" }, },
+                            IpAddress = "",
+                        },
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = networkEndpointGroupsClient.DetachNetworkEndpoints(request);

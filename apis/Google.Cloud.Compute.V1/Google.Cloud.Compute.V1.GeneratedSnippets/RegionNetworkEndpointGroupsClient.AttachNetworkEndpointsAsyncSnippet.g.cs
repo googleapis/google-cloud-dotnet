@@ -41,7 +41,20 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string networkEndpointGroup = "";
-            RegionNetworkEndpointGroupsAttachEndpointsRequest regionNetworkEndpointGroupsAttachEndpointsRequestResource = new RegionNetworkEndpointGroupsAttachEndpointsRequest();
+            RegionNetworkEndpointGroupsAttachEndpointsRequest regionNetworkEndpointGroupsAttachEndpointsRequestResource = new RegionNetworkEndpointGroupsAttachEndpointsRequest
+            {
+                NetworkEndpoints =
+                {
+                    new NetworkEndpoint
+                    {
+                        Fqdn = "",
+                        Port = 0,
+                        Instance = "",
+                        Annotations = { { "", "" }, },
+                        IpAddress = "",
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync(project, region, networkEndpointGroup, regionNetworkEndpointGroupsAttachEndpointsRequestResource);
 

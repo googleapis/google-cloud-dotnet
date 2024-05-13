@@ -40,7 +40,33 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string sslPolicy = "";
-            SslPolicy sslPolicyResource = new SslPolicy();
+            SslPolicy sslPolicyResource = new SslPolicy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                MinTlsVersion = "",
+                CreationTimestamp = "",
+                CustomFeatures = { "", },
+                Region = "",
+                Profile = "",
+                Fingerprint = "",
+                Description = "",
+                SelfLink = "",
+                EnabledFeatures = { "", },
+                Warnings =
+                {
+                    new Warnings
+                    {
+                        Code = "",
+                        Data =
+                        {
+                            new Data { Key = "", Value = "", },
+                        },
+                        Message = "",
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = regionSslPoliciesClient.Patch(project, region, sslPolicy, sslPolicyResource);
 

@@ -41,7 +41,21 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string healthCheckService = "";
-            HealthCheckService healthCheckServiceResource = new HealthCheckService();
+            HealthCheckService healthCheckServiceResource = new HealthCheckService
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                NetworkEndpointGroups = { "", },
+                CreationTimestamp = "",
+                Region = "",
+                Fingerprint = "",
+                HealthStatusAggregationPolicy = "",
+                NotificationEndpoints = { "", },
+                Description = "",
+                HealthChecks = { "", },
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionHealthCheckServicesClient.PatchAsync(project, region, healthCheckService, healthCheckServiceResource);
 

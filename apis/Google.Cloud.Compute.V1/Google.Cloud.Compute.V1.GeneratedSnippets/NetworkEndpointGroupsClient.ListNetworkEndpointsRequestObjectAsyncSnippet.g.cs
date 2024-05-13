@@ -41,7 +41,9 @@ namespace GoogleCSharpSnippets
             ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
             {
                 Zone = "",
-                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
+                PageToken = "",
+                MaxResults = 0U,
+                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest { HealthStatus = "", },
                 OrderBy = "",
                 Project = "",
                 Filter = "",

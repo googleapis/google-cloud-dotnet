@@ -44,7 +44,26 @@ namespace GoogleCSharpSnippets
                 TargetHttpsProxy = "",
                 Region = "",
                 Project = "",
-                TargetHttpsProxyResource = new TargetHttpsProxy(),
+                TargetHttpsProxyResource = new TargetHttpsProxy
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    AuthorizationPolicy = "",
+                    Region = "",
+                    CertificateMap = "",
+                    Fingerprint = "",
+                    ProxyBind = false,
+                    SslPolicy = "",
+                    ServerTlsPolicy = "",
+                    SslCertificates = { "", },
+                    UrlMap = "",
+                    Description = "",
+                    HttpKeepAliveTimeoutSec = 0,
+                    SelfLink = "",
+                    QuicOverride = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionTargetHttpsProxiesClient.PatchAsync(request);

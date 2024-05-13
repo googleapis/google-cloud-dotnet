@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                InstanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest(),
+                InstanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest
+                {
+                    Instances = { "", },
+                    SkipInstancesOnValidationError = false,
+                },
                 Project = "",
                 InstanceGroupManager = "",
             };

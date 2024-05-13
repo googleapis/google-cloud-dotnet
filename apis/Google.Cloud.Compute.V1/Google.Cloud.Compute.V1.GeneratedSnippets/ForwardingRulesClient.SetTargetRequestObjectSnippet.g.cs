@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 ForwardingRule = "",
-                TargetReferenceResource = new TargetReference(),
+                TargetReferenceResource = new TargetReference { Target = "", },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = forwardingRulesClient.SetTarget(request);

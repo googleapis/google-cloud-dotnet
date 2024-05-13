@@ -36,7 +36,108 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "";
-            GlobalOrganizationSetPolicyRequest globalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest();
+            GlobalOrganizationSetPolicyRequest globalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest
+            {
+                Etag = "",
+                Policy = new Policy
+                {
+                    Etag = "",
+                    Rules =
+                    {
+                        new Rule
+                        {
+                            Ins = { "", },
+                            Permissions = { "", },
+                            Conditions =
+                            {
+                                new Condition
+                                {
+                                    Op = "",
+                                    Iam = "",
+                                    Svc = "",
+                                    Sys = "",
+                                    Values = { "", },
+                                },
+                            },
+                            LogConfigs =
+                            {
+                                new LogConfig
+                                {
+                                    DataAccess = new LogConfigDataAccessOptions { LogMode = "", },
+                                    CloudAudit = new LogConfigCloudAuditOptions
+                                    {
+                                        AuthorizationLoggingOptions = new AuthorizationLoggingOptions { PermissionType = "", },
+                                        LogName = "",
+                                    },
+                                    Counter = new LogConfigCounterOptions
+                                    {
+                                        Field = "",
+                                        CustomFields =
+                                        {
+                                            new LogConfigCounterOptionsCustomField { Name = "", Value = "", },
+                                        },
+                                        Metric = "",
+                                    },
+                                },
+                            },
+                            Action = "",
+                            Description = "",
+                            NotIns = { "", },
+                        },
+                    },
+                    AuditConfigs =
+                    {
+                        new AuditConfig
+                        {
+                            ExemptedMembers = { "", },
+                            Service = "",
+                            AuditLogConfigs =
+                            {
+                                new AuditLogConfig
+                                {
+                                    IgnoreChildExemptions = false,
+                                    ExemptedMembers = { "", },
+                                    LogType = "",
+                                },
+                            },
+                        },
+                    },
+                    Version = 0,
+                    Bindings =
+                    {
+                        new Binding
+                        {
+                            Role = "",
+                            Condition = new Expr
+                            {
+                                Title = "",
+                                Location = "",
+                                Expression = "",
+                                Description = "",
+                            },
+                            Members = { "", },
+                            BindingId = "",
+                        },
+                    },
+                    IamOwned = false,
+                },
+                Bindings =
+                {
+                    new Binding
+                    {
+                        Role = "",
+                        Condition = new Expr
+                        {
+                            Title = "",
+                            Location = "",
+                            Expression = "",
+                            Description = "",
+                        },
+                        Members = { "", },
+                        BindingId = "",
+                    },
+                },
+            };
             // Make the request
             Policy response = await firewallPoliciesClient.SetIamPolicyAsync(resource, globalOrganizationSetPolicyRequestResource);
         }

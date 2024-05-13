@@ -39,7 +39,11 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string instanceGroup = "";
-            RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest();
+            RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest
+            {
+                PortName = "",
+                InstanceState = "",
+            };
             // Make the request
             PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstances(project, region, instanceGroup, regionInstanceGroupsListInstancesRequestResource);
 

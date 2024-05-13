@@ -43,7 +43,54 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                PacketMirroringResource = new PacketMirroring(),
+                PacketMirroringResource = new PacketMirroring
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    MirroredResources = new PacketMirroringMirroredResourceInfo
+                    {
+                        Tags = { "", },
+                        Instances =
+                        {
+                            new PacketMirroringMirroredResourceInfoInstanceInfo
+                            {
+                                Url = "",
+                                CanonicalUrl = "",
+                            },
+                        },
+                        Subnetworks =
+                        {
+                            new PacketMirroringMirroredResourceInfoSubnetInfo
+                            {
+                                Url = "",
+                                CanonicalUrl = "",
+                            },
+                        },
+                    },
+                    Region = "",
+                    Network = new PacketMirroringNetworkInfo
+                    {
+                        Url = "",
+                        CanonicalUrl = "",
+                    },
+                    Enable = "",
+                    Filter = new PacketMirroringFilter
+                    {
+                        IPProtocols = { "", },
+                        Direction = "",
+                        CidrRanges = { "", },
+                    },
+                    Description = "",
+                    CollectorIlb = new PacketMirroringForwardingRuleInfo
+                    {
+                        Url = "",
+                        CanonicalUrl = "",
+                    },
+                    Priority = 0U,
+                    SelfLink = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await packetMirroringsClient.InsertAsync(request);

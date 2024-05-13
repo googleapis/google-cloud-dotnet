@@ -38,7 +38,20 @@ namespace GoogleCSharpSnippets
             SnapshotSettingsServiceClient snapshotSettingsServiceClient = SnapshotSettingsServiceClient.Create();
             // Initialize request argument(s)
             string project = "";
-            SnapshotSettings snapshotSettingsResource = new SnapshotSettings();
+            SnapshotSettings snapshotSettingsResource = new SnapshotSettings
+            {
+                StorageLocation = new SnapshotSettingsStorageLocationSettings
+                {
+                    Policy = "",
+                    Locations =
+                    {
+                        {
+                            "",
+                            new SnapshotSettingsStorageLocationSettingsStorageLocationPreference { Name = "", }
+                        },
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = snapshotSettingsServiceClient.Patch(project, snapshotSettingsResource);
 

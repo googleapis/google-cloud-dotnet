@@ -43,7 +43,11 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
-                InstanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest(),
+                InstanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest
+                {
+                    Fingerprint = "",
+                    TargetPools = { "", },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetTargetPools(request);

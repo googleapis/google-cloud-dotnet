@@ -42,7 +42,32 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                SslCertificateResource = new SslCertificate(),
+                SslCertificateResource = new SslCertificate
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Type = "",
+                    CreationTimestamp = "",
+                    Region = "",
+                    Managed = new SslCertificateManagedSslCertificate
+                    {
+                        Status = "",
+                        Domains = { "", },
+                        DomainStatus = { { "", "" }, },
+                    },
+                    SelfManaged = new SslCertificateSelfManagedSslCertificate
+                    {
+                        Certificate = "",
+                        PrivateKey = "",
+                    },
+                    Certificate = "",
+                    PrivateKey = "",
+                    Description = "",
+                    ExpireTime = "",
+                    SelfLink = "",
+                    SubjectAlternativeNames = { "", },
+                },
                 Project = "",
             };
             // Make the request

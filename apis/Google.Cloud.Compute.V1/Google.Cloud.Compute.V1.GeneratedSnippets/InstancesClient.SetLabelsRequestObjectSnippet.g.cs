@@ -42,7 +42,11 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesSetLabelsRequestResource = new InstancesSetLabelsRequest(),
+                InstancesSetLabelsRequestResource = new InstancesSetLabelsRequest
+                {
+                    LabelFingerprint = "",
+                    Labels = { { "", "" }, },
+                },
                 Project = "",
             };
             // Make the request

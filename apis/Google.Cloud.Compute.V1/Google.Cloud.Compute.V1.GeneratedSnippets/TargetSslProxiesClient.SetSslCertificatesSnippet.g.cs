@@ -39,7 +39,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetSslProxy = "";
-            TargetSslProxiesSetSslCertificatesRequest targetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest();
+            TargetSslProxiesSetSslCertificatesRequest targetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest
+            {
+                SslCertificates = { "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = targetSslProxiesClient.SetSslCertificates(project, targetSslProxy, targetSslProxiesSetSslCertificatesRequestResource);
 

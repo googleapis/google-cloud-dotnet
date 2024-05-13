@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest();
+            NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest
+            {
+                StartTime = "",
+                Nodes = { "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.PerformMaintenanceAsync(project, zone, nodeGroup, nodeGroupsPerformMaintenanceRequestResource);
 

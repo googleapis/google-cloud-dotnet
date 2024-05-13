@@ -40,7 +40,11 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest();
+            InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest
+            {
+                Email = "",
+                Scopes = { "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetServiceAccount(project, zone, instance, instancesSetServiceAccountRequestResource);
 

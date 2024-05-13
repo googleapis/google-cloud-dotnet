@@ -43,7 +43,20 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionNetworkEndpointGroupsDetachEndpointsRequestResource = new RegionNetworkEndpointGroupsDetachEndpointsRequest(),
+                RegionNetworkEndpointGroupsDetachEndpointsRequestResource = new RegionNetworkEndpointGroupsDetachEndpointsRequest
+                {
+                    NetworkEndpoints =
+                    {
+                        new NetworkEndpoint
+                        {
+                            Fqdn = "",
+                            Port = 0,
+                            Instance = "",
+                            Annotations = { { "", "" }, },
+                            IpAddress = "",
+                        },
+                    },
+                },
                 NetworkEndpointGroup = "",
             };
             // Make the request

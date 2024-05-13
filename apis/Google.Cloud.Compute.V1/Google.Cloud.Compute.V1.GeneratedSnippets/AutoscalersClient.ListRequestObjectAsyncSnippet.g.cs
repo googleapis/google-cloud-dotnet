@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListAutoscalersRequest request = new ListAutoscalersRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

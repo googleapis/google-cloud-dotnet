@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListStoragePoolTypesRequest request = new ListStoragePoolTypesRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

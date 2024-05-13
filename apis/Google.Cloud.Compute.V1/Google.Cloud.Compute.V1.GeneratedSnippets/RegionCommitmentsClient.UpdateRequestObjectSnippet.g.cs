@@ -43,7 +43,134 @@ namespace GoogleCSharpSnippets
                 Paths = "",
                 Region = "",
                 Project = "",
-                CommitmentResource = new Commitment(),
+                CommitmentResource = new Commitment
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Plan = "",
+                    Type = "",
+                    CreationTimestamp = "",
+                    Category = "",
+                    StartTimestamp = "",
+                    Region = "",
+                    Resources =
+                    {
+                        new ResourceCommitment
+                        {
+                            Type = "",
+                            AcceleratorType = "",
+                            Amount = 0L,
+                        },
+                    },
+                    Status = "",
+                    MergeSourceCommitments = { "", },
+                    StatusMessage = "",
+                    Reservations =
+                    {
+                        new Reservation
+                        {
+                            Id = 0UL,
+                            Kind = "",
+                            Name = "",
+                            Zone = "",
+                            ResourcePolicies = { { "", "" }, },
+                            CreationTimestamp = "",
+                            Status = "",
+                            SpecificReservationRequired = false,
+                            ResourceStatus = new AllocationResourceStatus
+                            {
+                                SpecificSkuAllocation = new AllocationResourceStatusSpecificSKUAllocation
+                                {
+                                    SourceInstanceTemplateId = "",
+                                },
+                            },
+                            ShareSettings = new ShareSettings
+                            {
+                                ProjectMap =
+                                {
+                                    {
+                                        "",
+                                        new ShareSettingsProjectConfig { ProjectId = "", }
+                                    },
+                                },
+                                ShareType = "",
+                            },
+                            AggregateReservation = new AllocationAggregateReservation
+                            {
+                                VmFamily = "",
+                                ReservedResources =
+                                {
+                                    new AllocationAggregateReservationReservedResourceInfo
+                                    {
+                                        Accelerator = new AllocationAggregateReservationReservedResourceInfoAccelerator
+                                        {
+                                            AcceleratorType = "",
+                                            AcceleratorCount = 0,
+                                        },
+                                    },
+                                },
+                                WorkloadType = "",
+                                InUseResources =
+                                {
+                                    new AllocationAggregateReservationReservedResourceInfo
+                                    {
+                                        Accelerator = new AllocationAggregateReservationReservedResourceInfoAccelerator
+                                        {
+                                            AcceleratorType = "",
+                                            AcceleratorCount = 0,
+                                        },
+                                    },
+                                },
+                            },
+                            SpecificReservation = new AllocationSpecificSKUReservation
+                            {
+                                Count = 0L,
+                                InstanceProperties = new AllocationSpecificSKUAllocationReservedInstanceProperties
+                                {
+                                    MachineType = "",
+                                    LocalSsds =
+                                    {
+                                        new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk
+                                        {
+                                            DiskSizeGb = 0L,
+                                            Interface = "",
+                                        },
+                                    },
+                                    MinCpuPlatform = "",
+                                    LocationHint = "",
+                                    GuestAccelerators =
+                                    {
+                                        new AcceleratorConfig
+                                        {
+                                            AcceleratorType = "",
+                                            AcceleratorCount = 0,
+                                        },
+                                    },
+                                },
+                                AssuredCount = 0L,
+                                SourceInstanceTemplate = "",
+                                InUseCount = 0L,
+                            },
+                            Description = "",
+                            SelfLink = "",
+                            SatisfiesPzs = false,
+                            Commitment = "",
+                        },
+                    },
+                    SplitSourceCommitment = "",
+                    Description = "",
+                    LicenseResource = new LicenseResourceCommitment
+                    {
+                        CoresPerLicense = "",
+                        License = "",
+                        Amount = 0L,
+                    },
+                    SelfLink = "",
+                    EndTimestamp = "",
+                    ExistingReservations = { "", },
+                    AutoRenew = false,
+                },
                 Commitment = "",
                 UpdateMask = "",
             };

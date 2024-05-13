@@ -41,7 +41,69 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            Snapshot snapshotResource = new Snapshot();
+            Snapshot snapshotResource = new Snapshot
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                SnapshotEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                LicenseCodes = { 0L, },
+                ChainName = "",
+                SourceSnapshotSchedulePolicyId = "",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature { Type = "", },
+                },
+                EnableConfidentialCompute = false,
+                SnapshotType = "",
+                CreationSizeBytes = 0L,
+                LabelFingerprint = "",
+                Status = "",
+                SourceInstantSnapshot = "",
+                SourceSnapshotSchedulePolicy = "",
+                SourceInstantSnapshotId = "",
+                Architecture = "",
+                DiskSizeGb = 0L,
+                StorageLocations = { "", },
+                Licenses = { "", },
+                LocationHint = "",
+                SourceDiskForRecoveryCheckpoint = "",
+                Description = "",
+                StorageBytes = 0L,
+                DownloadBytes = 0L,
+                SourceInstantSnapshotEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                SourceDisk = "",
+                SourceDiskId = "",
+                SelfLink = "",
+                AutoCreated = false,
+                SatisfiesPzi = false,
+                SatisfiesPzs = false,
+                StorageBytesStatus = "",
+                Labels = { { "", "" }, },
+                SourceDiskEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.CreateSnapshotAsync(project, region, disk, snapshotResource);
 

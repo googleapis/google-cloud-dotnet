@@ -38,7 +38,20 @@ namespace GoogleCSharpSnippets
             TargetHttpProxiesClient targetHttpProxiesClient = TargetHttpProxiesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            TargetHttpProxy targetHttpProxyResource = new TargetHttpProxy();
+            TargetHttpProxy targetHttpProxyResource = new TargetHttpProxy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                Region = "",
+                Fingerprint = "",
+                ProxyBind = false,
+                UrlMap = "",
+                Description = "",
+                HttpKeepAliveTimeoutSec = 0,
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = targetHttpProxiesClient.Insert(project, targetHttpProxyResource);
 

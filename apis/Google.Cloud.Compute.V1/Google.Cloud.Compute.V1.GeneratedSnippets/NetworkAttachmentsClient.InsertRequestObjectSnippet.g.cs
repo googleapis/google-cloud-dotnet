@@ -41,7 +41,36 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                NetworkAttachmentResource = new NetworkAttachment(),
+                NetworkAttachmentResource = new NetworkAttachment
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    ProducerRejectLists = { "", },
+                    CreationTimestamp = "",
+                    SelfLinkWithId = "",
+                    Region = "",
+                    ProducerAcceptLists = { "", },
+                    Network = "",
+                    Fingerprint = "",
+                    ConnectionPreference = "",
+                    ConnectionEndpoints =
+                    {
+                        new NetworkAttachmentConnectedEndpoint
+                        {
+                            SecondaryIpCidrRanges = { "", },
+                            Status = "",
+                            Subnetwork = "",
+                            Ipv6Address = "",
+                            ProjectIdOrNum = "",
+                            SubnetworkCidrRange = "",
+                            IpAddress = "",
+                        },
+                    },
+                    Subnetworks = { "", },
+                    Description = "",
+                    SelfLink = "",
+                },
                 Project = "",
             };
             // Make the request

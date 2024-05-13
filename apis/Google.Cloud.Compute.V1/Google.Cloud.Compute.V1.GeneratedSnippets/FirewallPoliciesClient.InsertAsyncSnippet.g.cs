@@ -39,7 +39,81 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string parentId = "";
-            FirewallPolicy firewallPolicyResource = new FirewallPolicy();
+            FirewallPolicy firewallPolicyResource = new FirewallPolicy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                DisplayName = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                Parent = "",
+                Rules =
+                {
+                    new FirewallPolicyRule
+                    {
+                        Kind = "",
+                        TlsInspect = false,
+                        RuleName = "",
+                        Match = new FirewallPolicyRuleMatcher
+                        {
+                            SrcRegionCodes = { "", },
+                            DestThreatIntelligences = { "", },
+                            DestRegionCodes = { "", },
+                            SrcThreatIntelligences = { "", },
+                            DestIpRanges = { "", },
+                            DestFqdns = { "", },
+                            Layer4Configs =
+                            {
+                                new FirewallPolicyRuleMatcherLayer4Config
+                                {
+                                    Ports = { "", },
+                                    IpProtocol = "",
+                                },
+                            },
+                            SrcIpRanges = { "", },
+                            SrcFqdns = { "", },
+                            SrcAddressGroups = { "", },
+                            DestAddressGroups = { "", },
+                            SrcSecureTags =
+                            {
+                                new FirewallPolicyRuleSecureTag { Name = "", State = "", },
+                            },
+                        },
+                        Direction = "",
+                        Action = "",
+                        SecurityProfileGroup = "",
+                        Disabled = false,
+                        EnableLogging = false,
+                        RuleTupleCount = 0,
+                        Description = "",
+                        Priority = 0,
+                        TargetServiceAccounts = { "", },
+                        TargetSecureTags =
+                        {
+                            new FirewallPolicyRuleSecureTag { Name = "", State = "", },
+                        },
+                        TargetResources = { "", },
+                    },
+                },
+                Region = "",
+                Fingerprint = "",
+                RuleTupleCount = 0,
+                Description = "",
+                SelfLink = "",
+                ShortName = "",
+                Associations =
+                {
+                    new FirewallPolicyAssociation
+                    {
+                        Name = "",
+                        DisplayName = "",
+                        AttachmentTarget = "",
+                        FirewallPolicyId = "",
+                        ShortName = "",
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await firewallPoliciesClient.InsertAsync(parentId, firewallPolicyResource);
 

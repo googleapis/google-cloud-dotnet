@@ -40,7 +40,46 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string firewall = "";
-            Firewall firewallResource = new Firewall();
+            Firewall firewallResource = new Firewall
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                TargetTags = { "", },
+                SourceServiceAccounts = { "", },
+                Direction = "",
+                Allowed =
+                {
+                    new Allowed
+                    {
+                        Ports = { "", },
+                        IPProtocol = "",
+                    },
+                },
+                SourceRanges = { "", },
+                Network = "",
+                Disabled = false,
+                Denied =
+                {
+                    new Denied
+                    {
+                        Ports = { "", },
+                        IPProtocol = "",
+                    },
+                },
+                DestinationRanges = { "", },
+                LogConfig = new FirewallLogConfig
+                {
+                    Metadata = "",
+                    Enable = false,
+                },
+                Description = "",
+                Priority = 0,
+                SourceTags = { "", },
+                SelfLink = "",
+                TargetServiceAccounts = { "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await firewallsClient.PatchAsync(project, firewall, firewallResource);
 

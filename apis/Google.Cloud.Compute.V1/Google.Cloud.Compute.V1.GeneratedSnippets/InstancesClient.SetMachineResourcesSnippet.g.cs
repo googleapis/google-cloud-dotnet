@@ -40,7 +40,17 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource = new InstancesSetMachineResourcesRequest();
+            InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource = new InstancesSetMachineResourcesRequest
+            {
+                GuestAccelerators =
+                {
+                    new AcceleratorConfig
+                    {
+                        AcceleratorType = "",
+                        AcceleratorCount = 0,
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetMachineResources(project, zone, instance, instancesSetMachineResourcesRequestResource);
 

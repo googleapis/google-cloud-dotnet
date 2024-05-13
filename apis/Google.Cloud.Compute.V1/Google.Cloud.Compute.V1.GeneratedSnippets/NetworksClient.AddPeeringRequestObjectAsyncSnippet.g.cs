@@ -43,7 +43,27 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 Network = "",
-                NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
+                NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest
+                {
+                    Name = "",
+                    AutoCreateRoutes = false,
+                    NetworkPeering = new NetworkPeering
+                    {
+                        Name = "",
+                        ImportSubnetRoutesWithPublicIp = false,
+                        ExchangeSubnetRoutes = false,
+                        AutoCreateRoutes = false,
+                        ExportCustomRoutes = false,
+                        PeerMtu = 0,
+                        StateDetails = "",
+                        ExportSubnetRoutesWithPublicIp = false,
+                        State = "",
+                        ImportCustomRoutes = false,
+                        Network = "",
+                        StackType = "",
+                    },
+                    PeerNetwork = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await networksClient.AddPeeringAsync(request);

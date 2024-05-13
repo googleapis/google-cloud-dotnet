@@ -40,7 +40,51 @@ namespace GoogleCSharpSnippets
             AddRuleFirewallPolicyRequest request = new AddRuleFirewallPolicyRequest
             {
                 RequestId = "",
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
+                FirewallPolicyRuleResource = new FirewallPolicyRule
+                {
+                    Kind = "",
+                    TlsInspect = false,
+                    RuleName = "",
+                    Match = new FirewallPolicyRuleMatcher
+                    {
+                        SrcRegionCodes = { "", },
+                        DestThreatIntelligences = { "", },
+                        DestRegionCodes = { "", },
+                        SrcThreatIntelligences = { "", },
+                        DestIpRanges = { "", },
+                        DestFqdns = { "", },
+                        Layer4Configs =
+                        {
+                            new FirewallPolicyRuleMatcherLayer4Config
+                            {
+                                Ports = { "", },
+                                IpProtocol = "",
+                            },
+                        },
+                        SrcIpRanges = { "", },
+                        SrcFqdns = { "", },
+                        SrcAddressGroups = { "", },
+                        DestAddressGroups = { "", },
+                        SrcSecureTags =
+                        {
+                            new FirewallPolicyRuleSecureTag { Name = "", State = "", },
+                        },
+                    },
+                    Direction = "",
+                    Action = "",
+                    SecurityProfileGroup = "",
+                    Disabled = false,
+                    EnableLogging = false,
+                    RuleTupleCount = 0,
+                    Description = "",
+                    Priority = 0,
+                    TargetServiceAccounts = { "", },
+                    TargetSecureTags =
+                    {
+                        new FirewallPolicyRuleSecureTag { Name = "", State = "", },
+                    },
+                    TargetResources = { "", },
+                },
                 FirewallPolicy = "",
             };
             // Make the request

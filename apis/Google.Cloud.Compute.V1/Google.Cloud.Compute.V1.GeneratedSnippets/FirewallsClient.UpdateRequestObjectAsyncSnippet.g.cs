@@ -41,7 +41,46 @@ namespace GoogleCSharpSnippets
             UpdateFirewallRequest request = new UpdateFirewallRequest
             {
                 RequestId = "",
-                FirewallResource = new Firewall(),
+                FirewallResource = new Firewall
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    TargetTags = { "", },
+                    SourceServiceAccounts = { "", },
+                    Direction = "",
+                    Allowed =
+                    {
+                        new Allowed
+                        {
+                            Ports = { "", },
+                            IPProtocol = "",
+                        },
+                    },
+                    SourceRanges = { "", },
+                    Network = "",
+                    Disabled = false,
+                    Denied =
+                    {
+                        new Denied
+                        {
+                            Ports = { "", },
+                            IPProtocol = "",
+                        },
+                    },
+                    DestinationRanges = { "", },
+                    LogConfig = new FirewallLogConfig
+                    {
+                        Metadata = "",
+                        Enable = false,
+                    },
+                    Description = "",
+                    Priority = 0,
+                    SourceTags = { "", },
+                    SelfLink = "",
+                    TargetServiceAccounts = { "", },
+                },
                 Project = "",
                 Firewall = "",
             };

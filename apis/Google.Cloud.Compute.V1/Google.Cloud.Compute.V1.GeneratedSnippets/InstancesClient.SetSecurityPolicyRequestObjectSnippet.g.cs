@@ -43,7 +43,11 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                InstancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest(),
+                InstancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest
+                {
+                    NetworkInterfaces = { "", },
+                    SecurityPolicy = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetSecurityPolicy(request);

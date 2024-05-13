@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             SetCloudArmorTierProjectRequest request = new SetCloudArmorTierProjectRequest
             {
                 RequestId = "",
-                ProjectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest(),
+                ProjectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest { CloudArmorTier = "", },
                 Project = "",
             };
             // Make the request

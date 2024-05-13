@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Resource = "",
                 Project = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
+                TestPermissionsRequestResource = new TestPermissionsRequest { Permissions = { "", }, },
             };
             // Make the request
             TestPermissionsResponse response = regionBackendServicesClient.TestIamPermissions(request);

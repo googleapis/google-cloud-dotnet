@@ -40,7 +40,11 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            Tags tagsResource = new Tags();
+            Tags tagsResource = new Tags
+            {
+                Items = { "", },
+                Fingerprint = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetTags(project, zone, instance, tagsResource);
 

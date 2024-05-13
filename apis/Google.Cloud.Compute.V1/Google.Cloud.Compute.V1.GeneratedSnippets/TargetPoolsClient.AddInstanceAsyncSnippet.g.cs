@@ -41,7 +41,13 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string targetPool = "";
-            TargetPoolsAddInstanceRequest targetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest();
+            TargetPoolsAddInstanceRequest targetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest
+            {
+                Instances =
+                {
+                    new InstanceReference { Instance = "", },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetPoolsClient.AddInstanceAsync(project, region, targetPool, targetPoolsAddInstanceRequestResource);
 

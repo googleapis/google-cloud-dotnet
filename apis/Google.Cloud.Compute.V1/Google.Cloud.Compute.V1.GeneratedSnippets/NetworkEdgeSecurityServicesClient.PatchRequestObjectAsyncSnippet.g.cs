@@ -45,7 +45,19 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 NetworkEdgeSecurityService = "",
                 Project = "",
-                NetworkEdgeSecurityServiceResource = new NetworkEdgeSecurityService(),
+                NetworkEdgeSecurityServiceResource = new NetworkEdgeSecurityService
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    SelfLinkWithId = "",
+                    Region = "",
+                    SecurityPolicy = "",
+                    Fingerprint = "",
+                    Description = "",
+                    SelfLink = "",
+                },
                 UpdateMask = "",
             };
             // Make the request

@@ -43,7 +43,11 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
-                RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
+                RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest
+                {
+                    Instances = { "", },
+                    SkipInstancesOnValidationError = false,
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.DeleteInstances(request);

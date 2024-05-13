@@ -44,7 +44,10 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
+                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest
+                {
+                    ResourcePolicies = { "", },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.AddResourcePoliciesAsync(request);

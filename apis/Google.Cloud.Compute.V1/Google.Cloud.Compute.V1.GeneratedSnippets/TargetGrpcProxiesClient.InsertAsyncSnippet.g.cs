@@ -39,7 +39,19 @@ namespace GoogleCSharpSnippets
             TargetGrpcProxiesClient targetGrpcProxiesClient = await TargetGrpcProxiesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            TargetGrpcProxy targetGrpcProxyResource = new TargetGrpcProxy();
+            TargetGrpcProxy targetGrpcProxyResource = new TargetGrpcProxy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                ValidateForProxyless = false,
+                Fingerprint = "",
+                UrlMap = "",
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetGrpcProxiesClient.InsertAsync(project, targetGrpcProxyResource);
 

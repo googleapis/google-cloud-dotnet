@@ -43,7 +43,62 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 ForwardingRule = "",
-                ForwardingRuleResource = new ForwardingRule(),
+                ForwardingRuleResource = new ForwardingRule
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    IPAddress = "",
+                    NoAutomateDnsZone = false,
+                    Ports = { "", },
+                    SourceIpRanges = { "", },
+                    IsMirroringCollector = false,
+                    Region = "",
+                    IpCollection = "",
+                    LabelFingerprint = "",
+                    PscConnectionStatus = "",
+                    Target = "",
+                    PortRange = "",
+                    ServiceDirectoryRegistrations =
+                    {
+                        new ForwardingRuleServiceDirectoryRegistration
+                        {
+                            ServiceDirectoryRegion = "",
+                            Namespace = "",
+                            Service = "",
+                        },
+                    },
+                    Network = "",
+                    Fingerprint = "",
+                    AllowPscGlobalAccess = false,
+                    PscConnectionId = 0UL,
+                    IpVersion = "",
+                    BackendService = "",
+                    Subnetwork = "",
+                    ServiceName = "",
+                    LoadBalancingScheme = "",
+                    ServiceLabel = "",
+                    Description = "",
+                    AllPorts = false,
+                    SelfLink = "",
+                    MetadataFilters =
+                    {
+                        new MetadataFilter
+                        {
+                            FilterMatchCriteria = "",
+                            FilterLabels =
+                            {
+                                new MetadataFilterLabelMatch { Name = "", Value = "", },
+                            },
+                        },
+                    },
+                    IPProtocol = "",
+                    AllowGlobalAccess = false,
+                    Labels = { { "", "" }, },
+                    NetworkTier = "",
+                    BaseForwardingRule = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await globalForwardingRulesClient.PatchAsync(request);

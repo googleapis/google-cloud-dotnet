@@ -40,7 +40,103 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            AttachedDisk attachedDiskResource = new AttachedDisk();
+            AttachedDisk attachedDiskResource = new AttachedDisk
+            {
+                Boot = false,
+                Kind = "",
+                Mode = "",
+                Type = "",
+                InitializeParams = new AttachedDiskInitializeParams
+                {
+                    ResourcePolicies = { "", },
+                    ReplicaZones = { "", },
+                    SourceImage = "",
+                    DiskName = "",
+                    DiskType = "",
+                    EnableConfidentialCompute = false,
+                    SourceSnapshot = "",
+                    ProvisionedIops = 0L,
+                    OnUpdateAction = "",
+                    Architecture = "",
+                    SourceSnapshotEncryptionKey = new CustomerEncryptionKey
+                    {
+                        Sha256 = "",
+                        KmsKeyServiceAccount = "",
+                        RsaEncryptedKey = "",
+                        RawKey = "",
+                        KmsKeyName = "",
+                    },
+                    DiskSizeGb = 0L,
+                    Licenses = { "", },
+                    StoragePool = "",
+                    ResourceManagerTags = { { "", "" }, },
+                    SourceImageEncryptionKey = new CustomerEncryptionKey
+                    {
+                        Sha256 = "",
+                        KmsKeyServiceAccount = "",
+                        RsaEncryptedKey = "",
+                        RawKey = "",
+                        KmsKeyName = "",
+                    },
+                    Description = "",
+                    Labels = { { "", "" }, },
+                    ProvisionedThroughput = 0L,
+                },
+                DeviceName = "",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature { Type = "", },
+                },
+                Index = 0,
+                ForceAttach = false,
+                Source = "",
+                ShieldedInstanceInitialState = new InitialStateConfig
+                {
+                    Pk = new FileContentBuffer
+                    {
+                        FileType = "",
+                        Content = "",
+                    },
+                    Dbs =
+                    {
+                        new FileContentBuffer
+                        {
+                            FileType = "",
+                            Content = "",
+                        },
+                    },
+                    Dbxs =
+                    {
+                        new FileContentBuffer
+                        {
+                            FileType = "",
+                            Content = "",
+                        },
+                    },
+                    Keks =
+                    {
+                        new FileContentBuffer
+                        {
+                            FileType = "",
+                            Content = "",
+                        },
+                    },
+                },
+                DiskEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                Architecture = "",
+                DiskSizeGb = 0L,
+                Licenses = { "", },
+                SavedState = "",
+                AutoDelete = false,
+                Interface = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.AttachDisk(project, zone, instance, attachedDiskResource);
 

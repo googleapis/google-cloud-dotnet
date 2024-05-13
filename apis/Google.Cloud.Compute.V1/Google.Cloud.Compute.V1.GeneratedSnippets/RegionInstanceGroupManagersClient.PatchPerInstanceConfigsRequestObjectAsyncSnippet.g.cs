@@ -42,7 +42,64 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                RegionInstanceGroupManagerPatchInstanceConfigReqResource = new RegionInstanceGroupManagerPatchInstanceConfigReq(),
+                RegionInstanceGroupManagerPatchInstanceConfigReqResource = new RegionInstanceGroupManagerPatchInstanceConfigReq
+                {
+                    PerInstanceConfigs =
+                    {
+                        new PerInstanceConfig
+                        {
+                            PreservedState = new PreservedState
+                            {
+                                Metadata = { { "", "" }, },
+                                Disks =
+                                {
+                                    {
+                                        "",
+                                        new PreservedStatePreservedDisk
+                                        {
+                                            Mode = "",
+                                            Source = "",
+                                            AutoDelete = "",
+                                        }
+                                    },
+                                },
+                                InternalIPs =
+                                {
+                                    {
+                                        "",
+                                        new PreservedStatePreservedNetworkIp
+                                        {
+                                            IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                            {
+                                                Literal = "",
+                                                Address = "",
+                                            },
+                                            AutoDelete = "",
+                                        }
+                                    },
+                                },
+                                ExternalIPs =
+                                {
+                                    {
+                                        "",
+                                        new PreservedStatePreservedNetworkIp
+                                        {
+                                            IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                            {
+                                                Literal = "",
+                                                Address = "",
+                                            },
+                                            AutoDelete = "",
+                                        }
+                                    },
+                                },
+                            },
+                            Name = "",
+                            Status = "",
+                            Fingerprint = "",
+                        },
+                    },
+                },
                 Project = "",
                 InstanceGroupManager = "",
             };

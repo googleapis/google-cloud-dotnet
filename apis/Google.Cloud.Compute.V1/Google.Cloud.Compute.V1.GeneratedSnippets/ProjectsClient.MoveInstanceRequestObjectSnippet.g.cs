@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
+                InstanceMoveRequestResource = new InstanceMoveRequest
+                {
+                    DestinationZone = "",
+                    TargetInstance = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.MoveInstance(request);

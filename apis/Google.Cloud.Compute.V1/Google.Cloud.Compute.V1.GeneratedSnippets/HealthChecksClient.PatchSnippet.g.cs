@@ -39,7 +39,77 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string healthCheck = "";
-            HealthCheck healthCheckResource = new HealthCheck();
+            HealthCheck healthCheckResource = new HealthCheck
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Type = "",
+                Http2HealthCheck = new HTTP2HealthCheck
+                {
+                    Host = "",
+                    Port = 0,
+                    PortName = "",
+                    PortSpecification = "",
+                    ProxyHeader = "",
+                    Response = "",
+                    RequestPath = "",
+                },
+                CreationTimestamp = "",
+                TimeoutSec = 0,
+                GrpcHealthCheck = new GRPCHealthCheck
+                {
+                    Port = 0,
+                    PortName = "",
+                    PortSpecification = "",
+                    GrpcServiceName = "",
+                },
+                Region = "",
+                UnhealthyThreshold = 0,
+                SslHealthCheck = new SSLHealthCheck
+                {
+                    Port = 0,
+                    Request = "",
+                    PortName = "",
+                    PortSpecification = "",
+                    ProxyHeader = "",
+                    Response = "",
+                },
+                CheckIntervalSec = 0,
+                LogConfig = new HealthCheckLogConfig { Enable = false, },
+                HealthyThreshold = 0,
+                HttpHealthCheck = new HTTPHealthCheck
+                {
+                    Host = "",
+                    Port = 0,
+                    PortName = "",
+                    PortSpecification = "",
+                    ProxyHeader = "",
+                    Response = "",
+                    RequestPath = "",
+                },
+                Description = "",
+                HttpsHealthCheck = new HTTPSHealthCheck
+                {
+                    Host = "",
+                    Port = 0,
+                    PortName = "",
+                    PortSpecification = "",
+                    ProxyHeader = "",
+                    Response = "",
+                    RequestPath = "",
+                },
+                SelfLink = "",
+                TcpHealthCheck = new TCPHealthCheck
+                {
+                    Port = 0,
+                    Request = "",
+                    PortName = "",
+                    PortSpecification = "",
+                    ProxyHeader = "",
+                    Response = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = healthChecksClient.Patch(project, healthCheck, healthCheckResource);
 

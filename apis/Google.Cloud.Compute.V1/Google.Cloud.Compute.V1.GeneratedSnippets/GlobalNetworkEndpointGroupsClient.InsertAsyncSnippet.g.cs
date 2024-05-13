@@ -39,7 +39,47 @@ namespace GoogleCSharpSnippets
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = await GlobalNetworkEndpointGroupsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup();
+            NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Size = 0,
+                Zone = "",
+                CreationTimestamp = "",
+                PscData = new NetworkEndpointGroupPscData
+                {
+                    PscConnectionStatus = "",
+                    PscConnectionId = 0UL,
+                    ConsumerPscAddress = "",
+                },
+                CloudRun = new NetworkEndpointGroupCloudRun
+                {
+                    Tag = "",
+                    UrlMask = "",
+                    Service = "",
+                },
+                Annotations = { { "", "" }, },
+                NetworkEndpointType = "",
+                Region = "",
+                Network = "",
+                PscTargetService = "",
+                Subnetwork = "",
+                AppEngine = new NetworkEndpointGroupAppEngine
+                {
+                    UrlMask = "",
+                    Version = "",
+                    Service = "",
+                },
+                Description = "",
+                DefaultPort = 0,
+                SelfLink = "",
+                CloudFunction = new NetworkEndpointGroupCloudFunction
+                {
+                    UrlMask = "",
+                    Function = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.InsertAsync(project, networkEndpointGroupResource);
 

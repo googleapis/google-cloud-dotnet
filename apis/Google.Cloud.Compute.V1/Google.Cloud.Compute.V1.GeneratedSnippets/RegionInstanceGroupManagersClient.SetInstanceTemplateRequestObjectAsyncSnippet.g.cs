@@ -42,7 +42,10 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                RegionInstanceGroupManagersSetTemplateRequestResource = new RegionInstanceGroupManagersSetTemplateRequest(),
+                RegionInstanceGroupManagersSetTemplateRequestResource = new RegionInstanceGroupManagersSetTemplateRequest
+                {
+                    InstanceTemplate = "",
+                },
                 Project = "",
                 InstanceGroupManager = "",
             };

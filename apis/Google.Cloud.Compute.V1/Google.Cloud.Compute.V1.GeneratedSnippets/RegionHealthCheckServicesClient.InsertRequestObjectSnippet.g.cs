@@ -42,7 +42,21 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                HealthCheckServiceResource = new HealthCheckService(),
+                HealthCheckServiceResource = new HealthCheckService
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    NetworkEndpointGroups = { "", },
+                    CreationTimestamp = "",
+                    Region = "",
+                    Fingerprint = "",
+                    HealthStatusAggregationPolicy = "",
+                    NotificationEndpoints = { "", },
+                    Description = "",
+                    HealthChecks = { "", },
+                    SelfLink = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionHealthCheckServicesClient.Insert(request);

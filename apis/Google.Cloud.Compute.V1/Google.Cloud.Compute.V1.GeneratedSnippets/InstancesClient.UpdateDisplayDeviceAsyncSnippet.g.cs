@@ -41,7 +41,10 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            DisplayDevice displayDeviceResource = new DisplayDevice();
+            DisplayDevice displayDeviceResource = new DisplayDevice
+            {
+                EnableDisplay = false,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.UpdateDisplayDeviceAsync(project, zone, instance, displayDeviceResource);
 

@@ -40,7 +40,13 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest request = new ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest
             {
-                RegionInstanceGroupManagersApplyUpdatesRequestResource = new RegionInstanceGroupManagersApplyUpdatesRequest(),
+                RegionInstanceGroupManagersApplyUpdatesRequestResource = new RegionInstanceGroupManagersApplyUpdatesRequest
+                {
+                    Instances = { "", },
+                    MostDisruptiveAllowedAction = "",
+                    MinimalAction = "",
+                    AllInstances = false,
+                },
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",

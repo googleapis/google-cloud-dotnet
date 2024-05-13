@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string urlMap = "";
-            CacheInvalidationRule cacheInvalidationRuleResource = new CacheInvalidationRule();
+            CacheInvalidationRule cacheInvalidationRuleResource = new CacheInvalidationRule { Host = "", Path = "", };
             // Make the request
             lro::Operation<Operation, Operation> response = urlMapsClient.InvalidateCache(project, urlMap, cacheInvalidationRuleResource);
 

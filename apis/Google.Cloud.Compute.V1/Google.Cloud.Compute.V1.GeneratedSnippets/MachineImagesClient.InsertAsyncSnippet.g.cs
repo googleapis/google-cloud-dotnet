@@ -39,7 +39,463 @@ namespace GoogleCSharpSnippets
             MachineImagesClient machineImagesClient = await MachineImagesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            MachineImage machineImageResource = new MachineImage();
+            MachineImage machineImageResource = new MachineImage
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                TotalStorageBytes = 0L,
+                Status = "",
+                InstanceProperties = new InstanceProperties
+                {
+                    Tags = new Tags
+                    {
+                        Items = { "", },
+                        Fingerprint = "",
+                    },
+                    ShieldedInstanceConfig = new ShieldedInstanceConfig
+                    {
+                        EnableSecureBoot = false,
+                        EnableVtpm = false,
+                        EnableIntegrityMonitoring = false,
+                    },
+                    ResourcePolicies = { "", },
+                    PrivateIpv6GoogleAccess = "",
+                    NetworkInterfaces =
+                    {
+                        new NetworkInterface
+                        {
+                            Kind = "",
+                            Name = "",
+                            NicType = "",
+                            AccessConfigs =
+                            {
+                                new AccessConfig
+                                {
+                                    Kind = "",
+                                    Name = "",
+                                    Type = "",
+                                    NatIP = "",
+                                    SecurityPolicy = "",
+                                    PublicPtrDomainName = "",
+                                    ExternalIpv6PrefixLength = 0,
+                                    NetworkTier = "",
+                                    SetPublicPtr = false,
+                                    ExternalIpv6 = "",
+                                },
+                            },
+                            AliasIpRanges =
+                            {
+                                new AliasIpRange
+                                {
+                                    IpCidrRange = "",
+                                    SubnetworkRangeName = "",
+                                },
+                            },
+                            InternalIpv6PrefixLength = 0,
+                            NetworkIP = "",
+                            NetworkAttachment = "",
+                            Network = "",
+                            Fingerprint = "",
+                            Subnetwork = "",
+                            Ipv6Address = "",
+                            StackType = "",
+                            Ipv6AccessConfigs =
+                            {
+                                new AccessConfig
+                                {
+                                    Kind = "",
+                                    Name = "",
+                                    Type = "",
+                                    NatIP = "",
+                                    SecurityPolicy = "",
+                                    PublicPtrDomainName = "",
+                                    ExternalIpv6PrefixLength = 0,
+                                    NetworkTier = "",
+                                    SetPublicPtr = false,
+                                    ExternalIpv6 = "",
+                                },
+                            },
+                            QueueCount = 0,
+                            Ipv6AccessType = "",
+                        },
+                    },
+                    Metadata = new Metadata
+                    {
+                        Kind = "",
+                        Items =
+                        {
+                            new Items { Key = "", Value = "", },
+                        },
+                        Fingerprint = "",
+                    },
+                    Disks =
+                    {
+                        new AttachedDisk
+                        {
+                            Boot = false,
+                            Kind = "",
+                            Mode = "",
+                            Type = "",
+                            InitializeParams = new AttachedDiskInitializeParams
+                            {
+                                ResourcePolicies = { "", },
+                                ReplicaZones = { "", },
+                                SourceImage = "",
+                                DiskName = "",
+                                DiskType = "",
+                                EnableConfidentialCompute = false,
+                                SourceSnapshot = "",
+                                ProvisionedIops = 0L,
+                                OnUpdateAction = "",
+                                Architecture = "",
+                                SourceSnapshotEncryptionKey = new CustomerEncryptionKey
+                                {
+                                    Sha256 = "",
+                                    KmsKeyServiceAccount = "",
+                                    RsaEncryptedKey = "",
+                                    RawKey = "",
+                                    KmsKeyName = "",
+                                },
+                                DiskSizeGb = 0L,
+                                Licenses = { "", },
+                                StoragePool = "",
+                                ResourceManagerTags = { { "", "" }, },
+                                SourceImageEncryptionKey = new CustomerEncryptionKey
+                                {
+                                    Sha256 = "",
+                                    KmsKeyServiceAccount = "",
+                                    RsaEncryptedKey = "",
+                                    RawKey = "",
+                                    KmsKeyName = "",
+                                },
+                                Description = "",
+                                Labels = { { "", "" }, },
+                                ProvisionedThroughput = 0L,
+                            },
+                            DeviceName = "",
+                            GuestOsFeatures =
+                            {
+                                new GuestOsFeature { Type = "", },
+                            },
+                            Index = 0,
+                            ForceAttach = false,
+                            Source = "",
+                            ShieldedInstanceInitialState = new InitialStateConfig
+                            {
+                                Pk = new FileContentBuffer
+                                {
+                                    FileType = "",
+                                    Content = "",
+                                },
+                                Dbs =
+                                {
+                                    new FileContentBuffer
+                                    {
+                                        FileType = "",
+                                        Content = "",
+                                    },
+                                },
+                                Dbxs =
+                                {
+                                    new FileContentBuffer
+                                    {
+                                        FileType = "",
+                                        Content = "",
+                                    },
+                                },
+                                Keks =
+                                {
+                                    new FileContentBuffer
+                                    {
+                                        FileType = "",
+                                        Content = "",
+                                    },
+                                },
+                            },
+                            DiskEncryptionKey = new CustomerEncryptionKey
+                            {
+                                Sha256 = "",
+                                KmsKeyServiceAccount = "",
+                                RsaEncryptedKey = "",
+                                RawKey = "",
+                                KmsKeyName = "",
+                            },
+                            Architecture = "",
+                            DiskSizeGb = 0L,
+                            Licenses = { "", },
+                            SavedState = "",
+                            AutoDelete = false,
+                            Interface = "",
+                        },
+                    },
+                    ReservationAffinity = new ReservationAffinity
+                    {
+                        Key = "",
+                        Values = { "", },
+                        ConsumeReservationType = "",
+                    },
+                    MachineType = "",
+                    KeyRevocationActionType = "",
+                    MinCpuPlatform = "",
+                    ServiceAccounts =
+                    {
+                        new ServiceAccount
+                        {
+                            Email = "",
+                            Scopes = { "", },
+                        },
+                    },
+                    ResourceManagerTags = { { "", "" }, },
+                    Scheduling = new Scheduling
+                    {
+                        ProvisioningModel = "",
+                        OnHostMaintenance = "",
+                        InstanceTerminationAction = "",
+                        LocalSsdRecoveryTimeout = new Duration
+                        {
+                            Nanos = 0,
+                            Seconds = 0L,
+                        },
+                        MinNodeCpus = 0,
+                        Preemptible = false,
+                        LocationHint = "",
+                        AutomaticRestart = false,
+                        NodeAffinities =
+                        {
+                            new SchedulingNodeAffinity
+                            {
+                                Key = "",
+                                Operator = "",
+                                Values = { "", },
+                            },
+                        },
+                    },
+                    NetworkPerformanceConfig = new NetworkPerformanceConfig
+                    {
+                        TotalEgressBandwidthTier = "",
+                    },
+                    AdvancedMachineFeatures = new AdvancedMachineFeatures
+                    {
+                        EnableNestedVirtualization = false,
+                        VisibleCoreCount = 0,
+                        EnableUefiNetworking = false,
+                        ThreadsPerCore = 0,
+                    },
+                    Description = "",
+                    GuestAccelerators =
+                    {
+                        new AcceleratorConfig
+                        {
+                            AcceleratorType = "",
+                            AcceleratorCount = 0,
+                        },
+                    },
+                    CanIpForward = false,
+                    ConfidentialInstanceConfig = new ConfidentialInstanceConfig
+                    {
+                        EnableConfidentialCompute = false,
+                    },
+                    Labels = { { "", "" }, },
+                },
+                StorageLocations = { "", },
+                SourceDiskEncryptionKeys =
+                {
+                    new SourceDiskEncryptionKey
+                    {
+                        DiskEncryptionKey = new CustomerEncryptionKey
+                        {
+                            Sha256 = "",
+                            KmsKeyServiceAccount = "",
+                            RsaEncryptedKey = "",
+                            RawKey = "",
+                            KmsKeyName = "",
+                        },
+                        SourceDisk = "",
+                    },
+                },
+                GuestFlush = false,
+                SourceInstance = "",
+                SavedDisks =
+                {
+                    new SavedDisk
+                    {
+                        Kind = "",
+                        Architecture = "",
+                        StorageBytes = 0L,
+                        SourceDisk = "",
+                        StorageBytesStatus = "",
+                    },
+                },
+                Description = "",
+                SelfLink = "",
+                SourceInstanceProperties = new SourceInstanceProperties
+                {
+                    Tags = new Tags
+                    {
+                        Items = { "", },
+                        Fingerprint = "",
+                    },
+                    NetworkInterfaces =
+                    {
+                        new NetworkInterface
+                        {
+                            Kind = "",
+                            Name = "",
+                            NicType = "",
+                            AccessConfigs =
+                            {
+                                new AccessConfig
+                                {
+                                    Kind = "",
+                                    Name = "",
+                                    Type = "",
+                                    NatIP = "",
+                                    SecurityPolicy = "",
+                                    PublicPtrDomainName = "",
+                                    ExternalIpv6PrefixLength = 0,
+                                    NetworkTier = "",
+                                    SetPublicPtr = false,
+                                    ExternalIpv6 = "",
+                                },
+                            },
+                            AliasIpRanges =
+                            {
+                                new AliasIpRange
+                                {
+                                    IpCidrRange = "",
+                                    SubnetworkRangeName = "",
+                                },
+                            },
+                            InternalIpv6PrefixLength = 0,
+                            NetworkIP = "",
+                            NetworkAttachment = "",
+                            Network = "",
+                            Fingerprint = "",
+                            Subnetwork = "",
+                            Ipv6Address = "",
+                            StackType = "",
+                            Ipv6AccessConfigs =
+                            {
+                                new AccessConfig
+                                {
+                                    Kind = "",
+                                    Name = "",
+                                    Type = "",
+                                    NatIP = "",
+                                    SecurityPolicy = "",
+                                    PublicPtrDomainName = "",
+                                    ExternalIpv6PrefixLength = 0,
+                                    NetworkTier = "",
+                                    SetPublicPtr = false,
+                                    ExternalIpv6 = "",
+                                },
+                            },
+                            QueueCount = 0,
+                            Ipv6AccessType = "",
+                        },
+                    },
+                    Metadata = new Metadata
+                    {
+                        Kind = "",
+                        Items =
+                        {
+                            new Items { Key = "", Value = "", },
+                        },
+                        Fingerprint = "",
+                    },
+                    Disks =
+                    {
+                        new SavedAttachedDisk
+                        {
+                            Boot = false,
+                            Kind = "",
+                            Mode = "",
+                            Type = "",
+                            DeviceName = "",
+                            GuestOsFeatures =
+                            {
+                                new GuestOsFeature { Type = "", },
+                            },
+                            DiskType = "",
+                            Index = 0,
+                            Source = "",
+                            DiskEncryptionKey = new CustomerEncryptionKey
+                            {
+                                Sha256 = "",
+                                KmsKeyServiceAccount = "",
+                                RsaEncryptedKey = "",
+                                RawKey = "",
+                                KmsKeyName = "",
+                            },
+                            DiskSizeGb = 0L,
+                            Licenses = { "", },
+                            StorageBytes = 0L,
+                            AutoDelete = false,
+                            StorageBytesStatus = "",
+                            Interface = "",
+                        },
+                    },
+                    MachineType = "",
+                    KeyRevocationActionType = "",
+                    MinCpuPlatform = "",
+                    ServiceAccounts =
+                    {
+                        new ServiceAccount
+                        {
+                            Email = "",
+                            Scopes = { "", },
+                        },
+                    },
+                    Scheduling = new Scheduling
+                    {
+                        ProvisioningModel = "",
+                        OnHostMaintenance = "",
+                        InstanceTerminationAction = "",
+                        LocalSsdRecoveryTimeout = new Duration
+                        {
+                            Nanos = 0,
+                            Seconds = 0L,
+                        },
+                        MinNodeCpus = 0,
+                        Preemptible = false,
+                        LocationHint = "",
+                        AutomaticRestart = false,
+                        NodeAffinities =
+                        {
+                            new SchedulingNodeAffinity
+                            {
+                                Key = "",
+                                Operator = "",
+                                Values = { "", },
+                            },
+                        },
+                    },
+                    Description = "",
+                    DeletionProtection = false,
+                    GuestAccelerators =
+                    {
+                        new AcceleratorConfig
+                        {
+                            AcceleratorType = "",
+                            AcceleratorCount = 0,
+                        },
+                    },
+                    CanIpForward = false,
+                    Labels = { { "", "" }, },
+                },
+                SatisfiesPzi = false,
+                SatisfiesPzs = false,
+                MachineImageEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await machineImagesClient.InsertAsync(project, machineImageResource);
 

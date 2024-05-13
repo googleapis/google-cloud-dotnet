@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string resource = "";
-            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest { Permissions = { "", }, };
             // Make the request
             TestPermissionsResponse response = await nodeGroupsClient.TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource);
         }

@@ -43,7 +43,30 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                SchedulingResource = new Scheduling(),
+                SchedulingResource = new Scheduling
+                {
+                    ProvisioningModel = "",
+                    OnHostMaintenance = "",
+                    InstanceTerminationAction = "",
+                    LocalSsdRecoveryTimeout = new Duration
+                    {
+                        Nanos = 0,
+                        Seconds = 0L,
+                    },
+                    MinNodeCpus = 0,
+                    Preemptible = false,
+                    LocationHint = "",
+                    AutomaticRestart = false,
+                    NodeAffinities =
+                    {
+                        new SchedulingNodeAffinity
+                        {
+                            Key = "",
+                            Operator = "",
+                            Values = { "", },
+                        },
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetScheduling(request);

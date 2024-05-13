@@ -43,7 +43,13 @@ namespace GoogleCSharpSnippets
                 TargetPool = "",
                 Region = "",
                 Project = "",
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest
+                {
+                    HealthChecks =
+                    {
+                        new HealthCheckReference { HealthCheck = "", },
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = targetPoolsClient.RemoveHealthCheck(request);

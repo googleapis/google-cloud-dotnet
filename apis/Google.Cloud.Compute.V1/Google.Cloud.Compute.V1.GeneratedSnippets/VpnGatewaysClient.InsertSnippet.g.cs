@@ -39,7 +39,31 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            VpnGateway vpnGatewayResource = new VpnGateway();
+            VpnGateway vpnGatewayResource = new VpnGateway
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                GatewayIpVersion = "",
+                VpnInterfaces =
+                {
+                    new VpnGatewayVpnGatewayInterface
+                    {
+                        Id = 0U,
+                        InterconnectAttachment = "",
+                        Ipv6Address = "",
+                        IpAddress = "",
+                    },
+                },
+                Region = "",
+                LabelFingerprint = "",
+                Network = "",
+                Description = "",
+                StackType = "",
+                SelfLink = "",
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = vpnGatewaysClient.Insert(project, region, vpnGatewayResource);
 

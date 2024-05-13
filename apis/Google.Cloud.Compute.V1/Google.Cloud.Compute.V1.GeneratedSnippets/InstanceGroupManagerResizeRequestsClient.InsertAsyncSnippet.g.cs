@@ -41,7 +41,128 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagerResizeRequest instanceGroupManagerResizeRequestResource = new InstanceGroupManagerResizeRequest();
+            InstanceGroupManagerResizeRequest instanceGroupManagerResizeRequestResource = new InstanceGroupManagerResizeRequest
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Zone = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                State = "",
+                Status = new InstanceGroupManagerResizeRequestStatus
+                {
+                    Error = new Error
+                    {
+                        Errors =
+                        {
+                            new Errors
+                            {
+                                Code = "",
+                                ErrorDetails =
+                                {
+                                    new ErrorDetails
+                                    {
+                                        Help = new Help
+                                        {
+                                            Links =
+                                            {
+                                                new HelpLink
+                                                {
+                                                    Url = "",
+                                                    Description = "",
+                                                },
+                                            },
+                                        },
+                                        ErrorInfo = new ErrorInfo
+                                        {
+                                            Metadatas = { { "", "" }, },
+                                            Reason = "",
+                                            Domain = "",
+                                        },
+                                        QuotaInfo = new QuotaExceededInfo
+                                        {
+                                            Limit = 0,
+                                            LimitName = "",
+                                            MetricName = "",
+                                            Dimensions = { { "", "" }, },
+                                            FutureLimit = 0,
+                                            RolloutStatus = "",
+                                        },
+                                        LocalizedMessage = new LocalizedMessage
+                                        {
+                                            Message = "",
+                                            Locale = "",
+                                        },
+                                    },
+                                },
+                                Location = "",
+                                Message = "",
+                            },
+                        },
+                    },
+                    LastAttempt = new InstanceGroupManagerResizeRequestStatusLastAttempt
+                    {
+                        Error = new Error
+                        {
+                            Errors =
+                            {
+                                new Errors
+                                {
+                                    Code = "",
+                                    ErrorDetails =
+                                    {
+                                        new ErrorDetails
+                                        {
+                                            Help = new Help
+                                            {
+                                                Links =
+                                                {
+                                                    new HelpLink
+                                                    {
+                                                        Url = "",
+                                                        Description = "",
+                                                    },
+                                                },
+                                            },
+                                            ErrorInfo = new ErrorInfo
+                                            {
+                                                Metadatas = { { "", "" }, },
+                                                Reason = "",
+                                                Domain = "",
+                                            },
+                                            QuotaInfo = new QuotaExceededInfo
+                                            {
+                                                Limit = 0,
+                                                LimitName = "",
+                                                MetricName = "",
+                                                Dimensions = { { "", "" }, },
+                                                FutureLimit = 0,
+                                                RolloutStatus = "",
+                                            },
+                                            LocalizedMessage = new LocalizedMessage
+                                            {
+                                                Message = "",
+                                                Locale = "",
+                                            },
+                                        },
+                                    },
+                                    Location = "",
+                                    Message = "",
+                                },
+                            },
+                        },
+                    },
+                },
+                RequestedRunDuration = new Duration
+                {
+                    Nanos = 0,
+                    Seconds = 0L,
+                },
+                Description = "",
+                SelfLink = "",
+                ResizeBy = 0,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagerResizeRequestsClient.InsertAsync(project, zone, instanceGroupManager, instanceGroupManagerResizeRequestResource);
 

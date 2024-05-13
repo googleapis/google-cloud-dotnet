@@ -41,7 +41,50 @@ namespace GoogleCSharpSnippets
             InsertSubnetworkRequest request = new InsertSubnetworkRequest
             {
                 RequestId = "",
-                SubnetworkResource = new Subnetwork(),
+                SubnetworkResource = new Subnetwork
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Role = "",
+                    CreationTimestamp = "",
+                    PrivateIpv6GoogleAccess = "",
+                    IpCidrRange = "",
+                    State = "",
+                    SecondaryIpRanges =
+                    {
+                        new SubnetworkSecondaryRange
+                        {
+                            IpCidrRange = "",
+                            ReservedInternalRange = "",
+                            RangeName = "",
+                        },
+                    },
+                    Region = "",
+                    ExternalIpv6Prefix = "",
+                    EnableFlowLogs = false,
+                    Network = "",
+                    Fingerprint = "",
+                    Ipv6CidrRange = "",
+                    ReservedInternalRange = "",
+                    Purpose = "",
+                    LogConfig = new SubnetworkLogConfig
+                    {
+                        Metadata = "",
+                        AggregationInterval = "",
+                        FilterExpr = "",
+                        Enable = false,
+                        MetadataFields = { "", },
+                        FlowSampling = 0F,
+                    },
+                    PrivateIpGoogleAccess = false,
+                    Description = "",
+                    StackType = "",
+                    SelfLink = "",
+                    GatewayAddress = "",
+                    Ipv6AccessType = "",
+                    InternalIpv6Prefix = "",
+                },
                 Region = "",
                 Project = "",
             };

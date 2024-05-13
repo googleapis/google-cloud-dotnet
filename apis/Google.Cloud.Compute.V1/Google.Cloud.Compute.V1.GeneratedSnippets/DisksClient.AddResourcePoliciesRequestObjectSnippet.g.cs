@@ -43,7 +43,10 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                DisksAddResourcePoliciesRequestResource = new DisksAddResourcePoliciesRequest(),
+                DisksAddResourcePoliciesRequestResource = new DisksAddResourcePoliciesRequest
+                {
+                    ResourcePolicies = { "", },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = disksClient.AddResourcePolicies(request);

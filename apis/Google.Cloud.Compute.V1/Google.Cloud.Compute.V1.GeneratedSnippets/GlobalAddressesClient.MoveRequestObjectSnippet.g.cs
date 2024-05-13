@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                GlobalAddressesMoveRequestResource = new GlobalAddressesMoveRequest(),
+                GlobalAddressesMoveRequestResource = new GlobalAddressesMoveRequest
+                {
+                    DestinationAddress = "",
+                    Description = "",
+                },
                 Address = "",
             };
             // Make the request

@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListNodeGroupsRequest request = new ListNodeGroupsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

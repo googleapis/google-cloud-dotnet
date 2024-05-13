@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 TargetSslProxy = "",
-                TargetSslProxiesSetCertificateMapRequestResource = new TargetSslProxiesSetCertificateMapRequest(),
+                TargetSslProxiesSetCertificateMapRequestResource = new TargetSslProxiesSetCertificateMapRequest { CertificateMap = "", },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = targetSslProxiesClient.SetCertificateMap(request);

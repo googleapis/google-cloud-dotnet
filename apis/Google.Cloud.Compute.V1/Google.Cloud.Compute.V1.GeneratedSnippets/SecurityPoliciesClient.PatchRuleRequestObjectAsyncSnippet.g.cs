@@ -43,7 +43,118 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 Project = "",
                 ValidateOnly = false,
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                SecurityPolicyRuleResource = new SecurityPolicyRule
+                {
+                    Kind = "",
+                    RateLimitOptions = new SecurityPolicyRuleRateLimitOptions
+                    {
+                        EnforceOnKeyConfigs =
+                        {
+                            new SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig
+                            {
+                                EnforceOnKeyName = "",
+                                EnforceOnKeyType = "",
+                            },
+                        },
+                        BanDurationSec = 0,
+                        EnforceOnKeyName = "",
+                        ExceedAction = "",
+                        RateLimitThreshold = new SecurityPolicyRuleRateLimitOptionsThreshold
+                        {
+                            IntervalSec = 0,
+                            Count = 0,
+                        },
+                        EnforceOnKey = "",
+                        ExceedRedirectOptions = new SecurityPolicyRuleRedirectOptions { Type = "", Target = "", },
+                        BanThreshold = new SecurityPolicyRuleRateLimitOptionsThreshold
+                        {
+                            IntervalSec = 0,
+                            Count = 0,
+                        },
+                        ConformAction = "",
+                    },
+                    Match = new SecurityPolicyRuleMatcher
+                    {
+                        Expr = new Expr
+                        {
+                            Title = "",
+                            Location = "",
+                            Expression = "",
+                            Description = "",
+                        },
+                        Config = new SecurityPolicyRuleMatcherConfig { SrcIpRanges = { "", }, },
+                        VersionedExpr = "",
+                        ExprOptions = new SecurityPolicyRuleMatcherExprOptions
+                        {
+                            RecaptchaOptions = new SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions
+                            {
+                                ActionTokenSiteKeys = { "", },
+                                SessionTokenSiteKeys = { "", },
+                            },
+                        },
+                    },
+                    PreconfiguredWafConfig = new SecurityPolicyRulePreconfiguredWafConfig
+                    {
+                        Exclusions =
+                        {
+                            new SecurityPolicyRulePreconfiguredWafConfigExclusion
+                            {
+                                RequestHeadersToExclude =
+                                {
+                                    new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                },
+                                RequestUrisToExclude =
+                                {
+                                    new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                },
+                                RequestCookiesToExclude =
+                                {
+                                    new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                },
+                                RequestQueryParamsToExclude =
+                                {
+                                    new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                },
+                                TargetRuleIds = { "", },
+                                TargetRuleSet = "",
+                            },
+                        },
+                    },
+                    RedirectOptions = new SecurityPolicyRuleRedirectOptions { Type = "", Target = "", },
+                    Action = "",
+                    Preview = false,
+                    HeaderAction = new SecurityPolicyRuleHttpHeaderAction
+                    {
+                        RequestHeadersToAdds =
+                        {
+                            new SecurityPolicyRuleHttpHeaderActionHttpHeaderOption
+                            {
+                                HeaderName = "",
+                                HeaderValue = "",
+                            },
+                        },
+                    },
+                    Description = "",
+                    Priority = 0,
+                    NetworkMatch = new SecurityPolicyRuleNetworkMatcher
+                    {
+                        UserDefinedFields =
+                        {
+                            new SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch
+                            {
+                                Name = "",
+                                Values = { "", },
+                            },
+                        },
+                        SrcRegionCodes = { "", },
+                        SrcAsns = { 0U, },
+                        IpProtocols = { "", },
+                        DestIpRanges = { "", },
+                        DestPorts = { "", },
+                        SrcIpRanges = { "", },
+                        SrcPorts = { "", },
+                    },
+                },
                 Priority = 0,
                 UpdateMask = "",
             };

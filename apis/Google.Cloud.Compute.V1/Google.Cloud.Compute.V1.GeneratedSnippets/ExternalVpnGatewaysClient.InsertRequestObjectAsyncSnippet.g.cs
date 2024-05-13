@@ -42,7 +42,27 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                ExternalVpnGatewayResource = new ExternalVpnGateway(),
+                ExternalVpnGatewayResource = new ExternalVpnGateway
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Interfaces =
+                    {
+                        new ExternalVpnGatewayInterface
+                        {
+                            Id = 0U,
+                            Ipv6Address = "",
+                            IpAddress = "",
+                        },
+                    },
+                    CreationTimestamp = "",
+                    LabelFingerprint = "",
+                    RedundancyType = "",
+                    Description = "",
+                    SelfLink = "",
+                    Labels = { { "", "" }, },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.InsertAsync(request);

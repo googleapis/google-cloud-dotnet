@@ -42,7 +42,71 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                InterconnectResource = new Interconnect(),
+                InterconnectResource = new Interconnect
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CustomerName = "",
+                    NocContactEmail = "",
+                    CreationTimestamp = "",
+                    RequestedLinkCount = 0,
+                    State = "",
+                    CircuitInfos =
+                    {
+                        new InterconnectCircuitInfo
+                        {
+                            CustomerDemarcId = "",
+                            GoogleCircuitId = "",
+                            GoogleDemarcId = "",
+                        },
+                    },
+                    LabelFingerprint = "",
+                    MacsecEnabled = false,
+                    OperationalStatus = "",
+                    PeerIpAddress = "",
+                    ExpectedOutages =
+                    {
+                        new InterconnectOutageNotification
+                        {
+                            Name = "",
+                            StartTime = 0L,
+                            State = "",
+                            EndTime = 0L,
+                            Source = "",
+                            AffectedCircuits = { "", },
+                            IssueType = "",
+                            Description = "",
+                        },
+                    },
+                    Location = "",
+                    RemoteLocation = "",
+                    ProvisionedLinkCount = 0,
+                    Description = "",
+                    InterconnectAttachments = { "", },
+                    GoogleIpAddress = "",
+                    AdminEnabled = false,
+                    SelfLink = "",
+                    RequestedFeatures = { "", },
+                    SatisfiesPzs = false,
+                    AvailableFeatures = { "", },
+                    Labels = { { "", "" }, },
+                    InterconnectType = "",
+                    LinkType = "",
+                    Macsec = new InterconnectMacsec
+                    {
+                        PreSharedKeys =
+                        {
+                            new InterconnectMacsecPreSharedKey
+                            {
+                                Name = "",
+                                StartTime = "",
+                            },
+                        },
+                        FailOpen = false,
+                    },
+                    GoogleReferenceId = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await interconnectsClient.InsertAsync(request);

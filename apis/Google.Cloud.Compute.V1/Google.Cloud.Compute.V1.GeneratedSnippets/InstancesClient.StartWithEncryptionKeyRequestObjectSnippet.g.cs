@@ -43,7 +43,24 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                InstancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest(),
+                InstancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest
+                {
+                    Disks =
+                    {
+                        new CustomerEncryptionKeyProtectedDisk
+                        {
+                            Source = "",
+                            DiskEncryptionKey = new CustomerEncryptionKey
+                            {
+                                Sha256 = "",
+                                KmsKeyServiceAccount = "",
+                                RsaEncryptedKey = "",
+                                RawKey = "",
+                                KmsKeyName = "",
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.StartWithEncryptionKey(request);

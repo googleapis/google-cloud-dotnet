@@ -43,7 +43,13 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 InstanceGroup = "",
                 Project = "",
-                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest(),
+                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest
+                {
+                    Instances =
+                    {
+                        new InstanceReference { Instance = "", },
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupsClient.AddInstances(request);

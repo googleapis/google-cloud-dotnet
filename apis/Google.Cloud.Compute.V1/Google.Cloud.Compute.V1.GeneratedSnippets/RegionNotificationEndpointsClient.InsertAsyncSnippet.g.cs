@@ -40,7 +40,28 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NotificationEndpoint notificationEndpointResource = new NotificationEndpoint();
+            NotificationEndpoint notificationEndpointResource = new NotificationEndpoint
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                Region = "",
+                Description = "",
+                GrpcSettings = new NotificationEndpointGrpcSettings
+                {
+                    RetryDurationSec = 0U,
+                    Endpoint = "",
+                    PayloadName = "",
+                    Authority = "",
+                    ResendInterval = new Duration
+                    {
+                        Nanos = 0,
+                        Seconds = 0L,
+                    },
+                },
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.InsertAsync(project, region, notificationEndpointResource);
 

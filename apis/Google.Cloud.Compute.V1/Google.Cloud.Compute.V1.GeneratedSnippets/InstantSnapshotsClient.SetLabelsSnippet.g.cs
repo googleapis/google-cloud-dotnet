@@ -40,7 +40,11 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string resource = "";
-            ZoneSetLabelsRequest zoneSetLabelsRequestResource = new ZoneSetLabelsRequest();
+            ZoneSetLabelsRequest zoneSetLabelsRequestResource = new ZoneSetLabelsRequest
+            {
+                LabelFingerprint = "",
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instantSnapshotsClient.SetLabels(project, zone, resource, zoneSetLabelsRequestResource);
 

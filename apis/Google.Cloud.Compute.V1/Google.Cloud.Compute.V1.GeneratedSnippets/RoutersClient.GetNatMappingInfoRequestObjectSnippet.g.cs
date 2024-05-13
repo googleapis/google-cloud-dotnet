@@ -38,6 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetNatMappingInfoRoutersRequest request = new GetNatMappingInfoRoutersRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Region = "",
                 Router = "",
                 OrderBy = "",

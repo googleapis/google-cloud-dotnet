@@ -39,7 +39,45 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string backendBucket = "";
-            BackendBucket backendBucketResource = new BackendBucket();
+            BackendBucket backendBucketResource = new BackendBucket
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                EdgeSecurityPolicy = "",
+                CompressionMode = "",
+                CdnPolicy = new BackendBucketCdnPolicy
+                {
+                    CacheMode = "",
+                    ClientTtl = 0,
+                    DefaultTtl = 0,
+                    NegativeCachingPolicy =
+                    {
+                        new BackendBucketCdnPolicyNegativeCachingPolicy { Ttl = 0, Code = 0, },
+                    },
+                    CacheKeyPolicy = new BackendBucketCdnPolicyCacheKeyPolicy
+                    {
+                        IncludeHttpHeaders = { "", },
+                        QueryStringWhitelist = { "", },
+                    },
+                    ServeWhileStale = 0,
+                    SignedUrlCacheMaxAgeSec = 0L,
+                    MaxTtl = 0,
+                    NegativeCaching = false,
+                    SignedUrlKeyNames = { "", },
+                    BypassCacheOnRequestHeaders =
+                    {
+                        new BackendBucketCdnPolicyBypassCacheOnRequestHeader { HeaderName = "", },
+                    },
+                    RequestCoalescing = false,
+                },
+                EnableCdn = false,
+                BucketName = "",
+                CustomResponseHeaders = { "", },
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = backendBucketsClient.Update(project, backendBucket, backendBucketResource);
 

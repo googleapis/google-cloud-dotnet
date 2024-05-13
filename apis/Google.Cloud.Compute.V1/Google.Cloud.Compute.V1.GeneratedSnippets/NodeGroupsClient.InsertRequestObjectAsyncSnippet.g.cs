@@ -44,7 +44,49 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 InitialNodeCount = 0,
                 Project = "",
-                NodeGroupResource = new NodeGroup(),
+                NodeGroupResource = new NodeGroup
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Size = 0,
+                    Zone = "",
+                    CreationTimestamp = "",
+                    Status = "",
+                    MaintenanceWindow = new NodeGroupMaintenanceWindow
+                    {
+                        StartTime = "",
+                        MaintenanceDuration = new Duration
+                        {
+                            Nanos = 0,
+                            Seconds = 0L,
+                        },
+                    },
+                    AutoscalingPolicy = new NodeGroupAutoscalingPolicy
+                    {
+                        Mode = "",
+                        MaxNodes = 0,
+                        MinNodes = 0,
+                    },
+                    Fingerprint = "",
+                    ShareSettings = new ShareSettings
+                    {
+                        ProjectMap =
+                        {
+                            {
+                                "",
+                                new ShareSettingsProjectConfig { ProjectId = "", }
+                            },
+                        },
+                        ShareType = "",
+                    },
+                    NodeTemplate = "",
+                    LocationHint = "",
+                    MaintenanceInterval = "",
+                    Description = "",
+                    SelfLink = "",
+                    MaintenancePolicy = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.InsertAsync(request);

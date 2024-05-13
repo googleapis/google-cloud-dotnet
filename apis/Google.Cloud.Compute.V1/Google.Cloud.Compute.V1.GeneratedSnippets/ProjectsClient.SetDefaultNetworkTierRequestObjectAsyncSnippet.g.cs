@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             SetDefaultNetworkTierProjectRequest request = new SetDefaultNetworkTierProjectRequest
             {
                 RequestId = "",
-                ProjectsSetDefaultNetworkTierRequestResource = new ProjectsSetDefaultNetworkTierRequest(),
+                ProjectsSetDefaultNetworkTierRequestResource = new ProjectsSetDefaultNetworkTierRequest { NetworkTier = "", },
                 Project = "",
             };
             // Make the request

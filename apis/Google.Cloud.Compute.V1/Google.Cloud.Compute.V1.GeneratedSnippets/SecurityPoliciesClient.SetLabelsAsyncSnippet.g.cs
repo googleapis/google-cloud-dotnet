@@ -40,7 +40,11 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string resource = "";
-            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest
+            {
+                LabelFingerprint = "",
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
 

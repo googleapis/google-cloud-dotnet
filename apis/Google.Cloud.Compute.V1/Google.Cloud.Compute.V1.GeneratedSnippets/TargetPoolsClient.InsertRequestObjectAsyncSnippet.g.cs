@@ -41,7 +41,22 @@ namespace GoogleCSharpSnippets
             InsertTargetPoolRequest request = new InsertTargetPoolRequest
             {
                 RequestId = "",
-                TargetPoolResource = new TargetPool(),
+                TargetPoolResource = new TargetPool
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Instances = { "", },
+                    CreationTimestamp = "",
+                    BackupPool = "",
+                    Region = "",
+                    SecurityPolicy = "",
+                    FailoverRatio = 0F,
+                    Description = "",
+                    HealthChecks = { "", },
+                    SelfLink = "",
+                    SessionAffinity = "",
+                },
                 Region = "",
                 Project = "",
             };

@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListInstantSnapshotsRequest request = new ListInstantSnapshotsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

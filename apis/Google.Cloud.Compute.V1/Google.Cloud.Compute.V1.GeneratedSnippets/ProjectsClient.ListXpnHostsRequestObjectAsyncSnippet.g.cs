@@ -40,9 +40,11 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListXpnHostsProjectsRequest request = new ListXpnHostsProjectsRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
-                ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
+                ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest { Organization = "", },
                 Filter = "",
                 ReturnPartialSuccess = false,
             };

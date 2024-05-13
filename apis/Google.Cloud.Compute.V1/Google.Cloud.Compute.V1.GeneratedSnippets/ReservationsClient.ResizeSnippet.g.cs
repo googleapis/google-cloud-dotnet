@@ -40,7 +40,10 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string reservation = "";
-            ReservationsResizeRequest reservationsResizeRequestResource = new ReservationsResizeRequest();
+            ReservationsResizeRequest reservationsResizeRequestResource = new ReservationsResizeRequest
+            {
+                SpecificSkuCount = 0L,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = reservationsClient.Resize(project, zone, reservation, reservationsResizeRequestResource);
 

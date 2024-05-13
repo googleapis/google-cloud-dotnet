@@ -40,7 +40,45 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            ServiceAttachment serviceAttachmentResource = new ServiceAttachment();
+            ServiceAttachment serviceAttachmentResource = new ServiceAttachment
+            {
+                Id = 0UL,
+                TargetService = "",
+                Kind = "",
+                Name = "",
+                DomainNames = { "", },
+                CreationTimestamp = "",
+                ConnectedEndpoints =
+                {
+                    new ServiceAttachmentConnectedEndpoint
+                    {
+                        Endpoint = "",
+                        Status = "",
+                        ConsumerNetwork = "",
+                        PscConnectionId = 0UL,
+                    },
+                },
+                ReconcileConnections = false,
+                Region = "",
+                ConsumerRejectLists = { "", },
+                Fingerprint = "",
+                ProducerForwardingRule = "",
+                ConnectionPreference = "",
+                EnableProxyProtocol = false,
+                NatSubnets = { "", },
+                ConsumerAcceptLists =
+                {
+                    new ServiceAttachmentConsumerProjectLimit
+                    {
+                        ConnectionLimit = 0U,
+                        NetworkUrl = "",
+                        ProjectIdOrNum = "",
+                    },
+                },
+                Description = "",
+                SelfLink = "",
+                PscServiceAttachmentId = new Uint128 { Low = 0UL, High = 0UL, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await serviceAttachmentsClient.InsertAsync(project, region, serviceAttachmentResource);
 

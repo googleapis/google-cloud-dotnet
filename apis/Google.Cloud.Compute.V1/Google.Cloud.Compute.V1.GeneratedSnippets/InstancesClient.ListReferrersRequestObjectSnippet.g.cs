@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 Instance = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

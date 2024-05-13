@@ -43,7 +43,62 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                NetworkInterfaceResource = new NetworkInterface(),
+                NetworkInterfaceResource = new NetworkInterface
+                {
+                    Kind = "",
+                    Name = "",
+                    NicType = "",
+                    AccessConfigs =
+                    {
+                        new AccessConfig
+                        {
+                            Kind = "",
+                            Name = "",
+                            Type = "",
+                            NatIP = "",
+                            SecurityPolicy = "",
+                            PublicPtrDomainName = "",
+                            ExternalIpv6PrefixLength = 0,
+                            NetworkTier = "",
+                            SetPublicPtr = false,
+                            ExternalIpv6 = "",
+                        },
+                    },
+                    AliasIpRanges =
+                    {
+                        new AliasIpRange
+                        {
+                            IpCidrRange = "",
+                            SubnetworkRangeName = "",
+                        },
+                    },
+                    InternalIpv6PrefixLength = 0,
+                    NetworkIP = "",
+                    NetworkAttachment = "",
+                    Network = "",
+                    Fingerprint = "",
+                    Subnetwork = "",
+                    Ipv6Address = "",
+                    StackType = "",
+                    Ipv6AccessConfigs =
+                    {
+                        new AccessConfig
+                        {
+                            Kind = "",
+                            Name = "",
+                            Type = "",
+                            NatIP = "",
+                            SecurityPolicy = "",
+                            PublicPtrDomainName = "",
+                            ExternalIpv6PrefixLength = 0,
+                            NetworkTier = "",
+                            SetPublicPtr = false,
+                            ExternalIpv6 = "",
+                        },
+                    },
+                    QueueCount = 0,
+                    Ipv6AccessType = "",
+                },
                 NetworkInterface = "",
             };
             // Make the request

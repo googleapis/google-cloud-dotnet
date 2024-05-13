@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 FailoverRatio = 0F,
                 Project = "",
-                TargetReferenceResource = new TargetReference(),
+                TargetReferenceResource = new TargetReference { Target = "", },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = targetPoolsClient.SetBackup(request);

@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListAcceleratorTypesRequest request = new ListAcceleratorTypesRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

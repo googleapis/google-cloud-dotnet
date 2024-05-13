@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetLabelsRequest instancesSetLabelsRequestResource = new InstancesSetLabelsRequest();
+            InstancesSetLabelsRequest instancesSetLabelsRequestResource = new InstancesSetLabelsRequest
+            {
+                LabelFingerprint = "",
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetLabelsAsync(project, zone, instance, instancesSetLabelsRequestResource);
 

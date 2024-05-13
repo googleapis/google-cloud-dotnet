@@ -41,7 +41,13 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersApplyUpdatesRequest instanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest();
+            InstanceGroupManagersApplyUpdatesRequest instanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest
+            {
+                Instances = { "", },
+                MostDisruptiveAllowedAction = "",
+                MinimalAction = "",
+                AllInstances = false,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.ApplyUpdatesToInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersApplyUpdatesRequestResource);
 

@@ -40,7 +40,64 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string instanceGroupManager = "";
-            RegionInstanceGroupManagerUpdateInstanceConfigReq regionInstanceGroupManagerUpdateInstanceConfigReqResource = new RegionInstanceGroupManagerUpdateInstanceConfigReq();
+            RegionInstanceGroupManagerUpdateInstanceConfigReq regionInstanceGroupManagerUpdateInstanceConfigReqResource = new RegionInstanceGroupManagerUpdateInstanceConfigReq
+            {
+                PerInstanceConfigs =
+                {
+                    new PerInstanceConfig
+                    {
+                        PreservedState = new PreservedState
+                        {
+                            Metadata = { { "", "" }, },
+                            Disks =
+                            {
+                                {
+                                    "",
+                                    new PreservedStatePreservedDisk
+                                    {
+                                        Mode = "",
+                                        Source = "",
+                                        AutoDelete = "",
+                                    }
+                                },
+                            },
+                            InternalIPs =
+                            {
+                                {
+                                    "",
+                                    new PreservedStatePreservedNetworkIp
+                                    {
+                                        IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                        {
+                                            Literal = "",
+                                            Address = "",
+                                        },
+                                        AutoDelete = "",
+                                    }
+                                },
+                            },
+                            ExternalIPs =
+                            {
+                                {
+                                    "",
+                                    new PreservedStatePreservedNetworkIp
+                                    {
+                                        IpAddress = new PreservedStatePreservedNetworkIpIpAddress
+                                        {
+                                            Literal = "",
+                                            Address = "",
+                                        },
+                                        AutoDelete = "",
+                                    }
+                                },
+                            },
+                        },
+                        Name = "",
+                        Status = "",
+                        Fingerprint = "",
+                    },
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.UpdatePerInstanceConfigs(project, region, instanceGroupManager, regionInstanceGroupManagerUpdateInstanceConfigReqResource);
 

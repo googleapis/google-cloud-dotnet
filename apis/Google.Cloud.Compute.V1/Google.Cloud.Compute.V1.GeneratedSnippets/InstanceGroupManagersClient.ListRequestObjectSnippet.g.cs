@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListInstanceGroupManagersRequest request = new ListInstanceGroupManagersRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

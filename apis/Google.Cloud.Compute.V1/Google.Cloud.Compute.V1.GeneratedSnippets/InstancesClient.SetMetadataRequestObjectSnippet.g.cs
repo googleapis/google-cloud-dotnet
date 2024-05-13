@@ -43,7 +43,15 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                MetadataResource = new Metadata(),
+                MetadataResource = new Metadata
+                {
+                    Kind = "",
+                    Items =
+                    {
+                        new Items { Key = "", Value = "", },
+                    },
+                    Fingerprint = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetMetadata(request);

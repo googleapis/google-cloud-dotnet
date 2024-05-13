@@ -40,7 +40,19 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NetworkEdgeSecurityService networkEdgeSecurityServiceResource = new NetworkEdgeSecurityService();
+            NetworkEdgeSecurityService networkEdgeSecurityServiceResource = new NetworkEdgeSecurityService
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                Region = "",
+                SecurityPolicy = "",
+                Fingerprint = "",
+                Description = "",
+                SelfLink = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await networkEdgeSecurityServicesClient.InsertAsync(project, region, networkEdgeSecurityServiceResource);
 

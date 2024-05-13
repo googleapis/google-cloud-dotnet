@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

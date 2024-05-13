@@ -42,7 +42,33 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                SslPolicyResource = new SslPolicy(),
+                SslPolicyResource = new SslPolicy
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    MinTlsVersion = "",
+                    CreationTimestamp = "",
+                    CustomFeatures = { "", },
+                    Region = "",
+                    Profile = "",
+                    Fingerprint = "",
+                    Description = "",
+                    SelfLink = "",
+                    EnabledFeatures = { "", },
+                    Warnings =
+                    {
+                        new Warnings
+                        {
+                            Code = "",
+                            Data =
+                            {
+                                new Data { Key = "", Value = "", },
+                            },
+                            Message = "",
+                        },
+                    },
+                },
                 SslPolicy = "",
             };
             // Make the request

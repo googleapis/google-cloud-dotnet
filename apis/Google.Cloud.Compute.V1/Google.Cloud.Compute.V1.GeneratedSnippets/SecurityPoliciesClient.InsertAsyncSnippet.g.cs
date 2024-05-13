@@ -39,7 +39,177 @@ namespace GoogleCSharpSnippets
             SecurityPoliciesClient securityPoliciesClient = await SecurityPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            SecurityPolicy securityPolicyResource = new SecurityPolicy();
+            SecurityPolicy securityPolicyResource = new SecurityPolicy
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Type = "",
+                UserDefinedFields =
+                {
+                    new SecurityPolicyUserDefinedField
+                    {
+                        Base = "",
+                        Mask = "",
+                        Name = "",
+                        Size = 0,
+                        Offset = 0,
+                    },
+                },
+                CreationTimestamp = "",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig { DdosProtection = "", },
+                Rules =
+                {
+                    new SecurityPolicyRule
+                    {
+                        Kind = "",
+                        RateLimitOptions = new SecurityPolicyRuleRateLimitOptions
+                        {
+                            EnforceOnKeyConfigs =
+                            {
+                                new SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig
+                                {
+                                    EnforceOnKeyName = "",
+                                    EnforceOnKeyType = "",
+                                },
+                            },
+                            BanDurationSec = 0,
+                            EnforceOnKeyName = "",
+                            ExceedAction = "",
+                            RateLimitThreshold = new SecurityPolicyRuleRateLimitOptionsThreshold
+                            {
+                                IntervalSec = 0,
+                                Count = 0,
+                            },
+                            EnforceOnKey = "",
+                            ExceedRedirectOptions = new SecurityPolicyRuleRedirectOptions { Type = "", Target = "", },
+                            BanThreshold = new SecurityPolicyRuleRateLimitOptionsThreshold
+                            {
+                                IntervalSec = 0,
+                                Count = 0,
+                            },
+                            ConformAction = "",
+                        },
+                        Match = new SecurityPolicyRuleMatcher
+                        {
+                            Expr = new Expr
+                            {
+                                Title = "",
+                                Location = "",
+                                Expression = "",
+                                Description = "",
+                            },
+                            Config = new SecurityPolicyRuleMatcherConfig { SrcIpRanges = { "", }, },
+                            VersionedExpr = "",
+                            ExprOptions = new SecurityPolicyRuleMatcherExprOptions
+                            {
+                                RecaptchaOptions = new SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions
+                                {
+                                    ActionTokenSiteKeys = { "", },
+                                    SessionTokenSiteKeys = { "", },
+                                },
+                            },
+                        },
+                        PreconfiguredWafConfig = new SecurityPolicyRulePreconfiguredWafConfig
+                        {
+                            Exclusions =
+                            {
+                                new SecurityPolicyRulePreconfiguredWafConfigExclusion
+                                {
+                                    RequestHeadersToExclude =
+                                    {
+                                        new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                    },
+                                    RequestUrisToExclude =
+                                    {
+                                        new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                    },
+                                    RequestCookiesToExclude =
+                                    {
+                                        new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                    },
+                                    RequestQueryParamsToExclude =
+                                    {
+                                        new SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams { Op = "", Val = "", },
+                                    },
+                                    TargetRuleIds = { "", },
+                                    TargetRuleSet = "",
+                                },
+                            },
+                        },
+                        RedirectOptions = new SecurityPolicyRuleRedirectOptions { Type = "", Target = "", },
+                        Action = "",
+                        Preview = false,
+                        HeaderAction = new SecurityPolicyRuleHttpHeaderAction
+                        {
+                            RequestHeadersToAdds =
+                            {
+                                new SecurityPolicyRuleHttpHeaderActionHttpHeaderOption
+                                {
+                                    HeaderName = "",
+                                    HeaderValue = "",
+                                },
+                            },
+                        },
+                        Description = "",
+                        Priority = 0,
+                        NetworkMatch = new SecurityPolicyRuleNetworkMatcher
+                        {
+                            UserDefinedFields =
+                            {
+                                new SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch
+                                {
+                                    Name = "",
+                                    Values = { "", },
+                                },
+                            },
+                            SrcRegionCodes = { "", },
+                            SrcAsns = { 0U, },
+                            IpProtocols = { "", },
+                            DestIpRanges = { "", },
+                            DestPorts = { "", },
+                            SrcIpRanges = { "", },
+                            SrcPorts = { "", },
+                        },
+                    },
+                },
+                Region = "",
+                AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig
+                {
+                    Layer7DdosDefenseConfig = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
+                    {
+                        ThresholdConfigs =
+                        {
+                            new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig
+                            {
+                                Name = "",
+                                AutoDeployExpirationSec = 0,
+                                AutoDeployConfidenceThreshold = 0F,
+                                AutoDeployImpactedBaselineThreshold = 0F,
+                                AutoDeployLoadThreshold = 0F,
+                            },
+                        },
+                        Enable = false,
+                        RuleVisibility = "",
+                    },
+                },
+                LabelFingerprint = "",
+                Fingerprint = "",
+                Description = "",
+                AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig
+                {
+                    JsonCustomConfig = new SecurityPolicyAdvancedOptionsConfigJsonCustomConfig { ContentTypes = { "", }, },
+                    LogLevel = "",
+                    JsonParsing = "",
+                    UserIpRequestHeaders = { "", },
+                },
+                SelfLink = "",
+                Labels = { { "", "" }, },
+                RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig
+                {
+                    RedirectSiteKey = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.InsertAsync(project, securityPolicyResource);
 

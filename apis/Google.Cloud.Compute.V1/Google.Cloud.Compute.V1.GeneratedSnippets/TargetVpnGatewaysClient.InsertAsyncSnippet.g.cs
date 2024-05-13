@@ -40,7 +40,22 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            TargetVpnGateway targetVpnGatewayResource = new TargetVpnGateway();
+            TargetVpnGateway targetVpnGatewayResource = new TargetVpnGateway
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                Tunnels = { "", },
+                Region = "",
+                LabelFingerprint = "",
+                Status = "",
+                Network = "",
+                ForwardingRules = { "", },
+                Description = "",
+                SelfLink = "",
+                Labels = { { "", "" }, },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetVpnGatewaysClient.InsertAsync(project, region, targetVpnGatewayResource);
 

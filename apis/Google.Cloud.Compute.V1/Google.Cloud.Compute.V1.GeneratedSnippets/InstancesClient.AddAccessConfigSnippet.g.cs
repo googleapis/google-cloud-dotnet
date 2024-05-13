@@ -41,7 +41,19 @@ namespace GoogleCSharpSnippets
             string zone = "";
             string instance = "";
             string networkInterface = "";
-            AccessConfig accessConfigResource = new AccessConfig();
+            AccessConfig accessConfigResource = new AccessConfig
+            {
+                Kind = "",
+                Name = "",
+                Type = "",
+                NatIP = "",
+                SecurityPolicy = "",
+                PublicPtrDomainName = "",
+                ExternalIpv6PrefixLength = 0,
+                NetworkTier = "",
+                SetPublicPtr = false,
+                ExternalIpv6 = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.AddAccessConfig(project, zone, instance, networkInterface, accessConfigResource);
 

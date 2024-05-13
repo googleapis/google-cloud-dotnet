@@ -40,7 +40,10 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest();
+            InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest
+            {
+                ResourcePolicies = { "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.AddResourcePolicies(project, zone, instance, instancesAddResourcePoliciesRequestResource);
 

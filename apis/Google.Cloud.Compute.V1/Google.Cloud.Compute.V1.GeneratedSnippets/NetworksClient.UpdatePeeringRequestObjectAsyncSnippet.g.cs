@@ -41,7 +41,24 @@ namespace GoogleCSharpSnippets
             UpdatePeeringNetworkRequest request = new UpdatePeeringNetworkRequest
             {
                 RequestId = "",
-                NetworksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest(),
+                NetworksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest
+                {
+                    NetworkPeering = new NetworkPeering
+                    {
+                        Name = "",
+                        ImportSubnetRoutesWithPublicIp = false,
+                        ExchangeSubnetRoutes = false,
+                        AutoCreateRoutes = false,
+                        ExportCustomRoutes = false,
+                        PeerMtu = 0,
+                        StateDetails = "",
+                        ExportSubnetRoutesWithPublicIp = false,
+                        State = "",
+                        ImportCustomRoutes = false,
+                        Network = "",
+                        StackType = "",
+                    },
+                },
                 Project = "",
                 Network = "",
             };

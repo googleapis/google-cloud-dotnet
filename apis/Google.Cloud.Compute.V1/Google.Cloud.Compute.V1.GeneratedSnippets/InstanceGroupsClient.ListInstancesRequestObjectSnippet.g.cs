@@ -39,11 +39,13 @@ namespace GoogleCSharpSnippets
             ListInstancesInstanceGroupsRequest request = new ListInstancesInstanceGroupsRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 InstanceGroup = "",
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
+                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest { InstanceState = "", },
                 ReturnPartialSuccess = false,
             };
             // Make the request

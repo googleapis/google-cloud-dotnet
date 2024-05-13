@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Disk = "",
                 Zone = "",
                 RequestId = "",
-                DisksResizeRequestResource = new DisksResizeRequest(),
+                DisksResizeRequestResource = new DisksResizeRequest { SizeGb = 0L, },
                 Project = "",
             };
             // Make the request

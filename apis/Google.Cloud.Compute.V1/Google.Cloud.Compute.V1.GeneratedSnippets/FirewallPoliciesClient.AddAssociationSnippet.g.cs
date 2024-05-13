@@ -38,7 +38,14 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
             string firewallPolicy = "";
-            FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation();
+            FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation
+            {
+                Name = "",
+                DisplayName = "",
+                AttachmentTarget = "",
+                FirewallPolicyId = "",
+                ShortName = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = firewallPoliciesClient.AddAssociation(firewallPolicy, firewallPolicyAssociationResource);
 

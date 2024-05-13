@@ -42,7 +42,33 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                PublicAdvertisedPrefixResource = new PublicAdvertisedPrefix(),
+                PublicAdvertisedPrefixResource = new PublicAdvertisedPrefix
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    CreationTimestamp = "",
+                    IpCidrRange = "",
+                    ByoipApiVersion = "",
+                    Status = "",
+                    Fingerprint = "",
+                    DnsVerificationIp = "",
+                    SharedSecret = "",
+                    Description = "",
+                    PublicDelegatedPrefixs =
+                    {
+                        new PublicAdvertisedPrefixPublicDelegatedPrefix
+                        {
+                            Name = "",
+                            Region = "",
+                            IpRange = "",
+                            Status = "",
+                            Project = "",
+                        },
+                    },
+                    SelfLink = "",
+                    PdpScope = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.InsertAsync(request);

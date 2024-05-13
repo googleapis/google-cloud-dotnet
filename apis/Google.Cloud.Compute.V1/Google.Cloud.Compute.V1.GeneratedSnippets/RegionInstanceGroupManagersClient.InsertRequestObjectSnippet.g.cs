@@ -42,7 +42,153 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                InstanceGroupManagerResource = new InstanceGroupManager(),
+                InstanceGroupManagerResource = new InstanceGroupManager
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Zone = "",
+                    CreationTimestamp = "",
+                    StatefulPolicy = new StatefulPolicy
+                    {
+                        PreservedState = new StatefulPolicyPreservedState
+                        {
+                            Disks =
+                            {
+                                {
+                                    "",
+                                    new StatefulPolicyPreservedStateDiskDevice { AutoDelete = "", }
+                                },
+                            },
+                            InternalIPs =
+                            {
+                                {
+                                    "",
+                                    new StatefulPolicyPreservedStateNetworkIp { AutoDelete = "", }
+                                },
+                            },
+                            ExternalIPs =
+                            {
+                                {
+                                    "",
+                                    new StatefulPolicyPreservedStateNetworkIp { AutoDelete = "", }
+                                },
+                            },
+                        },
+                    },
+                    TargetSize = 0,
+                    InstanceGroup = "",
+                    AllInstancesConfig = new InstanceGroupManagerAllInstancesConfig
+                    {
+                        Properties = new InstancePropertiesPatch
+                        {
+                            Metadata = { { "", "" }, },
+                            Labels = { { "", "" }, },
+                        },
+                    },
+                    Region = "",
+                    Versions =
+                    {
+                        new InstanceGroupManagerVersion
+                        {
+                            Name = "",
+                            TargetSize = new FixedOrPercent
+                            {
+                                Fixed = 0,
+                                Percent = 0,
+                                Calculated = 0,
+                            },
+                            InstanceTemplate = "",
+                        },
+                    },
+                    CurrentActions = new InstanceGroupManagerActionsSummary
+                    {
+                        None = 0,
+                        Suspending = 0,
+                        Stopping = 0,
+                        Resuming = 0,
+                        Creating = 0,
+                        Refreshing = 0,
+                        Starting = 0,
+                        Deleting = 0,
+                        Recreating = 0,
+                        CreatingWithoutRetries = 0,
+                        Restarting = 0,
+                        Abandoning = 0,
+                        Verifying = 0,
+                    },
+                    UpdatePolicy = new InstanceGroupManagerUpdatePolicy
+                    {
+                        Type = "",
+                        MostDisruptiveAllowedAction = "",
+                        MinimalAction = "",
+                        InstanceRedistributionType = "",
+                        MaxSurge = new FixedOrPercent
+                        {
+                            Fixed = 0,
+                            Percent = 0,
+                            Calculated = 0,
+                        },
+                        MaxUnavailable = new FixedOrPercent
+                        {
+                            Fixed = 0,
+                            Percent = 0,
+                            Calculated = 0,
+                        },
+                        ReplacementMethod = "",
+                    },
+                    Status = new InstanceGroupManagerStatus
+                    {
+                        IsStable = false,
+                        AllInstancesConfig = new InstanceGroupManagerStatusAllInstancesConfig
+                        {
+                            CurrentRevision = "",
+                            Effective = false,
+                        },
+                        Stateful = new InstanceGroupManagerStatusStateful
+                        {
+                            HasStatefulConfig = false,
+                            PerInstanceConfigs = new InstanceGroupManagerStatusStatefulPerInstanceConfigs
+                            {
+                                AllEffective = false,
+                            },
+                        },
+                        VersionTarget = new InstanceGroupManagerStatusVersionTarget { IsReached = false, },
+                        Autoscaler = "",
+                    },
+                    Fingerprint = "",
+                    ListManagedInstancesResults = "",
+                    InstanceTemplate = "",
+                    TargetPools = { "", },
+                    BaseInstanceName = "",
+                    Description = "",
+                    NamedPorts =
+                    {
+                        new NamedPort { Name = "", Port = 0, },
+                    },
+                    InstanceLifecyclePolicy = new InstanceGroupManagerInstanceLifecyclePolicy
+                    {
+                        DefaultActionOnFailure = "",
+                        ForceUpdateOnRepair = "",
+                    },
+                    SelfLink = "",
+                    AutoHealingPolicies =
+                    {
+                        new InstanceGroupManagerAutoHealingPolicy
+                        {
+                            InitialDelaySec = 0,
+                            HealthCheck = "",
+                        },
+                    },
+                    DistributionPolicy = new DistributionPolicy
+                    {
+                        Zones =
+                        {
+                            new DistributionPolicyZoneConfiguration { Zone = "", },
+                        },
+                        TargetShape = "",
+                    },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.Insert(request);

@@ -43,7 +43,10 @@ namespace GoogleCSharpSnippets
                 TargetHttpsProxy = "",
                 Region = "",
                 Project = "",
-                RegionTargetHttpsProxiesSetSslCertificatesRequestResource = new RegionTargetHttpsProxiesSetSslCertificatesRequest(),
+                RegionTargetHttpsProxiesSetSslCertificatesRequestResource = new RegionTargetHttpsProxiesSetSslCertificatesRequest
+                {
+                    SslCertificates = { "", },
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionTargetHttpsProxiesClient.SetSslCertificates(request);

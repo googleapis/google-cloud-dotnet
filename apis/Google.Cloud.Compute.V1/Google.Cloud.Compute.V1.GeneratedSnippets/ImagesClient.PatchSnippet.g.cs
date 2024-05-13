@@ -39,7 +39,117 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string image = "";
-            Image imageResource = new Image();
+            Image imageResource = new Image
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                CreationTimestamp = "",
+                LicenseCodes = { 0L, },
+                SourceImage = "",
+                SourceImageId = "",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature { Type = "", },
+                },
+                SourceSnapshotId = "",
+                EnableConfidentialCompute = false,
+                SourceSnapshot = "",
+                LabelFingerprint = "",
+                Status = "",
+                ShieldedInstanceInitialState = new InitialStateConfig
+                {
+                    Pk = new FileContentBuffer
+                    {
+                        FileType = "",
+                        Content = "",
+                    },
+                    Dbs =
+                    {
+                        new FileContentBuffer
+                        {
+                            FileType = "",
+                            Content = "",
+                        },
+                    },
+                    Dbxs =
+                    {
+                        new FileContentBuffer
+                        {
+                            FileType = "",
+                            Content = "",
+                        },
+                    },
+                    Keks =
+                    {
+                        new FileContentBuffer
+                        {
+                            FileType = "",
+                            Content = "",
+                        },
+                    },
+                },
+                Architecture = "",
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                DiskSizeGb = 0L,
+                StorageLocations = { "", },
+                Family = "",
+                Licenses = { "", },
+                ImageEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                ArchiveSizeBytes = 0L,
+                SourceImageEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+                Description = "",
+                SourceDisk = "",
+                SourceType = "",
+                SourceDiskId = "",
+                SelfLink = "",
+                SatisfiesPzi = false,
+                SatisfiesPzs = false,
+                Labels = { { "", "" }, },
+                RawDisk = new RawDisk
+                {
+                    Source = "",
+                    Sha1Checksum = "",
+                    ContainerType = "",
+                },
+                Deprecated = new DeprecationStatus
+                {
+                    State = "",
+                    Obsolete = "",
+                    Replacement = "",
+                    Deleted = "",
+                    Deprecated = "",
+                },
+                SourceDiskEncryptionKey = new CustomerEncryptionKey
+                {
+                    Sha256 = "",
+                    KmsKeyServiceAccount = "",
+                    RsaEncryptedKey = "",
+                    RawKey = "",
+                    KmsKeyName = "",
+                },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = imagesClient.Patch(project, image, imageResource);
 

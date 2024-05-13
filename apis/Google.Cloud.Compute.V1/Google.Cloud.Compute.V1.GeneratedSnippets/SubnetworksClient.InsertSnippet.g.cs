@@ -39,7 +39,50 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Subnetwork subnetworkResource = new Subnetwork();
+            Subnetwork subnetworkResource = new Subnetwork
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Role = "",
+                CreationTimestamp = "",
+                PrivateIpv6GoogleAccess = "",
+                IpCidrRange = "",
+                State = "",
+                SecondaryIpRanges =
+                {
+                    new SubnetworkSecondaryRange
+                    {
+                        IpCidrRange = "",
+                        ReservedInternalRange = "",
+                        RangeName = "",
+                    },
+                },
+                Region = "",
+                ExternalIpv6Prefix = "",
+                EnableFlowLogs = false,
+                Network = "",
+                Fingerprint = "",
+                Ipv6CidrRange = "",
+                ReservedInternalRange = "",
+                Purpose = "",
+                LogConfig = new SubnetworkLogConfig
+                {
+                    Metadata = "",
+                    AggregationInterval = "",
+                    FilterExpr = "",
+                    Enable = false,
+                    MetadataFields = { "", },
+                    FlowSampling = 0F,
+                },
+                PrivateIpGoogleAccess = false,
+                Description = "",
+                StackType = "",
+                SelfLink = "",
+                GatewayAddress = "",
+                Ipv6AccessType = "",
+                InternalIpv6Prefix = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = subnetworksClient.Insert(project, region, subnetworkResource);
 

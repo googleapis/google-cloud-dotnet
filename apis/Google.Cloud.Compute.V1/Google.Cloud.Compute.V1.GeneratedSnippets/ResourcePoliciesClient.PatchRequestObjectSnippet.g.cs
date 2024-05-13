@@ -40,7 +40,82 @@ namespace GoogleCSharpSnippets
             PatchResourcePolicyRequest request = new PatchResourcePolicyRequest
             {
                 RequestId = "",
-                ResourcePolicyResource = new ResourcePolicy(),
+                ResourcePolicyResource = new ResourcePolicy
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    GroupPlacementPolicy = new ResourcePolicyGroupPlacementPolicy
+                    {
+                        AvailabilityDomainCount = 0,
+                        VmCount = 0,
+                        Collocation = "",
+                    },
+                    CreationTimestamp = "",
+                    Region = "",
+                    Status = "",
+                    SnapshotSchedulePolicy = new ResourcePolicySnapshotSchedulePolicy
+                    {
+                        RetentionPolicy = new ResourcePolicySnapshotSchedulePolicyRetentionPolicy
+                        {
+                            OnSourceDiskDelete = "",
+                            MaxRetentionDays = 0,
+                        },
+                        SnapshotProperties = new ResourcePolicySnapshotSchedulePolicySnapshotProperties
+                        {
+                            ChainName = "",
+                            StorageLocations = { "", },
+                            GuestFlush = false,
+                            Labels = { { "", "" }, },
+                        },
+                        Schedule = new ResourcePolicySnapshotSchedulePolicySchedule
+                        {
+                            HourlySchedule = new ResourcePolicyHourlyCycle
+                            {
+                                StartTime = "",
+                                Duration = "",
+                                HoursInCycle = 0,
+                            },
+                            DailySchedule = new ResourcePolicyDailyCycle
+                            {
+                                StartTime = "",
+                                Duration = "",
+                                DaysInCycle = 0,
+                            },
+                            WeeklySchedule = new ResourcePolicyWeeklyCycle
+                            {
+                                DayOfWeeks =
+                                {
+                                    new ResourcePolicyWeeklyCycleDayOfWeek
+                                    {
+                                        Day = "",
+                                        StartTime = "",
+                                        Duration = "",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ResourceStatus = new ResourcePolicyResourceStatus
+                    {
+                        InstanceSchedulePolicy = new ResourcePolicyResourceStatusInstanceSchedulePolicyStatus
+                        {
+                            LastRunStartTime = "",
+                            NextRunStartTime = "",
+                        },
+                    },
+                    InstanceSchedulePolicy = new ResourcePolicyInstanceSchedulePolicy
+                    {
+                        VmStartSchedule = new ResourcePolicyInstanceSchedulePolicySchedule { Schedule = "", },
+                        TimeZone = "",
+                        StartTime = "",
+                        ExpirationTime = "",
+                        VmStopSchedule = new ResourcePolicyInstanceSchedulePolicySchedule { Schedule = "", },
+                    },
+                    Description = "",
+                    SelfLink = "",
+                    DiskConsistencyGroupPolicy = new ResourcePolicyDiskConsistencyGroupPolicy { },
+                },
                 Region = "",
                 ResourcePolicy = "",
                 Project = "",

@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                DisksStopGroupAsyncReplicationResourceResource = new DisksStopGroupAsyncReplicationResource(),
+                DisksStopGroupAsyncReplicationResourceResource = new DisksStopGroupAsyncReplicationResource { ResourcePolicy = "", },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = disksClient.StopGroupAsyncReplication(request);

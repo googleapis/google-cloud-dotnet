@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
+                PageToken = "",
+                MaxResults = 0U,
                 Direction = "",
                 Region = "",
                 OrderBy = "",

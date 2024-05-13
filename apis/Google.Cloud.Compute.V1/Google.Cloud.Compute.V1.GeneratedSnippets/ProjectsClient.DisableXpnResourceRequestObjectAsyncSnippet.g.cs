@@ -41,7 +41,10 @@ namespace GoogleCSharpSnippets
             DisableXpnResourceProjectRequest request = new DisableXpnResourceProjectRequest
             {
                 RequestId = "",
-                ProjectsDisableXpnResourceRequestResource = new ProjectsDisableXpnResourceRequest(),
+                ProjectsDisableXpnResourceRequestResource = new ProjectsDisableXpnResourceRequest
+                {
+                    XpnResource = new XpnResourceId { Id = "", Type = "", },
+                },
                 Project = "",
             };
             // Make the request

@@ -39,7 +39,44 @@ namespace GoogleCSharpSnippets
             NetworksClient networksClient = await NetworksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Network networkResource = new Network();
+            Network networkResource = new Network
+            {
+                Id = 0UL,
+                Mtu = 0,
+                Kind = "",
+                Name = "",
+                NetworkFirewallPolicyEnforcementOrder = "",
+                CreationTimestamp = "",
+                SelfLinkWithId = "",
+                IPv4Range = "",
+                Peerings =
+                {
+                    new NetworkPeering
+                    {
+                        Name = "",
+                        ImportSubnetRoutesWithPublicIp = false,
+                        ExchangeSubnetRoutes = false,
+                        AutoCreateRoutes = false,
+                        ExportCustomRoutes = false,
+                        PeerMtu = 0,
+                        StateDetails = "",
+                        ExportSubnetRoutesWithPublicIp = false,
+                        State = "",
+                        ImportCustomRoutes = false,
+                        Network = "",
+                        StackType = "",
+                    },
+                },
+                GatewayIPv4 = "",
+                AutoCreateSubnetworks = false,
+                InternalIpv6Range = "",
+                Subnetworks = { "", },
+                Description = "",
+                EnableUlaInternalIpv6 = false,
+                SelfLink = "",
+                FirewallPolicy = "",
+                RoutingConfig = new NetworkRoutingConfig { RoutingMode = "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = await networksClient.InsertAsync(project, networkResource);
 

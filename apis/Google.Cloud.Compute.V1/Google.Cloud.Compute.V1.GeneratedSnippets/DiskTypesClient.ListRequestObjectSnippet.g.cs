@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListDiskTypesRequest request = new ListDiskTypesRequest
             {
                 Zone = "",
+                PageToken = "",
+                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",

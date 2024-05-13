@@ -39,7 +39,39 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string publicDelegatedPrefix = "";
-            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix();
+            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix
+            {
+                Id = 0UL,
+                Kind = "",
+                Mode = "",
+                Name = "",
+                ParentPrefix = "",
+                CreationTimestamp = "",
+                AllocatablePrefixLength = 0,
+                IpCidrRange = "",
+                Region = "",
+                ByoipApiVersion = "",
+                Status = "",
+                PublicDelegatedSubPrefixs =
+                {
+                    new PublicDelegatedPrefixPublicDelegatedSubPrefix
+                    {
+                        Mode = "",
+                        Name = "",
+                        AllocatablePrefixLength = 0,
+                        IpCidrRange = "",
+                        Region = "",
+                        Status = "",
+                        IsAddress = false,
+                        DelegateeProject = "",
+                        Description = "",
+                    },
+                },
+                Fingerprint = "",
+                Description = "",
+                SelfLink = "",
+                IsLiveMigration = false,
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = globalPublicDelegatedPrefixesClient.Patch(project, publicDelegatedPrefix, publicDelegatedPrefixResource);
 

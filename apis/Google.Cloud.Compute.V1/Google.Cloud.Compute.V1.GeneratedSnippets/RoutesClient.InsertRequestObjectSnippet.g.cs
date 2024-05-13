@@ -40,7 +40,49 @@ namespace GoogleCSharpSnippets
             InsertRouteRequest request = new InsertRouteRequest
             {
                 RequestId = "",
-                RouteResource = new Route(),
+                RouteResource = new Route
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Tags = { "", },
+                    CreationTimestamp = "",
+                    NextHopIp = "",
+                    AsPaths =
+                    {
+                        new RouteAsPath
+                        {
+                            AsLists = { 0U, },
+                            PathSegmentType = "",
+                        },
+                    },
+                    NextHopHub = "",
+                    NextHopIlb = "",
+                    Network = "",
+                    NextHopNetwork = "",
+                    RouteType = "",
+                    NextHopGateway = "",
+                    DestRange = "",
+                    NextHopInstance = "",
+                    NextHopPeering = "",
+                    RouteStatus = "",
+                    Description = "",
+                    Priority = 0U,
+                    SelfLink = "",
+                    Warnings =
+                    {
+                        new Warnings
+                        {
+                            Code = "",
+                            Data =
+                            {
+                                new Data { Key = "", Value = "", },
+                            },
+                            Message = "",
+                        },
+                    },
+                    NextHopVpnTunnel = "",
+                },
                 Project = "",
             };
             // Make the request

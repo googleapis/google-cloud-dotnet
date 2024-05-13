@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
+                NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest { Nodes = { "", }, },
                 Project = "",
                 NodeGroup = "",
             };

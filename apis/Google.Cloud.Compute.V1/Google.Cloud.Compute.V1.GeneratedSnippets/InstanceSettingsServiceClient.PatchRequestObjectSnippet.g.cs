@@ -42,7 +42,17 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                InstanceSettingsResource = new InstanceSettings(),
+                InstanceSettingsResource = new InstanceSettings
+                {
+                    Kind = "",
+                    Zone = "",
+                    Metadata = new InstanceSettingsMetadata
+                    {
+                        Kind = "",
+                        Items = { { "", "" }, },
+                    },
+                    Fingerprint = "",
+                },
                 UpdateMask = "",
             };
             // Make the request

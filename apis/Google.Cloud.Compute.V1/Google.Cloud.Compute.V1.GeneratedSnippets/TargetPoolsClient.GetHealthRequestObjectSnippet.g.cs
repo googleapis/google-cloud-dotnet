@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 TargetPool = "",
                 Region = "",
                 Project = "",
-                InstanceReferenceResource = new InstanceReference(),
+                InstanceReferenceResource = new InstanceReference { Instance = "", },
             };
             // Make the request
             TargetPoolInstanceHealth response = targetPoolsClient.GetHealth(request);

@@ -39,7 +39,20 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            TargetInstance targetInstanceResource = new TargetInstance();
+            TargetInstance targetInstanceResource = new TargetInstance
+            {
+                Id = 0UL,
+                Kind = "",
+                Name = "",
+                Zone = "",
+                Instance = "",
+                CreationTimestamp = "",
+                SecurityPolicy = "",
+                Network = "",
+                Description = "",
+                SelfLink = "",
+                NatPolicy = "",
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = targetInstancesClient.Insert(project, zone, targetInstanceResource);
 

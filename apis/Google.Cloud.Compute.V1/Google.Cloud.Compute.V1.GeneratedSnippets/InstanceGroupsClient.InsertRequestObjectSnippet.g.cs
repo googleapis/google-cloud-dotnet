@@ -42,7 +42,25 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                InstanceGroupResource = new InstanceGroup(),
+                InstanceGroupResource = new InstanceGroup
+                {
+                    Id = 0UL,
+                    Kind = "",
+                    Name = "",
+                    Size = 0,
+                    Zone = "",
+                    CreationTimestamp = "",
+                    Region = "",
+                    Network = "",
+                    Fingerprint = "",
+                    Subnetwork = "",
+                    Description = "",
+                    NamedPorts =
+                    {
+                        new NamedPort { Name = "", Port = 0, },
+                    },
+                    SelfLink = "",
+                },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupsClient.Insert(request);

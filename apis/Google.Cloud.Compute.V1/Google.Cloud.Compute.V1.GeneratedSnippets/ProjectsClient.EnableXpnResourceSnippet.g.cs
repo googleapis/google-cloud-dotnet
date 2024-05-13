@@ -38,7 +38,10 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            ProjectsEnableXpnResourceRequest projectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest();
+            ProjectsEnableXpnResourceRequest projectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest
+            {
+                XpnResource = new XpnResourceId { Id = "", Type = "", },
+            };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.EnableXpnResource(project, projectsEnableXpnResourceRequestResource);
 
