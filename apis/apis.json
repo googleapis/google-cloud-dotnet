@@ -711,7 +711,7 @@
     },
     {
       "id": "Google.Cloud.Batch.V1Alpha",
-      "version": "1.0.0-alpha27",
+      "version": "1.0.0-alpha28",
       "type": "grpc",
       "productName": "Batch",
       "productUrl": "https://cloud.google.com/batch/docs/",
