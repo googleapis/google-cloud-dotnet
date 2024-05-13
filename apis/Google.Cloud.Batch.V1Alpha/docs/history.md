@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-alpha28, released 2024-05-13
+
+### New features
+
+- Update description on allowed_locations in LocationPolicy field ([commit fb760fc](https://github.com/googleapis/google-cloud-dotnet/commit/fb760fc31a58b8adbd3b7a471147bf2f331e3d0f))
+- Add UpdateJob API to update the job spec, only task_count is supported now ([commit fb760fc](https://github.com/googleapis/google-cloud-dotnet/commit/fb760fc31a58b8adbd3b7a471147bf2f331e3d0f))
+
+### Documentation improvements
+
+- Updated comments ([commit fb760fc](https://github.com/googleapis/google-cloud-dotnet/commit/fb760fc31a58b8adbd3b7a471147bf2f331e3d0f))
+
 ## Version 1.0.0-alpha27, released 2024-05-08
 
 ### New features
