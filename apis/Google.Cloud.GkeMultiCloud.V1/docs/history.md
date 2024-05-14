@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Option to ignore_errors while deleting Azure clusters / nodepools ([commit 564312f](https://github.com/googleapis/google-cloud-dotnet/commit/564312fafe111033b4f45180097c60ac02f5ddf4))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
 ## Version 2.5.0, released 2024-03-26
 
 ### New features
