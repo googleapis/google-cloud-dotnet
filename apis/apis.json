@@ -3567,7 +3567,7 @@
       "protoPath": "google/cloud/oslogin/v1",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "3.4.0",
+      "version": "3.5.0",
       "type": "grpc",
       "description": "Recommended Google client library to manage OS login configuration for Google account users.",
       "tags": [
