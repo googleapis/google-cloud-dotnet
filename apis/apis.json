@@ -5518,7 +5518,7 @@
     },
     {
       "id": "Google.Maps.AddressValidation.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Address Validation",
       "productUrl": "https://developers.google.com/maps/documentation/address-validation/requests-validate-address",
