@@ -89,6 +89,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public string LastReleaseBefore { get; set; }
 
+        /// <summary>
+        /// When true, release branches are created but not pushed (so no PRs are created).
+        /// The "push-releases" command can be used to perform the push later.
+        /// </summary>
+        public bool DeferPush { get; set; }
+
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {
             if (KnownCommits is object)
