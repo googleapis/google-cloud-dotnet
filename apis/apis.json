@@ -4345,7 +4345,7 @@
     },
     {
       "id": "Google.Cloud.ServiceDirectory.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Service Directory",
       "productUrl": "https://cloud.google.com/service-directory/",
