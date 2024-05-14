@@ -3790,7 +3790,7 @@
     },
     {
       "id": "Google.Cloud.RapidMigrationAssessment.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Rapid Migration Assessment",
       "productUrl": "https://cloud.google.com/migration-center/docs",
