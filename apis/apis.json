@@ -5080,7 +5080,7 @@
     },
     {
       "id": "Google.Cloud.Video.LiveStream.V1",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "type": "grpc",
       "productName": "Live Stream",
       "productUrl": "https://cloud.google.com/livestream/docs/",
