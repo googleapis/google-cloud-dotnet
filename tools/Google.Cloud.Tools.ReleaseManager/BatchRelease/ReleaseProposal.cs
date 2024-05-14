@@ -131,7 +131,11 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             new SetVersionCommand().InternalExecute(Id, NewVersion.ToString(), quiet: true);
             ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(Id));
             new CommitCommand().InternalExecute();
-            new PushCommand().InternalExecute();
+
+            if (!config.DeferPush)
+            {
+                new PushCommand().InternalExecute();
+            }
 
             // Go back to our current branch
             Commands.Checkout(repo, original);
