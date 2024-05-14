@@ -3244,7 +3244,7 @@
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1",
-      "version": "2.7.0",
+      "version": "2.8.0",
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://cloud.google.com/network-connectivity/docs/",
