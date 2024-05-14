@@ -3268,7 +3268,7 @@
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1Alpha1",
-      "version": "2.0.0-alpha03",
+      "version": "2.0.0-alpha04",
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://cloud.google.com/network-connectivity/docs/apis",
