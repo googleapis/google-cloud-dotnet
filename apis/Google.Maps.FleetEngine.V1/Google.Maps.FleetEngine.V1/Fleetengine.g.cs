@@ -29,82 +29,82 @@ namespace Google.Maps.FleetEngine.V1 {
             "dmlvci5wcm90bxooZ29vZ2xlL21hcHMvZmxlZXRlbmdpbmUvdjEvdHJhZmZp",
             "Yy5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29n",
             "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYv",
-            "d3JhcHBlcnMucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90byJaCg9U",
+            "d3JhcHBlcnMucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90byJiCg9U",
             "ZXJtaW5hbFBvaW50SWQSFgoIcGxhY2VfaWQYAiABKAlCAhgBSAASGgoMZ2Vu",
-            "ZXJhdGVkX2lkGAMgASgJQgIYAUgAEg0KBXZhbHVlGAQgASgJQgQKAklkIvUB",
-            "ChBUZXJtaW5hbExvY2F0aW9uEicKBXBvaW50GAEgASgLMhMuZ29vZ2xlLnR5",
-            "cGUuTGF0TG5nQgPgQQISPwoRdGVybWluYWxfcG9pbnRfaWQYAiABKAsyJC5t",
-            "YXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsUG9pbnRJZBIbCg9hY2Nlc3Nf",
-            "cG9pbnRfaWQYAyABKAlCAhgBEhMKB3RyaXBfaWQYBCABKAlCAhgBEkUKFnRl",
-            "cm1pbmFsX2xvY2F0aW9uX3R5cGUYBSABKA4yIS5tYXBzLmZsZWV0ZW5naW5l",
-            "LnYxLldheXBvaW50VHlwZUICGAEivAMKDFRyaXBXYXlwb2ludBI3Cghsb2Nh",
-            "dGlvbhgBIAEoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2Nh",
-            "dGlvbhIPCgd0cmlwX2lkGAIgASgJEjgKDXdheXBvaW50X3R5cGUYAyABKA4y",
-            "IS5tYXBzLmZsZWV0ZW5naW5lLnYxLldheXBvaW50VHlwZRItChBwYXRoX3Rv",
-            "X3dheXBvaW50GAQgAygLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEiAKGGVuY29k",
-            "ZWRfcGF0aF90b193YXlwb2ludBgFIAEoCRJLChN0cmFmZmljX3RvX3dheXBv",
-            "aW50GAogASgLMi4ubWFwcy5mbGVldGVuZ2luZS52MS5Db25zdW1hYmxlVHJh",
-            "ZmZpY1BvbHlsaW5lEjQKD2Rpc3RhbmNlX21ldGVycxgGIAEoCzIbLmdvb2ds",
-            "ZS5wcm90b2J1Zi5JbnQzMlZhbHVlEicKA2V0YRgHIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASKwoIZHVyYXRpb24YCCABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb24ijwEKEFZlaGljbGVBdHRyaWJ1dGUSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJEhYKDHN0cmluZ192YWx1ZRgDIAEoCUgA",
-            "EhQKCmJvb2xfdmFsdWUYBCABKAhIABIWCgxudW1iZXJfdmFsdWUYBSABKAFI",
-            "AEIZChd2ZWhpY2xlX2F0dHJpYnV0ZV92YWx1ZSKkDAoPVmVoaWNsZUxvY2F0",
-            "aW9uEiUKCGxvY2F0aW9uGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEj0K",
-            "E2hvcml6b250YWxfYWNjdXJhY3kYCCABKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "RG91YmxlVmFsdWVCAhgBEjUKD2xhdGxuZ19hY2N1cmFjeRgWIAEoCzIcLmdv",
-            "b2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRIsCgdoZWFkaW5nGAIgASgLMhsu",
-            "Z29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSOgoQYmVhcmluZ19hY2N1cmFj",
-            "eRgKIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZUICGAESNgoQ",
-            "aGVhZGluZ19hY2N1cmFjeRgXIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3Vi",
-            "bGVWYWx1ZRIuCghhbHRpdHVkZRgFIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5E",
-            "b3VibGVWYWx1ZRI7ChF2ZXJ0aWNhbF9hY2N1cmFjeRgJIAEoCzIcLmdvb2ds",
-            "ZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZUICGAESNwoRYWx0aXR1ZGVfYWNjdXJh",
-            "Y3kYGCABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUSMwoKc3Bl",
-            "ZWRfa21waBgDIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlQgIY",
-            "ARIrCgVzcGVlZBgGIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1",
-            "ZRI0Cg5zcGVlZF9hY2N1cmFjeRgHIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5E",
-            "b3VibGVWYWx1ZRIvCgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXASNAoLc2VydmVyX3RpbWUYDSABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPAoPbG9jYXRpb25fc2Vuc29yGAsg",
-            "ASgOMiMubWFwcy5mbGVldGVuZ2luZS52MS5Mb2NhdGlvblNlbnNvchIzCg9p",
-            "c19yb2FkX3NuYXBwZWQYGyABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZh",
-            "bHVlEj4KFWlzX2dwc19zZW5zb3JfZW5hYmxlZBgMIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5Cb29sVmFsdWVCA+BBBBI7ChF0aW1lX3NpbmNlX3VwZGF0ZRgO",
-            "IAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlQgPgQQQSPQoRbnVt",
-            "X3N0YWxlX3VwZGF0ZXMYDyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJW",
-            "YWx1ZUIFGAHgQQQSKQoMcmF3X2xvY2F0aW9uGBAgASgLMhMuZ29vZ2xlLnR5",
-            "cGUuTGF0TG5nEjUKEXJhd19sb2NhdGlvbl90aW1lGBEgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBJAChNyYXdfbG9jYXRpb25fc2Vuc29yGBwg",
-            "ASgOMiMubWFwcy5mbGVldGVuZ2luZS52MS5Mb2NhdGlvblNlbnNvchI7ChVy",
-            "YXdfbG9jYXRpb25fYWNjdXJhY3kYGSABKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "RG91YmxlVmFsdWUSMgoVc3VwcGxlbWVudGFsX2xvY2F0aW9uGBIgASgLMhMu",
-            "Z29vZ2xlLnR5cGUuTGF0TG5nEj4KGnN1cHBsZW1lbnRhbF9sb2NhdGlvbl90",
-            "aW1lGBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJJChxzdXBw",
-            "bGVtZW50YWxfbG9jYXRpb25fc2Vuc29yGBQgASgOMiMubWFwcy5mbGVldGVu",
-            "Z2luZS52MS5Mb2NhdGlvblNlbnNvchJECh5zdXBwbGVtZW50YWxfbG9jYXRp",
-            "b25fYWNjdXJhY3kYFSABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFs",
-            "dWUSGAoMcm9hZF9zbmFwcGVkGBogASgIQgIYASo8CghUcmlwVHlwZRIVChFV",
-            "TktOT1dOX1RSSVBfVFlQRRAAEgoKBlNIQVJFRBABEg0KCUVYQ0xVU0lWRRAC",
-            "KosBCgxXYXlwb2ludFR5cGUSGQoVVU5LTk9XTl9XQVlQT0lOVF9UWVBFEAAS",
-            "GAoUUElDS1VQX1dBWVBPSU5UX1RZUEUQARIaChZEUk9QX09GRl9XQVlQT0lO",
-            "VF9UWVBFEAISKgomSU5URVJNRURJQVRFX0RFU1RJTkFUSU9OX1dBWVBPSU5U",
-            "X1RZUEUQAypfChJQb2x5bGluZUZvcm1hdFR5cGUSFwoTVU5LTk9XTl9GT1JN",
-            "QVRfVFlQRRAAEhUKEUxBVF9MTkdfTElTVF9UWVBFEAESGQoVRU5DT0RFRF9Q",
-            "T0xZTElORV9UWVBFEAIqiQEKEE5hdmlnYXRpb25TdGF0dXMSHQoZVU5LTk9X",
-            "Tl9OQVZJR0FUSU9OX1NUQVRVUxAAEg8KC05PX0dVSURBTkNFEAESGgoWRU5S",
-            "T1VURV9UT19ERVNUSU5BVElPThACEg0KCU9GRl9ST1VURRADEhoKFkFSUklW",
-            "RURfQVRfREVTVElOQVRJT04QBCrXAQoOTG9jYXRpb25TZW5zb3ISEgoOVU5L",
-            "Tk9XTl9TRU5TT1IQABIHCgNHUFMQARILCgdORVRXT1JLEAISCwoHUEFTU0lW",
-            "RRADEiIKHlJPQURfU05BUFBFRF9MT0NBVElPTl9QUk9WSURFUhAEEh4KGkNV",
-            "U1RPTUVSX1NVUFBMSUVEX0xPQ0FUSU9OEAUSGQoVRkxFRVRfRU5HSU5FX0xP",
-            "Q0FUSU9OEAYSGwoXRlVTRURfTE9DQVRJT05fUFJPVklERVIQZBISCg1DT1JF",
-            "X0xPQ0FUSU9OEMgBQrYBChpnb29nbGUubWFwcy5mbGVldGVuZ2luZS52MUIL",
-            "RmxlZXRFbmdpbmVQAVpGY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0",
-            "ZW5naW5lL2FwaXYxL2ZsZWV0ZW5naW5lcGI7ZmxlZXRlbmdpbmVwYqICA0NG",
-            "RaoCGkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYx6gIdR29vZ2xlOjpNYXBz",
-            "OjpGbGVldEVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "ZXJhdGVkX2lkGAMgASgJQgIYAUgAEhEKBXZhbHVlGAQgASgJQgIYAToCGAFC",
+            "BAoCSWQi+QEKEFRlcm1pbmFsTG9jYXRpb24SJwoFcG9pbnQYASABKAsyEy5n",
+            "b29nbGUudHlwZS5MYXRMbmdCA+BBAhJDChF0ZXJtaW5hbF9wb2ludF9pZBgC",
+            "IAEoCzIkLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxQb2ludElkQgIY",
+            "ARIbCg9hY2Nlc3NfcG9pbnRfaWQYAyABKAlCAhgBEhMKB3RyaXBfaWQYBCAB",
+            "KAlCAhgBEkUKFnRlcm1pbmFsX2xvY2F0aW9uX3R5cGUYBSABKA4yIS5tYXBz",
+            "LmZsZWV0ZW5naW5lLnYxLldheXBvaW50VHlwZUICGAEivAMKDFRyaXBXYXlw",
+            "b2ludBI3Cghsb2NhdGlvbhgBIAEoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEu",
+            "VGVybWluYWxMb2NhdGlvbhIPCgd0cmlwX2lkGAIgASgJEjgKDXdheXBvaW50",
+            "X3R5cGUYAyABKA4yIS5tYXBzLmZsZWV0ZW5naW5lLnYxLldheXBvaW50VHlw",
+            "ZRItChBwYXRoX3RvX3dheXBvaW50GAQgAygLMhMuZ29vZ2xlLnR5cGUuTGF0",
+            "TG5nEiAKGGVuY29kZWRfcGF0aF90b193YXlwb2ludBgFIAEoCRJLChN0cmFm",
+            "ZmljX3RvX3dheXBvaW50GAogASgLMi4ubWFwcy5mbGVldGVuZ2luZS52MS5D",
+            "b25zdW1hYmxlVHJhZmZpY1BvbHlsaW5lEjQKD2Rpc3RhbmNlX21ldGVycxgG",
+            "IAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlEicKA2V0YRgHIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoIZHVyYXRpb24YCCAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24ijwEKEFZlaGljbGVBdHRy",
+            "aWJ1dGUSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJEhYKDHN0cmluZ192",
+            "YWx1ZRgDIAEoCUgAEhQKCmJvb2xfdmFsdWUYBCABKAhIABIWCgxudW1iZXJf",
+            "dmFsdWUYBSABKAFIAEIZChd2ZWhpY2xlX2F0dHJpYnV0ZV92YWx1ZSKkDAoP",
+            "VmVoaWNsZUxvY2F0aW9uEiUKCGxvY2F0aW9uGAEgASgLMhMuZ29vZ2xlLnR5",
+            "cGUuTGF0TG5nEj0KE2hvcml6b250YWxfYWNjdXJhY3kYCCABKAsyHC5nb29n",
+            "bGUucHJvdG9idWYuRG91YmxlVmFsdWVCAhgBEjUKD2xhdGxuZ19hY2N1cmFj",
+            "eRgWIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRIsCgdoZWFk",
+            "aW5nGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSOgoQYmVh",
+            "cmluZ19hY2N1cmFjeRgKIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVW",
+            "YWx1ZUICGAESNgoQaGVhZGluZ19hY2N1cmFjeRgXIAEoCzIcLmdvb2dsZS5w",
+            "cm90b2J1Zi5Eb3VibGVWYWx1ZRIuCghhbHRpdHVkZRgFIAEoCzIcLmdvb2ds",
+            "ZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRI7ChF2ZXJ0aWNhbF9hY2N1cmFjeRgJ",
+            "IAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZUICGAESNwoRYWx0",
+            "aXR1ZGVfYWNjdXJhY3kYGCABKAsyHC5nb29nbGUucHJvdG9idWYuRG91Ymxl",
+            "VmFsdWUSMwoKc3BlZWRfa21waBgDIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5J",
+            "bnQzMlZhbHVlQgIYARIrCgVzcGVlZBgGIAEoCzIcLmdvb2dsZS5wcm90b2J1",
+            "Zi5Eb3VibGVWYWx1ZRI0Cg5zcGVlZF9hY2N1cmFjeRgHIAEoCzIcLmdvb2ds",
+            "ZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRIvCgt1cGRhdGVfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoLc2VydmVyX3RpbWUYDSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPAoPbG9jYXRp",
+            "b25fc2Vuc29yGAsgASgOMiMubWFwcy5mbGVldGVuZ2luZS52MS5Mb2NhdGlv",
+            "blNlbnNvchIzCg9pc19yb2FkX3NuYXBwZWQYGyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuQm9vbFZhbHVlEj4KFWlzX2dwc19zZW5zb3JfZW5hYmxlZBgMIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBBI7ChF0aW1lX3Np",
+            "bmNlX3VwZGF0ZRgOIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVl",
+            "QgPgQQQSPQoRbnVtX3N0YWxlX3VwZGF0ZXMYDyABKAsyGy5nb29nbGUucHJv",
+            "dG9idWYuSW50MzJWYWx1ZUIFGAHgQQQSKQoMcmF3X2xvY2F0aW9uGBAgASgL",
+            "MhMuZ29vZ2xlLnR5cGUuTGF0TG5nEjUKEXJhd19sb2NhdGlvbl90aW1lGBEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJAChNyYXdfbG9jYXRp",
+            "b25fc2Vuc29yGBwgASgOMiMubWFwcy5mbGVldGVuZ2luZS52MS5Mb2NhdGlv",
+            "blNlbnNvchI7ChVyYXdfbG9jYXRpb25fYWNjdXJhY3kYGSABKAsyHC5nb29n",
+            "bGUucHJvdG9idWYuRG91YmxlVmFsdWUSMgoVc3VwcGxlbWVudGFsX2xvY2F0",
+            "aW9uGBIgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEj4KGnN1cHBsZW1lbnRh",
+            "bF9sb2NhdGlvbl90aW1lGBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBJJChxzdXBwbGVtZW50YWxfbG9jYXRpb25fc2Vuc29yGBQgASgOMiMu",
+            "bWFwcy5mbGVldGVuZ2luZS52MS5Mb2NhdGlvblNlbnNvchJECh5zdXBwbGVt",
+            "ZW50YWxfbG9jYXRpb25fYWNjdXJhY3kYFSABKAsyHC5nb29nbGUucHJvdG9i",
+            "dWYuRG91YmxlVmFsdWUSGAoMcm9hZF9zbmFwcGVkGBogASgIQgIYASo8CghU",
+            "cmlwVHlwZRIVChFVTktOT1dOX1RSSVBfVFlQRRAAEgoKBlNIQVJFRBABEg0K",
+            "CUVYQ0xVU0lWRRACKosBCgxXYXlwb2ludFR5cGUSGQoVVU5LTk9XTl9XQVlQ",
+            "T0lOVF9UWVBFEAASGAoUUElDS1VQX1dBWVBPSU5UX1RZUEUQARIaChZEUk9Q",
+            "X09GRl9XQVlQT0lOVF9UWVBFEAISKgomSU5URVJNRURJQVRFX0RFU1RJTkFU",
+            "SU9OX1dBWVBPSU5UX1RZUEUQAypfChJQb2x5bGluZUZvcm1hdFR5cGUSFwoT",
+            "VU5LTk9XTl9GT1JNQVRfVFlQRRAAEhUKEUxBVF9MTkdfTElTVF9UWVBFEAES",
+            "GQoVRU5DT0RFRF9QT0xZTElORV9UWVBFEAIqiQEKEE5hdmlnYXRpb25TdGF0",
+            "dXMSHQoZVU5LTk9XTl9OQVZJR0FUSU9OX1NUQVRVUxAAEg8KC05PX0dVSURB",
+            "TkNFEAESGgoWRU5ST1VURV9UT19ERVNUSU5BVElPThACEg0KCU9GRl9ST1VU",
+            "RRADEhoKFkFSUklWRURfQVRfREVTVElOQVRJT04QBCrXAQoOTG9jYXRpb25T",
+            "ZW5zb3ISEgoOVU5LTk9XTl9TRU5TT1IQABIHCgNHUFMQARILCgdORVRXT1JL",
+            "EAISCwoHUEFTU0lWRRADEiIKHlJPQURfU05BUFBFRF9MT0NBVElPTl9QUk9W",
+            "SURFUhAEEh4KGkNVU1RPTUVSX1NVUFBMSUVEX0xPQ0FUSU9OEAUSGQoVRkxF",
+            "RVRfRU5HSU5FX0xPQ0FUSU9OEAYSGwoXRlVTRURfTE9DQVRJT05fUFJPVklE",
+            "RVIQZBISCg1DT1JFX0xPQ0FUSU9OEMgBQrYBChpnb29nbGUubWFwcy5mbGVl",
+            "dGVuZ2luZS52MUILRmxlZXRFbmdpbmVQAVpGY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9tYXBzL2ZsZWV0ZW5naW5lL2FwaXYxL2ZsZWV0ZW5naW5lcGI7ZmxlZXRl",
+            "bmdpbmVwYqICA0NGRaoCGkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYx6gId",
+            "R29vZ2xlOjpNYXBzOjpGbGVldEVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.FleetEngine.V1.TrafficReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.V1.TripType), typeof(global::Google.Maps.FleetEngine.V1.WaypointType), typeof(global::Google.Maps.FleetEngine.V1.PolylineFormatType), typeof(global::Google.Maps.FleetEngine.V1.NavigationStatus), typeof(global::Google.Maps.FleetEngine.V1.LocationSensor), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -258,8 +258,10 @@ namespace Google.Maps.FleetEngine.V1 {
 
   #region Messages
   /// <summary>
-  /// Identifies a terminal point.
+  /// Deprecated: TerminalPoints are no longer supported in Fleet Engine. Use
+  /// `TerminalLocation.point` instead.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TerminalPointId : pb::IMessage<TerminalPointId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -382,8 +384,9 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int ValueFieldNumber = 4;
     private string value_ = "";
     /// <summary>
-    /// Unique ID of the terminal point.
+    /// Deprecated.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
@@ -671,8 +674,9 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int TerminalPointIdFieldNumber = 2;
     private global::Google.Maps.FleetEngine.V1.TerminalPointId terminalPointId_;
     /// <summary>
-    /// ID of the terminal point.
+    /// Deprecated: Specify the `point` field instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Maps.FleetEngine.V1.TerminalPointId TerminalPointId {
@@ -686,7 +690,7 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int AccessPointIdFieldNumber = 3;
     private string accessPointId_ = "";
     /// <summary>
-    /// Deprecated.
+    /// Deprecated: Specify the `point` field instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
