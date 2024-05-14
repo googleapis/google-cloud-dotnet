@@ -2741,7 +2741,7 @@
     },
     {
       "id": "Google.Cloud.Iap.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Cloud Identity-Aware Proxy",
       "productUrl": "https://cloud.google.com/iap/docs/",
