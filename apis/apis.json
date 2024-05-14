@@ -4955,7 +4955,7 @@
     },
     {
       "id": "Google.Cloud.Tpu.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Cloud TPU",
       "productUrl": "https://cloud.google.com/tpu/",
