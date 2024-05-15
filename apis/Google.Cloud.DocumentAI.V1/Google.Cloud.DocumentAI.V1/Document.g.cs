@@ -5697,7 +5697,7 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int StrikeoutFieldNumber = 8;
                 private bool strikeout_;
                 /// <summary>
-                /// Whether the text is strikethrough.
+                /// Whether the text is strikethrough. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5712,7 +5712,7 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int SubscriptFieldNumber = 9;
                 private bool subscript_;
                 /// <summary>
-                /// Whether the text is a subscript.
+                /// Whether the text is a subscript. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5727,7 +5727,7 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int SuperscriptFieldNumber = 10;
                 private bool superscript_;
                 /// <summary>
-                /// Whether the text is a superscript.
+                /// Whether the text is a superscript. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5742,7 +5742,7 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int SmallcapsFieldNumber = 11;
                 private bool smallcaps_;
                 /// <summary>
-                /// Whether the text is in small caps.
+                /// Whether the text is in small caps. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
