@@ -72,7 +72,7 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
     public PublisherClient.Settings Settings { get; set; }
 
     /// <summary>
-    /// The settings to use when creating<see cref= "PublisherServiceApiClient" /> instances.
+    /// The settings to use when creating <see cref= "PublisherServiceApiClient" /> instances.
     /// Default settings will be used if this is null.
     /// </summary>
     public PublisherServiceApiSettings ApiSettings { get; set; }
