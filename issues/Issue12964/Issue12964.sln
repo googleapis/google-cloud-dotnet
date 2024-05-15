@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Issue12964", "Issue12964.csproj", "{41562B49-7518-423B-957D-876704FF3F85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.PubSub.V1", "..\..\apis\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj", "{C7261A02-B28E-4457-A661-4C61BB000B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41562B49-7518-423B-957D-876704FF3F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41562B49-7518-423B-957D-876704FF3F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41562B49-7518-423B-957D-876704FF3F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41562B49-7518-423B-957D-876704FF3F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7261A02-B28E-4457-A661-4C61BB000B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7261A02-B28E-4457-A661-4C61BB000B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7261A02-B28E-4457-A661-4C61BB000B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7261A02-B28E-4457-A661-4C61BB000B28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDFAD55E-A2C5-4D70-9BB7-9A086622EC9F}
+	EndGlobalSection
+EndGlobal
