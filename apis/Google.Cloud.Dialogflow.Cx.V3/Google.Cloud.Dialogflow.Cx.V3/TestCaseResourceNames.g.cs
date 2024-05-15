@@ -622,6 +622,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
     }
 
+    public partial class IntentCoverage
+    {
+        public partial class Types
+        {
+            public partial class Intent
+            {
+                /// <summary>
+                /// <see cref="IntentName"/>-typed view over the <see cref="Intent_"/> resource name property.
+                /// </summary>
+                public IntentName Intent_AsIntentName
+                {
+                    get => string.IsNullOrEmpty(Intent_) ? null : IntentName.Parse(Intent_, allowUnparsed: true);
+                    set => Intent_ = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class CalculateCoverageRequest
     {
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Agent"/> resource name property.</summary>

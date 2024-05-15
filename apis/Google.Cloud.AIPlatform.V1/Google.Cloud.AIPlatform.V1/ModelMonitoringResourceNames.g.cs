@@ -276,6 +276,24 @@ namespace Google.Cloud.AIPlatform.V1
         public static bool operator !=(NotificationChannelName a, NotificationChannelName b) => !(a == b);
     }
 
+    public partial class ModelMonitoringObjectiveConfig
+    {
+        public partial class Types
+        {
+            public partial class TrainingDataset
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class ModelMonitoringAlertConfig
     {
         /// <summary>

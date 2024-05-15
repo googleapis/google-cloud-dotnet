@@ -288,4 +288,28 @@ namespace Google.Maps.Places.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class AutocompletePlacesResponse
+    {
+        public partial class Types
+        {
+            public partial class Suggestion
+            {
+                public partial class Types
+                {
+                    public partial class PlacePrediction
+                    {
+                        /// <summary>
+                        /// <see cref="PlaceName"/>-typed view over the <see cref="Place"/> resource name property.
+                        /// </summary>
+                        public PlaceName PlaceAsPlaceName
+                        {
+                            get => string.IsNullOrEmpty(Place) ? null : PlaceName.Parse(Place, allowUnparsed: true);
+                            set => Place = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

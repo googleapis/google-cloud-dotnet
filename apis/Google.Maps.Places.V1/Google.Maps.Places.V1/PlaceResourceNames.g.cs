@@ -236,5 +236,20 @@ namespace Google.Maps.Places.V1
             get => string.IsNullOrEmpty(Name) ? null : gmpv::PlaceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class SubDestination
+            {
+                /// <summary>
+                /// <see cref="gmpv::PlaceName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gmpv::PlaceName PlaceName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gmpv::PlaceName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

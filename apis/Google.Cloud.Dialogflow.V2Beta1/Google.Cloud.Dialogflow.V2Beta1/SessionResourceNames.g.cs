@@ -457,6 +457,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         }
     }
 
+    public partial class KnowledgeAnswers
+    {
+        public partial class Types
+        {
+            public partial class Answer
+            {
+                /// <summary>
+                /// <see cref="DocumentName"/>-typed view over the <see cref="Source"/> resource name property.
+                /// </summary>
+                public DocumentName SourceAsDocumentName
+                {
+                    get => string.IsNullOrEmpty(Source) ? null : DocumentName.Parse(Source, allowUnparsed: true);
+                    set => Source = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class StreamingDetectIntentRequest
     {
         /// <summary>

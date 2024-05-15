@@ -18,10 +18,10 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gccv = Google.Cloud.ConfidentialComputing.V1Alpha1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

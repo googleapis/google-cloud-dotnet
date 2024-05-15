@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcav = Google.Cloud.ArtifactRegistry.V1;
 using sys = System;
 
@@ -536,6 +536,31 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             get => string.IsNullOrEmpty(Repository) ? null : RepositoryName.Parse(Repository, allowUnparsed: true);
             set => Repository = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RemoteRepositoryConfig
+    {
+        public partial class Types
+        {
+            public partial class UpstreamCredentials
+            {
+                public partial class Types
+                {
+                    public partial class UsernamePasswordCredentials
+                    {
+                        /// <summary>
+                        /// <see cref="SecretVersionName"/>-typed view over the <see cref="PasswordSecretVersion"/>
+                        /// resource name property.
+                        /// </summary>
+                        public SecretVersionName PasswordSecretVersionAsSecretVersionName
+                        {
+                            get => string.IsNullOrEmpty(PasswordSecretVersion) ? null : SecretVersionName.Parse(PasswordSecretVersion, allowUnparsed: true);
+                            set => PasswordSecretVersion = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
         }
     }
 

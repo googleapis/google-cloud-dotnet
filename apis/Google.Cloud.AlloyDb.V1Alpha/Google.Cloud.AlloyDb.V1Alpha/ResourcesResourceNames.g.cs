@@ -2391,6 +2391,21 @@ namespace Google.Cloud.AlloyDb.V1Alpha
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
             set => Network = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class NetworkConfig
+            {
+                /// <summary>
+                /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+                /// </summary>
+                public NetworkName NetworkAsNetworkName
+                {
+                    get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+                    set => Network = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class Instance

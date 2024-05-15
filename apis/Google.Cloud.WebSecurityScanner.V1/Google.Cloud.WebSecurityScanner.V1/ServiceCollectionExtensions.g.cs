@@ -18,8 +18,8 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcwv = Google.Cloud.WebSecurityScanner.V1;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gctv = Google.Cloud.Talent.V4Beta1;
 
 namespace Google.Cloud.Talent.V4Beta1

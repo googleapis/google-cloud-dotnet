@@ -291,5 +291,20 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(PipelineJob) ? null : PipelineJobName.Parse(PipelineJob, allowUnparsed: true);
             set => PipelineJob = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class OriginalModelInfo
+            {
+                /// <summary>
+                /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Model"/> resource name property.
+                /// </summary>
+                public gcav::ModelName ModelAsModelName
+                {
+                    get => string.IsNullOrEmpty(Model) ? null : gcav::ModelName.Parse(Model, allowUnparsed: true);
+                    set => Model = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

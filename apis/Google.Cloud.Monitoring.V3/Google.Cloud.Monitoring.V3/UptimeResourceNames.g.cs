@@ -601,6 +601,24 @@ namespace Google.Cloud.Monitoring.V3
         public static bool operator !=(FunctionName a, FunctionName b) => !(a == b);
     }
 
+    public partial class SyntheticMonitorTarget
+    {
+        public partial class Types
+        {
+            public partial class CloudFunctionV2Target
+            {
+                /// <summary>
+                /// <see cref="gcmv::FunctionName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gcmv::FunctionName FunctionName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gcmv::FunctionName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class UptimeCheckConfig
     {
         /// <summary>

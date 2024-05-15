@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.Deploy.V1;
 using sys = System;
 
@@ -4667,6 +4667,24 @@ namespace Google.Cloud.Deploy.V1
         }
     }
 
+    public partial class SkaffoldModules
+    {
+        public partial class Types
+        {
+            public partial class SkaffoldGCBRepoSource
+            {
+                /// <summary>
+                /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.
+                /// </summary>
+                public RepositoryName RepositoryAsRepositoryName
+                {
+                    get => string.IsNullOrEmpty(Repository) ? null : RepositoryName.Parse(Repository, allowUnparsed: true);
+                    set => Repository = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class ListCustomTargetTypesRequest
     {
         /// <summary>
@@ -4724,6 +4742,21 @@ namespace Google.Cloud.Deploy.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ReleaseName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class TargetRender
+            {
+                /// <summary>
+                /// <see cref="BuildName"/>-typed view over the <see cref="RenderingBuild"/> resource name property.
+                /// </summary>
+                public BuildName RenderingBuildAsBuildName
+                {
+                    get => string.IsNullOrEmpty(RenderingBuild) ? null : BuildName.Parse(RenderingBuild, allowUnparsed: true);
+                    set => RenderingBuild = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

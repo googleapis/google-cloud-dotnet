@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.Dataplex.V1;
 using sys = System;
 
@@ -1075,6 +1075,21 @@ namespace Google.Cloud.Dataplex.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class AspectInfo
+            {
+                /// <summary>
+                /// <see cref="AspectTypeName"/>-typed view over the <see cref="Type"/> resource name property.
+                /// </summary>
+                public AspectTypeName TypeAsAspectTypeName
+                {
+                    get => string.IsNullOrEmpty(Type) ? null : AspectTypeName.Parse(Type, allowUnparsed: true);
+                    set => Type = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

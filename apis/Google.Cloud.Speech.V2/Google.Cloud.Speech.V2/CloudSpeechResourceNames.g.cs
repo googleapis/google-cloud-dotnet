@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcsv = Google.Cloud.Speech.V2;
 using sys = System;
 
@@ -1681,6 +1681,24 @@ namespace Google.Cloud.Speech.V2
         {
             get => string.IsNullOrEmpty(KmsKeyVersionName) ? null : CryptoKeyVersionName.Parse(KmsKeyVersionName, allowUnparsed: true);
             set => KmsKeyVersionName = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SpeechAdaptation
+    {
+        public partial class Types
+        {
+            public partial class AdaptationPhraseSet
+            {
+                /// <summary>
+                /// <see cref="PhraseSetName"/>-typed view over the <see cref="PhraseSet"/> resource name property.
+                /// </summary>
+                public PhraseSetName PhraseSetAsPhraseSetName
+                {
+                    get => string.IsNullOrEmpty(PhraseSet) ? null : PhraseSetName.Parse(PhraseSet, allowUnparsed: true);
+                    set => PhraseSet = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

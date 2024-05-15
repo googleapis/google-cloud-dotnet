@@ -615,6 +615,32 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::EnvironmentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class VersionConfig
+            {
+                /// <summary>
+                /// <see cref="VersionName"/>-typed view over the <see cref="Version"/> resource name property.
+                /// </summary>
+                public VersionName VersionAsVersionName
+                {
+                    get => string.IsNullOrEmpty(Version) ? null : VersionName.Parse(Version, allowUnparsed: true);
+                    set => Version = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class TestCasesConfig
+            {
+                /// <summary>
+                /// <see cref="TestCaseName"/>-typed view over the <see cref="TestCases"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<TestCaseName> TestCasesAsTestCaseNames
+                {
+                    get => new gax::ResourceNameList<TestCaseName>(TestCases, s => string.IsNullOrEmpty(s) ? null : TestCaseName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
     }
 
     public partial class ListEnvironmentsRequest

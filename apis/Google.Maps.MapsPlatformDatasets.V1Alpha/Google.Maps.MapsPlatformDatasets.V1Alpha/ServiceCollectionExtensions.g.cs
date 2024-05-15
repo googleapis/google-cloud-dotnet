@@ -18,8 +18,8 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gmmv = Google.Maps.MapsPlatformDatasets.V1Alpha;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

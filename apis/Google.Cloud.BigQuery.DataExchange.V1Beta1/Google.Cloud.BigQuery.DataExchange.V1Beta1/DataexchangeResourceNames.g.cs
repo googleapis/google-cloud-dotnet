@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbdv = Google.Cloud.BigQuery.DataExchange.V1Beta1;
 using sys = System;
 
@@ -792,6 +792,21 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbdv::ListingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class BigQueryDatasetSource
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

@@ -18,8 +18,8 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gclv = Google.Cloud.Language.V1;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.Dataplex.V1;
 using sys = System;
 
@@ -876,6 +876,20 @@ namespace Google.Cloud.Dataplex.V1
         public gax::ResourceNameList<DataAttributeName> AttributesAsDataAttributeNames
         {
             get => new gax::ResourceNameList<DataAttributeName>(Attributes, s => string.IsNullOrEmpty(s) ? null : DataAttributeName.Parse(s, allowUnparsed: true));
+        }
+
+        public partial class Types
+        {
+            public partial class Path
+            {
+                /// <summary>
+                /// <see cref="DataAttributeName"/>-typed view over the <see cref="Attributes"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<DataAttributeName> AttributesAsDataAttributeNames
+                {
+                    get => new gax::ResourceNameList<DataAttributeName>(Attributes, s => string.IsNullOrEmpty(s) ? null : DataAttributeName.Parse(s, allowUnparsed: true));
+                }
+            }
         }
     }
 

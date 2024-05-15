@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gccv = Google.Cloud.CloudBuild.V1;
 using sys = System;
 
@@ -3714,6 +3714,24 @@ namespace Google.Cloud.CloudBuild.V1
         }
     }
 
+    public partial class BuildOptions
+    {
+        public partial class Types
+        {
+            public partial class PoolOption
+            {
+                /// <summary>
+                /// <see cref="gccv::WorkerPoolName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gccv::WorkerPoolName WorkerPoolName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gccv::WorkerPoolName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class GitHubEnterpriseConfig
     {
         /// <summary>
@@ -3788,6 +3806,24 @@ namespace Google.Cloud.CloudBuild.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::WorkerPoolName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PrivatePoolV1Config
+    {
+        public partial class Types
+        {
+            public partial class NetworkConfig
+            {
+                /// <summary>
+                /// <see cref="NetworkName"/>-typed view over the <see cref="PeeredNetwork"/> resource name property.
+                /// </summary>
+                public NetworkName PeeredNetworkAsNetworkName
+                {
+                    get => string.IsNullOrEmpty(PeeredNetwork) ? null : NetworkName.Parse(PeeredNetwork, allowUnparsed: true);
+                    set => PeeredNetwork = value?.ToString() ?? "";
+                }
+            }
         }
     }
 
