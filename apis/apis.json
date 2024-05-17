@@ -3610,7 +3610,7 @@
     },
     {
       "id": "Google.Cloud.Parallelstore.V1Beta",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Parallelstore",
       "productUrl": "http://cloud/parallelstore?hl=en",
@@ -3619,8 +3619,8 @@
         "performance"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/parallelstore/v1beta",
