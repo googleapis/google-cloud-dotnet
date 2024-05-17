@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.17.0, released 2024-05-17
+
+### New features
+
+- Add Skaffold verbose support to Execution Environment properties ([commit a99ed3a](https://github.com/googleapis/google-cloud-dotnet/commit/a99ed3a3ac5036094ba7a7b8452c1ae4d8ae1a56))
+
 ## Version 2.16.0, released 2024-05-08
 
 ### New features
