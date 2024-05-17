@@ -3221,7 +3221,7 @@
     },
     {
       "id": "Google.Cloud.NetApp.V1",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "type": "grpc",
       "productName": "NetApp",
       "productUrl": "https://cloud.google.com/netapp/volumes/docs/discover/overview",
@@ -3232,8 +3232,8 @@
         "availability"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/netapp/v1",
