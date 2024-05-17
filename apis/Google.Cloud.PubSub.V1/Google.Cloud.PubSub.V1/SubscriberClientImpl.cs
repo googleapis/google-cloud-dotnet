@@ -133,9 +133,9 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         Flow flow = new Flow(_flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue,
             _flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, registerTask, _taskHelper);
         // Start all subscribers
-        var subscriberTasks = _clients.Select(client =>
+        var subscriberTasks = _clients.Select((client, index) =>
         {
-            var singleChannel = new SingleChannel(this, client, handler, flow, _useLegacyFlowControl, registerTask, _clock);
+            var singleChannel = new SingleChannel(this, client, index + 1, handler, flow, _useLegacyFlowControl, registerTask, _clock);
             return _taskHelper.Run(() => singleChannel.StartAsync());
         }).ToArray();
         // Set up finish task; code that executes when this subscriber is being shutdown (for whatever reason).
