@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.13.0, released 2024-05-17
+
+### New features
+
+- Improve SubscriberClient logging ([commit a9896c9](https://github.com/googleapis/google-cloud-dotnet/commit/a9896c96a54649be3460025f64c962fb0ad8db93))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
 ## Version 3.12.0, released 2024-03-26
 
 ### New features
