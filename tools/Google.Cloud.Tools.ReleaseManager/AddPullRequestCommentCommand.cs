@@ -26,9 +26,6 @@ public class AddPullRequestCommentCommand : CommandBase
 {
     private static readonly Regex StartEscapeSequence = new Regex("\u001b\\[1;\\d+m");
     private static readonly Regex EndEscapeSequence = new Regex("\u001b\\[0m");
-    private const string RepositoryOwner = "googleapis";
-    private const string RepositoryName = "google-cloud-dotnet";
-    private const string ApplicationName = "google-cloud-dotnet-release-manager";
 
     public AddPullRequestCommentCommand() : base("add-pr-comment", "Adds a comment to a pull request from file contents", "file", "pr", "token")
     {
@@ -40,13 +37,10 @@ public class AddPullRequestCommentCommand : CommandBase
         int pr = int.Parse(args[1]);
         string gitHubToken = args[2];
 
-        var client = new GitHubClient(new ProductHeaderValue(ApplicationName))
-        {
-            Credentials = new Octokit.Credentials(gitHubToken)
-        };
+        var client = GitHubHelpers.CreateGitHubClient(gitHubToken);
         string comment = ReplaceEscapeSequences(File.ReadAllText(file));
 
-        client.Issue.Comment.Create(RepositoryOwner, RepositoryName, pr, comment).GetAwaiter().GetResult();
+        client.Issue.Comment.Create(GitHubHelpers.RepositoryOwner, GitHubHelpers.RepositoryName, pr, comment).GetAwaiter().GetResult();
         return 0;
     }
 
