@@ -31,12 +31,15 @@ namespace Google.Maps.Places.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AttributionReflection.Descriptor;
+            yield return ContentBlockReflection.Descriptor;
+            yield return ContextualContentReflection.Descriptor;
             yield return EvChargingReflection.Descriptor;
             yield return FuelOptionsReflection.Descriptor;
             yield return GeometryReflection.Descriptor;
             yield return PhotoReflection.Descriptor;
             yield return PlaceReflection.Descriptor;
             yield return PlacesServiceReflection.Descriptor;
+            yield return ReferenceReflection.Descriptor;
             yield return ReviewReflection.Descriptor;
         }
     }
