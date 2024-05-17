@@ -155,7 +155,7 @@ public sealed partial class SubscriberClientImpl
         private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
         private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
         private readonly int _maxAckExtendSendCount; // Maximum number of ids to include in an ack/nack/extend push RPC.
-        private readonly int _maxConcurrentPush; // Mamimum number (slightly soft) of concurrent ack/nack/extend push RPCs.
+        private readonly int _maxConcurrentPush; // Maximum number (slightly soft) of concurrent ack/nack/extend push RPCs.
 
         private readonly Flow _flow;
         private readonly bool _useLegacyFlowControl;
@@ -178,9 +178,10 @@ public sealed partial class SubscriberClientImpl
         private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
         private readonly RetryState _retryState;
         private readonly ILogger _logger;
+        private readonly int _clientIndex; // The index of this client within the overall SubscriberClient, in the range 1-ClientCount. Only used for logging.
 
         internal SingleChannel(SubscriberClientImpl subscriber,
-            SubscriberServiceApiClient client, SubscriptionHandler handler,
+            SubscriberServiceApiClient client, int clientIndex, SubscriptionHandler handler,
             Flow flow, bool useLegacyFlowControl,
             Action<Task> registerTaskFn,
             IClock clock)
@@ -190,6 +191,7 @@ public sealed partial class SubscriberClientImpl
             _scheduler = subscriber._scheduler;
             _clock = subscriber._clock;
             _client = client;
+            _clientIndex = clientIndex;
             _handler = handler;
             _hardStopCts = subscriber._globalHardStopCts;
             _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
@@ -303,7 +305,7 @@ public sealed partial class SubscriberClientImpl
             if (_retryState.Backoff is TimeSpan backoff)
             {
                 // Delay, then start the streaming-pull.
-                _logger?.LogDebug("Delaying for {seconds}s before streaming pull call.", (int) backoff.TotalSeconds);
+                _logger?.LogDebug("Client {index} delaying for {seconds}s before streaming pull call.", _clientIndex, (int) backoff.TotalSeconds);
                 Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
                 Add(delayTask, Next(true, HandleStartStreamingPullWithoutBackoff));
             }
@@ -353,7 +355,7 @@ public sealed partial class SubscriberClientImpl
         /// </summary>
         private void RestartPullAfterRetriableFailure(Exception e)
         {
-            _logger?.LogWarning(e, "Recoverable error in streaming pull; will retry.");
+            _logger?.LogDebug(e, "Recoverable error in streaming pull for client {index}; will retry.", _clientIndex);
             // Update the retry state, increasing the backoff etc.
             _retryState.OnFailure(e);
             StopStreamingPull();
