@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.3.0, released 2024-05-17
+
+### New features
+
+- Add a new Service Level FLEX ([commit 77da572](https://github.com/googleapis/google-cloud-dotnet/commit/77da5720c8820c47d6738502351ecc4edd76eb73))
+- Add Tiering Policy to Volume ([commit 77da572](https://github.com/googleapis/google-cloud-dotnet/commit/77da5720c8820c47d6738502351ecc4edd76eb73))
+- Add backup chain bytes to BackupConfig in Volume ([commit 77da572](https://github.com/googleapis/google-cloud-dotnet/commit/77da5720c8820c47d6738502351ecc4edd76eb73))
+- Add Location metadata support ([commit 77da572](https://github.com/googleapis/google-cloud-dotnet/commit/77da5720c8820c47d6738502351ecc4edd76eb73))
+
 ## Version 1.2.0, released 2024-05-14
 
 ### New features
