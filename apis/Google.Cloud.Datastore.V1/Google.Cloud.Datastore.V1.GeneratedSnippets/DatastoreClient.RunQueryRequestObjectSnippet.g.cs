@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
+                PropertyMask = new PropertyMask(),
                 ExplainOptions = new ExplainOptions(),
             };
             // Make the request

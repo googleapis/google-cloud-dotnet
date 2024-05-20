@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
             {
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
+                PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
             };
@@ -55,6 +56,7 @@ namespace GoogleCSharpSnippets
             {
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
+                PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
             };
@@ -108,6 +110,7 @@ namespace GoogleCSharpSnippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
+                PropertyMask = new PropertyMask(),
                 ExplainOptions = new ExplainOptions(),
             };
             // Make the request
@@ -130,6 +133,7 @@ namespace GoogleCSharpSnippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
+                PropertyMask = new PropertyMask(),
                 ExplainOptions = new ExplainOptions(),
             };
             // Make the request
