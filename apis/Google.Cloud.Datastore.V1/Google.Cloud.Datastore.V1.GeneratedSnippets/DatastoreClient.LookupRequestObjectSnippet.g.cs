@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
+                PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
             };
