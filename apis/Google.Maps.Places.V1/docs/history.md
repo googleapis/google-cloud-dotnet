@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2024-05-20
+
+### New features
+
+- Add `generative_summary` and `area_summary` for place summaries ([commit 6ae2f61](https://github.com/googleapis/google-cloud-dotnet/commit/6ae2f614af154c7eb1299e6ab9ee242e37236cec))
+- Add `contextual_contents` field for contextual search results ([commit 6ae2f61](https://github.com/googleapis/google-cloud-dotnet/commit/6ae2f614af154c7eb1299e6ab9ee242e37236cec))
+
+### Documentation improvements
+
+- `included_primary_types` supports type collections `(regions)` and ([commit 6ae2f61](https://github.com/googleapis/google-cloud-dotnet/commit/6ae2f614af154c7eb1299e6ab9ee242e37236cec))
+
 ## Version 1.0.0-beta06, released 2024-05-08
 
 ### New features
