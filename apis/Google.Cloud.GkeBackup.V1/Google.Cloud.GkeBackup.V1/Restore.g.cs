@@ -28,7 +28,7 @@ namespace Google.Cloud.GkeBackup.V1 {
             "b2dsZS5jbG91ZC5na2ViYWNrdXAudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJmdvb2ds",
             "ZS9jbG91ZC9na2ViYWNrdXAvdjEvY29tbW9uLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIv8HCgdSZXN0b3JlEhEKBG5hbWUYASAB",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvItkKCgdSZXN0b3JlEhEKBG5hbWUYASAB",
             "KAlCA+BBAxIQCgN1aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
             "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIT",
@@ -45,86 +45,127 @@ namespace Google.Cloud.GkeBackup.V1 {
             "KAVCA+BBAxIlChhyZXNvdXJjZXNfZXhjbHVkZWRfY291bnQYDiABKAVCA+BB",
             "AxIjChZyZXNvdXJjZXNfZmFpbGVkX2NvdW50GA8gASgFQgPgQQMSIwoWdm9s",
             "dW1lc19yZXN0b3JlZF9jb3VudBgQIAEoBUID4EEDEhEKBGV0YWcYESABKAlC",
-            "A+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBImYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JF",
-            "QVRJTkcQARIPCgtJTl9QUk9HUkVTUxACEg0KCVNVQ0NFRURFRBADEgoKBkZB",
-            "SUxFRBAEEgwKCERFTEVUSU5HEAU6fepBegogZ2tlYmFja3VwLmdvb2dsZWFw",
-            "aXMuY29tL1Jlc3RvcmUSVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9yZXN0b3JlUGxhbnMve3Jlc3RvcmVfcGxhbn0vcmVzdG9y",
-            "ZXMve3Jlc3RvcmV9IrwUCg1SZXN0b3JlQ29uZmlnEmkKGnZvbHVtZV9kYXRh",
-            "X3Jlc3RvcmVfcG9saWN5GAEgASgOMkAuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1",
-            "cC52MS5SZXN0b3JlQ29uZmlnLlZvbHVtZURhdGFSZXN0b3JlUG9saWN5QgPg",
-            "QQESdQogY2x1c3Rlcl9yZXNvdXJjZV9jb25mbGljdF9wb2xpY3kYAiABKA4y",
-            "Ri5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuQ2x1",
-            "c3RlclJlc291cmNlQ29uZmxpY3RQb2xpY3lCA+BBARJ1CiBuYW1lc3BhY2Vk",
-            "X3Jlc291cmNlX3Jlc3RvcmVfbW9kZRgDIAEoDjJGLmdvb2dsZS5jbG91ZC5n",
-            "a2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5OYW1lc3BhY2VkUmVzb3VyY2VS",
-            "ZXN0b3JlTW9kZUID4EEBEnEKHmNsdXN0ZXJfcmVzb3VyY2VfcmVzdG9yZV9z",
-            "Y29wZRgEIAEoCzJELmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9y",
-            "ZUNvbmZpZy5DbHVzdGVyUmVzb3VyY2VSZXN0b3JlU2NvcGVCA+BBARIYCg5h",
-            "bGxfbmFtZXNwYWNlcxgFIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVzcGFjZXMY",
-            "BiABKAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZXNI",
-            "ABJLChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYByABKAsyKi5nb29nbGUuY2xv",
-            "dWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEhcKDW5vX25hbWVz",
-            "cGFjZXMYCSABKAhIABJEChNleGNsdWRlZF9uYW1lc3BhY2VzGAogASgLMiUu",
-            "Z29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5OYW1lc3BhY2VzSAASWgoSc3Vi",
-            "c3RpdHV0aW9uX3J1bGVzGAggAygLMjkuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1",
-            "cC52MS5SZXN0b3JlQ29uZmlnLlN1YnN0aXR1dGlvblJ1bGVCA+BBARJeChR0",
-            "cmFuc2Zvcm1hdGlvbl9ydWxlcxgLIAMoCzI7Lmdvb2dsZS5jbG91ZC5na2Vi",
-            "YWNrdXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1hdGlvblJ1bGVCA+BB",
-            "ARpECglHcm91cEtpbmQSGwoOcmVzb3VyY2VfZ3JvdXAYASABKAlCA+BBARIa",
-            "Cg1yZXNvdXJjZV9raW5kGAIgASgJQgPgQQEahgIKG0NsdXN0ZXJSZXNvdXJj",
-            "ZVJlc3RvcmVTY29wZRJVChRzZWxlY3RlZF9ncm91cF9raW5kcxgBIAMoCzIy",
-            "Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5Hcm91",
-            "cEtpbmRCA+BBARJVChRleGNsdWRlZF9ncm91cF9raW5kcxgCIAMoCzIyLmdv",
-            "b2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5Hcm91cEtp",
-            "bmRCA+BBARIcCg9hbGxfZ3JvdXBfa2luZHMYAyABKAhCA+BBARIbCg5ub19n",
-            "cm91cF9raW5kcxgEIAEoCEID4EEBGuMBChBTdWJzdGl0dXRpb25SdWxlEh4K",
-            "EXRhcmdldF9uYW1lc3BhY2VzGAEgAygJQgPgQQESUwoSdGFyZ2V0X2dyb3Vw",
+            "A+BBAxJBCgZmaWx0ZXIYEiABKAsyKS5nb29nbGUuY2xvdWQuZ2tlYmFja3Vw",
+            "LnYxLlJlc3RvcmUuRmlsdGVyQgbgQQXgQQEScAokdm9sdW1lX2RhdGFfcmVz",
+            "dG9yZV9wb2xpY3lfb3ZlcnJpZGVzGBMgAygLMjouZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5Wb2x1bWVEYXRhUmVzdG9yZVBvbGljeU92ZXJyaWRlQgbg",
+            "QQXgQQEaogEKBkZpbHRlchJLChFpbmNsdXNpb25fZmlsdGVycxgBIAMoCzIr",
+            "Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzb3VyY2VTZWxlY3RvckID",
+            "4EEBEksKEWV4Y2x1c2lvbl9maWx0ZXJzGAIgAygLMisuZ29vZ2xlLmNsb3Vk",
+            "LmdrZWJhY2t1cC52MS5SZXNvdXJjZVNlbGVjdG9yQgPgQQEaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJmCgVTdGF0",
+            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESDwoLSU5f",
+            "UFJPR1JFU1MQAhINCglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBBIMCghERUxF",
+            "VElORxAFOn3qQXoKIGdrZWJhY2t1cC5nb29nbGVhcGlzLmNvbS9SZXN0b3Jl",
+            "ElZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVz",
+            "dG9yZVBsYW5zL3tyZXN0b3JlX3BsYW59L3Jlc3RvcmVzL3tyZXN0b3JlfSLv",
+            "GgoNUmVzdG9yZUNvbmZpZxJpChp2b2x1bWVfZGF0YV9yZXN0b3JlX3BvbGlj",
+            "eRgBIAEoDjJALmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNv",
+            "bmZpZy5Wb2x1bWVEYXRhUmVzdG9yZVBvbGljeUID4EEBEnUKIGNsdXN0ZXJf",
+            "cmVzb3VyY2VfY29uZmxpY3RfcG9saWN5GAIgASgOMkYuZ29vZ2xlLmNsb3Vk",
+            "LmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmlnLkNsdXN0ZXJSZXNvdXJjZUNv",
+            "bmZsaWN0UG9saWN5QgPgQQESdQogbmFtZXNwYWNlZF9yZXNvdXJjZV9yZXN0",
+            "b3JlX21vZGUYAyABKA4yRi5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJl",
+            "c3RvcmVDb25maWcuTmFtZXNwYWNlZFJlc291cmNlUmVzdG9yZU1vZGVCA+BB",
+            "ARJxCh5jbHVzdGVyX3Jlc291cmNlX3Jlc3RvcmVfc2NvcGUYBCABKAsyRC5n",
+            "b29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuQ2x1c3Rl",
+            "clJlc291cmNlUmVzdG9yZVNjb3BlQgPgQQESGAoOYWxsX25hbWVzcGFjZXMY",
+            "BSABKAhIABJEChNzZWxlY3RlZF9uYW1lc3BhY2VzGAYgASgLMiUuZ29vZ2xl",
+            "LmNsb3VkLmdrZWJhY2t1cC52MS5OYW1lc3BhY2VzSAASSwoVc2VsZWN0ZWRf",
+            "YXBwbGljYXRpb25zGAcgASgLMiouZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
+            "MS5OYW1lc3BhY2VkTmFtZXNIABIXCg1ub19uYW1lc3BhY2VzGAkgASgISAAS",
+            "RAoTZXhjbHVkZWRfbmFtZXNwYWNlcxgKIAEoCzIlLmdvb2dsZS5jbG91ZC5n",
+            "a2ViYWNrdXAudjEuTmFtZXNwYWNlc0gAEloKEnN1YnN0aXR1dGlvbl9ydWxl",
+            "cxgIIAMoCzI5Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNv",
+            "bmZpZy5TdWJzdGl0dXRpb25SdWxlQgPgQQESXgoUdHJhbnNmb3JtYXRpb25f",
+            "cnVsZXMYCyADKAsyOy5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3Rv",
+            "cmVDb25maWcuVHJhbnNmb3JtYXRpb25SdWxlQgPgQQESeQojdm9sdW1lX2Rh",
+            "dGFfcmVzdG9yZV9wb2xpY3lfYmluZGluZ3MYDCADKAsyRy5nb29nbGUuY2xv",
+            "dWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuVm9sdW1lRGF0YVJlc3Rv",
+            "cmVQb2xpY3lCaW5kaW5nQgPgQQESUQoNcmVzdG9yZV9vcmRlchgNIAEoCzI1",
+            "Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5SZXN0",
+            "b3JlT3JkZXJCA+BBARpECglHcm91cEtpbmQSGwoOcmVzb3VyY2VfZ3JvdXAY",
+            "ASABKAlCA+BBARIaCg1yZXNvdXJjZV9raW5kGAIgASgJQgPgQQEahgIKG0Ns",
+            "dXN0ZXJSZXNvdXJjZVJlc3RvcmVTY29wZRJVChRzZWxlY3RlZF9ncm91cF9r",
+            "aW5kcxgBIAMoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9y",
+            "ZUNvbmZpZy5Hcm91cEtpbmRCA+BBARJVChRleGNsdWRlZF9ncm91cF9raW5k",
+            "cxgCIAMoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNv",
+            "bmZpZy5Hcm91cEtpbmRCA+BBARIcCg9hbGxfZ3JvdXBfa2luZHMYAyABKAhC",
+            "A+BBARIbCg5ub19ncm91cF9raW5kcxgEIAEoCEID4EEBGuMBChBTdWJzdGl0",
+            "dXRpb25SdWxlEh4KEXRhcmdldF9uYW1lc3BhY2VzGAEgAygJQgPgQQESUwoS",
+            "dGFyZ2V0X2dyb3VwX2tpbmRzGAIgAygLMjIuZ29vZ2xlLmNsb3VkLmdrZWJh",
+            "Y2t1cC52MS5SZXN0b3JlQ29uZmlnLkdyb3VwS2luZEID4EEBEh0KEHRhcmdl",
+            "dF9qc29uX3BhdGgYAyABKAlCA+BBAhIjChZvcmlnaW5hbF92YWx1ZV9wYXR0",
+            "ZXJuGAQgASgJQgPgQQESFgoJbmV3X3ZhbHVlGAUgASgJQgPgQQEaigIKGFRy",
+            "YW5zZm9ybWF0aW9uUnVsZUFjdGlvbhJVCgJvcBgBIAEoDjJELmdvb2dsZS5j",
+            "bG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1hdGlv",
+            "blJ1bGVBY3Rpb24uT3BCA+BBAhIWCglmcm9tX3BhdGgYAiABKAlCA+BBARIR",
+            "CgRwYXRoGAMgASgJQgPgQQESEgoFdmFsdWUYBCABKAlCA+BBASJYCgJPcBIS",
+            "Cg5PUF9VTlNQRUNJRklFRBAAEgoKBlJFTU9WRRABEggKBE1PVkUQAhIICgRD",
+            "T1BZEAMSBwoDQUREEAQSCAoEVEVTVBAFEgsKB1JFUExBQ0UQBhqPAQoOUmVz",
+            "b3VyY2VGaWx0ZXISFwoKbmFtZXNwYWNlcxgBIAMoCUID4EEBEkwKC2dyb3Vw",
             "X2tpbmRzGAIgAygLMjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0",
-            "b3JlQ29uZmlnLkdyb3VwS2luZEID4EEBEh0KEHRhcmdldF9qc29uX3BhdGgY",
-            "AyABKAlCA+BBAhIjChZvcmlnaW5hbF92YWx1ZV9wYXR0ZXJuGAQgASgJQgPg",
-            "QQESFgoJbmV3X3ZhbHVlGAUgASgJQgPgQQEaigIKGFRyYW5zZm9ybWF0aW9u",
-            "UnVsZUFjdGlvbhJVCgJvcBgBIAEoDjJELmdvb2dsZS5jbG91ZC5na2ViYWNr",
-            "dXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1hdGlvblJ1bGVBY3Rpb24u",
-            "T3BCA+BBAhIWCglmcm9tX3BhdGgYAiABKAlCA+BBARIRCgRwYXRoGAMgASgJ",
-            "QgPgQQESEgoFdmFsdWUYBCABKAlCA+BBASJYCgJPcBISCg5PUF9VTlNQRUNJ",
-            "RklFRBAAEgoKBlJFTU9WRRABEggKBE1PVkUQAhIICgRDT1BZEAMSBwoDQURE",
-            "EAQSCAoEVEVTVBAFEgsKB1JFUExBQ0UQBhqPAQoOUmVzb3VyY2VGaWx0ZXIS",
-            "FwoKbmFtZXNwYWNlcxgBIAMoCUID4EEBEkwKC2dyb3VwX2tpbmRzGAIgAygL",
-            "MjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmlnLkdy",
-            "b3VwS2luZEID4EEBEhYKCWpzb25fcGF0aBgDIAEoCUID4EEBGuQBChJUcmFu",
-            "c2Zvcm1hdGlvblJ1bGUSXQoNZmllbGRfYWN0aW9ucxgBIAMoCzJBLmdvb2ds",
-            "ZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1h",
-            "dGlvblJ1bGVBY3Rpb25CA+BBAhJVCg9yZXNvdXJjZV9maWx0ZXIYAiABKAsy",
-            "Ny5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuUmVz",
-            "b3VyY2VGaWx0ZXJCA+BBARIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBIq8B",
-            "ChdWb2x1bWVEYXRhUmVzdG9yZVBvbGljeRIqCiZWT0xVTUVfREFUQV9SRVNU",
-            "T1JFX1BPTElDWV9VTlNQRUNJRklFRBAAEiMKH1JFU1RPUkVfVk9MVU1FX0RB",
-            "VEFfRlJPTV9CQUNLVVAQARIjCh9SRVVTRV9WT0xVTUVfSEFORExFX0ZST01f",
-            "QkFDS1VQEAISHgoaTk9fVk9MVU1FX0RBVEFfUkVTVE9SQVRJT04QAyKDAQod",
-            "Q2x1c3RlclJlc291cmNlQ29uZmxpY3RQb2xpY3kSMAosQ0xVU1RFUl9SRVNP",
-            "VVJDRV9DT05GTElDVF9QT0xJQ1lfVU5TUEVDSUZJRUQQABIYChRVU0VfRVhJ",
-            "U1RJTkdfVkVSU0lPThABEhYKElVTRV9CQUNLVVBfVkVSU0lPThACIn8KHU5h",
-            "bWVzcGFjZWRSZXNvdXJjZVJlc3RvcmVNb2RlEjAKLE5BTUVTUEFDRURfUkVT",
-            "T1VSQ0VfUkVTVE9SRV9NT0RFX1VOU1BFQ0lGSUVEEAASFgoSREVMRVRFX0FO",
-            "RF9SRVNUT1JFEAESFAoQRkFJTF9PTl9DT05GTElDVBACQiMKIW5hbWVzcGFj",
-            "ZWRfcmVzb3VyY2VfcmVzdG9yZV9zY29wZULDAQodY29tLmdvb2dsZS5jbG91",
-            "ZC5na2ViYWNrdXAudjFCDFJlc3RvcmVQcm90b1ABWjtjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNrdXBw",
-            "YqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xvdWRc",
-            "R2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpWMWIG",
-            "cHJvdG8z"));
+            "b3JlQ29uZmlnLkdyb3VwS2luZEID4EEBEhYKCWpzb25fcGF0aBgDIAEoCUID",
+            "4EEBGuQBChJUcmFuc2Zvcm1hdGlvblJ1bGUSXQoNZmllbGRfYWN0aW9ucxgB",
+            "IAMoCzJBLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZp",
+            "Zy5UcmFuc2Zvcm1hdGlvblJ1bGVBY3Rpb25CA+BBAhJVCg9yZXNvdXJjZV9m",
+            "aWx0ZXIYAiABKAsyNy5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3Rv",
+            "cmVDb25maWcuUmVzb3VyY2VGaWx0ZXJCA+BBARIYCgtkZXNjcmlwdGlvbhgD",
+            "IAEoCUID4EEBGs0BCh5Wb2x1bWVEYXRhUmVzdG9yZVBvbGljeUJpbmRpbmcS",
+            "VQoGcG9saWN5GAEgASgOMkAuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5S",
+            "ZXN0b3JlQ29uZmlnLlZvbHVtZURhdGFSZXN0b3JlUG9saWN5QgPgQQISSwoL",
+            "dm9sdW1lX3R5cGUYAiABKA4yNC5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYx",
+            "LlZvbHVtZVR5cGVFbnVtLlZvbHVtZVR5cGVIAEIHCgVzY29wZRqwAgoMUmVz",
+            "dG9yZU9yZGVyEm8KF2dyb3VwX2tpbmRfZGVwZW5kZW5jaWVzGAEgAygLMkku",
+            "Z29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmlnLlJlc3Rv",
+            "cmVPcmRlci5Hcm91cEtpbmREZXBlbmRlbmN5QgPgQQEargEKE0dyb3VwS2lu",
+            "ZERlcGVuZGVuY3kSSwoKc2F0aXNmeWluZxgBIAEoCzIyLmdvb2dsZS5jbG91",
+            "ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5Hcm91cEtpbmRCA+BBAhJK",
+            "CglyZXF1aXJpbmcYAiABKAsyMi5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYx",
+            "LlJlc3RvcmVDb25maWcuR3JvdXBLaW5kQgPgQQIirwEKF1ZvbHVtZURhdGFS",
+            "ZXN0b3JlUG9saWN5EioKJlZPTFVNRV9EQVRBX1JFU1RPUkVfUE9MSUNZX1VO",
+            "U1BFQ0lGSUVEEAASIwofUkVTVE9SRV9WT0xVTUVfREFUQV9GUk9NX0JBQ0tV",
+            "UBABEiMKH1JFVVNFX1ZPTFVNRV9IQU5ETEVfRlJPTV9CQUNLVVAQAhIeChpO",
+            "T19WT0xVTUVfREFUQV9SRVNUT1JBVElPThADIoMBCh1DbHVzdGVyUmVzb3Vy",
+            "Y2VDb25mbGljdFBvbGljeRIwCixDTFVTVEVSX1JFU09VUkNFX0NPTkZMSUNU",
+            "X1BPTElDWV9VTlNQRUNJRklFRBAAEhgKFFVTRV9FWElTVElOR19WRVJTSU9O",
+            "EAESFgoSVVNFX0JBQ0tVUF9WRVJTSU9OEAIi4AEKHU5hbWVzcGFjZWRSZXNv",
+            "dXJjZVJlc3RvcmVNb2RlEjAKLE5BTUVTUEFDRURfUkVTT1VSQ0VfUkVTVE9S",
+            "RV9NT0RFX1VOU1BFQ0lGSUVEEAASFgoSREVMRVRFX0FORF9SRVNUT1JFEAES",
+            "FAoQRkFJTF9PTl9DT05GTElDVBACEhoKFk1FUkdFX1NLSVBfT05fQ09ORkxJ",
+            "Q1QQAxIkCiBNRVJHRV9SRVBMQUNFX1ZPTFVNRV9PTl9DT05GTElDVBAEEh0K",
+            "GU1FUkdFX1JFUExBQ0VfT05fQ09ORkxJQ1QQBUIjCiFuYW1lc3BhY2VkX3Jl",
+            "c291cmNlX3Jlc3RvcmVfc2NvcGUihwIKEFJlc291cmNlU2VsZWN0b3ISSwoK",
+            "Z3JvdXBfa2luZBgBIAEoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEu",
+            "UmVzdG9yZUNvbmZpZy5Hcm91cEtpbmRCA+BBARIRCgRuYW1lGAIgASgJQgPg",
+            "QQESFgoJbmFtZXNwYWNlGAMgASgJQgPgQQESTAoGbGFiZWxzGAQgAygLMjcu",
+            "Z29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXNvdXJjZVNlbGVjdG9yLkxh",
+            "YmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASLGAQofVm9sdW1lRGF0YVJlc3RvcmVQb2xpY3lP",
+            "dmVycmlkZRJVCgZwb2xpY3kYASABKA4yQC5nb29nbGUuY2xvdWQuZ2tlYmFj",
+            "a3VwLnYxLlJlc3RvcmVDb25maWcuVm9sdW1lRGF0YVJlc3RvcmVQb2xpY3lC",
+            "A+BBAhJDCg1zZWxlY3RlZF9wdmNzGAIgASgLMiouZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5OYW1lc3BhY2VkTmFtZXNIAEIHCgVzY29wZULDAQodY29t",
+            "Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCDFJlc3RvcmVQcm90b1ABWjtj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBw",
+            "Yjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlH",
+            "b29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tl",
+            "QmFja3VwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Restore), global::Google.Cloud.GkeBackup.V1.Restore.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Backup", "Cluster", "RestoreConfig", "Labels", "State", "StateReason", "CompleteTime", "ResourcesRestoredCount", "ResourcesExcludedCount", "ResourcesFailedCount", "VolumesRestoredCount", "Etag" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.Restore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Parser, new[]{ "VolumeDataRestorePolicy", "ClusterResourceConflictPolicy", "NamespacedResourceRestoreMode", "ClusterResourceRestoreScope", "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "NoNamespaces", "ExcludedNamespaces", "SubstitutionRules", "TransformationRules" }, new[]{ "NamespacedResourceRestoreScope" }, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy), typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceConflictPolicy), typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.NamespacedResourceRestoreMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind.Parser, new[]{ "ResourceGroup", "ResourceKind" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Restore), global::Google.Cloud.GkeBackup.V1.Restore.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Backup", "Cluster", "RestoreConfig", "Labels", "State", "StateReason", "CompleteTime", "ResourcesRestoredCount", "ResourcesExcludedCount", "ResourcesFailedCount", "VolumesRestoredCount", "Etag", "Filter", "VolumeDataRestorePolicyOverrides" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.Restore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter), global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter.Parser, new[]{ "InclusionFilters", "ExclusionFilters" }, null, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Parser, new[]{ "VolumeDataRestorePolicy", "ClusterResourceConflictPolicy", "NamespacedResourceRestoreMode", "ClusterResourceRestoreScope", "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "NoNamespaces", "ExcludedNamespaces", "SubstitutionRules", "TransformationRules", "VolumeDataRestorePolicyBindings", "RestoreOrder" }, new[]{ "NamespacedResourceRestoreScope" }, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy), typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceConflictPolicy), typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.NamespacedResourceRestoreMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind.Parser, new[]{ "ResourceGroup", "ResourceKind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceRestoreScope), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceRestoreScope.Parser, new[]{ "SelectedGroupKinds", "ExcludedGroupKinds", "AllGroupKinds", "NoGroupKinds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.SubstitutionRule), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.SubstitutionRule.Parser, new[]{ "TargetNamespaces", "TargetGroupKinds", "TargetJsonPath", "OriginalValuePattern", "NewValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRuleAction), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRuleAction.Parser, new[]{ "Op", "FromPath", "Path", "Value" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRuleAction.Types.Op) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ResourceFilter), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ResourceFilter.Parser, new[]{ "Namespaces", "GroupKinds", "JsonPath" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule.Parser, new[]{ "FieldActions", "ResourceFilter", "Description" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule.Parser, new[]{ "FieldActions", "ResourceFilter", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding.Parser, new[]{ "Policy", "VolumeType" }, new[]{ "Scope" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Parser, new[]{ "GroupKindDependencies" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency), global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency.Parser, new[]{ "Satisfying", "Requiring" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.ResourceSelector), global::Google.Cloud.GkeBackup.V1.ResourceSelector.Parser, new[]{ "GroupKind", "Name", "Namespace", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride), global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride.Parser, new[]{ "Policy", "SelectedPvcs" }, new[]{ "Scope" }, null, null, null)
           }));
     }
     #endregion
@@ -187,6 +228,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       resourcesFailedCount_ = other.resourcesFailedCount_;
       volumesRestoredCount_ = other.volumesRestoredCount_;
       etag_ = other.etag_;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      volumeDataRestorePolicyOverrides_ = other.volumeDataRestorePolicyOverrides_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -476,6 +519,43 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 18;
+    private global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter filter_;
+    /// <summary>
+    /// Optional. Immutable. Filters resources for `Restore`. If not specified, the
+    /// scope of the restore will remain the same as defined in the `RestorePlan`.
+    /// If this is specified, and no resources are matched by the
+    /// `inclusion_filters` or everyting is excluded by the `exclusion_filters`,
+    /// nothing will be restored. This filter can only be specified if the value of
+    /// [namespaced_resource_restore_mode][google.cloud.gkebackup.v1.RestoreConfig.namespaced_resource_restore_mode]
+    /// is set to `MERGE_SKIP_ON_CONFLICT`, `MERGE_REPLACE_VOLUME_ON_CONFLICT` or
+    /// `MERGE_REPLACE_ON_CONFLICT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter Filter {
+      get { return filter_; }
+      set {
+        filter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "volume_data_restore_policy_overrides" field.</summary>
+    public const int VolumeDataRestorePolicyOverridesFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride> _repeated_volumeDataRestorePolicyOverrides_codec
+        = pb::FieldCodec.ForMessage(154, global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride> volumeDataRestorePolicyOverrides_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride>();
+    /// <summary>
+    /// Optional. Immutable. Overrides the volume data restore policies selected in
+    /// the Restore Config for override-scoped resources.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.VolumeDataRestorePolicyOverride> VolumeDataRestorePolicyOverrides {
+      get { return volumeDataRestorePolicyOverrides_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -508,6 +588,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (ResourcesFailedCount != other.ResourcesFailedCount) return false;
       if (VolumesRestoredCount != other.VolumesRestoredCount) return false;
       if (Etag != other.Etag) return false;
+      if (!object.Equals(Filter, other.Filter)) return false;
+      if(!volumeDataRestorePolicyOverrides_.Equals(other.volumeDataRestorePolicyOverrides_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -532,6 +614,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (ResourcesFailedCount != 0) hash ^= ResourcesFailedCount.GetHashCode();
       if (VolumesRestoredCount != 0) hash ^= VolumesRestoredCount.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (filter_ != null) hash ^= Filter.GetHashCode();
+      hash ^= volumeDataRestorePolicyOverrides_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -615,6 +699,11 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(138, 1);
         output.WriteString(Etag);
       }
+      if (filter_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Filter);
+      }
+      volumeDataRestorePolicyOverrides_.WriteTo(output, _repeated_volumeDataRestorePolicyOverrides_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -690,6 +779,11 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(138, 1);
         output.WriteString(Etag);
       }
+      if (filter_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Filter);
+      }
+      volumeDataRestorePolicyOverrides_.WriteTo(ref output, _repeated_volumeDataRestorePolicyOverrides_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -749,6 +843,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
+      if (filter_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      size += volumeDataRestorePolicyOverrides_.CalculateSize(_repeated_volumeDataRestorePolicyOverrides_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -822,6 +920,13 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
+      if (other.filter_ != null) {
+        if (filter_ == null) {
+          Filter = new global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter();
+        }
+        Filter.MergeFrom(other.Filter);
+      }
+      volumeDataRestorePolicyOverrides_.Add(other.volumeDataRestorePolicyOverrides_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -915,6 +1020,17 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 138: {
             Etag = input.ReadString();
+            break;
+          }
+          case 146: {
+            if (filter_ == null) {
+              Filter = new global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+          case 154: {
+            volumeDataRestorePolicyOverrides_.AddEntriesFrom(input, _repeated_volumeDataRestorePolicyOverrides_codec);
             break;
           }
         }
@@ -1012,6 +1128,17 @@ namespace Google.Cloud.GkeBackup.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 146: {
+            if (filter_ == null) {
+              Filter = new global::Google.Cloud.GkeBackup.V1.Restore.Types.Filter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+          case 154: {
+            volumeDataRestorePolicyOverrides_.AddEntriesFrom(ref input, _repeated_volumeDataRestorePolicyOverrides_codec);
+            break;
+          }
         }
       }
     }
@@ -1053,6 +1180,229 @@ namespace Google.Cloud.GkeBackup.V1 {
         /// This Restore resource is in the process of being deleted.
         /// </summary>
         [pbr::OriginalName("DELETING")] Deleting = 5,
+      }
+
+      /// <summary>
+      /// Defines the filter for `Restore`. This filter can be used to further
+      /// refine the resource selection of the `Restore` beyond the coarse-grained
+      /// scope defined in the `RestorePlan`. `exclusion_filters` take precedence
+      /// over `inclusion_filters`. If a resource matches both `inclusion_filters`
+      /// and `exclusion_filters`, it will not be restored.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Filter : pb::IMessage<Filter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Filter> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GkeBackup.V1.Restore.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Filter() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Filter(Filter other) : this() {
+          inclusionFilters_ = other.inclusionFilters_.Clone();
+          exclusionFilters_ = other.exclusionFilters_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Filter Clone() {
+          return new Filter(this);
+        }
+
+        /// <summary>Field number for the "inclusion_filters" field.</summary>
+        public const int InclusionFiltersFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.GkeBackup.V1.ResourceSelector> _repeated_inclusionFilters_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeBackup.V1.ResourceSelector.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ResourceSelector> inclusionFilters_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ResourceSelector>();
+        /// <summary>
+        /// Optional. Selects resources for restoration. If specified, only resources
+        /// which match `inclusion_filters` will be selected for restoration. A
+        /// resource will be selected if it matches any `ResourceSelector` of the
+        /// `inclusion_filters`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ResourceSelector> InclusionFilters {
+          get { return inclusionFilters_; }
+        }
+
+        /// <summary>Field number for the "exclusion_filters" field.</summary>
+        public const int ExclusionFiltersFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.GkeBackup.V1.ResourceSelector> _repeated_exclusionFilters_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeBackup.V1.ResourceSelector.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ResourceSelector> exclusionFilters_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ResourceSelector>();
+        /// <summary>
+        /// Optional. Excludes resources from restoration. If specified,
+        /// a resource will not be restored if it matches
+        /// any `ResourceSelector` of the `exclusion_filters`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ResourceSelector> ExclusionFilters {
+          get { return exclusionFilters_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Filter);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Filter other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!inclusionFilters_.Equals(other.inclusionFilters_)) return false;
+          if(!exclusionFilters_.Equals(other.exclusionFilters_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= inclusionFilters_.GetHashCode();
+          hash ^= exclusionFilters_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          inclusionFilters_.WriteTo(output, _repeated_inclusionFilters_codec);
+          exclusionFilters_.WriteTo(output, _repeated_exclusionFilters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          inclusionFilters_.WriteTo(ref output, _repeated_inclusionFilters_codec);
+          exclusionFilters_.WriteTo(ref output, _repeated_exclusionFilters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += inclusionFilters_.CalculateSize(_repeated_inclusionFilters_codec);
+          size += exclusionFilters_.CalculateSize(_repeated_exclusionFilters_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Filter other) {
+          if (other == null) {
+            return;
+          }
+          inclusionFilters_.Add(other.inclusionFilters_);
+          exclusionFilters_.Add(other.exclusionFilters_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                inclusionFilters_.AddEntriesFrom(input, _repeated_inclusionFilters_codec);
+                break;
+              }
+              case 18: {
+                exclusionFilters_.AddEntriesFrom(input, _repeated_exclusionFilters_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                inclusionFilters_.AddEntriesFrom(ref input, _repeated_inclusionFilters_codec);
+                break;
+              }
+              case 18: {
+                exclusionFilters_.AddEntriesFrom(ref input, _repeated_exclusionFilters_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -1104,6 +1454,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       clusterResourceRestoreScope_ = other.clusterResourceRestoreScope_ != null ? other.clusterResourceRestoreScope_.Clone() : null;
       substitutionRules_ = other.substitutionRules_.Clone();
       transformationRules_ = other.transformationRules_.Clone();
+      volumeDataRestorePolicyBindings_ = other.volumeDataRestorePolicyBindings_.Clone();
+      restoreOrder_ = other.restoreOrder_ != null ? other.restoreOrder_.Clone() : null;
       switch (other.NamespacedResourceRestoreScopeCase) {
         case NamespacedResourceRestoreScopeOneofCase.AllNamespaces:
           AllNamespaces = other.AllNamespaces;
@@ -1347,6 +1699,37 @@ namespace Google.Cloud.GkeBackup.V1 {
       get { return transformationRules_; }
     }
 
+    /// <summary>Field number for the "volume_data_restore_policy_bindings" field.</summary>
+    public const int VolumeDataRestorePolicyBindingsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding> _repeated_volumeDataRestorePolicyBindings_codec
+        = pb::FieldCodec.ForMessage(98, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding> volumeDataRestorePolicyBindings_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding>();
+    /// <summary>
+    /// Optional. A table that binds volumes by their scope to a restore policy.
+    /// Bindings must have a unique scope. Any volumes not scoped in the bindings
+    /// are subject to the policy defined in volume_data_restore_policy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicyBinding> VolumeDataRestorePolicyBindings {
+      get { return volumeDataRestorePolicyBindings_; }
+    }
+
+    /// <summary>Field number for the "restore_order" field.</summary>
+    public const int RestoreOrderFieldNumber = 13;
+    private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder restoreOrder_;
+    /// <summary>
+    /// Optional. RestoreOrder contains custom ordering to use on a Restore.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder RestoreOrder {
+      get { return restoreOrder_; }
+      set {
+        restoreOrder_ = value;
+      }
+    }
+
     private object namespacedResourceRestoreScope_;
     /// <summary>Enum of possible cases for the "namespaced_resource_restore_scope" oneof.</summary>
     public enum NamespacedResourceRestoreScopeOneofCase {
@@ -1397,6 +1780,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (!object.Equals(ExcludedNamespaces, other.ExcludedNamespaces)) return false;
       if(!substitutionRules_.Equals(other.substitutionRules_)) return false;
       if(!transformationRules_.Equals(other.transformationRules_)) return false;
+      if(!volumeDataRestorePolicyBindings_.Equals(other.volumeDataRestorePolicyBindings_)) return false;
+      if (!object.Equals(RestoreOrder, other.RestoreOrder)) return false;
       if (NamespacedResourceRestoreScopeCase != other.NamespacedResourceRestoreScopeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1416,6 +1801,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.ExcludedNamespaces) hash ^= ExcludedNamespaces.GetHashCode();
       hash ^= substitutionRules_.GetHashCode();
       hash ^= transformationRules_.GetHashCode();
+      hash ^= volumeDataRestorePolicyBindings_.GetHashCode();
+      if (restoreOrder_ != null) hash ^= RestoreOrder.GetHashCode();
       hash ^= (int) namespacedResourceRestoreScopeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1473,6 +1860,11 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteMessage(ExcludedNamespaces);
       }
       transformationRules_.WriteTo(output, _repeated_transformationRules_codec);
+      volumeDataRestorePolicyBindings_.WriteTo(output, _repeated_volumeDataRestorePolicyBindings_codec);
+      if (restoreOrder_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RestoreOrder);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1521,6 +1913,11 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteMessage(ExcludedNamespaces);
       }
       transformationRules_.WriteTo(ref output, _repeated_transformationRules_codec);
+      volumeDataRestorePolicyBindings_.WriteTo(ref output, _repeated_volumeDataRestorePolicyBindings_codec);
+      if (restoreOrder_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RestoreOrder);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1560,6 +1957,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       size += substitutionRules_.CalculateSize(_repeated_substitutionRules_codec);
       size += transformationRules_.CalculateSize(_repeated_transformationRules_codec);
+      size += volumeDataRestorePolicyBindings_.CalculateSize(_repeated_volumeDataRestorePolicyBindings_codec);
+      if (restoreOrder_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RestoreOrder);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1589,6 +1990,13 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       substitutionRules_.Add(other.substitutionRules_);
       transformationRules_.Add(other.transformationRules_);
+      volumeDataRestorePolicyBindings_.Add(other.volumeDataRestorePolicyBindings_);
+      if (other.restoreOrder_ != null) {
+        if (restoreOrder_ == null) {
+          RestoreOrder = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder();
+        }
+        RestoreOrder.MergeFrom(other.RestoreOrder);
+      }
       switch (other.NamespacedResourceRestoreScopeCase) {
         case NamespacedResourceRestoreScopeOneofCase.AllNamespaces:
           AllNamespaces = other.AllNamespaces;
@@ -1693,6 +2101,17 @@ namespace Google.Cloud.GkeBackup.V1 {
             transformationRules_.AddEntriesFrom(input, _repeated_transformationRules_codec);
             break;
           }
+          case 98: {
+            volumeDataRestorePolicyBindings_.AddEntriesFrom(input, _repeated_volumeDataRestorePolicyBindings_codec);
+            break;
+          }
+          case 106: {
+            if (restoreOrder_ == null) {
+              RestoreOrder = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder();
+            }
+            input.ReadMessage(RestoreOrder);
+            break;
+          }
         }
       }
     #endif
@@ -1768,6 +2187,17 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 90: {
             transformationRules_.AddEntriesFrom(ref input, _repeated_transformationRules_codec);
+            break;
+          }
+          case 98: {
+            volumeDataRestorePolicyBindings_.AddEntriesFrom(ref input, _repeated_volumeDataRestorePolicyBindings_codec);
+            break;
+          }
+          case 106: {
+            if (restoreOrder_ == null) {
+              RestoreOrder = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder();
+            }
+            input.ReadMessage(RestoreOrder);
             break;
           }
         }
@@ -1858,6 +2288,42 @@ namespace Google.Cloud.GkeBackup.V1 {
         /// process creates conflicting resources), a conflict will be reported.
         /// </summary>
         [pbr::OriginalName("FAIL_ON_CONFLICT")] FailOnConflict = 2,
+        /// <summary>
+        /// This mode merges the backup and the target cluster and skips the
+        /// conflicting resources. If a single resource to restore exists in the
+        /// cluster before restoration, the resource will be skipped, otherwise it
+        /// will be restored.
+        /// </summary>
+        [pbr::OriginalName("MERGE_SKIP_ON_CONFLICT")] MergeSkipOnConflict = 3,
+        /// <summary>
+        /// This mode merges the backup and the target cluster and skips the
+        /// conflicting resources except volume data. If a PVC to restore already
+        /// exists, this mode will restore/reconnect the volume without overwriting
+        /// the PVC. It is similar to MERGE_SKIP_ON_CONFLICT except that it will
+        /// apply the volume data policy for the conflicting PVCs:
+        /// - RESTORE_VOLUME_DATA_FROM_BACKUP: restore data only and respect the
+        ///   reclaim policy of the original PV;
+        /// - REUSE_VOLUME_HANDLE_FROM_BACKUP: reconnect and respect the reclaim
+        ///   policy of the original PV;
+        /// - NO_VOLUME_DATA_RESTORATION: new provision and respect the reclaim
+        ///   policy of the original PV.
+        /// Note that this mode could cause data loss as the original PV can be
+        /// retained or deleted depending on its reclaim policy.
+        /// </summary>
+        [pbr::OriginalName("MERGE_REPLACE_VOLUME_ON_CONFLICT")] MergeReplaceVolumeOnConflict = 4,
+        /// <summary>
+        /// This mode merges the backup and the target cluster and replaces the
+        /// conflicting resources with the ones in the backup. If a single resource
+        /// to restore exists in the cluster before restoration, the resource will be
+        /// replaced with the one from the backup. To replace an existing resource,
+        /// the first attempt is to update the resource to match the one from the
+        /// backup; if the update fails, the second attempt is to delete the resource
+        /// and restore it from the backup.
+        /// Note that this mode could cause data loss as it replaces the existing
+        /// resources in the target cluster, and the original PV can be retained or
+        /// deleted depending on its reclaim policy.
+        /// </summary>
+        [pbr::OriginalName("MERGE_REPLACE_ON_CONFLICT")] MergeReplaceOnConflict = 5,
       }
 
       /// <summary>
@@ -3708,8 +4174,1355 @@ namespace Google.Cloud.GkeBackup.V1 {
 
       }
 
+      /// <summary>
+      /// Binds resources in the scope to the given VolumeDataRestorePolicy.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class VolumeDataRestorePolicyBinding : pb::IMessage<VolumeDataRestorePolicyBinding>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<VolumeDataRestorePolicyBinding> _parser = new pb::MessageParser<VolumeDataRestorePolicyBinding>(() => new VolumeDataRestorePolicyBinding());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<VolumeDataRestorePolicyBinding> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GkeBackup.V1.RestoreConfig.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VolumeDataRestorePolicyBinding() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VolumeDataRestorePolicyBinding(VolumeDataRestorePolicyBinding other) : this() {
+          policy_ = other.policy_;
+          switch (other.ScopeCase) {
+            case ScopeOneofCase.VolumeType:
+              VolumeType = other.VolumeType;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VolumeDataRestorePolicyBinding Clone() {
+          return new VolumeDataRestorePolicyBinding(this);
+        }
+
+        /// <summary>Field number for the "policy" field.</summary>
+        public const int PolicyFieldNumber = 1;
+        private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy policy_ = global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified;
+        /// <summary>
+        /// Required. The VolumeDataRestorePolicy to apply when restoring volumes in
+        /// scope.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy Policy {
+          get { return policy_; }
+          set {
+            policy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "volume_type" field.</summary>
+        public const int VolumeTypeFieldNumber = 2;
+        /// <summary>
+        /// The volume type, as determined by the PVC's bound PV,
+        /// to apply the policy to.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Types.VolumeType VolumeType {
+          get { return HasVolumeType ? (global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Types.VolumeType) scope_ : global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Types.VolumeType.Unspecified; }
+          set {
+            scope_ = value;
+            scopeCase_ = ScopeOneofCase.VolumeType;
+          }
+        }
+        /// <summary>Gets whether the "volume_type" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasVolumeType {
+          get { return scopeCase_ == ScopeOneofCase.VolumeType; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "volume_type" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearVolumeType() {
+          if (HasVolumeType) {
+            ClearScope();
+          }
+        }
+
+        private object scope_;
+        /// <summary>Enum of possible cases for the "scope" oneof.</summary>
+        public enum ScopeOneofCase {
+          None = 0,
+          VolumeType = 2,
+        }
+        private ScopeOneofCase scopeCase_ = ScopeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScopeOneofCase ScopeCase {
+          get { return scopeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearScope() {
+          scopeCase_ = ScopeOneofCase.None;
+          scope_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as VolumeDataRestorePolicyBinding);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(VolumeDataRestorePolicyBinding other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Policy != other.Policy) return false;
+          if (VolumeType != other.VolumeType) return false;
+          if (ScopeCase != other.ScopeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) hash ^= Policy.GetHashCode();
+          if (HasVolumeType) hash ^= VolumeType.GetHashCode();
+          hash ^= (int) scopeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Policy);
+          }
+          if (HasVolumeType) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) VolumeType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Policy);
+          }
+          if (HasVolumeType) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) VolumeType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Policy);
+          }
+          if (HasVolumeType) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VolumeType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(VolumeDataRestorePolicyBinding other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+            Policy = other.Policy;
+          }
+          switch (other.ScopeCase) {
+            case ScopeOneofCase.VolumeType:
+              VolumeType = other.VolumeType;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Policy = (global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                scope_ = input.ReadEnum();
+                scopeCase_ = ScopeOneofCase.VolumeType;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Policy = (global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                scope_ = input.ReadEnum();
+                scopeCase_ = ScopeOneofCase.VolumeType;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Allows customers to specify dependencies between resources
+      /// that Backup for GKE can use to compute a resasonable restore order.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RestoreOrder : pb::IMessage<RestoreOrder>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RestoreOrder> _parser = new pb::MessageParser<RestoreOrder>(() => new RestoreOrder());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RestoreOrder> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GkeBackup.V1.RestoreConfig.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RestoreOrder() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RestoreOrder(RestoreOrder other) : this() {
+          groupKindDependencies_ = other.groupKindDependencies_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RestoreOrder Clone() {
+          return new RestoreOrder(this);
+        }
+
+        /// <summary>Field number for the "group_kind_dependencies" field.</summary>
+        public const int GroupKindDependenciesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency> _repeated_groupKindDependencies_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency> groupKindDependencies_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency>();
+        /// <summary>
+        /// Optional. Contains a list of group kind dependency pairs provided
+        /// by the customer, that is used by Backup for GKE to
+        /// generate a group kind restore order.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Types.GroupKindDependency> GroupKindDependencies {
+          get { return groupKindDependencies_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RestoreOrder);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RestoreOrder other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!groupKindDependencies_.Equals(other.groupKindDependencies_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= groupKindDependencies_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          groupKindDependencies_.WriteTo(output, _repeated_groupKindDependencies_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          groupKindDependencies_.WriteTo(ref output, _repeated_groupKindDependencies_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += groupKindDependencies_.CalculateSize(_repeated_groupKindDependencies_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RestoreOrder other) {
+          if (other == null) {
+            return;
+          }
+          groupKindDependencies_.Add(other.groupKindDependencies_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                groupKindDependencies_.AddEntriesFrom(input, _repeated_groupKindDependencies_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                groupKindDependencies_.AddEntriesFrom(ref input, _repeated_groupKindDependencies_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the RestoreOrder message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Defines a dependency between two group kinds.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class GroupKindDependency : pb::IMessage<GroupKindDependency>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<GroupKindDependency> _parser = new pb::MessageParser<GroupKindDependency>(() => new GroupKindDependency());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<GroupKindDependency> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.RestoreOrder.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GroupKindDependency() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GroupKindDependency(GroupKindDependency other) : this() {
+              satisfying_ = other.satisfying_ != null ? other.satisfying_.Clone() : null;
+              requiring_ = other.requiring_ != null ? other.requiring_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GroupKindDependency Clone() {
+              return new GroupKindDependency(this);
+            }
+
+            /// <summary>Field number for the "satisfying" field.</summary>
+            public const int SatisfyingFieldNumber = 1;
+            private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind satisfying_;
+            /// <summary>
+            /// Required. The satisfying group kind must be restored first
+            /// in order to satisfy the dependency.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind Satisfying {
+              get { return satisfying_; }
+              set {
+                satisfying_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "requiring" field.</summary>
+            public const int RequiringFieldNumber = 2;
+            private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind requiring_;
+            /// <summary>
+            /// Required. The requiring group kind requires that the other
+            /// group kind be restored first.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind Requiring {
+              get { return requiring_; }
+              set {
+                requiring_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as GroupKindDependency);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(GroupKindDependency other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Satisfying, other.Satisfying)) return false;
+              if (!object.Equals(Requiring, other.Requiring)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (satisfying_ != null) hash ^= Satisfying.GetHashCode();
+              if (requiring_ != null) hash ^= Requiring.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (satisfying_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Satisfying);
+              }
+              if (requiring_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Requiring);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (satisfying_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Satisfying);
+              }
+              if (requiring_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Requiring);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (satisfying_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Satisfying);
+              }
+              if (requiring_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Requiring);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(GroupKindDependency other) {
+              if (other == null) {
+                return;
+              }
+              if (other.satisfying_ != null) {
+                if (satisfying_ == null) {
+                  Satisfying = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+                }
+                Satisfying.MergeFrom(other.Satisfying);
+              }
+              if (other.requiring_ != null) {
+                if (requiring_ == null) {
+                  Requiring = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+                }
+                Requiring.MergeFrom(other.Requiring);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (satisfying_ == null) {
+                      Satisfying = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+                    }
+                    input.ReadMessage(Satisfying);
+                    break;
+                  }
+                  case 18: {
+                    if (requiring_ == null) {
+                      Requiring = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+                    }
+                    input.ReadMessage(Requiring);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (satisfying_ == null) {
+                      Satisfying = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+                    }
+                    input.ReadMessage(Satisfying);
+                    break;
+                  }
+                  case 18: {
+                    if (requiring_ == null) {
+                      Requiring = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+                    }
+                    input.ReadMessage(Requiring);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Defines a selector to identify a single or a group of resources.
+  /// Conditions in the selector are optional, but at least one field
+  /// should be set to a non-empty value. If a condition is not specified,
+  /// no restrictions will be applied on that dimension.
+  /// If more than one condition is specified, a resource will be selected
+  /// if and only if all conditions are met.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ResourceSelector : pb::IMessage<ResourceSelector>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ResourceSelector> _parser = new pb::MessageParser<ResourceSelector>(() => new ResourceSelector());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ResourceSelector> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeBackup.V1.RestoreReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceSelector() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceSelector(ResourceSelector other) : this() {
+      groupKind_ = other.groupKind_ != null ? other.groupKind_.Clone() : null;
+      name_ = other.name_;
+      namespace_ = other.namespace_;
+      labels_ = other.labels_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceSelector Clone() {
+      return new ResourceSelector(this);
+    }
+
+    /// <summary>Field number for the "group_kind" field.</summary>
+    public const int GroupKindFieldNumber = 1;
+    private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind groupKind_;
+    /// <summary>
+    /// Optional. Selects resources using their Kubernetes GroupKinds. If
+    /// specified, only resources of provided GroupKind will be selected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind GroupKind {
+      get { return groupKind_; }
+      set {
+        groupKind_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// Optional. Selects resources using their resource names. If specified,
+    /// only resources with the provided name will be selected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "namespace" field.</summary>
+    public const int NamespaceFieldNumber = 3;
+    private string namespace_ = "";
+    /// <summary>
+    /// Optional. Selects resources using their namespaces. This only applies to
+    /// namespace scoped resources and cannot be used for selecting
+    /// cluster scoped resources. If specified, only resources in the provided
+    /// namespace will be selected. If not specified, the filter will apply to
+    /// both cluster scoped and namespace scoped resources (e.g. name or label).
+    /// The [Namespace](https://pkg.go.dev/k8s.io/api/core/v1#Namespace) resource
+    /// itself will be restored if and only if any resources within the namespace
+    /// are restored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Namespace {
+      get { return namespace_; }
+      set {
+        namespace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Selects resources using Kubernetes
+    /// [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/).
+    /// If specified, a resource will be selected if and only if the resource
+    /// has all of the provided labels and all the label values match.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ResourceSelector);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ResourceSelector other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GroupKind, other.GroupKind)) return false;
+      if (Name != other.Name) return false;
+      if (Namespace != other.Namespace) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (groupKind_ != null) hash ^= GroupKind.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Namespace.Length != 0) hash ^= Namespace.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (groupKind_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GroupKind);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Namespace.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Namespace);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (groupKind_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GroupKind);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Namespace.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Namespace);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (groupKind_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GroupKind);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Namespace.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Namespace);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ResourceSelector other) {
+      if (other == null) {
+        return;
+      }
+      if (other.groupKind_ != null) {
+        if (groupKind_ == null) {
+          GroupKind = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+        }
+        GroupKind.MergeFrom(other.GroupKind);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Namespace.Length != 0) {
+        Namespace = other.Namespace;
+      }
+      labels_.MergeFrom(other.labels_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (groupKind_ == null) {
+              GroupKind = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+            }
+            input.ReadMessage(GroupKind);
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Namespace = input.ReadString();
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (groupKind_ == null) {
+              GroupKind = new global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind();
+            }
+            input.ReadMessage(GroupKind);
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Namespace = input.ReadString();
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Defines an override to apply a VolumeDataRestorePolicy for scoped resources.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VolumeDataRestorePolicyOverride : pb::IMessage<VolumeDataRestorePolicyOverride>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VolumeDataRestorePolicyOverride> _parser = new pb::MessageParser<VolumeDataRestorePolicyOverride>(() => new VolumeDataRestorePolicyOverride());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VolumeDataRestorePolicyOverride> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeBackup.V1.RestoreReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeDataRestorePolicyOverride() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeDataRestorePolicyOverride(VolumeDataRestorePolicyOverride other) : this() {
+      policy_ = other.policy_;
+      switch (other.ScopeCase) {
+        case ScopeOneofCase.SelectedPvcs:
+          SelectedPvcs = other.SelectedPvcs.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeDataRestorePolicyOverride Clone() {
+      return new VolumeDataRestorePolicyOverride(this);
+    }
+
+    /// <summary>Field number for the "policy" field.</summary>
+    public const int PolicyFieldNumber = 1;
+    private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy policy_ = global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified;
+    /// <summary>
+    /// Required. The VolumeDataRestorePolicy to apply when restoring volumes in
+    /// scope.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy Policy {
+      get { return policy_; }
+      set {
+        policy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "selected_pvcs" field.</summary>
+    public const int SelectedPvcsFieldNumber = 2;
+    /// <summary>
+    /// A list of PVCs to apply the policy override to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.NamespacedNames SelectedPvcs {
+      get { return scopeCase_ == ScopeOneofCase.SelectedPvcs ? (global::Google.Cloud.GkeBackup.V1.NamespacedNames) scope_ : null; }
+      set {
+        scope_ = value;
+        scopeCase_ = value == null ? ScopeOneofCase.None : ScopeOneofCase.SelectedPvcs;
+      }
+    }
+
+    private object scope_;
+    /// <summary>Enum of possible cases for the "scope" oneof.</summary>
+    public enum ScopeOneofCase {
+      None = 0,
+      SelectedPvcs = 2,
+    }
+    private ScopeOneofCase scopeCase_ = ScopeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeOneofCase ScopeCase {
+      get { return scopeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearScope() {
+      scopeCase_ = ScopeOneofCase.None;
+      scope_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VolumeDataRestorePolicyOverride);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VolumeDataRestorePolicyOverride other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Policy != other.Policy) return false;
+      if (!object.Equals(SelectedPvcs, other.SelectedPvcs)) return false;
+      if (ScopeCase != other.ScopeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) hash ^= Policy.GetHashCode();
+      if (scopeCase_ == ScopeOneofCase.SelectedPvcs) hash ^= SelectedPvcs.GetHashCode();
+      hash ^= (int) scopeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Policy);
+      }
+      if (scopeCase_ == ScopeOneofCase.SelectedPvcs) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SelectedPvcs);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Policy);
+      }
+      if (scopeCase_ == ScopeOneofCase.SelectedPvcs) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SelectedPvcs);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Policy);
+      }
+      if (scopeCase_ == ScopeOneofCase.SelectedPvcs) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SelectedPvcs);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VolumeDataRestorePolicyOverride other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Policy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified) {
+        Policy = other.Policy;
+      }
+      switch (other.ScopeCase) {
+        case ScopeOneofCase.SelectedPvcs:
+          if (SelectedPvcs == null) {
+            SelectedPvcs = new global::Google.Cloud.GkeBackup.V1.NamespacedNames();
+          }
+          SelectedPvcs.MergeFrom(other.SelectedPvcs);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Policy = (global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.GkeBackup.V1.NamespacedNames subBuilder = new global::Google.Cloud.GkeBackup.V1.NamespacedNames();
+            if (scopeCase_ == ScopeOneofCase.SelectedPvcs) {
+              subBuilder.MergeFrom(SelectedPvcs);
+            }
+            input.ReadMessage(subBuilder);
+            SelectedPvcs = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Policy = (global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.GkeBackup.V1.NamespacedNames subBuilder = new global::Google.Cloud.GkeBackup.V1.NamespacedNames();
+            if (scopeCase_ == ScopeOneofCase.SelectedPvcs) {
+              subBuilder.MergeFrom(SelectedPvcs);
+            }
+            input.ReadMessage(subBuilder);
+            SelectedPvcs = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
