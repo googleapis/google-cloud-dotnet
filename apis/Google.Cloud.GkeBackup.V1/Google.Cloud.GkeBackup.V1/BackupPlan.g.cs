@@ -31,7 +31,7 @@ namespace Google.Cloud.GkeBackup.V1 {
             "L3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
             "ZXN0YW1wLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvGhtnb29nbGUv",
             "dHlwZS9kYXlvZndlZWsucHJvdG8aG2dvb2dsZS90eXBlL3RpbWVvZmRheS5w",
-            "cm90byK2DQoKQmFja3VwUGxhbhIRCgRuYW1lGAEgASgJQgPgQQMSEAoDdWlk",
+            "cm90byLUDQoKQmFja3VwUGxhbhIRCgRuYW1lGAEgASgJQgPgQQMSEAoDdWlk",
             "GAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24Y",
@@ -55,42 +55,43 @@ namespace Google.Cloud.GkeBackup.V1 {
             "QgPgQQESEwoGcGF1c2VkGAIgASgIQgPgQQESPQoKcnBvX2NvbmZpZxgDIAEo",
             "CzIkLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUnBvQ29uZmlnQgPgQQES",
             "QwoabmV4dF9zY2hlZHVsZWRfYmFja3VwX3RpbWUYBCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMa0gIKDEJhY2t1cENvbmZpZxIYCg5h",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMa8AIKDEJhY2t1cENvbmZpZxIYCg5h",
             "bGxfbmFtZXNwYWNlcxgBIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVzcGFjZXMY",
             "AiABKAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZXNI",
             "ABJLChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYAyABKAsyKi5nb29nbGUuY2xv",
             "dWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEiAKE2luY2x1ZGVf",
             "dm9sdW1lX2RhdGEYBCABKAhCA+BBARIcCg9pbmNsdWRlX3NlY3JldHMYBSAB",
             "KAhCA+BBARJFCg5lbmNyeXB0aW9uX2tleRgGIAEoCzIoLmdvb2dsZS5jbG91",
-            "ZC5na2ViYWNrdXAudjEuRW5jcnlwdGlvbktleUID4EEBQg4KDGJhY2t1cF9z",
-            "Y29wZRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBInsKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEwoPQ0xV",
-            "U1RFUl9QRU5ESU5HEAESEAoMUFJPVklTSU9OSU5HEAISCQoFUkVBRFkQAxIK",
-            "CgZGQUlMRUQQBBIPCgtERUFDVElWQVRFRBAFEgwKCERFTEVUSU5HEAY6a+pB",
-            "aAojZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW4SQXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBQbGFu",
-            "cy97YmFja3VwX3BsYW59IngKCVJwb0NvbmZpZxIfChJ0YXJnZXRfcnBvX21p",
-            "bnV0ZXMYASABKAVCA+BBAhJKChFleGNsdXNpb25fd2luZG93cxgCIAMoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuRXhjbHVzaW9uV2luZG93QgPg",
-            "QQEi3gIKD0V4Y2x1c2lvbldpbmRvdxIvCgpzdGFydF90aW1lGAEgASgLMhYu",
-            "Z29vZ2xlLnR5cGUuVGltZU9mRGF5QgPgQQISMAoIZHVyYXRpb24YAiABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIzChZzaW5nbGVfb2Nj",
-            "dXJyZW5jZV9kYXRlGAMgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEg8KBWRh",
-            "aWx5GAQgASgISAASUAoMZGF5c19vZl93ZWVrGAUgASgLMjguZ29vZ2xlLmNs",
-            "b3VkLmdrZWJhY2t1cC52MS5FeGNsdXNpb25XaW5kb3cuRGF5T2ZXZWVrTGlz",
-            "dEgAGkIKDURheU9mV2Vla0xpc3QSMQoMZGF5c19vZl93ZWVrGAEgAygOMhYu",
-            "Z29vZ2xlLnR5cGUuRGF5T2ZXZWVrQgPgQQFCDAoKcmVjdXJyZW5jZULGAQod",
-            "Y29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCD0JhY2t1cFBsYW5Qcm90",
-            "b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2Vi",
-            "YWNrdXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAu",
-            "VjHKAhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91",
-            "ZDo6R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
+            "ZC5na2ViYWNrdXAudjEuRW5jcnlwdGlvbktleUID4EEBEhwKD3Blcm1pc3Np",
+            "dmVfbW9kZRgHIAEoCEID4EEBQg4KDGJhY2t1cF9zY29wZRotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEwoPQ0xVU1RFUl9QRU5ESU5HEAES",
+            "EAoMUFJPVklTSU9OSU5HEAISCQoFUkVBRFkQAxIKCgZGQUlMRUQQBBIPCgtE",
+            "RUFDVElWQVRFRBAFEgwKCERFTEVUSU5HEAY6a+pBaAojZ2tlYmFja3VwLmdv",
+            "b2dsZWFwaXMuY29tL0JhY2t1cFBsYW4SQXByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3VwX3BsYW59",
+            "IngKCVJwb0NvbmZpZxIfChJ0YXJnZXRfcnBvX21pbnV0ZXMYASABKAVCA+BB",
+            "AhJKChFleGNsdXNpb25fd2luZG93cxgCIAMoCzIqLmdvb2dsZS5jbG91ZC5n",
+            "a2ViYWNrdXAudjEuRXhjbHVzaW9uV2luZG93QgPgQQEi3gIKD0V4Y2x1c2lv",
+            "bldpbmRvdxIvCgpzdGFydF90aW1lGAEgASgLMhYuZ29vZ2xlLnR5cGUuVGlt",
+            "ZU9mRGF5QgPgQQISMAoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb25CA+BBAhIzChZzaW5nbGVfb2NjdXJyZW5jZV9kYXRlGAMg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEg8KBWRhaWx5GAQgASgISAASUAoM",
+            "ZGF5c19vZl93ZWVrGAUgASgLMjguZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
+            "MS5FeGNsdXNpb25XaW5kb3cuRGF5T2ZXZWVrTGlzdEgAGkIKDURheU9mV2Vl",
+            "a0xpc3QSMQoMZGF5c19vZl93ZWVrGAEgAygOMhYuZ29vZ2xlLnR5cGUuRGF5",
+            "T2ZXZWVrQgPgQQFCDAoKcmVjdXJyZW5jZULGAQodY29tLmdvb2dsZS5jbG91",
+            "ZC5na2ViYWNrdXAudjFCD0JhY2t1cFBsYW5Qcm90b1ABWjtjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNr",
+            "dXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xv",
+            "dWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan), global::Google.Cloud.GkeBackup.V1.BackupPlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Cluster", "RetentionPolicy", "Labels", "BackupSchedule", "Etag", "Deactivated", "BackupConfig", "ProtectedPodCount", "State", "StateReason", "RpoRiskLevel", "RpoRiskReason" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy.Parser, new[]{ "BackupDeleteLockDays", "BackupRetainDays", "Locked" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule.Parser, new[]{ "CronSchedule", "Paused", "RpoConfig", "NextScheduledBackupTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig.Parser, new[]{ "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "IncludeVolumeData", "IncludeSecrets", "EncryptionKey" }, new[]{ "BackupScope" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig.Parser, new[]{ "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "IncludeVolumeData", "IncludeSecrets", "EncryptionKey", "PermissiveMode" }, new[]{ "BackupScope" }, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RpoConfig), global::Google.Cloud.GkeBackup.V1.RpoConfig.Parser, new[]{ "TargetRpoMinutes", "ExclusionWindows" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.ExclusionWindow), global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Parser, new[]{ "StartTime", "Duration", "SingleOccurrenceDate", "Daily", "DaysOfWeek" }, new[]{ "Recurrence" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList), global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList.Parser, new[]{ "DaysOfWeek" }, null, null, null, null)})
@@ -1741,6 +1742,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           includeVolumeData_ = other.includeVolumeData_;
           includeSecrets_ = other.includeSecrets_;
           encryptionKey_ = other.encryptionKey_ != null ? other.encryptionKey_.Clone() : null;
+          permissiveMode_ = other.permissiveMode_;
           switch (other.BackupScopeCase) {
             case BackupScopeOneofCase.AllNamespaces:
               AllNamespaces = other.AllNamespaces;
@@ -1877,6 +1879,25 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
         }
 
+        /// <summary>Field number for the "permissive_mode" field.</summary>
+        public const int PermissiveModeFieldNumber = 7;
+        private bool permissiveMode_;
+        /// <summary>
+        /// Optional. If false, Backups will fail when Backup for GKE detects
+        /// Kubernetes configuration that is non-standard or
+        /// requires additional setup to restore.
+        ///
+        /// Default: False
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PermissiveMode {
+          get { return permissiveMode_; }
+          set {
+            permissiveMode_ = value;
+          }
+        }
+
         private object backupScope_;
         /// <summary>Enum of possible cases for the "backup_scope" oneof.</summary>
         public enum BackupScopeOneofCase {
@@ -1920,6 +1941,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (IncludeVolumeData != other.IncludeVolumeData) return false;
           if (IncludeSecrets != other.IncludeSecrets) return false;
           if (!object.Equals(EncryptionKey, other.EncryptionKey)) return false;
+          if (PermissiveMode != other.PermissiveMode) return false;
           if (BackupScopeCase != other.BackupScopeCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1934,6 +1956,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (IncludeVolumeData != false) hash ^= IncludeVolumeData.GetHashCode();
           if (IncludeSecrets != false) hash ^= IncludeSecrets.GetHashCode();
           if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
+          if (PermissiveMode != false) hash ^= PermissiveMode.GetHashCode();
           hash ^= (int) backupScopeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1977,6 +2000,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(EncryptionKey);
           }
+          if (PermissiveMode != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(PermissiveMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2011,6 +2038,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(EncryptionKey);
           }
+          if (PermissiveMode != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(PermissiveMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2039,6 +2070,9 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (encryptionKey_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
           }
+          if (PermissiveMode != false) {
+            size += 1 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -2062,6 +2096,9 @@ namespace Google.Cloud.GkeBackup.V1 {
               EncryptionKey = new global::Google.Cloud.GkeBackup.V1.EncryptionKey();
             }
             EncryptionKey.MergeFrom(other.EncryptionKey);
+          }
+          if (other.PermissiveMode != false) {
+            PermissiveMode = other.PermissiveMode;
           }
           switch (other.BackupScopeCase) {
             case BackupScopeOneofCase.AllNamespaces:
@@ -2133,6 +2170,10 @@ namespace Google.Cloud.GkeBackup.V1 {
                 input.ReadMessage(EncryptionKey);
                 break;
               }
+              case 56: {
+                PermissiveMode = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -2183,6 +2224,10 @@ namespace Google.Cloud.GkeBackup.V1 {
                   EncryptionKey = new global::Google.Cloud.GkeBackup.V1.EncryptionKey();
                 }
                 input.ReadMessage(EncryptionKey);
+                break;
+              }
+              case 56: {
+                PermissiveMode = input.ReadBool();
                 break;
               }
             }
@@ -2517,8 +2562,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DurationFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Duration duration_;
     /// <summary>
-    /// Required. Specifies duration of the window. Restrictions for duration based
-    /// on the recurrence type to allow some time for backup to happen:
+    /// Required. Specifies duration of the window.
+    /// Duration must be >= 5 minutes and &lt; (target RPO - 20 minutes).
+    /// Additional restrictions based on the recurrence type to allow some time for
+    /// backup to happen:
     /// - single_occurrence_date:  no restriction, but UI may warn about this when
     /// duration >= target RPO
     /// - daily window: duration &lt; 24 hours

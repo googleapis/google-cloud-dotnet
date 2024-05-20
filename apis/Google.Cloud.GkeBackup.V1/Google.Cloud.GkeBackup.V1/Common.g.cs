@@ -33,18 +33,21 @@ namespace Google.Cloud.GkeBackup.V1 {
             "KAsyKS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1l",
             "QgPgQQEiWgoNRW5jcnlwdGlvbktleRJJChZnY3Bfa21zX2VuY3J5cHRpb25f",
             "a2V5GAEgASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
-            "eXB0b0tleULCAQodY29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCC0Nv",
-            "bW1vblByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZ2tlYmFja3VwL2Fw",
-            "aXYxL2drZWJhY2t1cHBiO2drZWJhY2t1cHBiqgIZR29vZ2xlLkNsb3VkLkdr",
-            "ZUJhY2t1cC5WMcoCGUdvb2dsZVxDbG91ZFxHa2VCYWNrdXBcVjHqAhxHb29n",
-            "bGU6OkNsb3VkOjpHa2VCYWNrdXA6OlYxYgZwcm90bzM="));
+            "eXB0b0tleSJUCg5Wb2x1bWVUeXBlRW51bSJCCgpWb2x1bWVUeXBlEhsKF1ZP",
+            "TFVNRV9UWVBFX1VOU1BFQ0lGSUVEEAASFwoTR0NFX1BFUlNJU1RFTlRfRElT",
+            "SxABQsIBCh1jb20uZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MUILQ29tbW9u",
+            "UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEv",
+            "Z2tlYmFja3VwcGI7Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFj",
+            "a3VwLlYxygIZR29vZ2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6",
+            "Q2xvdWQ6OkdrZUJhY2t1cDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Namespaces), global::Google.Cloud.GkeBackup.V1.Namespaces.Parser, new[]{ "Namespaces_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.NamespacedName), global::Google.Cloud.GkeBackup.V1.NamespacedName.Parser, new[]{ "Namespace", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.NamespacedNames), global::Google.Cloud.GkeBackup.V1.NamespacedNames.Parser, new[]{ "NamespacedNames_" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.EncryptionKey), global::Google.Cloud.GkeBackup.V1.EncryptionKey.Parser, new[]{ "GcpKmsEncryptionKey" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.EncryptionKey), global::Google.Cloud.GkeBackup.V1.EncryptionKey.Parser, new[]{ "GcpKmsEncryptionKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum), global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Types.VolumeType) }, null, null)
           }));
     }
     #endregion
@@ -852,6 +855,184 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Message to encapsulate VolumeType enum.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VolumeTypeEnum : pb::IMessage<VolumeTypeEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VolumeTypeEnum> _parser = new pb::MessageParser<VolumeTypeEnum>(() => new VolumeTypeEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VolumeTypeEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeTypeEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeTypeEnum(VolumeTypeEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeTypeEnum Clone() {
+      return new VolumeTypeEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VolumeTypeEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VolumeTypeEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VolumeTypeEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VolumeTypeEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Supported volume types.
+      /// </summary>
+      public enum VolumeType {
+        /// <summary>
+        /// Default
+        /// </summary>
+        [pbr::OriginalName("VOLUME_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Compute Engine Persistent Disk volume
+        /// </summary>
+        [pbr::OriginalName("GCE_PERSISTENT_DISK")] GcePersistentDisk = 1,
+      }
+
+    }
+    #endregion
 
   }
 
