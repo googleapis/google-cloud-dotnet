@@ -98,7 +98,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// information like price and availability for a given product in a specific
   /// [`region`][google.shopping.merchant.inventories.v1beta.RegionalInventory.region].
   /// For a list of all accepted attribute values, see the [regional product
-  /// inventory feed
+  /// inventory data
   /// specification](https://support.google.com/merchants/answer/9698880).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -259,7 +259,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     private string availability_;
     /// <summary>
     /// Availability of the product in this region.
-    /// For accepted attribute values, see the [regional product inventory feed
+    /// For accepted attribute values, see the [regional product inventory data
     /// specification](https://support.google.com/merchants/answer/3061342)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -290,7 +290,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     private readonly pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute> customAttributes_ = new pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute>();
     /// <summary>
     /// A list of custom (merchant-provided) attributes. You can also use
-    /// `CustomAttribute` to submit any attribute of the feed specification in its
+    /// `CustomAttribute` to submit any attribute of the data specification in its
     /// generic form.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

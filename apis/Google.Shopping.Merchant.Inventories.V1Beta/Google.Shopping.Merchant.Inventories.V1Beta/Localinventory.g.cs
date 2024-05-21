@@ -102,7 +102,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// for a specific product at the store specified by
   /// [`storeCode`][google.shopping.merchant.inventories.v1beta.LocalInventory.store_code].
   /// For a list of all accepted attribute values, see the [local product inventory
-  /// feed specification](https://support.google.com/merchants/answer/3061342).
+  /// data specification](https://support.google.com/merchants/answer/3061342).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalInventory : pb::IMessage<LocalInventory>
@@ -201,7 +201,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     /// <summary>
     /// Required. Immutable. Store code (the store ID from your Business Profile)
     /// of the physical store the product is sold in. See the [Local product
-    /// inventory feed
+    /// inventory data
     /// specification](https://support.google.com/merchants/answer/3061342) for
     /// more information.
     /// </summary>
@@ -269,7 +269,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     private string availability_;
     /// <summary>
     /// Availability of the product at this store.
-    /// For accepted attribute values, see the [local product inventory feed
+    /// For accepted attribute values, see the [local product inventory data
     /// specification](https://support.google.com/merchants/answer/3061342)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -333,7 +333,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     /// Supported pickup method for this product. Unless the value is `"not
     /// supported"`, this field must be submitted together with
     /// `pickupSla`.
-    /// For accepted attribute values, see the [local product inventory feed
+    /// For accepted attribute values, see the [local product inventory data
     /// specification](https://support.google.com/merchants/answer/3061342)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -366,7 +366,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     /// Relative time period from the order date for an order for this product,
     /// from this store, to be ready for pickup. Must be submitted with
     /// `pickupMethod`.
-    /// For accepted attribute values, see the [local product inventory feed
+    /// For accepted attribute values, see the [local product inventory data
     /// specification](https://support.google.com/merchants/answer/3061342)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -426,7 +426,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
     private readonly pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute> customAttributes_ = new pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute>();
     /// <summary>
     /// A list of custom (merchant-provided) attributes. You can also use
-    /// `CustomAttribute` to submit any attribute of the feed specification in its
+    /// `CustomAttribute` to submit any attribute of the data specification in its
     /// generic form.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
