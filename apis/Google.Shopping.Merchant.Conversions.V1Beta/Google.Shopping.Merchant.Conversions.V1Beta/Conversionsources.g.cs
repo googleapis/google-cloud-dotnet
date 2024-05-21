@@ -1523,7 +1523,7 @@ namespace Google.Shopping.Merchant.Conversions.V1Beta {
 
   /// <summary>
   /// "Merchant Center Destination" sources can be used to send conversion events
-  /// from a website using a Google tag directly to a Merchant Center account
+  /// from an online store using a Google tag directly to a Merchant Center account
   /// where the source is created.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
