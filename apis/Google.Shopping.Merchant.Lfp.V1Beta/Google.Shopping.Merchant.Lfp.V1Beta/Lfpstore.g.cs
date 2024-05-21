@@ -97,8 +97,8 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta {
   }
   #region Messages
   /// <summary>
-  /// A store for the merchant. This will be used to match to a Google Business
-  /// Profile listing for the target merchant. If a matching listing can't be
+  /// A store for the merchant. This will be used to match to a store under the
+  /// Google Business Profile of the target merchant. If a matching store can't be
   /// found, the inventories or sales submitted with the store code will not be
   /// used.
   /// </summary>
@@ -359,8 +359,8 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta {
     public const int MatchingStateFieldNumber = 10;
     private global::Google.Shopping.Merchant.Lfp.V1Beta.LfpStore.Types.StoreMatchingState matchingState_ = global::Google.Shopping.Merchant.Lfp.V1Beta.LfpStore.Types.StoreMatchingState.Unspecified;
     /// <summary>
-    /// Optional. Output only. The state of matching to a Google Business Profile
-    /// listing. See
+    /// Optional. Output only. The state of matching to a Google Business Profile.
+    /// See
     /// [matchingStateHint][google.shopping.merchant.lfp.v1beta.LfpStore.matching_state_hint]
     /// for further details if no match is found.
     /// </summary>
@@ -786,7 +786,7 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The state of matching `LfpStore` to a Google Business Profile listing.
+      /// The state of matching `LfpStore` to a Google Business Profile.
       /// </summary>
       public enum StoreMatchingState {
         /// <summary>
