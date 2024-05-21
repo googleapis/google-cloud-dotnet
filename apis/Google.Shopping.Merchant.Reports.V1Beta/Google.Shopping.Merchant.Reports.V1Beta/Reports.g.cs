@@ -171,7 +171,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
             "Qg4KDF9jYXRlZ29yeV9sM0IOCgxfY2F0ZWdvcnlfbDRCDgoMX2NhdGVnb3J5",
             "X2w1QhIKEF9wcm9kdWN0X3R5cGVfbDFCEgoQX3Byb2R1Y3RfdHlwZV9sMkIS",
             "ChBfcHJvZHVjdF90eXBlX2wzQhIKEF9wcm9kdWN0X3R5cGVfbDRCEgoQX3By",
-            "b2R1Y3RfdHlwZV9sNSLQBwoYUHJpY2VJbnNpZ2h0c1Byb2R1Y3RWaWV3Eg8K",
+            "b2R1Y3RfdHlwZV9sNSKHCQoYUHJpY2VJbnNpZ2h0c1Byb2R1Y3RWaWV3Eg8K",
             "AmlkGAEgASgJSACIAQESFQoIb2ZmZXJfaWQYAiABKAlIAYgBARISCgV0aXRs",
             "ZRgDIAEoCUgCiAEBEhIKBWJyYW5kGAQgASgJSAOIAQESGAoLY2F0ZWdvcnlf",
             "bDEYBSABKAlIBIgBARIYCgtjYXRlZ29yeV9sMhgGIAEoCUgFiAEBEhgKC2Nh",
@@ -185,128 +185,132 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
             "UHJpY2USMgolcHJlZGljdGVkX2ltcHJlc3Npb25zX2NoYW5nZV9mcmFjdGlv",
             "bhgRIAEoAUgOiAEBEi0KIHByZWRpY3RlZF9jbGlja3NfY2hhbmdlX2ZyYWN0",
             "aW9uGBIgASgBSA+IAQESMgolcHJlZGljdGVkX2NvbnZlcnNpb25zX2NoYW5n",
-            "ZV9mcmFjdGlvbhgTIAEoAUgQiAEBQgUKA19pZEILCglfb2ZmZXJfaWRCCAoG",
-            "X3RpdGxlQggKBl9icmFuZEIOCgxfY2F0ZWdvcnlfbDFCDgoMX2NhdGVnb3J5",
-            "X2wyQg4KDF9jYXRlZ29yeV9sM0IOCgxfY2F0ZWdvcnlfbDRCDgoMX2NhdGVn",
-            "b3J5X2w1QhIKEF9wcm9kdWN0X3R5cGVfbDFCEgoQX3Byb2R1Y3RfdHlwZV9s",
-            "MkISChBfcHJvZHVjdF90eXBlX2wzQhIKEF9wcm9kdWN0X3R5cGVfbDRCEgoQ",
-            "X3Byb2R1Y3RfdHlwZV9sNUIoCiZfcHJlZGljdGVkX2ltcHJlc3Npb25zX2No",
-            "YW5nZV9mcmFjdGlvbkIjCiFfcHJlZGljdGVkX2NsaWNrc19jaGFuZ2VfZnJh",
-            "Y3Rpb25CKAomX3ByZWRpY3RlZF9jb252ZXJzaW9uc19jaGFuZ2VfZnJhY3Rp",
-            "b24i8AsKHUJlc3RTZWxsZXJzUHJvZHVjdENsdXN0ZXJWaWV3EiYKC3JlcG9y",
-            "dF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRJxChJyZXBvcnRfZ3Jh",
-            "bnVsYXJpdHkYAiABKA4yUC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVw",
-            "b3J0cy52MWJldGEuUmVwb3J0R3JhbnVsYXJpdHkuUmVwb3J0R3JhbnVsYXJp",
-            "dHlFbnVtSACIAQESIAoTcmVwb3J0X2NvdW50cnlfY29kZRgDIAEoCUgBiAEB",
-            "Eh8KEnJlcG9ydF9jYXRlZ29yeV9pZBgEIAEoA0gCiAEBEhIKBXRpdGxlGAYg",
-            "ASgJSAOIAQESEgoFYnJhbmQYByABKAlIBIgBARIYCgtjYXRlZ29yeV9sMRgI",
-            "IAEoCUgFiAEBEhgKC2NhdGVnb3J5X2wyGAkgASgJSAaIAQESGAoLY2F0ZWdv",
-            "cnlfbDMYCiABKAlIB4gBARIYCgtjYXRlZ29yeV9sNBgLIAEoCUgIiAEBEhgK",
-            "C2NhdGVnb3J5X2w1GAwgASgJSAmIAQESFQoNdmFyaWFudF9ndGlucxgNIAMo",
-            "CRJ1ChBpbnZlbnRvcnlfc3RhdHVzGA4gASgOMlYuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnJlcG9ydHMudjFiZXRhLkJlc3RTZWxsZXJzUHJvZHVjdENs",
-            "dXN0ZXJWaWV3LkludmVudG9yeVN0YXR1c0gKiAEBEnsKFmJyYW5kX2ludmVu",
-            "dG9yeV9zdGF0dXMYDyABKA4yVi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cmVwb3J0cy52MWJldGEuQmVzdFNlbGxlcnNQcm9kdWN0Q2x1c3RlclZpZXcu",
-            "SW52ZW50b3J5U3RhdHVzSAuIAQESEQoEcmFuaxgQIAEoA0gMiAEBEhoKDXBy",
-            "ZXZpb3VzX3JhbmsYESABKANIDYgBARJoCg9yZWxhdGl2ZV9kZW1hbmQYEiAB",
+            "ZV9mcmFjdGlvbhgTIAEoAUgQiAEBEmYKDWVmZmVjdGl2ZW5lc3MYFiABKA4y",
+            "Ty5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MWJldGEuUHJp",
+            "Y2VJbnNpZ2h0c1Byb2R1Y3RWaWV3LkVmZmVjdGl2ZW5lc3MiTQoNRWZmZWN0",
+            "aXZlbmVzcxIdChlFRkZFQ1RJVkVORVNTX1VOU1BFQ0lGSUVEEAASBwoDTE9X",
+            "EAESCgoGTUVESVVNEAISCAoESElHSBADQgUKA19pZEILCglfb2ZmZXJfaWRC",
+            "CAoGX3RpdGxlQggKBl9icmFuZEIOCgxfY2F0ZWdvcnlfbDFCDgoMX2NhdGVn",
+            "b3J5X2wyQg4KDF9jYXRlZ29yeV9sM0IOCgxfY2F0ZWdvcnlfbDRCDgoMX2Nh",
+            "dGVnb3J5X2w1QhIKEF9wcm9kdWN0X3R5cGVfbDFCEgoQX3Byb2R1Y3RfdHlw",
+            "ZV9sMkISChBfcHJvZHVjdF90eXBlX2wzQhIKEF9wcm9kdWN0X3R5cGVfbDRC",
+            "EgoQX3Byb2R1Y3RfdHlwZV9sNUIoCiZfcHJlZGljdGVkX2ltcHJlc3Npb25z",
+            "X2NoYW5nZV9mcmFjdGlvbkIjCiFfcHJlZGljdGVkX2NsaWNrc19jaGFuZ2Vf",
+            "ZnJhY3Rpb25CKAomX3ByZWRpY3RlZF9jb252ZXJzaW9uc19jaGFuZ2VfZnJh",
+            "Y3Rpb24i8AsKHUJlc3RTZWxsZXJzUHJvZHVjdENsdXN0ZXJWaWV3EiYKC3Jl",
+            "cG9ydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRJxChJyZXBvcnRf",
+            "Z3JhbnVsYXJpdHkYAiABKA4yUC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "cmVwb3J0cy52MWJldGEuUmVwb3J0R3JhbnVsYXJpdHkuUmVwb3J0R3JhbnVs",
+            "YXJpdHlFbnVtSACIAQESIAoTcmVwb3J0X2NvdW50cnlfY29kZRgDIAEoCUgB",
+            "iAEBEh8KEnJlcG9ydF9jYXRlZ29yeV9pZBgEIAEoA0gCiAEBEhIKBXRpdGxl",
+            "GAYgASgJSAOIAQESEgoFYnJhbmQYByABKAlIBIgBARIYCgtjYXRlZ29yeV9s",
+            "MRgIIAEoCUgFiAEBEhgKC2NhdGVnb3J5X2wyGAkgASgJSAaIAQESGAoLY2F0",
+            "ZWdvcnlfbDMYCiABKAlIB4gBARIYCgtjYXRlZ29yeV9sNBgLIAEoCUgIiAEB",
+            "EhgKC2NhdGVnb3J5X2w1GAwgASgJSAmIAQESFQoNdmFyaWFudF9ndGlucxgN",
+            "IAMoCRJ1ChBpbnZlbnRvcnlfc3RhdHVzGA4gASgOMlYuZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnJlcG9ydHMudjFiZXRhLkJlc3RTZWxsZXJzUHJvZHVj",
+            "dENsdXN0ZXJWaWV3LkludmVudG9yeVN0YXR1c0gKiAEBEnsKFmJyYW5kX2lu",
+            "dmVudG9yeV9zdGF0dXMYDyABKA4yVi5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucmVwb3J0cy52MWJldGEuQmVzdFNlbGxlcnNQcm9kdWN0Q2x1c3RlclZp",
+            "ZXcuSW52ZW50b3J5U3RhdHVzSAuIAQESEQoEcmFuaxgQIAEoA0gMiAEBEhoK",
+            "DXByZXZpb3VzX3JhbmsYESABKANIDYgBARJoCg9yZWxhdGl2ZV9kZW1hbmQY",
+            "EiABKA4ySi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MWJl",
+            "dGEuUmVsYXRpdmVEZW1hbmQuUmVsYXRpdmVEZW1hbmRFbnVtSA6IAQEScQoY",
+            "cHJldmlvdXNfcmVsYXRpdmVfZGVtYW5kGBMgASgOMkouZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnJlcG9ydHMudjFiZXRhLlJlbGF0aXZlRGVtYW5kLlJl",
+            "bGF0aXZlRGVtYW5kRW51bUgPiAEBEoMBChZyZWxhdGl2ZV9kZW1hbmRfY2hh",
+            "bmdlGBQgASgOMl4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMu",
+            "djFiZXRhLlJlbGF0aXZlRGVtYW5kQ2hhbmdlVHlwZS5SZWxhdGl2ZURlbWFu",
+            "ZENoYW5nZVR5cGVFbnVtSBCIAQEiaQoPSW52ZW50b3J5U3RhdHVzEiAKHElO",
+            "VkVOVE9SWV9TVEFUVVNfVU5TUEVDSUZJRUQQABIMCghJTl9TVE9DSxABEhAK",
+            "DE9VVF9PRl9TVE9DSxACEhQKEE5PVF9JTl9JTlZFTlRPUlkQA0IVChNfcmVw",
+            "b3J0X2dyYW51bGFyaXR5QhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19y",
+            "ZXBvcnRfY2F0ZWdvcnlfaWRCCAoGX3RpdGxlQggKBl9icmFuZEIOCgxfY2F0",
+            "ZWdvcnlfbDFCDgoMX2NhdGVnb3J5X2wyQg4KDF9jYXRlZ29yeV9sM0IOCgxf",
+            "Y2F0ZWdvcnlfbDRCDgoMX2NhdGVnb3J5X2w1QhMKEV9pbnZlbnRvcnlfc3Rh",
+            "dHVzQhkKF19icmFuZF9pbnZlbnRvcnlfc3RhdHVzQgcKBV9yYW5rQhAKDl9w",
+            "cmV2aW91c19yYW5rQhIKEF9yZWxhdGl2ZV9kZW1hbmRCGwoZX3ByZXZpb3Vz",
+            "X3JlbGF0aXZlX2RlbWFuZEIZChdfcmVsYXRpdmVfZGVtYW5kX2NoYW5nZSLR",
+            "BgoUQmVzdFNlbGxlcnNCcmFuZFZpZXcSJgoLcmVwb3J0X2RhdGUYASABKAsy",
+            "ES5nb29nbGUudHlwZS5EYXRlEnEKEnJlcG9ydF9ncmFudWxhcml0eRgCIAEo",
+            "DjJQLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxYmV0YS5S",
+            "ZXBvcnRHcmFudWxhcml0eS5SZXBvcnRHcmFudWxhcml0eUVudW1IAIgBARIg",
+            "ChNyZXBvcnRfY291bnRyeV9jb2RlGAMgASgJSAGIAQESHwoScmVwb3J0X2Nh",
+            "dGVnb3J5X2lkGAQgASgDSAKIAQESEgoFYnJhbmQYBiABKAlIA4gBARIRCgRy",
+            "YW5rGAcgASgDSASIAQESGgoNcHJldmlvdXNfcmFuaxgIIAEoA0gFiAEBEmgK",
+            "D3JlbGF0aXZlX2RlbWFuZBgJIAEoDjJKLmdvb2dsZS5zaG9wcGluZy5tZXJj",
+            "aGFudC5yZXBvcnRzLnYxYmV0YS5SZWxhdGl2ZURlbWFuZC5SZWxhdGl2ZURl",
+            "bWFuZEVudW1IBogBARJxChhwcmV2aW91c19yZWxhdGl2ZV9kZW1hbmQYCiAB",
             "KA4ySi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MWJldGEu",
-            "UmVsYXRpdmVEZW1hbmQuUmVsYXRpdmVEZW1hbmRFbnVtSA6IAQEScQoYcHJl",
-            "dmlvdXNfcmVsYXRpdmVfZGVtYW5kGBMgASgOMkouZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnJlcG9ydHMudjFiZXRhLlJlbGF0aXZlRGVtYW5kLlJlbGF0",
-            "aXZlRGVtYW5kRW51bUgPiAEBEoMBChZyZWxhdGl2ZV9kZW1hbmRfY2hhbmdl",
-            "GBQgASgOMl4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjFi",
-            "ZXRhLlJlbGF0aXZlRGVtYW5kQ2hhbmdlVHlwZS5SZWxhdGl2ZURlbWFuZENo",
-            "YW5nZVR5cGVFbnVtSBCIAQEiaQoPSW52ZW50b3J5U3RhdHVzEiAKHElOVkVO",
-            "VE9SWV9TVEFUVVNfVU5TUEVDSUZJRUQQABIMCghJTl9TVE9DSxABEhAKDE9V",
-            "VF9PRl9TVE9DSxACEhQKEE5PVF9JTl9JTlZFTlRPUlkQA0IVChNfcmVwb3J0",
-            "X2dyYW51bGFyaXR5QhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19yZXBv",
-            "cnRfY2F0ZWdvcnlfaWRCCAoGX3RpdGxlQggKBl9icmFuZEIOCgxfY2F0ZWdv",
-            "cnlfbDFCDgoMX2NhdGVnb3J5X2wyQg4KDF9jYXRlZ29yeV9sM0IOCgxfY2F0",
-            "ZWdvcnlfbDRCDgoMX2NhdGVnb3J5X2w1QhMKEV9pbnZlbnRvcnlfc3RhdHVz",
-            "QhkKF19icmFuZF9pbnZlbnRvcnlfc3RhdHVzQgcKBV9yYW5rQhAKDl9wcmV2",
+            "UmVsYXRpdmVEZW1hbmQuUmVsYXRpdmVEZW1hbmRFbnVtSAeIAQESgwEKFnJl",
+            "bGF0aXZlX2RlbWFuZF9jaGFuZ2UYCyABKA4yXi5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQucmVwb3J0cy52MWJldGEuUmVsYXRpdmVEZW1hbmRDaGFuZ2VU",
+            "eXBlLlJlbGF0aXZlRGVtYW5kQ2hhbmdlVHlwZUVudW1ICIgBAUIVChNfcmVw",
+            "b3J0X2dyYW51bGFyaXR5QhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19y",
+            "ZXBvcnRfY2F0ZWdvcnlfaWRCCAoGX2JyYW5kQgcKBV9yYW5rQhAKDl9wcmV2",
             "aW91c19yYW5rQhIKEF9yZWxhdGl2ZV9kZW1hbmRCGwoZX3ByZXZpb3VzX3Jl",
-            "bGF0aXZlX2RlbWFuZEIZChdfcmVsYXRpdmVfZGVtYW5kX2NoYW5nZSLRBgoU",
-            "QmVzdFNlbGxlcnNCcmFuZFZpZXcSJgoLcmVwb3J0X2RhdGUYASABKAsyES5n",
-            "b29nbGUudHlwZS5EYXRlEnEKEnJlcG9ydF9ncmFudWxhcml0eRgCIAEoDjJQ",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxYmV0YS5SZXBv",
-            "cnRHcmFudWxhcml0eS5SZXBvcnRHcmFudWxhcml0eUVudW1IAIgBARIgChNy",
-            "ZXBvcnRfY291bnRyeV9jb2RlGAMgASgJSAGIAQESHwoScmVwb3J0X2NhdGVn",
-            "b3J5X2lkGAQgASgDSAKIAQESEgoFYnJhbmQYBiABKAlIA4gBARIRCgRyYW5r",
-            "GAcgASgDSASIAQESGgoNcHJldmlvdXNfcmFuaxgIIAEoA0gFiAEBEmgKD3Jl",
-            "bGF0aXZlX2RlbWFuZBgJIAEoDjJKLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5yZXBvcnRzLnYxYmV0YS5SZWxhdGl2ZURlbWFuZC5SZWxhdGl2ZURlbWFu",
-            "ZEVudW1IBogBARJxChhwcmV2aW91c19yZWxhdGl2ZV9kZW1hbmQYCiABKA4y",
-            "Si5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MWJldGEuUmVs",
-            "YXRpdmVEZW1hbmQuUmVsYXRpdmVEZW1hbmRFbnVtSAeIAQESgwEKFnJlbGF0",
-            "aXZlX2RlbWFuZF9jaGFuZ2UYCyABKA4yXi5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQucmVwb3J0cy52MWJldGEuUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBl",
-            "LlJlbGF0aXZlRGVtYW5kQ2hhbmdlVHlwZUVudW1ICIgBAUIVChNfcmVwb3J0",
-            "X2dyYW51bGFyaXR5QhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19yZXBv",
-            "cnRfY2F0ZWdvcnlfaWRCCAoGX2JyYW5kQgcKBV9yYW5rQhAKDl9wcmV2aW91",
-            "c19yYW5rQhIKEF9yZWxhdGl2ZV9kZW1hbmRCGwoZX3ByZXZpb3VzX3JlbGF0",
-            "aXZlX2RlbWFuZEIZChdfcmVsYXRpdmVfZGVtYW5kX2NoYW5nZSKABQojQ29t",
-            "cGV0aXRpdmVWaXNpYmlsaXR5Q29tcGV0aXRvclZpZXcSHwoEZGF0ZRgBIAEo",
-            "CzIRLmdvb2dsZS50eXBlLkRhdGUSEwoGZG9tYWluGAIgASgJSACIAQESGwoO",
-            "aXNfeW91cl9kb21haW4YAyABKAhIAYgBARIgChNyZXBvcnRfY291bnRyeV9j",
-            "b2RlGAQgASgJSAKIAQESHwoScmVwb3J0X2NhdGVnb3J5X2lkGAUgASgDSAOI",
-            "AQESZQoOdHJhZmZpY19zb3VyY2UYBiABKA4ySC5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQucmVwb3J0cy52MWJldGEuVHJhZmZpY1NvdXJjZS5UcmFmZmlj",
-            "U291cmNlRW51bUgEiAEBEhEKBHJhbmsYByABKANIBYgBARIeChFhZHNfb3Jn",
-            "YW5pY19yYXRpbxgIIAEoAUgGiAEBEh4KEXBhZ2Vfb3ZlcmxhcF9yYXRlGAkg",
-            "ASgBSAeIAQESIQoUaGlnaGVyX3Bvc2l0aW9uX3JhdGUYCiABKAFICIgBARIg",
-            "ChNyZWxhdGl2ZV92aXNpYmlsaXR5GAsgASgBSAmIAQFCCQoHX2RvbWFpbkIR",
-            "Cg9faXNfeW91cl9kb21haW5CFgoUX3JlcG9ydF9jb3VudHJ5X2NvZGVCFQoT",
-            "X3JlcG9ydF9jYXRlZ29yeV9pZEIRCg9fdHJhZmZpY19zb3VyY2VCBwoFX3Jh",
-            "bmtCFAoSX2Fkc19vcmdhbmljX3JhdGlvQhQKEl9wYWdlX292ZXJsYXBfcmF0",
-            "ZUIXChVfaGlnaGVyX3Bvc2l0aW9uX3JhdGVCFgoUX3JlbGF0aXZlX3Zpc2li",
-            "aWxpdHkixwQKJENvbXBldGl0aXZlVmlzaWJpbGl0eVRvcE1lcmNoYW50Vmll",
-            "dxIfCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRITCgZkb21haW4Y",
-            "AiABKAlIAIgBARIbCg5pc195b3VyX2RvbWFpbhgDIAEoCEgBiAEBEiAKE3Jl",
-            "cG9ydF9jb3VudHJ5X2NvZGUYBCABKAlIAogBARIfChJyZXBvcnRfY2F0ZWdv",
-            "cnlfaWQYBSABKANIA4gBARJlCg50cmFmZmljX3NvdXJjZRgGIAEoDjJILmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxYmV0YS5UcmFmZmlj",
-            "U291cmNlLlRyYWZmaWNTb3VyY2VFbnVtSASIAQESEQoEcmFuaxgHIAEoA0gF",
-            "iAEBEh4KEWFkc19vcmdhbmljX3JhdGlvGAggASgBSAaIAQESHgoRcGFnZV9v",
-            "dmVybGFwX3JhdGUYCSABKAFIB4gBARIhChRoaWdoZXJfcG9zaXRpb25fcmF0",
-            "ZRgKIAEoAUgIiAEBQgkKB19kb21haW5CEQoPX2lzX3lvdXJfZG9tYWluQhYK",
-            "FF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19yZXBvcnRfY2F0ZWdvcnlfaWRC",
-            "EQoPX3RyYWZmaWNfc291cmNlQgcKBV9yYW5rQhQKEl9hZHNfb3JnYW5pY19y",
-            "YXRpb0IUChJfcGFnZV9vdmVybGFwX3JhdGVCFwoVX2hpZ2hlcl9wb3NpdGlv",
-            "bl9yYXRlItcDCiJDb21wZXRpdGl2ZVZpc2liaWxpdHlCZW5jaG1hcmtWaWV3",
-            "Eh8KBGRhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlEiAKE3JlcG9ydF9j",
-            "b3VudHJ5X2NvZGUYAiABKAlIAIgBARIfChJyZXBvcnRfY2F0ZWdvcnlfaWQY",
-            "AyABKANIAYgBARJlCg50cmFmZmljX3NvdXJjZRgEIAEoDjJILmdvb2dsZS5z",
-            "aG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxYmV0YS5UcmFmZmljU291cmNl",
-            "LlRyYWZmaWNTb3VyY2VFbnVtSAKIAQESKQoceW91cl9kb21haW5fdmlzaWJp",
-            "bGl0eV90cmVuZBgFIAEoAUgDiAEBEjAKI2NhdGVnb3J5X2JlbmNobWFya192",
-            "aXNpYmlsaXR5X3RyZW5kGAYgASgBSASIAQFCFgoUX3JlcG9ydF9jb3VudHJ5",
-            "X2NvZGVCFQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIRCg9fdHJhZmZpY19zb3Vy",
-            "Y2VCHwodX3lvdXJfZG9tYWluX3Zpc2liaWxpdHlfdHJlbmRCJgokX2NhdGVn",
-            "b3J5X2JlbmNobWFya192aXNpYmlsaXR5X3RyZW5kImUKD01hcmtldGluZ01l",
-            "dGhvZCJSChNNYXJrZXRpbmdNZXRob2RFbnVtEiUKIU1BUktFVElOR19NRVRI",
-            "T0RfRU5VTV9VTlNQRUNJRklFRBAAEgsKB09SR0FOSUMQARIHCgNBRFMQAiJu",
-            "ChFSZXBvcnRHcmFudWxhcml0eSJZChVSZXBvcnRHcmFudWxhcml0eUVudW0S",
-            "JwojUkVQT1JUX0dSQU5VTEFSSVRZX0VOVU1fVU5TUEVDSUZJRUQQABIKCgZX",
-            "RUVLTFkQARILCgdNT05USExZEAIiiAEKDlJlbGF0aXZlRGVtYW5kInYKElJl",
-            "bGF0aXZlRGVtYW5kRW51bRIkCiBSRUxBVElWRV9ERU1BTkRfRU5VTV9VTlNQ",
-            "RUNJRklFRBAAEgwKCFZFUllfTE9XEAoSBwoDTE9XEBQSCgoGTUVESVVNEB4S",
-            "CAoESElHSBAoEg0KCVZFUllfSElHSBAyIo0BChhSZWxhdGl2ZURlbWFuZENo",
-            "YW5nZVR5cGUicQocUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBlRW51bRIwCixS",
-            "RUxBVElWRV9ERU1BTkRfQ0hBTkdFX1RZUEVfRU5VTV9VTlNQRUNJRklFRBAA",
-            "EgoKBlNJTktFUhABEggKBEZMQVQQAhIJCgVSSVNFUhADImgKDVRyYWZmaWNT",
-            "b3VyY2UiVwoRVHJhZmZpY1NvdXJjZUVudW0SIwofVFJBRkZJQ19TT1VSQ0Vf",
-            "RU5VTV9VTlNQRUNJRklFRBAAEgsKB09SR0FOSUMQARIHCgNBRFMQAhIHCgNB",
-            "TEwQAzKcAgoNUmVwb3J0U2VydmljZRLBAQoGU2VhcmNoEjYuZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjFiZXRhLlNlYXJjaFJlcXVlc3Qa",
-            "Ny5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MWJldGEuU2Vh",
-            "cmNoUmVzcG9uc2UiRtpBBnBhcmVudILT5JMCNyIyL3JlcG9ydHMvdjFiZXRh",
-            "L3twYXJlbnQ9YWNjb3VudHMvKn0vcmVwb3J0czpzZWFyY2g6ASoaR8pBGm1l",
-            "cmNoYW50YXBpLmdvb2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jb250ZW50QooBCitjb20uZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnJlcG9ydHMudjFiZXRhQgxSZXBvcnRzUHJvdG9QAVpLY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9yZXBvcnRzL2Fw",
-            "aXYxYmV0YS9yZXBvcnRzcGI7cmVwb3J0c3BiYgZwcm90bzM="));
+            "bGF0aXZlX2RlbWFuZEIZChdfcmVsYXRpdmVfZGVtYW5kX2NoYW5nZSKABQoj",
+            "Q29tcGV0aXRpdmVWaXNpYmlsaXR5Q29tcGV0aXRvclZpZXcSHwoEZGF0ZRgB",
+            "IAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSEwoGZG9tYWluGAIgASgJSACIAQES",
+            "GwoOaXNfeW91cl9kb21haW4YAyABKAhIAYgBARIgChNyZXBvcnRfY291bnRy",
+            "eV9jb2RlGAQgASgJSAKIAQESHwoScmVwb3J0X2NhdGVnb3J5X2lkGAUgASgD",
+            "SAOIAQESZQoOdHJhZmZpY19zb3VyY2UYBiABKA4ySC5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQucmVwb3J0cy52MWJldGEuVHJhZmZpY1NvdXJjZS5UcmFm",
+            "ZmljU291cmNlRW51bUgEiAEBEhEKBHJhbmsYByABKANIBYgBARIeChFhZHNf",
+            "b3JnYW5pY19yYXRpbxgIIAEoAUgGiAEBEh4KEXBhZ2Vfb3ZlcmxhcF9yYXRl",
+            "GAkgASgBSAeIAQESIQoUaGlnaGVyX3Bvc2l0aW9uX3JhdGUYCiABKAFICIgB",
+            "ARIgChNyZWxhdGl2ZV92aXNpYmlsaXR5GAsgASgBSAmIAQFCCQoHX2RvbWFp",
+            "bkIRCg9faXNfeW91cl9kb21haW5CFgoUX3JlcG9ydF9jb3VudHJ5X2NvZGVC",
+            "FQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIRCg9fdHJhZmZpY19zb3VyY2VCBwoF",
+            "X3JhbmtCFAoSX2Fkc19vcmdhbmljX3JhdGlvQhQKEl9wYWdlX292ZXJsYXBf",
+            "cmF0ZUIXChVfaGlnaGVyX3Bvc2l0aW9uX3JhdGVCFgoUX3JlbGF0aXZlX3Zp",
+            "c2liaWxpdHkixwQKJENvbXBldGl0aXZlVmlzaWJpbGl0eVRvcE1lcmNoYW50",
+            "VmlldxIfCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRITCgZkb21h",
+            "aW4YAiABKAlIAIgBARIbCg5pc195b3VyX2RvbWFpbhgDIAEoCEgBiAEBEiAK",
+            "E3JlcG9ydF9jb3VudHJ5X2NvZGUYBCABKAlIAogBARIfChJyZXBvcnRfY2F0",
+            "ZWdvcnlfaWQYBSABKANIA4gBARJlCg50cmFmZmljX3NvdXJjZRgGIAEoDjJI",
+            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxYmV0YS5UcmFm",
+            "ZmljU291cmNlLlRyYWZmaWNTb3VyY2VFbnVtSASIAQESEQoEcmFuaxgHIAEo",
+            "A0gFiAEBEh4KEWFkc19vcmdhbmljX3JhdGlvGAggASgBSAaIAQESHgoRcGFn",
+            "ZV9vdmVybGFwX3JhdGUYCSABKAFIB4gBARIhChRoaWdoZXJfcG9zaXRpb25f",
+            "cmF0ZRgKIAEoAUgIiAEBQgkKB19kb21haW5CEQoPX2lzX3lvdXJfZG9tYWlu",
+            "QhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19yZXBvcnRfY2F0ZWdvcnlf",
+            "aWRCEQoPX3RyYWZmaWNfc291cmNlQgcKBV9yYW5rQhQKEl9hZHNfb3JnYW5p",
+            "Y19yYXRpb0IUChJfcGFnZV9vdmVybGFwX3JhdGVCFwoVX2hpZ2hlcl9wb3Np",
+            "dGlvbl9yYXRlItcDCiJDb21wZXRpdGl2ZVZpc2liaWxpdHlCZW5jaG1hcmtW",
+            "aWV3Eh8KBGRhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlEiAKE3JlcG9y",
+            "dF9jb3VudHJ5X2NvZGUYAiABKAlIAIgBARIfChJyZXBvcnRfY2F0ZWdvcnlf",
+            "aWQYAyABKANIAYgBARJlCg50cmFmZmljX3NvdXJjZRgEIAEoDjJILmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxYmV0YS5UcmFmZmljU291",
+            "cmNlLlRyYWZmaWNTb3VyY2VFbnVtSAKIAQESKQoceW91cl9kb21haW5fdmlz",
+            "aWJpbGl0eV90cmVuZBgFIAEoAUgDiAEBEjAKI2NhdGVnb3J5X2JlbmNobWFy",
+            "a192aXNpYmlsaXR5X3RyZW5kGAYgASgBSASIAQFCFgoUX3JlcG9ydF9jb3Vu",
+            "dHJ5X2NvZGVCFQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIRCg9fdHJhZmZpY19z",
+            "b3VyY2VCHwodX3lvdXJfZG9tYWluX3Zpc2liaWxpdHlfdHJlbmRCJgokX2Nh",
+            "dGVnb3J5X2JlbmNobWFya192aXNpYmlsaXR5X3RyZW5kImUKD01hcmtldGlu",
+            "Z01ldGhvZCJSChNNYXJrZXRpbmdNZXRob2RFbnVtEiUKIU1BUktFVElOR19N",
+            "RVRIT0RfRU5VTV9VTlNQRUNJRklFRBAAEgsKB09SR0FOSUMQARIHCgNBRFMQ",
+            "AiJuChFSZXBvcnRHcmFudWxhcml0eSJZChVSZXBvcnRHcmFudWxhcml0eUVu",
+            "dW0SJwojUkVQT1JUX0dSQU5VTEFSSVRZX0VOVU1fVU5TUEVDSUZJRUQQABIK",
+            "CgZXRUVLTFkQARILCgdNT05USExZEAIiiAEKDlJlbGF0aXZlRGVtYW5kInYK",
+            "ElJlbGF0aXZlRGVtYW5kRW51bRIkCiBSRUxBVElWRV9ERU1BTkRfRU5VTV9V",
+            "TlNQRUNJRklFRBAAEgwKCFZFUllfTE9XEAoSBwoDTE9XEBQSCgoGTUVESVVN",
+            "EB4SCAoESElHSBAoEg0KCVZFUllfSElHSBAyIo0BChhSZWxhdGl2ZURlbWFu",
+            "ZENoYW5nZVR5cGUicQocUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBlRW51bRIw",
+            "CixSRUxBVElWRV9ERU1BTkRfQ0hBTkdFX1RZUEVfRU5VTV9VTlNQRUNJRklF",
+            "RBAAEgoKBlNJTktFUhABEggKBEZMQVQQAhIJCgVSSVNFUhADImgKDVRyYWZm",
+            "aWNTb3VyY2UiVwoRVHJhZmZpY1NvdXJjZUVudW0SIwofVFJBRkZJQ19TT1VS",
+            "Q0VfRU5VTV9VTlNQRUNJRklFRBAAEgsKB09SR0FOSUMQARIHCgNBRFMQAhIH",
+            "CgNBTEwQAzKcAgoNUmVwb3J0U2VydmljZRLBAQoGU2VhcmNoEjYuZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjFiZXRhLlNlYXJjaFJlcXVl",
+            "c3QaNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MWJldGEu",
+            "U2VhcmNoUmVzcG9uc2UiRtpBBnBhcmVudILT5JMCNyIyL3JlcG9ydHMvdjFi",
+            "ZXRhL3twYXJlbnQ9YWNjb3VudHMvKn0vcmVwb3J0czpzZWFyY2g6ASoaR8pB",
+            "Gm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jb250ZW50QooBCitjb20uZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnJlcG9ydHMudjFiZXRhQgxSZXBvcnRzUHJvdG9QAVpL",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9yZXBvcnRz",
+            "L2FwaXYxYmV0YS9yZXBvcnRzcGI7cmVwb3J0c3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -317,7 +321,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView), global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Parser, new[]{ "Id", "Channel", "LanguageCode", "FeedLabel", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "Condition", "Availability", "ShippingLabel", "Gtin", "ItemGroupId", "ThumbnailLink", "CreationTime", "ExpirationDate", "AggregatedReportingContextStatus", "ItemIssues", "ClickPotential", "ClickPotentialRank" }, new[]{ "Id", "Channel", "LanguageCode", "FeedLabel", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Condition", "Availability", "ShippingLabel", "ItemGroupId", "ThumbnailLink", "AggregatedReportingContextStatus", "ClickPotentialRank" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.AggregatedReportingContextStatus), typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ClickPotential) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue), global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Parser, new[]{ "Type", "Severity", "Resolution" }, new[]{ "Resolution" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueResolution) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueType), global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueType.Parser, new[]{ "Code", "CanonicalAttribute" }, new[]{ "Code", "CanonicalAttribute" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueSeverity), global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Parser, new[]{ "SeverityPerReportingContext", "AggregatedSeverity" }, new[]{ "AggregatedSeverity" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.AggregatedIssueSeverity) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext), global::Google.Shopping.Merchant.Reports.V1Beta.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext.Parser, new[]{ "ReportingContext", "DisapprovedCountries", "DemotedCountries" }, new[]{ "ReportingContext" }, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.PriceCompetitivenessProductView), global::Google.Shopping.Merchant.Reports.V1Beta.PriceCompetitivenessProductView.Parser, new[]{ "ReportCountryCode", "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "BenchmarkPrice" }, new[]{ "ReportCountryCode", "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView), global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Parser, new[]{ "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "SuggestedPrice", "PredictedImpressionsChangeFraction", "PredictedClicksChangeFraction", "PredictedConversionsChangeFraction" }, new[]{ "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "PredictedImpressionsChangeFraction", "PredictedClicksChangeFraction", "PredictedConversionsChangeFraction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView), global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Parser, new[]{ "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "SuggestedPrice", "PredictedImpressionsChangeFraction", "PredictedClicksChangeFraction", "PredictedConversionsChangeFraction", "Effectiveness" }, new[]{ "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "PredictedImpressionsChangeFraction", "PredictedClicksChangeFraction", "PredictedConversionsChangeFraction" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersProductClusterView), global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersProductClusterView.Parser, new[]{ "ReportDate", "ReportGranularity", "ReportCountryCode", "ReportCategoryId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "VariantGtins", "InventoryStatus", "BrandInventoryStatus", "Rank", "PreviousRank", "RelativeDemand", "PreviousRelativeDemand", "RelativeDemandChange" }, new[]{ "ReportGranularity", "ReportCountryCode", "ReportCategoryId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "InventoryStatus", "BrandInventoryStatus", "Rank", "PreviousRank", "RelativeDemand", "PreviousRelativeDemand", "RelativeDemandChange" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersProductClusterView.Types.InventoryStatus) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersBrandView), global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersBrandView.Parser, new[]{ "ReportDate", "ReportGranularity", "ReportCountryCode", "ReportCategoryId", "Brand", "Rank", "PreviousRank", "RelativeDemand", "PreviousRelativeDemand", "RelativeDemandChange" }, new[]{ "ReportGranularity", "ReportCountryCode", "ReportCategoryId", "Brand", "Rank", "PreviousRank", "RelativeDemand", "PreviousRelativeDemand", "RelativeDemandChange" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1Beta.CompetitiveVisibilityCompetitorView), global::Google.Shopping.Merchant.Reports.V1Beta.CompetitiveVisibilityCompetitorView.Parser, new[]{ "Date", "Domain", "IsYourDomain", "ReportCountryCode", "ReportCategoryId", "TrafficSource", "Rank", "AdsOrganicRatio", "PageOverlapRate", "HigherPositionRate", "RelativeVisibility" }, new[]{ "Domain", "IsYourDomain", "ReportCountryCode", "ReportCategoryId", "TrafficSource", "Rank", "AdsOrganicRatio", "PageOverlapRate", "HigherPositionRate", "RelativeVisibility" }, null, null, null),
@@ -3882,7 +3886,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
     /// <summary>
     /// Normalized [shipping
     /// label](https://support.google.com/merchants/answer/6324504) specified in
-    /// the feed.
+    /// the data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4950,7 +4954,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       ///
       /// Here's an example of how the aggregated status is computed:
       ///
-      /// Free listings | Shopping Ads | Status
+      /// Free listings | Shopping ads | Status
       /// --------------|--------------|------------------------------
       /// Approved      | Approved     | ELIGIBLE
       /// Approved      | Pending      | ELIGIBLE
@@ -7319,6 +7323,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       predictedImpressionsChangeFraction_ = other.predictedImpressionsChangeFraction_;
       predictedClicksChangeFraction_ = other.predictedClicksChangeFraction_;
       predictedConversionsChangeFraction_ = other.predictedConversionsChangeFraction_;
+      effectiveness_ = other.effectiveness_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7874,6 +7879,21 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       _hasBits0 &= ~4;
     }
 
+    /// <summary>Field number for the "effectiveness" field.</summary>
+    public const int EffectivenessFieldNumber = 22;
+    private global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness effectiveness_ = global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness.Unspecified;
+    /// <summary>
+    /// The predicted effectiveness of applying the price suggestion, bucketed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness Effectiveness {
+      get { return effectiveness_; }
+      set {
+        effectiveness_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7908,6 +7928,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PredictedImpressionsChangeFraction, other.PredictedImpressionsChangeFraction)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PredictedClicksChangeFraction, other.PredictedClicksChangeFraction)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PredictedConversionsChangeFraction, other.PredictedConversionsChangeFraction)) return false;
+      if (Effectiveness != other.Effectiveness) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7934,6 +7955,7 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       if (HasPredictedImpressionsChangeFraction) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PredictedImpressionsChangeFraction);
       if (HasPredictedClicksChangeFraction) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PredictedClicksChangeFraction);
       if (HasPredictedConversionsChangeFraction) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PredictedConversionsChangeFraction);
+      if (Effectiveness != global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness.Unspecified) hash ^= Effectiveness.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8028,6 +8050,10 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
         output.WriteRawTag(153, 1);
         output.WriteDouble(PredictedConversionsChangeFraction);
       }
+      if (Effectiveness != global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) Effectiveness);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8114,6 +8140,10 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
         output.WriteRawTag(153, 1);
         output.WriteDouble(PredictedConversionsChangeFraction);
       }
+      if (Effectiveness != global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) Effectiveness);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8180,6 +8210,9 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       }
       if (HasPredictedConversionsChangeFraction) {
         size += 2 + 8;
+      }
+      if (Effectiveness != global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Effectiveness);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8255,6 +8288,9 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
       }
       if (other.HasPredictedConversionsChangeFraction) {
         PredictedConversionsChangeFraction = other.PredictedConversionsChangeFraction;
+      }
+      if (other.Effectiveness != global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness.Unspecified) {
+        Effectiveness = other.Effectiveness;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8351,6 +8387,10 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
           }
           case 153: {
             PredictedConversionsChangeFraction = input.ReadDouble();
+            break;
+          }
+          case 176: {
+            Effectiveness = (global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness) input.ReadEnum();
             break;
           }
         }
@@ -8450,10 +8490,50 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
             PredictedConversionsChangeFraction = input.ReadDouble();
             break;
           }
+          case 176: {
+            Effectiveness = (global::Google.Shopping.Merchant.Reports.V1Beta.PriceInsightsProductView.Types.Effectiveness) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PriceInsightsProductView message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Predicted effectiveness bucket.
+      ///
+      /// Effectiveness indicates which products would benefit most from price
+      /// changes. This rating takes into consideration the performance boost
+      /// predicted by adjusting the sale price and the difference between your
+      /// current price and the suggested price. Price suggestions with `HIGH`
+      /// effectiveness are predicted to drive the largest increase in performance.
+      /// </summary>
+      public enum Effectiveness {
+        /// <summary>
+        /// Effectiveness is unknown.
+        /// </summary>
+        [pbr::OriginalName("EFFECTIVENESS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Effectiveness is low.
+        /// </summary>
+        [pbr::OriginalName("LOW")] Low = 1,
+        /// <summary>
+        /// Effectiveness is medium.
+        /// </summary>
+        [pbr::OriginalName("MEDIUM")] Medium = 2,
+        /// <summary>
+        /// Effectiveness is high.
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 3,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -8891,9 +8971,9 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
 
     private global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersProductClusterView.Types.InventoryStatus inventoryStatus_;
     /// <summary>
-    /// Whether the product cluster is `IN_STOCK` in your product feed in at least
-    /// one of the countries, `OUT_OF_STOCK` in your product feed in all countries,
-    /// or `NOT_IN_INVENTORY` at all.
+    /// Whether the product cluster is `IN_STOCK` in your product data source in at
+    /// least one of the countries, `OUT_OF_STOCK` in your product data source in
+    /// all countries, or `NOT_IN_INVENTORY` at all.
     ///
     /// The field doesn't take the Best sellers report country filter into account.
     /// </summary>
@@ -8926,8 +9006,8 @@ namespace Google.Shopping.Merchant.Reports.V1Beta {
     private global::Google.Shopping.Merchant.Reports.V1Beta.BestSellersProductClusterView.Types.InventoryStatus brandInventoryStatus_;
     /// <summary>
     /// Whether there is at least one product of the brand currently `IN_STOCK` in
-    /// your product feed in at least one of the countries, all products are
-    /// `OUT_OF_STOCK` in your product feed in all countries, or
+    /// your product data source in at least one of the countries, all products are
+    /// `OUT_OF_STOCK` in your product data source in all countries, or
     /// `NOT_IN_INVENTORY`.
     ///
     /// The field doesn't take the Best sellers report country filter into account.
