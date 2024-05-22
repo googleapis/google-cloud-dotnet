@@ -144,13 +144,14 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "YXJlbnQ9cHJvdmlkZXJzLyp9L2RlbGl2ZXJ5VmVoaWNsZXOK0+STAiUSIwoG",
             "cGFyZW50Ehl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9Gk7KQRpmbGVldGVu",
             "Z2luZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClAIKI2dvb2dsZS5tYXBzLmZsZWV0",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CugIKI2dvb2dsZS5tYXBzLmZsZWV0",
             "ZW5naW5lLmRlbGl2ZXJ5LnYxQgtEZWxpdmVyeUFwaVABWkljbG91ZC5nb29n",
             "bGUuY29tL2dvL21hcHMvZmxlZXRlbmdpbmUvZGVsaXZlcnkvYXBpdjEvZGVs",
             "aXZlcnlwYjtkZWxpdmVyeXBiogIEQ0ZFRKoCI0dvb2dsZS5NYXBzLkZsZWV0",
-            "RW5naW5lLkRlbGl2ZXJ5LlYx6gInR29vZ2xlOjpNYXBzOjpGbGVldEVuZ2lu",
-            "ZTo6RGVsaXZlcnk6OlYx6kE7CiNmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNv",
-            "bS9Qcm92aWRlchIUcHJvdmlkZXJzL3twcm92aWRlcn1iBnByb3RvMw=="));
+            "RW5naW5lLkRlbGl2ZXJ5LlYxygIjR29vZ2xlXE1hcHNcRmxlZXRFbmdpbmVc",
+            "RGVsaXZlcnlcVjHqAidHb29nbGU6Ok1hcHM6OkZsZWV0RW5naW5lOjpEZWxp",
+            "dmVyeTo6VjHqQTsKI2ZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Byb3Zp",
+            "ZGVyEhRwcm92aWRlcnMve3Byb3ZpZGVyfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehiclesReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.HeaderReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TaskTrackingInfoReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TasksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
