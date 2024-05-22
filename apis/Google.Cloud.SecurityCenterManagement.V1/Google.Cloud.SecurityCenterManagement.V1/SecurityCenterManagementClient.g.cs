@@ -68,6 +68,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             UpdateEventThreatDetectionCustomModuleSettings = existing.UpdateEventThreatDetectionCustomModuleSettings;
             DeleteEventThreatDetectionCustomModuleSettings = existing.DeleteEventThreatDetectionCustomModuleSettings;
             ValidateEventThreatDetectionCustomModuleSettings = existing.ValidateEventThreatDetectionCustomModuleSettings;
+            GetSecurityCenterServiceSettings = existing.GetSecurityCenterServiceSettings;
+            ListSecurityCenterServicesSettings = existing.ListSecurityCenterServicesSettings;
+            UpdateSecurityCenterServiceSettings = existing.UpdateSecurityCenterServiceSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -417,6 +420,45 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         public gaxgrpc::CallSettings ValidateEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterManagementClient.GetSecurityCenterService</c> and
+        /// <c>SecurityCenterManagementClient.GetSecurityCenterServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSecurityCenterServiceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterManagementClient.ListSecurityCenterServices</c> and
+        /// <c>SecurityCenterManagementClient.ListSecurityCenterServicesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSecurityCenterServicesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterManagementClient.UpdateSecurityCenterService</c> and
+        /// <c>SecurityCenterManagementClient.UpdateSecurityCenterServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSecurityCenterServiceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -603,11 +645,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -636,11 +679,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -669,11 +713,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -702,11 +747,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -735,11 +781,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -768,11 +815,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -801,11 +849,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -834,11 +883,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// Required. Name of parent to list effective custom modules. specified in one
+        /// of the following formats:
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -891,13 +941,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The full resource name of the custom module, specified in one of
+        /// the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "folders/{folder}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "projects/{project}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -911,13 +960,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The full resource name of the custom module, specified in one of
+        /// the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "folders/{folder}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "projects/{project}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -931,13 +979,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The full resource name of the custom module, specified in one of
+        /// the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "folders/{folder}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "projects/{project}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -948,13 +995,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The full resource name of the custom module, specified in one of
+        /// the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "folders/{folder}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "projects/{project}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -968,13 +1014,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The full resource name of the custom module, specified in one of
+        /// the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "folders/{folder}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "projects/{project}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -988,13 +1033,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The full resource name of the custom module, specified in one of
+        /// the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "folders/{folder}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
-        /// * "projects/{project}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{module_id}".
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1031,11 +1075,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1061,11 +1106,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1093,11 +1139,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1123,11 +1170,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1155,11 +1203,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1185,11 +1234,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1217,11 +1267,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1247,11 +1298,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// and inherited modules, inherited from CRM ancestors (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of parent organization, folder, or project in which to list
+        /// custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1300,11 +1352,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1329,11 +1382,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1360,11 +1414,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1389,11 +1444,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1420,11 +1476,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1449,11 +1506,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1480,11 +1538,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1509,11 +1568,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1683,11 +1743,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1708,11 +1769,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1733,11 +1795,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1754,11 +1817,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1779,11 +1843,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1804,11 +1869,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1825,11 +1891,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1850,11 +1917,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1875,11 +1943,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1896,11 +1965,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1921,11 +1991,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -1946,11 +2017,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent. These modules are enabled by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
-        /// or
-        /// "projects/{project}/locations/{location}"
+        /// Required. Name of the parent organization, folder, or project of the
+        /// module, specified in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. The resource being created
@@ -2113,9 +2185,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2135,9 +2207,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2157,9 +2229,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2176,9 +2248,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2198,9 +2270,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2220,9 +2292,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
-        /// * "projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2360,10 +2432,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2390,10 +2462,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2422,10 +2494,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2452,10 +2524,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2484,10 +2556,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2514,10 +2586,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2546,10 +2618,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2576,10 +2648,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2660,9 +2732,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2686,9 +2758,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2712,9 +2784,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2735,9 +2807,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2761,9 +2833,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2787,9 +2859,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2827,10 +2899,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2857,10 +2929,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2889,10 +2961,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2919,10 +2991,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2951,10 +3023,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2981,10 +3053,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3013,10 +3085,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3043,10 +3115,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3096,10 +3168,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3125,10 +3197,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3156,10 +3228,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3185,10 +3257,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3216,10 +3288,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3245,10 +3317,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3276,10 +3348,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3305,10 +3377,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3365,9 +3437,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3385,9 +3457,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3405,9 +3477,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3422,9 +3494,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3442,9 +3514,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3462,9 +3534,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3515,10 +3587,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3542,10 +3614,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3569,10 +3641,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3592,10 +3664,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3619,10 +3691,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3646,10 +3718,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3669,10 +3741,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3696,10 +3768,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3723,10 +3795,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3746,10 +3818,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3773,10 +3845,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3800,10 +3872,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent for the module. Its format is
-        /// "organizations/{organization}/locations/{location}",
-        /// "folders/{folder}/locations/{location}",
+        /// `organizations/{organization}/locations/{location}`,
+        /// `folders/{folder}/locations/{location}`,
         /// or
-        /// "projects/{project}/locations/{location}"
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
@@ -3977,9 +4049,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3999,9 +4071,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4021,9 +4093,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4040,9 +4112,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4062,9 +4134,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4084,9 +4156,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
-        /// * "projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}".
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4119,6 +4191,549 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModuleAsync(ValidateEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
             ValidateEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityCenterService GetSecurityCenterService(GetSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(GetSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(GetSecurityCenterServiceRequest request, st::CancellationToken cancellationToken) =>
+            GetSecurityCenterServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Security Command Center service to retrieve.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
+        /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
+        /// * projects/{project}/locations/{location}/securityCenterServices/{service}
+        /// 
+        /// The possible values for id {service} are:
+        /// 
+        /// * container-threat-detection
+        /// * event-threat-detection
+        /// * security-health-analytics
+        /// * vm-threat-detection
+        /// * web-security-scanner
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityCenterService GetSecurityCenterService(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityCenterService(new GetSecurityCenterServiceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Security Command Center service to retrieve.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
+        /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
+        /// * projects/{project}/locations/{location}/securityCenterServices/{service}
+        /// 
+        /// The possible values for id {service} are:
+        /// 
+        /// * container-threat-detection
+        /// * event-threat-detection
+        /// * security-health-analytics
+        /// * vm-threat-detection
+        /// * web-security-scanner
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityCenterServiceAsync(new GetSecurityCenterServiceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Security Command Center service to retrieve.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
+        /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
+        /// * projects/{project}/locations/{location}/securityCenterServices/{service}
+        /// 
+        /// The possible values for id {service} are:
+        /// 
+        /// * container-threat-detection
+        /// * event-threat-detection
+        /// * security-health-analytics
+        /// * vm-threat-detection
+        /// * web-security-scanner
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSecurityCenterServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Security Command Center service to retrieve.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
+        /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
+        /// * projects/{project}/locations/{location}/securityCenterServices/{service}
+        /// 
+        /// The possible values for id {service} are:
+        /// 
+        /// * container-threat-detection
+        /// * event-threat-detection
+        /// * security-health-analytics
+        /// * vm-threat-detection
+        /// * web-security-scanner
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityCenterService GetSecurityCenterService(SecurityCenterServiceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityCenterService(new GetSecurityCenterServiceRequest
+            {
+                SecurityCenterServiceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Security Command Center service to retrieve.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
+        /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
+        /// * projects/{project}/locations/{location}/securityCenterServices/{service}
+        /// 
+        /// The possible values for id {service} are:
+        /// 
+        /// * container-threat-detection
+        /// * event-threat-detection
+        /// * security-health-analytics
+        /// * vm-threat-detection
+        /// * web-security-scanner
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(SecurityCenterServiceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityCenterServiceAsync(new GetSecurityCenterServiceRequest
+            {
+                SecurityCenterServiceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Security Command Center service to retrieve.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
+        /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
+        /// * projects/{project}/locations/{location}/securityCenterServices/{service}
+        /// 
+        /// The possible values for id {service} are:
+        /// 
+        /// * container-threat-detection
+        /// * event-threat-detection
+        /// * security-health-analytics
+        /// * vm-threat-detection
+        /// * web-security-scanner
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(SecurityCenterServiceName name, st::CancellationToken cancellationToken) =>
+            GetSecurityCenterServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServices(ListSecurityCenterServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServicesAsync(ListSecurityCenterServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServices(new ListSecurityCenterServicesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServicesAsync(new ListSecurityCenterServicesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServices(new ListSecurityCenterServicesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServicesAsync(new ListSecurityCenterServicesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServices(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServices(new ListSecurityCenterServicesRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServicesAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServicesAsync(new ListSecurityCenterServicesRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServices(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServices(new ListSecurityCenterServicesRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent to list Security Command Center services.
+        /// 
+        /// Formats:
+        /// 
+        /// * organizations/{organization}/locations/{location}
+        /// * folders/{folder}/locations/{location}
+        /// * projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServicesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityCenterServicesAsync(new ListSecurityCenterServicesRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityCenterService UpdateSecurityCenterService(UpdateSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> UpdateSecurityCenterServiceAsync(UpdateSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> UpdateSecurityCenterServiceAsync(UpdateSecurityCenterServiceRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSecurityCenterServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="securityCenterService">
+        /// Required. The updated service.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Possible values:
+        /// 
+        /// * "intended_enablement_state"
+        /// * "modules"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityCenterService UpdateSecurityCenterService(SecurityCenterService securityCenterService, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSecurityCenterService(new UpdateSecurityCenterServiceRequest
+            {
+                SecurityCenterService = gax::GaxPreconditions.CheckNotNull(securityCenterService, nameof(securityCenterService)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="securityCenterService">
+        /// Required. The updated service.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Possible values:
+        /// 
+        /// * "intended_enablement_state"
+        /// * "modules"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> UpdateSecurityCenterServiceAsync(SecurityCenterService securityCenterService, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSecurityCenterServiceAsync(new UpdateSecurityCenterServiceRequest
+            {
+                SecurityCenterService = gax::GaxPreconditions.CheckNotNull(securityCenterService, nameof(securityCenterService)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="securityCenterService">
+        /// Required. The updated service.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Possible values:
+        /// 
+        /// * "intended_enablement_state"
+        /// * "modules"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityCenterService> UpdateSecurityCenterServiceAsync(SecurityCenterService securityCenterService, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSecurityCenterServiceAsync(securityCenterService, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SecurityCenterManagement client wrapper implementation, for convenient use.</summary>
@@ -4162,6 +4777,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         private readonly gaxgrpc::ApiCall<DeleteEventThreatDetectionCustomModuleRequest, wkt::Empty> _callDeleteEventThreatDetectionCustomModule;
 
         private readonly gaxgrpc::ApiCall<ValidateEventThreatDetectionCustomModuleRequest, ValidateEventThreatDetectionCustomModuleResponse> _callValidateEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<GetSecurityCenterServiceRequest, SecurityCenterService> _callGetSecurityCenterService;
+
+        private readonly gaxgrpc::ApiCall<ListSecurityCenterServicesRequest, ListSecurityCenterServicesResponse> _callListSecurityCenterServices;
+
+        private readonly gaxgrpc::ApiCall<UpdateSecurityCenterServiceRequest, SecurityCenterService> _callUpdateSecurityCenterService;
 
         /// <summary>
         /// Constructs a client wrapper for the SecurityCenterManagement service, with the specified gRPC client and
@@ -4236,6 +4857,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             _callValidateEventThreatDetectionCustomModule = clientHelper.BuildApiCall<ValidateEventThreatDetectionCustomModuleRequest, ValidateEventThreatDetectionCustomModuleResponse>("ValidateEventThreatDetectionCustomModule", grpcClient.ValidateEventThreatDetectionCustomModuleAsync, grpcClient.ValidateEventThreatDetectionCustomModule, effectiveSettings.ValidateEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callValidateEventThreatDetectionCustomModule);
             Modify_ValidateEventThreatDetectionCustomModuleApiCall(ref _callValidateEventThreatDetectionCustomModule);
+            _callGetSecurityCenterService = clientHelper.BuildApiCall<GetSecurityCenterServiceRequest, SecurityCenterService>("GetSecurityCenterService", grpcClient.GetSecurityCenterServiceAsync, grpcClient.GetSecurityCenterService, effectiveSettings.GetSecurityCenterServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSecurityCenterService);
+            Modify_GetSecurityCenterServiceApiCall(ref _callGetSecurityCenterService);
+            _callListSecurityCenterServices = clientHelper.BuildApiCall<ListSecurityCenterServicesRequest, ListSecurityCenterServicesResponse>("ListSecurityCenterServices", grpcClient.ListSecurityCenterServicesAsync, grpcClient.ListSecurityCenterServices, effectiveSettings.ListSecurityCenterServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSecurityCenterServices);
+            Modify_ListSecurityCenterServicesApiCall(ref _callListSecurityCenterServices);
+            _callUpdateSecurityCenterService = clientHelper.BuildApiCall<UpdateSecurityCenterServiceRequest, SecurityCenterService>("UpdateSecurityCenterService", grpcClient.UpdateSecurityCenterServiceAsync, grpcClient.UpdateSecurityCenterService, effectiveSettings.UpdateSecurityCenterServiceSettings).WithGoogleRequestParam("security_center_service.name", request => request.SecurityCenterService?.Name);
+            Modify_ApiCall(ref _callUpdateSecurityCenterService);
+            Modify_UpdateSecurityCenterServiceApiCall(ref _callUpdateSecurityCenterService);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4276,6 +4906,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         partial void Modify_DeleteEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<DeleteEventThreatDetectionCustomModuleRequest, wkt::Empty> call);
 
         partial void Modify_ValidateEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<ValidateEventThreatDetectionCustomModuleRequest, ValidateEventThreatDetectionCustomModuleResponse> call);
+
+        partial void Modify_GetSecurityCenterServiceApiCall(ref gaxgrpc::ApiCall<GetSecurityCenterServiceRequest, SecurityCenterService> call);
+
+        partial void Modify_ListSecurityCenterServicesApiCall(ref gaxgrpc::ApiCall<ListSecurityCenterServicesRequest, ListSecurityCenterServicesResponse> call);
+
+        partial void Modify_UpdateSecurityCenterServiceApiCall(ref gaxgrpc::ApiCall<UpdateSecurityCenterServiceRequest, SecurityCenterService> call);
 
         partial void OnConstruction(SecurityCenterManagement.SecurityCenterManagementClient grpcClient, SecurityCenterManagementSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4320,6 +4956,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         partial void Modify_DeleteEventThreatDetectionCustomModuleRequest(ref DeleteEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ValidateEventThreatDetectionCustomModuleRequest(ref ValidateEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSecurityCenterServiceRequest(ref GetSecurityCenterServiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSecurityCenterServicesRequest(ref ListSecurityCenterServicesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSecurityCenterServiceRequest(ref UpdateSecurityCenterServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
@@ -4838,6 +5480,80 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             Modify_ValidateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
             return _callValidateEventThreatDetectionCustomModule.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecurityCenterService GetSecurityCenterService(GetSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSecurityCenterServiceRequest(ref request, ref callSettings);
+            return _callGetSecurityCenterService.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets service settings for the specified Security Command Center service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecurityCenterService> GetSecurityCenterServiceAsync(GetSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSecurityCenterServiceRequest(ref request, ref callSettings);
+            return _callGetSecurityCenterService.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServices(ListSecurityCenterServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSecurityCenterServicesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSecurityCenterServicesRequest, ListSecurityCenterServicesResponse, SecurityCenterService>(_callListSecurityCenterServices, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all Security Command Center services for the given
+        /// parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SecurityCenterService"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> ListSecurityCenterServicesAsync(ListSecurityCenterServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSecurityCenterServicesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSecurityCenterServicesRequest, ListSecurityCenterServicesResponse, SecurityCenterService>(_callListSecurityCenterServices, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecurityCenterService UpdateSecurityCenterService(UpdateSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSecurityCenterServiceRequest(ref request, ref callSettings);
+            return _callUpdateSecurityCenterService.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Security Command Center service using the given update mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecurityCenterService> UpdateSecurityCenterServiceAsync(UpdateSecurityCenterServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSecurityCenterServiceRequest(ref request, ref callSettings);
+            return _callUpdateSecurityCenterService.Async(request, callSettings);
+        }
     }
 
     public partial class ListEffectiveSecurityHealthAnalyticsCustomModulesRequest : gaxgrpc::IPageRequest
@@ -4861,6 +5577,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
     }
 
     public partial class ListDescendantEventThreatDetectionCustomModulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSecurityCenterServicesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4914,6 +5634,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<EventThreatDetectionCustomModule> GetEnumerator() =>
             EventThreatDetectionCustomModules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSecurityCenterServicesResponse : gaxgrpc::IPageResponse<SecurityCenterService>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SecurityCenterService> GetEnumerator() => SecurityCenterServices.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

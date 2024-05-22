@@ -3831,5 +3831,614 @@ namespace GoogleCSharpSnippets
             ValidateEventThreatDetectionCustomModuleResponse response = await securityCenterManagementClient.ValidateEventThreatDetectionCustomModuleAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for GetSecurityCenterService</summary>
+        public void GetSecurityCenterServiceRequestObject()
+        {
+            // Snippet: GetSecurityCenterService(GetSecurityCenterServiceRequest, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            GetSecurityCenterServiceRequest request = new GetSecurityCenterServiceRequest
+            {
+                SecurityCenterServiceName = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+            };
+            // Make the request
+            SecurityCenterService response = securityCenterManagementClient.GetSecurityCenterService(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityCenterServiceAsync</summary>
+        public async Task GetSecurityCenterServiceRequestObjectAsync()
+        {
+            // Snippet: GetSecurityCenterServiceAsync(GetSecurityCenterServiceRequest, CallSettings)
+            // Additional: GetSecurityCenterServiceAsync(GetSecurityCenterServiceRequest, CancellationToken)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSecurityCenterServiceRequest request = new GetSecurityCenterServiceRequest
+            {
+                SecurityCenterServiceName = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+            };
+            // Make the request
+            SecurityCenterService response = await securityCenterManagementClient.GetSecurityCenterServiceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityCenterService</summary>
+        public void GetSecurityCenterService()
+        {
+            // Snippet: GetSecurityCenterService(string, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/securityCenterServices/[SERVICE]";
+            // Make the request
+            SecurityCenterService response = securityCenterManagementClient.GetSecurityCenterService(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityCenterServiceAsync</summary>
+        public async Task GetSecurityCenterServiceAsync()
+        {
+            // Snippet: GetSecurityCenterServiceAsync(string, CallSettings)
+            // Additional: GetSecurityCenterServiceAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/securityCenterServices/[SERVICE]";
+            // Make the request
+            SecurityCenterService response = await securityCenterManagementClient.GetSecurityCenterServiceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityCenterService</summary>
+        public void GetSecurityCenterServiceResourceNames()
+        {
+            // Snippet: GetSecurityCenterService(SecurityCenterServiceName, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            SecurityCenterServiceName name = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            // Make the request
+            SecurityCenterService response = securityCenterManagementClient.GetSecurityCenterService(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityCenterServiceAsync</summary>
+        public async Task GetSecurityCenterServiceResourceNamesAsync()
+        {
+            // Snippet: GetSecurityCenterServiceAsync(SecurityCenterServiceName, CallSettings)
+            // Additional: GetSecurityCenterServiceAsync(SecurityCenterServiceName, CancellationToken)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityCenterServiceName name = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            // Make the request
+            SecurityCenterService response = await securityCenterManagementClient.GetSecurityCenterServiceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServices</summary>
+        public void ListSecurityCenterServicesRequestObject()
+        {
+            // Snippet: ListSecurityCenterServices(ListSecurityCenterServicesRequest, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            ListSecurityCenterServicesRequest request = new ListSecurityCenterServicesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityCenterService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServicesAsync</summary>
+        public async Task ListSecurityCenterServicesRequestObjectAsync()
+        {
+            // Snippet: ListSecurityCenterServicesAsync(ListSecurityCenterServicesRequest, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSecurityCenterServicesRequest request = new ListSecurityCenterServicesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityCenterService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServices</summary>
+        public void ListSecurityCenterServices()
+        {
+            // Snippet: ListSecurityCenterServices(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityCenterService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServicesAsync</summary>
+        public async Task ListSecurityCenterServicesAsync()
+        {
+            // Snippet: ListSecurityCenterServicesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityCenterService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServices</summary>
+        public void ListSecurityCenterServicesResourceNames1()
+        {
+            // Snippet: ListSecurityCenterServices(LocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityCenterService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServicesAsync</summary>
+        public async Task ListSecurityCenterServicesResourceNames1Async()
+        {
+            // Snippet: ListSecurityCenterServicesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityCenterService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServices</summary>
+        public void ListSecurityCenterServicesResourceNames2()
+        {
+            // Snippet: ListSecurityCenterServices(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityCenterService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServicesAsync</summary>
+        public async Task ListSecurityCenterServicesResourceNames2Async()
+        {
+            // Snippet: ListSecurityCenterServicesAsync(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityCenterService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServices</summary>
+        public void ListSecurityCenterServicesResourceNames3()
+        {
+            // Snippet: ListSecurityCenterServices(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityCenterService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityCenterServicesAsync</summary>
+        public async Task ListSecurityCenterServicesResourceNames3Async()
+        {
+            // Snippet: ListSecurityCenterServicesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityCenterService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityCenterService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityCenterService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityCenterService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityCenterService</summary>
+        public void UpdateSecurityCenterServiceRequestObject()
+        {
+            // Snippet: UpdateSecurityCenterService(UpdateSecurityCenterServiceRequest, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            UpdateSecurityCenterServiceRequest request = new UpdateSecurityCenterServiceRequest
+            {
+                SecurityCenterService = new SecurityCenterService(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            SecurityCenterService response = securityCenterManagementClient.UpdateSecurityCenterService(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityCenterServiceAsync</summary>
+        public async Task UpdateSecurityCenterServiceRequestObjectAsync()
+        {
+            // Snippet: UpdateSecurityCenterServiceAsync(UpdateSecurityCenterServiceRequest, CallSettings)
+            // Additional: UpdateSecurityCenterServiceAsync(UpdateSecurityCenterServiceRequest, CancellationToken)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSecurityCenterServiceRequest request = new UpdateSecurityCenterServiceRequest
+            {
+                SecurityCenterService = new SecurityCenterService(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            SecurityCenterService response = await securityCenterManagementClient.UpdateSecurityCenterServiceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityCenterService</summary>
+        public void UpdateSecurityCenterService()
+        {
+            // Snippet: UpdateSecurityCenterService(SecurityCenterService, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = SecurityCenterManagementClient.Create();
+            // Initialize request argument(s)
+            SecurityCenterService securityCenterService = new SecurityCenterService();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SecurityCenterService response = securityCenterManagementClient.UpdateSecurityCenterService(securityCenterService, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityCenterServiceAsync</summary>
+        public async Task UpdateSecurityCenterServiceAsync()
+        {
+            // Snippet: UpdateSecurityCenterServiceAsync(SecurityCenterService, FieldMask, CallSettings)
+            // Additional: UpdateSecurityCenterServiceAsync(SecurityCenterService, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterManagementClient securityCenterManagementClient = await SecurityCenterManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityCenterService securityCenterService = new SecurityCenterService();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SecurityCenterService response = await securityCenterManagementClient.UpdateSecurityCenterServiceAsync(securityCenterService, updateMask);
+            // End snippet
+        }
     }
 }
