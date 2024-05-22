@@ -53,13 +53,14 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "djEuVGltZVdpbmRvdxI/CgphdHRyaWJ1dGVzGA4gAygLMisubWFwcy5mbGVl",
             "dGVuZ2luZS5kZWxpdmVyeS52MS5UYXNrQXR0cmlidXRlOmLqQV8KK2ZsZWV0",
             "ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Rhc2tUcmFja2luZ0luZm8SMHByb3Zp",
-            "ZGVycy97cHJvdmlkZXJ9L3Rhc2tUcmFja2luZ0luZm8ve3RyYWNraW5nfULg",
-            "AQojZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCFVRhc2tU",
+            "ZGVycy97cHJvdmlkZXJ9L3Rhc2tUcmFja2luZ0luZm8ve3RyYWNraW5nfUKG",
+            "AgojZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCFVRhc2tU",
             "cmFja2luZ0luZm9Qcm90b1ABWkljbG91ZC5nb29nbGUuY29tL2dvL21hcHMv",
             "ZmxlZXRlbmdpbmUvZGVsaXZlcnkvYXBpdjEvZGVsaXZlcnlwYjtkZWxpdmVy",
             "eXBiogIEQ0ZFRKoCI0dvb2dsZS5NYXBzLkZsZWV0RW5naW5lLkRlbGl2ZXJ5",
-            "LlYx6gInR29vZ2xlOjpNYXBzOjpGbGVldEVuZ2luZTo6RGVsaXZlcnk6OlYx",
-            "YgZwcm90bzM="));
+            "LlYxygIjR29vZ2xlXE1hcHNcRmxlZXRFbmdpbmVcRGVsaXZlcnlcVjHqAidH",
+            "b29nbGU6Ok1hcHM6OkZsZWV0RW5naW5lOjpEZWxpdmVyeTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.CommonReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehiclesReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TasksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
