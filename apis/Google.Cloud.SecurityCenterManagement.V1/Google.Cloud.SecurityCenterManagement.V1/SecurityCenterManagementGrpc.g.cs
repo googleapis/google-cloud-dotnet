@@ -125,6 +125,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycentermanagement_v1_ValidateEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleResponse> __Marshaller_google_cloud_securitycentermanagement_v1_ValidateEventThreatDetectionCustomModuleResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest> __Marshaller_google_cloud_securitycentermanagement_v1_GetSecurityCenterServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> __Marshaller_google_cloud_securitycentermanagement_v1_SecurityCenterService = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest> __Marshaller_google_cloud_securitycentermanagement_v1_ListSecurityCenterServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse> __Marshaller_google_cloud_securitycentermanagement_v1_ListSecurityCenterServicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest> __Marshaller_google_cloud_securitycentermanagement_v1_UpdateSecurityCenterServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenterManagement.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> __Method_ListEffectiveSecurityHealthAnalyticsCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenterManagement.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse>(
@@ -269,6 +279,30 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         "ValidateEventThreatDetectionCustomModule",
         __Marshaller_google_cloud_securitycentermanagement_v1_ValidateEventThreatDetectionCustomModuleRequest,
         __Marshaller_google_cloud_securitycentermanagement_v1_ValidateEventThreatDetectionCustomModuleResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> __Method_GetSecurityCenterService = new grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSecurityCenterService",
+        __Marshaller_google_cloud_securitycentermanagement_v1_GetSecurityCenterServiceRequest,
+        __Marshaller_google_cloud_securitycentermanagement_v1_SecurityCenterService);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest, global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse> __Method_ListSecurityCenterServices = new grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest, global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSecurityCenterServices",
+        __Marshaller_google_cloud_securitycentermanagement_v1_ListSecurityCenterServicesRequest,
+        __Marshaller_google_cloud_securitycentermanagement_v1_ListSecurityCenterServicesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> __Method_UpdateSecurityCenterService = new grpc::Method<global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSecurityCenterService",
+        __Marshaller_google_cloud_securitycentermanagement_v1_UpdateSecurityCenterServiceRequest,
+        __Marshaller_google_cloud_securitycentermanagement_v1_SecurityCenterService);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -528,6 +562,43 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets service settings for the specified Security Command Center service.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> GetSecurityCenterService(global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of all Security Command Center services for the given
+      /// parent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse> ListSecurityCenterServices(global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Security Command Center service using the given update mask.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> UpdateSecurityCenterService(global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1569,6 +1640,154 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateEventThreatDetectionCustomModule, null, options, request);
       }
+      /// <summary>
+      /// Gets service settings for the specified Security Command Center service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService GetSecurityCenterService(global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSecurityCenterService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets service settings for the specified Security Command Center service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService GetSecurityCenterService(global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSecurityCenterService, null, options, request);
+      }
+      /// <summary>
+      /// Gets service settings for the specified Security Command Center service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> GetSecurityCenterServiceAsync(global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSecurityCenterServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets service settings for the specified Security Command Center service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> GetSecurityCenterServiceAsync(global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSecurityCenterService, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all Security Command Center services for the given
+      /// parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse ListSecurityCenterServices(global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSecurityCenterServices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all Security Command Center services for the given
+      /// parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse ListSecurityCenterServices(global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSecurityCenterServices, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all Security Command Center services for the given
+      /// parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse> ListSecurityCenterServicesAsync(global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSecurityCenterServicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all Security Command Center services for the given
+      /// parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse> ListSecurityCenterServicesAsync(global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSecurityCenterServices, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Security Command Center service using the given update mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService UpdateSecurityCenterService(global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSecurityCenterService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Security Command Center service using the given update mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService UpdateSecurityCenterService(global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSecurityCenterService, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Security Command Center service using the given update mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> UpdateSecurityCenterServiceAsync(global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSecurityCenterServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Security Command Center service using the given update mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService> UpdateSecurityCenterServiceAsync(global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSecurityCenterService, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecurityCenterManagementClient NewInstance(ClientBaseConfiguration configuration)
@@ -1600,7 +1819,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
           .AddMethod(__Method_CreateEventThreatDetectionCustomModule, serviceImpl.CreateEventThreatDetectionCustomModule)
           .AddMethod(__Method_UpdateEventThreatDetectionCustomModule, serviceImpl.UpdateEventThreatDetectionCustomModule)
           .AddMethod(__Method_DeleteEventThreatDetectionCustomModule, serviceImpl.DeleteEventThreatDetectionCustomModule)
-          .AddMethod(__Method_ValidateEventThreatDetectionCustomModule, serviceImpl.ValidateEventThreatDetectionCustomModule).Build();
+          .AddMethod(__Method_ValidateEventThreatDetectionCustomModule, serviceImpl.ValidateEventThreatDetectionCustomModule)
+          .AddMethod(__Method_GetSecurityCenterService, serviceImpl.GetSecurityCenterService)
+          .AddMethod(__Method_ListSecurityCenterServices, serviceImpl.ListSecurityCenterServices)
+          .AddMethod(__Method_UpdateSecurityCenterService, serviceImpl.UpdateSecurityCenterService).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1628,6 +1850,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       serviceBinder.AddMethod(__Method_UpdateEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenterManagement.V1.UpdateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenterManagement.V1.EventThreatDetectionCustomModule>(serviceImpl.UpdateEventThreatDetectionCustomModule));
       serviceBinder.AddMethod(__Method_DeleteEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenterManagement.V1.DeleteEventThreatDetectionCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEventThreatDetectionCustomModule));
       serviceBinder.AddMethod(__Method_ValidateEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenterManagement.V1.ValidateEventThreatDetectionCustomModuleResponse>(serviceImpl.ValidateEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_GetSecurityCenterService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenterManagement.V1.GetSecurityCenterServiceRequest, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService>(serviceImpl.GetSecurityCenterService));
+      serviceBinder.AddMethod(__Method_ListSecurityCenterServices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesRequest, global::Google.Cloud.SecurityCenterManagement.V1.ListSecurityCenterServicesResponse>(serviceImpl.ListSecurityCenterServices));
+      serviceBinder.AddMethod(__Method_UpdateSecurityCenterService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenterManagement.V1.UpdateSecurityCenterServiceRequest, global::Google.Cloud.SecurityCenterManagement.V1.SecurityCenterService>(serviceImpl.UpdateSecurityCenterService));
     }
 
   }
