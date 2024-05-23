@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using Google.Apis.Json;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -424,6 +425,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var tasks = Enumerable.Range(0, 5).Select(_ => client.GetOrCreateTableAsync(datasetId, "highcontention", new Table())).ToList();
             await Task.WhenAll(tasks);
+        }
+
+        [Fact]
+        public void GetTable_Views()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var options = new GetTableOptions { View = TableView.Basic };
+            var basicTable = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId, options);
+            options = new GetTableOptions { View = TableView.Full};
+            var fullTable = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId, options);
+
+            Assert.Null(basicTable.Resource.NumLongTermBytes);
+            Assert.NotNull(fullTable.Resource.NumLongTermBytes);
+            Assert.Equal(ToJson(basicTable.Reference), ToJson(fullTable.Reference));
+            Assert.Equal(ToJson(basicTable.Schema), ToJson(fullTable.Schema));
+
+            string ToJson(object obj) => NewtonsoftJsonSerializer.Instance.Serialize(obj);
         }
 
         [Fact]
