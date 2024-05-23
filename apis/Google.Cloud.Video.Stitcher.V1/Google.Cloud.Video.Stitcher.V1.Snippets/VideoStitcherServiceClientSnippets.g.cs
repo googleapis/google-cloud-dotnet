@@ -3971,5 +3971,1008 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for UpdateLiveConfig</summary>
+        public void UpdateLiveConfigRequestObject()
+        {
+            // Snippet: UpdateLiveConfig(UpdateLiveConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateLiveConfigRequest request = new UpdateLiveConfigRequest
+            {
+                LiveConfig = new LiveConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = videoStitcherServiceClient.UpdateLiveConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLiveConfigAsync</summary>
+        public async Task UpdateLiveConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateLiveConfigAsync(UpdateLiveConfigRequest, CallSettings)
+            // Additional: UpdateLiveConfigAsync(UpdateLiveConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateLiveConfigRequest request = new UpdateLiveConfigRequest
+            {
+                LiveConfig = new LiveConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = await videoStitcherServiceClient.UpdateLiveConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLiveConfig</summary>
+        public void UpdateLiveConfig()
+        {
+            // Snippet: UpdateLiveConfig(LiveConfig, FieldMask, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LiveConfig liveConfig = new LiveConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = videoStitcherServiceClient.UpdateLiveConfig(liveConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLiveConfigAsync</summary>
+        public async Task UpdateLiveConfigAsync()
+        {
+            // Snippet: UpdateLiveConfigAsync(LiveConfig, FieldMask, CallSettings)
+            // Additional: UpdateLiveConfigAsync(LiveConfig, FieldMask, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LiveConfig liveConfig = new LiveConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = await videoStitcherServiceClient.UpdateLiveConfigAsync(liveConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVodConfig</summary>
+        public void CreateVodConfigRequestObject()
+        {
+            // Snippet: CreateVodConfig(CreateVodConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            CreateVodConfigRequest request = new CreateVodConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                VodConfigId = "",
+                VodConfig = new VodConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = videoStitcherServiceClient.CreateVodConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVodConfigAsync</summary>
+        public async Task CreateVodConfigRequestObjectAsync()
+        {
+            // Snippet: CreateVodConfigAsync(CreateVodConfigRequest, CallSettings)
+            // Additional: CreateVodConfigAsync(CreateVodConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateVodConfigRequest request = new CreateVodConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                VodConfigId = "",
+                VodConfig = new VodConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = await videoStitcherServiceClient.CreateVodConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVodConfig</summary>
+        public void CreateVodConfig()
+        {
+            // Snippet: CreateVodConfig(string, VodConfig, string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            VodConfig vodConfig = new VodConfig();
+            string vodConfigId = "";
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = videoStitcherServiceClient.CreateVodConfig(parent, vodConfig, vodConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVodConfigAsync</summary>
+        public async Task CreateVodConfigAsync()
+        {
+            // Snippet: CreateVodConfigAsync(string, VodConfig, string, CallSettings)
+            // Additional: CreateVodConfigAsync(string, VodConfig, string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            VodConfig vodConfig = new VodConfig();
+            string vodConfigId = "";
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = await videoStitcherServiceClient.CreateVodConfigAsync(parent, vodConfig, vodConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVodConfig</summary>
+        public void CreateVodConfigResourceNames()
+        {
+            // Snippet: CreateVodConfig(LocationName, VodConfig, string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            VodConfig vodConfig = new VodConfig();
+            string vodConfigId = "";
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = videoStitcherServiceClient.CreateVodConfig(parent, vodConfig, vodConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVodConfigAsync</summary>
+        public async Task CreateVodConfigResourceNamesAsync()
+        {
+            // Snippet: CreateVodConfigAsync(LocationName, VodConfig, string, CallSettings)
+            // Additional: CreateVodConfigAsync(LocationName, VodConfig, string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            VodConfig vodConfig = new VodConfig();
+            string vodConfigId = "";
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = await videoStitcherServiceClient.CreateVodConfigAsync(parent, vodConfig, vodConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVodConfigs</summary>
+        public void ListVodConfigsRequestObject()
+        {
+            // Snippet: ListVodConfigs(ListVodConfigsRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            ListVodConfigsRequest request = new ListVodConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VodConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVodConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VodConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VodConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VodConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVodConfigsAsync</summary>
+        public async Task ListVodConfigsRequestObjectAsync()
+        {
+            // Snippet: ListVodConfigsAsync(ListVodConfigsRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListVodConfigsRequest request = new ListVodConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VodConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVodConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VodConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VodConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VodConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVodConfigs</summary>
+        public void ListVodConfigs()
+        {
+            // Snippet: ListVodConfigs(string, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VodConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVodConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VodConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VodConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VodConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVodConfigsAsync</summary>
+        public async Task ListVodConfigsAsync()
+        {
+            // Snippet: ListVodConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VodConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVodConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VodConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VodConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VodConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVodConfigs</summary>
+        public void ListVodConfigsResourceNames()
+        {
+            // Snippet: ListVodConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VodConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVodConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VodConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VodConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VodConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVodConfigsAsync</summary>
+        public async Task ListVodConfigsResourceNamesAsync()
+        {
+            // Snippet: ListVodConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VodConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVodConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VodConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VodConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VodConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVodConfig</summary>
+        public void GetVodConfigRequestObject()
+        {
+            // Snippet: GetVodConfig(GetVodConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            GetVodConfigRequest request = new GetVodConfigRequest
+            {
+                VodConfigName = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]"),
+            };
+            // Make the request
+            VodConfig response = videoStitcherServiceClient.GetVodConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVodConfigAsync</summary>
+        public async Task GetVodConfigRequestObjectAsync()
+        {
+            // Snippet: GetVodConfigAsync(GetVodConfigRequest, CallSettings)
+            // Additional: GetVodConfigAsync(GetVodConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetVodConfigRequest request = new GetVodConfigRequest
+            {
+                VodConfigName = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]"),
+            };
+            // Make the request
+            VodConfig response = await videoStitcherServiceClient.GetVodConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVodConfig</summary>
+        public void GetVodConfig()
+        {
+            // Snippet: GetVodConfig(string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/vodConfigs/[VOD_CONFIG]";
+            // Make the request
+            VodConfig response = videoStitcherServiceClient.GetVodConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVodConfigAsync</summary>
+        public async Task GetVodConfigAsync()
+        {
+            // Snippet: GetVodConfigAsync(string, CallSettings)
+            // Additional: GetVodConfigAsync(string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/vodConfigs/[VOD_CONFIG]";
+            // Make the request
+            VodConfig response = await videoStitcherServiceClient.GetVodConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVodConfig</summary>
+        public void GetVodConfigResourceNames()
+        {
+            // Snippet: GetVodConfig(VodConfigName, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            VodConfigName name = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]");
+            // Make the request
+            VodConfig response = videoStitcherServiceClient.GetVodConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVodConfigAsync</summary>
+        public async Task GetVodConfigResourceNamesAsync()
+        {
+            // Snippet: GetVodConfigAsync(VodConfigName, CallSettings)
+            // Additional: GetVodConfigAsync(VodConfigName, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VodConfigName name = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]");
+            // Make the request
+            VodConfig response = await videoStitcherServiceClient.GetVodConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVodConfig</summary>
+        public void DeleteVodConfigRequestObject()
+        {
+            // Snippet: DeleteVodConfig(DeleteVodConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteVodConfigRequest request = new DeleteVodConfigRequest
+            {
+                VodConfigName = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteVodConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVodConfigAsync</summary>
+        public async Task DeleteVodConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteVodConfigAsync(DeleteVodConfigRequest, CallSettings)
+            // Additional: DeleteVodConfigAsync(DeleteVodConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteVodConfigRequest request = new DeleteVodConfigRequest
+            {
+                VodConfigName = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteVodConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVodConfig</summary>
+        public void DeleteVodConfig()
+        {
+            // Snippet: DeleteVodConfig(string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/vodConfigs/[VOD_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteVodConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVodConfigAsync</summary>
+        public async Task DeleteVodConfigAsync()
+        {
+            // Snippet: DeleteVodConfigAsync(string, CallSettings)
+            // Additional: DeleteVodConfigAsync(string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/vodConfigs/[VOD_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteVodConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVodConfig</summary>
+        public void DeleteVodConfigResourceNames()
+        {
+            // Snippet: DeleteVodConfig(VodConfigName, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            VodConfigName name = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteVodConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVodConfigAsync</summary>
+        public async Task DeleteVodConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteVodConfigAsync(VodConfigName, CallSettings)
+            // Additional: DeleteVodConfigAsync(VodConfigName, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VodConfigName name = VodConfigName.FromProjectLocationVodConfig("[PROJECT]", "[LOCATION]", "[VOD_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteVodConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVodConfig</summary>
+        public void UpdateVodConfigRequestObject()
+        {
+            // Snippet: UpdateVodConfig(UpdateVodConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateVodConfigRequest request = new UpdateVodConfigRequest
+            {
+                VodConfig = new VodConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = videoStitcherServiceClient.UpdateVodConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVodConfigAsync</summary>
+        public async Task UpdateVodConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateVodConfigAsync(UpdateVodConfigRequest, CallSettings)
+            // Additional: UpdateVodConfigAsync(UpdateVodConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateVodConfigRequest request = new UpdateVodConfigRequest
+            {
+                VodConfig = new VodConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = await videoStitcherServiceClient.UpdateVodConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVodConfig</summary>
+        public void UpdateVodConfig()
+        {
+            // Snippet: UpdateVodConfig(VodConfig, FieldMask, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            VodConfig vodConfig = new VodConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = videoStitcherServiceClient.UpdateVodConfig(vodConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateVodConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVodConfigAsync</summary>
+        public async Task UpdateVodConfigAsync()
+        {
+            // Snippet: UpdateVodConfigAsync(VodConfig, FieldMask, CallSettings)
+            // Additional: UpdateVodConfigAsync(VodConfig, FieldMask, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VodConfig vodConfig = new VodConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<VodConfig, OperationMetadata> response = await videoStitcherServiceClient.UpdateVodConfigAsync(vodConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VodConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VodConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VodConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateVodConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VodConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

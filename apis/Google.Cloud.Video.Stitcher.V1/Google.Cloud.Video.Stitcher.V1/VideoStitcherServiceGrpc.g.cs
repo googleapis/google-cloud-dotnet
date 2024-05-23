@@ -145,6 +145,22 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.LiveConfig> __Marshaller_google_cloud_video_stitcher_v1_LiveConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.DeleteLiveConfigRequest> __Marshaller_google_cloud_video_stitcher_v1_DeleteLiveConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.DeleteLiveConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest> __Marshaller_google_cloud_video_stitcher_v1_UpdateLiveConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest> __Marshaller_google_cloud_video_stitcher_v1_CreateVodConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest> __Marshaller_google_cloud_video_stitcher_v1_ListVodConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse> __Marshaller_google_cloud_video_stitcher_v1_ListVodConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest> __Marshaller_google_cloud_video_stitcher_v1_GetVodConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.VodConfig> __Marshaller_google_cloud_video_stitcher_v1_VodConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.VodConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest> __Marshaller_google_cloud_video_stitcher_v1_DeleteVodConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest> __Marshaller_google_cloud_video_stitcher_v1_UpdateVodConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.CreateCdnKeyRequest, global::Google.LongRunning.Operation> __Method_CreateCdnKey = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.CreateCdnKeyRequest, global::Google.LongRunning.Operation>(
@@ -336,6 +352,54 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         __ServiceName,
         "DeleteLiveConfig",
         __Marshaller_google_cloud_video_stitcher_v1_DeleteLiveConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateLiveConfig = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateLiveConfig",
+        __Marshaller_google_cloud_video_stitcher_v1_UpdateLiveConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest, global::Google.LongRunning.Operation> __Method_CreateVodConfig = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateVodConfig",
+        __Marshaller_google_cloud_video_stitcher_v1_CreateVodConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest, global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse> __Method_ListVodConfigs = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest, global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListVodConfigs",
+        __Marshaller_google_cloud_video_stitcher_v1_ListVodConfigsRequest,
+        __Marshaller_google_cloud_video_stitcher_v1_ListVodConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest, global::Google.Cloud.Video.Stitcher.V1.VodConfig> __Method_GetVodConfig = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest, global::Google.Cloud.Video.Stitcher.V1.VodConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetVodConfig",
+        __Marshaller_google_cloud_video_stitcher_v1_GetVodConfigRequest,
+        __Marshaller_google_cloud_video_stitcher_v1_VodConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteVodConfig = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteVodConfig",
+        __Marshaller_google_cloud_video_stitcher_v1_DeleteVodConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateVodConfig = new grpc::Method<global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateVodConfig",
+        __Marshaller_google_cloud_video_stitcher_v1_UpdateVodConfigRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -639,6 +703,83 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteLiveConfig(global::Google.Cloud.Video.Stitcher.V1.DeleteLiveConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified LiveConfig. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateLiveConfig(global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Registers the VOD config with the provided unique ID in
+      /// the specified region.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateVodConfig(global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all VOD configs managed by the Video Stitcher API that
+      /// belong to the specified project and region.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse> ListVodConfigs(global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the specified VOD config managed by the Video
+      /// Stitcher API service.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Stitcher.V1.VodConfig> GetVodConfig(global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified VOD config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteVodConfig(global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified VOD config. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateVodConfig(global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1852,6 +1993,314 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLiveConfig, null, options, request);
       }
+      /// <summary>
+      /// Updates the specified LiveConfig. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateLiveConfig(global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLiveConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified LiveConfig. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateLiveConfig(global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateLiveConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified LiveConfig. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateLiveConfigAsync(global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLiveConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified LiveConfig. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateLiveConfigAsync(global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateLiveConfig, null, options, request);
+      }
+      /// <summary>
+      /// Registers the VOD config with the provided unique ID in
+      /// the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateVodConfig(global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateVodConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Registers the VOD config with the provided unique ID in
+      /// the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateVodConfig(global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Registers the VOD config with the provided unique ID in
+      /// the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateVodConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Registers the VOD config with the provided unique ID in
+      /// the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists all VOD configs managed by the Video Stitcher API that
+      /// belong to the specified project and region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse ListVodConfigs(global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListVodConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all VOD configs managed by the Video Stitcher API that
+      /// belong to the specified project and region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse ListVodConfigs(global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListVodConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists all VOD configs managed by the Video Stitcher API that
+      /// belong to the specified project and region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse> ListVodConfigsAsync(global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListVodConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all VOD configs managed by the Video Stitcher API that
+      /// belong to the specified project and region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse> ListVodConfigsAsync(global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListVodConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified VOD config managed by the Video
+      /// Stitcher API service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.Stitcher.V1.VodConfig GetVodConfig(global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVodConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified VOD config managed by the Video
+      /// Stitcher API service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.Stitcher.V1.VodConfig GetVodConfig(global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified VOD config managed by the Video
+      /// Stitcher API service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Stitcher.V1.VodConfig> GetVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVodConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified VOD config managed by the Video
+      /// Stitcher API service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Stitcher.V1.VodConfig> GetVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified VOD config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteVodConfig(global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVodConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified VOD config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteVodConfig(global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified VOD config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVodConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified VOD config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified VOD config. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateVodConfig(global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateVodConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified VOD config. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateVodConfig(global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateVodConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified VOD config. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateVodConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified VOD config. Only update fields specified
+      /// in the call method body.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVodConfigAsync(global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateVodConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VideoStitcherServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1889,7 +2338,13 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           .AddMethod(__Method_CreateLiveConfig, serviceImpl.CreateLiveConfig)
           .AddMethod(__Method_ListLiveConfigs, serviceImpl.ListLiveConfigs)
           .AddMethod(__Method_GetLiveConfig, serviceImpl.GetLiveConfig)
-          .AddMethod(__Method_DeleteLiveConfig, serviceImpl.DeleteLiveConfig).Build();
+          .AddMethod(__Method_DeleteLiveConfig, serviceImpl.DeleteLiveConfig)
+          .AddMethod(__Method_UpdateLiveConfig, serviceImpl.UpdateLiveConfig)
+          .AddMethod(__Method_CreateVodConfig, serviceImpl.CreateVodConfig)
+          .AddMethod(__Method_ListVodConfigs, serviceImpl.ListVodConfigs)
+          .AddMethod(__Method_GetVodConfig, serviceImpl.GetVodConfig)
+          .AddMethod(__Method_DeleteVodConfig, serviceImpl.DeleteVodConfig)
+          .AddMethod(__Method_UpdateVodConfig, serviceImpl.UpdateVodConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1923,6 +2378,12 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       serviceBinder.AddMethod(__Method_ListLiveConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.ListLiveConfigsRequest, global::Google.Cloud.Video.Stitcher.V1.ListLiveConfigsResponse>(serviceImpl.ListLiveConfigs));
       serviceBinder.AddMethod(__Method_GetLiveConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.GetLiveConfigRequest, global::Google.Cloud.Video.Stitcher.V1.LiveConfig>(serviceImpl.GetLiveConfig));
       serviceBinder.AddMethod(__Method_DeleteLiveConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.DeleteLiveConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteLiveConfig));
+      serviceBinder.AddMethod(__Method_UpdateLiveConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateLiveConfig));
+      serviceBinder.AddMethod(__Method_CreateVodConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateVodConfig));
+      serviceBinder.AddMethod(__Method_ListVodConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest, global::Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse>(serviceImpl.ListVodConfigs));
+      serviceBinder.AddMethod(__Method_GetVodConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest, global::Google.Cloud.Video.Stitcher.V1.VodConfig>(serviceImpl.GetVodConfig));
+      serviceBinder.AddMethod(__Method_DeleteVodConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVodConfig));
+      serviceBinder.AddMethod(__Method_UpdateVodConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateVodConfig));
     }
 
   }

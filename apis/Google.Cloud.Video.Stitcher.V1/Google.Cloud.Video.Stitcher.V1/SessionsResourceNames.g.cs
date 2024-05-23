@@ -533,6 +533,15 @@ namespace Google.Cloud.Video.Stitcher.V1
             get => string.IsNullOrEmpty(Name) ? null : gcvsv::VodSessionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="VodConfigName"/>-typed view over the <see cref="VodConfig"/> resource name property.
+        /// </summary>
+        public VodConfigName VodConfigAsVodConfigName
+        {
+            get => string.IsNullOrEmpty(VodConfig) ? null : VodConfigName.Parse(VodConfig, allowUnparsed: true);
+            set => VodConfig = value?.ToString() ?? "";
+        }
     }
 
     public partial class LiveSession

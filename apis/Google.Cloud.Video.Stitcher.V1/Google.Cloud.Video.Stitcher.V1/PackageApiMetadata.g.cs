@@ -59,11 +59,13 @@ namespace Google.Cloud.Video.Stitcher.V1
             yield return CdnKeysReflection.Descriptor;
             yield return CompanionsReflection.Descriptor;
             yield return EventsReflection.Descriptor;
+            yield return FetchOptionsReflection.Descriptor;
             yield return LiveConfigsReflection.Descriptor;
             yield return SessionsReflection.Descriptor;
             yield return SlatesReflection.Descriptor;
             yield return StitchDetailsReflection.Descriptor;
             yield return VideoStitcherServiceReflection.Descriptor;
+            yield return VodConfigsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
