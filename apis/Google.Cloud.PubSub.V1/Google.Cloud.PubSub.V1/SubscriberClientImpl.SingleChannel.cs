@@ -277,7 +277,8 @@ public sealed partial class SubscriberClientImpl
 
         private void StopStreamingPull()
         {
-            if (_pull != null)
+            var pullToDispose = _pull;
+            if (pullToDispose is not null)
             {
                 // Ignore all errors; the stream may be in any state.
                 try
@@ -286,11 +287,16 @@ public sealed partial class SubscriberClientImpl
                         {
                             try
                             {
-                                _pull.Dispose();
+                                pullToDispose.Dispose();
                             }
                             finally
                             {
-                                _pull = null;
+                                // If this is happening *after* we start streaming again,
+                                // we don't want to overwrite the new pull stream.
+                                if (_pull == pullToDispose)
+                                {
+                                    _pull = null;
+                                }
                             }
                         }));
                 }
