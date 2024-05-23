@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListConnections",
+    "client": "DeveloperConnectClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
