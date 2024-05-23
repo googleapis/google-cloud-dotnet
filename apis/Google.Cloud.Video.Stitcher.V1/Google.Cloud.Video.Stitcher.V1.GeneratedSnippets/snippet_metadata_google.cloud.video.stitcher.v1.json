@@ -7043,6 +7043,1618 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateLiveConfig_sync",
+      "title": "UpdateLiveConfigRequestObject",
+      "description": "Snippet for UpdateLiveConfig",
+      "file": "VideoStitcherServiceClient.UpdateLiveConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLiveConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateLiveConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.LiveConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLiveConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateLiveConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateLiveConfig_async",
+      "title": "UpdateLiveConfigRequestObjectAsync",
+      "description": "Snippet for UpdateLiveConfigAsync",
+      "file": "VideoStitcherServiceClient.UpdateLiveConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLiveConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateLiveConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateLiveConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.LiveConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLiveConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateLiveConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateLiveConfig_sync_flattened",
+      "title": "UpdateLiveConfig",
+      "description": "Snippet for UpdateLiveConfig",
+      "file": "VideoStitcherServiceClient.UpdateLiveConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLiveConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateLiveConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveConfig",
+            "name": "liveConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.LiveConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLiveConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateLiveConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateLiveConfig_async_flattened",
+      "title": "UpdateLiveConfigAsync",
+      "description": "Snippet for UpdateLiveConfigAsync",
+      "file": "VideoStitcherServiceClient.UpdateLiveConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLiveConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateLiveConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveConfig",
+            "name": "liveConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.LiveConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLiveConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateLiveConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_CreateVodConfig_sync",
+      "title": "CreateVodConfigRequestObject",
+      "description": "Snippet for CreateVodConfig",
+      "file": "VideoStitcherServiceClient.CreateVodConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.CreateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_CreateVodConfig_async",
+      "title": "CreateVodConfigRequestObjectAsync",
+      "description": "Snippet for CreateVodConfigAsync",
+      "file": "VideoStitcherServiceClient.CreateVodConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.CreateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_CreateVodConfig_sync_flattened",
+      "title": "CreateVodConfig",
+      "description": "Snippet for CreateVodConfig",
+      "file": "VideoStitcherServiceClient.CreateVodConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+            "name": "vodConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vodConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.CreateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_CreateVodConfig_async_flattened",
+      "title": "CreateVodConfigAsync",
+      "description": "Snippet for CreateVodConfigAsync",
+      "file": "VideoStitcherServiceClient.CreateVodConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+            "name": "vodConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vodConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.CreateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_CreateVodConfig_sync_flattened_resourceNames",
+      "title": "CreateVodConfigResourceNames",
+      "description": "Snippet for CreateVodConfig",
+      "file": "VideoStitcherServiceClient.CreateVodConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+            "name": "vodConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vodConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.CreateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_CreateVodConfig_async_flattened_resourceNames",
+      "title": "CreateVodConfigResourceNamesAsync",
+      "description": "Snippet for CreateVodConfigAsync",
+      "file": "VideoStitcherServiceClient.CreateVodConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+            "name": "vodConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vodConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.CreateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_ListVodConfigs_sync",
+      "title": "ListVodConfigsRequestObject",
+      "description": "Snippet for ListVodConfigs",
+      "file": "VideoStitcherServiceClient.ListVodConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVodConfigs",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse, Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "ListVodConfigs",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.ListVodConfigs",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_ListVodConfigs_async",
+      "title": "ListVodConfigsRequestObjectAsync",
+      "description": "Snippet for ListVodConfigsAsync",
+      "file": "VideoStitcherServiceClient.ListVodConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVodConfigsAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListVodConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse, Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "ListVodConfigs",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.ListVodConfigs",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_ListVodConfigs_sync_flattened",
+      "title": "ListVodConfigs",
+      "description": "Snippet for ListVodConfigs",
+      "file": "VideoStitcherServiceClient.ListVodConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVodConfigs",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse, Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "ListVodConfigs",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.ListVodConfigs",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_ListVodConfigs_async_flattened",
+      "title": "ListVodConfigsAsync",
+      "description": "Snippet for ListVodConfigsAsync",
+      "file": "VideoStitcherServiceClient.ListVodConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVodConfigsAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse, Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "ListVodConfigs",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.ListVodConfigs",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_ListVodConfigs_sync_flattened_resourceNames",
+      "title": "ListVodConfigsResourceNames",
+      "description": "Snippet for ListVodConfigs",
+      "file": "VideoStitcherServiceClient.ListVodConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVodConfigs",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse, Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "ListVodConfigs",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.ListVodConfigs",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_ListVodConfigs_async_flattened_resourceNames",
+      "title": "ListVodConfigsResourceNamesAsync",
+      "description": "Snippet for ListVodConfigsAsync",
+      "file": "VideoStitcherServiceClient.ListVodConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVodConfigsAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodConfigsResponse, Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "ListVodConfigs",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.ListVodConfigs",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_GetVodConfig_sync",
+      "title": "GetVodConfigRequestObject",
+      "description": "Snippet for GetVodConfig",
+      "file": "VideoStitcherServiceClient.GetVodConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "GetVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.GetVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_GetVodConfig_async",
+      "title": "GetVodConfigRequestObjectAsync",
+      "description": "Snippet for GetVodConfigAsync",
+      "file": "VideoStitcherServiceClient.GetVodConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "GetVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.GetVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_GetVodConfig_sync_flattened",
+      "title": "GetVodConfig",
+      "description": "Snippet for GetVodConfig",
+      "file": "VideoStitcherServiceClient.GetVodConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "GetVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.GetVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_GetVodConfig_async_flattened",
+      "title": "GetVodConfigAsync",
+      "description": "Snippet for GetVodConfigAsync",
+      "file": "VideoStitcherServiceClient.GetVodConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "GetVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.GetVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_GetVodConfig_sync_flattened_resourceNames",
+      "title": "GetVodConfigResourceNames",
+      "description": "Snippet for GetVodConfig",
+      "file": "VideoStitcherServiceClient.GetVodConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "GetVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.GetVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_GetVodConfig_async_flattened_resourceNames",
+      "title": "GetVodConfigResourceNamesAsync",
+      "description": "Snippet for GetVodConfigAsync",
+      "file": "VideoStitcherServiceClient.GetVodConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodConfig>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "GetVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.GetVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_DeleteVodConfig_sync",
+      "title": "DeleteVodConfigRequestObject",
+      "description": "Snippet for DeleteVodConfig",
+      "file": "VideoStitcherServiceClient.DeleteVodConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.DeleteVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_DeleteVodConfig_async",
+      "title": "DeleteVodConfigRequestObjectAsync",
+      "description": "Snippet for DeleteVodConfigAsync",
+      "file": "VideoStitcherServiceClient.DeleteVodConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.DeleteVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.DeleteVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_DeleteVodConfig_sync_flattened",
+      "title": "DeleteVodConfig",
+      "description": "Snippet for DeleteVodConfig",
+      "file": "VideoStitcherServiceClient.DeleteVodConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteVodConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.DeleteVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_DeleteVodConfig_async_flattened",
+      "title": "DeleteVodConfigAsync",
+      "description": "Snippet for DeleteVodConfigAsync",
+      "file": "VideoStitcherServiceClient.DeleteVodConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.DeleteVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_DeleteVodConfig_sync_flattened_resourceNames",
+      "title": "DeleteVodConfigResourceNames",
+      "description": "Snippet for DeleteVodConfig",
+      "file": "VideoStitcherServiceClient.DeleteVodConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.DeleteVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_DeleteVodConfig_async_flattened_resourceNames",
+      "title": "DeleteVodConfigResourceNamesAsync",
+      "description": "Snippet for DeleteVodConfigAsync",
+      "file": "VideoStitcherServiceClient.DeleteVodConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.DeleteVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateVodConfig_sync",
+      "title": "UpdateVodConfigRequestObject",
+      "description": "Snippet for UpdateVodConfig",
+      "file": "VideoStitcherServiceClient.UpdateVodConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateVodConfig_async",
+      "title": "UpdateVodConfigRequestObjectAsync",
+      "description": "Snippet for UpdateVodConfigAsync",
+      "file": "VideoStitcherServiceClient.UpdateVodConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateVodConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateVodConfig_sync_flattened",
+      "title": "UpdateVodConfig",
+      "description": "Snippet for UpdateVodConfig",
+      "file": "VideoStitcherServiceClient.UpdateVodConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVodConfig",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateVodConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+            "name": "vodConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videostitcher_v1_generated_VideoStitcherService_UpdateVodConfig_async_flattened",
+      "title": "UpdateVodConfigAsync",
+      "description": "Snippet for UpdateVodConfigAsync",
+      "file": "VideoStitcherServiceClient.UpdateVodConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVodConfigAsync",
+        "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateVodConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodConfig",
+            "name": "vodConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.Stitcher.V1.VodConfig, Google.Cloud.Video.Stitcher.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VideoStitcherServiceClient",
+          "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVodConfig",
+          "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService.UpdateVodConfig",
+          "service": {
+            "shortName": "VideoStitcherService",
+            "fullName": "google.cloud.video.stitcher.v1.VideoStitcherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

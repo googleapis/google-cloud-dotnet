@@ -37,18 +37,21 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2RuS2V5cy97Y2RuX2tl",
             "eX1CEAoOY2RuX2tleV9jb25maWciOgoMR29vZ2xlQ2RuS2V5EhgKC3ByaXZh",
             "dGVfa2V5GAEgASgMQgPgQQQSEAoIa2V5X25hbWUYAiABKAkiJgoMQWthbWFp",
-            "Q2RuS2V5EhYKCXRva2VuX2tleRgBIAEoDEID4EEEIjkKC01lZGlhQ2RuS2V5",
-            "EhgKC3ByaXZhdGVfa2V5GAEgASgMQgPgQQQSEAoIa2V5X25hbWUYAiABKAlC",
-            "dAoiY29tLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIMQ2RuS2V5",
-            "c1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vc3RpdGNoZXIv",
-            "YXBpdjEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
+            "Q2RuS2V5EhYKCXRva2VuX2tleRgBIAEoDEID4EEEIroBCgtNZWRpYUNkbktl",
+            "eRIYCgtwcml2YXRlX2tleRgBIAEoDEID4EEEEhAKCGtleV9uYW1lGAIgASgJ",
+            "ElIKDHRva2VuX2NvbmZpZxgDIAEoCzI3Lmdvb2dsZS5jbG91ZC52aWRlby5z",
+            "dGl0Y2hlci52MS5NZWRpYUNkbktleS5Ub2tlbkNvbmZpZ0ID4EEBGisKC1Rv",
+            "a2VuQ29uZmlnEhwKD3F1ZXJ5X3BhcmFtZXRlchgBIAEoCUID4EEBQnQKImNv",
+            "bS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjFCDENkbktleXNQcm90",
+            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0aXRjaGVyL2FwaXYx",
+            "L3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CdnKey), global::Google.Cloud.Video.Stitcher.V1.CdnKey.Parser, new[]{ "GoogleCdnKey", "AkamaiCdnKey", "MediaCdnKey", "Name", "Hostname" }, new[]{ "CdnKeyConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GoogleCdnKey), global::Google.Cloud.Video.Stitcher.V1.GoogleCdnKey.Parser, new[]{ "PrivateKey", "KeyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey), global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey.Parser, new[]{ "TokenKey" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey), global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Parser, new[]{ "PrivateKey", "KeyName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey), global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Parser, new[]{ "PrivateKey", "KeyName", "TokenConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig), global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig.Parser, new[]{ "QueryParameter" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -962,6 +965,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public MediaCdnKey(MediaCdnKey other) : this() {
       privateKey_ = other.privateKey_;
       keyName_ = other.keyName_;
+      tokenConfig_ = other.tokenConfig_ != null ? other.tokenConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1001,6 +1005,22 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
+    /// <summary>Field number for the "token_config" field.</summary>
+    public const int TokenConfigFieldNumber = 3;
+    private global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig tokenConfig_;
+    /// <summary>
+    /// Optional. If set, the URL will be signed using the Media CDN token.
+    /// Otherwise, the URL would be signed using the standard Media CDN signature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig TokenConfig {
+      get { return tokenConfig_; }
+      set {
+        tokenConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1018,6 +1038,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (PrivateKey != other.PrivateKey) return false;
       if (KeyName != other.KeyName) return false;
+      if (!object.Equals(TokenConfig, other.TokenConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1027,6 +1048,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       int hash = 1;
       if (PrivateKey.Length != 0) hash ^= PrivateKey.GetHashCode();
       if (KeyName.Length != 0) hash ^= KeyName.GetHashCode();
+      if (tokenConfig_ != null) hash ^= TokenConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1053,6 +1075,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(18);
         output.WriteString(KeyName);
       }
+      if (tokenConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TokenConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1071,6 +1097,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(18);
         output.WriteString(KeyName);
       }
+      if (tokenConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TokenConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1086,6 +1116,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (KeyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyName);
+      }
+      if (tokenConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TokenConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1104,6 +1137,12 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (other.KeyName.Length != 0) {
         KeyName = other.KeyName;
+      }
+      if (other.tokenConfig_ != null) {
+        if (tokenConfig_ == null) {
+          TokenConfig = new global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig();
+        }
+        TokenConfig.MergeFrom(other.TokenConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1126,6 +1165,13 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           }
           case 18: {
             KeyName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (tokenConfig_ == null) {
+              TokenConfig = new global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig();
+            }
+            input.ReadMessage(TokenConfig);
             break;
           }
         }
@@ -1151,10 +1197,228 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             KeyName = input.ReadString();
             break;
           }
+          case 26: {
+            if (tokenConfig_ == null) {
+              TokenConfig = new global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Types.TokenConfig();
+            }
+            input.ReadMessage(TokenConfig);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MediaCdnKey message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Configuration for a Media CDN token.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TokenConfig : pb::IMessage<TokenConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TokenConfig> _parser = new pb::MessageParser<TokenConfig>(() => new TokenConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TokenConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TokenConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TokenConfig(TokenConfig other) : this() {
+          queryParameter_ = other.queryParameter_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TokenConfig Clone() {
+          return new TokenConfig(this);
+        }
+
+        /// <summary>Field number for the "query_parameter" field.</summary>
+        public const int QueryParameterFieldNumber = 1;
+        private string queryParameter_ = "";
+        /// <summary>
+        /// Optional. The query parameter in which to find the token.
+        ///
+        /// The name must be 1-64 characters long and match
+        /// the regular expression `[a-zA-Z]([a-zA-Z0-9_-])*` which means the
+        /// first character must be a letter, and all following characters
+        /// must be a dash, underscore, letter or digit.
+        ///
+        /// Defaults to `edge-cache-token`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string QueryParameter {
+          get { return queryParameter_; }
+          set {
+            queryParameter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TokenConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TokenConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (QueryParameter != other.QueryParameter) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (QueryParameter.Length != 0) hash ^= QueryParameter.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (QueryParameter.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(QueryParameter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (QueryParameter.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(QueryParameter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (QueryParameter.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryParameter);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TokenConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.QueryParameter.Length != 0) {
+            QueryParameter = other.QueryParameter;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                QueryParameter = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                QueryParameter = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

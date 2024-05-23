@@ -34,6 +34,12 @@
                 "CreateSlateAsync"
               ]
             },
+            "CreateVodConfig": {
+              "methods": [
+                "CreateVodConfig",
+                "CreateVodConfigAsync"
+              ]
+            },
             "CreateVodSession": {
               "methods": [
                 "CreateVodSession",
@@ -56,6 +62,12 @@
               "methods": [
                 "DeleteSlate",
                 "DeleteSlateAsync"
+              ]
+            },
+            "DeleteVodConfig": {
+              "methods": [
+                "DeleteVodConfig",
+                "DeleteVodConfigAsync"
               ]
             },
             "GetCdnKey": {
@@ -92,6 +104,12 @@
               "methods": [
                 "GetVodAdTagDetail",
                 "GetVodAdTagDetailAsync"
+              ]
+            },
+            "GetVodConfig": {
+              "methods": [
+                "GetVodConfig",
+                "GetVodConfigAsync"
               ]
             },
             "GetVodSession": {
@@ -136,6 +154,12 @@
                 "ListVodAdTagDetailsAsync"
               ]
             },
+            "ListVodConfigs": {
+              "methods": [
+                "ListVodConfigs",
+                "ListVodConfigsAsync"
+              ]
+            },
             "ListVodStitchDetails": {
               "methods": [
                 "ListVodStitchDetails",
@@ -148,10 +172,22 @@
                 "UpdateCdnKeyAsync"
               ]
             },
+            "UpdateLiveConfig": {
+              "methods": [
+                "UpdateLiveConfig",
+                "UpdateLiveConfigAsync"
+              ]
+            },
             "UpdateSlate": {
               "methods": [
                 "UpdateSlate",
                 "UpdateSlateAsync"
+              ]
+            },
+            "UpdateVodConfig": {
+              "methods": [
+                "UpdateVodConfig",
+                "UpdateVodConfigAsync"
               ]
             }
           }

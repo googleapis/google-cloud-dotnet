@@ -67,7 +67,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
   #region Messages
   /// <summary>
-  /// Container for a live session's ad tag detail.
+  /// Information related to the details for one ad tag. This resource is only
+  /// available for live sessions that do not implement Google Ad Manager ad
+  /// insertion.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LiveAdTagDetail : pb::IMessage<LiveAdTagDetail>

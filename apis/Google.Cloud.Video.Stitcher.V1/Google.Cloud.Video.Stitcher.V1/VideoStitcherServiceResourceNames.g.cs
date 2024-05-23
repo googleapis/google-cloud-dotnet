@@ -283,4 +283,52 @@ namespace Google.Cloud.Video.Stitcher.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateVodConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListVodConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetVodConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcvsv::VodConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvsv::VodConfigName VodConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvsv::VodConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteVodConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcvsv::VodConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvsv::VodConfigName VodConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvsv::VodConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

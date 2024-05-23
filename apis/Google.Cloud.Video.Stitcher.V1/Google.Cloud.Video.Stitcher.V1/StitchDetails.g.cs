@@ -57,9 +57,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
   #region Messages
   /// <summary>
-  /// Detailed information related to the interstitial of a VOD session. This
-  /// resource is only available for VOD sessions that do not implement Google Ad
-  /// Manager ad insertion.
+  /// Information related to the interstitial of a VOD session. This resource is
+  /// only available for VOD sessions that do not implement Google Ad Manager ad
+  /// insertion.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodStitchDetail : pb::IMessage<VodStitchDetail>
