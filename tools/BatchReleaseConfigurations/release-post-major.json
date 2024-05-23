@@ -1,0 +1,14 @@
+// Releases all APIs, whether or not there are notable changes,
+// after a major version bump.
+// Pushes are deferred - run the push-releases command
+// after all branches have been created locally.
+{
+  "ReleaseAll": {
+    "SkipIfNoReleaseNotes": false,
+    "SkipDocumentationOnly": false
+  },
+  "DryRun": false,
+  "PostMajorVersion": true,
+  "CollectProposalsEagerly": true,
+  "DeferPush": true
+}

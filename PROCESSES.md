@@ -297,6 +297,8 @@ purpose. This is a relatively advanced usage scenario, and is
 documented [alongside the source
 code](tools/Google.Cloud.Tools.ReleaseManager/BatchRelease/README.md).
 
+Sample configurations are in [tools/BatchReleaseConfigurations](tools/BatchReleaseConfigurations).
+
 ## Updating the .NET SDK
 
 Periodically, we need to update the version of the .NET SDK we use

@@ -1,0 +1,14 @@
+// Releases all "stale" libraries.
+// This is the common configuration to use.
+// Pushes are deferred - run the push-releases command
+// after all branches have been created locally.
+{
+  "ReleaseAll": {
+    "SkipIfNoReleaseNotes": true,
+    "SkipDocumentationOnly": true
+  },
+  "DryRun": false,
+  "PostMajorVersion": false,
+  "CollectProposalsEagerly": true,
+  "DeferPush": true
+}
