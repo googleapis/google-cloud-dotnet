@@ -49,6 +49,8 @@ namespace GoogleCSharpSnippets
                 RequestOptions = new RequestOptions(),
                 DirectedReadOptions = new DirectedReadOptions(),
                 DataBoostEnabled = false,
+                OrderBy = ReadRequest.Types.OrderBy.Unspecified,
+                LockHint = ReadRequest.Types.LockHint.Unspecified,
             };
             // Make the request
             ResultSet response = spannerClient.Read(request);
