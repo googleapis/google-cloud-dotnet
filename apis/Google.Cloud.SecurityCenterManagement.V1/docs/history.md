@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0, released 2024-05-24
+
+### New features
+
+- Adding support for new Security Center Management Apis ([commit 1ab8dfd](https://github.com/googleapis/google-cloud-dotnet/commit/1ab8dfdb0afc89ac0292117678beb82aff0e089b))
+- Promotion to GA.
+
+### Documentation improvements
+
+- Update comment formatting throughout API ([commit 1ab8dfd](https://github.com/googleapis/google-cloud-dotnet/commit/1ab8dfdb0afc89ac0292117678beb82aff0e089b))
+
 ## Version 1.0.0-beta04, released 2024-05-08
 
 ### New features
