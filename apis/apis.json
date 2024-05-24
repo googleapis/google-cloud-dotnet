@@ -3063,6 +3063,30 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.ManagedKafka.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Apache Kafka for BigQuery",
+      "productUrl": "https://cloud.google.com/managed-kafka",
+      "description": "Recommended Google client library to access the Apache Kafka for BigQuery service, which lets you ingest Kafka streams directly into Google Cloud.",
+      "tags": [
+        "kafka",
+        "bigquery"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/managedkafka/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "managedkafka",
+      "serviceConfigFile": "managedkafka_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true,
+      "blockRelease": "Not ready for a public release yet"
+    },
+    {
       "id": "Google.Cloud.MediaTranslation.V1Beta1",
       "version": "2.0.0-beta05",
       "type": "grpc",
