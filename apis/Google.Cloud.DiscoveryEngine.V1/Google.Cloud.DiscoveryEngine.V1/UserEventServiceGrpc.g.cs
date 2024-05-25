@@ -139,7 +139,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
 
       /// <summary>
-      /// Bulk import of User events. Request processing might be
+      /// Bulk import of user events. Request processing might be
       /// synchronous. Events that already exist are skipped.
       /// Use this method for backfilling historical user events.
       ///
@@ -298,7 +298,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CollectUserEvent, null, options, request);
       }
       /// <summary>
-      /// Bulk import of User events. Request processing might be
+      /// Bulk import of user events. Request processing might be
       /// synchronous. Events that already exist are skipped.
       /// Use this method for backfilling historical user events.
       ///
@@ -317,7 +317,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return ImportUserEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Bulk import of User events. Request processing might be
+      /// Bulk import of user events. Request processing might be
       /// synchronous. Events that already exist are skipped.
       /// Use this method for backfilling historical user events.
       ///
@@ -334,7 +334,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ImportUserEvents, null, options, request);
       }
       /// <summary>
-      /// Bulk import of User events. Request processing might be
+      /// Bulk import of user events. Request processing might be
       /// synchronous. Events that already exist are skipped.
       /// Use this method for backfilling historical user events.
       ///
@@ -353,7 +353,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return ImportUserEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Bulk import of User events. Request processing might be
+      /// Bulk import of user events. Request processing might be
       /// synchronous. Events that already exist are skipped.
       /// Use this method for backfilling historical user events.
       ///

@@ -720,7 +720,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+        /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
         /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
         /// 
@@ -760,7 +760,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+        /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
         /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
         /// 
@@ -800,7 +800,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+        /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
         /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
         /// 
@@ -835,7 +835,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+        /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
         /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
         /// 
@@ -875,7 +875,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+        /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
         /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
         /// 
@@ -915,7 +915,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+        /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
         /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
         /// 
@@ -981,7 +981,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided imported 'document' to update. If
-        /// not set, will by default update all fields.
+        /// not set, by default updates all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided imported 'document' to update. If
-        /// not set, will by default update all fields.
+        /// not set, by default updates all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided imported 'document' to update. If
-        /// not set, will by default update all fields.
+        /// not set, by default updates all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1206,7 +1206,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1.Document]s. Request processing
-        /// may be synchronous. Non-existing items will be created.
+        /// may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1.Document]s to be successfully
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1.Document]s. Request processing
-        /// may be synchronous. Non-existing items will be created.
+        /// may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1.Document]s to be successfully
@@ -1236,7 +1236,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1.Document]s. Request processing
-        /// may be synchronous. Non-existing items will be created.
+        /// may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1.Document]s to be successfully
@@ -1600,7 +1600,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1.Document]s. Request processing
-        /// may be synchronous. Non-existing items will be created.
+        /// may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1.Document]s to be successfully
@@ -1618,7 +1618,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1.Document]s. Request processing
-        /// may be synchronous. Non-existing items will be created.
+        /// may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1.Document]s to be successfully

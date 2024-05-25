@@ -33,6 +33,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
                 {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/operations/*}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/branches/*/operations/*}:cancel", "body": "*" }, { "post": "/v1/{name=projects/*/locations/*/dataStores/*/branches/*/operations/*}:cancel", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IikvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKlpgIlsvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEqWlIiTS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                },
+                {
                     "google.longrunning.Operations.GetOperation",
                     // { "get": "/v1/{name=projects/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/collections/*/dataConnector/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/branches/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/models/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/schemas/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/targetSites/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/engines/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/branches/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/models/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/operations/*}" }, { "get": "/v1/{name=projects/*/operations/*}" } ] }
                     proto::ByteString.FromBase64("EiIvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9WkwSSi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YUNvbm5lY3Rvci9vcGVyYXRpb25zLyp9WlYSVC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyovb3BlcmF0aW9ucy8qfVpUElIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9tb2RlbHMvKi9vcGVyYXRpb25zLyp9WksSSS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL29wZXJhdGlvbnMvKn1aVRJTL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovc2NoZW1hcy8qL29wZXJhdGlvbnMvKn1aXBJaL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovc2l0ZVNlYXJjaEVuZ2luZS9vcGVyYXRpb25zLyp9WmgSZi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL3NpdGVTZWFyY2hFbmdpbmUvdGFyZ2V0U2l0ZXMvb3BlcmF0aW9ucy8qfVpIEkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2VuZ2luZXMvKi9vcGVyYXRpb25zLyp9Wj4SPC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovb3BlcmF0aW9ucy8qfVpIEkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKi9vcGVyYXRpb25zLyp9WkYSRC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9tb2RlbHMvKi9vcGVyYXRpb25zLyp9Wj0SOy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9vcGVyYXRpb25zLyp9WjASLi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aJBIiL3YxL3tuYW1lPXByb2plY3RzLyovb3BlcmF0aW9ucy8qfQ==")
@@ -46,23 +51,33 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AnswerReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CompletionReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
+            yield return ControlReflection.Descriptor;
+            yield return ControlServiceReflection.Descriptor;
             yield return ConversationReflection.Descriptor;
             yield return ConversationalSearchServiceReflection.Descriptor;
             yield return DataStoreReflection.Descriptor;
             yield return DataStoreServiceReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
+            yield return DocumentProcessingConfigReflection.Descriptor;
             yield return DocumentServiceReflection.Descriptor;
             yield return EngineReflection.Descriptor;
             yield return EngineServiceReflection.Descriptor;
+            yield return GroundedGenerationServiceReflection.Descriptor;
+            yield return GroundingReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
+            yield return ProjectReflection.Descriptor;
+            yield return ProjectServiceReflection.Descriptor;
             yield return PurgeConfigReflection.Descriptor;
+            yield return RankServiceReflection.Descriptor;
             yield return RecommendationServiceReflection.Descriptor;
             yield return SchemaReflection.Descriptor;
             yield return SchemaServiceReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;
+            yield return SessionReflection.Descriptor;
             yield return SiteSearchEngineReflection.Descriptor;
             yield return SiteSearchEngineServiceReflection.Descriptor;
             yield return UserEventReflection.Descriptor;

@@ -83,6 +83,28 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListConversationsRequest> __Marshaller_google_cloud_discoveryengine_v1_ListConversationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListConversationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListConversationsResponse> __Marshaller_google_cloud_discoveryengine_v1_ListConversationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListConversationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest> __Marshaller_google_cloud_discoveryengine_v1_AnswerQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse> __Marshaller_google_cloud_discoveryengine_v1_AnswerQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest> __Marshaller_google_cloud_discoveryengine_v1_GetAnswerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.Answer> __Marshaller_google_cloud_discoveryengine_v1_Answer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.Answer.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest> __Marshaller_google_cloud_discoveryengine_v1_CreateSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.Session> __Marshaller_google_cloud_discoveryengine_v1_Session = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.Session.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest> __Marshaller_google_cloud_discoveryengine_v1_DeleteSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest> __Marshaller_google_cloud_discoveryengine_v1_UpdateSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest> __Marshaller_google_cloud_discoveryengine_v1_GetSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest> __Marshaller_google_cloud_discoveryengine_v1_ListSessionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse> __Marshaller_google_cloud_discoveryengine_v1_ListSessionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ConverseConversationRequest, global::Google.Cloud.DiscoveryEngine.V1.ConverseConversationResponse> __Method_ConverseConversation = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ConverseConversationRequest, global::Google.Cloud.DiscoveryEngine.V1.ConverseConversationResponse>(
@@ -131,6 +153,62 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "ListConversations",
         __Marshaller_google_cloud_discoveryengine_v1_ListConversationsRequest,
         __Marshaller_google_cloud_discoveryengine_v1_ListConversationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse> __Method_AnswerQuery = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnswerQuery",
+        __Marshaller_google_cloud_discoveryengine_v1_AnswerQueryRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_AnswerQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest, global::Google.Cloud.DiscoveryEngine.V1.Answer> __Method_GetAnswer = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest, global::Google.Cloud.DiscoveryEngine.V1.Answer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAnswer",
+        __Marshaller_google_cloud_discoveryengine_v1_GetAnswerRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Answer);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session> __Method_CreateSession = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSession",
+        __Marshaller_google_cloud_discoveryengine_v1_CreateSessionRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Session);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSession = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSession",
+        __Marshaller_google_cloud_discoveryengine_v1_DeleteSessionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session> __Method_UpdateSession = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSession",
+        __Marshaller_google_cloud_discoveryengine_v1_UpdateSessionRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Session);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session> __Method_GetSession = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSession",
+        __Marshaller_google_cloud_discoveryengine_v1_GetSessionRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Session);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse> __Method_ListSessions = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSessions",
+        __Marshaller_google_cloud_discoveryengine_v1_ListSessionsRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_ListSessionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -222,6 +300,101 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.ListConversationsResponse> ListConversations(global::Google.Cloud.DiscoveryEngine.V1.ListConversationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Answer query method.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse> AnswerQuery(global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a Answer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Answer> GetAnswer(global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to create already
+      /// exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Session> CreateSession(global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to delete does
+      /// not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSession(global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Session.
+      ///
+      /// [Session][google.cloud.discoveryengine.v1.Session] action type cannot be
+      /// changed. If the [Session][google.cloud.discoveryengine.v1.Session] to
+      /// update does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Session> UpdateSession(global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a Session.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Session> GetSession(global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all Sessions by their parent
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse> ListSessions(global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -591,6 +764,386 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConversations, null, options, request);
       }
+      /// <summary>
+      /// Answer query method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse AnswerQuery(global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnswerQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Answer query method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse AnswerQuery(global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnswerQuery, null, options, request);
+      }
+      /// <summary>
+      /// Answer query method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse> AnswerQueryAsync(global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnswerQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Answer query method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse> AnswerQueryAsync(global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnswerQuery, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Answer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Answer GetAnswer(global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnswer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Answer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Answer GetAnswer(global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAnswer, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Answer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Answer> GetAnswerAsync(global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnswerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Answer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Answer> GetAnswerAsync(global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAnswer, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to create already
+      /// exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Session CreateSession(global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to create already
+      /// exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Session CreateSession(global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSession, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to create already
+      /// exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Session> CreateSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to create already
+      /// exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Session> CreateSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSession, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to delete does
+      /// not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to delete does
+      /// not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSession, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to delete does
+      /// not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Session.
+      ///
+      /// If the [Session][google.cloud.discoveryengine.v1.Session] to delete does
+      /// not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSession, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Session.
+      ///
+      /// [Session][google.cloud.discoveryengine.v1.Session] action type cannot be
+      /// changed. If the [Session][google.cloud.discoveryengine.v1.Session] to
+      /// update does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Session UpdateSession(global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Session.
+      ///
+      /// [Session][google.cloud.discoveryengine.v1.Session] action type cannot be
+      /// changed. If the [Session][google.cloud.discoveryengine.v1.Session] to
+      /// update does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Session UpdateSession(global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSession, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Session.
+      ///
+      /// [Session][google.cloud.discoveryengine.v1.Session] action type cannot be
+      /// changed. If the [Session][google.cloud.discoveryengine.v1.Session] to
+      /// update does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Session> UpdateSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Session.
+      ///
+      /// [Session][google.cloud.discoveryengine.v1.Session] action type cannot be
+      /// changed. If the [Session][google.cloud.discoveryengine.v1.Session] to
+      /// update does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Session> UpdateSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSession, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Session GetSession(global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Session GetSession(global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSession, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Session> GetSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Session> GetSessionAsync(global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSession, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Sessions by their parent
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse ListSessions(global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Sessions by their parent
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse ListSessions(global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSessions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Sessions by their parent
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Sessions by their parent
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSessions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConversationalSearchServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -610,7 +1163,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           .AddMethod(__Method_DeleteConversation, serviceImpl.DeleteConversation)
           .AddMethod(__Method_UpdateConversation, serviceImpl.UpdateConversation)
           .AddMethod(__Method_GetConversation, serviceImpl.GetConversation)
-          .AddMethod(__Method_ListConversations, serviceImpl.ListConversations).Build();
+          .AddMethod(__Method_ListConversations, serviceImpl.ListConversations)
+          .AddMethod(__Method_AnswerQuery, serviceImpl.AnswerQuery)
+          .AddMethod(__Method_GetAnswer, serviceImpl.GetAnswer)
+          .AddMethod(__Method_CreateSession, serviceImpl.CreateSession)
+          .AddMethod(__Method_DeleteSession, serviceImpl.DeleteSession)
+          .AddMethod(__Method_UpdateSession, serviceImpl.UpdateSession)
+          .AddMethod(__Method_GetSession, serviceImpl.GetSession)
+          .AddMethod(__Method_ListSessions, serviceImpl.ListSessions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -626,6 +1186,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       serviceBinder.AddMethod(__Method_UpdateConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.UpdateConversationRequest, global::Google.Cloud.DiscoveryEngine.V1.Conversation>(serviceImpl.UpdateConversation));
       serviceBinder.AddMethod(__Method_GetConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.GetConversationRequest, global::Google.Cloud.DiscoveryEngine.V1.Conversation>(serviceImpl.GetConversation));
       serviceBinder.AddMethod(__Method_ListConversations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ListConversationsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListConversationsResponse>(serviceImpl.ListConversations));
+      serviceBinder.AddMethod(__Method_AnswerQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse>(serviceImpl.AnswerQuery));
+      serviceBinder.AddMethod(__Method_GetAnswer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest, global::Google.Cloud.DiscoveryEngine.V1.Answer>(serviceImpl.GetAnswer));
+      serviceBinder.AddMethod(__Method_CreateSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session>(serviceImpl.CreateSession));
+      serviceBinder.AddMethod(__Method_DeleteSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSession));
+      serviceBinder.AddMethod(__Method_UpdateSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session>(serviceImpl.UpdateSession));
+      serviceBinder.AddMethod(__Method_GetSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.GetSessionRequest, global::Google.Cloud.DiscoveryEngine.V1.Session>(serviceImpl.GetSession));
+      serviceBinder.AddMethod(__Method_ListSessions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse>(serviceImpl.ListSessions));
     }
 
   }

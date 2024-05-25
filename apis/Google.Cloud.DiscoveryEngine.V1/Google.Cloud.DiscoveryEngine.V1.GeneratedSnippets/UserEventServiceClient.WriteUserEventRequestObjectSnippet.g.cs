@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 UserEvent = new UserEvent(),
+                WriteAsync = false,
             };
             // Make the request
             UserEvent response = userEventServiceClient.WriteUserEvent(request);
