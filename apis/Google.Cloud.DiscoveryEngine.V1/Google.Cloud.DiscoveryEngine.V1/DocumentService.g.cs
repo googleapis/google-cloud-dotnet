@@ -416,7 +416,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>
     /// Maximum number of [Document][google.cloud.discoveryengine.v1.Document]s to
     /// return. If unspecified, defaults to 100. The maximum allowed value is 1000.
-    /// Values above 1000 will be coerced to 1000.
+    /// Values above 1000 are set to 1000.
     ///
     /// If this field is negative, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
@@ -953,7 +953,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private string documentId_ = "";
     /// <summary>
     /// Required. The ID to use for the
-    /// [Document][google.cloud.discoveryengine.v1.Document], which will become the
+    /// [Document][google.cloud.discoveryengine.v1.Document], which becomes the
     /// final component of the
     /// [Document.name][google.cloud.discoveryengine.v1.Document.name].
     ///
@@ -1249,9 +1249,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the
+    /// If set to `true` and the
     /// [Document][google.cloud.discoveryengine.v1.Document] is not found, a new
-    /// [Document][google.cloud.discoveryengine.v1.Document] will be created.
+    /// [Document][google.cloud.discoveryengine.v1.Document] is be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1267,7 +1267,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Indicates which fields in the provided imported 'document' to update. If
-    /// not set, will by default update all fields.
+    /// not set, by default updates all fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

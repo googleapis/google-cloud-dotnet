@@ -19,6 +19,25 @@ using gcdv = Google.Cloud.DiscoveryEngine.V1;
 
 namespace Google.Cloud.DiscoveryEngine.V1
 {
+    public partial class UserEvent
+    {
+        /// <summary><see cref="EngineName"/>-typed view over the <see cref="Engine"/> resource name property.</summary>
+        public EngineName EngineAsEngineName
+        {
+            get => string.IsNullOrEmpty(Engine) ? null : EngineName.Parse(Engine, allowUnparsed: true);
+            set => Engine = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+        /// </summary>
+        public DataStoreName DataStoreAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+            set => DataStore = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DocumentInfo
     {
         /// <summary>

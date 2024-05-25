@@ -1042,8 +1042,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Filter by solution type. For example: filter =
-    /// 'solution_type:SOLUTION_TYPE_SEARCH'
+    /// Filter by solution type .
+    /// For example: `filter = 'solution_type:SOLUTION_TYPE_SEARCH'`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

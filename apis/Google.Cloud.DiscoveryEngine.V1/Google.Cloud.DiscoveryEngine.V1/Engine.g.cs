@@ -28,7 +28,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MS9jb21tb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6AoKBkVu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4woKBkVu",
             "Z2luZRJWChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsyOC5nb29nbGUuY2xv",
             "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5DaGF0RW5naW5lQ29uZmln",
             "SAASWgoUc2VhcmNoX2VuZ2luZV9jb25maWcYDSABKAsyOi5nb29nbGUuY2xv",
@@ -54,18 +54,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "b3dfYWdlbnRfdG9fbGluaxgCIAEoCRpwChNBZ2VudENyZWF0aW9uQ29uZmln",
             "EhAKCGJ1c2luZXNzGAEgASgJEh0KFWRlZmF1bHRfbGFuZ3VhZ2VfY29kZRgC",
             "IAEoCRIWCgl0aW1lX3pvbmUYAyABKAlCA+BBAhIQCghsb2NhdGlvbhgEIAEo",
-            "CRopCgxDb21tb25Db25maWcSGQoMY29tcGFueV9uYW1lGAEgASgJQgPgQQUa",
-            "LgoSQ2hhdEVuZ2luZU1ldGFkYXRhEhgKEGRpYWxvZ2Zsb3dfYWdlbnQYASAB",
-            "KAk6fepBegolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0VuZ2lu",
-            "ZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nv",
-            "bGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVzL3tlbmdpbmV9Qg8KDWVu",
-            "Z2luZV9jb25maWdCEQoPZW5naW5lX21ldGFkYXRhQv4BCiNjb20uZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUILRW5naW5lUHJvdG9QAVpNY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292",
-            "ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJ",
-            "TkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xl",
-            "XENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRp",
-            "c2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "CRokCgxDb21tb25Db25maWcSFAoMY29tcGFueV9uYW1lGAEgASgJGi4KEkNo",
+            "YXRFbmdpbmVNZXRhZGF0YRIYChBkaWFsb2dmbG93X2FnZW50GAEgASgJOn3q",
+            "QXoKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9FbmdpbmUSUXBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0",
+            "aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97ZW5naW5lfUIPCg1lbmdpbmVf",
+            "Y29uZmlnQhEKD2VuZ2luZV9tZXRhZGF0YUL+AQojY29tLmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjFCC0VuZ2luZVByb3RvUAFaTWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVu",
+            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIf",
+            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3Zl",
+            "cnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -325,7 +325,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// The restriction of the Engine industry vertical is based on
     /// [DataStore][google.cloud.discoveryengine.v1.DataStore]: If unspecified,
     /// default to `GENERIC`. Vertical on Engine has to match vertical of the
-    /// DataStore liniked to the engine.
+    /// DataStore linked to the engine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1727,8 +1727,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public const int CompanyNameFieldNumber = 1;
         private string companyName_ = "";
         /// <summary>
-        /// Immutable. The name of the company, business or entity that is associated
-        /// with the engine. Setting this may help improve LLM related features.
+        /// The name of the company, business or entity that is associated with the
+        /// engine. Setting this may help improve LLM related features.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

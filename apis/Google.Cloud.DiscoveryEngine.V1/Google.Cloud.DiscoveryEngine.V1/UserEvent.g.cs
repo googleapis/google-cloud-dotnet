@@ -29,59 +29,62 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
             "Y2UucHJvdG8aLGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvY29t",
             "bW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuwcKCVVzZXJFdmVudBIX",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuggKCVVzZXJFdmVudBIX",
             "CgpldmVudF90eXBlGAEgASgJQgPgQQISGwoOdXNlcl9wc2V1ZG9faWQYAiAB",
-            "KAlCA+BBAhIuCgpldmVudF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBI8Cgl1c2VyX2luZm8YBCABKAsyKS5nb29nbGUuY2xvdWQu",
-            "ZGlzY292ZXJ5ZW5naW5lLnYxLlVzZXJJbmZvEhsKE2RpcmVjdF91c2VyX3Jl",
-            "cXVlc3QYBSABKAgSEgoKc2Vzc2lvbl9pZBgGIAEoCRI8CglwYWdlX2luZm8Y",
-            "ByABKAsyKS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlBhZ2VJ",
-            "bmZvEhkKEWF0dHJpYnV0aW9uX3Rva2VuGAggASgJEg4KBmZpbHRlchgJIAEo",
-            "CRJACglkb2N1bWVudHMYCiADKAsyLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxLkRvY3VtZW50SW5mbxI5CgVwYW5lbBgLIAEoCzIqLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuUGFuZWxJbmZvEkAKC3NlYXJj",
-            "aF9pbmZvGAwgASgLMisuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MS5TZWFyY2hJbmZvEkgKD2NvbXBsZXRpb25faW5mbxgNIAEoCzIvLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ29tcGxldGlvbkluZm8SSgoQ",
-            "dHJhbnNhY3Rpb25faW5mbxgOIAEoCzIwLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjEuVHJhbnNhY3Rpb25JbmZvEg8KB3RhZ19pZHMYDyADKAkS",
-            "FQoNcHJvbW90aW9uX2lkcxgQIAMoCRJOCgphdHRyaWJ1dGVzGBEgAygLMjou",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Vc2VyRXZlbnQuQXR0",
-            "cmlidXRlc0VudHJ5Ej4KCm1lZGlhX2luZm8YEiABKAsyKi5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLk1lZGlhSW5mbxpjCg9BdHRyaWJ1dGVz",
-            "RW50cnkSCwoDa2V5GAEgASgJEj8KBXZhbHVlGAIgASgLMjAuZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5DdXN0b21BdHRyaWJ1dGU6AjgBIlkK",
-            "CFBhZ2VJbmZvEhMKC3BhZ2V2aWV3X2lkGAEgASgJEhUKDXBhZ2VfY2F0ZWdv",
-            "cnkYAiABKAkSCwoDdXJpGAMgASgJEhQKDHJlZmVycmVyX3VyaRgEIAEoCSJU",
-            "CgpTZWFyY2hJbmZvEhQKDHNlYXJjaF9xdWVyeRgBIAEoCRIQCghvcmRlcl9i",
-            "eRgCIAEoCRITCgZvZmZzZXQYAyABKAVIAIgBAUIJCgdfb2Zmc2V0IkgKDkNv",
-            "bXBsZXRpb25JbmZvEhsKE3NlbGVjdGVkX3N1Z2dlc3Rpb24YASABKAkSGQoR",
-            "c2VsZWN0ZWRfcG9zaXRpb24YAiABKAUiyQEKD1RyYW5zYWN0aW9uSW5mbxIX",
-            "CgV2YWx1ZRgBIAEoAkID4EECSACIAQESFQoIY3VycmVuY3kYAiABKAlCA+BB",
-            "AhIWCg50cmFuc2FjdGlvbl9pZBgDIAEoCRIQCgN0YXgYBCABKAJIAYgBARIR",
-            "CgRjb3N0GAUgASgCSAKIAQESGwoOZGlzY291bnRfdmFsdWUYBiABKAJIA4gB",
-            "AUIICgZfdmFsdWVCBgoEX3RheEIHCgVfY29zdEIRCg9fZGlzY291bnRfdmFs",
-            "dWUiuwEKDERvY3VtZW50SW5mbxIMCgJpZBgBIAEoCUgAEjwKBG5hbWUYAiAB",
-            "KAlCLPpBKQonZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RvY3Vt",
-            "ZW50SAASDQoDdXJpGAYgASgJSAASFQoIcXVhbnRpdHkYAyABKAVIAYgBARIV",
-            "Cg1wcm9tb3Rpb25faWRzGAQgAygJQhUKE2RvY3VtZW50X2Rlc2NyaXB0b3JC",
-            "CwoJX3F1YW50aXR5IpQBCglQYW5lbEluZm8SFQoIcGFuZWxfaWQYAiABKAlC",
-            "A+BBAhIUCgxkaXNwbGF5X25hbWUYAyABKAkSGwoOcGFuZWxfcG9zaXRpb24Y",
-            "BCABKAVIAIgBARIZCgx0b3RhbF9wYW5lbHMYBSABKAVIAYgBAUIRCg9fcGFu",
-            "ZWxfcG9zaXRpb25CDwoNX3RvdGFsX3BhbmVscyKNAQoJTWVkaWFJbmZvEjoK",
-            "F21lZGlhX3Byb2dyZXNzX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEiYKGW1lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2UYAiAB",
-            "KAJIAIgBAUIcChpfbWVkaWFfcHJvZ3Jlc3NfcGVyY2VudGFnZUKBAgojY29t",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCDlVzZXJFdmVudFBy",
-            "b3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2Fw",
-            "aXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElT",
-            "Q09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5W",
-            "McoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6",
-            "OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "KAlCA+BBAhI6CgZlbmdpbmUYEyABKAlCKvpBJwolZGlzY292ZXJ5ZW5naW5l",
+            "Lmdvb2dsZWFwaXMuY29tL0VuZ2luZRJBCgpkYXRhX3N0b3JlGBQgASgJQi36",
+            "QSoKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9EYXRhU3RvcmUS",
+            "LgoKZXZlbnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASPAoJdXNlcl9pbmZvGAQgASgLMikuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MS5Vc2VySW5mbxIbChNkaXJlY3RfdXNlcl9yZXF1ZXN0GAUg",
+            "ASgIEhIKCnNlc3Npb25faWQYBiABKAkSPAoJcGFnZV9pbmZvGAcgASgLMiku",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5QYWdlSW5mbxIZChFh",
+            "dHRyaWJ1dGlvbl90b2tlbhgIIAEoCRIOCgZmaWx0ZXIYCSABKAkSQAoJZG9j",
+            "dW1lbnRzGAogAygLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5Eb2N1bWVudEluZm8SOQoFcGFuZWwYCyABKAsyKi5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxLlBhbmVsSW5mbxJACgtzZWFyY2hfaW5mbxgM",
+            "IAEoCzIrLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNo",
+            "SW5mbxJICg9jb21wbGV0aW9uX2luZm8YDSABKAsyLy5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxLkNvbXBsZXRpb25JbmZvEkoKEHRyYW5zYWN0",
+            "aW9uX2luZm8YDiABKAsyMC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLlRyYW5zYWN0aW9uSW5mbxIPCgd0YWdfaWRzGA8gAygJEhUKDXByb21v",
+            "dGlvbl9pZHMYECADKAkSTgoKYXR0cmlidXRlcxgRIAMoCzI6Lmdvb2dsZS5j",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuVXNlckV2ZW50LkF0dHJpYnV0ZXNF",
+            "bnRyeRI+CgptZWRpYV9pbmZvGBIgASgLMiouZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MS5NZWRpYUluZm8aYwoPQXR0cmlidXRlc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRI/CgV2YWx1ZRgCIAEoCzIwLmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjEuQ3VzdG9tQXR0cmlidXRlOgI4ASJZCghQYWdlSW5m",
+            "bxITCgtwYWdldmlld19pZBgBIAEoCRIVCg1wYWdlX2NhdGVnb3J5GAIgASgJ",
+            "EgsKA3VyaRgDIAEoCRIUCgxyZWZlcnJlcl91cmkYBCABKAkiVAoKU2VhcmNo",
+            "SW5mbxIUCgxzZWFyY2hfcXVlcnkYASABKAkSEAoIb3JkZXJfYnkYAiABKAkS",
+            "EwoGb2Zmc2V0GAMgASgFSACIAQFCCQoHX29mZnNldCJICg5Db21wbGV0aW9u",
+            "SW5mbxIbChNzZWxlY3RlZF9zdWdnZXN0aW9uGAEgASgJEhkKEXNlbGVjdGVk",
+            "X3Bvc2l0aW9uGAIgASgFIskBCg9UcmFuc2FjdGlvbkluZm8SFwoFdmFsdWUY",
+            "ASABKAJCA+BBAkgAiAEBEhUKCGN1cnJlbmN5GAIgASgJQgPgQQISFgoOdHJh",
+            "bnNhY3Rpb25faWQYAyABKAkSEAoDdGF4GAQgASgCSAGIAQESEQoEY29zdBgF",
+            "IAEoAkgCiAEBEhsKDmRpc2NvdW50X3ZhbHVlGAYgASgCSAOIAQFCCAoGX3Zh",
+            "bHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2NvdW50X3ZhbHVlIrsBCgxE",
+            "b2N1bWVudEluZm8SDAoCaWQYASABKAlIABI8CgRuYW1lGAIgASgJQiz6QSkK",
+            "J2Rpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudEgAEg0K",
+            "A3VyaRgGIAEoCUgAEhUKCHF1YW50aXR5GAMgASgFSAGIAQESFQoNcHJvbW90",
+            "aW9uX2lkcxgEIAMoCUIVChNkb2N1bWVudF9kZXNjcmlwdG9yQgsKCV9xdWFu",
+            "dGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBhbmVsX2lkGAIgASgJQgPgQQISFAoM",
+            "ZGlzcGxheV9uYW1lGAMgASgJEhsKDnBhbmVsX3Bvc2l0aW9uGAQgASgFSACI",
+            "AQESGQoMdG90YWxfcGFuZWxzGAUgASgFSAGIAQFCEQoPX3BhbmVsX3Bvc2l0",
+            "aW9uQg8KDV90b3RhbF9wYW5lbHMijQEKCU1lZGlhSW5mbxI6ChdtZWRpYV9w",
+            "cm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhImChltZWRpYV9wcm9ncmVzc19wZXJjZW50YWdlGAIgASgCSACIAQFC",
+            "HAoaX21lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2VCgQIKI2NvbS5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQg5Vc2VyRXZlbnRQcm90b1ABWk1j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNj",
+            "b3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVO",
+            "R0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29n",
+            "bGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6",
+            "RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserEvent), global::Google.Cloud.DiscoveryEngine.V1.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserEvent), global::Google.Cloud.DiscoveryEngine.V1.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "Engine", "DataStore", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PageInfo), global::Google.Cloud.DiscoveryEngine.V1.PageInfo.Parser, new[]{ "PageviewId", "PageCategory", "Uri", "ReferrerUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchInfo.Parser, new[]{ "SearchQuery", "OrderBy", "Offset" }, new[]{ "Offset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompletionInfo), global::Google.Cloud.DiscoveryEngine.V1.CompletionInfo.Parser, new[]{ "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
@@ -97,7 +100,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   #region Messages
   /// <summary>
   /// UserEvent captures all metadata information Discovery Engine API needs to
-  /// know about how end users interact with customers' website.
+  /// know about how end users interact with your website.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
@@ -136,6 +139,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public UserEvent(UserEvent other) : this() {
       eventType_ = other.eventType_;
       userPseudoId_ = other.userPseudoId_;
+      engine_ = other.engine_;
+      dataStore_ = other.dataStore_;
       eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
       userInfo_ = other.userInfo_ != null ? other.userInfo_.Clone() : null;
       directUserRequest_ = other.directUserRequest_;
@@ -222,6 +227,51 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return userPseudoId_; }
       set {
         userPseudoId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "engine" field.</summary>
+    public const int EngineFieldNumber = 19;
+    private string engine_ = "";
+    /// <summary>
+    /// The [Engine][google.cloud.discoveryengine.v1.Engine] resource name, in the
+    /// form of
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
+    ///
+    /// Optional. Only required for
+    /// [Engine][google.cloud.discoveryengine.v1.Engine] produced user events. For
+    /// example, user events from blended search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Engine {
+      get { return engine_; }
+      set {
+        engine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_store" field.</summary>
+    public const int DataStoreFieldNumber = 20;
+    private string dataStore_ = "";
+    /// <summary>
+    /// The [DataStore][google.cloud.discoveryengine.v1.DataStore] resource full
+    /// name, of the form
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+    ///
+    /// Optional. Only required for user events whose data store can't by
+    /// determined by
+    /// [UserEvent.engine][google.cloud.discoveryengine.v1.UserEvent.engine] or
+    /// [UserEvent.documents][google.cloud.discoveryengine.v1.UserEvent.documents].
+    /// If data store is set in the parent of write/import/collect user event
+    /// requests, this field can be omitted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataStore {
+      get { return dataStore_; }
+      set {
+        dataStore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -496,7 +546,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>
     /// A list of identifiers for the independent experiment groups this user event
     /// belongs to. This is used to distinguish between user events associated with
-    /// different experiment setups on the customer end.
+    /// different experiment setups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -590,6 +640,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (EventType != other.EventType) return false;
       if (UserPseudoId != other.UserPseudoId) return false;
+      if (Engine != other.Engine) return false;
+      if (DataStore != other.DataStore) return false;
       if (!object.Equals(EventTime, other.EventTime)) return false;
       if (!object.Equals(UserInfo, other.UserInfo)) return false;
       if (DirectUserRequest != other.DirectUserRequest) return false;
@@ -615,6 +667,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       int hash = 1;
       if (EventType.Length != 0) hash ^= EventType.GetHashCode();
       if (UserPseudoId.Length != 0) hash ^= UserPseudoId.GetHashCode();
+      if (Engine.Length != 0) hash ^= Engine.GetHashCode();
+      if (DataStore.Length != 0) hash ^= DataStore.GetHashCode();
       if (eventTime_ != null) hash ^= EventTime.GetHashCode();
       if (userInfo_ != null) hash ^= UserInfo.GetHashCode();
       if (DirectUserRequest != false) hash ^= DirectUserRequest.GetHashCode();
@@ -709,6 +763,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(MediaInfo);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Engine);
+      }
+      if (DataStore.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(DataStore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -779,6 +841,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(MediaInfo);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Engine);
+      }
+      if (DataStore.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(DataStore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -794,6 +864,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (UserPseudoId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserPseudoId);
+      }
+      if (Engine.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Engine);
+      }
+      if (DataStore.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DataStore);
       }
       if (eventTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EventTime);
@@ -852,6 +928,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.UserPseudoId.Length != 0) {
         UserPseudoId = other.UserPseudoId;
+      }
+      if (other.Engine.Length != 0) {
+        Engine = other.Engine;
+      }
+      if (other.DataStore.Length != 0) {
+        DataStore = other.DataStore;
       }
       if (other.eventTime_ != null) {
         if (eventTime_ == null) {
@@ -1028,6 +1110,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(MediaInfo);
             break;
           }
+          case 154: {
+            Engine = input.ReadString();
+            break;
+          }
+          case 162: {
+            DataStore = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1137,6 +1227,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               MediaInfo = new global::Google.Cloud.DiscoveryEngine.V1.MediaInfo();
             }
             input.ReadMessage(MediaInfo);
+            break;
+          }
+          case 154: {
+            Engine = input.ReadString();
+            break;
+          }
+          case 162: {
+            DataStore = input.ReadString();
             break;
           }
         }
@@ -2702,7 +2800,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>
     /// Quantity of the Document associated with the user event. Defaults to 1.
     ///
-    /// For example, this field will be 2 if two quantities of the same Document
+    /// For example, this field is 2 if two quantities of the same Document
     /// are involved in a `add-to-cart` event.
     ///
     /// Required for events of the following event types:

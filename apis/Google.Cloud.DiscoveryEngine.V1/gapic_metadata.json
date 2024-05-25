@@ -32,11 +32,56 @@
         }
       }
     },
+    "ControlService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ControlServiceClient",
+          "rpcs": {
+            "CreateControl": {
+              "methods": [
+                "CreateControl",
+                "CreateControlAsync"
+              ]
+            },
+            "DeleteControl": {
+              "methods": [
+                "DeleteControl",
+                "DeleteControlAsync"
+              ]
+            },
+            "GetControl": {
+              "methods": [
+                "GetControl",
+                "GetControlAsync"
+              ]
+            },
+            "ListControls": {
+              "methods": [
+                "ListControls",
+                "ListControlsAsync"
+              ]
+            },
+            "UpdateControl": {
+              "methods": [
+                "UpdateControl",
+                "UpdateControlAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ConversationalSearchService": {
       "clients": {
         "grpc": {
           "libraryClient": "ConversationalSearchServiceClient",
           "rpcs": {
+            "AnswerQuery": {
+              "methods": [
+                "AnswerQuery",
+                "AnswerQueryAsync"
+              ]
+            },
             "ConverseConversation": {
               "methods": [
                 "ConverseConversation",
@@ -49,10 +94,28 @@
                 "CreateConversationAsync"
               ]
             },
+            "CreateSession": {
+              "methods": [
+                "CreateSession",
+                "CreateSessionAsync"
+              ]
+            },
             "DeleteConversation": {
               "methods": [
                 "DeleteConversation",
                 "DeleteConversationAsync"
+              ]
+            },
+            "DeleteSession": {
+              "methods": [
+                "DeleteSession",
+                "DeleteSessionAsync"
+              ]
+            },
+            "GetAnswer": {
+              "methods": [
+                "GetAnswer",
+                "GetAnswerAsync"
               ]
             },
             "GetConversation": {
@@ -61,16 +124,34 @@
                 "GetConversationAsync"
               ]
             },
+            "GetSession": {
+              "methods": [
+                "GetSession",
+                "GetSessionAsync"
+              ]
+            },
             "ListConversations": {
               "methods": [
                 "ListConversations",
                 "ListConversationsAsync"
               ]
             },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
             "UpdateConversation": {
               "methods": [
                 "UpdateConversation",
                 "UpdateConversationAsync"
+              ]
+            },
+            "UpdateSession": {
+              "methods": [
+                "UpdateSession",
+                "UpdateSessionAsync"
               ]
             }
           }
@@ -200,6 +281,51 @@
               "methods": [
                 "UpdateEngine",
                 "UpdateEngineAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GroundedGenerationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GroundedGenerationServiceClient",
+          "rpcs": {
+            "CheckGrounding": {
+              "methods": [
+                "CheckGrounding",
+                "CheckGroundingAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ProjectService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProjectServiceClient",
+          "rpcs": {
+            "ProvisionProject": {
+              "methods": [
+                "ProvisionProject",
+                "ProvisionProjectAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RankService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RankServiceClient",
+          "rpcs": {
+            "Rank": {
+              "methods": [
+                "Rank",
+                "RankAsync"
               ]
             }
           }

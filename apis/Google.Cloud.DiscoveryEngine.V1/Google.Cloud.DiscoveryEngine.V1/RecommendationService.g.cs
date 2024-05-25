@@ -146,7 +146,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// `projects/*/locations/global/collections/*/dataStores/*/servingConfigs/*`
     ///
     /// One default serving config is created along with your recommendation engine
-    /// creation. The engine ID will be used as the ID of the default serving
+    /// creation. The engine ID is used as the ID of the default serving
     /// config. For example, for Engine
     /// `projects/*/locations/global/collections/*/engines/my-engine`, you can use
     /// `projects/*/locations/global/collections/*/engines/my-engine/servingConfigs/my-engine`
@@ -198,9 +198,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private int pageSize_;
     /// <summary>
     /// Maximum number of results to return. Set this property
-    /// to the number of recommendation results needed. If zero, the service will
-    /// choose a reasonable default. The maximum allowed value is 100. Values
-    /// above 100 will be coerced to 100.
+    /// to the number of recommendation results needed. If zero, the service
+    /// chooses a reasonable default. The maximum allowed value is 100. Values
+    /// above 100 are set to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -232,15 +232,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     ///  * (available: true) AND
     ///    (launguage: ANY("en", "es")) OR (categories: ANY("Movie"))
     ///
-    /// If your filter blocks all results, the API will return generic
+    /// If your filter blocks all results, the API returns generic
     /// (unfiltered) popular Documents. If you only want results strictly matching
-    /// the filters, set `strictFiltering` to True in
+    /// the filters, set `strictFiltering` to `true` in
     /// [RecommendRequest.params][google.cloud.discoveryengine.v1.RecommendRequest.params]
     /// to receive empty results instead.
     ///
-    /// Note that the API will never return
+    /// Note that the API never returns
     /// [Document][google.cloud.discoveryengine.v1.Document]s with `storageStatus`
-    /// of `EXPIRED` or `DELETED` regardless of filter choices.
+    /// as `EXPIRED` or `DELETED` regardless of filter choices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -255,8 +255,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int ValidateOnlyFieldNumber = 5;
     private bool validateOnly_;
     /// <summary>
-    /// Use validate only mode for this recommendation query. If set to true, a
-    /// fake model will be used that returns arbitrary Document IDs.
+    /// Use validate only mode for this recommendation query. If set to `true`, a
+    /// fake model is used that returns arbitrary Document IDs.
     /// Note that the validate only mode should only be used for testing the API,
     /// or if the model is not ready.
     /// </summary>
@@ -279,16 +279,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     ///
     /// Allowed values:
     ///
-    /// * `returnDocument`: Boolean. If set to true, the associated Document
-    ///    object will be returned in
+    /// * `returnDocument`: Boolean. If set to `true`, the associated Document
+    ///    object is returned in
     ///    [RecommendResponse.RecommendationResult.document][google.cloud.discoveryengine.v1.RecommendResponse.RecommendationResult.document].
-    /// * `returnScore`: Boolean. If set to true, the recommendation 'score'
-    ///    corresponding to each returned Document will be set in
+    /// * `returnScore`: Boolean. If set to true, the recommendation score
+    ///    corresponding to each returned Document is set in
     ///    [RecommendResponse.RecommendationResult.metadata][google.cloud.discoveryengine.v1.RecommendResponse.RecommendationResult.metadata].
-    ///    The given 'score' indicates the probability of a Document conversion
-    ///    given the user's context and history.
-    /// * `strictFiltering`: Boolean. True by default. If set to false, the service
-    ///    will return generic (unfiltered) popular Documents instead of empty if
+    ///    The given score indicates the probability of a Document conversion given
+    ///    the user's context and history.
+    /// * `strictFiltering`: Boolean. True by default. If set to `false`, the
+    /// service
+    ///    returns generic (unfiltered) popular Documents instead of empty if
     ///    your filter blocks all recommendation results.
     /// * `diversityLevel`: String. Default empty. If set to be non-empty, then
     ///    it needs to be one of:
@@ -997,7 +998,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 26);
         private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> metadata_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
         /// <summary>
-        /// Additional Document metadata / annotations.
+        /// Additional Document metadata or annotations.
         ///
         /// Possible values:
         ///

@@ -419,7 +419,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         = pb::FieldCodec.ForMessage(258, global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec> dataStoreSpecs_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec>();
     /// <summary>
-    /// A list of data store specs to apply on a search call.
+    /// Specs defining dataStores to filter on in a search call and configurations
+    /// for those dataStores. This is only considered for engines with multiple
+    /// dataStores use case. For single dataStore within an engine, they should
+    /// use the specs at the top level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -489,7 +492,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// The order in which documents are returned. Documents can be ordered by
     /// a field in an [Document][google.cloud.discoveryengine.v1.Document] object.
     /// Leave it unset if ordered by relevance. `order_by` expression is
-    /// case-sensitive. For more information on ordering, see
+    /// case-sensitive.
+    ///
+    /// For more information on ordering for retail search, see
     /// [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order)
     ///
     /// If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
@@ -544,7 +549,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>
     /// Boost specification to boost certain documents.
     /// For more information on boosting, see
-    /// [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+    /// [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -567,8 +572,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     ///
     /// * `user_country_code`: string. Default empty. If set to non-empty, results
     ///    are restricted or boosted based on the location provided.
-    ///    Example:
-    ///    user_country_code: "au"
+    ///    For example, `user_country_code: "au"`
     ///
     ///    For available codes see [Country
     ///    Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes)
@@ -576,8 +580,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// * `search_type`: double. Default empty. Enables non-webpage searching
     ///    depending on the value. The only valid non-default value is 1,
     ///    which enables image searching.
-    ///    Example:
-    ///    search_type: 1
+    ///    For example, `search_type: 1`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1578,7 +1581,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
 
       /// <summary>
-      /// A struct to define data stores to filter on in a search call.
+      /// A struct to define data stores to filter on in a search call and
+      /// configurations for those data stores. A maximum of 1 DataStoreSpec per
+      /// data_store is allowed. Otherwise, an `INVALID_ARGUMENT` error is returned.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataStoreSpec : pb::IMessage<DataStoreSpec>
@@ -1845,7 +1850,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public const int LimitFieldNumber = 2;
         private int limit_;
         /// <summary>
-        /// Maximum of facet values that should be returned for this facet. If
+        /// Maximum facet values that are returned for this facet. If
         /// unspecified, defaults to 20. The maximum allowed value is 300. Values
         /// above 300 are coerced to 300.
         ///
@@ -2279,7 +2284,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 = pb::FieldCodec.ForString(42);
             private readonly pbc::RepeatedField<string> contains_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// Only get facet values that contains the given strings. For example,
+            /// Only get facet values that contain the given strings. For example,
             /// suppose "category" has three values "Action > 2022",
             /// "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022", the
             /// "category" facet only contains "Action > 2022" and "Sci-Fi > 2022".
@@ -3361,8 +3366,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public const int ModeFieldNumber = 1;
         private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec.Types.Mode mode_ = global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec.Types.Mode.Unspecified;
         /// <summary>
-        /// The mode under which spell correction should take effect to
-        /// replace the original search query. Default to
+        /// The mode under which spell correction
+        /// replaces the original search query. Defaults to
         /// [Mode.AUTO][google.cloud.discoveryengine.v1.SearchRequest.SpellCorrectionSpec.Mode.AUTO].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3521,10 +3526,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             /// </summary>
             [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// Search API will try to find a spell suggestion if there
-            /// is any and put in the
+            /// Search API tries to find a spelling suggestion. If a suggestion is
+            /// found, it is put in the
             /// [SearchResponse.corrected_query][google.cloud.discoveryengine.v1.SearchResponse.corrected_query].
-            /// The spell suggestion will not be used as the search query.
+            /// The spelling suggestion won't be used as the search query.
             /// </summary>
             [pbr::OriginalName("SUGGESTION_ONLY")] SuggestionOnly = 1,
             /// <summary>
@@ -6098,7 +6103,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         private global::Google.Cloud.DiscoveryEngine.V1.Document document_;
         /// <summary>
         /// The document data snippet in the search response. Only fields that are
-        /// marked as retrievable are populated.
+        /// marked as `retrievable` are populated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6329,7 +6334,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public const int KeyFieldNumber = 1;
         private string key_ = "";
         /// <summary>
-        /// The key for this facet. E.g., "colors" or "price". It matches
+        /// The key for this facet. For example, `"colors"` or `"price"`. It matches
         /// [SearchRequest.FacetSpec.FacetKey.key][google.cloud.discoveryengine.v1.SearchRequest.FacetSpec.FacetKey.key].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6888,7 +6893,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
 
       /// <summary>
-      /// Summary of the top N search result specified by the summary spec.
+      /// Summary of the top N search results specified by the summary spec.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Summary : pb::IMessage<Summary>

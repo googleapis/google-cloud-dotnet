@@ -234,7 +234,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> inputUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Cloud Storage URIs to input files. URI can be up to
+    /// Required. Cloud Storage URIs to input files. Each URI can be up to
     /// 2000 characters long. URIs can match the full object path (for example,
     /// `gs://bucket/directory/object.json`) or a pattern matching one or more
     /// files, such as `gs://bucket/directory/*.json`.
@@ -272,7 +272,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     ///   data store. Each entry after the header is imported as a Document.
     ///   This can only be used by the GENERIC Data Store vertical.
     ///
-    /// Supported values for user even imports:
+    /// Supported values for user event imports:
     ///
     /// * `user_event` (default): One JSON
     /// [UserEvent][google.cloud.discoveryengine.v1.UserEvent] per line.
@@ -3264,8 +3264,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int CollectionIdFieldNumber = 3;
     private string collectionId_ = "";
     /// <summary>
-    /// Required. The Firestore collection to copy the data from with a length
-    /// limit of 1,500 characters.
+    /// Required. The Firestore collection (or entity) to copy the data from with a
+    /// length limit of 1,500 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

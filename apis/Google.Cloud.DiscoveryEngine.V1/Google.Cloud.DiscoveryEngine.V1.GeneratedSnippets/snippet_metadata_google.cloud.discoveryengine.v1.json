@@ -302,6 +302,1415 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_sync",
+      "title": "CreateControlRequestObject",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_async",
+      "title": "CreateControlRequestObjectAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened",
+      "title": "CreateControl",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_async_flattened",
+      "title": "CreateControlAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames",
+      "title": "CreateControlResourceNames",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_async_flattened_resourceNames",
+      "title": "CreateControlResourceNamesAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_DeleteControl_sync",
+      "title": "DeleteControlRequestObject",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_DeleteControl_async",
+      "title": "DeleteControlRequestObjectAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_DeleteControl_sync_flattened",
+      "title": "DeleteControl",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_DeleteControl_async_flattened",
+      "title": "DeleteControlAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_DeleteControl_sync_flattened_resourceNames",
+      "title": "DeleteControlResourceNames",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_DeleteControl_async_flattened_resourceNames",
+      "title": "DeleteControlResourceNamesAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_UpdateControl_sync",
+      "title": "UpdateControlRequestObject",
+      "description": "Snippet for UpdateControl",
+      "file": "ControlServiceClient.UpdateControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.UpdateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_UpdateControl_async",
+      "title": "UpdateControlRequestObjectAsync",
+      "description": "Snippet for UpdateControlAsync",
+      "file": "ControlServiceClient.UpdateControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.UpdateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_UpdateControl_sync_flattened",
+      "title": "UpdateControl",
+      "description": "Snippet for UpdateControl",
+      "file": "ControlServiceClient.UpdateControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.UpdateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_UpdateControl_async_flattened",
+      "title": "UpdateControlAsync",
+      "description": "Snippet for UpdateControlAsync",
+      "file": "ControlServiceClient.UpdateControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.UpdateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_GetControl_sync",
+      "title": "GetControlRequestObject",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_GetControl_async",
+      "title": "GetControlRequestObjectAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_GetControl_sync_flattened",
+      "title": "GetControl",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_GetControl_async_flattened",
+      "title": "GetControlAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_GetControl_sync_flattened_resourceNames",
+      "title": "GetControlResourceNames",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_GetControl_async_flattened_resourceNames",
+      "title": "GetControlResourceNamesAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_sync",
+      "title": "ListControlsRequestObject",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_async",
+      "title": "ListControlsRequestObjectAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_sync_flattened",
+      "title": "ListControls",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_async_flattened",
+      "title": "ListControlsAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames",
+      "title": "ListControlsResourceNames",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_async_flattened_resourceNames",
+      "title": "ListControlsResourceNamesAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ConverseConversation_sync",
       "title": "ConverseConversationRequestObject",
       "description": "Snippet for ConverseConversation",
@@ -1977,6 +3386,1783 @@
         "method": {
           "shortName": "ListConversations",
           "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListConversations",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_AnswerQuery_sync",
+      "title": "AnswerQueryRequestObject",
+      "description": "Snippet for AnswerQuery",
+      "file": "ConversationalSearchServiceClient.AnswerQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnswerQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.AnswerQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "AnswerQuery",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.AnswerQuery",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_AnswerQuery_async",
+      "title": "AnswerQueryRequestObjectAsync",
+      "description": "Snippet for AnswerQueryAsync",
+      "file": "ConversationalSearchServiceClient.AnswerQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnswerQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.AnswerQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.AnswerQueryResponse>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "AnswerQuery",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.AnswerQuery",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetAnswer_sync",
+      "title": "GetAnswerRequestObject",
+      "description": "Snippet for GetAnswer",
+      "file": "ConversationalSearchServiceClient.GetAnswerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnswer",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetAnswer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Answer",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnswer",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetAnswer",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetAnswer_async",
+      "title": "GetAnswerRequestObjectAsync",
+      "description": "Snippet for GetAnswerAsync",
+      "file": "ConversationalSearchServiceClient.GetAnswerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnswerAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetAnswerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetAnswerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Answer>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnswer",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetAnswer",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetAnswer_sync_flattened",
+      "title": "GetAnswer",
+      "description": "Snippet for GetAnswer",
+      "file": "ConversationalSearchServiceClient.GetAnswerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnswer",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetAnswer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Answer",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnswer",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetAnswer",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetAnswer_async_flattened",
+      "title": "GetAnswerAsync",
+      "description": "Snippet for GetAnswerAsync",
+      "file": "ConversationalSearchServiceClient.GetAnswerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnswerAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetAnswerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Answer>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnswer",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetAnswer",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetAnswer_sync_flattened_resourceNames",
+      "title": "GetAnswerResourceNames",
+      "description": "Snippet for GetAnswer",
+      "file": "ConversationalSearchServiceClient.GetAnswerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnswer",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetAnswer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.AnswerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Answer",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnswer",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetAnswer",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetAnswer_async_flattened_resourceNames",
+      "title": "GetAnswerResourceNamesAsync",
+      "description": "Snippet for GetAnswerAsync",
+      "file": "ConversationalSearchServiceClient.GetAnswerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnswerAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetAnswerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.AnswerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Answer>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnswer",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetAnswer",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_CreateSession_sync",
+      "title": "CreateSessionRequestObject",
+      "description": "Snippet for CreateSession",
+      "file": "ConversationalSearchServiceClient.CreateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.CreateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_CreateSession_async",
+      "title": "CreateSessionRequestObjectAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "ConversationalSearchServiceClient.CreateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.CreateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_CreateSession_sync_flattened",
+      "title": "CreateSession",
+      "description": "Snippet for CreateSession",
+      "file": "ConversationalSearchServiceClient.CreateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.CreateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_CreateSession_async_flattened",
+      "title": "CreateSessionAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "ConversationalSearchServiceClient.CreateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.CreateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_CreateSession_sync_flattened_resourceNames",
+      "title": "CreateSessionResourceNames",
+      "description": "Snippet for CreateSession",
+      "file": "ConversationalSearchServiceClient.CreateSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.CreateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_CreateSession_async_flattened_resourceNames",
+      "title": "CreateSessionResourceNamesAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "ConversationalSearchServiceClient.CreateSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.CreateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_DeleteSession_sync",
+      "title": "DeleteSessionRequestObject",
+      "description": "Snippet for DeleteSession",
+      "file": "ConversationalSearchServiceClient.DeleteSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.DeleteSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_DeleteSession_async",
+      "title": "DeleteSessionRequestObjectAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "ConversationalSearchServiceClient.DeleteSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.DeleteSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_DeleteSession_sync_flattened",
+      "title": "DeleteSession",
+      "description": "Snippet for DeleteSession",
+      "file": "ConversationalSearchServiceClient.DeleteSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.DeleteSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_DeleteSession_async_flattened",
+      "title": "DeleteSessionAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "ConversationalSearchServiceClient.DeleteSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.DeleteSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_DeleteSession_sync_flattened_resourceNames",
+      "title": "DeleteSessionResourceNames",
+      "description": "Snippet for DeleteSession",
+      "file": "ConversationalSearchServiceClient.DeleteSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.DeleteSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_DeleteSession_async_flattened_resourceNames",
+      "title": "DeleteSessionResourceNamesAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "ConversationalSearchServiceClient.DeleteSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.DeleteSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_UpdateSession_sync",
+      "title": "UpdateSessionRequestObject",
+      "description": "Snippet for UpdateSession",
+      "file": "ConversationalSearchServiceClient.UpdateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.UpdateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.UpdateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_UpdateSession_async",
+      "title": "UpdateSessionRequestObjectAsync",
+      "description": "Snippet for UpdateSessionAsync",
+      "file": "ConversationalSearchServiceClient.UpdateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.UpdateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.UpdateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_UpdateSession_sync_flattened",
+      "title": "UpdateSession",
+      "description": "Snippet for UpdateSession",
+      "file": "ConversationalSearchServiceClient.UpdateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.UpdateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.UpdateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_UpdateSession_async_flattened",
+      "title": "UpdateSessionAsync",
+      "description": "Snippet for UpdateSessionAsync",
+      "file": "ConversationalSearchServiceClient.UpdateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.UpdateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.UpdateSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetSession_sync",
+      "title": "GetSessionRequestObject",
+      "description": "Snippet for GetSession",
+      "file": "ConversationalSearchServiceClient.GetSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetSession_async",
+      "title": "GetSessionRequestObjectAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "ConversationalSearchServiceClient.GetSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetSession_sync_flattened",
+      "title": "GetSession",
+      "description": "Snippet for GetSession",
+      "file": "ConversationalSearchServiceClient.GetSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetSession_async_flattened",
+      "title": "GetSessionAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "ConversationalSearchServiceClient.GetSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetSession_sync_flattened_resourceNames",
+      "title": "GetSessionResourceNames",
+      "description": "Snippet for GetSession",
+      "file": "ConversationalSearchServiceClient.GetSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Session",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_GetSession_async_flattened_resourceNames",
+      "title": "GetSessionResourceNamesAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "ConversationalSearchServiceClient.GetSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ListSessions_sync",
+      "title": "ListSessionsRequestObject",
+      "description": "Snippet for ListSessions",
+      "file": "ConversationalSearchServiceClient.ListSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListSessions",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ListSessions_async",
+      "title": "ListSessionsRequestObjectAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "ConversationalSearchServiceClient.ListSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListSessions",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ListSessions_sync_flattened",
+      "title": "ListSessions",
+      "description": "Snippet for ListSessions",
+      "file": "ConversationalSearchServiceClient.ListSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListSessions",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ListSessions_async_flattened",
+      "title": "ListSessionsAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "ConversationalSearchServiceClient.ListSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListSessions",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ListSessions_sync_flattened_resourceNames",
+      "title": "ListSessionsResourceNames",
+      "description": "Snippet for ListSessions",
+      "file": "ConversationalSearchServiceClient.ListSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListSessions",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ListSessions_async_flattened_resourceNames",
+      "title": "ListSessionsResourceNamesAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "ConversationalSearchServiceClient.ListSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1.Session>",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.ListSessions",
           "service": {
             "shortName": "ConversationalSearchService",
             "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
@@ -6425,6 +9611,487 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_GroundedGenerationService_CheckGrounding_sync",
+      "title": "CheckGroundingRequestObject",
+      "description": "Snippet for CheckGrounding",
+      "file": "GroundedGenerationServiceClient.CheckGroundingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckGrounding",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.GroundedGenerationServiceClient.CheckGrounding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse",
+        "client": {
+          "shortName": "GroundedGenerationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.GroundedGenerationServiceClient"
+        },
+        "method": {
+          "shortName": "CheckGrounding",
+          "fullName": "google.cloud.discoveryengine.v1.GroundedGenerationService.CheckGrounding",
+          "service": {
+            "shortName": "GroundedGenerationService",
+            "fullName": "google.cloud.discoveryengine.v1.GroundedGenerationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_GroundedGenerationService_CheckGrounding_async",
+      "title": "CheckGroundingRequestObjectAsync",
+      "description": "Snippet for CheckGroundingAsync",
+      "file": "GroundedGenerationServiceClient.CheckGroundingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckGroundingAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.GroundedGenerationServiceClient.CheckGroundingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse>",
+        "client": {
+          "shortName": "GroundedGenerationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.GroundedGenerationServiceClient"
+        },
+        "method": {
+          "shortName": "CheckGrounding",
+          "fullName": "google.cloud.discoveryengine.v1.GroundedGenerationService.CheckGrounding",
+          "service": {
+            "shortName": "GroundedGenerationService",
+            "fullName": "google.cloud.discoveryengine.v1.GroundedGenerationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ProjectService_ProvisionProject_sync",
+      "title": "ProvisionProjectRequestObject",
+      "description": "Snippet for ProvisionProject",
+      "file": "ProjectServiceClient.ProvisionProjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProject",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient.ProvisionProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Project, Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1.ProjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ProjectService_ProvisionProject_async",
+      "title": "ProvisionProjectRequestObjectAsync",
+      "description": "Snippet for ProvisionProjectAsync",
+      "file": "ProjectServiceClient.ProvisionProjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProjectAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient.ProvisionProjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Project, Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata>>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1.ProjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ProjectService_ProvisionProject_sync_flattened",
+      "title": "ProvisionProject",
+      "description": "Snippet for ProvisionProject",
+      "file": "ProjectServiceClient.ProvisionProjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProject",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient.ProvisionProject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Project, Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ProjectService_ProvisionProject_async_flattened",
+      "title": "ProvisionProjectAsync",
+      "description": "Snippet for ProvisionProjectAsync",
+      "file": "ProjectServiceClient.ProvisionProjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProjectAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient.ProvisionProjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Project, Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata>>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ProjectService_ProvisionProject_sync_flattened_resourceNames",
+      "title": "ProvisionProjectResourceNames",
+      "description": "Snippet for ProvisionProject",
+      "file": "ProjectServiceClient.ProvisionProjectResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProject",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient.ProvisionProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Project, Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ProjectService_ProvisionProject_async_flattened_resourceNames",
+      "title": "ProvisionProjectResourceNamesAsync",
+      "description": "Snippet for ProvisionProjectAsync",
+      "file": "ProjectServiceClient.ProvisionProjectResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProjectAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient.ProvisionProjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Project, Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata>>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_RankService_Rank_sync",
+      "title": "RankRequestObject",
+      "description": "Snippet for Rank",
+      "file": "RankServiceClient.RankRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Rank",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.RankServiceClient.Rank",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.RankRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.RankResponse",
+        "client": {
+          "shortName": "RankServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.RankServiceClient"
+        },
+        "method": {
+          "shortName": "Rank",
+          "fullName": "google.cloud.discoveryengine.v1.RankService.Rank",
+          "service": {
+            "shortName": "RankService",
+            "fullName": "google.cloud.discoveryengine.v1.RankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_RankService_Rank_async",
+      "title": "RankRequestObjectAsync",
+      "description": "Snippet for RankAsync",
+      "file": "RankServiceClient.RankRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RankAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.RankServiceClient.RankAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.RankRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.RankResponse>",
+        "client": {
+          "shortName": "RankServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.RankServiceClient"
+        },
+        "method": {
+          "shortName": "Rank",
+          "fullName": "google.cloud.discoveryengine.v1.RankService.Rank",
+          "service": {
+            "shortName": "RankService",
+            "fullName": "google.cloud.discoveryengine.v1.RankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_RecommendationService_Recommend_sync",
       "title": "RecommendRequestObject",
       "description": "Snippet for Recommend",
@@ -10222,12 +13889,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -10271,12 +13938,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
