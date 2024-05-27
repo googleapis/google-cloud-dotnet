@@ -2873,7 +2873,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// and new credentials are needed, as indicated by `CheckValidCreds`. In order
     /// to obtain authorization_code, make a request to the following URL:
     /// &lt;pre class="prettyprint" suppresswarning="true">
-    /// https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
+    /// https://bigquery.cloud.google.com/datatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
     /// &lt;/pre>
     /// * The &lt;var>client_id&lt;/var> is the OAuth client_id of the a data source as
     /// returned by ListDataSources method.
@@ -2901,7 +2901,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// are needed, as indicated by `CheckValidCreds`. In order to obtain version
     /// info, make a request to the following URL:
     /// &lt;pre class="prettyprint" suppresswarning="true">
-    /// https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
+    /// https://bigquery.cloud.google.com/datatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
     /// &lt;/pre>
     /// * The &lt;var>client_id&lt;/var> is the OAuth client_id of the a data source as
     /// returned by ListDataSources method.
@@ -3258,7 +3258,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// and new credentials are needed, as indicated by `CheckValidCreds`. In order
     /// to obtain authorization_code, make a request to the following URL:
     /// &lt;pre class="prettyprint" suppresswarning="true">
-    /// https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
+    /// https://bigquery.cloud.google.com/datatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
     /// &lt;/pre>
     /// * The &lt;var>client_id&lt;/var> is the OAuth client_id of the a data source as
     /// returned by ListDataSources method.
@@ -3301,7 +3301,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// are needed, as indicated by `CheckValidCreds`. In order to obtain version
     /// info, make a request to the following URL:
     /// &lt;pre class="prettyprint" suppresswarning="true">
-    /// https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
+    /// https://bigquery.cloud.google.com/datatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info&amp;client_id=&lt;var>client_id&lt;/var>&amp;scope=&lt;var>data_source_scopes&lt;/var>
     /// &lt;/pre>
     /// * The &lt;var>client_id&lt;/var> is the OAuth client_id of the a data source as
     /// returned by ListDataSources method.
