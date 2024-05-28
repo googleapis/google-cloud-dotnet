@@ -299,6 +299,25 @@ code](tools/Google.Cloud.Tools.ReleaseManager/BatchRelease/README.md).
 
 Sample configurations are in [tools/BatchReleaseConfigurations](tools/BatchReleaseConfigurations).
 
+## Turning down a library
+
+When an API has been deprecated, our process for turning down the
+corresponding library is:
+
+- Release a new version with a modified `docs/index.md` file
+  to indicate the deprecation. This should also be indicated in the
+  release notes. See [this PR as an
+  example](https://github.com/googleapis/google-cloud-dotnet/pull/12996).
+- Mark all published versions as deprecated and delisted in NuGet.
+  The deprecation step can easily be done manually as the NuGet web
+  site allows marking all versions as deprecated in one go. For
+  delisting, either delist each version manually, or use the release
+  manager `delist-package` command to delist all versions.
+- Create a PR to remove the API from the API catalog, delete the source
+  code, and regenerate projects (which will update Renovate and the
+  README). See [this PR as an example]
+  (https://github.com/googleapis/google-cloud-dotnet/pull/13012).
+
 ## Updating the .NET SDK
 
 Periodically, we need to update the version of the .NET SDK we use
