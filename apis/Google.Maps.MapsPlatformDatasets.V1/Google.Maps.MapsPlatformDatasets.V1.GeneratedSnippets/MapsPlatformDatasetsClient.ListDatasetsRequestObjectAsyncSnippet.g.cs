@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             ListDatasetsRequest request = new ListDatasetsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Tag = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListDatasetsResponse, Dataset> response = mapsPlatformDatasetsClient.ListDatasetsAsync(request);

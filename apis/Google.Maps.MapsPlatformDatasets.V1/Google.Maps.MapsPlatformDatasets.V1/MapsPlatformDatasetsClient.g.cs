@@ -212,7 +212,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MapsPlatformDatasets.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MapsPlatformDatasets.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -275,7 +275,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         public virtual MapsPlatformDatasets.MapsPlatformDatasetsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -284,7 +284,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -293,7 +293,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -302,11 +302,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             CreateDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent project that will own the dataset.
-        /// Format: projects/{$project}
+        /// Format: projects/{project}
         /// </param>
         /// <param name="dataset">
         /// Required. The dataset version to create.
@@ -321,11 +321,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent project that will own the dataset.
-        /// Format: projects/{$project}
+        /// Format: projects/{project}
         /// </param>
         /// <param name="dataset">
         /// Required. The dataset version to create.
@@ -340,11 +340,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent project that will own the dataset.
-        /// Format: projects/{$project}
+        /// Format: projects/{project}
         /// </param>
         /// <param name="dataset">
         /// Required. The dataset version to create.
@@ -355,11 +355,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             CreateDatasetAsync(parent, dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent project that will own the dataset.
-        /// Format: projects/{$project}
+        /// Format: projects/{project}
         /// </param>
         /// <param name="dataset">
         /// Required. The dataset version to create.
@@ -374,11 +374,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent project that will own the dataset.
-        /// Format: projects/{$project}
+        /// Format: projects/{project}
         /// </param>
         /// <param name="dataset">
         /// Required. The dataset version to create.
@@ -393,11 +393,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent project that will own the dataset.
-        /// Format: projects/{$project}
+        /// Format: projects/{project}
         /// </param>
         /// <param name="dataset">
         /// Required. The dataset version to create.
@@ -408,7 +408,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             CreateDatasetAsync(parent, dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -417,7 +417,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -426,7 +426,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -435,16 +435,16 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             UpdateDatasetMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="dataset">
-        /// Required. The dataset to update. The dataset's name is used to identify the
-        /// dataset to be updated. The name has the format:
-        /// projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name of the dataset to update.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Support the value "*" for full
-        /// replacement.
+        /// The list of fields to be updated.
+        /// 
+        /// The value "*" is used for full replacement (default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -456,16 +456,16 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="dataset">
-        /// Required. The dataset to update. The dataset's name is used to identify the
-        /// dataset to be updated. The name has the format:
-        /// projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name of the dataset to update.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Support the value "*" for full
-        /// replacement.
+        /// The list of fields to be updated.
+        /// 
+        /// The value "*" is used for full replacement (default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -477,16 +477,16 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="dataset">
-        /// Required. The dataset to update. The dataset's name is used to identify the
-        /// dataset to be updated. The name has the format:
-        /// projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name of the dataset to update.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Support the value "*" for full
-        /// replacement.
+        /// The list of fields to be updated.
+        /// 
+        /// The value "*" is used for full replacement (default).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -494,7 +494,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             UpdateDatasetMetadataAsync(dataset, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -503,7 +503,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -512,7 +512,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -521,10 +521,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             GetDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// 
+        /// 
+        /// Can also fetch some special versions by appending "@" and a tag.
+        /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+        /// 
+        /// Tag "active": The info of the latest completed version will be included,
+        /// and NOT_FOUND if the dataset does not have one.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -535,10 +543,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// 
+        /// 
+        /// Can also fetch some special versions by appending "@" and a tag.
+        /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+        /// 
+        /// Tag "active": The info of the latest completed version will be included,
+        /// and NOT_FOUND if the dataset does not have one.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -549,10 +565,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// 
+        /// 
+        /// Can also fetch some special versions by appending "@" and a tag.
+        /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+        /// 
+        /// Tag "active": The info of the latest completed version will be included,
+        /// and NOT_FOUND if the dataset does not have one.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -560,10 +584,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             GetDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// 
+        /// 
+        /// Can also fetch some special versions by appending "@" and a tag.
+        /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+        /// 
+        /// Tag "active": The info of the latest completed version will be included,
+        /// and NOT_FOUND if the dataset does not have one.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -574,10 +606,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// 
+        /// 
+        /// Can also fetch some special versions by appending "@" and a tag.
+        /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+        /// 
+        /// Tag "active": The info of the latest completed version will be included,
+        /// and NOT_FOUND if the dataset does not have one.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -588,10 +628,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+        /// Required. Resource name.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// 
+        /// 
+        /// Can also fetch some special versions by appending "@" and a tag.
+        /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+        /// 
+        /// Tag "active": The info of the latest completed version will be included,
+        /// and NOT_FOUND if the dataset does not have one.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -599,7 +647,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             GetDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -608,7 +656,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -617,10 +665,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list all the datasets for.
+        /// Format: projects/{project}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -641,10 +690,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list all the datasets for.
+        /// Format: projects/{project}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -665,10 +715,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list all the datasets for.
+        /// Format: projects/{project}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -689,10 +740,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list all the datasets for.
+        /// Format: projects/{project}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -713,7 +765,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -722,7 +774,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -731,7 +783,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -740,10 +792,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             DeleteDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: projects/${project}/datasets/{dataset_id}
+        /// Required. The name of the dataset to delete.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -754,10 +807,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: projects/${project}/datasets/{dataset_id}
+        /// Required. The name of the dataset to delete.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -768,10 +822,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: projects/${project}/datasets/{dataset_id}
+        /// Required. The name of the dataset to delete.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -779,10 +834,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             DeleteDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: projects/${project}/datasets/{dataset_id}
+        /// Required. The name of the dataset to delete.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -793,10 +849,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: projects/${project}/datasets/{dataset_id}
+        /// Required. The name of the dataset to delete.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -807,10 +864,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: projects/${project}/datasets/{dataset_id}
+        /// Required. The name of the dataset to delete.
+        /// Format: projects/{project}/datasets/{dataset_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -896,7 +954,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         partial void Modify_DeleteDatasetRequest(ref DeleteDatasetRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -908,7 +966,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Create a new dataset for the specified project.
+        /// Creates a new dataset for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -920,7 +978,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -932,7 +990,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Update the metadata for the dataset.
+        /// Updates the metadata for the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -944,7 +1002,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -956,7 +1014,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Get the dataset.
+        /// Gets the dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -968,7 +1026,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -980,7 +1038,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// List all the datasets for the specified project.
+        /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -992,7 +1050,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1004,7 +1062,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
-        /// Delete the specified dataset .
+        /// Deletes the specified dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

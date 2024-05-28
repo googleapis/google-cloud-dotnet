@@ -27,39 +27,38 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
             "CkBnb29nbGUvbWFwcy9tYXBzcGxhdGZvcm1kYXRhc2V0cy92MS9tYXBzX3Bs",
             "YXRmb3JtX2RhdGFzZXRzLnByb3RvEiNnb29nbGUubWFwcy5tYXBzcGxhdGZv",
             "cm1kYXRhc2V0cy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo1Z29vZ2xlL21hcHMvbWFw",
-            "c3BsYXRmb3JtZGF0YXNldHMvdjEvZGF0YV9zb3VyY2UucHJvdG8aMWdvb2ds",
-            "ZS9tYXBzL21hcHNwbGF0Zm9ybWRhdGFzZXRzL3YxL2RhdGFzZXQucHJvdG8a",
-            "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIp8BChRDcmVhdGVE",
-            "YXRhc2V0UmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRy",
-            "ZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBJCCgdkYXRh",
-            "c2V0GAIgASgLMiwuZ29vZ2xlLm1hcHMubWFwc3BsYXRmb3JtZGF0YXNldHMu",
-            "djEuRGF0YXNldEID4EECIpMBChxVcGRhdGVEYXRhc2V0TWV0YWRhdGFSZXF1",
-            "ZXN0EkIKB2RhdGFzZXQYASABKAsyLC5nb29nbGUubWFwcy5tYXBzcGxhdGZv",
-            "cm1kYXRhc2V0cy52MS5EYXRhc2V0QgPgQQISLwoLdXBkYXRlX21hc2sYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIlYKEUdldERhdGFzZXRS",
-            "ZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQorbWFwc3BsYXRmb3JtZGF0",
-            "YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0YXNldCKBAQoTTGlzdERhdGFzZXRz",
-            "UmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJj",
-            "ZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIRCglwYWdlX3NpemUY",
-            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJvChRMaXN0RGF0YXNldHNSZXNw",
-            "b25zZRI+CghkYXRhc2V0cxgBIAMoCzIsLmdvb2dsZS5tYXBzLm1hcHNwbGF0",
-            "Zm9ybWRhdGFzZXRzLnYxLkRhdGFzZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJIlkKFERlbGV0ZURhdGFzZXRSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BB",
-            "AvpBLQorbWFwc3BsYXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0",
-            "YXNldEL8AQonY29tLmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRz",
-            "LnYxQhlNYXBzUGxhdGZvcm1EYXRhc2V0c1Byb3RvUAFaYWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbWFwcy9tYXBzcGxhdGZvcm1kYXRhc2V0cy9hcGl2MS9tYXBz",
-            "cGxhdGZvcm1kYXRhc2V0c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKiAgRN",
-            "RFYxqgIjR29vZ2xlLk1hcHMuTWFwc1BsYXRmb3JtRGF0YXNldHMuVjHKAiNH",
-            "b29nbGVcTWFwc1xNYXBzUGxhdGZvcm1EYXRhc2V0c1xWMWIGcHJvdG8z"));
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoxZ29vZ2xlL21hcHMvbWFw",
+            "c3BsYXRmb3JtZGF0YXNldHMvdjEvZGF0YXNldC5wcm90bxogZ29vZ2xlL3By",
+            "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8inwEKFENyZWF0ZURhdGFzZXRSZXF1",
+            "ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EkIKB2RhdGFzZXQYAiABKAsy",
+            "LC5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MS5EYXRhc2V0",
+            "QgPgQQIikwEKHFVwZGF0ZURhdGFzZXRNZXRhZGF0YVJlcXVlc3QSQgoHZGF0",
+            "YXNldBgBIAEoCzIsLmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRz",
+            "LnYxLkRhdGFzZXRCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2siVgoRR2V0RGF0YXNldFJlcXVlc3QSQQoE",
+            "bmFtZRgBIAEoCUIz4EEC+kEtCittYXBzcGxhdGZvcm1kYXRhc2V0cy5nb29n",
+            "bGVhcGlzLmNvbS9EYXRhc2V0Io4BChNMaXN0RGF0YXNldHNSZXF1ZXN0EkMK",
+            "BnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9Qcm9qZWN0EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAMgASgJEgsKA3RhZxgEIAEoCSJvChRMaXN0RGF0YXNldHNS",
+            "ZXNwb25zZRI+CghkYXRhc2V0cxgBIAMoCzIsLmdvb2dsZS5tYXBzLm1hcHNw",
+            "bGF0Zm9ybWRhdGFzZXRzLnYxLkRhdGFzZXQSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIlkKFERlbGV0ZURhdGFzZXRSZXF1ZXN0EkEKBG5hbWUYASABKAlC",
+            "M+BBAvpBLQorbWFwc3BsYXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20v",
+            "RGF0YXNldEL8AQonY29tLmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFz",
+            "ZXRzLnYxQhlNYXBzUGxhdGZvcm1EYXRhc2V0c1Byb3RvUAFaYWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vbWFwcy9tYXBzcGxhdGZvcm1kYXRhc2V0cy9hcGl2MS9t",
+            "YXBzcGxhdGZvcm1kYXRhc2V0c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKi",
+            "AgRNRFYxqgIjR29vZ2xlLk1hcHMuTWFwc1BsYXRmb3JtRGF0YXNldHMuVjHK",
+            "AiNHb29nbGVcTWFwc1xNYXBzUGxhdGZvcm1EYXRhc2V0c1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1.DataSourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.CreateDatasetRequest), global::Google.Maps.MapsPlatformDatasets.V1.CreateDatasetRequest.Parser, new[]{ "Parent", "Dataset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.UpdateDatasetMetadataRequest), global::Google.Maps.MapsPlatformDatasets.V1.UpdateDatasetMetadataRequest.Parser, new[]{ "Dataset", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest), global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest), global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest), global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Tag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse), global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse.Parser, new[]{ "Datasets", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.DeleteDatasetRequest), global::Google.Maps.MapsPlatformDatasets.V1.DeleteDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
@@ -122,7 +121,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent project that will own the dataset.
-    /// Format: projects/{$project}
+    /// Format: projects/{project}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -367,9 +366,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int DatasetFieldNumber = 1;
     private global::Google.Maps.MapsPlatformDatasets.V1.Dataset dataset_;
     /// <summary>
-    /// Required. The dataset to update. The dataset's name is used to identify the
-    /// dataset to be updated. The name has the format:
-    /// projects/{project}/datasets/{dataset_id}
+    /// Required. Resource name of the dataset to update.
+    /// Format: projects/{project}/datasets/{dataset_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -384,8 +382,9 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// The list of fields to be updated. Support the value "*" for full
-    /// replacement.
+    /// The list of fields to be updated.
+    ///
+    /// The value "*" is used for full replacement (default).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -623,7 +622,14 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name. projects/{project}/datasets/{dataset_id}
+    /// Required. Resource name.
+    /// Format: projects/{project}/datasets/{dataset_id}
+    ///
+    /// Can also fetch some special versions by appending "@" and a tag.
+    /// Format: projects/{project}/datasets/{dataset_id}@{tag}
+    ///
+    /// Tag "active": The info of the latest completed version will be included,
+    /// and NOT_FOUND if the dataset does not have one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -808,6 +814,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      tag_ = other.tag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -822,6 +829,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the project to list all the datasets for.
+    /// Format: projects/{project}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -836,7 +844,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of versions to return per page.
+    /// The maximum number of datasets to return per page.
+    ///
     /// If unspecified (or zero), all datasets will be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -864,6 +873,29 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
     }
 
+    /// <summary>Field number for the "tag" field.</summary>
+    public const int TagFieldNumber = 4;
+    private string tag_ = "";
+    /// <summary>
+    /// The tag that specifies the desired version for each dataset.
+    ///
+    /// Note that when pagination is also specified, some filtering can happen
+    /// after pagination, which may cause the response to contain fewer datasets
+    /// than the page size, even if it's not the last page.
+    ///
+    /// Tag "active": Each dataset in the response will include the info of its
+    /// latest completed version, and the dataset will be skipped if it does not
+    /// have one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Tag {
+      get { return tag_; }
+      set {
+        tag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -882,6 +914,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (Tag != other.Tag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -892,6 +925,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Tag.Length != 0) hash ^= Tag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -922,6 +956,10 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Tag.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Tag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -944,6 +982,10 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Tag.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Tag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -962,6 +1004,9 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Tag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -983,6 +1028,9 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.Tag.Length != 0) {
+        Tag = other.Tag;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1009,6 +1057,10 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Tag = input.ReadString();
             break;
           }
         }
@@ -1038,6 +1090,10 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Tag = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1046,7 +1102,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
   }
 
   /// <summary>
-  /// Response to list datasets for the project.
+  /// Response object of ListDatasets.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatasetsResponse : pb::IMessage<ListDatasetsResponse>
@@ -1113,6 +1169,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token that can be sent as `page_token` to retrieve the next page.
+    ///
     /// If this field is omitted, there are no subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1273,8 +1330,6 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
 
   /// <summary>
   /// Request to delete a dataset.
-  ///
-  /// The dataset to be deleted.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDatasetRequest : pb::IMessage<DeleteDatasetRequest>
@@ -1325,7 +1380,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Format: projects/${project}/datasets/{dataset_id}
+    /// Required. The name of the dataset to delete.
+    /// Format: projects/{project}/datasets/{dataset_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
