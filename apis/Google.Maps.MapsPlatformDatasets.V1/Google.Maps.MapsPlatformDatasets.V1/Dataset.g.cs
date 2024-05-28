@@ -91,7 +91,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
 
   #region Messages
   /// <summary>
-  /// A representation of a Maps Dataset resource.
+  /// A representation of a dataset resource.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dataset : pb::IMessage<Dataset>
@@ -160,8 +160,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name,
-    /// projects/{project}/datasets/{dataset_id}
+    /// Resource name.
+    /// Format: projects/{project}/datasets/{dataset_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,7 +176,9 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Human readable name, shown in the console UI .
+    /// Human readable name, shown in the console UI.
+    ///
+    /// Must be unique within a project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,7 +193,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// A description of this dataset .
+    /// A description of this dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -310,7 +312,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public const int VersionCreateTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp versionCreateTime_;
     /// <summary>
-    /// Output only. Time when the data was uploaded.
+    /// Output only. Time when this version was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1102,13 +1104,13 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_PUBLISHING")] Publishing = 9,
         /// <summary>
-        /// The publishing failed states. This state represents that the
-        /// publishing failed. Publishing may be retried.
+        /// The publishing failed states. This state represents that the publishing
+        /// failed. Publishing may be retried.
         /// </summary>
         [pbr::OriginalName("STATE_PUBLISHING_FAILED")] PublishingFailed = 10,
         /// <summary>
-        /// The completed state. This state represents the dataset being
-        /// available for its specific usage.
+        /// The completed state. This state represents the dataset being available
+        /// for its specific usage.
         /// </summary>
         [pbr::OriginalName("STATE_COMPLETED")] Completed = 11,
       }

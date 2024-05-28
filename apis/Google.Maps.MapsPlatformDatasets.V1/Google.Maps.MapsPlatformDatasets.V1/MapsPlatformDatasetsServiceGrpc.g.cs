@@ -131,7 +131,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     public abstract partial class MapsPlatformDatasetsBase
     {
       /// <summary>
-      /// Create a new dataset for the specified project.
+      /// Creates a new dataset for the specified project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -143,7 +143,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
 
       /// <summary>
-      /// Update the metadata for the dataset.
+      /// Updates the metadata for the dataset.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +155,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
 
       /// <summary>
-      /// Get the dataset.
+      /// Gets the dataset.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -167,7 +167,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
 
       /// <summary>
-      /// List all the datasets for the specified project.
+      /// Lists all the datasets for the specified project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -179,7 +179,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
 
       /// <summary>
-      /// Delete the specified dataset .
+      /// Deletes the specified dataset.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -220,7 +220,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       }
 
       /// <summary>
-      /// Create a new dataset for the specified project.
+      /// Creates a new dataset for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -233,7 +233,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CreateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new dataset for the specified project.
+      /// Creates a new dataset for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -244,7 +244,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDataset, null, options, request);
       }
       /// <summary>
-      /// Create a new dataset for the specified project.
+      /// Creates a new dataset for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -257,7 +257,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CreateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new dataset for the specified project.
+      /// Creates a new dataset for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -268,7 +268,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataset, null, options, request);
       }
       /// <summary>
-      /// Update the metadata for the dataset.
+      /// Updates the metadata for the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -281,7 +281,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return UpdateDatasetMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update the metadata for the dataset.
+      /// Updates the metadata for the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -292,7 +292,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDatasetMetadata, null, options, request);
       }
       /// <summary>
-      /// Update the metadata for the dataset.
+      /// Updates the metadata for the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +305,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return UpdateDatasetMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update the metadata for the dataset.
+      /// Updates the metadata for the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDatasetMetadata, null, options, request);
       }
       /// <summary>
-      /// Get the dataset.
+      /// Gets the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return GetDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the dataset.
+      /// Gets the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataset, null, options, request);
       }
       /// <summary>
-      /// Get the dataset.
+      /// Gets the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return GetDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the dataset.
+      /// Gets the dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataset, null, options, request);
       }
       /// <summary>
-      /// List all the datasets for the specified project.
+      /// Lists all the datasets for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return ListDatasets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List all the datasets for the specified project.
+      /// Lists all the datasets for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -388,7 +388,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDatasets, null, options, request);
       }
       /// <summary>
-      /// List all the datasets for the specified project.
+      /// Lists all the datasets for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -401,7 +401,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return ListDatasetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List all the datasets for the specified project.
+      /// Lists all the datasets for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -412,7 +412,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatasets, null, options, request);
       }
       /// <summary>
-      /// Delete the specified dataset .
+      /// Deletes the specified dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return DeleteDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete the specified dataset .
+      /// Deletes the specified dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDataset, null, options, request);
       }
       /// <summary>
-      /// Delete the specified dataset .
+      /// Deletes the specified dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return DeleteDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete the specified dataset .
+      /// Deletes the specified dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
