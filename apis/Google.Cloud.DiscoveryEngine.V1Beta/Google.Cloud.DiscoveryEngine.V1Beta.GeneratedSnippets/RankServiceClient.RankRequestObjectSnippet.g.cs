@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                     new RankingRecord(),
                 },
                 IgnoreRecordDetailsInResponse = false,
+                UserLabels = { { "", "" }, },
             };
             // Make the request
             RankResponse response = rankServiceClient.Rank(request);

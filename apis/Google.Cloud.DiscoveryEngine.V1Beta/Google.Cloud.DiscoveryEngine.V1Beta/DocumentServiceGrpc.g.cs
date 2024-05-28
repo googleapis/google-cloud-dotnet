@@ -217,7 +217,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <summary>
       /// Bulk import of multiple
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-      /// processing may be synchronous. Non-existing items will be created.
+      /// processing may be synchronous. Non-existing items are created.
       ///
       /// Note: It is possible for a subset of the
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -532,7 +532,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <summary>
       /// Bulk import of multiple
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-      /// processing may be synchronous. Non-existing items will be created.
+      /// processing may be synchronous. Non-existing items are created.
       ///
       /// Note: It is possible for a subset of the
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -551,7 +551,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <summary>
       /// Bulk import of multiple
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-      /// processing may be synchronous. Non-existing items will be created.
+      /// processing may be synchronous. Non-existing items are created.
       ///
       /// Note: It is possible for a subset of the
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -568,7 +568,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <summary>
       /// Bulk import of multiple
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-      /// processing may be synchronous. Non-existing items will be created.
+      /// processing may be synchronous. Non-existing items are created.
       ///
       /// Note: It is possible for a subset of the
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -587,7 +587,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <summary>
       /// Bulk import of multiple
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-      /// processing may be synchronous. Non-existing items will be created.
+      /// processing may be synchronous. Non-existing items are created.
       ///
       /// Note: It is possible for a subset of the
       /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be

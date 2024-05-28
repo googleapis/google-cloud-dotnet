@@ -36,6 +36,7 @@ namespace GoogleCSharpSnippets
                 GcsTrainingInput = new TrainCustomModelRequest.Types.GcsTrainingInput(),
                 ModelType = "",
                 ErrorConfig = new ImportErrorConfig(),
+                ModelId = "",
             };
             // Make the request
             Operation<TrainCustomModelResponse, TrainCustomModelMetadata> response = searchTuningServiceClient.TrainCustomModel(request);
@@ -72,6 +73,7 @@ namespace GoogleCSharpSnippets
                 GcsTrainingInput = new TrainCustomModelRequest.Types.GcsTrainingInput(),
                 ModelType = "",
                 ErrorConfig = new ImportErrorConfig(),
+                ModelId = "",
             };
             // Make the request
             Operation<TrainCustomModelResponse, TrainCustomModelMetadata> response = await searchTuningServiceClient.TrainCustomModelAsync(request);
@@ -91,6 +93,39 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 TrainCustomModelResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomModels</summary>
+        public void ListCustomModelsRequestObject()
+        {
+            // Snippet: ListCustomModels(ListCustomModelsRequest, CallSettings)
+            // Create client
+            SearchTuningServiceClient searchTuningServiceClient = SearchTuningServiceClient.Create();
+            // Initialize request argument(s)
+            ListCustomModelsRequest request = new ListCustomModelsRequest
+            {
+                DataStoreAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+            };
+            // Make the request
+            ListCustomModelsResponse response = searchTuningServiceClient.ListCustomModels(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomModelsAsync</summary>
+        public async Task ListCustomModelsRequestObjectAsync()
+        {
+            // Snippet: ListCustomModelsAsync(ListCustomModelsRequest, CallSettings)
+            // Additional: ListCustomModelsAsync(ListCustomModelsRequest, CancellationToken)
+            // Create client
+            SearchTuningServiceClient searchTuningServiceClient = await SearchTuningServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCustomModelsRequest request = new ListCustomModelsRequest
+            {
+                DataStoreAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+            };
+            // Make the request
+            ListCustomModelsResponse response = await searchTuningServiceClient.ListCustomModelsAsync(request);
             // End snippet
         }
     }

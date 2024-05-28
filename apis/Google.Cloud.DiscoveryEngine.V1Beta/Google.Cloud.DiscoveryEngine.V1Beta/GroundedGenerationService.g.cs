@@ -31,42 +31,47 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoz",
             "Z29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MWJldGEvZ3JvdW5kaW5n",
             "LnByb3RvIkwKEkNoZWNrR3JvdW5kaW5nU3BlYxIfChJjaXRhdGlvbl90aHJl",
-            "c2hvbGQYASABKAFIAIgBAUIVChNfY2l0YXRpb25fdGhyZXNob2xkIpcCChVD",
+            "c2hvbGQYASABKAFIAIgBAUIVChNfY2l0YXRpb25fdGhyZXNob2xkIqsDChVD",
             "aGVja0dyb3VuZGluZ1JlcXVlc3QSUAoQZ3JvdW5kaW5nX2NvbmZpZxgBIAEo",
             "CUI24EEC+kEwCi5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vR3Jv",
             "dW5kaW5nQ29uZmlnEhgKEGFuc3dlcl9jYW5kaWRhdGUYAiABKAkSQQoFZmFj",
             "dHMYAyADKAsyMi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
             "YS5Hcm91bmRpbmdGYWN0Ek8KDmdyb3VuZGluZ19zcGVjGAQgASgLMjcuZ29v",
             "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQ2hlY2tHcm91bmRp",
-            "bmdTcGVjIt4CChZDaGVja0dyb3VuZGluZ1Jlc3BvbnNlEhoKDXN1cHBvcnRf",
-            "c2NvcmUYASABKAJIAIgBARJECgxjaXRlZF9jaHVua3MYAyADKAsyLi5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5GYWN0Q2h1bmsSUQoG",
-            "Y2xhaW1zGAQgAygLMkEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MWJldGEuQ2hlY2tHcm91bmRpbmdSZXNwb25zZS5DbGFpbRp9CgVDbGFpbRIW",
-            "CglzdGFydF9wb3MYASABKAVIAIgBARIUCgdlbmRfcG9zGAIgASgFSAGIAQES",
-            "EgoKY2xhaW1fdGV4dBgDIAEoCRIYChBjaXRhdGlvbl9pbmRpY2VzGAQgAygF",
-            "QgwKCl9zdGFydF9wb3NCCgoIX2VuZF9wb3NCEAoOX3N1cHBvcnRfc2NvcmUy",
-            "0gIKGUdyb3VuZGVkR2VuZXJhdGlvblNlcnZpY2US4AEKDkNoZWNrR3JvdW5k",
-            "aW5nEjouZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQ2hl",
-            "Y2tHcm91bmRpbmdSZXF1ZXN0GjsuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MWJldGEuQ2hlY2tHcm91bmRpbmdSZXNwb25zZSJVgtPkkwJPIkov",
-            "djFiZXRhL3tncm91bmRpbmdfY29uZmlnPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovZ3JvdW5kaW5nQ29uZmlncy8qfTpjaGVjazoBKhpSykEeZGlzY292ZXJ5",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKlAgonY29tLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQh5Hcm91bmRlZEdlbmVyYXRpb25T",
-            "ZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zlcnll",
-            "bmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVu",
-            "Z2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRpc2Nv",
-            "dmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5n",
-            "aW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6",
-            "VjFiZXRhYgZwcm90bzM="));
+            "bmdTcGVjEl8KC3VzZXJfbGFiZWxzGAUgAygLMkouZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MWJldGEuQ2hlY2tHcm91bmRpbmdSZXF1ZXN0LlVz",
+            "ZXJMYWJlbHNFbnRyeRoxCg9Vc2VyTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASKjAwoWQ2hlY2tHcm91bmRpbmdSZXNwb25z",
+            "ZRIaCg1zdXBwb3J0X3Njb3JlGAEgASgCSACIAQESRAoMY2l0ZWRfY2h1bmtz",
+            "GAMgAygLMi4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
+            "RmFjdENodW5rElEKBmNsYWltcxgEIAMoCzJBLmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFiZXRhLkNoZWNrR3JvdW5kaW5nUmVzcG9uc2UuQ2xh",
+            "aW0awQEKBUNsYWltEhYKCXN0YXJ0X3BvcxgBIAEoBUgAiAEBEhQKB2VuZF9w",
+            "b3MYAiABKAVIAYgBARISCgpjbGFpbV90ZXh0GAMgASgJEhgKEGNpdGF0aW9u",
+            "X2luZGljZXMYBCADKAUSJQoYZ3JvdW5kaW5nX2NoZWNrX3JlcXVpcmVkGAYg",
+            "ASgISAKIAQFCDAoKX3N0YXJ0X3Bvc0IKCghfZW5kX3Bvc0IbChlfZ3JvdW5k",
+            "aW5nX2NoZWNrX3JlcXVpcmVkQhAKDl9zdXBwb3J0X3Njb3JlMtICChlHcm91",
+            "bmRlZEdlbmVyYXRpb25TZXJ2aWNlEuABCg5DaGVja0dyb3VuZGluZxI6Lmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkNoZWNrR3JvdW5k",
+            "aW5nUmVxdWVzdBo7Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
+            "ZXRhLkNoZWNrR3JvdW5kaW5nUmVzcG9uc2UiVYLT5JMCTyJKL3YxYmV0YS97",
+            "Z3JvdW5kaW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2dyb3Vu",
+            "ZGluZ0NvbmZpZ3MvKn06Y2hlY2s6ASoaUspBHmRpc2NvdmVyeWVuZ2luZS5n",
+            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm1CpQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxYmV0YUIeR3JvdW5kZWRHZW5lcmF0aW9uU2VydmljZVBy",
+            "b3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2Fw",
+            "aXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqIC",
+            "D0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdp",
+            "bmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJl",
+            "dGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.GroundingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingSpec.Parser, new[]{ "CitationThreshold" }, new[]{ "CitationThreshold" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingRequest.Parser, new[]{ "GroundingConfig", "AnswerCandidate", "Facts", "GroundingSpec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse.Parser, new[]{ "SupportScore", "CitedChunks", "Claims" }, new[]{ "SupportScore" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse.Types.Claim), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse.Types.Claim.Parser, new[]{ "StartPos", "EndPos", "ClaimText", "CitationIndices" }, new[]{ "StartPos", "EndPos" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingRequest.Parser, new[]{ "GroundingConfig", "AnswerCandidate", "Facts", "GroundingSpec", "UserLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse.Parser, new[]{ "SupportScore", "CitedChunks", "Claims" }, new[]{ "SupportScore" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse.Types.Claim), global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingResponse.Types.Claim.Parser, new[]{ "StartPos", "EndPos", "ClaimText", "CitationIndices", "GroundingCheckRequired" }, new[]{ "StartPos", "EndPos", "GroundingCheckRequired" }, null, null, null)})
           }));
     }
     #endregion
@@ -334,6 +339,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       answerCandidate_ = other.answerCandidate_;
       facts_ = other.facts_.Clone();
       groundingSpec_ = other.groundingSpec_ != null ? other.groundingSpec_.Clone() : null;
+      userLabels_ = other.userLabels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -363,7 +369,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int AnswerCandidateFieldNumber = 2;
     private string answerCandidate_ = "";
     /// <summary>
-    /// Answer candidate to check.
+    /// Answer candidate to check. Can have a maximum length of 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -404,6 +410,36 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "user_labels" field.</summary>
+    public const int UserLabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The user labels applied to a resource must meet the following requirements:
+    ///
+    /// * Each resource can have multiple labels, up to a maximum of 64.
+    /// * Each label must be a key-value pair.
+    /// * Keys have a minimum length of 1 character and a maximum length of 63
+    ///   characters and cannot be empty. Values can be empty and have a maximum
+    ///   length of 63 characters.
+    /// * Keys and values can contain only lowercase letters, numeric characters,
+    ///   underscores, and dashes. All characters must use UTF-8 encoding, and
+    ///   international characters are allowed.
+    /// * The key portion of a label must be unique. However, you can use the same
+    ///   key with multiple resources.
+    /// * Keys must start with a lowercase letter or international character.
+    ///
+    /// See [Google Cloud
+    /// Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> UserLabels {
+      get { return userLabels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -423,6 +459,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (AnswerCandidate != other.AnswerCandidate) return false;
       if(!facts_.Equals(other.facts_)) return false;
       if (!object.Equals(GroundingSpec, other.GroundingSpec)) return false;
+      if (!UserLabels.Equals(other.UserLabels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -434,6 +471,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (AnswerCandidate.Length != 0) hash ^= AnswerCandidate.GetHashCode();
       hash ^= facts_.GetHashCode();
       if (groundingSpec_ != null) hash ^= GroundingSpec.GetHashCode();
+      hash ^= UserLabels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -465,6 +503,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(GroundingSpec);
       }
+      userLabels_.WriteTo(output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -488,6 +527,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(GroundingSpec);
       }
+      userLabels_.WriteTo(ref output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -508,6 +548,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (groundingSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GroundingSpec);
       }
+      size += userLabels_.CalculateSize(_map_userLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -533,6 +574,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         }
         GroundingSpec.MergeFrom(other.GroundingSpec);
       }
+      userLabels_.MergeFrom(other.userLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -567,6 +609,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(GroundingSpec);
             break;
           }
+          case 42: {
+            userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -599,6 +645,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               GroundingSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.CheckGroundingSpec();
             }
             input.ReadMessage(GroundingSpec);
+            break;
+          }
+          case 42: {
+            userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
             break;
           }
         }
@@ -931,6 +981,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           endPos_ = other.endPos_;
           claimText_ = other.claimText_;
           citationIndices_ = other.citationIndices_.Clone();
+          groundingCheckRequired_ = other.groundingCheckRequired_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1036,6 +1087,43 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           get { return citationIndices_; }
         }
 
+        /// <summary>Field number for the "grounding_check_required" field.</summary>
+        public const int GroundingCheckRequiredFieldNumber = 6;
+        private readonly static bool GroundingCheckRequiredDefaultValue = false;
+
+        private bool groundingCheckRequired_;
+        /// <summary>
+        /// Indicates that this claim required grounding check. When the system
+        /// decided this claim doesn't require attribution/grounding check, this
+        /// field will be set to false. In that case, no grounding check was done for
+        /// the claim and therefore
+        /// [citation_indices][google.cloud.discoveryengine.v1beta.CheckGroundingResponse.Claim.citation_indices],
+        /// and
+        /// [anti_citation_indices][google.cloud.discoveryengine.v1beta.CheckGroundingResponse.Claim.anti_citation_indices]
+        /// should not be returned.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool GroundingCheckRequired {
+          get { if ((_hasBits0 & 4) != 0) { return groundingCheckRequired_; } else { return GroundingCheckRequiredDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            groundingCheckRequired_ = value;
+          }
+        }
+        /// <summary>Gets whether the "grounding_check_required" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGroundingCheckRequired {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "grounding_check_required" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGroundingCheckRequired() {
+          _hasBits0 &= ~4;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1055,6 +1143,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           if (EndPos != other.EndPos) return false;
           if (ClaimText != other.ClaimText) return false;
           if(!citationIndices_.Equals(other.citationIndices_)) return false;
+          if (GroundingCheckRequired != other.GroundingCheckRequired) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1066,6 +1155,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           if (HasEndPos) hash ^= EndPos.GetHashCode();
           if (ClaimText.Length != 0) hash ^= ClaimText.GetHashCode();
           hash ^= citationIndices_.GetHashCode();
+          if (HasGroundingCheckRequired) hash ^= GroundingCheckRequired.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1097,6 +1187,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteString(ClaimText);
           }
           citationIndices_.WriteTo(output, _repeated_citationIndices_codec);
+          if (HasGroundingCheckRequired) {
+            output.WriteRawTag(48);
+            output.WriteBool(GroundingCheckRequired);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1120,6 +1214,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteString(ClaimText);
           }
           citationIndices_.WriteTo(ref output, _repeated_citationIndices_codec);
+          if (HasGroundingCheckRequired) {
+            output.WriteRawTag(48);
+            output.WriteBool(GroundingCheckRequired);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1140,6 +1238,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ClaimText);
           }
           size += citationIndices_.CalculateSize(_repeated_citationIndices_codec);
+          if (HasGroundingCheckRequired) {
+            size += 1 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1162,6 +1263,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             ClaimText = other.ClaimText;
           }
           citationIndices_.Add(other.citationIndices_);
+          if (other.HasGroundingCheckRequired) {
+            GroundingCheckRequired = other.GroundingCheckRequired;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1194,6 +1298,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 citationIndices_.AddEntriesFrom(input, _repeated_citationIndices_codec);
                 break;
               }
+              case 48: {
+                GroundingCheckRequired = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1224,6 +1332,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               case 34:
               case 32: {
                 citationIndices_.AddEntriesFrom(ref input, _repeated_citationIndices_codec);
+                break;
+              }
+              case 48: {
+                GroundingCheckRequired = input.ReadBool();
                 break;
               }
             }

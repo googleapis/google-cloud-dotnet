@@ -396,9 +396,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// to return. The service may return fewer than this value.
     ///
     /// If unspecified, at most 100
-    /// [Schema][google.cloud.discoveryengine.v1beta.Schema]s will be returned.
+    /// [Schema][google.cloud.discoveryengine.v1beta.Schema]s are returned.
     ///
-    /// The maximum value is 1000; values above 1000 will be coerced to 1000.
+    /// The maximum value is 1000; values above 1000 are set to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -930,7 +930,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string schemaId_ = "";
     /// <summary>
     /// Required. The ID to use for the
-    /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+    /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
     /// final component of the
     /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
     ///
@@ -1210,8 +1210,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// If set to true, and the
     /// [Schema][google.cloud.discoveryengine.v1beta.Schema] is not found, a new
-    /// [Schema][google.cloud.discoveryengine.v1beta.Schema] will be created. In
-    /// this situation, `update_mask` is ignored.
+    /// [Schema][google.cloud.discoveryengine.v1beta.Schema] is created. In this
+    /// situation, `update_mask` is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

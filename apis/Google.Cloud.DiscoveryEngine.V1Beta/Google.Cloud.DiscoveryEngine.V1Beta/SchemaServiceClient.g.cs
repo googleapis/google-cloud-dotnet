@@ -650,7 +650,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="schemaId">
         /// Required. The ID to use for the
-        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
         /// final component of the
         /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
         /// 
@@ -681,7 +681,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="schemaId">
         /// Required. The ID to use for the
-        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
         /// final component of the
         /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
         /// 
@@ -712,7 +712,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="schemaId">
         /// Required. The ID to use for the
-        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
         /// final component of the
         /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
         /// 
@@ -738,7 +738,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="schemaId">
         /// Required. The ID to use for the
-        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
         /// final component of the
         /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
         /// 
@@ -769,7 +769,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="schemaId">
         /// Required. The ID to use for the
-        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
         /// final component of the
         /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
         /// 
@@ -800,7 +800,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="schemaId">
         /// Required. The ID to use for the
-        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which will become the
+        /// [Schema][google.cloud.discoveryengine.v1beta.Schema], which becomes the
         /// final component of the
         /// [Schema.name][google.cloud.discoveryengine.v1beta.Schema.name].
         /// 

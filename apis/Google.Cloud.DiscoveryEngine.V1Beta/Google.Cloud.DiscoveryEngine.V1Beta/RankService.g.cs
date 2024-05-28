@@ -30,32 +30,35 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJKCg1SYW5raW5nUmVjb3Jk",
             "EgoKAmlkGAEgASgJEg0KBXRpdGxlGAIgASgJEg8KB2NvbnRlbnQYAyABKAkS",
-            "DQoFc2NvcmUYBCABKAIi/QEKC1JhbmtSZXF1ZXN0EkwKDnJhbmtpbmdfY29u",
+            "DQoFc2NvcmUYBCABKAIihwMKC1JhbmtSZXF1ZXN0EkwKDnJhbmtpbmdfY29u",
             "ZmlnGAEgASgJQjTgQQL6QS4KLGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlz",
             "LmNvbS9SYW5raW5nQ29uZmlnEg0KBW1vZGVsGAIgASgJEg0KBXRvcF9uGAMg",
             "ASgFEg0KBXF1ZXJ5GAQgASgJEkgKB3JlY29yZHMYBSADKAsyMi5nb29nbGUu",
             "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5SYW5raW5nUmVjb3JkQgPg",
             "QQISKQohaWdub3JlX3JlY29yZF9kZXRhaWxzX2luX3Jlc3BvbnNlGAYgASgI",
-            "IlMKDFJhbmtSZXNwb25zZRJDCgdyZWNvcmRzGAUgAygLMjIuZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUmFua2luZ1JlY29yZDKhAgoL",
-            "UmFua1NlcnZpY2USvQEKBFJhbmsSMC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxYmV0YS5SYW5rUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjFiZXRhLlJhbmtSZXNwb25zZSJQgtPkkwJKIkUvdjFi",
-            "ZXRhL3tyYW5raW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jh",
-            "bmtpbmdDb25maWdzLyp9OnJhbms6ASoaUspBHmRpc2NvdmVyeWVuZ2luZS5n",
-            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1ClwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxYmV0YUIQUmFua1NlcnZpY2VQcm90b1ABWlFjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlzY292",
-            "ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJ",
-            "TkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoCI0dv",
-            "b2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xlOjpD",
-            "bG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
+            "ElUKC3VzZXJfbGFiZWxzGAcgAygLMkAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MWJldGEuUmFua1JlcXVlc3QuVXNlckxhYmVsc0VudHJ5GjEK",
+            "D1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIlMKDFJhbmtSZXNwb25zZRJDCgdyZWNvcmRzGAUgAygLMjIuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUmFua2luZ1JlY29yZDKh",
+            "AgoLUmFua1NlcnZpY2USvQEKBFJhbmsSMC5nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxYmV0YS5SYW5rUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLlJhbmtSZXNwb25zZSJQgtPkkwJKIkUv",
+            "djFiZXRhL3tyYW5raW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3JhbmtpbmdDb25maWdzLyp9OnJhbms6ASoaUspBHmRpc2NvdmVyeWVuZ2lu",
+            "ZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxYmV0YUIQUmFua1NlcnZpY2VQcm90b1ABWlFjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlz",
+            "Y292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllF",
+            "TkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoC",
+            "I0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xl",
+            "OjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.RankingRecord), global::Google.Cloud.DiscoveryEngine.V1Beta.RankingRecord.Parser, new[]{ "Id", "Title", "Content", "Score" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.RankRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.RankRequest.Parser, new[]{ "RankingConfig", "Model", "TopN", "Query", "Records", "IgnoreRecordDetailsInResponse" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.RankRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.RankRequest.Parser, new[]{ "RankingConfig", "Model", "TopN", "Query", "Records", "IgnoreRecordDetailsInResponse", "UserLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.RankResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.RankResponse.Parser, new[]{ "Records" }, null, null, null, null)
           }));
     }
@@ -435,6 +438,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       query_ = other.query_;
       records_ = other.records_.Clone();
       ignoreRecordDetailsInResponse_ = other.ignoreRecordDetailsInResponse_;
+      userLabels_ = other.userLabels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -541,6 +545,36 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "user_labels" field.</summary>
+    public const int UserLabelsFieldNumber = 7;
+    private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+    private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The user labels applied to a resource must meet the following requirements:
+    ///
+    /// * Each resource can have multiple labels, up to a maximum of 64.
+    /// * Each label must be a key-value pair.
+    /// * Keys have a minimum length of 1 character and a maximum length of 63
+    ///   characters and cannot be empty. Values can be empty and have a maximum
+    ///   length of 63 characters.
+    /// * Keys and values can contain only lowercase letters, numeric characters,
+    ///   underscores, and dashes. All characters must use UTF-8 encoding, and
+    ///   international characters are allowed.
+    /// * The key portion of a label must be unique. However, you can use the same
+    ///   key with multiple resources.
+    /// * Keys must start with a lowercase letter or international character.
+    ///
+    /// See [Google Cloud
+    /// Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> UserLabels {
+      get { return userLabels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -562,6 +596,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (Query != other.Query) return false;
       if(!records_.Equals(other.records_)) return false;
       if (IgnoreRecordDetailsInResponse != other.IgnoreRecordDetailsInResponse) return false;
+      if (!UserLabels.Equals(other.UserLabels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -575,6 +610,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (Query.Length != 0) hash ^= Query.GetHashCode();
       hash ^= records_.GetHashCode();
       if (IgnoreRecordDetailsInResponse != false) hash ^= IgnoreRecordDetailsInResponse.GetHashCode();
+      hash ^= UserLabels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -614,6 +650,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(48);
         output.WriteBool(IgnoreRecordDetailsInResponse);
       }
+      userLabels_.WriteTo(output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -645,6 +682,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(48);
         output.WriteBool(IgnoreRecordDetailsInResponse);
       }
+      userLabels_.WriteTo(ref output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -671,6 +709,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (IgnoreRecordDetailsInResponse != false) {
         size += 1 + 1;
       }
+      size += userLabels_.CalculateSize(_map_userLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -699,6 +738,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (other.IgnoreRecordDetailsInResponse != false) {
         IgnoreRecordDetailsInResponse = other.IgnoreRecordDetailsInResponse;
       }
+      userLabels_.MergeFrom(other.userLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -738,6 +778,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             IgnoreRecordDetailsInResponse = input.ReadBool();
             break;
           }
+          case 58: {
+            userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -775,6 +819,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 48: {
             IgnoreRecordDetailsInResponse = input.ReadBool();
+            break;
+          }
+          case 58: {
+            userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
             break;
           }
         }

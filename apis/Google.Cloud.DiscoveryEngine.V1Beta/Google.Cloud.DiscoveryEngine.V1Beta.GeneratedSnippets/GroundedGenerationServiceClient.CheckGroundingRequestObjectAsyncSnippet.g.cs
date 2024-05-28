@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                     new GroundingFact(),
                 },
                 GroundingSpec = new CheckGroundingSpec(),
+                UserLabels = { { "", "" }, },
             };
             // Make the request
             CheckGroundingResponse response = await groundedGenerationServiceClient.CheckGroundingAsync(request);

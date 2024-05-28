@@ -48,6 +48,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             TrainCustomModelSettings = existing.TrainCustomModelSettings;
             TrainCustomModelOperationsSettings = existing.TrainCustomModelOperationsSettings.Clone();
+            ListCustomModelsSettings = existing.ListCustomModelsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -84,6 +85,19 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SearchTuningServiceClient.ListCustomModels</c> and <c>SearchTuningServiceClient.ListCustomModelsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomModelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -289,6 +303,33 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<TrainCustomModelResponse, TrainCustomModelMetadata>> PollOnceTrainCustomModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<TrainCustomModelResponse, TrainCustomModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TrainCustomModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Gets a list of all the custom models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListCustomModelsResponse ListCustomModels(ListCustomModelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a list of all the custom models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListCustomModelsResponse> ListCustomModelsAsync(ListCustomModelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a list of all the custom models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListCustomModelsResponse> ListCustomModelsAsync(ListCustomModelsRequest request, st::CancellationToken cancellationToken) =>
+            ListCustomModelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SearchTuningService client wrapper implementation, for convenient use.</summary>
@@ -298,6 +339,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
     public sealed partial class SearchTuningServiceClientImpl : SearchTuningServiceClient
     {
         private readonly gaxgrpc::ApiCall<TrainCustomModelRequest, lro::Operation> _callTrainCustomModel;
+
+        private readonly gaxgrpc::ApiCall<ListCustomModelsRequest, ListCustomModelsResponse> _callListCustomModels;
 
         /// <summary>
         /// Constructs a client wrapper for the SearchTuningService service, with the specified gRPC client and
@@ -320,12 +363,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callTrainCustomModel = clientHelper.BuildApiCall<TrainCustomModelRequest, lro::Operation>("TrainCustomModel", grpcClient.TrainCustomModelAsync, grpcClient.TrainCustomModel, effectiveSettings.TrainCustomModelSettings).WithGoogleRequestParam("data_store", request => request.DataStore);
             Modify_ApiCall(ref _callTrainCustomModel);
             Modify_TrainCustomModelApiCall(ref _callTrainCustomModel);
+            _callListCustomModels = clientHelper.BuildApiCall<ListCustomModelsRequest, ListCustomModelsResponse>("ListCustomModels", grpcClient.ListCustomModelsAsync, grpcClient.ListCustomModels, effectiveSettings.ListCustomModelsSettings).WithGoogleRequestParam("data_store", request => request.DataStore);
+            Modify_ApiCall(ref _callListCustomModels);
+            Modify_ListCustomModelsApiCall(ref _callListCustomModels);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_TrainCustomModelApiCall(ref gaxgrpc::ApiCall<TrainCustomModelRequest, lro::Operation> call);
+
+        partial void Modify_ListCustomModelsApiCall(ref gaxgrpc::ApiCall<ListCustomModelsRequest, ListCustomModelsResponse> call);
 
         partial void OnConstruction(SearchTuningService.SearchTuningServiceClient grpcClient, SearchTuningServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -336,6 +384,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_TrainCustomModelRequest(ref TrainCustomModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomModelsRequest(ref ListCustomModelsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>TrainCustomModel</c>.</summary>
         public override lro::OperationsClient TrainCustomModelOperationsClient { get; }
@@ -362,6 +412,30 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_TrainCustomModelRequest(ref request, ref callSettings);
             return new lro::Operation<TrainCustomModelResponse, TrainCustomModelMetadata>(await _callTrainCustomModel.Async(request, callSettings).ConfigureAwait(false), TrainCustomModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a list of all the custom models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListCustomModelsResponse ListCustomModels(ListCustomModelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomModelsRequest(ref request, ref callSettings);
+            return _callListCustomModels.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a list of all the custom models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListCustomModelsResponse> ListCustomModelsAsync(ListCustomModelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomModelsRequest(ref request, ref callSettings);
+            return _callListCustomModels.Async(request, callSettings);
         }
     }
 

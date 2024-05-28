@@ -29,61 +29,64 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2lu",
             "ZS92MWJldGEvY29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRp",
-            "b24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4wcK",
+            "b24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4ggK",
             "CVVzZXJFdmVudBIXCgpldmVudF90eXBlGAEgASgJQgPgQQISGwoOdXNlcl9w",
-            "c2V1ZG9faWQYAiABKAlCA+BBAhIuCgpldmVudF90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJACgl1c2VyX2luZm8YBCABKAsyLS5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Vc2VySW5mbxIb",
-            "ChNkaXJlY3RfdXNlcl9yZXF1ZXN0GAUgASgIEhIKCnNlc3Npb25faWQYBiAB",
-            "KAkSQAoJcGFnZV9pbmZvGAcgASgLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MWJldGEuUGFnZUluZm8SGQoRYXR0cmlidXRpb25fdG9rZW4Y",
-            "CCABKAkSDgoGZmlsdGVyGAkgASgJEkQKCWRvY3VtZW50cxgKIAMoCzIxLmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkRvY3VtZW50SW5m",
-            "bxI9CgVwYW5lbBgLIAEoCzIuLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
-            "bmUudjFiZXRhLlBhbmVsSW5mbxJECgtzZWFyY2hfaW5mbxgMIAEoCzIvLmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaEluZm8S",
-            "TAoPY29tcGxldGlvbl9pbmZvGA0gASgLMjMuZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MWJldGEuQ29tcGxldGlvbkluZm8STgoQdHJhbnNhY3Rp",
-            "b25faW5mbxgOIAEoCzI0Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djFiZXRhLlRyYW5zYWN0aW9uSW5mbxIPCgd0YWdfaWRzGA8gAygJEhUKDXBy",
-            "b21vdGlvbl9pZHMYECADKAkSUgoKYXR0cmlidXRlcxgRIAMoCzI+Lmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlVzZXJFdmVudC5BdHRy",
-            "aWJ1dGVzRW50cnkSQgoKbWVkaWFfaW5mbxgSIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLk1lZGlhSW5mbxpnCg9BdHRyaWJ1",
-            "dGVzRW50cnkSCwoDa2V5GAEgASgJEkMKBXZhbHVlGAIgASgLMjQuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQ3VzdG9tQXR0cmlidXRl",
-            "OgI4ASJZCghQYWdlSW5mbxITCgtwYWdldmlld19pZBgBIAEoCRIVCg1wYWdl",
-            "X2NhdGVnb3J5GAIgASgJEgsKA3VyaRgDIAEoCRIUCgxyZWZlcnJlcl91cmkY",
-            "BCABKAkiVAoKU2VhcmNoSW5mbxIUCgxzZWFyY2hfcXVlcnkYASABKAkSEAoI",
-            "b3JkZXJfYnkYAiABKAkSEwoGb2Zmc2V0GAMgASgFSACIAQFCCQoHX29mZnNl",
-            "dCJICg5Db21wbGV0aW9uSW5mbxIbChNzZWxlY3RlZF9zdWdnZXN0aW9uGAEg",
-            "ASgJEhkKEXNlbGVjdGVkX3Bvc2l0aW9uGAIgASgFIskBCg9UcmFuc2FjdGlv",
-            "bkluZm8SFwoFdmFsdWUYASABKAJCA+BBAkgAiAEBEhUKCGN1cnJlbmN5GAIg",
-            "ASgJQgPgQQISFgoOdHJhbnNhY3Rpb25faWQYAyABKAkSEAoDdGF4GAQgASgC",
-            "SAGIAQESEQoEY29zdBgFIAEoAkgCiAEBEhsKDmRpc2NvdW50X3ZhbHVlGAYg",
-            "ASgCSAOIAQFCCAoGX3ZhbHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2Nv",
-            "dW50X3ZhbHVlIrsBCgxEb2N1bWVudEluZm8SDAoCaWQYASABKAlIABI8CgRu",
-            "YW1lGAIgASgJQiz6QSkKJ2Rpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
-            "bS9Eb2N1bWVudEgAEg0KA3VyaRgGIAEoCUgAEhUKCHF1YW50aXR5GAMgASgF",
-            "SAGIAQESFQoNcHJvbW90aW9uX2lkcxgEIAMoCUIVChNkb2N1bWVudF9kZXNj",
-            "cmlwdG9yQgsKCV9xdWFudGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBhbmVsX2lk",
-            "GAIgASgJQgPgQQISFAoMZGlzcGxheV9uYW1lGAMgASgJEhsKDnBhbmVsX3Bv",
-            "c2l0aW9uGAQgASgFSACIAQESGQoMdG90YWxfcGFuZWxzGAUgASgFSAGIAQFC",
-            "EQoPX3BhbmVsX3Bvc2l0aW9uQg8KDV90b3RhbF9wYW5lbHMijQEKCU1lZGlh",
-            "SW5mbxI6ChdtZWRpYV9wcm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhImChltZWRpYV9wcm9ncmVzc19wZXJjZW50",
-            "YWdlGAIgASgCSACIAQFCHAoaX21lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2VC",
-            "lQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIO",
-            "VXNlckV2ZW50UHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zl",
-            "cnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
-            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRp",
-            "c2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5",
-            "RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2lu",
-            "ZTo6VjFiZXRhYgZwcm90bzM="));
+            "c2V1ZG9faWQYAiABKAlCA+BBAhI6CgZlbmdpbmUYEyABKAlCKvpBJwolZGlz",
+            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0VuZ2luZRJBCgpkYXRhX3N0",
+            "b3JlGBQgASgJQi36QSoKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhU3RvcmUSLgoKZXZlbnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASQAoJdXNlcl9pbmZvGAQgASgLMi0uZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVXNlckluZm8SGwoTZGlyZWN0",
+            "X3VzZXJfcmVxdWVzdBgFIAEoCBISCgpzZXNzaW9uX2lkGAYgASgJEkAKCXBh",
+            "Z2VfaW5mbxgHIAEoCzItLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djFiZXRhLlBhZ2VJbmZvEhkKEWF0dHJpYnV0aW9uX3Rva2VuGAggASgJEg4K",
+            "BmZpbHRlchgJIAEoCRJECglkb2N1bWVudHMYCiADKAsyMS5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudEluZm8SPQoFcGFu",
+            "ZWwYCyABKAsyLi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
+            "YS5QYW5lbEluZm8SRAoLc2VhcmNoX2luZm8YDCABKAsyLy5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hJbmZvEkwKD2NvbXBs",
+            "ZXRpb25faW5mbxgNIAEoCzIzLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhLkNvbXBsZXRpb25JbmZvEk4KEHRyYW5zYWN0aW9uX2luZm8Y",
+            "DiABKAsyNC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5U",
+            "cmFuc2FjdGlvbkluZm8SDwoHdGFnX2lkcxgPIAMoCRIVCg1wcm9tb3Rpb25f",
+            "aWRzGBAgAygJElIKCmF0dHJpYnV0ZXMYESADKAsyPi5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Vc2VyRXZlbnQuQXR0cmlidXRlc0Vu",
+            "dHJ5EkIKCm1lZGlhX2luZm8YEiABKAsyLi5nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxYmV0YS5NZWRpYUluZm8aZwoPQXR0cmlidXRlc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRJDCgV2YWx1ZRgCIAEoCzI0Lmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkN1c3RvbUF0dHJpYnV0ZToCOAEiWQoI",
+            "UGFnZUluZm8SEwoLcGFnZXZpZXdfaWQYASABKAkSFQoNcGFnZV9jYXRlZ29y",
+            "eRgCIAEoCRILCgN1cmkYAyABKAkSFAoMcmVmZXJyZXJfdXJpGAQgASgJIlQK",
+            "ClNlYXJjaEluZm8SFAoMc2VhcmNoX3F1ZXJ5GAEgASgJEhAKCG9yZGVyX2J5",
+            "GAIgASgJEhMKBm9mZnNldBgDIAEoBUgAiAEBQgkKB19vZmZzZXQiSAoOQ29t",
+            "cGxldGlvbkluZm8SGwoTc2VsZWN0ZWRfc3VnZ2VzdGlvbhgBIAEoCRIZChFz",
+            "ZWxlY3RlZF9wb3NpdGlvbhgCIAEoBSLJAQoPVHJhbnNhY3Rpb25JbmZvEhcK",
+            "BXZhbHVlGAEgASgCQgPgQQJIAIgBARIVCghjdXJyZW5jeRgCIAEoCUID4EEC",
+            "EhYKDnRyYW5zYWN0aW9uX2lkGAMgASgJEhAKA3RheBgEIAEoAkgBiAEBEhEK",
+            "BGNvc3QYBSABKAJIAogBARIbCg5kaXNjb3VudF92YWx1ZRgGIAEoAkgDiAEB",
+            "QggKBl92YWx1ZUIGCgRfdGF4QgcKBV9jb3N0QhEKD19kaXNjb3VudF92YWx1",
+            "ZSK7AQoMRG9jdW1lbnRJbmZvEgwKAmlkGAEgASgJSAASPAoEbmFtZRgCIAEo",
+            "CUIs+kEpCidkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRG9jdW1l",
+            "bnRIABINCgN1cmkYBiABKAlIABIVCghxdWFudGl0eRgDIAEoBUgBiAEBEhUK",
+            "DXByb21vdGlvbl9pZHMYBCADKAlCFQoTZG9jdW1lbnRfZGVzY3JpcHRvckIL",
+            "CglfcXVhbnRpdHkilAEKCVBhbmVsSW5mbxIVCghwYW5lbF9pZBgCIAEoCUID",
+            "4EECEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIbCg5wYW5lbF9wb3NpdGlvbhgE",
+            "IAEoBUgAiAEBEhkKDHRvdGFsX3BhbmVscxgFIAEoBUgBiAEBQhEKD19wYW5l",
+            "bF9wb3NpdGlvbkIPCg1fdG90YWxfcGFuZWxzIo0BCglNZWRpYUluZm8SOgoX",
+            "bWVkaWFfcHJvZ3Jlc3NfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SJgoZbWVkaWFfcHJvZ3Jlc3NfcGVyY2VudGFnZRgCIAEo",
+            "AkgAiAEBQhwKGl9tZWRpYV9wcm9ncmVzc19wZXJjZW50YWdlQpUCCidjb20u",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCDlVzZXJFdmVu",
+            "dFByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
+            "L2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVw",
+            "YqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlF",
+            "bmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxW",
+            "MWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0",
+            "YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent), global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent), global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "Engine", "DataStore", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.PageInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.PageInfo.Parser, new[]{ "PageviewId", "PageCategory", "Uri", "ReferrerUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo.Parser, new[]{ "SearchQuery", "OrderBy", "Offset" }, new[]{ "Offset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo.Parser, new[]{ "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
@@ -99,7 +102,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   #region Messages
   /// <summary>
   /// UserEvent captures all metadata information Discovery Engine API needs to
-  /// know about how end users interact with customers' website.
+  /// know about how end users interact with your website.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
@@ -138,6 +141,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public UserEvent(UserEvent other) : this() {
       eventType_ = other.eventType_;
       userPseudoId_ = other.userPseudoId_;
+      engine_ = other.engine_;
+      dataStore_ = other.dataStore_;
       eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
       userInfo_ = other.userInfo_ != null ? other.userInfo_.Clone() : null;
       directUserRequest_ = other.directUserRequest_;
@@ -224,6 +229,51 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       get { return userPseudoId_; }
       set {
         userPseudoId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "engine" field.</summary>
+    public const int EngineFieldNumber = 19;
+    private string engine_ = "";
+    /// <summary>
+    /// The [Engine][google.cloud.discoveryengine.v1beta.Engine] resource name, in
+    /// the form of
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
+    ///
+    /// Optional. Only required for
+    /// [Engine][google.cloud.discoveryengine.v1beta.Engine] produced user events.
+    /// For example, user events from blended search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Engine {
+      get { return engine_; }
+      set {
+        engine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_store" field.</summary>
+    public const int DataStoreFieldNumber = 20;
+    private string dataStore_ = "";
+    /// <summary>
+    /// The [DataStore][google.cloud.discoveryengine.v1beta.DataStore] resource
+    /// full name, of the form
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+    ///
+    /// Optional. Only required for user events whose data store can't by
+    /// determined by
+    /// [UserEvent.engine][google.cloud.discoveryengine.v1beta.UserEvent.engine] or
+    /// [UserEvent.documents][google.cloud.discoveryengine.v1beta.UserEvent.documents].
+    /// If data store is set in the parent of write/import/collect user event
+    /// requests, this field can be omitted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataStore {
+      get { return dataStore_; }
+      set {
+        dataStore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -498,7 +548,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// A list of identifiers for the independent experiment groups this user event
     /// belongs to. This is used to distinguish between user events associated with
-    /// different experiment setups on the customer end.
+    /// different experiment setups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -592,6 +642,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (EventType != other.EventType) return false;
       if (UserPseudoId != other.UserPseudoId) return false;
+      if (Engine != other.Engine) return false;
+      if (DataStore != other.DataStore) return false;
       if (!object.Equals(EventTime, other.EventTime)) return false;
       if (!object.Equals(UserInfo, other.UserInfo)) return false;
       if (DirectUserRequest != other.DirectUserRequest) return false;
@@ -617,6 +669,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       int hash = 1;
       if (EventType.Length != 0) hash ^= EventType.GetHashCode();
       if (UserPseudoId.Length != 0) hash ^= UserPseudoId.GetHashCode();
+      if (Engine.Length != 0) hash ^= Engine.GetHashCode();
+      if (DataStore.Length != 0) hash ^= DataStore.GetHashCode();
       if (eventTime_ != null) hash ^= EventTime.GetHashCode();
       if (userInfo_ != null) hash ^= UserInfo.GetHashCode();
       if (DirectUserRequest != false) hash ^= DirectUserRequest.GetHashCode();
@@ -711,6 +765,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(146, 1);
         output.WriteMessage(MediaInfo);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Engine);
+      }
+      if (DataStore.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(DataStore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -781,6 +843,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(146, 1);
         output.WriteMessage(MediaInfo);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Engine);
+      }
+      if (DataStore.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(DataStore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -796,6 +866,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (UserPseudoId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserPseudoId);
+      }
+      if (Engine.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Engine);
+      }
+      if (DataStore.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DataStore);
       }
       if (eventTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EventTime);
@@ -854,6 +930,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (other.UserPseudoId.Length != 0) {
         UserPseudoId = other.UserPseudoId;
+      }
+      if (other.Engine.Length != 0) {
+        Engine = other.Engine;
+      }
+      if (other.DataStore.Length != 0) {
+        DataStore = other.DataStore;
       }
       if (other.eventTime_ != null) {
         if (eventTime_ == null) {
@@ -1030,6 +1112,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(MediaInfo);
             break;
           }
+          case 154: {
+            Engine = input.ReadString();
+            break;
+          }
+          case 162: {
+            DataStore = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1139,6 +1229,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               MediaInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo();
             }
             input.ReadMessage(MediaInfo);
+            break;
+          }
+          case 154: {
+            Engine = input.ReadString();
+            break;
+          }
+          case 162: {
+            DataStore = input.ReadString();
             break;
           }
         }
@@ -2707,7 +2805,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Quantity of the Document associated with the user event. Defaults to 1.
     ///
-    /// For example, this field will be 2 if two quantities of the same Document
+    /// For example, this field is 2 if two quantities of the same Document
     /// are involved in a `add-to-cart` event.
     ///
     /// Required for events of the following event types:
