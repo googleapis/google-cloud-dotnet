@@ -14,6 +14,7 @@
 
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -30,22 +31,36 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         private sealed class DetachedSessionPool : SessionPoolBase
         {
+            public override bool TracksSessions => false;
+
             internal DetachedSessionPool(SessionPool parent) : base(parent)
             {
             }
 
             public override void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession)
             {
-                // Note: we never roll back the transaction in a detached session.
                 if (deleteSession)
                 {
-                    Parent.DeleteSessionFireAndForget(session);
+                    Parent.ConsumeBackgroundTask(DeleteSessionAsync(), "detached session delete");
                 }
-            }
 
-            public override void Detach(PooledSession session)
-            {
-                // No-op: We are already in the detached session pool which doesn't keep track of sessions.
+                async Task DeleteSessionAsync()
+                {
+                    // Before deleting the session we attempt to rollback the transaction gracefully.
+                    if (transactionToRollback is not null)
+                    {
+                        var request = new RollbackRequest { SessionAsSessionName = session.SessionName, TransactionId = transactionToRollback };
+                        try
+                        {
+                            await Client.RollbackAsync(request).ConfigureAwait(false);
+                        }
+                        catch (RpcException e)
+                        {
+                            Parent._logger.Warn("Failed to rollback transaction for detached session", e);
+                        }
+                    }
+                    await Parent.DeleteSessionAsync(session).ConfigureAwait(false);
+                }
             }
 
             public override Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>

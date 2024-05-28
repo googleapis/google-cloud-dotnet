@@ -201,14 +201,49 @@ namespace Google.Cloud.Spanner.Data
         /// and provided <see cref="TimestampBound" /> to control the read timestamp and/or staleness
         /// of data.
         /// Read transactions are preferred if possible because they do not impose locks internally.
-        /// Stale read-only transactions can execute more quickly than strong or read-write transactions,.
+        /// Stale read-only transactions can execute more quickly than strong or read-write transactions.
         /// This method is thread safe.
         /// </summary>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
+        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(TimestampBound targetReadTimestamp, CancellationToken cancellationToken = default) =>
+            BeginReadOnlyTransactionImplAsync(targetReadTimestamp, detached: false, cancellationToken);
+
+        /// <summary>
+        /// Begins a detached read-only transaction using the optionally provided <see cref="CancellationToken" />.
+        /// This is equivalent to callint <see cref="BeginDetachedReadOnlyTransactionAsync(TimestampBound, CancellationToken)"/>
+        /// with <see cref="TimestampBound.Strong"/>.
+        /// Read transactions are preferred if possible because they do not impose locks internally.
+        /// Stale read-only transactions can execute more quickly than strong or read-write transactions.
+        /// Detached read-only transactions must be used for executing
+        /// <see cref="SpannerCommand.GetReaderPartitionsAsync(PartitionOptions, CancellationToken)"/>
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
+        public Task<SpannerTransaction> BeginDetachedReadOnlyTransactionAsync(CancellationToken cancellationToken = default) =>
+            BeginDetachedReadOnlyTransactionAsync(TimestampBound.Strong, cancellationToken);
+
+        /// <summary>
+        /// Begins a detached read-only transaction using the optionally provided <see cref="CancellationToken" />
+        /// and provided <see cref="TimestampBound" /> to control the read timestamp and/or staleness
+        /// of data.
+        /// Read transactions are preferred if possible because they do not impose locks internally.
+        /// Stale read-only transactions can execute more quickly than strong or read-write transactions.
+        /// Detached read-only transactions must be used for executing
+        /// <see cref="SpannerCommand.GetReaderPartitionsAsync(PartitionOptions, CancellationToken)"/>
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
+        public Task<SpannerTransaction> BeginDetachedReadOnlyTransactionAsync(TimestampBound targetReadTimestamp, CancellationToken cancellationToken = default) =>
+            BeginReadOnlyTransactionImplAsync(targetReadTimestamp, detached: true, cancellationToken);
+
+        private Task<SpannerTransaction> BeginReadOnlyTransactionImplAsync(
             TimestampBound targetReadTimestamp,
+            bool detached,
             CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(targetReadTimestamp, nameof(targetReadTimestamp));
@@ -226,7 +261,8 @@ namespace Google.Cloud.Spanner.Data
                 targetReadTimestamp.ToTransactionOptions(),
                 TransactionMode.ReadOnly,
                 cancellationToken,
-                targetReadTimestamp);
+                targetReadTimestamp,
+                detached);
         }
 
         /// <summary>
@@ -279,12 +315,7 @@ namespace Google.Cloud.Spanner.Data
             SessionName sessionName = SessionName.Parse(transactionId.Session);
             ByteString transactionIdBytes = ByteString.FromBase64(transactionId.Id);
             var session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
-            // This transaction is coming from another process potentially, so we don't auto close it.
-            return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound, false)
-            {
-                Shared = true,
-                DisposeBehavior = DisposeBehavior.Detach
-            };
+            return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound, false);
         }
 
         /// <summary>
@@ -814,9 +845,9 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
-            await AcquireSessionAsync(ReadWriteTransactionOptions, singleUse: false, cancellationToken).ConfigureAwait(false);
+            await AcquireSessionAsync(ReadWriteTransactionOptions, singleUse: false, detached: false, cancellationToken).ConfigureAwait(false);
 
-        internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, bool singleUse, CancellationToken cancellationToken)
+        internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, bool singleUse, bool detached, CancellationToken cancellationToken)
         {
             SessionPool pool;
             DatabaseName databaseName;
@@ -831,20 +862,23 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException("Unable to acquire session on connection with no database name");
             }
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return pool.AcquireSessionAsync(sessionPoolSegmentKey, options, singleUse, cancellationToken);
+            return detached ?
+                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, options, singleUse, cancellationToken) :
+                pool.AcquireSessionAsync(sessionPoolSegmentKey, options, singleUse, cancellationToken);
         }
 
         internal Task<SpannerTransaction> BeginTransactionImplAsync(
             TransactionOptions transactionOptions,
             TransactionMode transactionMode,
             CancellationToken cancellationToken,
-            TimestampBound targetReadTimestamp = null)
+            TimestampBound targetReadTimestamp = null,
+            bool detached = false)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
-                    var session = await AcquireSessionAsync(transactionOptions, singleUse: false, cancellationToken).ConfigureAwait(false);
+                    var session = await AcquireSessionAsync(transactionOptions, singleUse: false, detached, cancellationToken).ConfigureAwait(false);
                     return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp, false);
                 }, "SpannerConnection.BeginTransaction", Logger);
         }

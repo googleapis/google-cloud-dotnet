@@ -442,6 +442,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             public SpannerClient Client => throw new NotImplementedException();
             public IClock Clock => SystemClock.Instance;
             public SessionPoolOptions Options { get; } = new SessionPoolOptions();
+            public bool TracksSessions => throw new NotImplementedException();
+
             public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
             public void Detach(PooledSession session) => throw new NotImplementedException();
 

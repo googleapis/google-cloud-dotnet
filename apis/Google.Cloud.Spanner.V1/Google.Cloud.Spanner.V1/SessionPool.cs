@@ -186,7 +186,10 @@ namespace Google.Cloud.Spanner.V1
         /// <paramref name="transactionOptions"/> is <see cref="TransactionOptions.ModeOneofCase.ReadOnly"/>.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The <see cref="PooledSession"/> representing the client, session and, eventually, the transaction.</returns>
-        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
+        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(key, transactionOptions, singleUseTransaction, detached: false, cancellationToken);
+
+        private Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, bool detached, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(key, nameof(key));
             GaxPreconditions.CheckArgument(
@@ -194,8 +197,24 @@ namespace Google.Cloud.Spanner.V1
                 nameof(singleUseTransaction),
                 "Single use transactions are only supported for read-only transaction.");
             var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
-            return targetedPool.AcquireSessionAsync(transactionOptions, singleUseTransaction, cancellationToken);
+            return targetedPool.AcquireSessionAsync(transactionOptions, singleUseTransaction, detached, cancellationToken);
         }
+
+        /// <summary>
+        /// Asynchronously acquires a session using the given <see cref="SessionPoolSegmentKey"/>.
+        /// The session is detached from the session pool before being returned by this method.
+        /// This session pool won't track the acquired session, which won't be returned to be pool even when released.
+        /// The session will handle transaction creation as needed.
+        /// </summary>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> to acquire the session.</param>
+        /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
+        /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
+        /// <param name="singleUseTransaction">Whether the transaction used by this session is single use or not. May only be true if
+        /// <paramref name="transactionOptions"/> is <see cref="TransactionOptions.ModeOneofCase.ReadOnly"/>.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and, eventually, the transaction.</returns>
+        public Task<PooledSession> AcquireDetachedSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(key, transactionOptions, singleUseTransaction, detached: true, cancellationToken);
 
         /// <summary>
         /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated

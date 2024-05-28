@@ -261,6 +261,8 @@ public class RouteToLeaderTests
 
         public SessionPoolOptions Options => new SessionPoolOptions();
 
+        public bool TracksSessions => throw new NotImplementedException();
+
         public void Detach(PooledSession session) => throw new NotImplementedException();
         public Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) => throw new NotImplementedException();
         public void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession) => throw new NotImplementedException();

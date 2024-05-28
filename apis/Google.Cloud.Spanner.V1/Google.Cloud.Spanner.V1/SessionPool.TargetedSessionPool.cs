@@ -99,6 +99,8 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             internal int LiveOrRequestedSessionCount => Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
 
+            public override bool TracksSessions => true;
+
             internal TargetedSessionPool(SessionPool parent, SessionPoolSegmentKey key, bool acquireSessionsImmediately) : base(parent)
             {
                 _segmentKey = GaxPreconditions.CheckNotNull(key, nameof(key));
@@ -118,7 +120,7 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            public async Task<PooledSession> AcquireSessionAsync(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
+            public async Task<PooledSession> AcquireSessionAsync(TransactionOptions transactionOptions, bool singleUseTransaction, bool detached, CancellationToken cancellationToken)
             {
                 bool success = false;
                 try
@@ -139,7 +141,7 @@ namespace Google.Cloud.Spanner.V1
                         throw new InvalidOperationException("Session pool has already been shut down");
                     }
 
-                    PooledSession session = await AcquireSessionImplAsync(transactionOptions, singleUseTransaction, cancellationToken).ConfigureAwait(false);
+                    PooledSession session = await AcquireSessionImplAsync(transactionOptions, singleUseTransaction, detached, cancellationToken).ConfigureAwait(false);
                     success = true;
                     return session;
                 }
@@ -152,7 +154,7 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
+            private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, bool singleUseTransaction, bool detached, CancellationToken cancellationToken)
             {
                 var sessionAcquisitionTask = GetSessionAcquisitionTask(cancellationToken);
 
@@ -168,8 +170,17 @@ namespace Google.Cloud.Spanner.V1
                 // These happen frequently enough that we shouldn't need to worry about them here.
 
                 // While in the pool, sessions have TransactionOptions.ModeCase == ModeOneofCase.None and singleUseTransaction == false.
-                return session.WithTransactionOptions(transactionOptions ?? new TransactionOptions(), singleUseTransaction);
-            }
+                session = session.WithTransactionOptions(transactionOptions ?? new TransactionOptions(), singleUseTransaction);
+                return detached ? Detach(session) : session;
+
+                PooledSession Detach(PooledSession session)
+                {
+                    var detached = session.WithPool(Parent._detachedSessionPool);
+                    Interlocked.Decrement(ref _activeSessionCount);
+                    Interlocked.Decrement(ref _liveOrRequestedSessionCount);
+                    return detached;
+                }
+        }
 
             private Task<PooledSession> GetSessionAcquisitionTask(CancellationToken cancellationToken)
             {
@@ -314,7 +325,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     // Let's just release it back to the pool, that will handle the refreshing etc.
                     session.ReleaseToPool(false);
-                    return await AcquireSessionAsync(transactionOptions, singleUseTransaction, cancellationToken).ConfigureAwait(false);
+                    return await AcquireSessionAsync(transactionOptions, singleUseTransaction, detached: false, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
@@ -355,12 +366,6 @@ namespace Google.Cloud.Spanner.V1
                 {
                     ReleaseInactiveSession(session);
                 }
-            }
-
-            public override void Detach(PooledSession session)
-            {
-                Interlocked.Decrement(ref _activeSessionCount);
-                Interlocked.Decrement(ref _liveOrRequestedSessionCount);
             }
 
             internal void MaintainPool()
