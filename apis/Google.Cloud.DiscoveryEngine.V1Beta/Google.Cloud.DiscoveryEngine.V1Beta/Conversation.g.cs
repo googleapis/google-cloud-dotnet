@@ -140,9 +140,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Immutable. Fully qualified name
-    /// `project/*/locations/global/collections/{collection}/dataStore/*/conversations/*`
+    /// `projects/{project}/locations/global/collections/{collection}/dataStore/*/conversations/*`
     /// or
-    /// `project/*/locations/global/collections/{collection}/engines/*/conversations/*`.
+    /// `projects/{project}/locations/global/collections/{collection}/engines/*/conversations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

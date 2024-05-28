@@ -18,6 +18,18 @@
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
 {
+    public partial class ListCustomModelsRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+        /// </summary>
+        public DataStoreName DataStoreAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+            set => DataStore = value?.ToString() ?? "";
+        }
+    }
+
     public partial class TrainCustomModelRequest
     {
         /// <summary>

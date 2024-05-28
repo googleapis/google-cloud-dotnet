@@ -302,6 +302,1637 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_sync",
+      "title": "CreateControlRequestObject",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_async",
+      "title": "CreateControlRequestObjectAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_sync_flattened",
+      "title": "CreateControl",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_async_flattened",
+      "title": "CreateControlAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_sync_flattened_resourceNames1",
+      "title": "CreateControlResourceNames1",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_async_flattened_resourceNames1",
+      "title": "CreateControlResourceNames1Async",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_sync_flattened_resourceNames2",
+      "title": "CreateControlResourceNames2",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_async_flattened_resourceNames2",
+      "title": "CreateControlResourceNames2Async",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_DeleteControl_sync",
+      "title": "DeleteControlRequestObject",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_DeleteControl_async",
+      "title": "DeleteControlRequestObjectAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_DeleteControl_sync_flattened",
+      "title": "DeleteControl",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_DeleteControl_async_flattened",
+      "title": "DeleteControlAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_DeleteControl_sync_flattened_resourceNames",
+      "title": "DeleteControlResourceNames",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_DeleteControl_async_flattened_resourceNames",
+      "title": "DeleteControlResourceNamesAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_UpdateControl_sync",
+      "title": "UpdateControlRequestObject",
+      "description": "Snippet for UpdateControl",
+      "file": "ControlServiceClient.UpdateControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.UpdateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_UpdateControl_async",
+      "title": "UpdateControlRequestObjectAsync",
+      "description": "Snippet for UpdateControlAsync",
+      "file": "ControlServiceClient.UpdateControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.UpdateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_UpdateControl_sync_flattened",
+      "title": "UpdateControl",
+      "description": "Snippet for UpdateControl",
+      "file": "ControlServiceClient.UpdateControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.UpdateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_UpdateControl_async_flattened",
+      "title": "UpdateControlAsync",
+      "description": "Snippet for UpdateControlAsync",
+      "file": "ControlServiceClient.UpdateControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.UpdateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+            "name": "control"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_GetControl_sync",
+      "title": "GetControlRequestObject",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_GetControl_async",
+      "title": "GetControlRequestObjectAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_GetControl_sync_flattened",
+      "title": "GetControl",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_GetControl_async_flattened",
+      "title": "GetControlAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_GetControl_sync_flattened_resourceNames",
+      "title": "GetControlResourceNames",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_GetControl_async_flattened_resourceNames",
+      "title": "GetControlResourceNamesAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_sync",
+      "title": "ListControlsRequestObject",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_async",
+      "title": "ListControlsRequestObjectAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_sync_flattened",
+      "title": "ListControls",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_async_flattened",
+      "title": "ListControlsAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_sync_flattened_resourceNames1",
+      "title": "ListControlsResourceNames1",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_async_flattened_resourceNames1",
+      "title": "ListControlsResourceNames1Async",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_sync_flattened_resourceNames2",
+      "title": "ListControlsResourceNames2",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ControlService_ListControls_async_flattened_resourceNames2",
+      "title": "ListControlsResourceNames2Async",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1beta.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1beta_generated_ConversationalSearchService_ConverseConversation_sync",
       "title": "ConverseConversationRequestObject",
       "description": "Snippet for ConverseConversation",
@@ -9100,12 +10731,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 51,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 48,
+          "end": 49,
           "type": "SHORT"
         }
       ]
@@ -9149,12 +10780,299 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 49,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ProjectService_ProvisionProject_sync",
+      "title": "ProvisionProjectRequestObject",
+      "description": "Snippet for ProvisionProject",
+      "file": "ProjectServiceClient.ProvisionProjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProject",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient.ProvisionProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Project, Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1beta.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ProjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ProjectService_ProvisionProject_async",
+      "title": "ProvisionProjectRequestObjectAsync",
+      "description": "Snippet for ProvisionProjectAsync",
+      "file": "ProjectServiceClient.ProvisionProjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProjectAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient.ProvisionProjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Project, Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata>>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1beta.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ProjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ProjectService_ProvisionProject_sync_flattened",
+      "title": "ProvisionProject",
+      "description": "Snippet for ProvisionProject",
+      "file": "ProjectServiceClient.ProvisionProjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProject",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient.ProvisionProject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Project, Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1beta.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ProjectService_ProvisionProject_async_flattened",
+      "title": "ProvisionProjectAsync",
+      "description": "Snippet for ProvisionProjectAsync",
+      "file": "ProjectServiceClient.ProvisionProjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProjectAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient.ProvisionProjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Project, Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata>>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1beta.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ProjectService_ProvisionProject_sync_flattened_resourceNames",
+      "title": "ProvisionProjectResourceNames",
+      "description": "Snippet for ProvisionProject",
+      "file": "ProjectServiceClient.ProvisionProjectResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProject",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient.ProvisionProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Project, Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1beta.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_ProjectService_ProvisionProject_async_flattened_resourceNames",
+      "title": "ProvisionProjectResourceNamesAsync",
+      "description": "Snippet for ProvisionProjectAsync",
+      "file": "ProjectServiceClient.ProvisionProjectResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionProjectAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient.ProvisionProjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Project, Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata>>",
+        "client": {
+          "shortName": "ProjectServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.ProjectServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionProject",
+          "fullName": "google.cloud.discoveryengine.v1beta.ProjectService.ProvisionProject",
+          "service": {
+            "shortName": "ProjectService",
+            "fullName": "google.cloud.discoveryengine.v1beta.ProjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]
@@ -9197,12 +11115,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -9246,12 +11164,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 54,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 51,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -10797,12 +12715,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -10846,12 +12764,109 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SearchTuningService_ListCustomModels_sync",
+      "title": "ListCustomModelsRequestObject",
+      "description": "Snippet for ListCustomModels",
+      "file": "SearchTuningServiceClient.ListCustomModelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomModels",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchTuningServiceClient.ListCustomModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListCustomModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.ListCustomModelsResponse",
+        "client": {
+          "shortName": "SearchTuningServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomModels",
+          "fullName": "google.cloud.discoveryengine.v1beta.SearchTuningService.ListCustomModels",
+          "service": {
+            "shortName": "SearchTuningService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SearchTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SearchTuningService_ListCustomModels_async",
+      "title": "ListCustomModelsRequestObjectAsync",
+      "description": "Snippet for ListCustomModelsAsync",
+      "file": "SearchTuningServiceClient.ListCustomModelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomModelsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchTuningServiceClient.ListCustomModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListCustomModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.ListCustomModelsResponse>",
+        "client": {
+          "shortName": "SearchTuningServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomModels",
+          "fullName": "google.cloud.discoveryengine.v1beta.SearchTuningService.ListCustomModels",
+          "service": {
+            "shortName": "SearchTuningService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SearchTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -14068,12 +16083,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -14117,12 +16132,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]

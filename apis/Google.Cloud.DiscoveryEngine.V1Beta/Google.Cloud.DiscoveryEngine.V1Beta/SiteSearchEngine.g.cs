@@ -34,51 +34,52 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3NpdGVTZWFyY2hF",
             "bmdpbmUSaXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
             "fS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9z",
-            "dG9yZX0vc2l0ZVNlYXJjaEVuZ2luZSKMCQoKVGFyZ2V0U2l0ZRIRCgRuYW1l",
+            "dG9yZX0vc2l0ZVNlYXJjaEVuZ2luZSKqCQoKVGFyZ2V0U2l0ZRIRCgRuYW1l",
             "GAEgASgJQgPgQQMSJAoUcHJvdmlkZWRfdXJpX3BhdHRlcm4YAiABKAlCBuBB",
             "AuBBBBJCCgR0eXBlGAMgASgOMjQuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
             "Z2luZS52MWJldGEuVGFyZ2V0U2l0ZS5UeXBlEhgKC2V4YWN0X21hdGNoGAYg",
             "ASgIQgPgQQQSIgoVZ2VuZXJhdGVkX3VyaV9wYXR0ZXJuGAQgASgJQgPgQQMS",
-            "XgoWc2l0ZV92ZXJpZmljYXRpb25faW5mbxgHIAEoCzI5Lmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNpdGVWZXJpZmljYXRpb25JbmZv",
-            "QgPgQQMSXAoPaW5kZXhpbmdfc3RhdHVzGAggASgOMj4uZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVGFyZ2V0U2l0ZS5JbmRleGluZ1N0",
-            "YXR1c0ID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEloKDmZhaWx1cmVfcmVhc29uGAkgASgLMj0u",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVGFyZ2V0U2l0",
-            "ZS5GYWlsdXJlUmVhc29uQgPgQQMarQEKDUZhaWx1cmVSZWFzb24SYwoNcXVv",
-            "dGFfZmFpbHVyZRgBIAEoCzJKLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
-            "bmUudjFiZXRhLlRhcmdldFNpdGUuRmFpbHVyZVJlYXNvbi5RdW90YUZhaWx1",
-            "cmVIABosCgxRdW90YUZhaWx1cmUSHAoUdG90YWxfcmVxdWlyZWRfcXVvdGEY",
-            "ASABKANCCQoHZmFpbHVyZSI2CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQ",
-            "ABILCgdJTkNMVURFEAESCwoHRVhDTFVERRACImcKDkluZGV4aW5nU3RhdHVz",
-            "Eh8KG0lOREVYSU5HX1NUQVRVU19VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQ",
-            "ARIKCgZGQUlMRUQQAhINCglTVUNDRUVERUQQAxIMCghERUxFVElORxAEOqEC",
-            "6kGdAgopZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1RhcmdldFNp",
-            "dGUSanByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9k",
-            "YXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zaXRlU2VhcmNoRW5naW5lL3Rhcmdl",
-            "dFNpdGVzL3t0YXJnZXRfc2l0ZX0SgwFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2Rh",
-            "dGFTdG9yZXMve2RhdGFfc3RvcmV9L3NpdGVTZWFyY2hFbmdpbmUvdGFyZ2V0",
-            "U2l0ZXMve3RhcmdldF9zaXRlfSKnAgoUU2l0ZVZlcmlmaWNhdGlvbkluZm8S",
-            "cAoXc2l0ZV92ZXJpZmljYXRpb25fc3RhdGUYASABKA4yTy5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TaXRlVmVyaWZpY2F0aW9uSW5m",
-            "by5TaXRlVmVyaWZpY2F0aW9uU3RhdGUSLwoLdmVyaWZ5X3RpbWUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wImwKFVNpdGVWZXJpZmljYXRp",
-            "b25TdGF0ZRInCiNTSVRFX1ZFUklGSUNBVElPTl9TVEFURV9VTlNQRUNJRklF",
-            "RBAAEgwKCFZFUklGSUVEEAESDgoKVU5WRVJJRklFRBACEgwKCEVYRU1QVEVE",
-            "EANCnAIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
-            "YUIVU2l0ZVNlYXJjaEVuZ2luZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVw",
-            "YjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2ds",
-            "ZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3Vk",
-            "XERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNj",
-            "b3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
+            "HAoPcm9vdF9kb21haW5fdXJpGAogASgJQgPgQQMSXgoWc2l0ZV92ZXJpZmlj",
+            "YXRpb25faW5mbxgHIAEoCzI5Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhLlNpdGVWZXJpZmljYXRpb25JbmZvQgPgQQMSXAoPaW5kZXhp",
+            "bmdfc3RhdHVzGAggASgOMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MWJldGEuVGFyZ2V0U2l0ZS5JbmRleGluZ1N0YXR1c0ID4EEDEjQKC3Vw",
+            "ZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEloKDmZhaWx1cmVfcmVhc29uGAkgASgLMj0uZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MWJldGEuVGFyZ2V0U2l0ZS5GYWlsdXJlUmVhc29u",
+            "QgPgQQMarQEKDUZhaWx1cmVSZWFzb24SYwoNcXVvdGFfZmFpbHVyZRgBIAEo",
+            "CzJKLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlRhcmdl",
+            "dFNpdGUuRmFpbHVyZVJlYXNvbi5RdW90YUZhaWx1cmVIABosCgxRdW90YUZh",
+            "aWx1cmUSHAoUdG90YWxfcmVxdWlyZWRfcXVvdGEYASABKANCCQoHZmFpbHVy",
+            "ZSI2CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABILCgdJTkNMVURFEAES",
+            "CwoHRVhDTFVERRACImcKDkluZGV4aW5nU3RhdHVzEh8KG0lOREVYSU5HX1NU",
+            "QVRVU19VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZGQUlMRUQQAhIN",
+            "CglTVUNDRUVERUQQAxIMCghERUxFVElORxAEOqEC6kGdAgopZGlzY292ZXJ5",
+            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL1RhcmdldFNpdGUSanByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRh",
+            "X3N0b3JlfS9zaXRlU2VhcmNoRW5naW5lL3RhcmdldFNpdGVzL3t0YXJnZXRf",
+            "c2l0ZX0SgwFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFf",
+            "c3RvcmV9L3NpdGVTZWFyY2hFbmdpbmUvdGFyZ2V0U2l0ZXMve3RhcmdldF9z",
+            "aXRlfSKnAgoUU2l0ZVZlcmlmaWNhdGlvbkluZm8ScAoXc2l0ZV92ZXJpZmlj",
+            "YXRpb25fc3RhdGUYASABKA4yTy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxYmV0YS5TaXRlVmVyaWZpY2F0aW9uSW5mby5TaXRlVmVyaWZpY2F0",
+            "aW9uU3RhdGUSLwoLdmVyaWZ5X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wImwKFVNpdGVWZXJpZmljYXRpb25TdGF0ZRInCiNTSVRF",
+            "X1ZFUklGSUNBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEgwKCFZFUklGSUVE",
+            "EAESDgoKVU5WRVJJRklFRBACEgwKCEVYRU1QVEVEEANCnAIKJ2NvbS5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIVU2l0ZVNlYXJjaEVu",
+            "Z2luZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5n",
+            "aW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnllbmdp",
+            "bmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3Zl",
+            "cnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2lu",
+            "ZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYx",
+            "YmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SiteSearchEngine), global::Google.Cloud.DiscoveryEngine.V1Beta.SiteSearchEngine.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite), global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Parser, new[]{ "Name", "ProvidedUriPattern", "Type", "ExactMatch", "GeneratedUriPattern", "SiteVerificationInfo", "IndexingStatus", "UpdateTime", "FailureReason" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.Type), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.IndexingStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason), global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason.Parser, new[]{ "QuotaFailure" }, new[]{ "Failure" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason.Types.QuotaFailure), global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason.Types.QuotaFailure.Parser, new[]{ "TotalRequiredQuota" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite), global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Parser, new[]{ "Name", "ProvidedUriPattern", "Type", "ExactMatch", "GeneratedUriPattern", "RootDomainUri", "SiteVerificationInfo", "IndexingStatus", "UpdateTime", "FailureReason" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.Type), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.IndexingStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason), global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason.Parser, new[]{ "QuotaFailure" }, new[]{ "Failure" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason.Types.QuotaFailure), global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason.Types.QuotaFailure.Parser, new[]{ "TotalRequiredQuota" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SiteVerificationInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.SiteVerificationInfo.Parser, new[]{ "SiteVerificationState", "VerifyTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SiteVerificationInfo.Types.SiteVerificationState) }, null, null)
           }));
     }
@@ -327,6 +328,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       type_ = other.type_;
       exactMatch_ = other.exactMatch_;
       generatedUriPattern_ = other.generatedUriPattern_;
+      rootDomainUri_ = other.rootDomainUri_;
       siteVerificationInfo_ = other.siteVerificationInfo_ != null ? other.siteVerificationInfo_.Clone() : null;
       indexingStatus_ = other.indexingStatus_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
@@ -424,6 +426,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "root_domain_uri" field.</summary>
+    public const int RootDomainUriFieldNumber = 10;
+    private string rootDomainUri_ = "";
+    /// <summary>
+    /// Output only. Root domain of the provided_uri_pattern.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RootDomainUri {
+      get { return rootDomainUri_; }
+      set {
+        rootDomainUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "site_verification_info" field.</summary>
     public const int SiteVerificationInfoFieldNumber = 7;
     private global::Google.Cloud.DiscoveryEngine.V1Beta.SiteVerificationInfo siteVerificationInfo_;
@@ -504,6 +521,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (Type != other.Type) return false;
       if (ExactMatch != other.ExactMatch) return false;
       if (GeneratedUriPattern != other.GeneratedUriPattern) return false;
+      if (RootDomainUri != other.RootDomainUri) return false;
       if (!object.Equals(SiteVerificationInfo, other.SiteVerificationInfo)) return false;
       if (IndexingStatus != other.IndexingStatus) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
@@ -520,6 +538,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (Type != global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (ExactMatch != false) hash ^= ExactMatch.GetHashCode();
       if (GeneratedUriPattern.Length != 0) hash ^= GeneratedUriPattern.GetHashCode();
+      if (RootDomainUri.Length != 0) hash ^= RootDomainUri.GetHashCode();
       if (siteVerificationInfo_ != null) hash ^= SiteVerificationInfo.GetHashCode();
       if (IndexingStatus != global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.IndexingStatus.Unspecified) hash ^= IndexingStatus.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -578,6 +597,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(74);
         output.WriteMessage(FailureReason);
       }
+      if (RootDomainUri.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(RootDomainUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -624,6 +647,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(74);
         output.WriteMessage(FailureReason);
       }
+      if (RootDomainUri.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(RootDomainUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -648,6 +675,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (GeneratedUriPattern.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GeneratedUriPattern);
+      }
+      if (RootDomainUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RootDomainUri);
       }
       if (siteVerificationInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SiteVerificationInfo);
@@ -687,6 +717,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (other.GeneratedUriPattern.Length != 0) {
         GeneratedUriPattern = other.GeneratedUriPattern;
+      }
+      if (other.RootDomainUri.Length != 0) {
+        RootDomainUri = other.RootDomainUri;
       }
       if (other.siteVerificationInfo_ != null) {
         if (siteVerificationInfo_ == null) {
@@ -769,6 +802,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(FailureReason);
             break;
           }
+          case 82: {
+            RootDomainUri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -827,6 +864,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               FailureReason = new global::Google.Cloud.DiscoveryEngine.V1Beta.TargetSite.Types.FailureReason();
             }
             input.ReadMessage(FailureReason);
+            break;
+          }
+          case 82: {
+            RootDomainUri = input.ReadString();
             break;
           }
         }

@@ -31,23 +31,23 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "dBgBIAEoCRJWCgphdHRyaWJ1dGVzGAIgAygLMkIuZ29vZ2xlLmNsb3VkLmRp",
             "c2NvdmVyeWVuZ2luZS52MWJldGEuR3JvdW5kaW5nRmFjdC5BdHRyaWJ1dGVz",
             "RW50cnkaMQoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEiwwEKCUZhY3RDaHVuaxISCgpjaHVua190ZXh0GAEgASgJ",
-            "Eg4KBnNvdXJjZRgCIAEoCRJbCg9zb3VyY2VfbWV0YWRhdGEYAyADKAsyQi5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5GYWN0Q2h1bmsu",
-            "U291cmNlTWV0YWRhdGFFbnRyeRo1ChNTb3VyY2VNZXRhZGF0YUVudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFClQIKJ2NvbS5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIOR3JvdW5kaW5nUHJvdG9Q",
-            "AVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFi",
-            "ZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElT",
-            "Q09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5W",
-            "MUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoC",
-            "Jkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90",
-            "bzM="));
+            "ZRgCIAEoCToCOAEi0gEKCUZhY3RDaHVuaxISCgpjaHVua190ZXh0GAEgASgJ",
+            "Eg4KBnNvdXJjZRgCIAEoCRINCgVpbmRleBgEIAEoBRJbCg9zb3VyY2VfbWV0",
+            "YWRhdGEYAyADKAsyQi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "YmV0YS5GYWN0Q2h1bmsuU291cmNlTWV0YWRhdGFFbnRyeRo1ChNTb3VyY2VN",
+            "ZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFC",
+            "lQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIO",
+            "R3JvdW5kaW5nUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zl",
+            "cnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
+            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRp",
+            "c2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5",
+            "RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2lu",
+            "ZTo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.GroundingFact), global::Google.Cloud.DiscoveryEngine.V1Beta.GroundingFact.Parser, new[]{ "FactText", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.FactChunk), global::Google.Cloud.DiscoveryEngine.V1Beta.FactChunk.Parser, new[]{ "ChunkText", "Source", "SourceMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.FactChunk), global::Google.Cloud.DiscoveryEngine.V1Beta.FactChunk.Parser, new[]{ "ChunkText", "Source", "Index", "SourceMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -321,6 +321,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public FactChunk(FactChunk other) : this() {
       chunkText_ = other.chunkText_;
       source_ = other.source_;
+      index_ = other.index_;
       sourceMetadata_ = other.sourceMetadata_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -364,6 +365,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 4;
+    private int index_;
+    /// <summary>
+    /// The index of this chunk. Currently, only used for the streaming mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
     /// <summary>Field number for the "source_metadata" field.</summary>
     public const int SourceMetadataFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_sourceMetadata_codec
@@ -395,6 +411,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (ChunkText != other.ChunkText) return false;
       if (Source != other.Source) return false;
+      if (Index != other.Index) return false;
       if (!SourceMetadata.Equals(other.SourceMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -405,6 +422,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       int hash = 1;
       if (ChunkText.Length != 0) hash ^= ChunkText.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
       hash ^= SourceMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -433,6 +451,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteString(Source);
       }
       sourceMetadata_.WriteTo(output, _map_sourceMetadata_codec);
+      if (Index != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Index);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -452,6 +474,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteString(Source);
       }
       sourceMetadata_.WriteTo(ref output, _map_sourceMetadata_codec);
+      if (Index != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Index);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -467,6 +493,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (Source.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
       }
       size += sourceMetadata_.CalculateSize(_map_sourceMetadata_codec);
       if (_unknownFields != null) {
@@ -486,6 +515,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (other.Source.Length != 0) {
         Source = other.Source;
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
       }
       sourceMetadata_.MergeFrom(other.sourceMetadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -515,6 +547,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             sourceMetadata_.AddEntriesFrom(input, _map_sourceMetadata_codec);
             break;
           }
+          case 32: {
+            Index = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -540,6 +576,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 26: {
             sourceMetadata_.AddEntriesFrom(ref input, _map_sourceMetadata_codec);
+            break;
+          }
+          case 32: {
+            Index = input.ReadInt32();
             break;
           }
         }

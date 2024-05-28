@@ -38,45 +38,47 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "UkVfRkhJUhAHKqQBCgxTb2x1dGlvblR5cGUSHQoZU09MVVRJT05fVFlQRV9V",
             "TlNQRUNJRklFRBAAEiAKHFNPTFVUSU9OX1RZUEVfUkVDT01NRU5EQVRJT04Q",
             "ARIYChRTT0xVVElPTl9UWVBFX1NFQVJDSBACEhYKElNPTFVUSU9OX1RZUEVf",
-            "Q0hBVBADEiEKHVNPTFVUSU9OX1RZUEVfR0VORVJBVElWRV9DSEFUEAQqXwoK",
-            "U2VhcmNoVGllchIbChdTRUFSQ0hfVElFUl9VTlNQRUNJRklFRBAAEhgKFFNF",
-            "QVJDSF9USUVSX1NUQU5EQVJEEAESGgoWU0VBUkNIX1RJRVJfRU5URVJQUklT",
-            "RRACKkMKC1NlYXJjaEFkZE9uEh0KGVNFQVJDSF9BRERfT05fVU5TUEVDSUZJ",
-            "RUQQABIVChFTRUFSQ0hfQUREX09OX0xMTRABQukKCidjb20uZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCC0NvbW1vblByb3RvUAFaUWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9k",
-            "aXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVS",
-            "WUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRh",
-            "ygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29n",
-            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YepB5gEKJWRpc2Nv",
-            "dmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9CcmFuY2gSUXByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRh",
-            "X3N0b3JlfS9icmFuY2hlcy97YnJhbmNofRJqcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9u",
-            "fS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9icmFuY2hlcy97YnJhbmNofepB",
-            "bQopZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0NvbGxlY3Rpb24S",
-            "QHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xs",
-            "ZWN0aW9ucy97Y29sbGVjdGlvbn3qQVIKJ2Rpc2NvdmVyeWVuZ2luZS5nb29n",
-            "bGVhcGlzLmNvbS9Mb2NhdGlvbhIncHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb2596kF9Ci5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBp",
-            "cy5jb20vR3JvdW5kaW5nQ29uZmlnEktwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vZ3JvdW5kaW5nQ29uZmlncy97Z3JvdW5kaW5n",
-            "X2NvbmZpZ33qQXcKLGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9S",
-            "YW5raW5nQ29uZmlnEkdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcmFua2luZ0NvbmZpZ3Mve3JhbmtpbmdfY29uZmlnfepBeQoj",
-            "aGVhbHRoY2FyZS5nb29nbGVhcGlzLmNvbS9GaGlyU3RvcmUSUnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhc2V0cy97ZGF0",
-            "YXNldH0vZmhpclN0b3Jlcy97Zmhpcl9zdG9yZX3qQa4CCiRkaXNjb3Zlcnll",
-            "bmdpbmUuZ29vZ2xlYXBpcy5jb20vQ2h1bmsSdXByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3Jl",
-            "fS9icmFuY2hlcy97YnJhbmNofS9kb2N1bWVudHMve2RvY3VtZW50fS9jaHVu",
-            "a3Mve2NodW5rfRKOAXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97",
-            "ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0vZG9jdW1lbnRzL3tkb2N1",
-            "bWVudH0vY2h1bmtzL3tjaHVua31iBnByb3RvMw=="));
+            "Q0hBVBADEiEKHVNPTFVUSU9OX1RZUEVfR0VORVJBVElWRV9DSEFUEAQqaAoN",
+            "U2VhcmNoVXNlQ2FzZRIfChtTRUFSQ0hfVVNFX0NBU0VfVU5TUEVDSUZJRUQQ",
+            "ABIaChZTRUFSQ0hfVVNFX0NBU0VfU0VBUkNIEAESGgoWU0VBUkNIX1VTRV9D",
+            "QVNFX0JST1dTRRACKl8KClNlYXJjaFRpZXISGwoXU0VBUkNIX1RJRVJfVU5T",
+            "UEVDSUZJRUQQABIYChRTRUFSQ0hfVElFUl9TVEFOREFSRBABEhoKFlNFQVJD",
+            "SF9USUVSX0VOVEVSUFJJU0UQAipDCgtTZWFyY2hBZGRPbhIdChlTRUFSQ0hf",
+            "QUREX09OX1VOU1BFQ0lGSUVEEAASFQoRU0VBUkNIX0FERF9PTl9MTE0QAULp",
+            "CgonY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQgtD",
+            "b21tb25Qcm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVu",
+            "Z2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5n",
+            "aW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292",
+            "ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdp",
+            "bmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpW",
+            "MWJldGHqQeYBCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQnJh",
+            "bmNoElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0SanBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0",
+            "aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJh",
+            "bmNoZXMve2JyYW5jaH3qQW0KKWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlz",
+            "LmNvbS9Db2xsZWN0aW9uEkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb2596kFSCidkaXNj",
+            "b3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SJ3Byb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufepBfQouZGlzY292ZXJ5",
+            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL0dyb3VuZGluZ0NvbmZpZxJLcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2dyb3VuZGluZ0Nv",
+            "bmZpZ3Mve2dyb3VuZGluZ19jb25maWd96kF3CixkaXNjb3ZlcnllbmdpbmUu",
+            "Z29vZ2xlYXBpcy5jb20vUmFua2luZ0NvbmZpZxJHcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JhbmtpbmdDb25maWdzL3tyYW5r",
+            "aW5nX2NvbmZpZ33qQXkKI2hlYWx0aGNhcmUuZ29vZ2xlYXBpcy5jb20vRmhp",
+            "clN0b3JlElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vZGF0YXNldHMve2RhdGFzZXR9L2ZoaXJTdG9yZXMve2ZoaXJfc3RvcmV9",
+            "6kGuAgokZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0NodW5rEnVw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0",
+            "b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0vZG9jdW1lbnRz",
+            "L3tkb2N1bWVudH0vY2h1bmtzL3tjaHVua30SjgFwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rp",
+            "b259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2JyYW5jaGVzL3ticmFuY2h9",
+            "L2RvY3VtZW50cy97ZG9jdW1lbnR9L2NodW5rcy97Y2h1bmt9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.IndustryVertical), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SolutionType), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchTier), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchAddOn), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.IndustryVertical), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SolutionType), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchUseCase), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchTier), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchAddOn), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Interval), global::Google.Cloud.DiscoveryEngine.V1Beta.Interval.Parser, new[]{ "Minimum", "ExclusiveMinimum", "Maximum", "ExclusiveMaximum" }, new[]{ "Min", "Max" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CustomAttribute), global::Google.Cloud.DiscoveryEngine.V1Beta.CustomAttribute.Parser, new[]{ "Text", "Numbers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UserInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.UserInfo.Parser, new[]{ "UserId", "UserAgent" }, null, null, null, null),
@@ -138,6 +140,28 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// must enrolled with `SOLUTION_TYPE_CHAT` solution.
     /// </summary>
     [pbr::OriginalName("SOLUTION_TYPE_GENERATIVE_CHAT")] GenerativeChat = 4,
+  }
+
+  /// <summary>
+  /// Defines a further subdivision of `SolutionType`.
+  /// Specifically applies to
+  /// [SOLUTION_TYPE_SEARCH][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_SEARCH].
+  /// </summary>
+  public enum SearchUseCase {
+    /// <summary>
+    /// Value used when unset. Will not occur in CSS.
+    /// </summary>
+    [pbr::OriginalName("SEARCH_USE_CASE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Search use case. Expects the traffic has a non-empty
+    /// [query][google.cloud.discoveryengine.v1beta.SearchRequest.query].
+    /// </summary>
+    [pbr::OriginalName("SEARCH_USE_CASE_SEARCH")] Search = 1,
+    /// <summary>
+    /// Browse use case. Expects the traffic has an empty
+    /// [query][google.cloud.discoveryengine.v1beta.SearchRequest.query].
+    /// </summary>
+    [pbr::OriginalName("SEARCH_USE_CASE_BROWSE")] Browse = 2,
   }
 
   /// <summary>

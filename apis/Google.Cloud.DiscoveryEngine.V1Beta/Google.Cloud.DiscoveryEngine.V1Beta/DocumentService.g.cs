@@ -419,7 +419,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Maximum number of [Document][google.cloud.discoveryengine.v1beta.Document]s
     /// to return. If unspecified, defaults to 100. The maximum allowed value is
-    /// 1000. Values above 1000 will be coerced to 1000.
+    /// 1000. Values above 1000 are set to 1000.
     ///
     /// If this field is negative, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
@@ -956,8 +956,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string documentId_ = "";
     /// <summary>
     /// Required. The ID to use for the
-    /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-    /// the final component of the
+    /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+    /// final component of the
     /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
     ///
     /// If the caller does not have permission to create the
@@ -1252,10 +1252,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the
+    /// If set to `true` and the
     /// [Document][google.cloud.discoveryengine.v1beta.Document] is not found, a
-    /// new [Document][google.cloud.discoveryengine.v1beta.Document] will be
-    /// created.
+    /// new [Document][google.cloud.discoveryengine.v1beta.Document] is be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1271,7 +1270,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Indicates which fields in the provided imported 'document' to update. If
-    /// not set, will by default update all fields.
+    /// not set, by default updates all fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -32,6 +32,45 @@
         }
       }
     },
+    "ControlService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ControlServiceClient",
+          "rpcs": {
+            "CreateControl": {
+              "methods": [
+                "CreateControl",
+                "CreateControlAsync"
+              ]
+            },
+            "DeleteControl": {
+              "methods": [
+                "DeleteControl",
+                "DeleteControlAsync"
+              ]
+            },
+            "GetControl": {
+              "methods": [
+                "GetControl",
+                "GetControlAsync"
+              ]
+            },
+            "ListControls": {
+              "methods": [
+                "ListControls",
+                "ListControlsAsync"
+              ]
+            },
+            "UpdateControl": {
+              "methods": [
+                "UpdateControl",
+                "UpdateControlAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ConversationalSearchService": {
       "clients": {
         "grpc": {
@@ -281,6 +320,21 @@
         }
       }
     },
+    "ProjectService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProjectServiceClient",
+          "rpcs": {
+            "ProvisionProject": {
+              "methods": [
+                "ProvisionProject",
+                "ProvisionProjectAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "RankService": {
       "clients": {
         "grpc": {
@@ -370,6 +424,12 @@
         "grpc": {
           "libraryClient": "SearchTuningServiceClient",
           "rpcs": {
+            "ListCustomModels": {
+              "methods": [
+                "ListCustomModels",
+                "ListCustomModelsAsync"
+              ]
+            },
             "TrainCustomModel": {
               "methods": [
                 "TrainCustomModel",

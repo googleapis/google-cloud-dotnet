@@ -29,7 +29,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3Yx",
             "YmV0YS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8ijAsKBkVuZ2luZRJaChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsy",
+            "cHJvdG8ihwsKBkVuZ2luZRJaChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsy",
             "PC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5FbmdpbmUu",
             "Q2hhdEVuZ2luZUNvbmZpZ0gAEl4KFHNlYXJjaF9lbmdpbmVfY29uZmlnGA0g",
             "ASgLMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRW5n",
@@ -55,19 +55,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "Z2Zsb3dfYWdlbnRfdG9fbGluaxgCIAEoCRpwChNBZ2VudENyZWF0aW9uQ29u",
             "ZmlnEhAKCGJ1c2luZXNzGAEgASgJEh0KFWRlZmF1bHRfbGFuZ3VhZ2VfY29k",
             "ZRgCIAEoCRIWCgl0aW1lX3pvbmUYAyABKAlCA+BBAhIQCghsb2NhdGlvbhgE",
-            "IAEoCRopCgxDb21tb25Db25maWcSGQoMY29tcGFueV9uYW1lGAEgASgJQgPg",
-            "QQUaLgoSQ2hhdEVuZ2luZU1ldGFkYXRhEhgKEGRpYWxvZ2Zsb3dfYWdlbnQY",
-            "ASABKAk6fepBegolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0Vu",
-            "Z2luZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVzL3tlbmdpbmV9Qg8K",
-            "DWVuZ2luZV9jb25maWdCEQoPZW5naW5lX21ldGFkYXRhQpICCidjb20uZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCC0VuZ2luZVByb3Rv",
-            "UAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYx",
-            "YmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJ",
-            "U0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUu",
-            "VjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHq",
-            "AiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJv",
-            "dG8z"));
+            "IAEoCRokCgxDb21tb25Db25maWcSFAoMY29tcGFueV9uYW1lGAEgASgJGi4K",
+            "EkNoYXRFbmdpbmVNZXRhZGF0YRIYChBkaWFsb2dmbG93X2FnZW50GAEgASgJ",
+            "On3qQXoKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9FbmdpbmUS",
+            "UXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xs",
+            "ZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97ZW5naW5lfUIPCg1lbmdp",
+            "bmVfY29uZmlnQhEKD2VuZ2luZV9tZXRhZGF0YUKSAgonY29tLmdvb2dsZS5j",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQgtFbmdpbmVQcm90b1ABWlFj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEv",
+            "ZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZF",
+            "UllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0",
+            "YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29v",
+            "Z2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -332,7 +331,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// The restriction of the Engine industry vertical is based on
     /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore]: If unspecified,
     /// default to `GENERIC`. Vertical on Engine has to match vertical of the
-    /// DataStore liniked to the engine.
+    /// DataStore linked to the engine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1734,8 +1733,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         public const int CompanyNameFieldNumber = 1;
         private string companyName_ = "";
         /// <summary>
-        /// Immutable. The name of the company, business or entity that is associated
-        /// with the engine. Setting this may help improve LLM related features.
+        /// The name of the company, business or entity that is associated with the
+        /// engine. Setting this may help improve LLM related features.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

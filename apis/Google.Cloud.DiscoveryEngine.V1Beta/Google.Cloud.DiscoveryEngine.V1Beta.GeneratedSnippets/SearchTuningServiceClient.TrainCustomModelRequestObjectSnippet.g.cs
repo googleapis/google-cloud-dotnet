@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 GcsTrainingInput = new TrainCustomModelRequest.Types.GcsTrainingInput(),
                 ModelType = "",
                 ErrorConfig = new ImportErrorConfig(),
+                ModelId = "",
             };
             // Make the request
             Operation<TrainCustomModelResponse, TrainCustomModelMetadata> response = searchTuningServiceClient.TrainCustomModel(request);

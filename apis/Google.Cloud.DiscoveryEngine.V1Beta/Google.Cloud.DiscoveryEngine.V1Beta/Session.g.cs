@@ -123,7 +123,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Immutable. Fully qualified name
-    /// `project/*/locations/global/collections/{collection}/engines/{engine}/sessions/*`
+    /// `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -556,6 +556,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         private string answer_ = "";
         /// <summary>
         /// The resource name of the answer to the user query.
+        ///
+        /// Only set if the answer generation (/answer API call) happened in this
+        /// turn.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

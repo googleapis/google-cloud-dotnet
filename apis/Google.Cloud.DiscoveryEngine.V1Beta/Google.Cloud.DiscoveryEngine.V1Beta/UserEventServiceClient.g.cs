@@ -345,7 +345,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             CollectUserEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Bulk import of User events. Request processing might be
+        /// Bulk import of user events. Request processing might be
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
@@ -360,7 +360,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Bulk import of User events. Request processing might be
+        /// Bulk import of user events. Request processing might be
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
@@ -375,7 +375,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Bulk import of User events. Request processing might be
+        /// Bulk import of user events. Request processing might be
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
@@ -539,7 +539,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public override lro::OperationsClient ImportUserEventsOperationsClient { get; }
 
         /// <summary>
-        /// Bulk import of User events. Request processing might be
+        /// Bulk import of user events. Request processing might be
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
@@ -557,7 +557,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         }
 
         /// <summary>
-        /// Bulk import of User events. Request processing might be
+        /// Bulk import of user events. Request processing might be
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 

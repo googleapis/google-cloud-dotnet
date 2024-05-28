@@ -721,8 +721,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-        /// the final component of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+        /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
         /// 
         /// If the caller does not have permission to create the
@@ -761,8 +761,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-        /// the final component of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+        /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
         /// 
         /// If the caller does not have permission to create the
@@ -801,8 +801,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-        /// the final component of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+        /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
         /// 
         /// If the caller does not have permission to create the
@@ -836,8 +836,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-        /// the final component of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+        /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
         /// 
         /// If the caller does not have permission to create the
@@ -876,8 +876,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-        /// the final component of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+        /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
         /// 
         /// If the caller does not have permission to create the
@@ -916,8 +916,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="documentId">
         /// Required. The ID to use for the
-        /// [Document][google.cloud.discoveryengine.v1beta.Document], which will become
-        /// the final component of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], which becomes the
+        /// final component of the
         /// [Document.name][google.cloud.discoveryengine.v1beta.Document.name].
         /// 
         /// If the caller does not have permission to create the
@@ -982,7 +982,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided imported 'document' to update. If
-        /// not set, will by default update all fields.
+        /// not set, by default updates all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided imported 'document' to update. If
-        /// not set, will by default update all fields.
+        /// not set, by default updates all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1038,7 +1038,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided imported 'document' to update. If
-        /// not set, will by default update all fields.
+        /// not set, by default updates all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1207,7 +1207,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-        /// processing may be synchronous. Non-existing items will be created.
+        /// processing may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-        /// processing may be synchronous. Non-existing items will be created.
+        /// processing may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -1237,7 +1237,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-        /// processing may be synchronous. Non-existing items will be created.
+        /// processing may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-        /// processing may be synchronous. Non-existing items will be created.
+        /// processing may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
@@ -1623,7 +1623,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <summary>
         /// Bulk import of multiple
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s. Request
-        /// processing may be synchronous. Non-existing items will be created.
+        /// processing may be synchronous. Non-existing items are created.
         /// 
         /// Note: It is possible for a subset of the
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be
