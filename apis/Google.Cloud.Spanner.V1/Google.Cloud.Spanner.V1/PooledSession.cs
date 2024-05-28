@@ -84,6 +84,16 @@ namespace Google.Cloud.Spanner.V1
         public ByteString TransactionId => Interlocked.CompareExchange(ref _transaction, null, null)?.Id;
 
         /// <summary>
+        /// Whether this session is detached from the session pool or not.
+        /// </summary>
+        /// <remarks>
+        /// Detached sessions are used for transactional operations performed across several processes,
+        /// for instance, partitioned reads. See the <see cref="ReleaseToPool(bool)"/> documentation for
+        /// information on how to release resources of a detached session gracefully.
+        /// </remarks>
+        public bool IsDetached => !_pool.TracksSessions;
+
+        /// <summary>
         /// The options for the transaction that is or will be associated with this session. Won't be null.
         /// </summary>
         /// <remarks>
@@ -497,11 +507,17 @@ namespace Google.Cloud.Spanner.V1
         private bool IsCommittedOrRolledBack() => Interlocked.CompareExchange(ref _committedOrRolledBack, 0, 0) == 1;
 
         /// <summary>
-        /// Returns this session to the session pool from which it was acquired, unless
-        /// it has become invalid. This method should only be called once per instance; subsequent
+        /// Returns this session to the session pool from which it was acquired, unless this is a detached session
+        /// or it has become invalid. This method should only be called once per instance; subsequent
         /// calls are ignored. No other methods can be called after this.
         /// </summary>
         /// <param name="forceDelete">true to force the session to be deleted; false to allow the session to be reused.</param>
+        /// <remarks>
+        /// If <see cref="IsDetached"/> is true, the session won't be returned to the pool because its underlying
+        /// resources may be being used by other processes. The last process to use this session's underlying resources should
+        /// call <see cref="ReleaseToPool(bool)"/> with <paramref name="forceDelete"/> set to true, so that the session resources
+        /// are gracefully freed.
+        /// </remarks>
         public void ReleaseToPool(bool forceDelete)
         {
             if (MarkAsDisposed())
@@ -518,31 +534,27 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Detaches this session from the session pool from which it was acquired, so that the session pool
-        /// stops tracking this session and counting it as active.
-        /// This method should only be called once per instance; subsequent calls are ignored.
+        /// Returns a new <see cref="PooledSession"/> instance identical to this one, except for the given pool.
         /// No other methods can be called after this.
         /// </summary>
         /// <remarks>
-        /// This method should be called only for sessions that are meant to be explicitly shared across processes.
-        /// Note that we don't attempt to rollback a transaction that is being detached, or attempt to delete the session,
-        /// under the assumption that it will be reused across processes.
-        /// If there's a process capable of knowing when all other processes are done using the session, then that process could call
-        /// <see cref="SessionPool.CreateDetachedSession(SessionName, ByteString, ModeOneofCase)"/> (or an overload) to create an instance
-        /// of <see cref="PooledSession"/> representing the shared transaction and then call <see cref="ReleaseToPool(bool)"/> passing true
-        /// to force session deletion and clean up resources.
-        /// Else, the application can rely on Spanner service garbage collection to clean up this session once it becomes stale.
+        /// This method is an implementation detail that allows us to acquire a pooled session from <see cref="SessionPool.TargetedSessionPool"/>
+        /// and turn it into a detached session by moving it to <see cref="SessionPool.DetachedSessionPool"/>.
         /// </remarks>
-        public void DetachFromPool()
+        internal PooledSession WithPool(SessionPool.ISessionPool pool)
         {
-            if (MarkAsDisposed())
+            GaxPreconditions.CheckNotNull(pool, nameof(pool));
+            CheckNotDisposed();
+            if (IsCommittedOrRolledBack())
             {
-                _pool.Detach(AfterReset());
+                throw new InvalidOperationException("A session with a completed transaction cannot be moved to a different pool.");
             }
-            else
-            {
-                // Log?
-            }
+
+            // We mark this instance as disposed because we'll be changing the associated pool,
+            // which means we don't want this instance to be usable after.
+            MarkAsDisposed();
+
+            return new PooledSession(pool, SessionName, TransactionId, TransactionOptions, SingleUseTransaction, ReadTimestamp, _evictionTime, RefreshTicks);
         }
 
         /// <summary>

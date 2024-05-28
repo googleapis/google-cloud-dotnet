@@ -168,8 +168,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 ValidateConnectionAndCommandTextBuilder();
 
-                GaxPreconditions.CheckState(Transaction?.Mode == TransactionMode.ReadOnly,
-                    "GetReaderPartitions can only be executed within an explicitly created read-only transaction.");
+                GaxPreconditions.CheckState(Transaction?.Mode == TransactionMode.ReadOnly && Transaction?.IsDetached == true,
+                    "GetReaderPartitions can only be executed within an explicitly created detached read-only transaction.");
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var readOrQueryRequest = GetReadOrQueryRequest();

@@ -61,7 +61,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly List<Mutation> _mutations = new List<Mutation>();
         // This value will be true if and only if this transaction was created by RetriableTransaction.
         private readonly bool _isRetriable = false;
-        private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
+        private DisposeBehavior _disposeBehavior = DisposeBehavior.Default;
         private int _disposed = 0;
 
         // Flag indicating whether the transaction has executed at least one statement.
@@ -222,25 +222,30 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Returns true if this transaction is being used by multiple <see cref="SpannerConnection"/> objects.
-        /// <see cref="SpannerCommand.GetReaderPartitionsAsync(PartitionOptions, CancellationToken)"/> will automatically mark the transaction as shared
-        /// because it is expected that you will be distributing the read among several tasks or processes.
+        /// Whether this transaction is detached or not.
+        /// A detached transaction's resources are not pooled, so the transaction may be
+        /// shared across processes for instance, for partitioned reads.
         /// </summary>
-        public bool Shared { get; internal set; }
+        public bool IsDetached => _session.IsDetached;
 
         /// <summary>
         /// Specifies how resources are treated when <see cref="Dispose"/> is called.
-        /// The default behavior of <see cref="DisposeBehavior.ReleaseToPool"/> will cause transactional resources
+        /// Defaults to <see cref="DisposeBehavior.Default"/>. For a pooled transaction, 
+        /// <see cref="DisposeBehavior.Default"/> will cause transactional resources
         /// to be sent back into a shared pool for re-use.
-        /// Shared transactions may only set this value to either <see cref="DisposeBehavior.CloseResources"/> to close
-        /// resources or <see cref="DisposeBehavior.Detach"/> to detach from the resources.
-        /// A shared transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
+        /// For a detached transaction the default behaviour is to do nothing with transactional resources.
+        /// If set to <see cref="DisposeBehavior.CloseResources"/> all transactional resource will be closed.
+        /// A detached transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
         /// to avoid leaks of transactional resources.
         /// </summary>
         public DisposeBehavior DisposeBehavior
         {
             get => _disposeBehavior;
-            set => _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
+            set
+            {
+                CheckNotDisposed();
+                _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
+            }
         }
 
         /// <summary>
@@ -272,12 +277,8 @@ namespace Google.Cloud.Spanner.Data
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             GaxPreconditions.CheckState(Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a read-only transaction.");
+            GaxPreconditions.CheckState(IsDetached, "You can only call GetPartitions on a detached transaction.");
             _hasExecutedStatements = true;
-
-            // Calling this method marks the used transaction as "shared" - but does not set
-            // DisposeBehavior to any value. This will cause an exception during dispose that tells the developer
-            // that they need to handle this condition by explicitly setting DisposeBehavior to some value.
-            Shared = true;
 
             var partitionRequest = request.ToPartitionReadOrQueryRequest(partitionSizeBytes, maxPartitions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
@@ -524,23 +525,10 @@ namespace Google.Cloud.Spanner.Data
                 case DisposeBehavior.CloseResources:
                     _session.ReleaseToPool(forceDelete: true);
                     break;
-                case DisposeBehavior.ReleaseToPool:
-                    if (Shared)
-                    {
-                        // This guard will prevent accidental leaks by forcing the developer to think
-                        // about how they want to manage the lifetime of the outer transactional resources.
-                        throw new InvalidOperationException(
-                            "When calling GetPartitionTokensAsync, you must indicate when transactional resources are released by setting DisposeBehavior=DisposeBehavior.CloseResources or DisposeBehavior.Detach");
-                    }
+                case DisposeBehavior.Default:
+                    // This is a no-op for a detached session.
+                    // We don't have to make a distinction here.
                     _session.ReleaseToPool(forceDelete: false);
-                    break;
-                case DisposeBehavior.Detach:
-                    // A detached transaction is expected to be explicitly shared across processes.
-                    // So we don't release it back to the pool, but we need to mark it as disposed and stop counting it as active
-                    // if it was created in the targeted pool. The first time a detached transaction is created, it will be created
-                    // in the targeted pool, subsequent times (as the transaction ID is used) it will be created in the detached pool
-                    // which doesn't keep track of active transactions/sessions.
-                    _session.DetachFromPool();
                     break;
                 default:
                     // Default for unknown DisposeBehavior is to do nothing.

@@ -12,29 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Threading;
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Defines the behavior of <see cref="SpannerTransaction"/> when Dispose is called.
+    /// <see cref="SpannerTransaction.DisposeBehavior"/> for more information.
     /// </summary>
     public enum DisposeBehavior
     {
         /// <summary>
-        /// Releases transactional resources back to the global pool when <see cref="SpannerTransaction.Dispose"/> is called.
-        /// This option is not valid for shared transactions (see <see cref="SpannerCommand.GetReaderPartitionsAsync(PartitionOptions, CancellationToken)"/>).
+        /// For transactions with pooled resources, releases transactional resources back to the pool
+        /// when <see cref="SpannerTransaction.Dispose"/> is called.
+        /// Otherwise calling <see cref="SpannerTransaction.Dispose"/> has no effect on the transaction resources.
         /// </summary>
-        ReleaseToPool = 0,
+        Default = 0,
         /// <summary>
         /// Automatically closes resources when <see cref="SpannerTransaction.Dispose"/> is called.
         /// </summary>
         CloseResources = 1,
-        /// <summary>
-        /// Detaches from the transaction and leaves resources still allocated.  You must set
-        /// <see cref="SpannerTransaction.DisposeBehavior"/> to <see cref="CloseResources"/> on at least one
-        /// instance to ensure there are no resource leaks when doing parallel reads.
-        /// </summary>
-        Detach = 2
     }
 }

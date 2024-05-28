@@ -272,7 +272,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginReadOnlyTransactionAsync();
+            var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10));
@@ -1339,7 +1339,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginReadOnlyTransactionAsync();
+            var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10).WithDataBoostEnabled(dataBoostEnabled));

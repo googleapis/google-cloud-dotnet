@@ -31,9 +31,10 @@ namespace Google.Cloud.Spanner.V1
             public IClock Clock => Parent._clock;
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }
+            public abstract bool TracksSessions { get; }
+
             public abstract Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken);
             public abstract void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession);
-            public abstract void Detach(PooledSession session);
 
             protected SessionPoolBase(SessionPool parent) => Parent = parent;
         }

@@ -381,6 +381,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             IClock SessionPool.ISessionPool.Clock => Clock;
             public FakeClock Clock => (FakeClock) Client.Settings.Clock;
             public Logger Logger { get; } = Logger.DefaultLogger;
+            public bool TracksSessions => true;
 
             public bool? ReleasedSessionDeleted { get; private set; }
             public ByteString RolledBackTransaction { get; private set; }

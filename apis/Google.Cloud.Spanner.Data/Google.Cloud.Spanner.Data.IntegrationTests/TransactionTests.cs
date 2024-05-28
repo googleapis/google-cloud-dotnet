@@ -92,8 +92,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using var connection = new SpannerConnection(_fixture.ConnectionString);
             await connection.OpenAsync();
 
-            using var transaction = await connection.BeginTransactionAsync();
-            transaction.DisposeBehavior = DisposeBehavior.Detach;
+            using var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
 
             // We are testing (through the CommonTestsDiagnostics attribute) that there
             // are no active sessions or connections after we have disposed of both.

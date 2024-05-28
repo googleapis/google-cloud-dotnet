@@ -185,7 +185,7 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<ReliableStreamReader> Impl()
             {
-                PooledSession session = await _connection.AcquireSessionAsync(_singleUseTransactionOptions, singleUse: _singleUseTransactionOptions is not null, cancellationToken).ConfigureAwait(false);
+                PooledSession session = await _connection.AcquireSessionAsync(_singleUseTransactionOptions, singleUse: _singleUseTransactionOptions is not null, detached: false, cancellationToken).ConfigureAwait(false);
                 var callSettings = _connection.CreateCallSettings(
                     request.GetCallSettings,
                     cancellationToken);

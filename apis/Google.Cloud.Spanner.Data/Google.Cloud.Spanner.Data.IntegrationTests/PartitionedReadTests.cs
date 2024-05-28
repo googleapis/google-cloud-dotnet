@@ -86,8 +86,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using var connection = new SpannerConnection(_fixture.ConnectionString);
             await connection.OpenAsync();
 
-            using var transaction = await connection.BeginReadOnlyTransactionAsync();
-            transaction.DisposeBehavior = DisposeBehavior.Detach;
+            using var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
 
             using var cmd = commandFactory(connection);
             cmd.Transaction = transaction;
