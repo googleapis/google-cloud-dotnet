@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateControlRequest request = new CreateControlRequest
             {
-                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                ParentAsEngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
                 Control = new Control(),
                 ControlId = "",
             };
@@ -54,7 +54,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateControlRequest request = new CreateControlRequest
             {
-                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                ParentAsEngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
                 Control = new Control(),
                 ControlId = "",
             };
@@ -70,7 +70,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ControlServiceClient controlServiceClient = ControlServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             Control control = new Control();
             string controlId = "";
             // Make the request
@@ -86,7 +86,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             Control control = new Control();
             string controlId = "";
             // Make the request
@@ -95,7 +95,38 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateControl</summary>
-        public void CreateControlResourceNames()
+        public void CreateControlResourceNames1()
+        {
+            // Snippet: CreateControl(EngineName, Control, string, CallSettings)
+            // Create client
+            ControlServiceClient controlServiceClient = ControlServiceClient.Create();
+            // Initialize request argument(s)
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            Control control = new Control();
+            string controlId = "";
+            // Make the request
+            Control response = controlServiceClient.CreateControl(parent, control, controlId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateControlAsync</summary>
+        public async Task CreateControlResourceNames1Async()
+        {
+            // Snippet: CreateControlAsync(EngineName, Control, string, CallSettings)
+            // Additional: CreateControlAsync(EngineName, Control, string, CancellationToken)
+            // Create client
+            ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            Control control = new Control();
+            string controlId = "";
+            // Make the request
+            Control response = await controlServiceClient.CreateControlAsync(parent, control, controlId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateControl</summary>
+        public void CreateControlResourceNames2()
         {
             // Snippet: CreateControl(DataStoreName, Control, string, CallSettings)
             // Create client
@@ -110,7 +141,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateControlAsync</summary>
-        public async Task CreateControlResourceNamesAsync()
+        public async Task CreateControlResourceNames2Async()
         {
             // Snippet: CreateControlAsync(DataStoreName, Control, string, CallSettings)
             // Additional: CreateControlAsync(DataStoreName, Control, string, CancellationToken)
@@ -372,7 +403,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListControlsRequest request = new ListControlsRequest
             {
-                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                ParentAsEngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
                 Filter = "",
             };
             // Make the request
@@ -421,7 +452,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListControlsRequest request = new ListControlsRequest
             {
-                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                ParentAsEngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
                 Filter = "",
             };
             // Make the request
@@ -468,7 +499,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ControlServiceClient controlServiceClient = ControlServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             // Make the request
             PagedEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControls(parent);
 
@@ -513,7 +544,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             // Make the request
             PagedAsyncEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControlsAsync(parent);
 
@@ -552,7 +583,97 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListControls</summary>
-        public void ListControlsResourceNames()
+        public void ListControlsResourceNames1()
+        {
+            // Snippet: ListControls(EngineName, string, int?, CallSettings)
+            // Create client
+            ControlServiceClient controlServiceClient = ControlServiceClient.Create();
+            // Initialize request argument(s)
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            PagedEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControls(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Control item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListControlsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Control item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Control> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Control item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListControlsAsync</summary>
+        public async Task ListControlsResourceNames1Async()
+        {
+            // Snippet: ListControlsAsync(EngineName, string, int?, CallSettings)
+            // Create client
+            ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            PagedAsyncEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControlsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Control item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListControlsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Control item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Control> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Control item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListControls</summary>
+        public void ListControlsResourceNames2()
         {
             // Snippet: ListControls(DataStoreName, string, int?, CallSettings)
             // Create client
@@ -597,7 +718,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListControlsAsync</summary>
-        public async Task ListControlsResourceNamesAsync()
+        public async Task ListControlsResourceNames2Async()
         {
             // Snippet: ListControlsAsync(DataStoreName, string, int?, CallSettings)
             // Create client

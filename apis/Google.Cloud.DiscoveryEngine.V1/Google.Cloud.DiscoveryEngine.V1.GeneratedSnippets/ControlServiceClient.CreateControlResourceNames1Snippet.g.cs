@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames]
+    // [START discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames1]
     using Google.Cloud.DiscoveryEngine.V1;
 
     public sealed partial class GeneratedControlServiceClientSnippets
@@ -29,17 +29,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateControlResourceNames()
+        public void CreateControlResourceNames1()
         {
             // Create client
             ControlServiceClient controlServiceClient = ControlServiceClient.Create();
             // Initialize request argument(s)
-            DataStoreName parent = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
             Control control = new Control();
             string controlId = "";
             // Make the request
             Control response = controlServiceClient.CreateControl(parent, control, controlId);
         }
     }
-    // [END discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames]
+    // [END discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames1]
 }
