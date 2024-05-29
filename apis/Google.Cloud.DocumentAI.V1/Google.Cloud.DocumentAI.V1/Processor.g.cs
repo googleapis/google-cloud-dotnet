@@ -29,7 +29,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjBn",
             "b29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MS9kb2N1bWVudF9zY2hlbWEucHJv",
             "dG8aK2dvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxL2V2YWx1YXRpb24ucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6wgKEFByb2Nl",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iowkKEFByb2Nl",
             "c3NvclZlcnNpb24SEQoEbmFtZRgBIAEoCUID4EEIEhQKDGRpc3BsYXlfbmFt",
             "ZRgCIAEoCRJDCg9kb2N1bWVudF9zY2hlbWEYDCABKAsyKi5nb29nbGUuY2xv",
             "dWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudFNjaGVtYRJGCgVzdGF0ZRgGIAEo",
@@ -42,47 +42,50 @@ namespace Google.Cloud.DocumentAI.V1 {
             "cHJlY2F0aW9uX2luZm8YDSABKAsyPC5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
             "aS52MS5Qcm9jZXNzb3JWZXJzaW9uLkRlcHJlY2F0aW9uSW5mbxJPCgptb2Rl",
             "bF90eXBlGA8gASgOMjYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuUHJv",
-            "Y2Vzc29yVmVyc2lvbi5Nb2RlbFR5cGVCA+BBAxqfAQoPRGVwcmVjYXRpb25J",
-            "bmZvEjQKEGRlcHJlY2F0aW9uX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wElYKHXJlcGxhY2VtZW50X3Byb2Nlc3Nvcl92ZXJzaW9u",
-            "GAIgASgJQi/6QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vz",
-            "c29yVmVyc2lvbiKTAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIM",
-            "CghERVBMT1lFRBABEg0KCURFUExPWUlORxACEg4KClVOREVQTE9ZRUQQAxIP",
-            "CgtVTkRFUExPWUlORxAEEgwKCENSRUFUSU5HEAUSDAoIREVMRVRJTkcQBhIK",
-            "CgZGQUlMRUQQBxINCglJTVBPUlRJTkcQCCJZCglNb2RlbFR5cGUSGgoWTU9E",
-            "RUxfVFlQRV9VTlNQRUNJRklFRBAAEhkKFU1PREVMX1RZUEVfR0VORVJBVElW",
-            "RRABEhUKEU1PREVMX1RZUEVfQ1VTVE9NEAI6lgHqQZIBCipkb2N1bWVudGFp",
-            "Lmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclZlcnNpb24SZHByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9j",
-            "ZXNzb3J9L3Byb2Nlc3NvclZlcnNpb25zL3twcm9jZXNzb3JfdmVyc2lvbn0i",
-            "cgoVUHJvY2Vzc29yVmVyc2lvbkFsaWFzEg0KBWFsaWFzGAEgASgJEkoKEXBy",
-            "b2Nlc3Nvcl92ZXJzaW9uGAIgASgJQi/6QSwKKmRvY3VtZW50YWkuZ29vZ2xl",
-            "YXBpcy5jb20vUHJvY2Vzc29yVmVyc2lvbiKIBQoJUHJvY2Vzc29yEhQKBG5h",
-            "bWUYASABKAlCBuBBBeBBAxIMCgR0eXBlGAIgASgJEhQKDGRpc3BsYXlfbmFt",
-            "ZRgDIAEoCRI/CgVzdGF0ZRgEIAEoDjIrLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxLlByb2Nlc3Nvci5TdGF0ZUID4EEDElIKGWRlZmF1bHRfcHJvY2Vz",
-            "c29yX3ZlcnNpb24YCSABKAlCL/pBLAoqZG9jdW1lbnRhaS5nb29nbGVhcGlz",
-            "LmNvbS9Qcm9jZXNzb3JWZXJzaW9uElkKGXByb2Nlc3Nvcl92ZXJzaW9uX2Fs",
-            "aWFzZXMYCiADKAsyMS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Qcm9j",
-            "ZXNzb3JWZXJzaW9uQWxpYXNCA+BBAxIgChBwcm9jZXNzX2VuZHBvaW50GAYg",
-            "ASgJQgbgQQPgQQUSLwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEhQKDGttc19rZXlfbmFtZRgIIAEoCSJ+CgVTdGF0",
-            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNB",
-            "QkxFRBACEgwKCEVOQUJMSU5HEAMSDQoJRElTQUJMSU5HEAQSDAoIQ1JFQVRJ",
-            "TkcQBRIKCgZGQUlMRUQQBhIMCghERUxFVElORxAHOmjqQWUKI2RvY3VtZW50",
-            "YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yEj5wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29y",
-            "fULRAQoeY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxQhNEb2N1bWVu",
-            "dEFpUHJvY2Vzc29yUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRh",
-            "aS9hcGl2MS9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIaR29vZ2xlLkNs",
-            "b3VkLkRvY3VtZW50QUkuVjHKAhpHb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxW",
-            "MeoCHUdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYgZwcm90bzM="));
+            "Y2Vzc29yVmVyc2lvbi5Nb2RlbFR5cGVCA+BBAxIaCg1zYXRpc2ZpZXNfcHpz",
+            "GBAgASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6aRgRIAEoCEID4EEDGp8BCg9E",
+            "ZXByZWNhdGlvbkluZm8SNAoQZGVwcmVjYXRpb25fdGltZRgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVgodcmVwbGFjZW1lbnRfcHJvY2Vz",
+            "c29yX3ZlcnNpb24YAiABKAlCL/pBLAoqZG9jdW1lbnRhaS5nb29nbGVhcGlz",
+            "LmNvbS9Qcm9jZXNzb3JWZXJzaW9uIpMBCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgwKCERFUExPWUVEEAESDQoJREVQTE9ZSU5HEAISDgoKVU5E",
+            "RVBMT1lFRBADEg8KC1VOREVQTE9ZSU5HEAQSDAoIQ1JFQVRJTkcQBRIMCghE",
+            "RUxFVElORxAGEgoKBkZBSUxFRBAHEg0KCUlNUE9SVElORxAIIlkKCU1vZGVs",
+            "VHlwZRIaChZNT0RFTF9UWVBFX1VOU1BFQ0lGSUVEEAASGQoVTU9ERUxfVFlQ",
+            "RV9HRU5FUkFUSVZFEAESFQoRTU9ERUxfVFlQRV9DVVNUT00QAjqWAepBkgEK",
+            "KmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yVmVyc2lvbhJk",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nl",
+            "c3NvcnMve3Byb2Nlc3Nvcn0vcHJvY2Vzc29yVmVyc2lvbnMve3Byb2Nlc3Nv",
+            "cl92ZXJzaW9ufSJyChVQcm9jZXNzb3JWZXJzaW9uQWxpYXMSDQoFYWxpYXMY",
+            "ASABKAkSSgoRcHJvY2Vzc29yX3ZlcnNpb24YAiABKAlCL/pBLAoqZG9jdW1l",
+            "bnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JWZXJzaW9uIsAFCglQcm9j",
+            "ZXNzb3ISFAoEbmFtZRgBIAEoCUIG4EEF4EEDEgwKBHR5cGUYAiABKAkSFAoM",
+            "ZGlzcGxheV9uYW1lGAMgASgJEj8KBXN0YXRlGAQgASgOMisuZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjEuUHJvY2Vzc29yLlN0YXRlQgPgQQMSUgoZZGVm",
+            "YXVsdF9wcm9jZXNzb3JfdmVyc2lvbhgJIAEoCUIv+kEsCipkb2N1bWVudGFp",
+            "Lmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclZlcnNpb24SWQoZcHJvY2Vzc29y",
+            "X3ZlcnNpb25fYWxpYXNlcxgKIAMoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxLlByb2Nlc3NvclZlcnNpb25BbGlhc0ID4EEDEiAKEHByb2Nlc3Nf",
+            "ZW5kcG9pbnQYBiABKAlCBuBBA+BBBRIvCgtjcmVhdGVfdGltZRgHIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMa21zX2tleV9uYW1lGAgg",
+            "ASgJEhoKDXNhdGlzZmllc19wenMYDCABKAhCA+BBAxIaCg1zYXRpc2ZpZXNf",
+            "cHppGA0gASgIQgPgQQMifgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhIMCghFTkFCTElORxADEg0K",
+            "CURJU0FCTElORxAEEgwKCENSRUFUSU5HEAUSCgoGRkFJTEVEEAYSDAoIREVM",
+            "RVRJTkcQBzpo6kFlCiNkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nl",
+            "c3NvchI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn1C0QEKHmNvbS5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MUITRG9jdW1lbnRBaVByb2Nlc3NvclABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2RvY3VtZW50YWkvYXBpdjEvZG9jdW1lbnRhaXBiO2Rv",
+            "Y3VtZW50YWlwYqoCGkdvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxygIaR29v",
+            "Z2xlXENsb3VkXERvY3VtZW50QUlcVjHqAh1Hb29nbGU6OkNsb3VkOjpEb2N1",
+            "bWVudEFJOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentSchemaReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.EvaluationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion), global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Parser, new[]{ "Name", "DisplayName", "DocumentSchema", "State", "CreateTime", "LatestEvaluation", "KmsKeyName", "KmsKeyVersionName", "GoogleManaged", "DeprecationInfo", "ModelType" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.State), typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.DeprecationInfo), global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.DeprecationInfo.Parser, new[]{ "DeprecationTime", "ReplacementProcessorVersion" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion), global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Parser, new[]{ "Name", "DisplayName", "DocumentSchema", "State", "CreateTime", "LatestEvaluation", "KmsKeyName", "KmsKeyVersionName", "GoogleManaged", "DeprecationInfo", "ModelType", "SatisfiesPzs", "SatisfiesPzi" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.State), typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.DeprecationInfo), global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.DeprecationInfo.Parser, new[]{ "DeprecationTime", "ReplacementProcessorVersion" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ProcessorVersionAlias), global::Google.Cloud.DocumentAI.V1.ProcessorVersionAlias.Parser, new[]{ "Alias", "ProcessorVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Processor), global::Google.Cloud.DocumentAI.V1.Processor.Parser, new[]{ "Name", "Type", "DisplayName", "State", "DefaultProcessorVersion", "ProcessorVersionAliases", "ProcessEndpoint", "CreateTime", "KmsKeyName" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Processor.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Processor), global::Google.Cloud.DocumentAI.V1.Processor.Parser, new[]{ "Name", "Type", "DisplayName", "State", "DefaultProcessorVersion", "ProcessorVersionAliases", "ProcessEndpoint", "CreateTime", "KmsKeyName", "SatisfiesPzs", "SatisfiesPzi" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Processor.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -141,6 +144,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       googleManaged_ = other.googleManaged_;
       deprecationInfo_ = other.deprecationInfo_ != null ? other.deprecationInfo_.Clone() : null;
       modelType_ = other.modelType_;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -317,6 +322,36 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 16;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 17;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -343,6 +378,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       if (GoogleManaged != other.GoogleManaged) return false;
       if (!object.Equals(DeprecationInfo, other.DeprecationInfo)) return false;
       if (ModelType != other.ModelType) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -361,6 +398,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       if (GoogleManaged != false) hash ^= GoogleManaged.GetHashCode();
       if (deprecationInfo_ != null) hash ^= DeprecationInfo.GetHashCode();
       if (ModelType != global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType.Unspecified) hash ^= ModelType.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -423,6 +462,14 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteRawTag(120);
         output.WriteEnum((int) ModelType);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -477,6 +524,14 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteRawTag(120);
         output.WriteEnum((int) ModelType);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -519,6 +574,12 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (ModelType != global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelType);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -576,6 +637,12 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (other.ModelType != global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType.Unspecified) {
         ModelType = other.ModelType;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -648,6 +715,14 @@ namespace Google.Cloud.DocumentAI.V1 {
             ModelType = (global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType) input.ReadEnum();
             break;
           }
+          case 128: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 136: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -717,6 +792,14 @@ namespace Google.Cloud.DocumentAI.V1 {
           }
           case 120: {
             ModelType = (global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Types.ModelType) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 136: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }
@@ -1323,6 +1406,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       processEndpoint_ = other.processEndpoint_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       kmsKeyName_ = other.kmsKeyName_;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1471,6 +1556,36 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 12;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 13;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1495,6 +1610,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       if (ProcessEndpoint != other.ProcessEndpoint) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (KmsKeyName != other.KmsKeyName) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1511,6 +1628,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       if (ProcessEndpoint.Length != 0) hash ^= ProcessEndpoint.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1562,6 +1681,14 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteString(DefaultProcessorVersion);
       }
       processorVersionAliases_.WriteTo(output, _repeated_processorVersionAliases_codec);
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1605,6 +1732,14 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteString(DefaultProcessorVersion);
       }
       processorVersionAliases_.WriteTo(ref output, _repeated_processorVersionAliases_codec);
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1639,6 +1774,12 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (KmsKeyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1679,6 +1820,12 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1734,6 +1881,14 @@ namespace Google.Cloud.DocumentAI.V1 {
             processorVersionAliases_.AddEntriesFrom(input, _repeated_processorVersionAliases_codec);
             break;
           }
+          case 96: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 104: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1786,6 +1941,14 @@ namespace Google.Cloud.DocumentAI.V1 {
           }
           case 82: {
             processorVersionAliases_.AddEntriesFrom(ref input, _repeated_processorVersionAliases_codec);
+            break;
+          }
+          case 96: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 104: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }
