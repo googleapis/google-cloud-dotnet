@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Cloud.PubSub.V1.Tests.Tasks;
 using Google.Protobuf;
@@ -65,6 +66,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             public RpcException MoveNextEx { get; }
             public RpcException CurrentEx { get; }
             public int? DeliveryAttempt { get; }
+
+            /// <summary>
+            /// Convenience method to create a sequence of server actions.
+            /// The return type helps when this is passed into LINQ methods.
+            /// </summary>
+            public static IEnumerable<ServerAction> Sequence(params ServerAction[] actions) => actions;
         }
 
         // Class to simulate exceptions in Acknowledgement and/or ModifyAcknowledgementDeadline calls.
@@ -311,16 +318,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly List<TimedId> _nacks = new List<TimedId>();
             private readonly List<DateTime> _writeCompletes = new List<DateTime>();
             private readonly List<DateTime> _streamPings = new List<DateTime>();
+            private readonly List<DateTime> _streamingPulls = new List<DateTime>();
 
             public IReadOnlyList<TimedId> Extends => _extends;
             public IReadOnlyList<TimedId> Acks => _acks;
             public IReadOnlyList<TimedId> Nacks => _nacks;
             public IReadOnlyList<DateTime> WriteCompletes => _writeCompletes;
             public IReadOnlyList<DateTime> StreamPings => _streamPings;
+            public IReadOnlyList<DateTime> StreamingPulls => _streamingPulls;
 
             public override StreamingPullStream StreamingPull(
                 CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)
             {
+                lock (_lock)
+                {
+                    _streamingPulls.Add(_clock.GetCurrentDateTimeUtc());
+                }
                 lock (_msgsEn)
                 {
                     if (!_msgsEn.MoveNext())
@@ -1725,5 +1738,143 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.Equal(succeedOnRetry ? new[] { "1", "2", "3", "4" } : Array.Empty<string>(), handledMsgs);
             });
         }
+
+        [Fact]
+        public void StreamingPullRetry_GrpcNetClientAuthRelatedFailuresEventuallyFail()
+        {
+            var rpcEx = new RpcException(new Status(StatusCode.Internal, "Bang", new TokenResponseException(new TokenErrorResponse())));
+            TestAuthRelatedFailure(rpcEx);
+        }
+
+        [Fact]
+        public void StreamingPullRetry_GrpcCoreAuthRelatedFailuresEventuallyFail()
+        {
+            var rpcEx = new RpcException(new Status(StatusCode.Unavailable, "Getting metadata from plugin failed with error: Exception occurred in metadata credentials plugin. It went bang."));
+            TestAuthRelatedFailure(rpcEx);
+        }
+
+        private void TestAuthRelatedFailure(RpcException rpcEx)
+        {
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(1), rpcEx, 5, includeTrailing: false));
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                var subscriberEx = await Assert.ThrowsAsync<RpcException>(() => subscriberTask);
+                Assert.Equal(rpcEx.Status, subscriberEx.Status);
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_NonRetriableException()
+        {
+            var rpcEx = new RpcException(new Status(StatusCode.NotFound, "No such topic"));
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(0), rpcEx, 1, includeTrailing: false));
+            var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                var subscriberEx = await Assert.ThrowsAsync<RpcException>(() => subscriberTask);
+                Assert.Equal(rpcEx.Status, subscriberEx.Status);
+                // We should have failed immediately - but there's a two second delay in SubscriberClient.StopCompletionAsync
+                // to avoid a race condition.
+                Assert.Equal(start.AddSeconds(2), fake.Scheduler.Clock.GetCurrentDateTimeUtc());
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_InternalErrorRetriesForever()
+        {
+            // A regular internal failure that's not due to an auth error.
+            var exception = new RpcException(new Status(StatusCode.Internal, "Bang"));
+
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(1), exception, 5, includeTrailing: true));
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                Assert.False(subscriberTask.IsCompleted);
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await subscriberTask;
+            });
+        }
+
+        /// <summary>
+        /// If the streaming pull call fails in MoveNext after a short time (e.g. 10 seconds)
+        /// we should retry with backoff.
+        /// </summary>
+        [Fact]
+        public void StreamingPullRetry_UnavailableAfterShortDelayTriggersRetryWithBackoff()
+        {
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Stream terminated"));
+            TimeSpan streamDuration = TimeSpan.FromSeconds(30);
+            using var fake = Fake.Create(CreateBadMoveNextSequence(streamDuration, exception, 5, includeTrailing: true));
+            var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(100), CancellationToken.None));
+                Assert.False(subscriberTask.IsCompleted);
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await subscriberTask;
+
+                // Check the pull times indicate a backoff.
+                var subscriber = fake.Subscribers.Single();
+                var pullTimes = subscriber.StreamingPulls;
+                Assert.Equal(6, subscriber.StreamingPulls.Count);
+                Assert.Equal(start, pullTimes[0]);
+                DateTime previousStart = start;
+                // The second call should be more than this long after the first,
+                // and each successive call should be delayed further.
+                TimeSpan previousTimeBetweenCalls = streamDuration;
+                foreach (var pullTime in pullTimes.Skip(1))
+                {
+                    var timeBetweenCalls = pullTime - previousStart;
+                    Assert.True(timeBetweenCalls > previousTimeBetweenCalls);
+                    previousTimeBetweenCalls = timeBetweenCalls;
+                    previousStart = pullTime;
+                }
+            });
+        }
+
+        /// <summary>
+        /// We *expect* the streaming pull to fail (in MoveNext) after about a minute... we should
+        /// retry immediately each time.
+        /// </summary>
+        [Fact]
+        public void StreamingPullRetry_UnavailableAfterLongDelayTriggersRetryWithoutBackoff()
+        {
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Stream terminated"));
+            TimeSpan streamDuration = TimeSpan.FromSeconds(60);
+            using var fake = Fake.Create(CreateBadMoveNextSequence(streamDuration, exception, 5, includeTrailing: true));
+
+            var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(100), CancellationToken.None));
+                Assert.False(subscriberTask.IsCompleted);
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await subscriberTask;
+
+                // Check the pull times indicate no backoff.
+                var subscriber = fake.Subscribers.Single();
+                var expectedPullTimes = Enumerable.Range(0, 6).Select(index => start + TimeSpan.FromTicks(streamDuration.Ticks * index)).ToList();
+                Assert.Equal(expectedPullTimes, subscriber.StreamingPulls);
+            });
+        }
+
+        /// <summary>
+        /// Creates a sequence of failing streaming pull responses, optionally followed by one "never responds" streaming pull.
+        /// The nested aspect is because each streaming pull can (theoretically) consist of multiple responses.
+        /// </summary>
+        private static IReadOnlyList<IEnumerable<ServerAction>> CreateBadMoveNextSequence(TimeSpan timeBeforeFailure, RpcException exception, int count, bool includeTrailing) =>
+            Enumerable.Repeat(ServerAction.Sequence(ServerAction.BadMoveNext(timeBeforeFailure, exception)), count)
+                .Concat(Enumerable.Repeat(ServerAction.Sequence(ServerAction.Inf()), includeTrailing ? 1 : 0))
+                .ToList();
     }
 }
