@@ -25,7 +25,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.PubSub.V1.StreamingPullResponse.Types;
 
 namespace Google.Cloud.PubSub.V1.Tests
 {
@@ -451,8 +450,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Responses = new List<AckNackResponse>();
             }
 
-            public override async Task<SubscriberClient.Reply> HandleMessage(PubsubMessage message, CancellationToken cancellationToken) =>
-                await Task.FromResult(_ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack);
+            public override Task<SubscriberClient.Reply> HandleMessage(PubsubMessage message, CancellationToken cancellationToken) =>
+                Task.FromResult(_ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack);
 
             public override void HandleAckResponses(IReadOnlyList<AckNackResponse> responses) =>
                 // For exactly once delivery, only messages that succeed or fail permanently appear here, i.e., only messages whose status is finalized.
@@ -475,6 +474,19 @@ namespace Google.Cloud.PubSub.V1.Tests
             public List<FakeSubscriberServiceApiClient> Subscribers { get; set; }
             public List<DateTime> ClientShutdowns { get; set; }
             public SubscriberClientImpl Subscriber { get; set; }
+
+            /// <summary>
+            /// Convenience method to call <see cref="Create"/> with a client count of 1, and a single sequence
+            /// of server actions.
+            /// </summary>
+            public static Fake CreateClientForSingleResponseStream(IEnumerable<ServerAction> msgs,
+                TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
+                int? flowMaxElements = null, int? flowMaxBytes = null,
+                int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null) =>
+                Create(new[] { msgs }, ackDeadline, ackExtendWindow, flowMaxElements, flowMaxBytes, clientCount: 1, threadCount,
+                    writeAsyncPreDelay, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disposeTimeout);
 
             public static Fake Create(IReadOnlyList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
@@ -584,7 +596,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Fact]
         public void Dispose()
         {
-            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            using (var fake = Fake.CreateClientForSingleResponseStream(new[] { ServerAction.Inf() }))
             {
                 fake.Scheduler.Run(async () =>
                 {
@@ -1039,7 +1051,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
             var expected = msgs.Msgs.GroupBy(x => x.Split('|')[0]).OrderBy(x => x.Key).ToList();
-            var actual = recvedMsgs.GroupBy(x => x.Split('|')[0]).OrderBy(x=>x.Key).ToList();
+            var actual = recvedMsgs.GroupBy(x => x.Split('|')[0]).OrderBy(x => x.Key).ToList();
             Assert.Equal(expected.Count, actual.Count);
             Assert.Equal(expected.Select(x => x.Key), actual.Select(x => x.Key));
             foreach (var pair in expected.Zip(actual, (e, a) => new { e, a }))
@@ -1228,7 +1240,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ServerAction.Data(TimeSpan.Zero, new[] { "m" }, deliveryAttempt: 2),
                 ServerAction.Inf()
             };
-            using (var fake = Fake.Create(new[] { msgs }))
+            using (var fake = Fake.CreateClientForSingleResponseStream(msgs))
             {
                 fake.Scheduler.Run(async () =>
                 {
@@ -1268,7 +1280,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 : ackOrModifyAck.Value ? AckModifyAckDeadlineAction.BadAck(rpcException, 2)
                 : AckModifyAckDeadlineAction.BadNack(rpcException, 2);
 
-            using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
             fake.Scheduler.Run(async () =>
             {
                 var handledMsgs = new List<string>();
@@ -1277,7 +1289,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                     // Add delay greater than ackDeadline to simulate the call to ModifyAcknowledgeDeadline.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1308,14 +1320,14 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ackOrModifyAck ? AckModifyAckDeadlineAction.BadAck(exception, 1)
                 : AckModifyAckDeadlineAction.BadExtend(exception, 1);
 
-            using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                 {
                     // Add delay greater than ackDeadline to simulate the call to ModifyAcknowledgeDeadline.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1347,7 +1359,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ? AckModifyAckDeadlineAction.BadAck(rpcException, 1)
                 : AckModifyAckDeadlineAction.BadNack(rpcException, 1);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
             var testSubscriptionHandler = new TestSubscriptionHandler(ackOrModifyAck);
             fake.Scheduler.Run(async () =>
             {
@@ -1394,7 +1406,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
                     }
 
-                    return await Task.FromResult(ackNackOrExtends == false ? SubscriberClient.Reply.Nack : SubscriberClient.Reply.Ack);
+                    return ackNackOrExtends == false ? SubscriberClient.Reply.Nack : SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1422,7 +1434,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ackOrNack ? AckModifyAckDeadlineAction.BadAck(exception, numberOfFailures: 10)
                 : AckModifyAckDeadlineAction.BadNack(exception, numberOfFailures: 10);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             var testSubscriptionHandler = new TestSubscriptionHandler(ackOrNack);
             fake.Scheduler.Run(async () =>
             {
@@ -1452,14 +1464,14 @@ namespace Google.Cloud.PubSub.V1.Tests
             // This is extend request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 10);
 
-            using var fake = Fake.Create(new[] { msgs }, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                 {
                     // Add delay greater than ackDeadline to simulate the extends.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1489,7 +1501,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ackOrNack ? AckModifyAckDeadlineAction.BadAck(exception, numberOfFailures: 1)
                 : AckModifyAckDeadlineAction.BadNack(exception, numberOfFailures: 1);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
 
             var testHandler = new TestSubscriptionHandler(ackOrNack);
             fake.Scheduler.Run(async () =>
@@ -1521,14 +1533,14 @@ namespace Google.Cloud.PubSub.V1.Tests
             // This is an extend request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 2);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                 {
                     // Add delay greater than ackDeadline to simulate the extends.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1563,7 +1575,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
@@ -1602,7 +1614,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
@@ -1652,7 +1664,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
@@ -1702,7 +1714,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
