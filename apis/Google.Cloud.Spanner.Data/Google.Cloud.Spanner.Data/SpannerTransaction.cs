@@ -441,6 +441,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
                 var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
+                // We dispose of the SpannerTransaction to inmediately release the session to the pool when possible.
+                Dispose();
                 if (response.CommitTimestamp == null)
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
@@ -464,17 +466,18 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
 #if NET462
-        public Task RollbackAsync(CancellationToken cancellationToken = default)
+        public async Task RollbackAsync(CancellationToken cancellationToken = default)
 #else
-        public override Task RollbackAsync(CancellationToken cancellationToken = default)
+        public override async Task RollbackAsync(CancellationToken cancellationToken = default)
 #endif
         {
             CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
+            await  ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _session.RollbackAsync(new RollbackRequest(), callSettings),
-                "SpannerTransaction.Rollback", SpannerConnection.Logger);
+                "SpannerTransaction.Rollback", SpannerConnection.Logger).ConfigureAwait(false);
+            Dispose();
         }
 
         /// <summary>
