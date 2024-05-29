@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             Control control = new Control();
             string controlId = "";
             // Make the request

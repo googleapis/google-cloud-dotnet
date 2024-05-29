@@ -353,6 +353,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -385,6 +387,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -417,6 +421,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -444,6 +450,105 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// </param>
+        /// <param name="control">
+        /// Required. The Control to create.
+        /// </param>
+        /// <param name="controlId">
+        /// Required. The ID to use for the Control, which will become the final
+        /// component of the Control's resource name.
+        /// 
+        /// This value must be within 1-63 characters.
+        /// Valid characters are /[a-z][0-9]-_/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Control CreateControl(EngineName parent, Control control, string controlId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateControl(new CreateControlRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Control = gax::GaxPreconditions.CheckNotNull(control, nameof(control)),
+                ControlId = gax::GaxPreconditions.CheckNotNullOrEmpty(controlId, nameof(controlId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Control.
+        /// 
+        /// By default 1000 controls are allowed for a data store.
+        /// A request can be submitted to adjust this limit.
+        /// If the [Control][google.cloud.discoveryengine.v1.Control] to create already
+        /// exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent data store. Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// </param>
+        /// <param name="control">
+        /// Required. The Control to create.
+        /// </param>
+        /// <param name="controlId">
+        /// Required. The ID to use for the Control, which will become the final
+        /// component of the Control's resource name.
+        /// 
+        /// This value must be within 1-63 characters.
+        /// Valid characters are /[a-z][0-9]-_/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Control> CreateControlAsync(EngineName parent, Control control, string controlId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateControlAsync(new CreateControlRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Control = gax::GaxPreconditions.CheckNotNull(control, nameof(control)),
+                ControlId = gax::GaxPreconditions.CheckNotNullOrEmpty(controlId, nameof(controlId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Control.
+        /// 
+        /// By default 1000 controls are allowed for a data store.
+        /// A request can be submitted to adjust this limit.
+        /// If the [Control][google.cloud.discoveryengine.v1.Control] to create already
+        /// exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent data store. Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// </param>
+        /// <param name="control">
+        /// Required. The Control to create.
+        /// </param>
+        /// <param name="controlId">
+        /// Required. The ID to use for the Control, which will become the final
+        /// component of the Control's resource name.
+        /// 
+        /// This value must be within 1-63 characters.
+        /// Valid characters are /[a-z][0-9]-_/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Control> CreateControlAsync(EngineName parent, Control control, string controlId, st::CancellationToken cancellationToken) =>
+            CreateControlAsync(parent, control, controlId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Control.
+        /// 
+        /// By default 1000 controls are allowed for a data store.
+        /// A request can be submitted to adjust this limit.
+        /// If the [Control][google.cloud.discoveryengine.v1.Control] to create already
+        /// exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent data store. Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -476,6 +581,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -508,6 +615,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -922,6 +1031,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. The data store resource name. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -948,6 +1059,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. The data store resource name. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -974,6 +1087,64 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. The data store resource name. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Control"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListControlsResponse, Control> ListControls(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListControls(new ListControlsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Controls by their parent
+        /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The data store resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Control"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListControlsResponse, Control> ListControlsAsync(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListControlsAsync(new ListControlsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Controls by their parent
+        /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The data store resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1000,6 +1171,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <param name="parent">
         /// Required. The data store resource name. Format:
         /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// or
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened]
+    // [START discoveryengine_v1_generated_ControlService_CreateControl_async_flattened_resourceNames1]
     using Google.Cloud.DiscoveryEngine.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedControlServiceClientSnippets
     {
-        /// <summary>Snippet for CreateControl</summary>
+        /// <summary>Snippet for CreateControlAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,17 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateControl()
+        public async Task CreateControlResourceNames1Async()
         {
             // Create client
-            ControlServiceClient controlServiceClient = ControlServiceClient.Create();
+            ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
             Control control = new Control();
             string controlId = "";
             // Make the request
-            Control response = controlServiceClient.CreateControl(parent, control, controlId);
+            Control response = await controlServiceClient.CreateControlAsync(parent, control, controlId);
         }
     }
-    // [END discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened]
+    // [END discoveryengine_v1_generated_ControlService_CreateControl_async_flattened_resourceNames1]
 }

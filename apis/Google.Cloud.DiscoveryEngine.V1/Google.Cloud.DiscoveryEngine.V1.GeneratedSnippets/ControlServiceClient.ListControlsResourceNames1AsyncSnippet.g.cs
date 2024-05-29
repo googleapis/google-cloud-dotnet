@@ -16,14 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames]
+    // [START discoveryengine_v1_generated_ControlService_ListControls_async_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedControlServiceClientSnippets
     {
-        /// <summary>Snippet for ListControls</summary>
+        /// <summary>Snippet for ListControlsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,24 +33,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListControlsResourceNames()
+        public async Task ListControlsResourceNames1Async()
         {
             // Create client
-            ControlServiceClient controlServiceClient = ControlServiceClient.Create();
+            ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataStoreName parent = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
             // Make the request
-            PagedEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControls(parent);
+            PagedAsyncEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControlsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Control item in response)
+            await response.ForEachAsync((Control item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListControlsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListControlsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -57,11 +59,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Control> singlePage = response.ReadPage(pageSize);
+            Page<Control> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Control item in singlePage)
@@ -73,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames]
+    // [END discoveryengine_v1_generated_ControlService_ListControls_async_flattened_resourceNames1]
 }

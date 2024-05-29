@@ -510,10 +510,121 @@
       ]
     },
     {
-      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames",
-      "title": "CreateControlResourceNames",
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames1",
+      "title": "CreateControlResourceNames1",
       "description": "Snippet for CreateControl",
-      "file": "ControlServiceClient.CreateControlResourceNamesSnippet.g.cs",
+      "file": "ControlServiceClient.CreateControlResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_async_flattened_resourceNames1",
+      "title": "CreateControlResourceNames1Async",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_sync_flattened_resourceNames2",
+      "title": "CreateControlResourceNames2",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlResourceNames2Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateControl",
@@ -565,10 +676,10 @@
       ]
     },
     {
-      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_async_flattened_resourceNames",
-      "title": "CreateControlResourceNamesAsync",
+      "regionTag": "discoveryengine_v1_generated_ControlService_CreateControl_async_flattened_resourceNames2",
+      "title": "CreateControlResourceNames2Async",
       "description": "Snippet for CreateControlAsync",
-      "file": "ControlServiceClient.CreateControlResourceNamesAsyncSnippet.g.cs",
+      "file": "ControlServiceClient.CreateControlResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateControlAsync",
@@ -1600,10 +1711,121 @@
       ]
     },
     {
-      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames",
-      "title": "ListControlsResourceNames",
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames1",
+      "title": "ListControlsResourceNames1",
       "description": "Snippet for ListControls",
-      "file": "ControlServiceClient.ListControlsResourceNamesSnippet.g.cs",
+      "file": "ControlServiceClient.ListControlsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_async_flattened_resourceNames1",
+      "title": "ListControlsResourceNames1Async",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListControlsResponse, Google.Cloud.DiscoveryEngine.V1.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.discoveryengine.v1.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.discoveryengine.v1.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames2",
+      "title": "ListControlsResourceNames2",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsResourceNames2Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListControls",
@@ -1655,10 +1877,10 @@
       ]
     },
     {
-      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_async_flattened_resourceNames",
-      "title": "ListControlsResourceNamesAsync",
+      "regionTag": "discoveryengine_v1_generated_ControlService_ListControls_async_flattened_resourceNames2",
+      "title": "ListControlsResourceNames2Async",
       "description": "Snippet for ListControlsAsync",
-      "file": "ControlServiceClient.ListControlsResourceNamesAsyncSnippet.g.cs",
+      "file": "ControlServiceClient.ListControlsResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListControlsAsync",

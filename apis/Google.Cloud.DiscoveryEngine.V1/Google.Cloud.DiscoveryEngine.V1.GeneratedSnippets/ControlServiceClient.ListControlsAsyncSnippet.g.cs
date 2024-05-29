@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ControlServiceClient controlServiceClient = await ControlServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             // Make the request
             PagedAsyncEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControlsAsync(parent);
 

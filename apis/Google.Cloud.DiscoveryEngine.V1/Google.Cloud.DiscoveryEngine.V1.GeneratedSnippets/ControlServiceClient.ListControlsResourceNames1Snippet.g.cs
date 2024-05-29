@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ControlService_ListControls_sync_flattened]
+    // [START discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1;
     using System;
@@ -31,12 +31,12 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListControls()
+        public void ListControlsResourceNames1()
         {
             // Create client
             ControlServiceClient controlServiceClient = ControlServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
             // Make the request
             PagedEnumerable<ListControlsResponse, Control> response = controlServiceClient.ListControls(parent);
 
@@ -73,5 +73,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END discoveryengine_v1_generated_ControlService_ListControls_sync_flattened]
+    // [END discoveryengine_v1_generated_ControlService_ListControls_sync_flattened_resourceNames1]
 }
