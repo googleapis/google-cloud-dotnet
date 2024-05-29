@@ -34,8 +34,7 @@ public class PullRequestDetails
     }
 
     /// <summary>
-    /// Extract the PR details from the given PR URL.
-    /// It returns the <see cref="PullRequestDetails"/> if the PR URL is correct otherwise raise an exception.
+    /// Extracts PR details from the given PR URL.
     /// </summary>
     /// <param name="url">The URL of the PR to extract the details from.</param>
     public static PullRequestDetails FromUrl(string url)
@@ -44,12 +43,69 @@ public class PullRequestDetails
 
         if (!match.Success)
         {
-            throw new Exception("Not a PR URL.");
+            throw new ArgumentException("Not a PR URL.");
         }
 
         return new PullRequestDetails(match.Groups["owner"].Value,
             match.Groups["repo"].Value,
             int.Parse(match.Groups["number"].Value));
+    }
+
+    public static PullRequestDetails? FromEnvironmentVariable()
+    {
+        var pullRequestUrl = Environment.GetEnvironmentVariable("AUTORELEASE_PR");
+        return string.IsNullOrEmpty(pullRequestUrl) ? null : FromUrl(pullRequestUrl);
+    }
+
+    public static async Task<PullRequestDetails?> FromLocalRepo(GitHubClient client)
+    {
+        Console.WriteLine("Determining PR to report progress on");
+        // Otherwise, use the current local repo to work out where to fetch pull requests from.
+        // We currently assume that we're in a single level subdirectory (so ".." is the repo root) - because that's how
+        // the tool is always used at the moment. If that turns out to be a problem, we can make this smarter.
+        using var localRepo = new LibGit2Sharp.Repository("..");
+        var headCommit = localRepo.Head.Tip.Sha;
+
+        var remote = localRepo.Network.Remotes.FirstOrDefault();
+        if (remote is null)
+        {
+            Console.WriteLine("Local git repository has no remotes.");
+            return null;
+        }
+
+        var match = Regex.Match(remote.PushUrl, @"https://github\.com/(?<owner>.+?)/(?<repo>.+?)\.git$");
+        if (!match.Success)
+        {
+            Console.WriteLine($"Cannot determine owner and repo from push URL '{remote.PushUrl}'");
+            return null;
+        }
+        string owner = match.Groups["owner"].Value;
+        string repo = match.Groups["repo"].Value;
+
+        Console.WriteLine("Fetching PRs");
+        // We only fetch PRs created in the 28 days, to avoid fetching huge numbers of ancient PRs.
+        // PR autodetection is a convenience feature anyway: if we're really doing something unusual with
+        // old release PRs, we can specify the environment variable.
+        var now = DateTimeOffset.UtcNow;
+        var request = new SearchIssuesRequest
+        {
+            Repos = new RepositoryCollection { { owner, repo } },
+            Type = IssueTypeQualifier.PullRequest,
+            Created = new DateRange(now.AddDays(-28), now)
+        };
+        var result = await client.Search.SearchIssues(request);
+        // Search from the most recent PR first.
+        foreach (var item in result.Items.OrderByDescending(item => item.Number))
+        {
+            var pullRequest = await client.PullRequest.Get(owner, repo, item.Number);
+            var sha = pullRequest.Head.Sha;
+            if (sha == headCommit)
+            {
+                Console.WriteLine($"Detected PR {item.Number} as the release PR.");
+                return new PullRequestDetails(owner, repo, item.Number);
+            }
+        }
+        return null;
     }
 
     /// <summary>

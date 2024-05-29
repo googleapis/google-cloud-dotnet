@@ -66,10 +66,12 @@ public class PublishReporter
         await _pullRequest.RemoveLabel(_client, "autorelease: tagged");
     }
 
-    public static async Task<PublishReporter> FromEnvironmentVariables()
+    public static async Task<PublishReporter> Create()
     {
-        PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
         GitHubClient client = await GetGitHubClientFromEnvironment();
+        var pr = PullRequestDetails.FromEnvironmentVariable() ??
+            await PullRequestDetails.FromLocalRepo(client) ??
+            throw new InvalidOperationException("Unable to detect pull request to report on.");
         return new PublishReporter(client, pr);
 
         async Task<GitHubClient> GetGitHubClientFromEnvironment()
@@ -94,7 +96,7 @@ public class PublishReporter
             var value = Environment.GetEnvironmentVariable(variable) ?? "";
             if (value == "")
             {
-                throw new Exception($"Environment variable '{variable}' must be set and non-empty.");
+                throw new InvalidOperationException($"Environment variable '{variable}' must be set and non-empty.");
             }
             return value;
         }
