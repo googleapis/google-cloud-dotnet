@@ -506,6 +506,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
+                    Clock = scheduler.Clock,
                     Scheduler = scheduler,
                     AckDeadline = ackDeadline,
                     AckExtensionWindow = ackExtendWindow,
@@ -1389,7 +1390,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackNackOrExtends is true, then it is acknowledge request. Acknowledge RPC will throw the supplied exception.
             // If ackNackOrExtends is false, then it is nack request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction =
-                ackNackOrExtends == null ? AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 4)
+                ackNackOrExtends == null ? AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 3)
                 : ackNackOrExtends.Value ? AckModifyAckDeadlineAction.BadAck(exception, numberOfFailures: 10)
                 : AckModifyAckDeadlineAction.BadNack(exception, numberOfFailures: 10);
 
@@ -1703,7 +1704,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var exception = GetExactlyOnceDeliveryMixedException(ackError);
 
             // 400 is a large arbitrary number to ensure that the retry is not successful.
-            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 4 : 400);
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 3 : 400);
 
             using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
 
