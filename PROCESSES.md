@@ -315,8 +315,8 @@ corresponding library is:
   manager `delist-package` command to delist all versions.
 - Create a PR to remove the API from the API catalog, delete the source
   code, and regenerate projects (which will update Renovate and the
-  README). See [this PR as an example]
-  (https://github.com/googleapis/google-cloud-dotnet/pull/13012).
+  README). See [this PR as an
+  example](https://github.com/googleapis/google-cloud-dotnet/pull/13012).
 
 ## Updating the .NET SDK
 
