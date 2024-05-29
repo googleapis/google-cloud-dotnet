@@ -5654,7 +5654,7 @@
     },
     {
       "id": "Google.Maps.MapsPlatformDatasets.V1Alpha",
-      "version": "1.0.0-alpha04",
+      "version": "1.0.0-alpha05",
       "type": "grpc",
       "productName": "Maps Platform Datasets",
       "productUrl": "https://developers.google.com/maps/documentation",
