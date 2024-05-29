@@ -261,7 +261,6 @@
     "apis/Google.Maps.FleetEngine.Delivery.V1/Google.Maps.FleetEngine.Delivery.V1/**",
     "apis/Google.Maps.FleetEngine.V1/Google.Maps.FleetEngine.V1/**",
     "apis/Google.Maps.MapsPlatformDatasets.V1/Google.Maps.MapsPlatformDatasets.V1/**",
-    "apis/Google.Maps.MapsPlatformDatasets.V1Alpha/Google.Maps.MapsPlatformDatasets.V1Alpha/**",
     "apis/Google.Maps.Places.V1/Google.Maps.Places.V1/**",
     "apis/Google.Maps.RouteOptimization.V1/Google.Maps.RouteOptimization.V1/**",
     "apis/Google.Maps.Routing.V2/Google.Maps.Routing.V2/**",
