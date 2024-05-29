@@ -21,6 +21,7 @@ if (args.Length < 1)
 }
 
 var progress = args[0];
+Console.WriteLine($"In progress reporter, args[0]={progress}");
 
 switch (progress)
 {
@@ -36,13 +37,13 @@ switch (progress)
         }
         break;
     case "start":
-        var startReporter = await PublishReporter.FromEnvironmentVariables();
+        var startReporter = await PublishReporter.Create();
         await startReporter.StartAsync();
         break;
     case "finish":
         bool status = Convert.ToBoolean(args[1]);
         string publishDetails = Environment.GetEnvironmentVariable("PUBLISH_DETAILS") ?? "";
-        var finishReporter = await PublishReporter.FromEnvironmentVariables();
+        var finishReporter = await PublishReporter.Create();
         await finishReporter.FinishAsync(status, publishDetails);
         break;
     default:
