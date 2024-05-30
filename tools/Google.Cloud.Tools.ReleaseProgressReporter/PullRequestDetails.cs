@@ -65,6 +65,7 @@ public class PullRequestDetails
         // the tool is always used at the moment. If that turns out to be a problem, we can make this smarter.
         using var localRepo = new LibGit2Sharp.Repository("..");
         var headCommit = localRepo.Head.Tip.Sha;
+        Console.WriteLine($"Searching for a PR with head/merge commit {headCommit}");
 
         var remote = localRepo.Network.Remotes.FirstOrDefault();
         if (remote is null)
@@ -94,12 +95,16 @@ public class PullRequestDetails
             Created = new DateRange(now.AddDays(-28), now)
         };
         var result = await client.Search.SearchIssues(request);
+        Console.WriteLine($"Fetched {result.Items.Count} PRs");
         // Search from the most recent PR first.
         foreach (var item in result.Items.OrderByDescending(item => item.Number))
         {
             var pullRequest = await client.PullRequest.Get(owner, repo, item.Number);
-            var sha = pullRequest.Head.Sha;
-            if (sha == headCommit)
+            // There are two different commits that may be relevant here. We test and report both of them.
+            var sha1 = pullRequest.Head.Sha;
+            var sha2 = pullRequest.MergeCommitSha;
+            Console.WriteLine($"PR {item.Number} commits: {sha1} / {sha2}");
+            if (sha1 == headCommit || sha2 == headCommit)
             {
                 Console.WriteLine($"Detected PR {item.Number} as the release PR.");
                 return new PullRequestDetails(owner, repo, item.Number);
