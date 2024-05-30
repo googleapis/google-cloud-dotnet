@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.16.0, released 2024-05-30
+
+### New features
+
+- Add String type with Utf8Raw encoding to Bigtable API ([commit fe331e5](https://github.com/googleapis/google-cloud-dotnet/commit/fe331e5aaa0a15cc938c59cfaf31ef412a6b04f7))
+
 ## Version 3.15.0, released 2024-05-13
 
 ### New features
