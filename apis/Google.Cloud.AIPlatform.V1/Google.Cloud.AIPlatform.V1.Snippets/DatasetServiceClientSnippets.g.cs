@@ -1421,6 +1421,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatasetVersion</summary>
+        public void UpdateDatasetVersionRequestObject()
+        {
+            // Snippet: UpdateDatasetVersion(UpdateDatasetVersionRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDatasetVersionRequest request = new UpdateDatasetVersionRequest
+            {
+                DatasetVersion = new DatasetVersion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DatasetVersion response = datasetServiceClient.UpdateDatasetVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersionAsync</summary>
+        public async Task UpdateDatasetVersionRequestObjectAsync()
+        {
+            // Snippet: UpdateDatasetVersionAsync(UpdateDatasetVersionRequest, CallSettings)
+            // Additional: UpdateDatasetVersionAsync(UpdateDatasetVersionRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatasetVersionRequest request = new UpdateDatasetVersionRequest
+            {
+                DatasetVersion = new DatasetVersion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.UpdateDatasetVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersion</summary>
+        public void UpdateDatasetVersion()
+        {
+            // Snippet: UpdateDatasetVersion(DatasetVersion, FieldMask, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetVersion datasetVersion = new DatasetVersion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DatasetVersion response = datasetServiceClient.UpdateDatasetVersion(datasetVersion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersionAsync</summary>
+        public async Task UpdateDatasetVersionAsync()
+        {
+            // Snippet: UpdateDatasetVersionAsync(DatasetVersion, FieldMask, CallSettings)
+            // Additional: UpdateDatasetVersionAsync(DatasetVersion, FieldMask, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetVersion datasetVersion = new DatasetVersion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.UpdateDatasetVersionAsync(datasetVersion, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteDatasetVersion</summary>
         public void DeleteDatasetVersionRequestObject()
         {

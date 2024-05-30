@@ -50,38 +50,43 @@ namespace Google.Cloud.AIPlatform.V1 {
             "RklFRBAAEhAKDEJBVENIX1VQREFURRABEhEKDVNUUkVBTV9VUERBVEUQAjpd",
             "6kFaCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4Ejdwcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5kZXhlcy97aW5k",
-            "ZXh9IoMGCg5JbmRleERhdGFwb2ludBIZCgxkYXRhcG9pbnRfaWQYASABKAlC",
-            "A+BBAhIbCg5mZWF0dXJlX3ZlY3RvchgCIAMoAkID4EECEk4KCXJlc3RyaWN0",
-            "cxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4RGF0",
-            "YXBvaW50LlJlc3RyaWN0aW9uQgPgQQESXQoRbnVtZXJpY19yZXN0cmljdHMY",
-            "BiADKAsyPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleERhdGFw",
-            "b2ludC5OdW1lcmljUmVzdHJpY3Rpb25CA+BBARJRCgxjcm93ZGluZ190YWcY",
-            "BSABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleERhdGFw",
-            "b2ludC5Dcm93ZGluZ1RhZ0ID4EEBGkcKC1Jlc3RyaWN0aW9uEhEKCW5hbWVz",
-            "cGFjZRgBIAEoCRISCgphbGxvd19saXN0GAIgAygJEhEKCWRlbnlfbGlzdBgD",
-            "IAMoCRrCAgoSTnVtZXJpY1Jlc3RyaWN0aW9uEhMKCXZhbHVlX2ludBgCIAEo",
-            "A0gAEhUKC3ZhbHVlX2Zsb2F0GAMgASgCSAASFgoMdmFsdWVfZG91YmxlGAQg",
-            "ASgBSAASEQoJbmFtZXNwYWNlGAEgASgJElIKAm9wGAUgASgOMkYuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRhcG9pbnQuTnVtZXJpY1Jl",
-            "c3RyaWN0aW9uLk9wZXJhdG9yIngKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VO",
-            "U1BFQ0lGSUVEEAASCAoETEVTUxABEg4KCkxFU1NfRVFVQUwQAhIJCgVFUVVB",
-            "TBADEhEKDUdSRUFURVJfRVFVQUwQBBILCgdHUkVBVEVSEAUSDQoJTk9UX0VR",
-            "VUFMEAZCBwoFVmFsdWUaKQoLQ3Jvd2RpbmdUYWcSGgoSY3Jvd2RpbmdfYXR0",
-            "cmlidXRlGAEgASgJIkMKCkluZGV4U3RhdHMSGgoNdmVjdG9yc19jb3VudBgB",
-            "IAEoA0ID4EEDEhkKDHNoYXJkc19jb3VudBgCIAEoBUID4EEDQsgBCh5jb20u",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCkluZGV4UHJvdG9QAVo+Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1w",
-            "YjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
-            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "ZXh9Ip8HCg5JbmRleERhdGFwb2ludBIZCgxkYXRhcG9pbnRfaWQYASABKAlC",
+            "A+BBAhIbCg5mZWF0dXJlX3ZlY3RvchgCIAMoAkID4EECElkKEHNwYXJzZV9l",
+            "bWJlZGRpbmcYByABKAsyOi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
+            "bmRleERhdGFwb2ludC5TcGFyc2VFbWJlZGRpbmdCA+BBARJOCglyZXN0cmlj",
+            "dHMYBCADKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleERh",
+            "dGFwb2ludC5SZXN0cmljdGlvbkID4EEBEl0KEW51bWVyaWNfcmVzdHJpY3Rz",
+            "GAYgAygLMj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRh",
+            "cG9pbnQuTnVtZXJpY1Jlc3RyaWN0aW9uQgPgQQESUQoMY3Jvd2RpbmdfdGFn",
+            "GAUgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRh",
+            "cG9pbnQuQ3Jvd2RpbmdUYWdCA+BBARo/Cg9TcGFyc2VFbWJlZGRpbmcSEwoG",
+            "dmFsdWVzGAEgAygCQgPgQQISFwoKZGltZW5zaW9ucxgCIAMoA0ID4EECGkcK",
+            "C1Jlc3RyaWN0aW9uEhEKCW5hbWVzcGFjZRgBIAEoCRISCgphbGxvd19saXN0",
+            "GAIgAygJEhEKCWRlbnlfbGlzdBgDIAMoCRrCAgoSTnVtZXJpY1Jlc3RyaWN0",
+            "aW9uEhMKCXZhbHVlX2ludBgCIAEoA0gAEhUKC3ZhbHVlX2Zsb2F0GAMgASgC",
+            "SAASFgoMdmFsdWVfZG91YmxlGAQgASgBSAASEQoJbmFtZXNwYWNlGAEgASgJ",
+            "ElIKAm9wGAUgASgOMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5k",
+            "ZXhEYXRhcG9pbnQuTnVtZXJpY1Jlc3RyaWN0aW9uLk9wZXJhdG9yIngKCE9w",
+            "ZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASCAoETEVTUxABEg4K",
+            "CkxFU1NfRVFVQUwQAhIJCgVFUVVBTBADEhEKDUdSRUFURVJfRVFVQUwQBBIL",
+            "CgdHUkVBVEVSEAUSDQoJTk9UX0VRVUFMEAZCBwoFVmFsdWUaKQoLQ3Jvd2Rp",
+            "bmdUYWcSGgoSY3Jvd2RpbmdfYXR0cmlidXRlGAEgASgJImYKCkluZGV4U3Rh",
+            "dHMSGgoNdmVjdG9yc19jb3VudBgBIAEoA0ID4EEDEiEKFHNwYXJzZV92ZWN0",
+            "b3JzX2NvdW50GAMgASgDQgPgQQMSGQoMc2hhcmRzX2NvdW50GAIgASgFQgPg",
+            "QQNCyAEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIKSW5kZXhQ",
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEv",
+            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedIndexRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Index), global::Google.Cloud.AIPlatform.V1.Index.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "DeployedIndexes", "Etag", "Labels", "CreateTime", "UpdateTime", "IndexStats", "IndexUpdateMethod", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Parser, new[]{ "DatapointId", "FeatureVector", "Restricts", "NumericRestricts", "CrowdingTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction.Parser, new[]{ "Namespace", "AllowList", "DenyList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Parser, new[]{ "DatapointId", "FeatureVector", "SparseEmbedding", "Restricts", "NumericRestricts", "CrowdingTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding.Parser, new[]{ "Values", "Dimensions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction.Parser, new[]{ "Namespace", "AllowList", "DenyList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Parser, new[]{ "ValueInt", "ValueFloat", "ValueDouble", "Namespace", "Op" }, new[]{ "Value" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag.Parser, new[]{ "CrowdingAttribute" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexStats), global::Google.Cloud.AIPlatform.V1.IndexStats.Parser, new[]{ "VectorsCount", "ShardsCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexStats), global::Google.Cloud.AIPlatform.V1.IndexStats.Parser, new[]{ "VectorsCount", "SparseVectorsCount", "ShardsCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -886,6 +891,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public IndexDatapoint(IndexDatapoint other) : this() {
       datapointId_ = other.datapointId_;
       featureVector_ = other.featureVector_.Clone();
+      sparseEmbedding_ = other.sparseEmbedding_ != null ? other.sparseEmbedding_.Clone() : null;
       restricts_ = other.restricts_.Clone();
       numericRestricts_ = other.numericRestricts_.Clone();
       crowdingTag_ = other.crowdingTag_ != null ? other.crowdingTag_.Clone() : null;
@@ -919,13 +925,28 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForFloat(18);
     private readonly pbc::RepeatedField<float> featureVector_ = new pbc::RepeatedField<float>();
     /// <summary>
-    /// Required. Feature embedding vector. An array of numbers with the length of
-    /// [NearestNeighborSearchConfig.dimensions].
+    /// Required. Feature embedding vector for dense index. An array of numbers
+    /// with the length of [NearestNeighborSearchConfig.dimensions].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<float> FeatureVector {
       get { return featureVector_; }
+    }
+
+    /// <summary>Field number for the "sparse_embedding" field.</summary>
+    public const int SparseEmbeddingFieldNumber = 7;
+    private global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding sparseEmbedding_;
+    /// <summary>
+    /// Optional. Feature embedding vector for sparse index.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding SparseEmbedding {
+      get { return sparseEmbedding_; }
+      set {
+        sparseEmbedding_ = value;
+      }
     }
 
     /// <summary>Field number for the "restricts" field.</summary>
@@ -994,6 +1015,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (DatapointId != other.DatapointId) return false;
       if(!featureVector_.Equals(other.featureVector_)) return false;
+      if (!object.Equals(SparseEmbedding, other.SparseEmbedding)) return false;
       if(!restricts_.Equals(other.restricts_)) return false;
       if(!numericRestricts_.Equals(other.numericRestricts_)) return false;
       if (!object.Equals(CrowdingTag, other.CrowdingTag)) return false;
@@ -1006,6 +1028,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (DatapointId.Length != 0) hash ^= DatapointId.GetHashCode();
       hash ^= featureVector_.GetHashCode();
+      if (sparseEmbedding_ != null) hash ^= SparseEmbedding.GetHashCode();
       hash ^= restricts_.GetHashCode();
       hash ^= numericRestricts_.GetHashCode();
       if (crowdingTag_ != null) hash ^= CrowdingTag.GetHashCode();
@@ -1038,6 +1061,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(CrowdingTag);
       }
       numericRestricts_.WriteTo(output, _repeated_numericRestricts_codec);
+      if (sparseEmbedding_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(SparseEmbedding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1059,6 +1086,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(CrowdingTag);
       }
       numericRestricts_.WriteTo(ref output, _repeated_numericRestricts_codec);
+      if (sparseEmbedding_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(SparseEmbedding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1073,6 +1104,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatapointId);
       }
       size += featureVector_.CalculateSize(_repeated_featureVector_codec);
+      if (sparseEmbedding_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SparseEmbedding);
+      }
       size += restricts_.CalculateSize(_repeated_restricts_codec);
       size += numericRestricts_.CalculateSize(_repeated_numericRestricts_codec);
       if (crowdingTag_ != null) {
@@ -1094,6 +1128,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         DatapointId = other.DatapointId;
       }
       featureVector_.Add(other.featureVector_);
+      if (other.sparseEmbedding_ != null) {
+        if (sparseEmbedding_ == null) {
+          SparseEmbedding = new global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding();
+        }
+        SparseEmbedding.MergeFrom(other.SparseEmbedding);
+      }
       restricts_.Add(other.restricts_);
       numericRestricts_.Add(other.numericRestricts_);
       if (other.crowdingTag_ != null) {
@@ -1141,6 +1181,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             numericRestricts_.AddEntriesFrom(input, _repeated_numericRestricts_codec);
             break;
           }
+          case 58: {
+            if (sparseEmbedding_ == null) {
+              SparseEmbedding = new global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding();
+            }
+            input.ReadMessage(SparseEmbedding);
+            break;
+          }
         }
       }
     #endif
@@ -1180,6 +1227,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             numericRestricts_.AddEntriesFrom(ref input, _repeated_numericRestricts_codec);
             break;
           }
+          case 58: {
+            if (sparseEmbedding_ == null) {
+              SparseEmbedding = new global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.SparseEmbedding();
+            }
+            input.ReadMessage(SparseEmbedding);
+            break;
+          }
         }
       }
     }
@@ -1190,6 +1244,226 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Feature embedding vector for sparse index. An array of numbers whose values
+      /// are located in the specified dimensions.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SparseEmbedding : pb::IMessage<SparseEmbedding>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SparseEmbedding> _parser = new pb::MessageParser<SparseEmbedding>(() => new SparseEmbedding());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SparseEmbedding> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SparseEmbedding() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SparseEmbedding(SparseEmbedding other) : this() {
+          values_ = other.values_.Clone();
+          dimensions_ = other.dimensions_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SparseEmbedding Clone() {
+          return new SparseEmbedding(this);
+        }
+
+        /// <summary>Field number for the "values" field.</summary>
+        public const int ValuesFieldNumber = 1;
+        private static readonly pb::FieldCodec<float> _repeated_values_codec
+            = pb::FieldCodec.ForFloat(10);
+        private readonly pbc::RepeatedField<float> values_ = new pbc::RepeatedField<float>();
+        /// <summary>
+        /// Required. The list of embedding values of the sparse vector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<float> Values {
+          get { return values_; }
+        }
+
+        /// <summary>Field number for the "dimensions" field.</summary>
+        public const int DimensionsFieldNumber = 2;
+        private static readonly pb::FieldCodec<long> _repeated_dimensions_codec
+            = pb::FieldCodec.ForInt64(18);
+        private readonly pbc::RepeatedField<long> dimensions_ = new pbc::RepeatedField<long>();
+        /// <summary>
+        /// Required. The list of indexes for the embedding values of the sparse
+        /// vector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<long> Dimensions {
+          get { return dimensions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SparseEmbedding);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SparseEmbedding other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!values_.Equals(other.values_)) return false;
+          if(!dimensions_.Equals(other.dimensions_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= values_.GetHashCode();
+          hash ^= dimensions_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          values_.WriteTo(output, _repeated_values_codec);
+          dimensions_.WriteTo(output, _repeated_dimensions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          values_.WriteTo(ref output, _repeated_values_codec);
+          dimensions_.WriteTo(ref output, _repeated_dimensions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += values_.CalculateSize(_repeated_values_codec);
+          size += dimensions_.CalculateSize(_repeated_dimensions_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SparseEmbedding other) {
+          if (other == null) {
+            return;
+          }
+          values_.Add(other.values_);
+          dimensions_.Add(other.dimensions_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10:
+              case 13: {
+                values_.AddEntriesFrom(input, _repeated_values_codec);
+                break;
+              }
+              case 18:
+              case 16: {
+                dimensions_.AddEntriesFrom(input, _repeated_dimensions_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 13: {
+                values_.AddEntriesFrom(ref input, _repeated_values_codec);
+                break;
+              }
+              case 18:
+              case 16: {
+                dimensions_.AddEntriesFrom(ref input, _repeated_dimensions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
       /// <summary>
       /// Restriction of a datapoint which describe its attributes(tokens) from each
       /// of several attribute categories(namespaces).
@@ -1209,7 +1483,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1464,7 +1738,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1947,7 +2221,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2173,6 +2447,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IndexStats(IndexStats other) : this() {
       vectorsCount_ = other.vectorsCount_;
+      sparseVectorsCount_ = other.sparseVectorsCount_;
       shardsCount_ = other.shardsCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2187,7 +2462,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int VectorsCountFieldNumber = 1;
     private long vectorsCount_;
     /// <summary>
-    /// Output only. The number of vectors in the Index.
+    /// Output only. The number of dense vectors in the Index.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2195,6 +2470,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return vectorsCount_; }
       set {
         vectorsCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sparse_vectors_count" field.</summary>
+    public const int SparseVectorsCountFieldNumber = 3;
+    private long sparseVectorsCount_;
+    /// <summary>
+    /// Output only. The number of sparse vectors in the Index.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long SparseVectorsCount {
+      get { return sparseVectorsCount_; }
+      set {
+        sparseVectorsCount_ = value;
       }
     }
 
@@ -2229,6 +2519,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (VectorsCount != other.VectorsCount) return false;
+      if (SparseVectorsCount != other.SparseVectorsCount) return false;
       if (ShardsCount != other.ShardsCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2238,6 +2529,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (VectorsCount != 0L) hash ^= VectorsCount.GetHashCode();
+      if (SparseVectorsCount != 0L) hash ^= SparseVectorsCount.GetHashCode();
       if (ShardsCount != 0) hash ^= ShardsCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2265,6 +2557,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(ShardsCount);
       }
+      if (SparseVectorsCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(SparseVectorsCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2283,6 +2579,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(ShardsCount);
       }
+      if (SparseVectorsCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(SparseVectorsCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2295,6 +2595,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       if (VectorsCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(VectorsCount);
+      }
+      if (SparseVectorsCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SparseVectorsCount);
       }
       if (ShardsCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ShardsCount);
@@ -2313,6 +2616,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.VectorsCount != 0L) {
         VectorsCount = other.VectorsCount;
+      }
+      if (other.SparseVectorsCount != 0L) {
+        SparseVectorsCount = other.SparseVectorsCount;
       }
       if (other.ShardsCount != 0) {
         ShardsCount = other.ShardsCount;
@@ -2340,6 +2646,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             ShardsCount = input.ReadInt32();
             break;
           }
+          case 24: {
+            SparseVectorsCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2361,6 +2671,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 16: {
             ShardsCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            SparseVectorsCount = input.ReadInt64();
             break;
           }
         }

@@ -28,25 +28,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIpkDCg5EYXRhc2V0VmVyc2lvbhIRCgRu",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIrcDCg5EYXRhc2V0VmVyc2lvbhIRCgRu",
             "YW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSDAoEZXRhZxgDIAEo",
             "CRIjChZiaWdfcXVlcnlfZGF0YXNldF9uYW1lGAQgASgJQgPgQQMSFAoMZGlz",
             "cGxheV9uYW1lGAcgASgJEjAKCG1ldGFkYXRhGAggASgLMhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLlZhbHVlQgbgQQPgQQI6jAHqQYgBCihhaXBsYXRmb3JtLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFzZXRWZXJzaW9uElxwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YXNldHMve2RhdGFzZXR9L2RhdGFz",
-            "ZXRWZXJzaW9ucy97ZGF0YXNldF92ZXJzaW9ufULRAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQhNEYXRhc2V0VmVyc2lvblByb3RvUAFaPmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
-            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
-            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
-            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "b3RvYnVmLlZhbHVlQgbgQQPgQQISHAoPbW9kZWxfcmVmZXJlbmNlGAkgASgJ",
+            "QgPgQQM6jAHqQYgBCihhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0RhdGFz",
+            "ZXRWZXJzaW9uElxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vZGF0YXNldHMve2RhdGFzZXR9L2RhdGFzZXRWZXJzaW9ucy97ZGF0",
+            "YXNldF92ZXJzaW9ufULRAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxQhNEYXRhc2V0VmVyc2lvblByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBi",
+            "qgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRc",
+            "QUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DatasetVersion), global::Google.Cloud.AIPlatform.V1.DatasetVersion.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "BigQueryDatasetName", "DisplayName", "Metadata" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DatasetVersion), global::Google.Cloud.AIPlatform.V1.DatasetVersion.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "BigQueryDatasetName", "DisplayName", "Metadata", "ModelReference" }, null, null, null, null)
           }));
     }
     #endregion
@@ -98,6 +99,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       bigQueryDatasetName_ = other.bigQueryDatasetName_;
       displayName_ = other.displayName_;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
+      modelReference_ = other.modelReference_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -215,6 +217,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "model_reference" field.</summary>
+    public const int ModelReferenceFieldNumber = 9;
+    private string modelReference_ = "";
+    /// <summary>
+    /// Output only. Reference to the public base model last used by the dataset
+    /// version. Only set for prompt dataset versions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ModelReference {
+      get { return modelReference_; }
+      set {
+        modelReference_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -237,6 +255,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (BigQueryDatasetName != other.BigQueryDatasetName) return false;
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (ModelReference != other.ModelReference) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -251,6 +270,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (BigQueryDatasetName.Length != 0) hash ^= BigQueryDatasetName.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (ModelReference.Length != 0) hash ^= ModelReference.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -297,6 +317,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
+      if (ModelReference.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ModelReference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -335,6 +359,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
+      if (ModelReference.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ModelReference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -365,6 +393,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (metadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (ModelReference.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelReference);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -407,6 +438,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
         }
         Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.ModelReference.Length != 0) {
+        ModelReference = other.ModelReference;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -460,6 +494,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(Metadata);
             break;
           }
+          case 74: {
+            ModelReference = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -510,6 +548,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
             }
             input.ReadMessage(Metadata);
+            break;
+          }
+          case 74: {
+            ModelReference = input.ReadString();
             break;
           }
         }

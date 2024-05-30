@@ -27,25 +27,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Cjlnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9kZXBsb3ltZW50X3Jlc291",
             "cmNlX3Bvb2wucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9n",
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
-            "c291cmNlLnByb3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNo",
-            "aW5lX3Jlc291cmNlcy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byLIAgoWRGVwbG95bWVudFJlc291cmNlUG9vbBIRCgRuYW1lGAEg",
-            "ASgJQgPgQQUSUAoTZGVkaWNhdGVkX3Jlc291cmNlcxgCIAEoCzIuLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRlZFJlc291cmNlc0ID4EEC",
-            "EjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDOpIB6kGOAQowYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9E",
-            "ZXBsb3ltZW50UmVzb3VyY2VQb29sElpwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vZGVwbG95bWVudFJlc291cmNlUG9vbHMve2Rl",
-            "cGxveW1lbnRfcmVzb3VyY2VfcG9vbH1C2QEKHmNvbS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MUIbRGVwbG95bWVudFJlc291cmNlUG9vbFByb3RvUAFa",
-            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
-            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
-            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
-            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "c291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNy",
+            "eXB0aW9uX3NwZWMucHJvdG8aMmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
+            "L21hY2hpbmVfcmVzb3VyY2VzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIskDChZEZXBsb3ltZW50UmVzb3VyY2VQb29sEhEKBG5h",
+            "bWUYASABKAlCA+BBBRJQChNkZWRpY2F0ZWRfcmVzb3VyY2VzGAIgASgLMi4u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVkaWNhdGVkUmVzb3VyY2Vz",
+            "QgPgQQISQwoPZW5jcnlwdGlvbl9zcGVjGAUgASgLMiouZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMSFwoPc2VydmljZV9hY2Nv",
+            "dW50GAYgASgJEiEKGWRpc2FibGVfY29udGFpbmVyX2xvZ2dpbmcYByABKAgS",
+            "NAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQM6kgHqQY4BCjBhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Rl",
+            "cGxveW1lbnRSZXNvdXJjZVBvb2wSWnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9kZXBsb3ltZW50UmVzb3VyY2VQb29scy97ZGVw",
+            "bG95bWVudF9yZXNvdXJjZV9wb29sfULZAQoeY29tLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxQhtEZXBsb3ltZW50UmVzb3VyY2VQb29sUHJvdG9QAVo+",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZv",
+            "cm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
+            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
+            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool), global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool.Parser, new[]{ "Name", "DedicatedResources", "CreateTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool), global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool.Parser, new[]{ "Name", "DedicatedResources", "EncryptionSpec", "ServiceAccount", "DisableContainerLogging", "CreateTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -93,6 +97,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public DeploymentResourcePool(DeploymentResourcePool other) : this() {
       name_ = other.name_;
       dedicatedResources_ = other.dedicatedResources_ != null ? other.dedicatedResources_.Clone() : null;
+      encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      serviceAccount_ = other.serviceAccount_;
+      disableContainerLogging_ = other.disableContainerLogging_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -136,6 +143,65 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "encryption_spec" field.</summary>
+    public const int EncryptionSpecFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
+    /// <summary>
+    /// Customer-managed encryption key spec for a DeploymentResourcePool. If set,
+    /// this DeploymentResourcePool will be secured by this key. Endpoints and the
+    /// DeploymentResourcePool they deploy in need to have the same EncryptionSpec.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EncryptionSpec EncryptionSpec {
+      get { return encryptionSpec_; }
+      set {
+        encryptionSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 6;
+    private string serviceAccount_ = "";
+    /// <summary>
+    /// The service account that the DeploymentResourcePool's container(s) run as.
+    /// Specify the email address of the service account. If this service account
+    /// is not specified, the container(s) run as a service account that doesn't
+    /// have access to the resource project.
+    ///
+    /// Users deploying the Models to this DeploymentResourcePool must have the
+    /// `iam.serviceAccounts.actAs` permission on this service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "disable_container_logging" field.</summary>
+    public const int DisableContainerLoggingFieldNumber = 7;
+    private bool disableContainerLogging_;
+    /// <summary>
+    /// If the DeploymentResourcePool is deployed with custom-trained Models or
+    /// AutoML Tabular Models, the container(s) of the DeploymentResourcePool will
+    /// send `stderr` and `stdout` streams to Cloud Logging by default.
+    /// Please note that the logs incur cost, which are subject to [Cloud Logging
+    /// pricing](https://cloud.google.com/logging/pricing).
+    ///
+    /// User can disable container logging by setting this flag to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableContainerLogging {
+      get { return disableContainerLogging_; }
+      set {
+        disableContainerLogging_ = value;
+      }
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -168,6 +234,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(DedicatedResources, other.DedicatedResources)) return false;
+      if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (ServiceAccount != other.ServiceAccount) return false;
+      if (DisableContainerLogging != other.DisableContainerLogging) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -178,6 +247,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (dedicatedResources_ != null) hash ^= DedicatedResources.GetHashCode();
+      if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+      if (DisableContainerLogging != false) hash ^= DisableContainerLogging.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -209,6 +281,18 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(CreateTime);
       }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EncryptionSpec);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ServiceAccount);
+      }
+      if (DisableContainerLogging != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(DisableContainerLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -231,6 +315,18 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(CreateTime);
       }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EncryptionSpec);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ServiceAccount);
+      }
+      if (DisableContainerLogging != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(DisableContainerLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,6 +342,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (dedicatedResources_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DedicatedResources);
+      }
+      if (encryptionSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (ServiceAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
+      if (DisableContainerLogging != false) {
+        size += 1 + 1;
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -270,6 +375,18 @@ namespace Google.Cloud.AIPlatform.V1 {
           DedicatedResources = new global::Google.Cloud.AIPlatform.V1.DedicatedResources();
         }
         DedicatedResources.MergeFrom(other.DedicatedResources);
+      }
+      if (other.encryptionSpec_ != null) {
+        if (encryptionSpec_ == null) {
+          EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+        }
+        EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.ServiceAccount.Length != 0) {
+        ServiceAccount = other.ServiceAccount;
+      }
+      if (other.DisableContainerLogging != false) {
+        DisableContainerLogging = other.DisableContainerLogging;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -310,6 +427,21 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 42: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 50: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 56: {
+            DisableContainerLogging = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -341,6 +473,21 @@ namespace Google.Cloud.AIPlatform.V1 {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 50: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 56: {
+            DisableContainerLogging = input.ReadBool();
             break;
           }
         }

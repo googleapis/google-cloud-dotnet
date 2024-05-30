@@ -28,27 +28,31 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
             "dG8aMGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRpb25fc3Bl",
-            "Yy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLnAwoN",
+            "Yy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL5BAoN",
             "TWV0YWRhdGFTdG9yZRIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
             "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
             "dXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQMSQwoPZW5jcnlwdGlvbl9zcGVjGAUgASgLMiouZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMSEwoLZGVzY3JpcHRpb24Y",
             "BiABKAkSUAoFc3RhdGUYByABKAsyPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5NZXRhZGF0YVN0b3JlLk1ldGFkYXRhU3RvcmVTdGF0ZUID4EEDGjQK",
-            "Ek1ldGFkYXRhU3RvcmVTdGF0ZRIeChZkaXNrX3V0aWxpemF0aW9uX2J5dGVz",
-            "GAEgASgDOnXqQXIKJ2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTWV0YWRh",
-            "dGFTdG9yZRJHcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L21ldGFkYXRhU3RvcmVzL3ttZXRhZGF0YV9zdG9yZX1CywEKHmNvbS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUINTWV0YWRhdGFQcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "bS52MS5NZXRhZGF0YVN0b3JlLk1ldGFkYXRhU3RvcmVTdGF0ZUID4EEDElYK",
+            "D2RhdGFwbGV4X2NvbmZpZxgIIAEoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLk1ldGFkYXRhU3RvcmUuRGF0YXBsZXhDb25maWdCA+BBARo0ChJN",
+            "ZXRhZGF0YVN0b3JlU3RhdGUSHgoWZGlza191dGlsaXphdGlvbl9ieXRlcxgB",
+            "IAEoAxo4Cg5EYXRhcGxleENvbmZpZxImChllbmFibGVkX3BpcGVsaW5lc19s",
+            "aW5lYWdlGAEgASgIQgPgQQE6depBcgonYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
+            "LmNvbS9NZXRhZGF0YVN0b3JlEkdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vbWV0YWRhdGFTdG9yZXMve21ldGFkYXRhX3N0b3Jl",
+            "fULLAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg1NZXRhZGF0",
+            "YVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
+            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore), global::Google.Cloud.AIPlatform.V1.MetadataStore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "EncryptionSpec", "Description", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState), global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState.Parser, new[]{ "DiskUtilizationBytes" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore), global::Google.Cloud.AIPlatform.V1.MetadataStore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "EncryptionSpec", "Description", "State", "DataplexConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState), global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState.Parser, new[]{ "DiskUtilizationBytes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig), global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig.Parser, new[]{ "EnabledPipelinesLineage" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -100,6 +104,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       description_ = other.description_;
       state_ = other.state_ != null ? other.state_.Clone() : null;
+      dataplexConfig_ = other.dataplexConfig_ != null ? other.dataplexConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -201,6 +206,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "dataplex_config" field.</summary>
+    public const int DataplexConfigFieldNumber = 8;
+    private global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig dataplexConfig_;
+    /// <summary>
+    /// Optional. Dataplex integration settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig DataplexConfig {
+      get { return dataplexConfig_; }
+      set {
+        dataplexConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -222,6 +242,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(State, other.State)) return false;
+      if (!object.Equals(DataplexConfig, other.DataplexConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -235,6 +256,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (state_ != null) hash ^= State.GetHashCode();
+      if (dataplexConfig_ != null) hash ^= DataplexConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -277,6 +299,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(State);
       }
+      if (dataplexConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(DataplexConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -311,6 +337,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(State);
       }
+      if (dataplexConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(DataplexConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -338,6 +368,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (state_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
+      }
+      if (dataplexConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataplexConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -380,6 +413,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           State = new global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState();
         }
         State.MergeFrom(other.State);
+      }
+      if (other.dataplexConfig_ != null) {
+        if (dataplexConfig_ == null) {
+          DataplexConfig = new global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig();
+        }
+        DataplexConfig.MergeFrom(other.DataplexConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -432,6 +471,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(State);
             break;
           }
+          case 66: {
+            if (dataplexConfig_ == null) {
+              DataplexConfig = new global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig();
+            }
+            input.ReadMessage(DataplexConfig);
+            break;
+          }
         }
       }
     #endif
@@ -481,6 +527,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               State = new global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState();
             }
             input.ReadMessage(State);
+            break;
+          }
+          case 66: {
+            if (dataplexConfig_ == null) {
+              DataplexConfig = new global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.DataplexConfig();
+            }
+            input.ReadMessage(DataplexConfig);
             break;
           }
         }
@@ -680,6 +733,203 @@ namespace Google.Cloud.AIPlatform.V1 {
                 break;
               case 8: {
                 DiskUtilizationBytes = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represents Dataplex integration settings.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DataplexConfig : pb::IMessage<DataplexConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataplexConfig> _parser = new pb::MessageParser<DataplexConfig>(() => new DataplexConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataplexConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.MetadataStore.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataplexConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataplexConfig(DataplexConfig other) : this() {
+          enabledPipelinesLineage_ = other.enabledPipelinesLineage_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataplexConfig Clone() {
+          return new DataplexConfig(this);
+        }
+
+        /// <summary>Field number for the "enabled_pipelines_lineage" field.</summary>
+        public const int EnabledPipelinesLineageFieldNumber = 1;
+        private bool enabledPipelinesLineage_;
+        /// <summary>
+        /// Optional. Whether or not Data Lineage synchronization is enabled for
+        /// Vertex Pipelines.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnabledPipelinesLineage {
+          get { return enabledPipelinesLineage_; }
+          set {
+            enabledPipelinesLineage_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataplexConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataplexConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnabledPipelinesLineage != other.EnabledPipelinesLineage) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnabledPipelinesLineage != false) hash ^= EnabledPipelinesLineage.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnabledPipelinesLineage != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnabledPipelinesLineage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnabledPipelinesLineage != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnabledPipelinesLineage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnabledPipelinesLineage != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataplexConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnabledPipelinesLineage != false) {
+            EnabledPipelinesLineage = other.EnabledPipelinesLineage;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnabledPipelinesLineage = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnabledPipelinesLineage = input.ReadBool();
                 break;
               }
             }

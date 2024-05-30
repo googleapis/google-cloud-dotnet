@@ -2316,6 +2316,206 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_DatasetService_UpdateDatasetVersion_sync",
+      "title": "UpdateDatasetVersionRequestObject",
+      "description": "Snippet for UpdateDatasetVersion",
+      "file": "DatasetServiceClient.UpdateDatasetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.UpdateDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.UpdateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_UpdateDatasetVersion_async",
+      "title": "UpdateDatasetVersionRequestObjectAsync",
+      "description": "Snippet for UpdateDatasetVersionAsync",
+      "file": "DatasetServiceClient.UpdateDatasetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.UpdateDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.UpdateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_UpdateDatasetVersion_sync_flattened",
+      "title": "UpdateDatasetVersion",
+      "description": "Snippet for UpdateDatasetVersion",
+      "file": "DatasetServiceClient.UpdateDatasetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.UpdateDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+            "name": "datasetVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.UpdateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_UpdateDatasetVersion_async_flattened",
+      "title": "UpdateDatasetVersionAsync",
+      "description": "Snippet for UpdateDatasetVersionAsync",
+      "file": "DatasetServiceClient.UpdateDatasetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.UpdateDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+            "name": "datasetVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.UpdateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_sync",
       "title": "DeleteDatasetVersionRequestObject",
       "description": "Snippet for DeleteDatasetVersion",
@@ -57601,6 +57801,206 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpdateNotebookRuntimeTemplate_sync",
+      "title": "UpdateNotebookRuntimeTemplateRequestObject",
+      "description": "Snippet for UpdateNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.UpdateNotebookRuntimeTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpdateNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpdateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpdateNotebookRuntimeTemplate_async",
+      "title": "UpdateNotebookRuntimeTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.UpdateNotebookRuntimeTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpdateNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpdateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpdateNotebookRuntimeTemplate_sync_flattened",
+      "title": "UpdateNotebookRuntimeTemplate",
+      "description": "Snippet for UpdateNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.UpdateNotebookRuntimeTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpdateNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpdateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpdateNotebookRuntimeTemplate_async_flattened",
+      "title": "UpdateNotebookRuntimeTemplateAsync",
+      "description": "Snippet for UpdateNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.UpdateNotebookRuntimeTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpdateNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpdateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_sync",
       "title": "AssignNotebookRuntimeRequestObject",
       "description": "Snippet for AssignNotebookRuntime",
@@ -66262,12 +66662,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -66311,12 +66711,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 54,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 51,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -66462,12 +66862,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]

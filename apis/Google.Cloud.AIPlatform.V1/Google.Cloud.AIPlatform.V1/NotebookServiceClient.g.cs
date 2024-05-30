@@ -56,6 +56,7 @@ namespace Google.Cloud.AIPlatform.V1
             ListNotebookRuntimeTemplatesSettings = existing.ListNotebookRuntimeTemplatesSettings;
             DeleteNotebookRuntimeTemplateSettings = existing.DeleteNotebookRuntimeTemplateSettings;
             DeleteNotebookRuntimeTemplateOperationsSettings = existing.DeleteNotebookRuntimeTemplateOperationsSettings.Clone();
+            UpdateNotebookRuntimeTemplateSettings = existing.UpdateNotebookRuntimeTemplateSettings;
             AssignNotebookRuntimeSettings = existing.AssignNotebookRuntimeSettings;
             AssignNotebookRuntimeOperationsSettings = existing.AssignNotebookRuntimeOperationsSettings.Clone();
             GetNotebookRuntimeSettings = existing.GetNotebookRuntimeSettings;
@@ -160,6 +161,19 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.UpdateNotebookRuntimeTemplate</c> and
+        /// <c>NotebookServiceClient.UpdateNotebookRuntimeTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateNotebookRuntimeTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1031,6 +1045,98 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookRuntimeTemplateAsync(NotebookRuntimeTemplateName name, st::CancellationToken cancellationToken) =>
             DeleteNotebookRuntimeTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotebookRuntimeTemplate UpdateNotebookRuntimeTemplate(UpdateNotebookRuntimeTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(UpdateNotebookRuntimeTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(UpdateNotebookRuntimeTemplateRequest request, st::CancellationToken cancellationToken) =>
+            UpdateNotebookRuntimeTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="notebookRuntimeTemplate">
+        /// Required. The NotebookRuntimeTemplate to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Input format:
+        /// `{paths: "${updated_filed}"}` Updatable fields:
+        /// 
+        /// * `encryption_spec.kms_key_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotebookRuntimeTemplate UpdateNotebookRuntimeTemplate(NotebookRuntimeTemplate notebookRuntimeTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNotebookRuntimeTemplate(new UpdateNotebookRuntimeTemplateRequest
+            {
+                NotebookRuntimeTemplate = gax::GaxPreconditions.CheckNotNull(notebookRuntimeTemplate, nameof(notebookRuntimeTemplate)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="notebookRuntimeTemplate">
+        /// Required. The NotebookRuntimeTemplate to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Input format:
+        /// `{paths: "${updated_filed}"}` Updatable fields:
+        /// 
+        /// * `encryption_spec.kms_key_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(NotebookRuntimeTemplate notebookRuntimeTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNotebookRuntimeTemplateAsync(new UpdateNotebookRuntimeTemplateRequest
+            {
+                NotebookRuntimeTemplate = gax::GaxPreconditions.CheckNotNull(notebookRuntimeTemplate, nameof(notebookRuntimeTemplate)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="notebookRuntimeTemplate">
+        /// Required. The NotebookRuntimeTemplate to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Input format:
+        /// `{paths: "${updated_filed}"}` Updatable fields:
+        /// 
+        /// * `encryption_spec.kms_key_name`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(NotebookRuntimeTemplate notebookRuntimeTemplate, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateNotebookRuntimeTemplateAsync(notebookRuntimeTemplate, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Assigns a NotebookRuntime to a user for a particular Notebook file. This
@@ -1967,6 +2073,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<DeleteNotebookRuntimeTemplateRequest, lro::Operation> _callDeleteNotebookRuntimeTemplate;
 
+        private readonly gaxgrpc::ApiCall<UpdateNotebookRuntimeTemplateRequest, NotebookRuntimeTemplate> _callUpdateNotebookRuntimeTemplate;
+
         private readonly gaxgrpc::ApiCall<AssignNotebookRuntimeRequest, lro::Operation> _callAssignNotebookRuntime;
 
         private readonly gaxgrpc::ApiCall<GetNotebookRuntimeRequest, NotebookRuntime> _callGetNotebookRuntime;
@@ -2014,6 +2122,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callDeleteNotebookRuntimeTemplate = clientHelper.BuildApiCall<DeleteNotebookRuntimeTemplateRequest, lro::Operation>("DeleteNotebookRuntimeTemplate", grpcClient.DeleteNotebookRuntimeTemplateAsync, grpcClient.DeleteNotebookRuntimeTemplate, effectiveSettings.DeleteNotebookRuntimeTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNotebookRuntimeTemplate);
             Modify_DeleteNotebookRuntimeTemplateApiCall(ref _callDeleteNotebookRuntimeTemplate);
+            _callUpdateNotebookRuntimeTemplate = clientHelper.BuildApiCall<UpdateNotebookRuntimeTemplateRequest, NotebookRuntimeTemplate>("UpdateNotebookRuntimeTemplate", grpcClient.UpdateNotebookRuntimeTemplateAsync, grpcClient.UpdateNotebookRuntimeTemplate, effectiveSettings.UpdateNotebookRuntimeTemplateSettings).WithGoogleRequestParam("notebook_runtime_template.name", request => request.NotebookRuntimeTemplate?.Name);
+            Modify_ApiCall(ref _callUpdateNotebookRuntimeTemplate);
+            Modify_UpdateNotebookRuntimeTemplateApiCall(ref _callUpdateNotebookRuntimeTemplate);
             _callAssignNotebookRuntime = clientHelper.BuildApiCall<AssignNotebookRuntimeRequest, lro::Operation>("AssignNotebookRuntime", grpcClient.AssignNotebookRuntimeAsync, grpcClient.AssignNotebookRuntime, effectiveSettings.AssignNotebookRuntimeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callAssignNotebookRuntime);
             Modify_AssignNotebookRuntimeApiCall(ref _callAssignNotebookRuntime);
@@ -2045,6 +2156,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_DeleteNotebookRuntimeTemplateApiCall(ref gaxgrpc::ApiCall<DeleteNotebookRuntimeTemplateRequest, lro::Operation> call);
 
+        partial void Modify_UpdateNotebookRuntimeTemplateApiCall(ref gaxgrpc::ApiCall<UpdateNotebookRuntimeTemplateRequest, NotebookRuntimeTemplate> call);
+
         partial void Modify_AssignNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<AssignNotebookRuntimeRequest, lro::Operation> call);
 
         partial void Modify_GetNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<GetNotebookRuntimeRequest, NotebookRuntime> call);
@@ -2075,6 +2188,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ListNotebookRuntimeTemplatesRequest(ref ListNotebookRuntimeTemplatesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteNotebookRuntimeTemplateRequest(ref DeleteNotebookRuntimeTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateNotebookRuntimeTemplateRequest(ref UpdateNotebookRuntimeTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AssignNotebookRuntimeRequest(ref AssignNotebookRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2188,6 +2303,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DeleteNotebookRuntimeTemplateRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteNotebookRuntimeTemplate.Async(request, callSettings).ConfigureAwait(false), DeleteNotebookRuntimeTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NotebookRuntimeTemplate UpdateNotebookRuntimeTemplate(UpdateNotebookRuntimeTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNotebookRuntimeTemplateRequest(ref request, ref callSettings);
+            return _callUpdateNotebookRuntimeTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a NotebookRuntimeTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(UpdateNotebookRuntimeTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNotebookRuntimeTemplateRequest(ref request, ref callSettings);
+            return _callUpdateNotebookRuntimeTemplate.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>AssignNotebookRuntime</c>.</summary>
