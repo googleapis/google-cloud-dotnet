@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.1.0, released 2024-05-30
+
+### New features
+
+- Support multiple parent patterns for controls ([commit c8f3726](https://github.com/googleapis/google-cloud-dotnet/commit/c8f3726962a03da080d343eaceb78c50b553cf2c))
+- Promote grounding check APIs to v1 GA ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+- Promote answer APIs to v1 GA ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+- Promote ranking APIs to v1 GA ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+- Add control service APIs ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+- Support writing user events for blended engines ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+- Support cancelling import operations ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+
+### Documentation improvements
+
+- Mention multiple parent patterns for controls ([commit c8f3726](https://github.com/googleapis/google-cloud-dotnet/commit/c8f3726962a03da080d343eaceb78c50b553cf2c))
+- Keep the API doc up-to-date with recent changes ([commit 8e6674a](https://github.com/googleapis/google-cloud-dotnet/commit/8e6674ae0022eaa489693ac842f0c104addd316a))
+
 ## Version 1.0.0, released 2024-05-24
 
 No API surface changes; just dependency updates and promotion to GA.
