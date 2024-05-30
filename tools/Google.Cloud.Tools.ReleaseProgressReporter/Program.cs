@@ -21,7 +21,6 @@ if (args.Length < 1)
 }
 
 var progress = args[0];
-Console.WriteLine($"In progress reporter, args[0]={progress}");
 
 switch (progress)
 {

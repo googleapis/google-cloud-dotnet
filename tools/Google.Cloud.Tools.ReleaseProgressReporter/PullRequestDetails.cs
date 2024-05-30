@@ -83,7 +83,7 @@ public class PullRequestDetails
         string repo = match.Groups["repo"].Value;
 
         Console.WriteLine("Fetching PRs");
-        // We only fetch PRs created in the 28 days, to avoid fetching huge numbers of ancient PRs.
+        // We only fetch PRs created in the last 28 days, to avoid fetching huge numbers of ancient PRs.
         // PR autodetection is a convenience feature anyway: if we're really doing something unusual with
         // old release PRs, we can specify the environment variable.
         var now = DateTimeOffset.UtcNow;
