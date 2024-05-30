@@ -1122,7 +1122,11 @@ public sealed partial class SubscriberClientImpl
             private const string GrpcCoreAuthExceptionPrefix = "Getting metadata from plugin failed with error: Exception occurred in metadata credentials plugin. ";
             private const int MaxAuthExceptionsBeforeFailing = 4;
 
-            private const int ExceptionLimit = 100;
+            /// <summary>
+            /// We fail after this many consecutive failures, regardless of what the failure was.
+            /// With the backoffs involved, this will be after a pretty significant amount of time anyway.
+            /// </summary>
+            private const int ConcurrentFailureLimit = 100;
 
             private readonly IClock _clock;
             private readonly ILogger _logger;
@@ -1160,9 +1164,13 @@ public sealed partial class SubscriberClientImpl
                 {
                     return false;
                 }
-                if (_exceptions.Count < ExceptionLimit)
+
+                _exceptions.Add(rpcEx);
+
+                // If we've reached our limit, fail regardless.
+                if (_exceptions.Count == ConcurrentFailureLimit)
                 {
-                    _exceptions.Add(rpcEx);
+                    return false;
                 }
 
                 var code = rpcEx.StatusCode;
@@ -1183,6 +1191,8 @@ public sealed partial class SubscriberClientImpl
                 }
 
                 // If the exception was a failure due to auth, and we've seen some before, don't retry.
+                // The auth-related exceptions don't need to be consecutive: if we have transient auth related
+                // problems, then non-auth problems, then auth related problems again, we're definitely in a bad situation.
                 if (IsAuthException(rpcEx))
                 {
                     var count = _exceptions.Count(IsAuthException);

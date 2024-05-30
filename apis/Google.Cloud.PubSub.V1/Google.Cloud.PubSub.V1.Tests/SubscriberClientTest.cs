@@ -23,6 +23,7 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -1784,7 +1785,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
-        public void StreamingPullRetry_InternalErrorRetriesForever()
+        public void StreamingPullRetry_InternalErrorContinuesRetrying()
         {
             // A regular internal failure that's not due to an auth error.
             var exception = new RpcException(new Status(StatusCode.Internal, "Bang"));
@@ -1798,6 +1799,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.False(subscriberTask.IsCompleted);
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                 await subscriberTask;
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_RetriableErrorEventuallyFails()
+        {
+            // A regular internal failure that's not due to an auth error.
+            var exception = new RpcException(new Status(StatusCode.Internal, "Bang"));
+
+            // When we've reached a limit of the number of exceptions we're happy to retry, we'll eventually fail.
+            // (This will take a long time, with all the backoffs involved...)
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(1), exception, 100, includeTrailing: true));
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                var subscriberEx = await Assert.ThrowsAsync<RpcException>(() => subscriberTask);
+                Assert.Equal(exception.Status, subscriberEx.Status);
             });
         }
 
