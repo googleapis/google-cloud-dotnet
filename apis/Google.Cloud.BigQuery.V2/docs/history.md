@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2024-05-30
+
+### New features
+
+- Add a view option to GetTable ([commit 258e723](https://github.com/googleapis/google-cloud-dotnet/commit/258e723949d58454111e456feaae62836557672f))
+
 ## Version 3.9.0, released 2024-03-26
 
 ### New features
