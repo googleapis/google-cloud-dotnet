@@ -5244,7 +5244,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>Field number for the "exec" field.</summary>
     public const int ExecFieldNumber = 1;
     /// <summary>
-    /// Exec specifies the action to take.
+    /// ExecAction probes the health of a container by executing a command.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

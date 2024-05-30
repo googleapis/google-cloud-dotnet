@@ -718,6 +718,7 @@ namespace GoogleCSharpSnippets
                 GenerationConfig = new GenerationConfig(),
                 Model = "",
                 Tools = { new Tool(), },
+                ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
             };
             // Make the request
@@ -743,6 +744,7 @@ namespace GoogleCSharpSnippets
                 GenerationConfig = new GenerationConfig(),
                 Model = "",
                 Tools = { new Tool(), },
+                ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
             };
             // Make the request
@@ -796,6 +798,7 @@ namespace GoogleCSharpSnippets
                 GenerationConfig = new GenerationConfig(),
                 Model = "",
                 Tools = { new Tool(), },
+                ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
             };
             // Make the request, returning a streaming response

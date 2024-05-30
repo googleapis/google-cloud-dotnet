@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1_generated_PredictionService_GenerateContent_async]
+    // [START aiplatform_v1_generated_DatasetService_UpdateDatasetVersion_async_flattened]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedPredictionServiceClientSnippets
+    public sealed partial class GeneratedDatasetServiceClientSnippets
     {
-        /// <summary>Snippet for GenerateContentAsync</summary>
+        /// <summary>Snippet for UpdateDatasetVersionAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,27 +31,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GenerateContentRequestObjectAsync()
+        public async Task UpdateDatasetVersionAsync()
         {
             // Create client
-            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateContentRequest request = new GenerateContentRequest
-            {
-                Contents = { new Content(), },
-                SafetySettings =
-                {
-                    new SafetySetting(),
-                },
-                GenerationConfig = new GenerationConfig(),
-                Model = "",
-                Tools = { new Tool(), },
-                ToolConfig = new ToolConfig(),
-                SystemInstruction = new Content(),
-            };
+            DatasetVersion datasetVersion = new DatasetVersion();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(request);
+            DatasetVersion response = await datasetServiceClient.UpdateDatasetVersionAsync(datasetVersion, updateMask);
         }
     }
-    // [END aiplatform_v1_generated_PredictionService_GenerateContent_async]
+    // [END aiplatform_v1_generated_DatasetService_UpdateDatasetVersion_async_flattened]
 }

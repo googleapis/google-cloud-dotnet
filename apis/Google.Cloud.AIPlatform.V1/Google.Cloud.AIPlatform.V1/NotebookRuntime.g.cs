@@ -27,78 +27,86 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9ub3RlYm9va19ydW50aW1l",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxoyZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbWFjaGluZV9yZXNv",
-            "dXJjZXMucHJvdG8aLWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL25ldHdv",
-            "cmtfc3BlYy5wcm90bxo0Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbm90",
-            "ZWJvb2tfZXVjX2NvbmZpZy5wcm90bxo+Z29vZ2xlL2Nsb3VkL2FpcGxhdGZv",
-            "cm0vdjEvbm90ZWJvb2tfaWRsZV9zaHV0ZG93bl9jb25maWcucHJvdG8aPmdv",
-            "b2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL25vdGVib29rX3J1bnRpbWVfdGVt",
-            "cGxhdGVfcmVmLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvItwIChdOb3RlYm9va1J1bnRpbWVUZW1wbGF0ZRIMCgRuYW1lGAEgASgJ",
-            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMg",
-            "ASgJEhcKCmlzX2RlZmF1bHQYBCABKAhCA+BBAxJFCgxtYWNoaW5lX3NwZWMY",
-            "BSABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NYWNoaW5lU3Bl",
-            "Y0IG4EEB4EEFElYKGWRhdGFfcGVyc2lzdGVudF9kaXNrX3NwZWMYCCABKAsy",
-            "Li5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QZXJzaXN0ZW50RGlza1Nw",
-            "ZWNCA+BBARJCCgxuZXR3b3JrX3NwZWMYDCABKAsyJy5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5OZXR3b3JrU3BlY0ID4EEBEhcKD3NlcnZpY2VfYWNj",
-            "b3VudBgNIAEoCRIMCgRldGFnGA4gASgJEk8KBmxhYmVscxgPIAMoCzI/Lmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk5vdGVib29rUnVudGltZVRlbXBs",
-            "YXRlLkxhYmVsc0VudHJ5ElQKFGlkbGVfc2h1dGRvd25fY29uZmlnGBEgASgL",
-            "MjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTm90ZWJvb2tJZGxlU2h1",
-            "dGRvd25Db25maWcSQQoKZXVjX2NvbmZpZxgSIAEoCzItLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk5vdGVib29rRXVjQ29uZmlnEjQKC2NyZWF0ZV90",
-            "aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C3VwZGF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDElYKFW5vdGVib29rX3J1bnRpbWVfdHlwZRgTIAEoDjIvLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLk5vdGVib29rUnVudGltZVR5cGVCBuBB",
-            "AeBBBRJQChJzaGllbGRlZF92bV9jb25maWcYFCABKAsyLC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5TaGllbGRlZFZtQ29uZmlnQgbgQQHgQQUSGQoM",
-            "bmV0d29ya190YWdzGBUgAygJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqVAepBkQEKMWFpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vTm90ZWJvb2tSdW50aW1lVGVtcGxhdGUSXHByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9ub3RlYm9va1J1",
-            "bnRpbWVUZW1wbGF0ZXMve25vdGVib29rX3J1bnRpbWVfdGVtcGxhdGV9ItUJ",
-            "Cg9Ob3RlYm9va1J1bnRpbWUSEQoEbmFtZRgBIAEoCUID4EEDEhkKDHJ1bnRp",
-            "bWVfdXNlchgCIAEoCUID4EECEmIKHW5vdGVib29rX3J1bnRpbWVfdGVtcGxh",
-            "dGVfcmVmGAMgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTm90",
-            "ZWJvb2tSdW50aW1lVGVtcGxhdGVSZWZCA+BBAxIWCglwcm94eV91cmkYBSAB",
-            "KAlCA+BBAxI0CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJSCgxoZWFsdGhfc3RhdGUYCCAB",
-            "KA4yNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ob3RlYm9va1J1bnRp",
-            "bWUuSGVhbHRoU3RhdGVCA+BBAxIZCgxkaXNwbGF5X25hbWUYCiABKAlCA+BB",
-            "AhITCgtkZXNjcmlwdGlvbhgLIAEoCRIcCg9zZXJ2aWNlX2FjY291bnQYDSAB",
-            "KAlCA+BBAxJUCg1ydW50aW1lX3N0YXRlGA4gASgOMjguZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuTm90ZWJvb2tSdW50aW1lLlJ1bnRpbWVTdGF0ZUID",
-            "4EEDEhoKDWlzX3VwZ3JhZGFibGUYDyABKAhCA+BBAxJHCgZsYWJlbHMYECAD",
-            "KAsyNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ob3RlYm9va1J1bnRp",
-            "bWUuTGFiZWxzRW50cnkSOAoPZXhwaXJhdGlvbl90aW1lGBEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhQKB3ZlcnNpb24YEiABKAlC",
-            "A+BBAxJTChVub3RlYm9va19ydW50aW1lX3R5cGUYEyABKA4yLy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5Ob3RlYm9va1J1bnRpbWVUeXBlQgPgQQMS",
-            "GQoMbmV0d29ya190YWdzGBkgAygJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJHCgtIZWFsdGhTdGF0ZRIc",
-            "ChhIRUFMVEhfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdIRUFMVEhZEAESDQoJ",
-            "VU5IRUFMVEhZEAIimQEKDFJ1bnRpbWVTdGF0ZRIdChlSVU5USU1FX1NUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEhEKDUJFSU5HX1NUQVJURUQQ",
-            "AhIRCg1CRUlOR19TVE9QUEVEEAMSCwoHU1RPUFBFRBAEEhIKDkJFSU5HX1VQ",
-            "R1JBREVEEAUSCQoFRVJST1IQZBILCgdJTlZBTElEEGU6e+pBeAopYWlwbGF0",
-            "Zm9ybS5nb29nbGVhcGlzLmNvbS9Ob3RlYm9va1J1bnRpbWUSS3Byb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9ub3RlYm9va1J1bnRp",
-            "bWVzL3tub3RlYm9va19ydW50aW1lfSpdChNOb3RlYm9va1J1bnRpbWVUeXBl",
-            "EiUKIU5PVEVCT09LX1JVTlRJTUVfVFlQRV9VTlNQRUNJRklFRBAAEhAKDFVT",
-            "RVJfREVGSU5FRBABEg0KCU9ORV9DTElDSxACQtIBCh5jb20uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFCFE5vdGVib29rUnVudGltZVByb3RvUAFaPmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
-            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
-            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
-            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "cm90bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9z",
+            "cGVjLnByb3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5l",
+            "X3Jlc291cmNlcy5wcm90bxotZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEv",
+            "bmV0d29ya19zcGVjLnByb3RvGjRnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
+            "MS9ub3RlYm9va19ldWNfY29uZmlnLnByb3RvGj5nb29nbGUvY2xvdWQvYWlw",
+            "bGF0Zm9ybS92MS9ub3RlYm9va19pZGxlX3NodXRkb3duX2NvbmZpZy5wcm90",
+            "bxo+Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbm90ZWJvb2tfcnVudGlt",
+            "ZV90ZW1wbGF0ZV9yZWYucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8ioQkKF05vdGVib29rUnVudGltZVRlbXBsYXRlEgwKBG5hbWUY",
+            "ASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3JpcHRp",
+            "b24YAyABKAkSFwoKaXNfZGVmYXVsdBgEIAEoCEID4EEDEkUKDG1hY2hpbmVf",
+            "c3BlYxgFIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hp",
+            "bmVTcGVjQgbgQQHgQQUSVgoZZGF0YV9wZXJzaXN0ZW50X2Rpc2tfc3BlYxgI",
+            "IAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBlcnNpc3RlbnRE",
+            "aXNrU3BlY0ID4EEBEkIKDG5ldHdvcmtfc3BlYxgMIAEoCzInLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLk5ldHdvcmtTcGVjQgPgQQESFwoPc2Vydmlj",
+            "ZV9hY2NvdW50GA0gASgJEgwKBGV0YWcYDiABKAkSTwoGbGFiZWxzGA8gAygL",
+            "Mj8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTm90ZWJvb2tSdW50aW1l",
+            "VGVtcGxhdGUuTGFiZWxzRW50cnkSVAoUaWRsZV9zaHV0ZG93bl9jb25maWcY",
+            "ESABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ob3RlYm9va0lk",
+            "bGVTaHV0ZG93bkNvbmZpZxJBCgpldWNfY29uZmlnGBIgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuTm90ZWJvb2tFdWNDb25maWcSNAoLY3Jl",
+            "YXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSVgoVbm90ZWJvb2tfcnVudGltZV90eXBlGBMgASgOMi8u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTm90ZWJvb2tSdW50aW1lVHlw",
+            "ZUIG4EEB4EEFElAKEnNoaWVsZGVkX3ZtX2NvbmZpZxgUIAEoCzIsLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNoaWVsZGVkVm1Db25maWdCBuBBAeBB",
+            "BRIZCgxuZXR3b3JrX3RhZ3MYFSADKAlCA+BBARJDCg9lbmNyeXB0aW9uX3Nw",
+            "ZWMYFyABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0",
+            "aW9uU3BlYxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBOpUB6kGRAQoxYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9O",
+            "b3RlYm9va1J1bnRpbWVUZW1wbGF0ZRJccHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L25vdGVib29rUnVudGltZVRlbXBsYXRlcy97",
+            "bm90ZWJvb2tfcnVudGltZV90ZW1wbGF0ZX0isgsKD05vdGVib29rUnVudGlt",
+            "ZRIRCgRuYW1lGAEgASgJQgPgQQMSGQoMcnVudGltZV91c2VyGAIgASgJQgPg",
+            "QQISYgodbm90ZWJvb2tfcnVudGltZV90ZW1wbGF0ZV9yZWYYAyABKAsyNi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ob3RlYm9va1J1bnRpbWVUZW1w",
+            "bGF0ZVJlZkID4EEDEhYKCXByb3h5X3VyaRgFIAEoCUID4EEDEjQKC2NyZWF0",
+            "ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDElIKDGhlYWx0aF9zdGF0ZRgIIAEoDjI3Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk5vdGVib29rUnVudGltZS5IZWFsdGhTdGF0ZUID",
+            "4EEDEhkKDGRpc3BsYXlfbmFtZRgKIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9u",
+            "GAsgASgJEhwKD3NlcnZpY2VfYWNjb3VudBgNIAEoCUID4EEDElQKDXJ1bnRp",
+            "bWVfc3RhdGUYDiABKA4yOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5O",
+            "b3RlYm9va1J1bnRpbWUuUnVudGltZVN0YXRlQgPgQQMSGgoNaXNfdXBncmFk",
+            "YWJsZRgPIAEoCEID4EEDEkcKBmxhYmVscxgQIAMoCzI3Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk5vdGVib29rUnVudGltZS5MYWJlbHNFbnRyeRI4",
+            "Cg9leHBpcmF0aW9uX3RpbWUYESABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSFAoHdmVyc2lvbhgSIAEoCUID4EEDElMKFW5vdGVib29r",
+            "X3J1bnRpbWVfdHlwZRgTIAEoDjIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLk5vdGVib29rUnVudGltZVR5cGVCA+BBAxJZChRpZGxlX3NodXRkb3du",
+            "X2NvbmZpZxgXIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk5v",
+            "dGVib29rSWRsZVNodXRkb3duQ29uZmlnQgPgQQMSGQoMbmV0d29ya190YWdz",
+            "GBkgAygJQgPgQQESSAoPZW5jcnlwdGlvbl9zcGVjGBwgASgLMiouZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWNCA+BBAxIaCg1z",
+            "YXRpc2ZpZXNfcHpzGB0gASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6aRgeIAEo",
+            "CEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiRwoLSGVhbHRoU3RhdGUSHAoYSEVBTFRIX1NUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASCwoHSEVBTFRIWRABEg0KCVVOSEVBTFRIWRACIpkBCgxSdW50",
+            "aW1lU3RhdGUSHQoZUlVOVElNRV9TVEFURV9VTlNQRUNJRklFRBAAEgsKB1JV",
+            "Tk5JTkcQARIRCg1CRUlOR19TVEFSVEVEEAISEQoNQkVJTkdfU1RPUFBFRBAD",
+            "EgsKB1NUT1BQRUQQBBISCg5CRUlOR19VUEdSQURFRBAFEgkKBUVSUk9SEGQS",
+            "CwoHSU5WQUxJRBBlOnvqQXgKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "Tm90ZWJvb2tSdW50aW1lEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vbm90ZWJvb2tSdW50aW1lcy97bm90ZWJvb2tfcnVudGlt",
+            "ZX0qXQoTTm90ZWJvb2tSdW50aW1lVHlwZRIlCiFOT1RFQk9PS19SVU5USU1F",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIQCgxVU0VSX0RFRklORUQQARINCglPTkVf",
+            "Q0xJQ0sQAkLSAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhRO",
+            "b3RlYm9va1J1bnRpbWVQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Fp",
+            "cGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NetworkSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookEucConfigReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfigReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateRefReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NetworkSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookEucConfigReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfigReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateRefReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate), global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate.Parser, new[]{ "Name", "DisplayName", "Description", "IsDefault", "MachineSpec", "DataPersistentDiskSpec", "NetworkSpec", "ServiceAccount", "Etag", "Labels", "IdleShutdownConfig", "EucConfig", "CreateTime", "UpdateTime", "NotebookRuntimeType", "ShieldedVmConfig", "NetworkTags" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntime), global::Google.Cloud.AIPlatform.V1.NotebookRuntime.Parser, new[]{ "Name", "RuntimeUser", "NotebookRuntimeTemplateRef", "ProxyUri", "CreateTime", "UpdateTime", "HealthState", "DisplayName", "Description", "ServiceAccount", "RuntimeState", "IsUpgradable", "Labels", "ExpirationTime", "Version", "NotebookRuntimeType", "NetworkTags" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntime.Types.HealthState), typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntime.Types.RuntimeState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate), global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate.Parser, new[]{ "Name", "DisplayName", "Description", "IsDefault", "MachineSpec", "DataPersistentDiskSpec", "NetworkSpec", "ServiceAccount", "Etag", "Labels", "IdleShutdownConfig", "EucConfig", "CreateTime", "UpdateTime", "NotebookRuntimeType", "ShieldedVmConfig", "NetworkTags", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntime), global::Google.Cloud.AIPlatform.V1.NotebookRuntime.Parser, new[]{ "Name", "RuntimeUser", "NotebookRuntimeTemplateRef", "ProxyUri", "CreateTime", "UpdateTime", "HealthState", "DisplayName", "Description", "ServiceAccount", "RuntimeState", "IsUpgradable", "Labels", "ExpirationTime", "Version", "NotebookRuntimeType", "IdleShutdownConfig", "NetworkTags", "EncryptionSpec", "SatisfiesPzs", "SatisfiesPzi" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntime.Types.HealthState), typeof(global::Google.Cloud.AIPlatform.V1.NotebookRuntime.Types.RuntimeState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -184,6 +192,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       notebookRuntimeType_ = other.notebookRuntimeType_;
       shieldedVmConfig_ = other.shieldedVmConfig_ != null ? other.shieldedVmConfig_.Clone() : null;
       networkTags_ = other.networkTags_.Clone();
+      encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -468,6 +477,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return networkTags_; }
     }
 
+    /// <summary>Field number for the "encryption_spec" field.</summary>
+    public const int EncryptionSpecFieldNumber = 23;
+    private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
+    /// <summary>
+    /// Customer-managed encryption key spec for the notebook runtime.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EncryptionSpec EncryptionSpec {
+      get { return encryptionSpec_; }
+      set {
+        encryptionSpec_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -500,6 +524,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (NotebookRuntimeType != other.NotebookRuntimeType) return false;
       if (!object.Equals(ShieldedVmConfig, other.ShieldedVmConfig)) return false;
       if(!networkTags_.Equals(other.networkTags_)) return false;
+      if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -524,6 +549,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (NotebookRuntimeType != global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType.Unspecified) hash ^= NotebookRuntimeType.GetHashCode();
       if (shieldedVmConfig_ != null) hash ^= ShieldedVmConfig.GetHashCode();
       hash ^= networkTags_.GetHashCode();
+      if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -604,6 +630,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(ShieldedVmConfig);
       }
       networkTags_.WriteTo(output, _repeated_networkTags_codec);
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -676,6 +706,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(ShieldedVmConfig);
       }
       networkTags_.WriteTo(ref output, _repeated_networkTags_codec);
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -733,6 +767,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ShieldedVmConfig);
       }
       size += networkTags_.CalculateSize(_repeated_networkTags_codec);
+      if (encryptionSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -816,6 +853,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         ShieldedVmConfig.MergeFrom(other.ShieldedVmConfig);
       }
       networkTags_.Add(other.networkTags_);
+      if (other.encryptionSpec_ != null) {
+        if (encryptionSpec_ == null) {
+          EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+        }
+        EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -921,6 +964,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 170: {
             networkTags_.AddEntriesFrom(input, _repeated_networkTags_codec);
+            break;
+          }
+          case 186: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
             break;
           }
         }
@@ -1030,6 +1080,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             networkTags_.AddEntriesFrom(ref input, _repeated_networkTags_codec);
             break;
           }
+          case 186: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
         }
       }
     }
@@ -1093,7 +1150,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       expirationTime_ = other.expirationTime_ != null ? other.expirationTime_.Clone() : null;
       version_ = other.version_;
       notebookRuntimeType_ = other.notebookRuntimeType_;
+      idleShutdownConfig_ = other.idleShutdownConfig_ != null ? other.idleShutdownConfig_.Clone() : null;
       networkTags_ = other.networkTags_.Clone();
+      encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1366,6 +1427,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "idle_shutdown_config" field.</summary>
+    public const int IdleShutdownConfigFieldNumber = 23;
+    private global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfig idleShutdownConfig_;
+    /// <summary>
+    /// Output only. The idle shutdown configuration of the notebook runtime.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfig IdleShutdownConfig {
+      get { return idleShutdownConfig_; }
+      set {
+        idleShutdownConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "network_tags" field.</summary>
     public const int NetworkTagsFieldNumber = 25;
     private static readonly pb::FieldCodec<string> _repeated_networkTags_codec
@@ -1379,6 +1455,51 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> NetworkTags {
       get { return networkTags_; }
+    }
+
+    /// <summary>Field number for the "encryption_spec" field.</summary>
+    public const int EncryptionSpecFieldNumber = 28;
+    private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
+    /// <summary>
+    /// Output only. Customer-managed encryption key spec for the notebook runtime.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EncryptionSpec EncryptionSpec {
+      get { return encryptionSpec_; }
+      set {
+        encryptionSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 29;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 30;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1412,7 +1533,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(ExpirationTime, other.ExpirationTime)) return false;
       if (Version != other.Version) return false;
       if (NotebookRuntimeType != other.NotebookRuntimeType) return false;
+      if (!object.Equals(IdleShutdownConfig, other.IdleShutdownConfig)) return false;
       if(!networkTags_.Equals(other.networkTags_)) return false;
+      if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1436,7 +1561,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (expirationTime_ != null) hash ^= ExpirationTime.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (NotebookRuntimeType != global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType.Unspecified) hash ^= NotebookRuntimeType.GetHashCode();
+      if (idleShutdownConfig_ != null) hash ^= IdleShutdownConfig.GetHashCode();
       hash ^= networkTags_.GetHashCode();
+      if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1516,7 +1645,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) NotebookRuntimeType);
       }
+      if (idleShutdownConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(IdleShutdownConfig);
+      }
       networkTags_.WriteTo(output, _repeated_networkTags_codec);
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(EncryptionSpec);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1588,7 +1733,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) NotebookRuntimeType);
       }
+      if (idleShutdownConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(IdleShutdownConfig);
+      }
       networkTags_.WriteTo(ref output, _repeated_networkTags_codec);
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(EncryptionSpec);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1645,7 +1806,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (NotebookRuntimeType != global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) NotebookRuntimeType);
       }
+      if (idleShutdownConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(IdleShutdownConfig);
+      }
       size += networkTags_.CalculateSize(_repeated_networkTags_codec);
+      if (encryptionSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1716,7 +1889,25 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.NotebookRuntimeType != global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType.Unspecified) {
         NotebookRuntimeType = other.NotebookRuntimeType;
       }
+      if (other.idleShutdownConfig_ != null) {
+        if (idleShutdownConfig_ == null) {
+          IdleShutdownConfig = new global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfig();
+        }
+        IdleShutdownConfig.MergeFrom(other.IdleShutdownConfig);
+      }
       networkTags_.Add(other.networkTags_);
+      if (other.encryptionSpec_ != null) {
+        if (encryptionSpec_ == null) {
+          EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+        }
+        EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1808,8 +1999,30 @@ namespace Google.Cloud.AIPlatform.V1 {
             NotebookRuntimeType = (global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType) input.ReadEnum();
             break;
           }
+          case 186: {
+            if (idleShutdownConfig_ == null) {
+              IdleShutdownConfig = new global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfig();
+            }
+            input.ReadMessage(IdleShutdownConfig);
+            break;
+          }
           case 202: {
             networkTags_.AddEntriesFrom(input, _repeated_networkTags_codec);
+            break;
+          }
+          case 226: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 232: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 240: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }
@@ -1903,8 +2116,30 @@ namespace Google.Cloud.AIPlatform.V1 {
             NotebookRuntimeType = (global::Google.Cloud.AIPlatform.V1.NotebookRuntimeType) input.ReadEnum();
             break;
           }
+          case 186: {
+            if (idleShutdownConfig_ == null) {
+              IdleShutdownConfig = new global::Google.Cloud.AIPlatform.V1.NotebookIdleShutdownConfig();
+            }
+            input.ReadMessage(IdleShutdownConfig);
+            break;
+          }
           case 202: {
             networkTags_.AddEntriesFrom(ref input, _repeated_networkTags_codec);
+            break;
+          }
+          case 226: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 232: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 240: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

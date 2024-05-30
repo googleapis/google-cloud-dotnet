@@ -117,6 +117,12 @@
                 "UpdateDataset",
                 "UpdateDatasetAsync"
               ]
+            },
+            "UpdateDatasetVersion": {
+              "methods": [
+                "UpdateDatasetVersion",
+                "UpdateDatasetVersionAsync"
+              ]
             }
           }
         }
@@ -1370,6 +1376,12 @@
               "methods": [
                 "StartNotebookRuntime",
                 "StartNotebookRuntimeAsync"
+              ]
+            },
+            "UpdateNotebookRuntimeTemplate": {
+              "methods": [
+                "UpdateNotebookRuntimeTemplate",
+                "UpdateNotebookRuntimeTemplateAsync"
               ]
             },
             "UpgradeNotebookRuntime": {

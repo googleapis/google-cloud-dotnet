@@ -775,6 +775,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateNotebookRuntimeTemplate</summary>
+        public void UpdateNotebookRuntimeTemplateRequestObject()
+        {
+            // Snippet: UpdateNotebookRuntimeTemplate(UpdateNotebookRuntimeTemplateRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateNotebookRuntimeTemplateRequest request = new UpdateNotebookRuntimeTemplateRequest
+            {
+                NotebookRuntimeTemplate = new NotebookRuntimeTemplate(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            NotebookRuntimeTemplate response = notebookServiceClient.UpdateNotebookRuntimeTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotebookRuntimeTemplateAsync</summary>
+        public async Task UpdateNotebookRuntimeTemplateRequestObjectAsync()
+        {
+            // Snippet: UpdateNotebookRuntimeTemplateAsync(UpdateNotebookRuntimeTemplateRequest, CallSettings)
+            // Additional: UpdateNotebookRuntimeTemplateAsync(UpdateNotebookRuntimeTemplateRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateNotebookRuntimeTemplateRequest request = new UpdateNotebookRuntimeTemplateRequest
+            {
+                NotebookRuntimeTemplate = new NotebookRuntimeTemplate(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            NotebookRuntimeTemplate response = await notebookServiceClient.UpdateNotebookRuntimeTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotebookRuntimeTemplate</summary>
+        public void UpdateNotebookRuntimeTemplate()
+        {
+            // Snippet: UpdateNotebookRuntimeTemplate(NotebookRuntimeTemplate, FieldMask, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            NotebookRuntimeTemplate response = notebookServiceClient.UpdateNotebookRuntimeTemplate(notebookRuntimeTemplate, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotebookRuntimeTemplateAsync</summary>
+        public async Task UpdateNotebookRuntimeTemplateAsync()
+        {
+            // Snippet: UpdateNotebookRuntimeTemplateAsync(NotebookRuntimeTemplate, FieldMask, CallSettings)
+            // Additional: UpdateNotebookRuntimeTemplateAsync(NotebookRuntimeTemplate, FieldMask, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            NotebookRuntimeTemplate response = await notebookServiceClient.UpdateNotebookRuntimeTemplateAsync(notebookRuntimeTemplate, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for AssignNotebookRuntime</summary>
         public void AssignNotebookRuntimeRequestObject()
         {

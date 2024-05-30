@@ -29,51 +29,54 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aJmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2luZGV4",
-            "LnByb3RvIssDChRGaW5kTmVpZ2hib3JzUmVxdWVzdBJHCg5pbmRleF9lbmRw",
+            "LnByb3RvIsEEChRGaW5kTmVpZ2hib3JzUmVxdWVzdBJHCg5pbmRleF9lbmRw",
             "b2ludBgBIAEoCUIv4EEC+kEpCidhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
             "L0luZGV4RW5kcG9pbnQSGQoRZGVwbG95ZWRfaW5kZXhfaWQYAiABKAkSRwoH",
             "cXVlcmllcxgDIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZp",
             "bmROZWlnaGJvcnNSZXF1ZXN0LlF1ZXJ5Eh0KFXJldHVybl9mdWxsX2RhdGFw",
-            "b2ludBgEIAEoCBrmAQoFUXVlcnkSQgoJZGF0YXBvaW50GAEgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRhcG9pbnRCA+BBAhIW",
-            "Cg5uZWlnaGJvcl9jb3VudBgCIAEoBRItCiVwZXJfY3Jvd2RpbmdfYXR0cmli",
-            "dXRlX25laWdoYm9yX2NvdW50GAMgASgFEiIKGmFwcHJveGltYXRlX25laWdo",
-            "Ym9yX2NvdW50GAQgASgFEi4KJmZyYWN0aW9uX2xlYWZfbm9kZXNfdG9fc2Vh",
-            "cmNoX292ZXJyaWRlGAUgASgBIsICChVGaW5kTmVpZ2hib3JzUmVzcG9uc2US",
-            "XQoRbmVhcmVzdF9uZWlnaGJvcnMYASADKAsyQi5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5GaW5kTmVpZ2hib3JzUmVzcG9uc2UuTmVhcmVzdE5laWdo",
-            "Ym9ycxpbCghOZWlnaGJvchI9CglkYXRhcG9pbnQYASABKAsyKi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleERhdGFwb2ludBIQCghkaXN0YW5j",
-            "ZRgCIAEoARptChBOZWFyZXN0TmVpZ2hib3JzEgoKAmlkGAEgASgJEk0KCW5l",
-            "aWdoYm9ycxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZp",
-            "bmROZWlnaGJvcnNSZXNwb25zZS5OZWlnaGJvciKNAQoaUmVhZEluZGV4RGF0",
-            "YXBvaW50c1JlcXVlc3QSRwoOaW5kZXhfZW5kcG9pbnQYASABKAlCL+BBAvpB",
-            "KQonYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9JbmRleEVuZHBvaW50EhkK",
-            "EWRlcGxveWVkX2luZGV4X2lkGAIgASgJEgsKA2lkcxgDIAMoCSJdChtSZWFk",
-            "SW5kZXhEYXRhcG9pbnRzUmVzcG9uc2USPgoKZGF0YXBvaW50cxgBIAMoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4RGF0YXBvaW50MpEE",
-            "CgxNYXRjaFNlcnZpY2USywEKDUZpbmROZWlnaGJvcnMSMC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5GaW5kTmVpZ2hib3JzUmVxdWVzdBoxLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZpbmROZWlnaGJvcnNSZXNwb25zZSJV",
-            "gtPkkwJPIkovdjEve2luZGV4X2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovaW5kZXhFbmRwb2ludHMvKn06ZmluZE5laWdoYm9yczoBKhLjAQoT",
-            "UmVhZEluZGV4RGF0YXBvaW50cxI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlJlYWRJbmRleERhdGFwb2ludHNSZXF1ZXN0GjcuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuUmVhZEluZGV4RGF0YXBvaW50c1Jlc3BvbnNlIluC",
-            "0+STAlUiUC92MS97aW5kZXhfZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9pbmRleEVuZHBvaW50cy8qfTpyZWFkSW5kZXhEYXRhcG9pbnRzOgEq",
-            "Gk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULPAQoeY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhFNYXRjaFNlcnZpY2VQcm90b1AB",
-            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
-            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "b2ludBgEIAEoCBrcAgoFUXVlcnkSTgoDcnJmGAYgASgLMjouZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuRmluZE5laWdoYm9yc1JlcXVlc3QuUXVlcnku",
+            "UlJGQgPgQQFIABJCCglkYXRhcG9pbnQYASABKAsyKi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5JbmRleERhdGFwb2ludEID4EECEhYKDm5laWdoYm9y",
+            "X2NvdW50GAIgASgFEi0KJXBlcl9jcm93ZGluZ19hdHRyaWJ1dGVfbmVpZ2hi",
+            "b3JfY291bnQYAyABKAUSIgoaYXBwcm94aW1hdGVfbmVpZ2hib3JfY291bnQY",
+            "BCABKAUSLgomZnJhY3Rpb25fbGVhZl9ub2Rlc190b19zZWFyY2hfb3ZlcnJp",
+            "ZGUYBSABKAEaGQoDUlJGEhIKBWFscGhhGAEgASgCQgPgQQJCCQoHcmFua2lu",
+            "ZyLbAgoVRmluZE5laWdoYm9yc1Jlc3BvbnNlEl0KEW5lYXJlc3RfbmVpZ2hi",
+            "b3JzGAEgAygLMkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmluZE5l",
+            "aWdoYm9yc1Jlc3BvbnNlLk5lYXJlc3ROZWlnaGJvcnMadAoITmVpZ2hib3IS",
+            "PQoJZGF0YXBvaW50GAEgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuSW5kZXhEYXRhcG9pbnQSEAoIZGlzdGFuY2UYAiABKAESFwoPc3BhcnNl",
+            "X2Rpc3RhbmNlGAMgASgBGm0KEE5lYXJlc3ROZWlnaGJvcnMSCgoCaWQYASAB",
+            "KAkSTQoJbmVpZ2hib3JzGAIgAygLMjouZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuRmluZE5laWdoYm9yc1Jlc3BvbnNlLk5laWdoYm9yIo0BChpSZWFk",
+            "SW5kZXhEYXRhcG9pbnRzUmVxdWVzdBJHCg5pbmRleF9lbmRwb2ludBgBIAEo",
+            "CUIv4EEC+kEpCidhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4RW5k",
+            "cG9pbnQSGQoRZGVwbG95ZWRfaW5kZXhfaWQYAiABKAkSCwoDaWRzGAMgAygJ",
+            "Il0KG1JlYWRJbmRleERhdGFwb2ludHNSZXNwb25zZRI+CgpkYXRhcG9pbnRz",
+            "GAEgAygLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRh",
+            "cG9pbnQykQQKDE1hdGNoU2VydmljZRLLAQoNRmluZE5laWdoYm9ycxIwLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZpbmROZWlnaGJvcnNSZXF1ZXN0",
+            "GjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmluZE5laWdoYm9yc1Jl",
+            "c3BvbnNlIlWC0+STAk8iSi92MS97aW5kZXhfZW5kcG9pbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9pbmRleEVuZHBvaW50cy8qfTpmaW5kTmVpZ2hib3Jz",
+            "OgEqEuMBChNSZWFkSW5kZXhEYXRhcG9pbnRzEjYuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuUmVhZEluZGV4RGF0YXBvaW50c1JlcXVlc3QaNy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFkSW5kZXhEYXRhcG9pbnRzUmVz",
+            "cG9uc2UiW4LT5JMCVSJQL3YxL3tpbmRleF9lbmRwb2ludD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2luZGV4RW5kcG9pbnRzLyp9OnJlYWRJbmRleERhdGFw",
+            "b2ludHM6ASoaTcpBGWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQs8B",
+            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCEU1hdGNoU2Vydmlj",
+            "ZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
+            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IndexReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest), global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Parser, new[]{ "IndexEndpoint", "DeployedIndexId", "Queries", "ReturnFullDatapoint" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query), global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Parser, new[]{ "Datapoint", "NeighborCount", "PerCrowdingAttributeNeighborCount", "ApproximateNeighborCount", "FractionLeafNodesToSearchOverride" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse), global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Parser, new[]{ "NearestNeighbors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Types.Neighbor), global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Types.Neighbor.Parser, new[]{ "Datapoint", "Distance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest), global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Parser, new[]{ "IndexEndpoint", "DeployedIndexId", "Queries", "ReturnFullDatapoint" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query), global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Parser, new[]{ "Rrf", "Datapoint", "NeighborCount", "PerCrowdingAttributeNeighborCount", "ApproximateNeighborCount", "FractionLeafNodesToSearchOverride" }, new[]{ "Ranking" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF), global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF.Parser, new[]{ "Alpha" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse), global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Parser, new[]{ "NearestNeighbors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Types.Neighbor), global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Types.Neighbor.Parser, new[]{ "Datapoint", "Distance", "SparseDistance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Types.NearestNeighbors), global::Google.Cloud.AIPlatform.V1.FindNeighborsResponse.Types.NearestNeighbors.Parser, new[]{ "Id", "Neighbors" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReadIndexDatapointsRequest), global::Google.Cloud.AIPlatform.V1.ReadIndexDatapointsRequest.Parser, new[]{ "IndexEndpoint", "DeployedIndexId", "Ids" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReadIndexDatapointsResponse), global::Google.Cloud.AIPlatform.V1.ReadIndexDatapointsResponse.Parser, new[]{ "Datapoints" }, null, null, null, null)
@@ -446,6 +449,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           perCrowdingAttributeNeighborCount_ = other.perCrowdingAttributeNeighborCount_;
           approximateNeighborCount_ = other.approximateNeighborCount_;
           fractionLeafNodesToSearchOverride_ = other.fractionLeafNodesToSearchOverride_;
+          switch (other.RankingCase) {
+            case RankingOneofCase.Rrf:
+              Rrf = other.Rrf.Clone();
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -453,6 +462,21 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Query Clone() {
           return new Query(this);
+        }
+
+        /// <summary>Field number for the "rrf" field.</summary>
+        public const int RrfFieldNumber = 6;
+        /// <summary>
+        /// Optional. Represents RRF algorithm that combines search results.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF Rrf {
+          get { return rankingCase_ == RankingOneofCase.Rrf ? (global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF) ranking_ : null; }
+          set {
+            ranking_ = value;
+            rankingCase_ = value == null ? RankingOneofCase.None : RankingOneofCase.Rrf;
+          }
         }
 
         /// <summary>Field number for the "datapoint" field.</summary>
@@ -544,6 +568,26 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        private object ranking_;
+        /// <summary>Enum of possible cases for the "ranking" oneof.</summary>
+        public enum RankingOneofCase {
+          None = 0,
+          Rrf = 6,
+        }
+        private RankingOneofCase rankingCase_ = RankingOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RankingOneofCase RankingCase {
+          get { return rankingCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRanking() {
+          rankingCase_ = RankingOneofCase.None;
+          ranking_ = null;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -559,11 +603,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (!object.Equals(Rrf, other.Rrf)) return false;
           if (!object.Equals(Datapoint, other.Datapoint)) return false;
           if (NeighborCount != other.NeighborCount) return false;
           if (PerCrowdingAttributeNeighborCount != other.PerCrowdingAttributeNeighborCount) return false;
           if (ApproximateNeighborCount != other.ApproximateNeighborCount) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FractionLeafNodesToSearchOverride, other.FractionLeafNodesToSearchOverride)) return false;
+          if (RankingCase != other.RankingCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -571,11 +617,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (rankingCase_ == RankingOneofCase.Rrf) hash ^= Rrf.GetHashCode();
           if (datapoint_ != null) hash ^= Datapoint.GetHashCode();
           if (NeighborCount != 0) hash ^= NeighborCount.GetHashCode();
           if (PerCrowdingAttributeNeighborCount != 0) hash ^= PerCrowdingAttributeNeighborCount.GetHashCode();
           if (ApproximateNeighborCount != 0) hash ^= ApproximateNeighborCount.GetHashCode();
           if (FractionLeafNodesToSearchOverride != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FractionLeafNodesToSearchOverride);
+          hash ^= (int) rankingCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -614,6 +662,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(41);
             output.WriteDouble(FractionLeafNodesToSearchOverride);
           }
+          if (rankingCase_ == RankingOneofCase.Rrf) {
+            output.WriteRawTag(50);
+            output.WriteMessage(Rrf);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -644,6 +696,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(41);
             output.WriteDouble(FractionLeafNodesToSearchOverride);
           }
+          if (rankingCase_ == RankingOneofCase.Rrf) {
+            output.WriteRawTag(50);
+            output.WriteMessage(Rrf);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -654,6 +710,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (rankingCase_ == RankingOneofCase.Rrf) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rrf);
+          }
           if (datapoint_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Datapoint);
           }
@@ -699,6 +758,15 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other.FractionLeafNodesToSearchOverride != 0D) {
             FractionLeafNodesToSearchOverride = other.FractionLeafNodesToSearchOverride;
           }
+          switch (other.RankingCase) {
+            case RankingOneofCase.Rrf:
+              if (Rrf == null) {
+                Rrf = new global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF();
+              }
+              Rrf.MergeFrom(other.Rrf);
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -735,6 +803,15 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 41: {
                 FractionLeafNodesToSearchOverride = input.ReadDouble();
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF subBuilder = new global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF();
+                if (rankingCase_ == RankingOneofCase.Rrf) {
+                  subBuilder.MergeFrom(Rrf);
+                }
+                input.ReadMessage(subBuilder);
+                Rrf = subBuilder;
                 break;
               }
             }
@@ -775,10 +852,225 @@ namespace Google.Cloud.AIPlatform.V1 {
                 FractionLeafNodesToSearchOverride = input.ReadDouble();
                 break;
               }
+              case 50: {
+                global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF subBuilder = new global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Types.RRF();
+                if (rankingCase_ == RankingOneofCase.Rrf) {
+                  subBuilder.MergeFrom(Rrf);
+                }
+                input.ReadMessage(subBuilder);
+                Rrf = subBuilder;
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Query message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Parameters for RRF algorithm that combines search results.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class RRF : pb::IMessage<RRF>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<RRF> _parser = new pb::MessageParser<RRF>(() => new RRF());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<RRF> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.FindNeighborsRequest.Types.Query.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RRF() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RRF(RRF other) : this() {
+              alpha_ = other.alpha_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RRF Clone() {
+              return new RRF(this);
+            }
+
+            /// <summary>Field number for the "alpha" field.</summary>
+            public const int AlphaFieldNumber = 1;
+            private float alpha_;
+            /// <summary>
+            /// Required. Users can provide an alpha value to give more weight to dense
+            /// vs sparse results. For example, if the alpha is 0, we only return
+            /// sparse and if the alpha is 1, we only return dense.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public float Alpha {
+              get { return alpha_; }
+              set {
+                alpha_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as RRF);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(RRF other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Alpha, other.Alpha)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Alpha != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Alpha);
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Alpha != 0F) {
+                output.WriteRawTag(13);
+                output.WriteFloat(Alpha);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Alpha != 0F) {
+                output.WriteRawTag(13);
+                output.WriteFloat(Alpha);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Alpha != 0F) {
+                size += 1 + 4;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(RRF other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Alpha != 0F) {
+                Alpha = other.Alpha;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 13: {
+                    Alpha = input.ReadFloat();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 13: {
+                    Alpha = input.ReadFloat();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -1016,6 +1308,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public Neighbor(Neighbor other) : this() {
           datapoint_ = other.datapoint_ != null ? other.datapoint_.Clone() : null;
           distance_ = other.distance_;
+          sparseDistance_ = other.sparseDistance_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1047,7 +1340,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int DistanceFieldNumber = 2;
         private double distance_;
         /// <summary>
-        /// The distance between the neighbor and the query vector.
+        /// The distance between the neighbor and the dense embedding query.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1055,6 +1348,21 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return distance_; }
           set {
             distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "sparse_distance" field.</summary>
+        public const int SparseDistanceFieldNumber = 3;
+        private double sparseDistance_;
+        /// <summary>
+        /// The distance between the neighbor and the query sparse_embedding.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double SparseDistance {
+          get { return sparseDistance_; }
+          set {
+            sparseDistance_ = value;
           }
         }
 
@@ -1075,6 +1383,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (!object.Equals(Datapoint, other.Datapoint)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Distance, other.Distance)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SparseDistance, other.SparseDistance)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1084,6 +1393,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (datapoint_ != null) hash ^= Datapoint.GetHashCode();
           if (Distance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Distance);
+          if (SparseDistance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SparseDistance);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1110,6 +1420,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(17);
             output.WriteDouble(Distance);
           }
+          if (SparseDistance != 0D) {
+            output.WriteRawTag(25);
+            output.WriteDouble(SparseDistance);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1128,6 +1442,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(17);
             output.WriteDouble(Distance);
           }
+          if (SparseDistance != 0D) {
+            output.WriteRawTag(25);
+            output.WriteDouble(SparseDistance);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1142,6 +1460,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Datapoint);
           }
           if (Distance != 0D) {
+            size += 1 + 8;
+          }
+          if (SparseDistance != 0D) {
             size += 1 + 8;
           }
           if (_unknownFields != null) {
@@ -1164,6 +1485,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.Distance != 0D) {
             Distance = other.Distance;
+          }
+          if (other.SparseDistance != 0D) {
+            SparseDistance = other.SparseDistance;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1191,6 +1515,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 Distance = input.ReadDouble();
                 break;
               }
+              case 25: {
+                SparseDistance = input.ReadDouble();
+                break;
+              }
             }
           }
         #endif
@@ -1215,6 +1543,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 17: {
                 Distance = input.ReadDouble();
+                break;
+              }
+              case 25: {
+                SparseDistance = input.ReadDouble();
                 break;
               }
             }

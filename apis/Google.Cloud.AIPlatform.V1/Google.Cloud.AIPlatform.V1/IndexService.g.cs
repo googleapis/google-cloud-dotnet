@@ -66,16 +66,16 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cG9pbnRzUmVzcG9uc2UiaAoXUmVtb3ZlRGF0YXBvaW50c1JlcXVlc3QSNgoF",
             "aW5kZXgYASABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
             "bS9JbmRleBIVCg1kYXRhcG9pbnRfaWRzGAIgAygJIhoKGFJlbW92ZURhdGFw",
-            "b2ludHNSZXNwb25zZSLpBwomTmVhcmVzdE5laWdoYm9yU2VhcmNoT3BlcmF0",
+            "b2ludHNSZXNwb25zZSKFCQomTmVhcmVzdE5laWdoYm9yU2VhcmNoT3BlcmF0",
             "aW9uTWV0YWRhdGESewoYY29udGVudF92YWxpZGF0aW9uX3N0YXRzGAEgAygL",
             "MlkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTmVhcmVzdE5laWdoYm9y",
             "U2VhcmNoT3BlcmF0aW9uTWV0YWRhdGEuQ29udGVudFZhbGlkYXRpb25TdGF0",
-            "cxIYChBkYXRhX2J5dGVzX2NvdW50GAIgASgDGtIECgtSZWNvcmRFcnJvchJy",
+            "cxIYChBkYXRhX2J5dGVzX2NvdW50GAIgASgDGqYFCgtSZWNvcmRFcnJvchJy",
             "CgplcnJvcl90eXBlGAEgASgOMl4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djEuTmVhcmVzdE5laWdoYm9yU2VhcmNoT3BlcmF0aW9uTWV0YWRhdGEuUmVj",
             "b3JkRXJyb3IuUmVjb3JkRXJyb3JUeXBlEhUKDWVycm9yX21lc3NhZ2UYAiAB",
             "KAkSFgoOc291cmNlX2djc191cmkYAyABKAkSFAoMZW1iZWRkaW5nX2lkGAQg",
-            "ASgJEhIKCnJhd19yZWNvcmQYBSABKAki9QIKD1JlY29yZEVycm9yVHlwZRIa",
+            "ASgJEhIKCnJhd19yZWNvcmQYBSABKAkiyQMKD1JlY29yZEVycm9yVHlwZRIa",
             "ChZFUlJPUl9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKRU1QVFlfTElORRABEhcK",
             "E0lOVkFMSURfSlNPTl9TWU5UQVgQAhIWChJJTlZBTElEX0NTVl9TWU5UQVgQ",
             "AxIXChNJTlZBTElEX0FWUk9fU1lOVEFYEAQSGAoUSU5WQUxJRF9FTUJFRERJ",
@@ -83,49 +83,53 @@ namespace Google.Cloud.AIPlatform.V1 {
             "UEFDRV9NSVNTSU5HEAcSEQoNUEFSU0lOR19FUlJPUhAIEhcKE0RVUExJQ0FU",
             "RV9OQU1FU1BBQ0UQCRITCg9PUF9JTl9EQVRBUE9JTlQQChITCg9NVUxUSVBM",
             "RV9WQUxVRVMQCxIZChVJTlZBTElEX05VTUVSSUNfVkFMVUUQDBIUChBJTlZB",
-            "TElEX0VOQ09ESU5HEA0SFwoTSU5WQUxJRF9UT0tFTl9WQUxVRRAPGtIBChZD",
-            "b250ZW50VmFsaWRhdGlvblN0YXRzEhYKDnNvdXJjZV9nY3NfdXJpGAEgASgJ",
-            "EhoKEnZhbGlkX3JlY29yZF9jb3VudBgCIAEoAxIcChRpbnZhbGlkX3JlY29y",
-            "ZF9jb3VudBgDIAEoAxJmCg5wYXJ0aWFsX2Vycm9ycxgEIAMoCzJOLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLk5lYXJlc3ROZWlnaGJvclNlYXJjaE9w",
-            "ZXJhdGlvbk1ldGFkYXRhLlJlY29yZEVycm9yMrYLCgxJbmRleFNlcnZpY2US",
-            "zwEKC0NyZWF0ZUluZGV4Ei4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "Q3JlYXRlSW5kZXhSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJxykElCgVJbmRleBIcQ3JlYXRlSW5kZXhPcGVyYXRpb25NZXRhZGF0",
-            "YdpBDHBhcmVudCxpbmRleILT5JMCNCIrL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vaW5kZXhlczoFaW5kZXgSlgEKCEdldEluZGV4Eisu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0SW5kZXhSZXF1ZXN0GiEu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXgiOtpBBG5hbWWC0+ST",
-            "Ai0SKy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luZGV4ZXMv",
-            "Kn0SrAEKC0xpc3RJbmRleGVzEi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuTGlzdEluZGV4ZXNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuTGlzdEluZGV4ZXNSZXNwb25zZSI82kEGcGFyZW50gtPkkwItEisv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbmRleGVzEtoB",
-            "CgtVcGRhdGVJbmRleBIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlVw",
-            "ZGF0ZUluZGV4UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24ifMpBJQoFSW5kZXgSHFVwZGF0ZUluZGV4T3BlcmF0aW9uTWV0YWRhdGHa",
-            "QRFpbmRleCx1cGRhdGVfbWFza4LT5JMCOjIxL3YxL3tpbmRleC5uYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovaW5kZXhlcy8qfToFaW5kZXgSywEKC0Rl",
-            "bGV0ZUluZGV4Ei4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRl",
-            "SW5kZXhSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJt",
-            "ykEwChVnb29nbGUucHJvdG9idWYuRW1wdHkSF0RlbGV0ZU9wZXJhdGlvbk1l",
-            "dGFkYXRh2kEEbmFtZYLT5JMCLSorL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovaW5kZXhlcy8qfRLHAQoQVXBzZXJ0RGF0YXBvaW50cxIzLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlVwc2VydERhdGFwb2ludHNSZXF1",
-            "ZXN0GjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVXBzZXJ0RGF0YXBv",
-            "aW50c1Jlc3BvbnNlIkiC0+STAkIiPS92MS97aW5kZXg9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9pbmRleGVzLyp9OnVwc2VydERhdGFwb2ludHM6ASoSxwEK",
-            "EFJlbW92ZURhdGFwb2ludHMSMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5SZW1vdmVEYXRhcG9pbnRzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLlJlbW92ZURhdGFwb2ludHNSZXNwb25zZSJIgtPkkwJCIj0v",
-            "djEve2luZGV4PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5kZXhlcy8qfTpy",
-            "ZW1vdmVEYXRhcG9pbnRzOgEqGk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
-            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybULPAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhFJ",
-            "bmRleFNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxh",
-            "dGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2ds",
-            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZv",
-            "cm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "TElEX0VOQ09ESU5HEA0SHQoZSU5WQUxJRF9TUEFSU0VfRElNRU5TSU9OUxAO",
+            "EhcKE0lOVkFMSURfVE9LRU5fVkFMVUUQDxIcChhJTlZBTElEX1NQQVJTRV9F",
+            "TUJFRERJTkcQEBIVChFJTlZBTElEX0VNQkVERElORxARGpoCChZDb250ZW50",
+            "VmFsaWRhdGlvblN0YXRzEhYKDnNvdXJjZV9nY3NfdXJpGAEgASgJEhoKEnZh",
+            "bGlkX3JlY29yZF9jb3VudBgCIAEoAxIcChRpbnZhbGlkX3JlY29yZF9jb3Vu",
+            "dBgDIAEoAxJmCg5wYXJ0aWFsX2Vycm9ycxgEIAMoCzJOLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk5lYXJlc3ROZWlnaGJvclNlYXJjaE9wZXJhdGlv",
+            "bk1ldGFkYXRhLlJlY29yZEVycm9yEiEKGXZhbGlkX3NwYXJzZV9yZWNvcmRf",
+            "Y291bnQYBSABKAMSIwobaW52YWxpZF9zcGFyc2VfcmVjb3JkX2NvdW50GAYg",
+            "ASgDMrYLCgxJbmRleFNlcnZpY2USzwEKC0NyZWF0ZUluZGV4Ei4uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuQ3JlYXRlSW5kZXhSZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJxykElCgVJbmRleBIcQ3JlYXRl",
+            "SW5kZXhPcGVyYXRpb25NZXRhZGF0YdpBDHBhcmVudCxpbmRleILT5JMCNCIr",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5kZXhlczoF",
+            "aW5kZXgSlgEKCEdldEluZGV4EisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuR2V0SW5kZXhSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuSW5kZXgiOtpBBG5hbWWC0+STAi0SKy92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2luZGV4ZXMvKn0SrAEKC0xpc3RJbmRleGVzEi4uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdEluZGV4ZXNSZXF1ZXN0Gi8u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdEluZGV4ZXNSZXNwb25z",
+            "ZSI82kEGcGFyZW50gtPkkwItEisvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9pbmRleGVzEtoBCgtVcGRhdGVJbmRleBIuLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlVwZGF0ZUluZGV4UmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ifMpBJQoFSW5kZXgSHFVwZGF0ZUlu",
+            "ZGV4T3BlcmF0aW9uTWV0YWRhdGHaQRFpbmRleCx1cGRhdGVfbWFza4LT5JMC",
+            "OjIxL3YxL3tpbmRleC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5k",
+            "ZXhlcy8qfToFaW5kZXgSywEKC0RlbGV0ZUluZGV4Ei4uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuRGVsZXRlSW5kZXhSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiJtykEwChVnb29nbGUucHJvdG9idWYuRW1w",
+            "dHkSF0RlbGV0ZU9wZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCLSorL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5kZXhlcy8qfRLHAQoQ",
+            "VXBzZXJ0RGF0YXBvaW50cxIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlVwc2VydERhdGFwb2ludHNSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuVXBzZXJ0RGF0YXBvaW50c1Jlc3BvbnNlIkiC0+STAkIiPS92",
+            "MS97aW5kZXg9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbmRleGVzLyp9OnVw",
+            "c2VydERhdGFwb2ludHM6ASoSxwEKEFJlbW92ZURhdGFwb2ludHMSMy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZW1vdmVEYXRhcG9pbnRzUmVxdWVz",
+            "dBo0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJlbW92ZURhdGFwb2lu",
+            "dHNSZXNwb25zZSJIgtPkkwJCIj0vdjEve2luZGV4PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovaW5kZXhlcy8qfTpyZW1vdmVEYXRhcG9pbnRzOgEqGk3KQRlh",
+            "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULPAQoeY29tLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxQhFJbmRleFNlcnZpY2VQcm90b1ABWj5jbG91",
+            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
+            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
+            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
+            "SVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IndexReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -142,7 +146,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest), global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest.Parser, new[]{ "Index", "DatapointIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse), global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata), global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Parser, new[]{ "ContentValidationStats", "DataBytesCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.RecordError), global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.RecordError.Parser, new[]{ "ErrorType", "ErrorMessage", "SourceGcsUri", "EmbeddingId", "RawRecord" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.RecordError.Types.RecordErrorType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.ContentValidationStats), global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.ContentValidationStats.Parser, new[]{ "SourceGcsUri", "ValidRecordCount", "InvalidRecordCount", "PartialErrors" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.ContentValidationStats), global::Google.Cloud.AIPlatform.V1.NearestNeighborSearchOperationMetadata.Types.ContentValidationStats.Parser, new[]{ "SourceGcsUri", "ValidRecordCount", "InvalidRecordCount", "PartialErrors", "ValidSparseRecordCount", "InvalidSparseRecordCount" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -3604,8 +3608,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// </summary>
             [pbr::OriginalName("INVALID_EMBEDDING_ID")] InvalidEmbeddingId = 5,
             /// <summary>
-            /// The size of the embedding vectors does not match with the specified
-            /// dimension.
+            /// The size of the dense embedding vectors does not match with the
+            /// specified dimension.
             /// </summary>
             [pbr::OriginalName("EMBEDDING_SIZE_MISMATCH")] EmbeddingSizeMismatch = 6,
             /// <summary>
@@ -3638,9 +3642,21 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// </summary>
             [pbr::OriginalName("INVALID_ENCODING")] InvalidEncoding = 13,
             /// <summary>
+            /// Error parsing sparse dimensions field.
+            /// </summary>
+            [pbr::OriginalName("INVALID_SPARSE_DIMENSIONS")] InvalidSparseDimensions = 14,
+            /// <summary>
             /// Token restrict value is invalid.
             /// </summary>
             [pbr::OriginalName("INVALID_TOKEN_VALUE")] InvalidTokenValue = 15,
+            /// <summary>
+            /// Invalid sparse embedding.
+            /// </summary>
+            [pbr::OriginalName("INVALID_SPARSE_EMBEDDING")] InvalidSparseEmbedding = 16,
+            /// <summary>
+            /// Invalid dense embedding.
+            /// </summary>
+            [pbr::OriginalName("INVALID_EMBEDDING")] InvalidEmbedding = 17,
           }
 
         }
@@ -3687,6 +3703,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           validRecordCount_ = other.validRecordCount_;
           invalidRecordCount_ = other.invalidRecordCount_;
           partialErrors_ = other.partialErrors_.Clone();
+          validSparseRecordCount_ = other.validSparseRecordCount_;
+          invalidSparseRecordCount_ = other.invalidSparseRecordCount_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3757,6 +3775,36 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return partialErrors_; }
         }
 
+        /// <summary>Field number for the "valid_sparse_record_count" field.</summary>
+        public const int ValidSparseRecordCountFieldNumber = 5;
+        private long validSparseRecordCount_;
+        /// <summary>
+        /// Number of sparse records in this file that were successfully processed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ValidSparseRecordCount {
+          get { return validSparseRecordCount_; }
+          set {
+            validSparseRecordCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "invalid_sparse_record_count" field.</summary>
+        public const int InvalidSparseRecordCountFieldNumber = 6;
+        private long invalidSparseRecordCount_;
+        /// <summary>
+        /// Number of sparse records in this file we skipped due to validate errors.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long InvalidSparseRecordCount {
+          get { return invalidSparseRecordCount_; }
+          set {
+            invalidSparseRecordCount_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3776,6 +3824,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (ValidRecordCount != other.ValidRecordCount) return false;
           if (InvalidRecordCount != other.InvalidRecordCount) return false;
           if(!partialErrors_.Equals(other.partialErrors_)) return false;
+          if (ValidSparseRecordCount != other.ValidSparseRecordCount) return false;
+          if (InvalidSparseRecordCount != other.InvalidSparseRecordCount) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3787,6 +3837,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (ValidRecordCount != 0L) hash ^= ValidRecordCount.GetHashCode();
           if (InvalidRecordCount != 0L) hash ^= InvalidRecordCount.GetHashCode();
           hash ^= partialErrors_.GetHashCode();
+          if (ValidSparseRecordCount != 0L) hash ^= ValidSparseRecordCount.GetHashCode();
+          if (InvalidSparseRecordCount != 0L) hash ^= InvalidSparseRecordCount.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3818,6 +3870,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteInt64(InvalidRecordCount);
           }
           partialErrors_.WriteTo(output, _repeated_partialErrors_codec);
+          if (ValidSparseRecordCount != 0L) {
+            output.WriteRawTag(40);
+            output.WriteInt64(ValidSparseRecordCount);
+          }
+          if (InvalidSparseRecordCount != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(InvalidSparseRecordCount);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3841,6 +3901,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteInt64(InvalidRecordCount);
           }
           partialErrors_.WriteTo(ref output, _repeated_partialErrors_codec);
+          if (ValidSparseRecordCount != 0L) {
+            output.WriteRawTag(40);
+            output.WriteInt64(ValidSparseRecordCount);
+          }
+          if (InvalidSparseRecordCount != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(InvalidSparseRecordCount);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3861,6 +3929,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(InvalidRecordCount);
           }
           size += partialErrors_.CalculateSize(_repeated_partialErrors_codec);
+          if (ValidSparseRecordCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ValidSparseRecordCount);
+          }
+          if (InvalidSparseRecordCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(InvalidSparseRecordCount);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -3883,6 +3957,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             InvalidRecordCount = other.InvalidRecordCount;
           }
           partialErrors_.Add(other.partialErrors_);
+          if (other.ValidSparseRecordCount != 0L) {
+            ValidSparseRecordCount = other.ValidSparseRecordCount;
+          }
+          if (other.InvalidSparseRecordCount != 0L) {
+            InvalidSparseRecordCount = other.InvalidSparseRecordCount;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -3914,6 +3994,14 @@ namespace Google.Cloud.AIPlatform.V1 {
                 partialErrors_.AddEntriesFrom(input, _repeated_partialErrors_codec);
                 break;
               }
+              case 40: {
+                ValidSparseRecordCount = input.ReadInt64();
+                break;
+              }
+              case 48: {
+                InvalidSparseRecordCount = input.ReadInt64();
+                break;
+              }
             }
           }
         #endif
@@ -3943,6 +4031,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 34: {
                 partialErrors_.AddEntriesFrom(ref input, _repeated_partialErrors_codec);
+                break;
+              }
+              case 40: {
+                ValidSparseRecordCount = input.ReadInt64();
+                break;
+              }
+              case 48: {
+                InvalidSparseRecordCount = input.ReadInt64();
                 break;
               }
             }

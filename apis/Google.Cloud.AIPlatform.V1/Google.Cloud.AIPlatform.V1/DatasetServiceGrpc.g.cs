@@ -86,11 +86,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateDatasetVersionRequest> __Marshaller_google_cloud_aiplatform_v1_CreateDatasetVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateDatasetVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateDatasetVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DatasetVersion> __Marshaller_google_cloud_aiplatform_v1_DatasetVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DatasetVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteDatasetVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetDatasetVersionRequest> __Marshaller_google_cloud_aiplatform_v1_GetDatasetVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetDatasetVersionRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DatasetVersion> __Marshaller_google_cloud_aiplatform_v1_DatasetVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DatasetVersion.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListDatasetVersionsRequest> __Marshaller_google_cloud_aiplatform_v1_ListDatasetVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListDatasetVersionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -183,6 +185,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "CreateDatasetVersion",
         __Marshaller_google_cloud_aiplatform_v1_CreateDatasetVersionRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest, global::Google.Cloud.AIPlatform.V1.DatasetVersion> __Method_UpdateDatasetVersion = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest, global::Google.Cloud.AIPlatform.V1.DatasetVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDatasetVersion",
+        __Marshaller_google_cloud_aiplatform_v1_UpdateDatasetVersionRequest,
+        __Marshaller_google_cloud_aiplatform_v1_DatasetVersion);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest, global::Google.LongRunning.Operation> __Method_DeleteDatasetVersion = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest, global::Google.LongRunning.Operation>(
@@ -366,6 +376,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatasetVersion(global::Google.Cloud.AIPlatform.V1.CreateDatasetVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a DatasetVersion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.DatasetVersion> UpdateDatasetVersion(global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -904,6 +926,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDatasetVersion, null, options, request);
       }
       /// <summary>
+      /// Updates a DatasetVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.DatasetVersion UpdateDatasetVersion(global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatasetVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DatasetVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.DatasetVersion UpdateDatasetVersion(global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDatasetVersion, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DatasetVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.DatasetVersion> UpdateDatasetVersionAsync(global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatasetVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DatasetVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.DatasetVersion> UpdateDatasetVersionAsync(global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDatasetVersion, null, options, request);
+      }
+      /// <summary>
       /// Deletes a Dataset version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1405,6 +1475,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_ImportData, serviceImpl.ImportData)
           .AddMethod(__Method_ExportData, serviceImpl.ExportData)
           .AddMethod(__Method_CreateDatasetVersion, serviceImpl.CreateDatasetVersion)
+          .AddMethod(__Method_UpdateDatasetVersion, serviceImpl.UpdateDatasetVersion)
           .AddMethod(__Method_DeleteDatasetVersion, serviceImpl.DeleteDatasetVersion)
           .AddMethod(__Method_GetDatasetVersion, serviceImpl.GetDatasetVersion)
           .AddMethod(__Method_ListDatasetVersions, serviceImpl.ListDatasetVersions)
@@ -1432,6 +1503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ImportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ImportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportData));
       serviceBinder.AddMethod(__Method_ExportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ExportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportData));
       serviceBinder.AddMethod(__Method_CreateDatasetVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateDatasetVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatasetVersion));
+      serviceBinder.AddMethod(__Method_UpdateDatasetVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateDatasetVersionRequest, global::Google.Cloud.AIPlatform.V1.DatasetVersion>(serviceImpl.UpdateDatasetVersion));
       serviceBinder.AddMethod(__Method_DeleteDatasetVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatasetVersion));
       serviceBinder.AddMethod(__Method_GetDatasetVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetDatasetVersionRequest, global::Google.Cloud.AIPlatform.V1.DatasetVersion>(serviceImpl.GetDatasetVersion));
       serviceBinder.AddMethod(__Method_ListDatasetVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListDatasetVersionsRequest, global::Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse>(serviceImpl.ListDatasetVersions));

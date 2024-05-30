@@ -78,6 +78,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteNotebookRuntimeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateNotebookRuntimeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest> __Marshaller_google_cloud_aiplatform_v1_AssignNotebookRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetNotebookRuntimeRequest> __Marshaller_google_cloud_aiplatform_v1_GetNotebookRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetNotebookRuntimeRequest.Parser));
@@ -125,6 +127,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "DeleteNotebookRuntimeTemplate",
         __Marshaller_google_cloud_aiplatform_v1_DeleteNotebookRuntimeTemplateRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest, global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate> __Method_UpdateNotebookRuntimeTemplate = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest, global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateNotebookRuntimeTemplate",
+        __Marshaller_google_cloud_aiplatform_v1_UpdateNotebookRuntimeTemplateRequest,
+        __Marshaller_google_cloud_aiplatform_v1_NotebookRuntimeTemplate);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest, global::Google.LongRunning.Operation> __Method_AssignNotebookRuntime = new grpc::Method<global::Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest, global::Google.LongRunning.Operation>(
@@ -228,6 +238,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteNotebookRuntimeTemplate(global::Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a NotebookRuntimeTemplate.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplate(global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -525,6 +547,54 @@ namespace Google.Cloud.AIPlatform.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNotebookRuntimeTemplateAsync(global::Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNotebookRuntimeTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Updates a NotebookRuntimeTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate UpdateNotebookRuntimeTemplate(global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNotebookRuntimeTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a NotebookRuntimeTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate UpdateNotebookRuntimeTemplate(global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateNotebookRuntimeTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Updates a NotebookRuntimeTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNotebookRuntimeTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a NotebookRuntimeTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate> UpdateNotebookRuntimeTemplateAsync(global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateNotebookRuntimeTemplate, null, options, request);
       }
       /// <summary>
       /// Assigns a NotebookRuntime to a user for a particular Notebook file. This
@@ -836,6 +906,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_GetNotebookRuntimeTemplate, serviceImpl.GetNotebookRuntimeTemplate)
           .AddMethod(__Method_ListNotebookRuntimeTemplates, serviceImpl.ListNotebookRuntimeTemplates)
           .AddMethod(__Method_DeleteNotebookRuntimeTemplate, serviceImpl.DeleteNotebookRuntimeTemplate)
+          .AddMethod(__Method_UpdateNotebookRuntimeTemplate, serviceImpl.UpdateNotebookRuntimeTemplate)
           .AddMethod(__Method_AssignNotebookRuntime, serviceImpl.AssignNotebookRuntime)
           .AddMethod(__Method_GetNotebookRuntime, serviceImpl.GetNotebookRuntime)
           .AddMethod(__Method_ListNotebookRuntimes, serviceImpl.ListNotebookRuntimes)
@@ -855,6 +926,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_GetNotebookRuntimeTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetNotebookRuntimeTemplateRequest, global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>(serviceImpl.GetNotebookRuntimeTemplate));
       serviceBinder.AddMethod(__Method_ListNotebookRuntimeTemplates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesRequest, global::Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse>(serviceImpl.ListNotebookRuntimeTemplates));
       serviceBinder.AddMethod(__Method_DeleteNotebookRuntimeTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteNotebookRuntimeTemplate));
+      serviceBinder.AddMethod(__Method_UpdateNotebookRuntimeTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateNotebookRuntimeTemplateRequest, global::Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>(serviceImpl.UpdateNotebookRuntimeTemplate));
       serviceBinder.AddMethod(__Method_AssignNotebookRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.AssignNotebookRuntime));
       serviceBinder.AddMethod(__Method_GetNotebookRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetNotebookRuntimeRequest, global::Google.Cloud.AIPlatform.V1.NotebookRuntime>(serviceImpl.GetNotebookRuntime));
       serviceBinder.AddMethod(__Method_ListNotebookRuntimes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListNotebookRuntimesRequest, global::Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse>(serviceImpl.ListNotebookRuntimes));

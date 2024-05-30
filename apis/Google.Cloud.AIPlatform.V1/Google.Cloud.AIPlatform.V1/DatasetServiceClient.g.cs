@@ -63,6 +63,7 @@ namespace Google.Cloud.AIPlatform.V1
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings.Clone();
             CreateDatasetVersionSettings = existing.CreateDatasetVersionSettings;
             CreateDatasetVersionOperationsSettings = existing.CreateDatasetVersionOperationsSettings.Clone();
+            UpdateDatasetVersionSettings = existing.UpdateDatasetVersionSettings;
             DeleteDatasetVersionSettings = existing.DeleteDatasetVersionSettings;
             DeleteDatasetVersionOperationsSettings = existing.DeleteDatasetVersionOperationsSettings.Clone();
             GetDatasetVersionSettings = existing.GetDatasetVersionSettings;
@@ -268,6 +269,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.UpdateDatasetVersion</c> and <c>DatasetServiceClient.UpdateDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDatasetVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1748,6 +1761,95 @@ namespace Google.Cloud.AIPlatform.V1
             CreateDatasetVersionAsync(parent, datasetVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetVersion UpdateDatasetVersion(UpdateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> UpdateDatasetVersionAsync(UpdateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> UpdateDatasetVersionAsync(UpdateDatasetVersionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDatasetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="datasetVersion">
+        /// Required. The DatasetVersion which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
+        /// 
+        /// * `display_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetVersion UpdateDatasetVersion(DatasetVersion datasetVersion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatasetVersion(new UpdateDatasetVersionRequest
+            {
+                DatasetVersion = gax::GaxPreconditions.CheckNotNull(datasetVersion, nameof(datasetVersion)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="datasetVersion">
+        /// Required. The DatasetVersion which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
+        /// 
+        /// * `display_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> UpdateDatasetVersionAsync(DatasetVersion datasetVersion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatasetVersionAsync(new UpdateDatasetVersionRequest
+            {
+                DatasetVersion = gax::GaxPreconditions.CheckNotNull(datasetVersion, nameof(datasetVersion)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="datasetVersion">
+        /// Required. The DatasetVersion which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
+        /// 
+        /// * `display_name`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> UpdateDatasetVersionAsync(DatasetVersion datasetVersion, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDatasetVersionAsync(datasetVersion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a Dataset version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2941,6 +3043,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<CreateDatasetVersionRequest, lro::Operation> _callCreateDatasetVersion;
 
+        private readonly gaxgrpc::ApiCall<UpdateDatasetVersionRequest, DatasetVersion> _callUpdateDatasetVersion;
+
         private readonly gaxgrpc::ApiCall<DeleteDatasetVersionRequest, lro::Operation> _callDeleteDatasetVersion;
 
         private readonly gaxgrpc::ApiCall<GetDatasetVersionRequest, DatasetVersion> _callGetDatasetVersion;
@@ -3010,6 +3114,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callCreateDatasetVersion = clientHelper.BuildApiCall<CreateDatasetVersionRequest, lro::Operation>("CreateDatasetVersion", grpcClient.CreateDatasetVersionAsync, grpcClient.CreateDatasetVersion, effectiveSettings.CreateDatasetVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDatasetVersion);
             Modify_CreateDatasetVersionApiCall(ref _callCreateDatasetVersion);
+            _callUpdateDatasetVersion = clientHelper.BuildApiCall<UpdateDatasetVersionRequest, DatasetVersion>("UpdateDatasetVersion", grpcClient.UpdateDatasetVersionAsync, grpcClient.UpdateDatasetVersion, effectiveSettings.UpdateDatasetVersionSettings).WithGoogleRequestParam("dataset_version.name", request => request.DatasetVersion?.Name);
+            Modify_ApiCall(ref _callUpdateDatasetVersion);
+            Modify_UpdateDatasetVersionApiCall(ref _callUpdateDatasetVersion);
             _callDeleteDatasetVersion = clientHelper.BuildApiCall<DeleteDatasetVersionRequest, lro::Operation>("DeleteDatasetVersion", grpcClient.DeleteDatasetVersionAsync, grpcClient.DeleteDatasetVersion, effectiveSettings.DeleteDatasetVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDatasetVersion);
             Modify_DeleteDatasetVersionApiCall(ref _callDeleteDatasetVersion);
@@ -3061,6 +3168,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_CreateDatasetVersionApiCall(ref gaxgrpc::ApiCall<CreateDatasetVersionRequest, lro::Operation> call);
 
+        partial void Modify_UpdateDatasetVersionApiCall(ref gaxgrpc::ApiCall<UpdateDatasetVersionRequest, DatasetVersion> call);
+
         partial void Modify_DeleteDatasetVersionApiCall(ref gaxgrpc::ApiCall<DeleteDatasetVersionRequest, lro::Operation> call);
 
         partial void Modify_GetDatasetVersionApiCall(ref gaxgrpc::ApiCall<GetDatasetVersionRequest, DatasetVersion> call);
@@ -3107,6 +3216,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDatasetVersionRequest(ref CreateDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDatasetVersionRequest(ref UpdateDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDatasetVersionRequest(ref DeleteDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3333,6 +3444,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_CreateDatasetVersionRequest(ref request, ref callSettings);
             return new lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>(await _callCreateDatasetVersion.Async(request, callSettings).ConfigureAwait(false), CreateDatasetVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DatasetVersion UpdateDatasetVersion(UpdateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatasetVersionRequest(ref request, ref callSettings);
+            return _callUpdateDatasetVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a DatasetVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DatasetVersion> UpdateDatasetVersionAsync(UpdateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatasetVersionRequest(ref request, ref callSettings);
+            return _callUpdateDatasetVersion.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>DeleteDatasetVersion</c>.</summary>

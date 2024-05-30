@@ -44,13 +44,19 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dmVydGV4X2FpX3NlYXJjaBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
             "b3JtLnYxLlZlcnRleEFJU2VhcmNoSAASIAoTZGlzYWJsZV9hdHRyaWJ1dGlv",
             "bhgDIAEoCEID4EEBQggKBnNvdXJjZSIoCg5WZXJ0ZXhBSVNlYXJjaBIWCglk",
-            "YXRhc3RvcmUYASABKAlCA+BBAiI5ChVHb29nbGVTZWFyY2hSZXRyaWV2YWwS",
-            "IAoTZGlzYWJsZV9hdHRyaWJ1dGlvbhgBIAEoCEID4EEBQscBCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCVRvb2xQcm90b1ABWj5jbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
-            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
-            "YXRmb3JtOjpWMWIGcHJvdG8z"));
+            "YXRhc3RvcmUYASABKAlCA+BBAiIXChVHb29nbGVTZWFyY2hSZXRyaWV2YWwi",
+            "ZQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZpZxgBIAEo",
+            "CzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGlu",
+            "Z0NvbmZpZ0ID4EEBIsIBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSSQoEbW9k",
+            "ZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9u",
+            "Q2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoWYWxsb3dlZF9mdW5jdGlvbl9u",
+            "YW1lcxgCIAMoCUID4EEBIjkKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAA",
+            "EggKBEFVVE8QARIHCgNBTlkQAhIICgROT05FEANCxwEKHmNvbS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIJVG9vbFByb3RvUAFaPmNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
+            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
+            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
+            "cm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,7 +66,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionResponse), global::Google.Cloud.AIPlatform.V1.FunctionResponse.Parser, new[]{ "Name", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Retrieval), global::Google.Cloud.AIPlatform.V1.Retrieval.Parser, new[]{ "VertexAiSearch", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexAISearch), global::Google.Cloud.AIPlatform.V1.VertexAISearch.Parser, new[]{ "Datastore" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval.Parser, new[]{ "DisableAttribution" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ToolConfig), global::Google.Cloud.AIPlatform.V1.ToolConfig.Parser, new[]{ "FunctionCallingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig), global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Parser, new[]{ "Mode", "AllowedFunctionNames" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode) }, null, null)
           }));
     }
     #endregion
@@ -1689,7 +1697,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSearchRetrieval(GoogleSearchRetrieval other) : this() {
-      disableAttribution_ = other.disableAttribution_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1697,23 +1704,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSearchRetrieval Clone() {
       return new GoogleSearchRetrieval(this);
-    }
-
-    /// <summary>Field number for the "disable_attribution" field.</summary>
-    public const int DisableAttributionFieldNumber = 1;
-    private bool disableAttribution_;
-    /// <summary>
-    /// Optional. Disable using the result from this tool in detecting grounding
-    /// attribution. This does not affect how the result is given to the model for
-    /// generation.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DisableAttribution {
-      get { return disableAttribution_; }
-      set {
-        disableAttribution_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1731,7 +1721,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DisableAttribution != other.DisableAttribution) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1739,7 +1728,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DisableAttribution != false) hash ^= DisableAttribution.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1758,10 +1746,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DisableAttribution != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DisableAttribution);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1772,10 +1756,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DisableAttribution != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DisableAttribution);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1786,9 +1766,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DisableAttribution != false) {
-        size += 1 + 1;
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1800,9 +1777,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     public void MergeFrom(GoogleSearchRetrieval other) {
       if (other == null) {
         return;
-      }
-      if (other.DisableAttribution != false) {
-        DisableAttribution = other.DisableAttribution;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1819,8 +1793,428 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Tool config. This config is shared for all tools provided in the request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ToolConfig : pb::IMessage<ToolConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ToolConfig> _parser = new pb::MessageParser<ToolConfig>(() => new ToolConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ToolConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ToolConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ToolConfig(ToolConfig other) : this() {
+      functionCallingConfig_ = other.functionCallingConfig_ != null ? other.functionCallingConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ToolConfig Clone() {
+      return new ToolConfig(this);
+    }
+
+    /// <summary>Field number for the "function_calling_config" field.</summary>
+    public const int FunctionCallingConfigFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig functionCallingConfig_;
+    /// <summary>
+    /// Optional. Function calling config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig FunctionCallingConfig {
+      get { return functionCallingConfig_; }
+      set {
+        functionCallingConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ToolConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ToolConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(FunctionCallingConfig, other.FunctionCallingConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (functionCallingConfig_ != null) hash ^= FunctionCallingConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (functionCallingConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FunctionCallingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (functionCallingConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FunctionCallingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (functionCallingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FunctionCallingConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ToolConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.functionCallingConfig_ != null) {
+        if (functionCallingConfig_ == null) {
+          FunctionCallingConfig = new global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig();
+        }
+        FunctionCallingConfig.MergeFrom(other.FunctionCallingConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (functionCallingConfig_ == null) {
+              FunctionCallingConfig = new global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig();
+            }
+            input.ReadMessage(FunctionCallingConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (functionCallingConfig_ == null) {
+              FunctionCallingConfig = new global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig();
+            }
+            input.ReadMessage(FunctionCallingConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Function calling config.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FunctionCallingConfig : pb::IMessage<FunctionCallingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FunctionCallingConfig> _parser = new pb::MessageParser<FunctionCallingConfig>(() => new FunctionCallingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FunctionCallingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FunctionCallingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FunctionCallingConfig(FunctionCallingConfig other) : this() {
+      mode_ = other.mode_;
+      allowedFunctionNames_ = other.allowedFunctionNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FunctionCallingConfig Clone() {
+      return new FunctionCallingConfig(this);
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode mode_ = global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode.Unspecified;
+    /// <summary>
+    /// Optional. Function calling mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allowed_function_names" field.</summary>
+    public const int AllowedFunctionNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_allowedFunctionNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> allowedFunctionNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Function names to call. Only set when the Mode is ANY. Function
+    /// names should match [FunctionDeclaration.name]. With mode set to ANY, model
+    /// will predict a function call from the set of function names provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AllowedFunctionNames {
+      get { return allowedFunctionNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FunctionCallingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FunctionCallingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mode != other.Mode) return false;
+      if(!allowedFunctionNames_.Equals(other.allowedFunctionNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mode != global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
+      hash ^= allowedFunctionNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mode != global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      allowedFunctionNames_.WriteTo(output, _repeated_allowedFunctionNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mode != global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      allowedFunctionNames_.WriteTo(ref output, _repeated_allowedFunctionNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mode != global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      size += allowedFunctionNames_.CalculateSize(_repeated_allowedFunctionNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FunctionCallingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mode != global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode.Unspecified) {
+        Mode = other.Mode;
+      }
+      allowedFunctionNames_.Add(other.allowedFunctionNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
           case 8: {
-            DisableAttribution = input.ReadBool();
+            Mode = (global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            allowedFunctionNames_.AddEntriesFrom(input, _repeated_allowedFunctionNames_codec);
             break;
           }
         }
@@ -1839,13 +2233,52 @@ namespace Google.Cloud.AIPlatform.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            DisableAttribution = input.ReadBool();
+            Mode = (global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            allowedFunctionNames_.AddEntriesFrom(ref input, _repeated_allowedFunctionNames_codec);
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FunctionCallingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Function calling mode.
+      /// </summary>
+      public enum Mode {
+        /// <summary>
+        /// Unspecified function calling mode. This value should not be used.
+        /// </summary>
+        [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Default model behavior, model decides to predict either a function call
+        /// or a natural language repspose.
+        /// </summary>
+        [pbr::OriginalName("AUTO")] Auto = 1,
+        /// <summary>
+        /// Model is constrained to always predicting a function call only.
+        /// If "allowed_function_names" are set, the predicted function call will be
+        /// limited to any one of "allowed_function_names", else the predicted
+        /// function call will be any one of the provided "function_declarations".
+        /// </summary>
+        [pbr::OriginalName("ANY")] Any = 2,
+        /// <summary>
+        /// Model will not predict any function call. Model behavior is same as when
+        /// not passing any function declarations.
+        /// </summary>
+        [pbr::OriginalName("NONE")] None = 3,
+      }
+
+    }
+    #endregion
 
   }
 

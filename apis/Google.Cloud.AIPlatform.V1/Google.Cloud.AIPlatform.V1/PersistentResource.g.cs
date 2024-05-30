@@ -69,24 +69,36 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGxpY2FfY291bnQipAEKE1Jlc291cmNlUnVudGltZVNwZWMSUQoUc2Vydmlj",
             "ZV9hY2NvdW50X3NwZWMYAiABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MS5TZXJ2aWNlQWNjb3VudFNwZWNCA+BBARI6CghyYXlfc3BlYxgBIAEo",
-            "CzIjLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJheVNwZWNCA+BBASIJ",
-            "CgdSYXlTcGVjIhEKD1Jlc291cmNlUnVudGltZSJeChJTZXJ2aWNlQWNjb3Vu",
-            "dFNwZWMSKgodZW5hYmxlX2N1c3RvbV9zZXJ2aWNlX2FjY291bnQYASABKAhC",
-            "A+BBAhIcCg9zZXJ2aWNlX2FjY291bnQYAiABKAlCA+BBAULVAQoeY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhdQZXJzaXN0ZW50UmVzb3VyY2VQ",
-            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEv",
-            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBs",
-            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
-            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "CzIjLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJheVNwZWNCA+BBASKu",
+            "AgoHUmF5U3BlYxIWCglpbWFnZV91cmkYASABKAlCA+BBARJeChRyZXNvdXJj",
+            "ZV9wb29sX2ltYWdlcxgGIAMoCzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLlJheVNwZWMuUmVzb3VyY2VQb29sSW1hZ2VzRW50cnlCA+BBARInChpo",
+            "ZWFkX25vZGVfcmVzb3VyY2VfcG9vbF9pZBgHIAEoCUID4EEBEkcKD3JheV9t",
+            "ZXRyaWNfc3BlYxgIIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlJheU1ldHJpY1NwZWNCA+BBARo5ChdSZXNvdXJjZVBvb2xJbWFnZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpsBCg9SZXNvdXJj",
+            "ZVJ1bnRpbWUSVQoLYWNjZXNzX3VyaXMYASADKAsyOy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5SZXNvdXJjZVJ1bnRpbWUuQWNjZXNzVXJpc0VudHJ5",
+            "QgPgQQMaMQoPQWNjZXNzVXJpc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiXgoSU2VydmljZUFjY291bnRTcGVjEioKHWVuYWJsZV9j",
+            "dXN0b21fc2VydmljZV9hY2NvdW50GAEgASgIQgPgQQISHAoPc2VydmljZV9h",
+            "Y2NvdW50GAIgASgJQgPgQQEiJgoNUmF5TWV0cmljU3BlYxIVCghkaXNhYmxl",
+            "ZBgBIAEoCEID4EEBQtUBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFCF1BlcnNpc3RlbnRSZXNvdXJjZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
+            "bXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
+            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PersistentResource), global::Google.Cloud.AIPlatform.V1.PersistentResource.Parser, new[]{ "Name", "DisplayName", "ResourcePools", "State", "Error", "CreateTime", "StartTime", "UpdateTime", "Labels", "Network", "EncryptionSpec", "ResourceRuntimeSpec", "ResourceRuntime", "ReservedIpRanges" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.PersistentResource.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourcePool), global::Google.Cloud.AIPlatform.V1.ResourcePool.Parser, new[]{ "Id", "MachineSpec", "ReplicaCount", "DiskSpec", "UsedReplicaCount", "AutoscalingSpec" }, new[]{ "ReplicaCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourcePool.Types.AutoscalingSpec), global::Google.Cloud.AIPlatform.V1.ResourcePool.Types.AutoscalingSpec.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourceRuntimeSpec), global::Google.Cloud.AIPlatform.V1.ResourceRuntimeSpec.Parser, new[]{ "ServiceAccountSpec", "RaySpec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RaySpec), global::Google.Cloud.AIPlatform.V1.RaySpec.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourceRuntime), global::Google.Cloud.AIPlatform.V1.ResourceRuntime.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ServiceAccountSpec), global::Google.Cloud.AIPlatform.V1.ServiceAccountSpec.Parser, new[]{ "EnableCustomServiceAccount", "ServiceAccount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RaySpec), global::Google.Cloud.AIPlatform.V1.RaySpec.Parser, new[]{ "ImageUri", "ResourcePoolImages", "HeadNodeResourcePoolId", "RayMetricSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourceRuntime), global::Google.Cloud.AIPlatform.V1.ResourceRuntime.Parser, new[]{ "AccessUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ServiceAccountSpec), global::Google.Cloud.AIPlatform.V1.ServiceAccountSpec.Parser, new[]{ "EnableCustomServiceAccount", "ServiceAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RayMetricSpec), global::Google.Cloud.AIPlatform.V1.RayMetricSpec.Parser, new[]{ "Disabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1945,6 +1957,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RaySpec(RaySpec other) : this() {
+      imageUri_ = other.imageUri_;
+      resourcePoolImages_ = other.resourcePoolImages_.Clone();
+      headNodeResourcePoolId_ = other.headNodeResourcePoolId_;
+      rayMetricSpec_ = other.rayMetricSpec_ != null ? other.rayMetricSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1952,6 +1968,81 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RaySpec Clone() {
       return new RaySpec(this);
+    }
+
+    /// <summary>Field number for the "image_uri" field.</summary>
+    public const int ImageUriFieldNumber = 1;
+    private string imageUri_ = "";
+    /// <summary>
+    /// Optional. Default image for user to choose a preferred ML framework
+    /// (for example, TensorFlow or Pytorch) by choosing from [Vertex prebuilt
+    /// images](https://cloud.google.com/vertex-ai/docs/training/pre-built-containers).
+    /// Either this or the resource_pool_images is required. Use this field if
+    /// you need all the resource pools to have the same Ray image. Otherwise, use
+    /// the {@code resource_pool_images} field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageUri {
+      get { return imageUri_; }
+      set {
+        imageUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resource_pool_images" field.</summary>
+    public const int ResourcePoolImagesFieldNumber = 6;
+    private static readonly pbc::MapField<string, string>.Codec _map_resourcePoolImages_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
+    private readonly pbc::MapField<string, string> resourcePoolImages_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Required if image_uri isn't set. A map of resource_pool_id to
+    /// prebuild Ray image if user need to use different images for different
+    /// head/worker pools. This map needs to cover all the resource pool ids.
+    /// Example:
+    /// {
+    ///   "ray_head_node_pool": "head image"
+    ///   "ray_worker_node_pool1": "worker image"
+    ///   "ray_worker_node_pool2": "another worker image"
+    /// }
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> ResourcePoolImages {
+      get { return resourcePoolImages_; }
+    }
+
+    /// <summary>Field number for the "head_node_resource_pool_id" field.</summary>
+    public const int HeadNodeResourcePoolIdFieldNumber = 7;
+    private string headNodeResourcePoolId_ = "";
+    /// <summary>
+    /// Optional. This will be used to indicate which resource pool will serve as
+    /// the Ray head node(the first node within that pool). Will use the machine
+    /// from the first workerpool as the head node by default if this field isn't
+    /// set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HeadNodeResourcePoolId {
+      get { return headNodeResourcePoolId_; }
+      set {
+        headNodeResourcePoolId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ray_metric_spec" field.</summary>
+    public const int RayMetricSpecFieldNumber = 8;
+    private global::Google.Cloud.AIPlatform.V1.RayMetricSpec rayMetricSpec_;
+    /// <summary>
+    /// Optional. Ray metrics configurations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.RayMetricSpec RayMetricSpec {
+      get { return rayMetricSpec_; }
+      set {
+        rayMetricSpec_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1969,6 +2060,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ImageUri != other.ImageUri) return false;
+      if (!ResourcePoolImages.Equals(other.ResourcePoolImages)) return false;
+      if (HeadNodeResourcePoolId != other.HeadNodeResourcePoolId) return false;
+      if (!object.Equals(RayMetricSpec, other.RayMetricSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1976,6 +2071,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
+      hash ^= ResourcePoolImages.GetHashCode();
+      if (HeadNodeResourcePoolId.Length != 0) hash ^= HeadNodeResourcePoolId.GetHashCode();
+      if (rayMetricSpec_ != null) hash ^= RayMetricSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1994,6 +2093,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ImageUri);
+      }
+      resourcePoolImages_.WriteTo(output, _map_resourcePoolImages_codec);
+      if (HeadNodeResourcePoolId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(HeadNodeResourcePoolId);
+      }
+      if (rayMetricSpec_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RayMetricSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2004,6 +2116,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ImageUri);
+      }
+      resourcePoolImages_.WriteTo(ref output, _map_resourcePoolImages_codec);
+      if (HeadNodeResourcePoolId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(HeadNodeResourcePoolId);
+      }
+      if (rayMetricSpec_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RayMetricSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2014,6 +2139,16 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ImageUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUri);
+      }
+      size += resourcePoolImages_.CalculateSize(_map_resourcePoolImages_codec);
+      if (HeadNodeResourcePoolId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HeadNodeResourcePoolId);
+      }
+      if (rayMetricSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RayMetricSpec);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2025,6 +2160,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     public void MergeFrom(RaySpec other) {
       if (other == null) {
         return;
+      }
+      if (other.ImageUri.Length != 0) {
+        ImageUri = other.ImageUri;
+      }
+      resourcePoolImages_.MergeFrom(other.resourcePoolImages_);
+      if (other.HeadNodeResourcePoolId.Length != 0) {
+        HeadNodeResourcePoolId = other.HeadNodeResourcePoolId;
+      }
+      if (other.rayMetricSpec_ != null) {
+        if (rayMetricSpec_ == null) {
+          RayMetricSpec = new global::Google.Cloud.AIPlatform.V1.RayMetricSpec();
+        }
+        RayMetricSpec.MergeFrom(other.RayMetricSpec);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2041,6 +2189,25 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            ImageUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            resourcePoolImages_.AddEntriesFrom(input, _map_resourcePoolImages_codec);
+            break;
+          }
+          case 58: {
+            HeadNodeResourcePoolId = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (rayMetricSpec_ == null) {
+              RayMetricSpec = new global::Google.Cloud.AIPlatform.V1.RayMetricSpec();
+            }
+            input.ReadMessage(RayMetricSpec);
+            break;
+          }
         }
       }
     #endif
@@ -2056,6 +2223,25 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            ImageUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            resourcePoolImages_.AddEntriesFrom(ref input, _map_resourcePoolImages_codec);
+            break;
+          }
+          case 58: {
+            HeadNodeResourcePoolId = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (rayMetricSpec_ == null) {
+              RayMetricSpec = new global::Google.Cloud.AIPlatform.V1.RayMetricSpec();
+            }
+            input.ReadMessage(RayMetricSpec);
+            break;
+          }
         }
       }
     }
@@ -2101,6 +2287,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResourceRuntime(ResourceRuntime other) : this() {
+      accessUris_ = other.accessUris_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2108,6 +2295,25 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResourceRuntime Clone() {
       return new ResourceRuntime(this);
+    }
+
+    /// <summary>Field number for the "access_uris" field.</summary>
+    public const int AccessUrisFieldNumber = 1;
+    private static readonly pbc::MapField<string, string>.Codec _map_accessUris_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
+    private readonly pbc::MapField<string, string> accessUris_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Output only. URIs for user to connect to the Cluster.
+    /// Example:
+    /// {
+    ///   "RAY_HEAD_NODE_INTERNAL_IP": "head-node-IP:10001"
+    ///   "RAY_DASHBOARD_URI": "ray-dashboard-address:8888"
+    /// }
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> AccessUris {
+      get { return accessUris_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2125,6 +2331,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!AccessUris.Equals(other.AccessUris)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2132,6 +2339,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= AccessUris.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2150,6 +2358,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      accessUris_.WriteTo(output, _map_accessUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2160,6 +2369,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      accessUris_.WriteTo(ref output, _map_accessUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2170,6 +2380,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += accessUris_.CalculateSize(_map_accessUris_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2182,6 +2393,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
+      accessUris_.MergeFrom(other.accessUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2197,6 +2409,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            accessUris_.AddEntriesFrom(input, _map_accessUris_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2212,6 +2428,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            accessUris_.AddEntriesFrom(ref input, _map_accessUris_codec);
+            break;
+          }
         }
       }
     }
@@ -2459,6 +2679,202 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             ServiceAccount = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for the Ray metrics.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RayMetricSpec : pb::IMessage<RayMetricSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RayMetricSpec> _parser = new pb::MessageParser<RayMetricSpec>(() => new RayMetricSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RayMetricSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.PersistentResourceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RayMetricSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RayMetricSpec(RayMetricSpec other) : this() {
+      disabled_ = other.disabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RayMetricSpec Clone() {
+      return new RayMetricSpec(this);
+    }
+
+    /// <summary>Field number for the "disabled" field.</summary>
+    public const int DisabledFieldNumber = 1;
+    private bool disabled_;
+    /// <summary>
+    /// Optional. Flag to disable the Ray metrics collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Disabled {
+      get { return disabled_; }
+      set {
+        disabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RayMetricSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RayMetricSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Disabled != other.Disabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Disabled != false) hash ^= Disabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Disabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Disabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Disabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Disabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Disabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RayMetricSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Disabled != false) {
+        Disabled = other.Disabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Disabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Disabled = input.ReadBool();
             break;
           }
         }
