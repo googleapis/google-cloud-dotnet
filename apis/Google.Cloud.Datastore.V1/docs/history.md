@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.12.0, released 2024-05-30
+
+### New features
+
+- New PropertyMask field which allows partial commits, lookups, and query results ([commit d2d3c83](https://github.com/googleapis/google-cloud-dotnet/commit/d2d3c83729068ac7fa329b3cea1281519f16adec))
+
 ## Version 4.11.0, released 2024-05-13
 
 ### New features
