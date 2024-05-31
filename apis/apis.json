@@ -5829,6 +5829,28 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Shopping.Merchant.Products.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Merchant",
+      "productUrl": "https://developers.google.com/merchant/api",
+      "description": "Recommended Google client library to access the Merchant Products API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
+      "tags": [
+        "shopping",
+        "products"
+      ],
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta06"
+      },
+      "generator": "micro",
+      "protoPath": "google/shopping/merchant/products/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "merchantapi",
+      "serviceConfigFile": "merchantapi_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Shopping.Merchant.Quota.V1Beta",
       "version": "1.0.0-beta03",
       "type": "grpc",
