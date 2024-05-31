@@ -36,6 +36,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddResourceSettingsServiceClient(this IServiceCollection services, sys::Action<gcrv::ResourceSettingsServiceClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {
@@ -54,6 +55,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddResourceSettingsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::ResourceSettingsServiceClientBuilder> action) =>
             services.AddSingleton(provider =>
             {
