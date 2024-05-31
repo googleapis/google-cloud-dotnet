@@ -28,7 +28,7 @@ fetch_github_repos() {
   then
     git -C $GOOGLEAPIS pull -q
   else
-    git clone https://github.com/googleapis/googleapis $GOOGLEAPIS --depth 1
+    git clone https://github.com/googleapis/googleapis $GOOGLEAPIS
   fi
 }
 
