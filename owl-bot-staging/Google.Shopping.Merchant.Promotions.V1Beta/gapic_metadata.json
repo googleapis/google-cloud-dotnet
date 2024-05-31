@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.shopping.merchant.promotions.v1beta",
+  "libraryPackage": "Google.Shopping.Merchant.Promotions.V1Beta",
+  "services": {
+    "PromotionsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PromotionsServiceClient",
+          "rpcs": {
+            "GetPromotion": {
+              "methods": [
+                "GetPromotion",
+                "GetPromotionAsync"
+              ]
+            },
+            "InsertPromotion": {
+              "methods": [
+                "InsertPromotion",
+                "InsertPromotionAsync"
+              ]
+            },
+            "ListPromotions": {
+              "methods": [
+                "ListPromotions",
+                "ListPromotionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
