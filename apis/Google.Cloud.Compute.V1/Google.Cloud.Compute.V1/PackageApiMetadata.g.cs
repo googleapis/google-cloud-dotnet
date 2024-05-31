@@ -16,8 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
 using gpr = Google.Protobuf.Reflection;
+using lro = Google.LongRunning;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Compute.V1

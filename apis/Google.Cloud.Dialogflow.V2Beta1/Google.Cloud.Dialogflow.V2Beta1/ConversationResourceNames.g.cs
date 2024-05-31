@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.Dialogflow.V2Beta1;
 using sys = System;
 
@@ -514,6 +514,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
             set => LatestMessage = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Summary
+            {
+                /// <summary>
+                /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name
+                /// property.
+                /// </summary>
+                public AnswerRecordName AnswerRecordAsAnswerRecordName
+                {
+                    get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+                    set => AnswerRecord = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class GenerateStatelessSummaryRequest
@@ -525,6 +541,21 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
             set => LatestMessage = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class MinimalConversation
+            {
+                /// <summary>
+                /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+                /// </summary>
+                public gagr::LocationName ParentAsLocationName
+                {
+                    get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+                    set => Parent = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

@@ -559,6 +559,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::WebhookName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class ServiceDirectoryConfig
+            {
+                /// <summary>
+                /// <see cref="ServiceName"/>-typed view over the <see cref="Service"/> resource name property.
+                /// </summary>
+                public ServiceName ServiceAsServiceName
+                {
+                    get => string.IsNullOrEmpty(Service) ? null : ServiceName.Parse(Service, allowUnparsed: true);
+                    set => Service = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class ListWebhooksRequest
@@ -614,6 +629,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             get => string.IsNullOrEmpty(TriggerIntent) ? null : IntentName.Parse(TriggerIntent, allowUnparsed: true);
             set => TriggerIntent = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class IntentInfo
+            {
+                /// <summary>
+                /// <see cref="IntentName"/>-typed view over the <see cref="LastMatchedIntent"/> resource name property.
+                /// </summary>
+                public IntentName LastMatchedIntentAsIntentName
+                {
+                    get => string.IsNullOrEmpty(LastMatchedIntent) ? null : IntentName.Parse(LastMatchedIntent, allowUnparsed: true);
+                    set => LastMatchedIntent = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

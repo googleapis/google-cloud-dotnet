@@ -2779,5 +2779,21 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             get => new gax::ResourceNameList<IssueModelName>(IssueModels, s => string.IsNullOrEmpty(s) ? null : IssueModelName.Parse(s, allowUnparsed: true));
         }
+
+        public partial class Types
+        {
+            public partial class SummarizationConfig
+            {
+                /// <summary>
+                /// <see cref="ConversationProfileName"/>-typed view over the <see cref="ConversationProfile"/> resource
+                /// name property.
+                /// </summary>
+                public ConversationProfileName ConversationProfileAsConversationProfileName
+                {
+                    get => string.IsNullOrEmpty(ConversationProfile) ? null : ConversationProfileName.Parse(ConversationProfile, allowUnparsed: true);
+                    set => ConversationProfile = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

@@ -1472,6 +1472,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             get => string.IsNullOrEmpty(Name) ? null : gcspv::CertificateRevocationListName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class RevokedCertificate
+            {
+                /// <summary>
+                /// <see cref="CertificateName"/>-typed view over the <see cref="Certificate"/> resource name property.
+                /// </summary>
+                public CertificateName CertificateAsCertificateName
+                {
+                    get => string.IsNullOrEmpty(Certificate) ? null : CertificateName.Parse(Certificate, allowUnparsed: true);
+                    set => Certificate = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class Certificate

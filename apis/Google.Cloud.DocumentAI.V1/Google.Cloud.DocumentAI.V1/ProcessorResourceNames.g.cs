@@ -555,6 +555,22 @@ namespace Google.Cloud.DocumentAI.V1
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class DeprecationInfo
+            {
+                /// <summary>
+                /// <see cref="gcdv::ProcessorVersionName"/>-typed view over the
+                /// <see cref="ReplacementProcessorVersion"/> resource name property.
+                /// </summary>
+                public gcdv::ProcessorVersionName ReplacementProcessorVersionAsProcessorVersionName
+                {
+                    get => string.IsNullOrEmpty(ReplacementProcessorVersion) ? null : gcdv::ProcessorVersionName.Parse(ReplacementProcessorVersion, allowUnparsed: true);
+                    set => ReplacementProcessorVersion = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class ProcessorVersionAlias

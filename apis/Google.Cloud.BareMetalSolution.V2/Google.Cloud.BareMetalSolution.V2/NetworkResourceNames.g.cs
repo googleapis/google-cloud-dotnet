@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbv = Google.Cloud.BareMetalSolution.V2;
 using sys = System;
 
@@ -548,6 +548,25 @@ namespace Google.Cloud.BareMetalSolution.V2
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbv::NetworkName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class VRF
+    {
+        public partial class Types
+        {
+            public partial class VlanAttachment
+            {
+                /// <summary>
+                /// <see cref="InterconnectAttachmentName"/>-typed view over the <see cref="InterconnectAttachment"/>
+                /// resource name property.
+                /// </summary>
+                public InterconnectAttachmentName InterconnectAttachmentAsInterconnectAttachmentName
+                {
+                    get => string.IsNullOrEmpty(InterconnectAttachment) ? null : InterconnectAttachmentName.Parse(InterconnectAttachment, allowUnparsed: true);
+                    set => InterconnectAttachment = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

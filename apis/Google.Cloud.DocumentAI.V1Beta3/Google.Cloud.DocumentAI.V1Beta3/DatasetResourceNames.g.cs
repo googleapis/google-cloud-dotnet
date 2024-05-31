@@ -784,6 +784,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DatasetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class DocumentWarehouseConfig
+            {
+                /// <summary>
+                /// <see cref="SchemaName"/>-typed view over the <see cref="Schema"/> resource name property.
+                /// </summary>
+                public SchemaName SchemaAsSchemaName
+                {
+                    get => string.IsNullOrEmpty(Schema) ? null : SchemaName.Parse(Schema, allowUnparsed: true);
+                    set => Schema = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class DatasetSchema

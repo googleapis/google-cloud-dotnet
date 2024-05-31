@@ -258,5 +258,38 @@ namespace Google.Cloud.Monitoring.V3
             get => string.IsNullOrEmpty(Name) ? null : gcmv::SnoozeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Criteria
+            {
+                /// <summary>
+                /// <see cref="AlertPolicyName"/>-typed view over the <see cref="Policies"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<AlertPolicyName> PoliciesAsAlertPolicyNames
+                {
+                    get => new gax::ResourceNameList<AlertPolicyName>(Policies, s => string.IsNullOrEmpty(s) ? null : AlertPolicyName.Parse(s, allowUnparsed: true));
+                }
+
+                /// <summary>
+                /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Policies"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<gax::IResourceName> PoliciesAsResourceNames
+                {
+                    get => new gax::ResourceNameList<gax::IResourceName>(Policies, s =>
+                    {
+                        if (string.IsNullOrEmpty(s))
+                        {
+                            return null;
+                        }
+                        if (AlertPolicyName.TryParse(s, out AlertPolicyName alertPolicy))
+                        {
+                            return alertPolicy;
+                        }
+                        return gax::UnparsedResourceName.Parse(s);
+                    });
+                }
+            }
+        }
     }
 }

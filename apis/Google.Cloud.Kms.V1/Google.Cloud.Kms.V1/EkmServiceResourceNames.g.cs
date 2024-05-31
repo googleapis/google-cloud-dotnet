@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gckv = Google.Cloud.Kms.V1;
 using sys = System;
 
@@ -833,6 +833,22 @@ namespace Google.Cloud.Kms.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gckv::EkmConnectionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class ServiceResolver
+            {
+                /// <summary>
+                /// <see cref="ServiceName"/>-typed view over the <see cref="ServiceDirectoryService"/> resource name
+                /// property.
+                /// </summary>
+                public ServiceName ServiceDirectoryServiceAsServiceName
+                {
+                    get => string.IsNullOrEmpty(ServiceDirectoryService) ? null : ServiceName.Parse(ServiceDirectoryService, allowUnparsed: true);
+                    set => ServiceDirectoryService = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

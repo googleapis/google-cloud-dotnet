@@ -704,6 +704,38 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class EvaluationConfig
+    {
+        public partial class Types
+        {
+            public partial class SmartReplyConfig
+            {
+                /// <summary>
+                /// <see cref="DocumentName"/>-typed view over the <see cref="AllowlistDocument"/> resource name
+                /// property.
+                /// </summary>
+                public DocumentName AllowlistDocumentAsDocumentName
+                {
+                    get => string.IsNullOrEmpty(AllowlistDocument) ? null : DocumentName.Parse(AllowlistDocument, allowUnparsed: true);
+                    set => AllowlistDocument = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class SmartComposeConfig
+            {
+                /// <summary>
+                /// <see cref="DocumentName"/>-typed view over the <see cref="AllowlistDocument"/> resource name
+                /// property.
+                /// </summary>
+                public DocumentName AllowlistDocumentAsDocumentName
+                {
+                    get => string.IsNullOrEmpty(AllowlistDocument) ? null : DocumentName.Parse(AllowlistDocument, allowUnparsed: true);
+                    set => AllowlistDocument = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class InputDataset
     {
         /// <summary>

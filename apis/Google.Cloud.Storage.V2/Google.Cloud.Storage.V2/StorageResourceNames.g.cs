@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcsv = Google.Cloud.Storage.V2;
 using sys = System;
 
@@ -1061,6 +1061,21 @@ namespace Google.Cloud.Storage.V2
         {
             get => string.IsNullOrEmpty(Project) ? null : gagr::ProjectName.Parse(Project, allowUnparsed: true);
             set => Project = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class Encryption
+            {
+                /// <summary>
+                /// <see cref="CryptoKeyName"/>-typed view over the <see cref="DefaultKmsKey"/> resource name property.
+                /// </summary>
+                public CryptoKeyName DefaultKmsKeyAsCryptoKeyName
+                {
+                    get => string.IsNullOrEmpty(DefaultKmsKey) ? null : CryptoKeyName.Parse(DefaultKmsKey, allowUnparsed: true);
+                    set => DefaultKmsKey = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

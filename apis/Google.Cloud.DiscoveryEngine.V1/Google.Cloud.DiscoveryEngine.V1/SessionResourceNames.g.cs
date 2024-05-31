@@ -451,5 +451,20 @@ namespace Google.Cloud.DiscoveryEngine.V1
             get => string.IsNullOrEmpty(Name) ? null : gcdv::SessionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Turn
+            {
+                /// <summary>
+                /// <see cref="AnswerName"/>-typed view over the <see cref="Answer"/> resource name property.
+                /// </summary>
+                public AnswerName AnswerAsAnswerName
+                {
+                    get => string.IsNullOrEmpty(Answer) ? null : AnswerName.Parse(Answer, allowUnparsed: true);
+                    set => Answer = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

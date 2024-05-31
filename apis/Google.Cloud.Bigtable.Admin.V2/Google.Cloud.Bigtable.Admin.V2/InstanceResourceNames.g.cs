@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbav = Google.Cloud.Bigtable.Admin.V2;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using sys = System;
@@ -1083,6 +1083,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
             set => Location = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class EncryptionConfig
+            {
+                /// <summary>
+                /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
+                /// </summary>
+                public CryptoKeyName KmsKeyNameAsCryptoKeyName
+                {
+                    get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
+                    set => KmsKeyName = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

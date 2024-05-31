@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbv = Google.Cloud.BareMetalSolution.V2;
 using sys = System;
 
@@ -288,6 +288,21 @@ namespace Google.Cloud.BareMetalSolution.V2
         {
             get => string.IsNullOrEmpty(Volume) ? null : VolumeName.Parse(Volume, allowUnparsed: true);
             set => Volume = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class AllowedClient
+            {
+                /// <summary>
+                /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+                /// </summary>
+                public NetworkName NetworkAsNetworkName
+                {
+                    get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+                    set => Network = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

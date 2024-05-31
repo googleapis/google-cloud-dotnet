@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gatv = Google.Area120.Tables.V1Alpha1;
+using gax = Google.Api.Gax;
 using sys = System;
 
 namespace Google.Area120.Tables.V1Alpha1

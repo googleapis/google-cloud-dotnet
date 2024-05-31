@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.Dialogflow.V2;
 using sys = System;
 
@@ -755,6 +755,82 @@ namespace Google.Cloud.Dialogflow.V2
         {
             get => string.IsNullOrEmpty(Agent) ? null : AgentName.Parse(Agent, allowUnparsed: true);
             set => Agent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class HumanAgentAssistantConfig
+    {
+        public partial class Types
+        {
+            public partial class SuggestionQueryConfig
+            {
+                public partial class Types
+                {
+                    public partial class KnowledgeBaseQuerySource
+                    {
+                        /// <summary>
+                        /// <see cref="KnowledgeBaseName"/>-typed view over the <see cref="KnowledgeBases"/> resource
+                        /// name property.
+                        /// </summary>
+                        public gax::ResourceNameList<KnowledgeBaseName> KnowledgeBasesAsKnowledgeBaseNames
+                        {
+                            get => new gax::ResourceNameList<KnowledgeBaseName>(KnowledgeBases, s => string.IsNullOrEmpty(s) ? null : KnowledgeBaseName.Parse(s, allowUnparsed: true));
+                        }
+                    }
+
+                    public partial class DocumentQuerySource
+                    {
+                        /// <summary>
+                        /// <see cref="DocumentName"/>-typed view over the <see cref="Documents"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<DocumentName> DocumentsAsDocumentNames
+                        {
+                            get => new gax::ResourceNameList<DocumentName>(Documents, s => string.IsNullOrEmpty(s) ? null : DocumentName.Parse(s, allowUnparsed: true));
+                        }
+                    }
+
+                    public partial class DialogflowQuerySource
+                    {
+                        /// <summary>
+                        /// <see cref="AgentName"/>-typed view over the <see cref="Agent"/> resource name property.
+                        /// </summary>
+                        public AgentName AgentAsAgentName
+                        {
+                            get => string.IsNullOrEmpty(Agent) ? null : AgentName.Parse(Agent, allowUnparsed: true);
+                            set => Agent = value?.ToString() ?? "";
+                        }
+
+                        public partial class Types
+                        {
+                            public partial class HumanAgentSideConfig
+                            {
+                                /// <summary>
+                                /// <see cref="AgentName"/>-typed view over the <see cref="Agent"/> resource name
+                                /// property.
+                                /// </summary>
+                                public AgentName AgentAsAgentName
+                                {
+                                    get => string.IsNullOrEmpty(Agent) ? null : AgentName.Parse(Agent, allowUnparsed: true);
+                                    set => Agent = value?.ToString() ?? "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            public partial class ConversationModelConfig
+            {
+                /// <summary>
+                /// <see cref="ConversationModelName"/>-typed view over the <see cref="Model"/> resource name property.
+                /// </summary>
+                public ConversationModelName ModelAsConversationModelName
+                {
+                    get => string.IsNullOrEmpty(Model) ? null : ConversationModelName.Parse(Model, allowUnparsed: true);
+                    set => Model = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

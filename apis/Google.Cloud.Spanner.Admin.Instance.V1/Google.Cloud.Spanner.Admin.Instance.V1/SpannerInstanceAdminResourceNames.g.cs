@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcsaiv = Google.Cloud.Spanner.Admin.Instance.V1;
 using gcscv = Google.Cloud.Spanner.Common.V1;
 using sys = System;

@@ -1287,6 +1287,21 @@ namespace Google.Cloud.Video.LiveStream.V1
             get => string.IsNullOrEmpty(Name) ? null : gcvlv::EventName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class SlateTask
+            {
+                /// <summary>
+                /// <see cref="AssetName"/>-typed view over the <see cref="Asset"/> resource name property.
+                /// </summary>
+                public AssetName AssetAsAssetName
+                {
+                    get => string.IsNullOrEmpty(Asset) ? null : AssetName.Parse(Asset, allowUnparsed: true);
+                    set => Asset = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class Asset
@@ -1301,6 +1316,25 @@ namespace Google.Cloud.Video.LiveStream.V1
         }
     }
 
+    public partial class Encryption
+    {
+        public partial class Types
+        {
+            public partial class SecretManagerSource
+            {
+                /// <summary>
+                /// <see cref="SecretVersionName"/>-typed view over the <see cref="SecretVersion"/> resource name
+                /// property.
+                /// </summary>
+                public SecretVersionName SecretVersionAsSecretVersionName
+                {
+                    get => string.IsNullOrEmpty(SecretVersion) ? null : SecretVersionName.Parse(SecretVersion, allowUnparsed: true);
+                    set => SecretVersion = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class Pool
     {
         /// <summary>
@@ -1310,6 +1344,21 @@ namespace Google.Cloud.Video.LiveStream.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvlv::PoolName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class NetworkConfig
+            {
+                /// <summary>
+                /// <see cref="NetworkName"/>-typed view over the <see cref="PeeredNetwork"/> resource name property.
+                /// </summary>
+                public NetworkName PeeredNetworkAsNetworkName
+                {
+                    get => string.IsNullOrEmpty(PeeredNetwork) ? null : NetworkName.Parse(PeeredNetwork, allowUnparsed: true);
+                    set => PeeredNetwork = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

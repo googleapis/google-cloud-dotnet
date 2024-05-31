@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcov = Google.Cloud.OsConfig.V1Alpha;
 using sys = System;
 
@@ -311,6 +311,23 @@ namespace Google.Cloud.OsConfig.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gcov::InstanceOSPoliciesComplianceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class OSPolicyCompliance
+            {
+                /// <summary>
+                /// <see cref="OSPolicyAssignmentName"/>-typed view over the <see cref="OsPolicyAssignment"/> resource
+                /// name property.
+                /// </summary>
+                [sys::ObsoleteAttribute]
+                public OSPolicyAssignmentName OsPolicyAssignmentAsOSPolicyAssignmentName
+                {
+                    get => string.IsNullOrEmpty(OsPolicyAssignment) ? null : OSPolicyAssignmentName.Parse(OsPolicyAssignment, allowUnparsed: true);
+                    set => OsPolicyAssignment = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

@@ -107,6 +107,53 @@ namespace Google.Cloud.DiscoveryEngine.V1
             get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class SearchSpec
+            {
+                public partial class Types
+                {
+                    public partial class SearchResultList
+                    {
+                        public partial class Types
+                        {
+                            public partial class SearchResult
+                            {
+                                public partial class Types
+                                {
+                                    public partial class UnstructuredDocumentInfo
+                                    {
+                                        /// <summary>
+                                        /// <see cref="DocumentName"/>-typed view over the <see cref="Document"/>
+                                        /// resource name property.
+                                        /// </summary>
+                                        public DocumentName DocumentAsDocumentName
+                                        {
+                                            get => string.IsNullOrEmpty(Document) ? null : DocumentName.Parse(Document, allowUnparsed: true);
+                                            set => Document = value?.ToString() ?? "";
+                                        }
+                                    }
+
+                                    public partial class ChunkInfo
+                                    {
+                                        /// <summary>
+                                        /// <see cref="ChunkName"/>-typed view over the <see cref="Chunk"/> resource
+                                        /// name property.
+                                        /// </summary>
+                                        public ChunkName ChunkAsChunkName
+                                        {
+                                            get => string.IsNullOrEmpty(Chunk) ? null : ChunkName.Parse(Chunk, allowUnparsed: true);
+                                            set => Chunk = value?.ToString() ?? "";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public partial class GetAnswerRequest

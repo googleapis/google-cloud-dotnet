@@ -310,5 +310,31 @@ namespace Google.Cloud.Retail.V2
             get => string.IsNullOrEmpty(Experiment) ? null : ExperimentName.Parse(Experiment, allowUnparsed: true);
             set => Experiment = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class ServingConfigExperiment
+            {
+                /// <summary>
+                /// <see cref="ServingConfigName"/>-typed view over the <see cref="OriginalServingConfig"/> resource
+                /// name property.
+                /// </summary>
+                public ServingConfigName OriginalServingConfigAsServingConfigName
+                {
+                    get => string.IsNullOrEmpty(OriginalServingConfig) ? null : ServingConfigName.Parse(OriginalServingConfig, allowUnparsed: true);
+                    set => OriginalServingConfig = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="ServingConfigName"/>-typed view over the <see cref="ExperimentServingConfig"/> resource
+                /// name property.
+                /// </summary>
+                public ServingConfigName ExperimentServingConfigAsServingConfigName
+                {
+                    get => string.IsNullOrEmpty(ExperimentServingConfig) ? null : ServingConfigName.Parse(ExperimentServingConfig, allowUnparsed: true);
+                    set => ExperimentServingConfig = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }
