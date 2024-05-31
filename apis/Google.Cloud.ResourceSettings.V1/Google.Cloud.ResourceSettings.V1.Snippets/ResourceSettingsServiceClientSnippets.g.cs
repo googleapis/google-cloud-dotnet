@@ -23,6 +23,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedResourceSettingsServiceClientSnippets
     {
         /// <summary>Snippet for ListSettings</summary>

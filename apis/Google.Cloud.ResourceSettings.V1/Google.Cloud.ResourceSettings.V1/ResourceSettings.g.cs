@@ -65,7 +65,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
             "LnJlc291cmNlc2V0dGluZ3MudjEuU2V0dGluZ0ID4EECKoMBCgtTZXR0aW5n",
             "VmlldxIcChhTRVRUSU5HX1ZJRVdfVU5TUEVDSUZJRUQQABIWChJTRVRUSU5H",
             "X1ZJRVdfQkFTSUMQARIgChxTRVRUSU5HX1ZJRVdfRUZGRUNUSVZFX1ZBTFVF",
-            "EAISHAoYU0VUVElOR19WSUVXX0xPQ0FMX1ZBTFVFEAMy+QYKF1Jlc291cmNl",
+            "EAISHAoYU0VUVElOR19WSUVXX0xPQ0FMX1ZBTFVFEAMy/AYKF1Jlc291cmNl",
             "U2V0dGluZ3NTZXJ2aWNlEvwBCgxMaXN0U2V0dGluZ3MSNS5nb29nbGUuY2xv",
             "dWQucmVzb3VyY2VzZXR0aW5ncy52MS5MaXN0U2V0dGluZ3NSZXF1ZXN0GjYu",
             "Z29vZ2xlLmNsb3VkLnJlc291cmNlc2V0dGluZ3MudjEuTGlzdFNldHRpbmdz",
@@ -83,15 +83,15 @@ namespace Google.Cloud.ResourceSettings.V1 {
             "AqEBMi0vdjEve3NldHRpbmcubmFtZT1vcmdhbml6YXRpb25zLyovc2V0dGlu",
             "Z3MvKn06B3NldHRpbmdaMjInL3YxL3tzZXR0aW5nLm5hbWU9Zm9sZGVycy8q",
             "L3NldHRpbmdzLyp9OgdzZXR0aW5nWjMyKC92MS97c2V0dGluZy5uYW1lPXBy",
-            "b2plY3RzLyovc2V0dGluZ3MvKn06B3NldHRpbmcaU8pBH3Jlc291cmNlc2V0",
-            "dGluZ3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoACCiRjb20uZ29vZ2xlLmNsb3Vk",
-            "LnJlc291cmNlc2V0dGluZ3MudjFCFVJlc291cmNlU2V0dGluZ3NQcm90b1AB",
-            "WlBjbG91ZC5nb29nbGUuY29tL2dvL3Jlc291cmNlc2V0dGluZ3MvYXBpdjEv",
-            "cmVzb3VyY2VzZXR0aW5nc3BiO3Jlc291cmNlc2V0dGluZ3NwYvgBAaoCIEdv",
-            "b2dsZS5DbG91ZC5SZXNvdXJjZVNldHRpbmdzLlYxygIgR29vZ2xlXENsb3Vk",
-            "XFJlc291cmNlU2V0dGluZ3NcVjHqAiNHb29nbGU6OkNsb3VkOjpSZXNvdXJj",
-            "ZVNldHRpbmdzOjpWMWIGcHJvdG8z"));
+            "b2plY3RzLyovc2V0dGluZ3MvKn06B3NldHRpbmcaVogCAcpBH3Jlc291cmNl",
+            "c2V0dGluZ3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoACCiRjb20uZ29vZ2xlLmNs",
+            "b3VkLnJlc291cmNlc2V0dGluZ3MudjFCFVJlc291cmNlU2V0dGluZ3NQcm90",
+            "b1ABWlBjbG91ZC5nb29nbGUuY29tL2dvL3Jlc291cmNlc2V0dGluZ3MvYXBp",
+            "djEvcmVzb3VyY2VzZXR0aW5nc3BiO3Jlc291cmNlc2V0dGluZ3NwYvgBAaoC",
+            "IEdvb2dsZS5DbG91ZC5SZXNvdXJjZVNldHRpbmdzLlYxygIgR29vZ2xlXENs",
+            "b3VkXFJlc291cmNlU2V0dGluZ3NcVjHqAiNHb29nbGU6OkNsb3VkOjpSZXNv",
+            "dXJjZVNldHRpbmdzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ResourceSettings.V1.SettingView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,16 +119,22 @@ namespace Google.Cloud.ResourceSettings.V1 {
     /// </summary>
     [pbr::OriginalName("SETTING_VIEW_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Include [Setting.metadata][google.cloud.resourcesettings.v1.Setting.metadata], but nothing else.
-    /// This is the default value (for both ListSettings and GetSetting).
+    /// Include
+    /// [Setting.metadata][google.cloud.resourcesettings.v1.Setting.metadata], but
+    /// nothing else. This is the default value (for both ListSettings and
+    /// GetSetting).
     /// </summary>
     [pbr::OriginalName("SETTING_VIEW_BASIC")] Basic = 1,
     /// <summary>
-    /// Include [Setting.effective_value][google.cloud.resourcesettings.v1.Setting.effective_value], but nothing else.
+    /// Include
+    /// [Setting.effective_value][google.cloud.resourcesettings.v1.Setting.effective_value],
+    /// but nothing else.
     /// </summary>
     [pbr::OriginalName("SETTING_VIEW_EFFECTIVE_VALUE")] EffectiveValue = 2,
     /// <summary>
-    /// Include [Setting.local_value][google.cloud.resourcesettings.v1.Setting.local_value], but nothing else.
+    /// Include
+    /// [Setting.local_value][google.cloud.resourcesettings.v1.Setting.local_value],
+    /// but nothing else.
     /// </summary>
     [pbr::OriginalName("SETTING_VIEW_LOCAL_VALUE")] LocalValue = 3,
   }
@@ -213,7 +219,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
     public const int MetadataFieldNumber = 7;
     private global::Google.Cloud.ResourceSettings.V1.SettingMetadata metadata_;
     /// <summary>
-    /// Output only. Metadata about a setting which is not editable by the end user.
+    /// Output only. Metadata about a setting which is not editable by the end
+    /// user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -229,8 +236,10 @@ namespace Google.Cloud.ResourceSettings.V1 {
     private global::Google.Cloud.ResourceSettings.V1.Value localValue_;
     /// <summary>
     /// The configured value of the setting at the given parent resource (ignoring
-    /// the resource hierarchy). The data type of [Value][google.cloud.resourcesettings.v1.Value] must always be
-    /// consistent with the data type defined in [Setting.metadata][google.cloud.resourcesettings.v1.Setting.metadata].
+    /// the resource hierarchy). The data type of
+    /// [Value][google.cloud.resourcesettings.v1.Value] must always be consistent
+    /// with the data type defined in
+    /// [Setting.metadata][google.cloud.resourcesettings.v1.Setting.metadata].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -245,20 +254,23 @@ namespace Google.Cloud.ResourceSettings.V1 {
     public const int EffectiveValueFieldNumber = 9;
     private global::Google.Cloud.ResourceSettings.V1.Value effectiveValue_;
     /// <summary>
-    /// Output only. The computed effective value of the setting at the given parent resource
-    /// (based on the resource hierarchy).
+    /// Output only. The computed effective value of the setting at the given
+    /// parent resource (based on the resource hierarchy).
     ///
     /// The effective value evaluates to one of the following options in the given
     /// order (the next option is used if the previous one does not exist):
     ///
-    /// 1. the local setting value on the given resource: [Setting.local_value][google.cloud.resourcesettings.v1.Setting.local_value]
+    /// 1. the local setting value on the given resource:
+    /// [Setting.local_value][google.cloud.resourcesettings.v1.Setting.local_value]
     /// 2. if one of the given resource's ancestors have a local setting value,
     ///    the local value at the nearest such ancestor
-    /// 3. the setting's default value: [SettingMetadata.default_value][google.cloud.resourcesettings.v1.SettingMetadata.default_value]
+    /// 3. the setting's default value:
+    /// [SettingMetadata.default_value][google.cloud.resourcesettings.v1.SettingMetadata.default_value]
     /// 4. an empty value (defined as a `Value` with all fields unset)
     ///
-    /// The data type of [Value][google.cloud.resourcesettings.v1.Value] must always be
-    /// consistent with the data type defined in [Setting.metadata][google.cloud.resourcesettings.v1.Setting.metadata].
+    /// The data type of [Value][google.cloud.resourcesettings.v1.Value] must
+    /// always be consistent with the data type defined in
+    /// [Setting.metadata][google.cloud.resourcesettings.v1.Setting.metadata].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -274,8 +286,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
     private string etag_ = "";
     /// <summary>
     /// A fingerprint used for optimistic concurrency. See
-    /// [UpdateSetting][google.cloud.resourcesettings.v1.ResourceSettingsService.UpdateSetting] for more
-    /// details.
+    /// [UpdateSetting][google.cloud.resourcesettings.v1.ResourceSettingsService.UpdateSetting]
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -659,8 +671,9 @@ namespace Google.Cloud.ResourceSettings.V1 {
     public const int DefaultValueFieldNumber = 5;
     private global::Google.Cloud.ResourceSettings.V1.Value defaultValue_;
     /// <summary>
-    /// The value provided by [Setting.effective_value][google.cloud.resourcesettings.v1.Setting.effective_value] if no setting value is
-    /// explicitly set.
+    /// The value provided by
+    /// [Setting.effective_value][google.cloud.resourcesettings.v1.Setting.effective_value]
+    /// if no setting value is explicitly set.
     ///
     /// Note: not all settings have a default value.
     /// </summary>
@@ -915,8 +928,9 @@ namespace Google.Cloud.ResourceSettings.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The data type for setting values of this setting. See [Value][google.cloud.resourcesettings.v1.Value] for more
-      /// details on the available data types.
+      /// The data type for setting values of this setting. See
+      /// [Value][google.cloud.resourcesettings.v1.Value] for more details on the
+      /// available data types.
       /// </summary>
       public enum DataType {
         /// <summary>
@@ -1803,8 +1817,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The Cloud resource that parents the setting. Must be in one of the
-    /// following forms:
+    /// Required. The Cloud resource that parents the setting. Must be in one of
+    /// the following forms:
     ///
     /// * `projects/{project_number}`
     /// * `projects/{project_id}`
@@ -2348,7 +2362,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+    /// Required. The name of the setting to get. See
+    /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
     /// requirements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2584,7 +2599,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
     public const int SettingFieldNumber = 1;
     private global::Google.Cloud.ResourceSettings.V1.Setting setting_;
     /// <summary>
-    /// Required. The setting to update. See [Setting][google.cloud.resourcesettings.v1.Setting] for field requirements.
+    /// Required. The setting to update. See
+    /// [Setting][google.cloud.resourcesettings.v1.Setting] for field requirements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

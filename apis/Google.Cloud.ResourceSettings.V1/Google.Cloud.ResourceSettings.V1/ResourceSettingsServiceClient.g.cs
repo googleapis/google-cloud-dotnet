@@ -31,6 +31,7 @@ using stt = System.Threading.Tasks;
 namespace Google.Cloud.ResourceSettings.V1
 {
     /// <summary>Settings for <see cref="ResourceSettingsServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class ResourceSettingsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="ResourceSettingsServiceSettings"/>.</summary>
@@ -129,6 +130,7 @@ namespace Google.Cloud.ResourceSettings.V1
     /// Builder class for <see cref="ResourceSettingsServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class ResourceSettingsServiceClientBuilder : gaxgrpc::ClientBuilderBase<ResourceSettingsServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -191,7 +193,11 @@ namespace Google.Cloud.ResourceSettings.V1
     /// resource is not in a Cloud Organization.
     /// For all requests, returns a `google.rpc.Status` with
     /// `google.rpc.Code.INVALID_ARGUMENT` if the request is malformed.
+    /// (== deprecation_description Resource Settings is deprecated. As of November
+    /// 7, 2023, no organizations will be onboarded for any of the enabled settings,
+    /// and the service will be shut down on October 1, 2024. ==)
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class ResourceSettingsServiceClient
     {
         /// <summary>
@@ -297,8 +303,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -327,8 +333,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -357,8 +363,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -387,8 +393,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -456,7 +462,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -474,7 +481,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -492,7 +500,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -507,7 +516,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -525,7 +535,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -543,7 +554,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -638,7 +650,11 @@ namespace Google.Cloud.ResourceSettings.V1
     /// resource is not in a Cloud Organization.
     /// For all requests, returns a `google.rpc.Status` with
     /// `google.rpc.Code.INVALID_ARGUMENT` if the request is malformed.
+    /// (== deprecation_description Resource Settings is deprecated. As of November
+    /// 7, 2023, no organizations will be onboarded for any of the enabled settings,
+    /// and the service will be shut down on October 1, 2024. ==)
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class ResourceSettingsServiceClientImpl : ResourceSettingsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListSettingsRequest, ListSettingsResponse> _callListSettings;

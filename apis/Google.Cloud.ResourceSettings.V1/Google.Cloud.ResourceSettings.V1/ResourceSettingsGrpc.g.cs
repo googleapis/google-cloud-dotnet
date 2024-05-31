@@ -36,7 +36,11 @@ namespace Google.Cloud.ResourceSettings.V1 {
   /// resource is not in a Cloud Organization.
   /// For all requests, returns a `google.rpc.Status` with
   /// `google.rpc.Code.INVALID_ARGUMENT` if the request is malformed.
+  /// (== deprecation_description Resource Settings is deprecated. As of November
+  /// 7, 2023, no organizations will be onboarded for any of the enabled settings,
+  /// and the service will be shut down on October 1, 2024. ==)
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class ResourceSettingsService
   {
     static readonly string __ServiceName = "google.cloud.resourcesettings.v1.ResourceSettingsService";
@@ -116,6 +120,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
     }
 
     /// <summary>Base class for server-side implementations of ResourceSettingsService</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(ResourceSettingsService), "BindService")]
     public abstract partial class ResourceSettingsServiceBase
     {
@@ -176,6 +181,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
     }
 
     /// <summary>Client for ResourceSettingsService</summary>
+    [global::System.ObsoleteAttribute]
     public partial class ResourceSettingsServiceClient : grpc::ClientBase<ResourceSettingsServiceClient>
     {
       /// <summary>Creates a new client for ResourceSettingsService</summary>
