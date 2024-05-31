@@ -1,5 +1,25 @@
 # Version history
 
+## Version 3.14.0, released 2024-05-31
+
+### Bug fixes
+
+- Fix possible race condition when restarting the stream ([commit 4410bb1](https://github.com/googleapis/google-cloud-dotnet/commit/4410bb1052c4d03a27387dbcc0d15f140c74da87))
+
+### New features
+
+- Add service_account_email for export subscriptions ([commit f73410e](https://github.com/googleapis/google-cloud-dotnet/commit/f73410e22786bb596defd10d0df9a6ed0d76fe95))
+- Make StreamingPull fail after 100 consecutive failures ([commit d9d658b](https://github.com/googleapis/google-cloud-dotnet/commit/d9d658b61ed72dfbb6d37596763db1e44dc7ba34))
+- Improve Pub/Sub streaming pull retries ([commit 8537ed4](https://github.com/googleapis/google-cloud-dotnet/commit/8537ed42202121ed6e6108ded101c9d4f59324aa))
+
+The last two of these features can cause user-visible changes. In particular:
+
+- Persistently-failing streaming pulls will eventually cause a SubscriberClient to fail
+- Authentication-based failures (e.g. using an expired service account) will now cause a SubscriberClient to fail
+- SubscriberClient will retry immediately after a streaming pull stream is terminated server-side, if the pull was active for 45 seconds or more before being terminated. This should improve responsiveness in some situations.
+
+All of these changes should be "net positive", but if they cause any issues, please file a bug.
+
 ## Version 3.13.0, released 2024-05-17
 
 ### New features
