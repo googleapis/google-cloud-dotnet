@@ -1,5 +1,43 @@
 # Version history
 
+## Version 3.0.0, released 2024-05-31
+
+### Bug fixes
+
+- **BREAKING CHANGE** An existing message `Segment` is removed ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- **BREAKING CHANGE** An existing message `GroundingAttribution` is removed ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- **BREAKING CHANGE** An existing field `grounding_attributions` is removed from message `.google.cloud.aiplatform.v1beta1.GroundingMetadata` ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- **BREAKING CHANGE** An existing field `disable_attribution` is removed from message `.google.cloud.aiplatform.v1beta1.GoogleSearchRetrieval` ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+
+### New features
+
+- Add ValueType.STRUCT to Feature ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add encryption_spec to FeatureOnlineStore ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add struct_value to FeatureValue ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add encryption_spec, service_account, disable_container_logging to DeploymentResourcePool ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add model_reference to Dataset ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add tool_config to GenerateContentRequest ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add dataplex_config to MetadataStore ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add model_reference to DatasetVersion ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add INVALID_SPARSE_DIMENSIONS, INVALID_SPARSE_EMBEDDING, INVALID_EMBEDDING to NearestNeighborSearchOperationMetadata.RecordError ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add valid_sparse_record_count, invalid_sparse_record_count to NearestNeighborSearchOperationMetadata.ContentValidationStats ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add sparse_embedding to IndexDatapoint ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add sparse_vectors_count to IndexStats ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add sparse_distance to FindNeighborsResponse.Neighbor ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add more fields in FindNeighborsRequest.Query ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add UpdateNotebookRuntimeTemplate to NotebookService ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add direct_notebook_source to NotebookExecutionJob ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add encryption_spec to NotebookRuntimeTemplate ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add idle_shutdown_config, encryption_spec, satisfies_pzs, satisfies_pzi to NotebookRuntime ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- Add RaySpec to PersistentResource ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+
+### Documentation improvements
+
+- A comment for field `feature_vector` in message `.google.cloud.aiplatform.v1beta1.IndexDatapoint` is changed ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- A comment for field `vectors_count` in message `.google.cloud.aiplatform.v1beta1.IndexStats` is changed ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- A comment for enum value `EMBEDDING_SIZE_MISMATCH` in enum `RecordErrorType` is changed ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+- A comment for field `exec` in message `.google.cloud.aiplatform.v1beta1.Probe` is changed ([commit 73f03ff](https://github.com/googleapis/google-cloud-dotnet/commit/73f03ff83f7f7adb3b72809b9cc2875312ec8c81))
+
 ## Version 2.28.0, released 2024-05-08
 
 ### New features
