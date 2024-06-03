@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.language.v1",
+  "libraryPackage": "Google.Cloud.Language.V1",
+  "services": {
+    "LanguageService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LanguageServiceClient",
+          "rpcs": {
+            "AnalyzeEntities": {
+              "methods": [
+                "AnalyzeEntities",
+                "AnalyzeEntitiesAsync"
+              ]
+            },
+            "AnalyzeEntitySentiment": {
+              "methods": [
+                "AnalyzeEntitySentiment",
+                "AnalyzeEntitySentimentAsync"
+              ]
+            },
+            "AnalyzeSentiment": {
+              "methods": [
+                "AnalyzeSentiment",
+                "AnalyzeSentimentAsync"
+              ]
+            },
+            "AnalyzeSyntax": {
+              "methods": [
+                "AnalyzeSyntax",
+                "AnalyzeSyntaxAsync"
+              ]
+            },
+            "AnnotateText": {
+              "methods": [
+                "AnnotateText",
+                "AnnotateTextAsync"
+              ]
+            },
+            "ClassifyText": {
+              "methods": [
+                "ClassifyText",
+                "ClassifyTextAsync"
+              ]
+            },
+            "ModerateText": {
+              "methods": [
+                "ModerateText",
+                "ModerateTextAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

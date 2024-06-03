@@ -1,0 +1,135 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.iap.v1",
+  "libraryPackage": "Google.Cloud.Iap.V1",
+  "services": {
+    "IdentityAwareProxyAdminService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "IdentityAwareProxyAdminServiceClient",
+          "rpcs": {
+            "CreateTunnelDestGroup": {
+              "methods": [
+                "CreateTunnelDestGroup",
+                "CreateTunnelDestGroupAsync"
+              ]
+            },
+            "DeleteTunnelDestGroup": {
+              "methods": [
+                "DeleteTunnelDestGroup",
+                "DeleteTunnelDestGroupAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetIapSettings": {
+              "methods": [
+                "GetIapSettings",
+                "GetIapSettingsAsync"
+              ]
+            },
+            "GetTunnelDestGroup": {
+              "methods": [
+                "GetTunnelDestGroup",
+                "GetTunnelDestGroupAsync"
+              ]
+            },
+            "ListTunnelDestGroups": {
+              "methods": [
+                "ListTunnelDestGroups",
+                "ListTunnelDestGroupsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateIapSettings": {
+              "methods": [
+                "UpdateIapSettings",
+                "UpdateIapSettingsAsync"
+              ]
+            },
+            "UpdateTunnelDestGroup": {
+              "methods": [
+                "UpdateTunnelDestGroup",
+                "UpdateTunnelDestGroupAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "IdentityAwareProxyOAuthService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "IdentityAwareProxyOAuthServiceClient",
+          "rpcs": {
+            "CreateBrand": {
+              "methods": [
+                "CreateBrand",
+                "CreateBrandAsync"
+              ]
+            },
+            "CreateIdentityAwareProxyClient": {
+              "methods": [
+                "CreateIdentityAwareProxyClient",
+                "CreateIdentityAwareProxyClientAsync"
+              ]
+            },
+            "DeleteIdentityAwareProxyClient": {
+              "methods": [
+                "DeleteIdentityAwareProxyClient",
+                "DeleteIdentityAwareProxyClientAsync"
+              ]
+            },
+            "GetBrand": {
+              "methods": [
+                "GetBrand",
+                "GetBrandAsync"
+              ]
+            },
+            "GetIdentityAwareProxyClient": {
+              "methods": [
+                "GetIdentityAwareProxyClient",
+                "GetIdentityAwareProxyClientAsync"
+              ]
+            },
+            "ListBrands": {
+              "methods": [
+                "ListBrands",
+                "ListBrandsAsync"
+              ]
+            },
+            "ListIdentityAwareProxyClients": {
+              "methods": [
+                "ListIdentityAwareProxyClients",
+                "ListIdentityAwareProxyClientsAsync"
+              ]
+            },
+            "ResetIdentityAwareProxyClientSecret": {
+              "methods": [
+                "ResetIdentityAwareProxyClientSecret",
+                "ResetIdentityAwareProxyClientSecretAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
