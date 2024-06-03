@@ -1287,6 +1287,36 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             get => string.IsNullOrEmpty(Name) ? null : gcbav::ListingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class BigQueryDatasetSource
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+
+                public partial class Types
+                {
+                    public partial class SelectedResource
+                    {
+                        /// <summary>
+                        /// <see cref="TableName"/>-typed view over the <see cref="Table"/> resource name property.
+                        /// </summary>
+                        public TableName TableAsTableName
+                        {
+                            get => string.IsNullOrEmpty(Table) ? null : TableName.Parse(Table, allowUnparsed: true);
+                            set => Table = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public partial class Subscription

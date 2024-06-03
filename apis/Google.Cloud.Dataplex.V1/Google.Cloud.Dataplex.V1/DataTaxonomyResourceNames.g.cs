@@ -877,6 +877,20 @@ namespace Google.Cloud.Dataplex.V1
         {
             get => new gax::ResourceNameList<DataAttributeName>(Attributes, s => string.IsNullOrEmpty(s) ? null : DataAttributeName.Parse(s, allowUnparsed: true));
         }
+
+        public partial class Types
+        {
+            public partial class Path
+            {
+                /// <summary>
+                /// <see cref="DataAttributeName"/>-typed view over the <see cref="Attributes"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<DataAttributeName> AttributesAsDataAttributeNames
+                {
+                    get => new gax::ResourceNameList<DataAttributeName>(Attributes, s => string.IsNullOrEmpty(s) ? null : DataAttributeName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
     }
 
     public partial class CreateDataTaxonomyRequest

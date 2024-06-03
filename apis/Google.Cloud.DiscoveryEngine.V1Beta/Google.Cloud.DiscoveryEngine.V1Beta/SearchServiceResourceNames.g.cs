@@ -35,5 +35,45 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             get => string.IsNullOrEmpty(Branch) ? null : BranchName.Parse(Branch, allowUnparsed: true);
             set => Branch = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class DataStoreSpec
+            {
+                /// <summary>
+                /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+                /// </summary>
+                public DataStoreName DataStoreAsDataStoreName
+                {
+                    get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+                    set => DataStore = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
+    public partial class SearchResponse
+    {
+        public partial class Types
+        {
+            public partial class Summary
+            {
+                public partial class Types
+                {
+                    public partial class Reference
+                    {
+                        /// <summary>
+                        /// <see cref="DocumentName"/>-typed view over the <see cref="Document"/> resource name
+                        /// property.
+                        /// </summary>
+                        public DocumentName DocumentAsDocumentName
+                        {
+                            get => string.IsNullOrEmpty(Document) ? null : DocumentName.Parse(Document, allowUnparsed: true);
+                            set => Document = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 }

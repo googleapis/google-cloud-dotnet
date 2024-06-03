@@ -539,6 +539,31 @@ namespace Google.Cloud.ArtifactRegistry.V1
         }
     }
 
+    public partial class RemoteRepositoryConfig
+    {
+        public partial class Types
+        {
+            public partial class UpstreamCredentials
+            {
+                public partial class Types
+                {
+                    public partial class UsernamePasswordCredentials
+                    {
+                        /// <summary>
+                        /// <see cref="SecretVersionName"/>-typed view over the <see cref="PasswordSecretVersion"/>
+                        /// resource name property.
+                        /// </summary>
+                        public SecretVersionName PasswordSecretVersionAsSecretVersionName
+                        {
+                            get => string.IsNullOrEmpty(PasswordSecretVersion) ? null : SecretVersionName.Parse(PasswordSecretVersion, allowUnparsed: true);
+                            set => PasswordSecretVersion = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public partial class Repository
     {
         /// <summary>

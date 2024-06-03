@@ -519,4 +519,44 @@ namespace Google.Cloud.AIPlatform.V1
             set => Network = value?.ToString() ?? "";
         }
     }
+
+    public partial class PipelineTaskExecutorDetail
+    {
+        public partial class Types
+        {
+            public partial class ContainerDetail
+            {
+                /// <summary>
+                /// <see cref="CustomJobName"/>-typed view over the <see cref="MainJob"/> resource name property.
+                /// </summary>
+                public CustomJobName MainJobAsCustomJobName
+                {
+                    get => string.IsNullOrEmpty(MainJob) ? null : CustomJobName.Parse(MainJob, allowUnparsed: true);
+                    set => MainJob = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="CustomJobName"/>-typed view over the <see cref="PreCachingCheckJob"/> resource name
+                /// property.
+                /// </summary>
+                public CustomJobName PreCachingCheckJobAsCustomJobName
+                {
+                    get => string.IsNullOrEmpty(PreCachingCheckJob) ? null : CustomJobName.Parse(PreCachingCheckJob, allowUnparsed: true);
+                    set => PreCachingCheckJob = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class CustomJobDetail
+            {
+                /// <summary>
+                /// <see cref="CustomJobName"/>-typed view over the <see cref="Job"/> resource name property.
+                /// </summary>
+                public CustomJobName JobAsCustomJobName
+                {
+                    get => string.IsNullOrEmpty(Job) ? null : CustomJobName.Parse(Job, allowUnparsed: true);
+                    set => Job = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
 }

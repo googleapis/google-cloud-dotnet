@@ -1297,6 +1297,31 @@ namespace Google.Cloud.CertificateManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gccv::CertificateName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class ManagedCertificate
+            {
+                /// <summary>
+                /// <see cref="DnsAuthorizationName"/>-typed view over the <see cref="DnsAuthorizations"/> resource name
+                /// property.
+                /// </summary>
+                public gax::ResourceNameList<DnsAuthorizationName> DnsAuthorizationsAsDnsAuthorizationNames
+                {
+                    get => new gax::ResourceNameList<DnsAuthorizationName>(DnsAuthorizations, s => string.IsNullOrEmpty(s) ? null : DnsAuthorizationName.Parse(s, allowUnparsed: true));
+                }
+
+                /// <summary>
+                /// <see cref="CertificateIssuanceConfigName"/>-typed view over the <see cref="IssuanceConfig"/>
+                /// resource name property.
+                /// </summary>
+                public CertificateIssuanceConfigName IssuanceConfigAsCertificateIssuanceConfigName
+                {
+                    get => string.IsNullOrEmpty(IssuanceConfig) ? null : CertificateIssuanceConfigName.Parse(IssuanceConfig, allowUnparsed: true);
+                    set => IssuanceConfig = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class CertificateMap

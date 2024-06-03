@@ -337,6 +337,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(FlowVersion) ? null : VersionName.Parse(FlowVersion, allowUnparsed: true);
             set => FlowVersion = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Result
+            {
+                /// <summary>
+                /// <see cref="TestCaseResultName"/>-typed view over the <see cref="DeploymentTestResults"/> resource
+                /// name property.
+                /// </summary>
+                public gax::ResourceNameList<TestCaseResultName> DeploymentTestResultsAsTestCaseResultNames
+                {
+                    get => new gax::ResourceNameList<TestCaseResultName>(DeploymentTestResults, s => string.IsNullOrEmpty(s) ? null : TestCaseResultName.Parse(s, allowUnparsed: true));
+                }
+
+                /// <summary>
+                /// <see cref="ExperimentName"/>-typed view over the <see cref="Experiment"/> resource name property.
+                /// </summary>
+                public ExperimentName ExperimentAsExperimentName
+                {
+                    get => string.IsNullOrEmpty(Experiment) ? null : ExperimentName.Parse(Experiment, allowUnparsed: true);
+                    set => Experiment = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class ListDeploymentsRequest

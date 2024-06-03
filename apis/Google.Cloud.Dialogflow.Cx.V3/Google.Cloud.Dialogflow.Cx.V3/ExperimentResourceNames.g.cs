@@ -328,6 +328,27 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::ExperimentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Result
+            {
+                public partial class Types
+                {
+                    public partial class VersionMetrics
+                    {
+                        /// <summary>
+                        /// <see cref="VersionName"/>-typed view over the <see cref="Version"/> resource name property.
+                        /// </summary>
+                        public VersionName VersionAsVersionName
+                        {
+                            get => string.IsNullOrEmpty(Version) ? null : VersionName.Parse(Version, allowUnparsed: true);
+                            set => Version = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public partial class ListExperimentsRequest

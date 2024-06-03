@@ -860,5 +860,20 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
             get => string.IsNullOrEmpty(Name) ? null : gcbav::AppConnectionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Gateway
+            {
+                /// <summary>
+                /// <see cref="AppGatewayName"/>-typed view over the <see cref="AppGateway"/> resource name property.
+                /// </summary>
+                public AppGatewayName AppGatewayAsAppGatewayName
+                {
+                    get => string.IsNullOrEmpty(AppGateway) ? null : AppGatewayName.Parse(AppGateway, allowUnparsed: true);
+                    set => AppGateway = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

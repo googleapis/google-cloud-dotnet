@@ -1684,6 +1684,24 @@ namespace Google.Cloud.Speech.V2
         }
     }
 
+    public partial class SpeechAdaptation
+    {
+        public partial class Types
+        {
+            public partial class AdaptationPhraseSet
+            {
+                /// <summary>
+                /// <see cref="PhraseSetName"/>-typed view over the <see cref="PhraseSet"/> resource name property.
+                /// </summary>
+                public PhraseSetName PhraseSetAsPhraseSetName
+                {
+                    get => string.IsNullOrEmpty(PhraseSet) ? null : PhraseSetName.Parse(PhraseSet, allowUnparsed: true);
+                    set => PhraseSet = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class RecognizeRequest
     {
         /// <summary>

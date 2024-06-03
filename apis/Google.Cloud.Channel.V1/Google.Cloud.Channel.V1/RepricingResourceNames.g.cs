@@ -630,4 +630,22 @@ namespace Google.Cloud.Channel.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class RepricingConfig
+    {
+        public partial class Types
+        {
+            public partial class EntitlementGranularity
+            {
+                /// <summary>
+                /// <see cref="EntitlementName"/>-typed view over the <see cref="Entitlement"/> resource name property.
+                /// </summary>
+                public EntitlementName EntitlementAsEntitlementName
+                {
+                    get => string.IsNullOrEmpty(Entitlement) ? null : EntitlementName.Parse(Entitlement, allowUnparsed: true);
+                    set => Entitlement = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
 }

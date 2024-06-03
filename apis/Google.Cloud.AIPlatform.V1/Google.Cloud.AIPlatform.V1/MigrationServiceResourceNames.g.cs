@@ -43,6 +43,77 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class MigrateResourceRequest
+    {
+        public partial class Types
+        {
+            public partial class MigrateMlEngineModelVersionConfig
+            {
+                /// <summary>
+                /// <see cref="VersionName"/>-typed view over the <see cref="ModelVersion"/> resource name property.
+                /// </summary>
+                public VersionName ModelVersionAsVersionName
+                {
+                    get => string.IsNullOrEmpty(ModelVersion) ? null : VersionName.Parse(ModelVersion, allowUnparsed: true);
+                    set => ModelVersion = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class MigrateAutomlModelConfig
+            {
+                /// <summary>
+                /// <see cref="AutoMLModelName"/>-typed view over the <see cref="Model"/> resource name property.
+                /// </summary>
+                public AutoMLModelName ModelAsAutoMLModelName
+                {
+                    get => string.IsNullOrEmpty(Model) ? null : AutoMLModelName.Parse(Model, allowUnparsed: true);
+                    set => Model = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class MigrateAutomlDatasetConfig
+            {
+                /// <summary>
+                /// <see cref="AutoMLDatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public AutoMLDatasetName DatasetAsAutoMLDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : AutoMLDatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class MigrateDataLabelingDatasetConfig
+            {
+                /// <summary>
+                /// <see cref="DataLabelingDatasetName"/>-typed view over the <see cref="Dataset"/> resource name
+                /// property.
+                /// </summary>
+                public DataLabelingDatasetName DatasetAsDataLabelingDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DataLabelingDatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+
+                public partial class Types
+                {
+                    public partial class MigrateDataLabelingAnnotatedDatasetConfig
+                    {
+                        /// <summary>
+                        /// <see cref="AnnotatedDatasetName"/>-typed view over the <see cref="AnnotatedDataset"/>
+                        /// resource name property.
+                        /// </summary>
+                        public AnnotatedDatasetName AnnotatedDatasetAsAnnotatedDatasetName
+                        {
+                            get => string.IsNullOrEmpty(AnnotatedDataset) ? null : AnnotatedDatasetName.Parse(AnnotatedDataset, allowUnparsed: true);
+                            set => AnnotatedDataset = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public partial class MigrateResourceResponse
     {
         /// <summary>
@@ -59,6 +130,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
             set => Model = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchMigrateResourcesOperationMetadata
+    {
+        public partial class Types
+        {
+            public partial class PartialResult
+            {
+                /// <summary>
+                /// <see cref="ModelName"/>-typed view over the <see cref="Model"/> resource name property.
+                /// </summary>
+                public ModelName ModelAsModelName
+                {
+                    get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
+                    set => Model = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

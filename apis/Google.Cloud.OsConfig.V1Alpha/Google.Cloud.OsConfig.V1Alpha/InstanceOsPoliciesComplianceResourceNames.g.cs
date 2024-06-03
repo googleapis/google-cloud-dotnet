@@ -312,6 +312,23 @@ namespace Google.Cloud.OsConfig.V1Alpha
             get => string.IsNullOrEmpty(Name) ? null : gcov::InstanceOSPoliciesComplianceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class OSPolicyCompliance
+            {
+                /// <summary>
+                /// <see cref="OSPolicyAssignmentName"/>-typed view over the <see cref="OsPolicyAssignment"/> resource
+                /// name property.
+                /// </summary>
+                [sys::ObsoleteAttribute]
+                public OSPolicyAssignmentName OsPolicyAssignmentAsOSPolicyAssignmentName
+                {
+                    get => string.IsNullOrEmpty(OsPolicyAssignment) ? null : OSPolicyAssignmentName.Parse(OsPolicyAssignment, allowUnparsed: true);
+                    set => OsPolicyAssignment = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class GetInstanceOSPoliciesComplianceRequest

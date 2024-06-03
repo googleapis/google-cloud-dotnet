@@ -1062,6 +1062,21 @@ namespace Google.Cloud.Storage.V2
             get => string.IsNullOrEmpty(Project) ? null : gagr::ProjectName.Parse(Project, allowUnparsed: true);
             set => Project = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Encryption
+            {
+                /// <summary>
+                /// <see cref="CryptoKeyName"/>-typed view over the <see cref="DefaultKmsKey"/> resource name property.
+                /// </summary>
+                public CryptoKeyName DefaultKmsKeyAsCryptoKeyName
+                {
+                    get => string.IsNullOrEmpty(DefaultKmsKey) ? null : CryptoKeyName.Parse(DefaultKmsKey, allowUnparsed: true);
+                    set => DefaultKmsKey = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class HmacKeyMetadata
