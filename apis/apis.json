@@ -344,7 +344,8 @@
       "protoPath": "google/cloud/aiplatform/v1",
       "shortName": "aiplatform",
       "serviceConfigFile": "aiplatform_v1.yaml",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ApiKeys.V2",
@@ -3267,7 +3268,8 @@
       "shortName": "netapp",
       "serviceConfigFile": "netapp_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1",
@@ -5674,7 +5676,8 @@
       "shortName": "mapsplatformdatasets",
       "serviceConfigFile": "mapsplatformdatasets_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Maps.Places.V1",
