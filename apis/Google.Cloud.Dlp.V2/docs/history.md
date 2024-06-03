@@ -1,24 +1,26 @@
 # Version history
 
-## Version 2.16.0, released 2024-05-08
+## Version 4.9.0, released 2024-06-03
 
 ### New features
 
+- Add secrets discovery support ([commit ec67558](https://github.com/googleapis/google-cloud-dotnet/commit/ec675587050d36090ce23ac6b618d551d2a0074b))
 - Add RPCs for deleting TableDataProfiles ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
 - Add RPCs for enabling discovery of Cloud SQL ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
 - Add field to InspectJobs num_rows_processed for BigQuery inspect jobs ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
 - Add new countries for supported detectors ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
 - Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
 
 ### Documentation improvements
 
+- Updated method documentation ([commit ec67558](https://github.com/googleapis/google-cloud-dotnet/commit/ec675587050d36090ce23ac6b618d551d2a0074b))
 - Updated method documentation ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
 
-## Version 2.15.0, released 2024-03-26
+### Notes
 
-### New features
-
-- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+This includes changes that were accidentally released in 2.15.0 and
+2.16.0 (now delisted), after version 4.8.0.
 
 ## Version 4.8.0, released 2024-03-21
 
