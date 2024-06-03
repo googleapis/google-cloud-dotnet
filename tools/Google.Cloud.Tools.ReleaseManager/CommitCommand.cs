@@ -24,6 +24,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public sealed class CommitCommand : CommandBase
     {
+        private const string DowngradeOverrideEnvironmentVariable = "DOWNGRADE_OVERRIDE";
+
         public CommitCommand()
             : base("commit", "Commit the current set of changes with an appropriate commit message")
         {
@@ -42,6 +44,14 @@ namespace Google.Cloud.Tools.ReleaseManager
             if (diff.NewVersion is null)
             {
                 throw new UserErrorException($"Cannot automate a release commit for a deleted API.");
+            }
+            // Prevent accidentally downgrading (i.e. lowering the version number).
+            if (diff.OldVersion is not null &&
+                StructuredVersion.FromString(diff.NewVersion).CompareTo(StructuredVersion.FromString(diff.OldVersion)) < 0 &&
+                Environment.GetEnvironmentVariable(DowngradeOverrideEnvironmentVariable) != diff.NewVersion)
+            {
+                throw new UserErrorException(
+                    $"Cannot downgrade from {diff.OldVersion} to {diff.NewVersion} without override. Set {DowngradeOverrideEnvironmentVariable}={diff.NewVersion} to override.");
             }
             var apiCatalog = ApiCatalog.Load();
             var api = apiCatalog[diff.Id];
