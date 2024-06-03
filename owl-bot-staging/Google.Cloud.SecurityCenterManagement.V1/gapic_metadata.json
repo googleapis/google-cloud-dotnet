@@ -1,0 +1,144 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.securitycentermanagement.v1",
+  "libraryPackage": "Google.Cloud.SecurityCenterManagement.V1",
+  "services": {
+    "SecurityCenterManagement": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SecurityCenterManagementClient",
+          "rpcs": {
+            "CreateEventThreatDetectionCustomModule": {
+              "methods": [
+                "CreateEventThreatDetectionCustomModule",
+                "CreateEventThreatDetectionCustomModuleAsync"
+              ]
+            },
+            "CreateSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "CreateSecurityHealthAnalyticsCustomModule",
+                "CreateSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "DeleteEventThreatDetectionCustomModule": {
+              "methods": [
+                "DeleteEventThreatDetectionCustomModule",
+                "DeleteEventThreatDetectionCustomModuleAsync"
+              ]
+            },
+            "DeleteSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "DeleteSecurityHealthAnalyticsCustomModule",
+                "DeleteSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "GetEffectiveEventThreatDetectionCustomModule": {
+              "methods": [
+                "GetEffectiveEventThreatDetectionCustomModule",
+                "GetEffectiveEventThreatDetectionCustomModuleAsync"
+              ]
+            },
+            "GetEffectiveSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "GetEffectiveSecurityHealthAnalyticsCustomModule",
+                "GetEffectiveSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "GetEventThreatDetectionCustomModule": {
+              "methods": [
+                "GetEventThreatDetectionCustomModule",
+                "GetEventThreatDetectionCustomModuleAsync"
+              ]
+            },
+            "GetSecurityCenterService": {
+              "methods": [
+                "GetSecurityCenterService",
+                "GetSecurityCenterServiceAsync"
+              ]
+            },
+            "GetSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "GetSecurityHealthAnalyticsCustomModule",
+                "GetSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "ListDescendantEventThreatDetectionCustomModules": {
+              "methods": [
+                "ListDescendantEventThreatDetectionCustomModules",
+                "ListDescendantEventThreatDetectionCustomModulesAsync"
+              ]
+            },
+            "ListDescendantSecurityHealthAnalyticsCustomModules": {
+              "methods": [
+                "ListDescendantSecurityHealthAnalyticsCustomModules",
+                "ListDescendantSecurityHealthAnalyticsCustomModulesAsync"
+              ]
+            },
+            "ListEffectiveEventThreatDetectionCustomModules": {
+              "methods": [
+                "ListEffectiveEventThreatDetectionCustomModules",
+                "ListEffectiveEventThreatDetectionCustomModulesAsync"
+              ]
+            },
+            "ListEffectiveSecurityHealthAnalyticsCustomModules": {
+              "methods": [
+                "ListEffectiveSecurityHealthAnalyticsCustomModules",
+                "ListEffectiveSecurityHealthAnalyticsCustomModulesAsync"
+              ]
+            },
+            "ListEventThreatDetectionCustomModules": {
+              "methods": [
+                "ListEventThreatDetectionCustomModules",
+                "ListEventThreatDetectionCustomModulesAsync"
+              ]
+            },
+            "ListSecurityCenterServices": {
+              "methods": [
+                "ListSecurityCenterServices",
+                "ListSecurityCenterServicesAsync"
+              ]
+            },
+            "ListSecurityHealthAnalyticsCustomModules": {
+              "methods": [
+                "ListSecurityHealthAnalyticsCustomModules",
+                "ListSecurityHealthAnalyticsCustomModulesAsync"
+              ]
+            },
+            "SimulateSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "SimulateSecurityHealthAnalyticsCustomModule",
+                "SimulateSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "UpdateEventThreatDetectionCustomModule": {
+              "methods": [
+                "UpdateEventThreatDetectionCustomModule",
+                "UpdateEventThreatDetectionCustomModuleAsync"
+              ]
+            },
+            "UpdateSecurityCenterService": {
+              "methods": [
+                "UpdateSecurityCenterService",
+                "UpdateSecurityCenterServiceAsync"
+              ]
+            },
+            "UpdateSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "UpdateSecurityHealthAnalyticsCustomModule",
+                "UpdateSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "ValidateEventThreatDetectionCustomModule": {
+              "methods": [
+                "ValidateEventThreatDetectionCustomModule",
+                "ValidateEventThreatDetectionCustomModuleAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
