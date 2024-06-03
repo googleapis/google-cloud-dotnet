@@ -1,0 +1,156 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.speech.v2",
+  "libraryPackage": "Google.Cloud.Speech.V2",
+  "services": {
+    "Speech": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SpeechClient",
+          "rpcs": {
+            "BatchRecognize": {
+              "methods": [
+                "BatchRecognize",
+                "BatchRecognizeAsync"
+              ]
+            },
+            "CreateCustomClass": {
+              "methods": [
+                "CreateCustomClass",
+                "CreateCustomClassAsync"
+              ]
+            },
+            "CreatePhraseSet": {
+              "methods": [
+                "CreatePhraseSet",
+                "CreatePhraseSetAsync"
+              ]
+            },
+            "CreateRecognizer": {
+              "methods": [
+                "CreateRecognizer",
+                "CreateRecognizerAsync"
+              ]
+            },
+            "DeleteCustomClass": {
+              "methods": [
+                "DeleteCustomClass",
+                "DeleteCustomClassAsync"
+              ]
+            },
+            "DeletePhraseSet": {
+              "methods": [
+                "DeletePhraseSet",
+                "DeletePhraseSetAsync"
+              ]
+            },
+            "DeleteRecognizer": {
+              "methods": [
+                "DeleteRecognizer",
+                "DeleteRecognizerAsync"
+              ]
+            },
+            "GetConfig": {
+              "methods": [
+                "GetConfig",
+                "GetConfigAsync"
+              ]
+            },
+            "GetCustomClass": {
+              "methods": [
+                "GetCustomClass",
+                "GetCustomClassAsync"
+              ]
+            },
+            "GetPhraseSet": {
+              "methods": [
+                "GetPhraseSet",
+                "GetPhraseSetAsync"
+              ]
+            },
+            "GetRecognizer": {
+              "methods": [
+                "GetRecognizer",
+                "GetRecognizerAsync"
+              ]
+            },
+            "ListCustomClasses": {
+              "methods": [
+                "ListCustomClasses",
+                "ListCustomClassesAsync"
+              ]
+            },
+            "ListPhraseSets": {
+              "methods": [
+                "ListPhraseSets",
+                "ListPhraseSetsAsync"
+              ]
+            },
+            "ListRecognizers": {
+              "methods": [
+                "ListRecognizers",
+                "ListRecognizersAsync"
+              ]
+            },
+            "Recognize": {
+              "methods": [
+                "Recognize",
+                "RecognizeAsync"
+              ]
+            },
+            "StreamingRecognize": {
+              "methods": [
+                "StreamingRecognize",
+                "StreamingRecognizeAsync"
+              ]
+            },
+            "UndeleteCustomClass": {
+              "methods": [
+                "UndeleteCustomClass",
+                "UndeleteCustomClassAsync"
+              ]
+            },
+            "UndeletePhraseSet": {
+              "methods": [
+                "UndeletePhraseSet",
+                "UndeletePhraseSetAsync"
+              ]
+            },
+            "UndeleteRecognizer": {
+              "methods": [
+                "UndeleteRecognizer",
+                "UndeleteRecognizerAsync"
+              ]
+            },
+            "UpdateConfig": {
+              "methods": [
+                "UpdateConfig",
+                "UpdateConfigAsync"
+              ]
+            },
+            "UpdateCustomClass": {
+              "methods": [
+                "UpdateCustomClass",
+                "UpdateCustomClassAsync"
+              ]
+            },
+            "UpdatePhraseSet": {
+              "methods": [
+                "UpdatePhraseSet",
+                "UpdatePhraseSetAsync"
+              ]
+            },
+            "UpdateRecognizer": {
+              "methods": [
+                "UpdateRecognizer",
+                "UpdateRecognizerAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
