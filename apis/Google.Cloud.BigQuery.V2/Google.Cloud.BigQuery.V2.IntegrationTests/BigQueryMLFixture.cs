@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ CREATE MODEL {datasetId}.{modelId}
 OPTIONS
   (model_type='linear_reg',
     input_label_cols=['label'],
-    max_iteration = 1,
+    max_iterations = 1,
     learn_rate=0.4,
     learn_rate_strategy='constant') AS
 SELECT 'a' AS f1, 2.0 AS label
