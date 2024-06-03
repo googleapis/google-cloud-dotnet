@@ -13,7 +13,12 @@ declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.25.2
 declare -r GRPC_VERSION=2.60.0
-declare -r GAPIC_GENERATOR_VERSION=1.4.28
+if [[ $GAPIC_GENERATOR_VERSION == "" ]]
+then
+  declare -r GAPIC_GENERATOR_VERSION=v1.4.28
+else
+  echo "Using GAPIC generator override: ${GAPIC_GENERATOR_VERSION}"
+fi
 
 # Tools that only run under Windows (at the moment)
 declare -r DOTCOVER=$TOOL_PACKAGES/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
@@ -112,10 +117,10 @@ install_microgenerator() {
   elif [ -d $GENERATOR_ROOT ]
   then
     git -C $GENERATOR_ROOT fetch -q --tags
-    git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
+    git -C $GENERATOR_ROOT checkout -q $GAPIC_GENERATOR_VERSION
   else
     git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -q
-    git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
+    git -C $GENERATOR_ROOT checkout -q $GAPIC_GENERATOR_VERSION
   fi
 
   # The dotnet restore step isn't generally required when cloning from elsewhere,
