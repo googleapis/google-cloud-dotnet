@@ -18,8 +18,8 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gpr = Google.Protobuf.Reflection;
 using gsmcv = Google.Shopping.Merchant.Conversions.V1Beta;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

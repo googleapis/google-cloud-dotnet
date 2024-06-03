@@ -17,11 +17,11 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcwv = Google.Cloud.Workflows.V1Beta;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
