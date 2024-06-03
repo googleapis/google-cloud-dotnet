@@ -289,6 +289,21 @@ namespace Google.Cloud.BareMetalSolution.V2
             get => string.IsNullOrEmpty(Volume) ? null : VolumeName.Parse(Volume, allowUnparsed: true);
             set => Volume = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class AllowedClient
+            {
+                /// <summary>
+                /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+                /// </summary>
+                public NetworkName NetworkAsNetworkName
+                {
+                    get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+                    set => Network = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class GetNfsShareRequest

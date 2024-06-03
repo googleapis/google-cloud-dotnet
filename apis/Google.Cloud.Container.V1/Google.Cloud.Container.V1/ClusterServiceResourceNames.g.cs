@@ -238,4 +238,22 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public static bool operator !=(TopicName a, TopicName b) => !(a == b);
     }
+
+    public partial class NotificationConfig
+    {
+        public partial class Types
+        {
+            public partial class PubSub
+            {
+                /// <summary>
+                /// <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
+                /// </summary>
+                public TopicName TopicAsTopicName
+                {
+                    get => string.IsNullOrEmpty(Topic) ? null : TopicName.Parse(Topic, allowUnparsed: true);
+                    set => Topic = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
 }

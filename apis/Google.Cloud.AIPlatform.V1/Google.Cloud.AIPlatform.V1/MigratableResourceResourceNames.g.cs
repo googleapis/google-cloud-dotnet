@@ -1247,4 +1247,75 @@ namespace Google.Cloud.AIPlatform.V1
         /// </returns>
         public static bool operator !=(AnnotatedDatasetName a, AnnotatedDatasetName b) => !(a == b);
     }
+
+    public partial class MigratableResource
+    {
+        public partial class Types
+        {
+            public partial class MlEngineModelVersion
+            {
+                /// <summary>
+                /// <see cref="VersionName"/>-typed view over the <see cref="Version"/> resource name property.
+                /// </summary>
+                public VersionName VersionAsVersionName
+                {
+                    get => string.IsNullOrEmpty(Version) ? null : VersionName.Parse(Version, allowUnparsed: true);
+                    set => Version = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class AutomlModel
+            {
+                /// <summary>
+                /// <see cref="AutoMLModelName"/>-typed view over the <see cref="Model"/> resource name property.
+                /// </summary>
+                public AutoMLModelName ModelAsAutoMLModelName
+                {
+                    get => string.IsNullOrEmpty(Model) ? null : AutoMLModelName.Parse(Model, allowUnparsed: true);
+                    set => Model = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class AutomlDataset
+            {
+                /// <summary>
+                /// <see cref="AutoMLDatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public AutoMLDatasetName DatasetAsAutoMLDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : AutoMLDatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class DataLabelingDataset
+            {
+                /// <summary>
+                /// <see cref="DataLabelingDatasetName"/>-typed view over the <see cref="Dataset"/> resource name
+                /// property.
+                /// </summary>
+                public DataLabelingDatasetName DatasetAsDataLabelingDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DataLabelingDatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+
+                public partial class Types
+                {
+                    public partial class DataLabelingAnnotatedDataset
+                    {
+                        /// <summary>
+                        /// <see cref="AnnotatedDatasetName"/>-typed view over the <see cref="AnnotatedDataset"/>
+                        /// resource name property.
+                        /// </summary>
+                        public AnnotatedDatasetName AnnotatedDatasetAsAnnotatedDatasetName
+                        {
+                            get => string.IsNullOrEmpty(AnnotatedDataset) ? null : AnnotatedDatasetName.Parse(AnnotatedDataset, allowUnparsed: true);
+                            set => AnnotatedDataset = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

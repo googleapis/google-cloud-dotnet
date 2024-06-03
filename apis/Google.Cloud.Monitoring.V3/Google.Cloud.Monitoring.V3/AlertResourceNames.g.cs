@@ -761,5 +761,41 @@ namespace Google.Cloud.Monitoring.V3
             }
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Condition
+            {
+                /// <summary>
+                /// <see cref="gcmv::AlertPolicyConditionName"/>-typed view over the <see cref="Name"/> resource name
+                /// property.
+                /// </summary>
+                public gcmv::AlertPolicyConditionName AlertPolicyConditionName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gcmv::AlertPolicyConditionName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gax::IResourceName ResourceName
+                {
+                    get
+                    {
+                        if (string.IsNullOrEmpty(Name))
+                        {
+                            return null;
+                        }
+                        if (gcmv::AlertPolicyConditionName.TryParse(Name, out gcmv::AlertPolicyConditionName alertPolicyCondition))
+                        {
+                            return alertPolicyCondition;
+                        }
+                        return gax::UnparsedResourceName.Parse(Name);
+                    }
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

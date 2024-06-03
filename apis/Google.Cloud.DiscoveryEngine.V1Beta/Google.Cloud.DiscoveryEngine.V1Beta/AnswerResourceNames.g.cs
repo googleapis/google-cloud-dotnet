@@ -477,5 +477,55 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             get => string.IsNullOrEmpty(Name) ? null : gcdv::AnswerName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class Reference
+            {
+                public partial class Types
+                {
+                    public partial class UnstructuredDocumentInfo
+                    {
+                        /// <summary>
+                        /// <see cref="DocumentName"/>-typed view over the <see cref="Document"/> resource name
+                        /// property.
+                        /// </summary>
+                        public DocumentName DocumentAsDocumentName
+                        {
+                            get => string.IsNullOrEmpty(Document) ? null : DocumentName.Parse(Document, allowUnparsed: true);
+                            set => Document = value?.ToString() ?? "";
+                        }
+                    }
+
+                    public partial class ChunkInfo
+                    {
+                        /// <summary>
+                        /// <see cref="ChunkName"/>-typed view over the <see cref="Chunk"/> resource name property.
+                        /// </summary>
+                        public ChunkName ChunkAsChunkName
+                        {
+                            get => string.IsNullOrEmpty(Chunk) ? null : ChunkName.Parse(Chunk, allowUnparsed: true);
+                            set => Chunk = value?.ToString() ?? "";
+                        }
+
+                        public partial class Types
+                        {
+                            public partial class DocumentMetadata
+                            {
+                                /// <summary>
+                                /// <see cref="DocumentName"/>-typed view over the <see cref="Document"/> resource name
+                                /// property.
+                                /// </summary>
+                                public DocumentName DocumentAsDocumentName
+                                {
+                                    get => string.IsNullOrEmpty(Document) ? null : DocumentName.Parse(Document, allowUnparsed: true);
+                                    set => Document = value?.ToString() ?? "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

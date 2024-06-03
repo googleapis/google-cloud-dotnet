@@ -451,5 +451,32 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ControlName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class BoostAction
+            {
+                /// <summary>
+                /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+                /// </summary>
+                public DataStoreName DataStoreAsDataStoreName
+                {
+                    get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+                    set => DataStore = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class FilterAction
+            {
+                /// <summary>
+                /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+                /// </summary>
+                public DataStoreName DataStoreAsDataStoreName
+                {
+                    get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+                    set => DataStore = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

@@ -613,5 +613,26 @@ namespace Google.Cloud.CertificateManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gccv::CertificateIssuanceConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class CertificateAuthorityConfig
+            {
+                public partial class Types
+                {
+                    public partial class CertificateAuthorityServiceConfig
+                    {
+                        /// <summary>
+                        /// <see cref="CaPoolName"/>-typed view over the <see cref="CaPool"/> resource name property.
+                        /// </summary>
+                        public CaPoolName CaPoolAsCaPoolName
+                        {
+                            get => string.IsNullOrEmpty(CaPool) ? null : CaPoolName.Parse(CaPool, allowUnparsed: true);
+                            set => CaPool = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 }

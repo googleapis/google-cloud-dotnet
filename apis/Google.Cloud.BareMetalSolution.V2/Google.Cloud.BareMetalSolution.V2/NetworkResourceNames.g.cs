@@ -551,6 +551,25 @@ namespace Google.Cloud.BareMetalSolution.V2
         }
     }
 
+    public partial class VRF
+    {
+        public partial class Types
+        {
+            public partial class VlanAttachment
+            {
+                /// <summary>
+                /// <see cref="InterconnectAttachmentName"/>-typed view over the <see cref="InterconnectAttachment"/>
+                /// resource name property.
+                /// </summary>
+                public InterconnectAttachmentName InterconnectAttachmentAsInterconnectAttachmentName
+                {
+                    get => string.IsNullOrEmpty(InterconnectAttachment) ? null : InterconnectAttachmentName.Parse(InterconnectAttachment, allowUnparsed: true);
+                    set => InterconnectAttachment = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class GetNetworkRequest
     {
         /// <summary>

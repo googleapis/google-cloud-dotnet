@@ -1546,6 +1546,34 @@ namespace Google.Cloud.Metastore.V1Alpha
         }
     }
 
+    public partial class NetworkConfig
+    {
+        public partial class Types
+        {
+            public partial class Consumer
+            {
+                /// <summary>
+                /// <see cref="SubnetworkName"/>-typed view over the <see cref="Subnetwork"/> resource name property.
+                /// </summary>
+                public SubnetworkName SubnetworkAsSubnetworkName
+                {
+                    get => string.IsNullOrEmpty(Subnetwork) ? null : SubnetworkName.Parse(Subnetwork, allowUnparsed: true);
+                    set => Subnetwork = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="gagr::LocationName"/>-typed view over the <see cref="EndpointLocation"/> resource name
+                /// property.
+                /// </summary>
+                public gagr::LocationName EndpointLocationAsLocationName
+                {
+                    get => string.IsNullOrEmpty(EndpointLocation) ? null : gagr::LocationName.Parse(EndpointLocation, allowUnparsed: true);
+                    set => EndpointLocation = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class MetadataImport
     {
         /// <summary>

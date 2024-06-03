@@ -793,6 +793,21 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             get => string.IsNullOrEmpty(Name) ? null : gcbdv::ListingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class BigQueryDatasetSource
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+                    set => Dataset = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class ListDataExchangesRequest

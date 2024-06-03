@@ -2664,6 +2664,31 @@ namespace Google.Cloud.MigrationCenter.V1
             get => string.IsNullOrEmpty(Name) ? null : gcmv::ReportConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class GroupPreferenceSetAssignment
+            {
+                /// <summary>
+                /// <see cref="GroupName"/>-typed view over the <see cref="Group"/> resource name property.
+                /// </summary>
+                public GroupName GroupAsGroupName
+                {
+                    get => string.IsNullOrEmpty(Group) ? null : GroupName.Parse(Group, allowUnparsed: true);
+                    set => Group = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="PreferenceSetName"/>-typed view over the <see cref="PreferenceSet"/> resource name
+                /// property.
+                /// </summary>
+                public PreferenceSetName PreferenceSetAsPreferenceSetName
+                {
+                    get => string.IsNullOrEmpty(PreferenceSet) ? null : PreferenceSetName.Parse(PreferenceSet, allowUnparsed: true);
+                    set => PreferenceSet = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class Report

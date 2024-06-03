@@ -318,6 +318,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
     }
 
+    public partial class Form
+    {
+        public partial class Types
+        {
+            public partial class Parameter
+            {
+                /// <summary>
+                /// <see cref="EntityTypeName"/>-typed view over the <see cref="EntityType"/> resource name property.
+                /// </summary>
+                public EntityTypeName EntityTypeAsEntityTypeName
+                {
+                    get => string.IsNullOrEmpty(EntityType) ? null : EntityTypeName.Parse(EntityType, allowUnparsed: true);
+                    set => EntityType = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class EventHandler
     {
         /// <summary>

@@ -4485,6 +4485,22 @@ namespace Google.Cloud.VmwareEngine.V1
             get => string.IsNullOrEmpty(Name) ? null : gcvv::ExternalAccessRuleName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class IpRange
+            {
+                /// <summary>
+                /// <see cref="ExternalAddressName"/>-typed view over the <see cref="ExternalAddress"/> resource name
+                /// property.
+                /// </summary>
+                public ExternalAddressName ExternalAddressAsExternalAddressName
+                {
+                    get => string.IsNullOrEmpty(ExternalAddress) ? null : ExternalAddressName.Parse(ExternalAddress, allowUnparsed: true);
+                    set => ExternalAddress = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class LoggingServer
@@ -4630,6 +4646,21 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvv::VmwareEngineNetworkName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class VpcNetwork
+            {
+                /// <summary>
+                /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+                /// </summary>
+                public NetworkName NetworkAsNetworkName
+                {
+                    get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+                    set => Network = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

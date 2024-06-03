@@ -1934,6 +1934,38 @@ namespace Google.Cloud.Dataform.V1Beta1
             get => string.IsNullOrEmpty(NpmrcEnvironmentVariablesSecretVersion) ? null : SecretVersionName.Parse(NpmrcEnvironmentVariablesSecretVersion, allowUnparsed: true);
             set => NpmrcEnvironmentVariablesSecretVersion = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class GitRemoteSettings
+            {
+                /// <summary>
+                /// <see cref="SecretVersionName"/>-typed view over the <see cref="AuthenticationTokenSecretVersion"/>
+                /// resource name property.
+                /// </summary>
+                public SecretVersionName AuthenticationTokenSecretVersionAsSecretVersionName
+                {
+                    get => string.IsNullOrEmpty(AuthenticationTokenSecretVersion) ? null : SecretVersionName.Parse(AuthenticationTokenSecretVersion, allowUnparsed: true);
+                    set => AuthenticationTokenSecretVersion = value?.ToString() ?? "";
+                }
+
+                public partial class Types
+                {
+                    public partial class SshAuthenticationConfig
+                    {
+                        /// <summary>
+                        /// <see cref="SecretVersionName"/>-typed view over the
+                        /// <see cref="UserPrivateKeySecretVersion"/> resource name property.
+                        /// </summary>
+                        public SecretVersionName UserPrivateKeySecretVersionAsSecretVersionName
+                        {
+                            get => string.IsNullOrEmpty(UserPrivateKeySecretVersion) ? null : SecretVersionName.Parse(UserPrivateKeySecretVersion, allowUnparsed: true);
+                            set => UserPrivateKeySecretVersion = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public partial class ListRepositoriesRequest
@@ -2328,6 +2360,22 @@ namespace Google.Cloud.Dataform.V1Beta1
             get => string.IsNullOrEmpty(ReleaseCompilationResult) ? null : CompilationResultName.Parse(ReleaseCompilationResult, allowUnparsed: true);
             set => ReleaseCompilationResult = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class ScheduledReleaseRecord
+            {
+                /// <summary>
+                /// <see cref="CompilationResultName"/>-typed view over the <see cref="CompilationResult"/> resource
+                /// name property.
+                /// </summary>
+                public CompilationResultName CompilationResultAsCompilationResultName
+                {
+                    get => string.IsNullOrEmpty(CompilationResult) ? null : CompilationResultName.Parse(CompilationResult, allowUnparsed: true);
+                    set => CompilationResult = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class ListReleaseConfigsRequest
@@ -2474,6 +2522,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             get => string.IsNullOrEmpty(ReleaseConfig) ? null : ReleaseConfigName.Parse(ReleaseConfig, allowUnparsed: true);
             set => ReleaseConfig = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class ScheduledExecutionRecord
+            {
+                /// <summary>
+                /// <see cref="WorkflowInvocationName"/>-typed view over the <see cref="WorkflowInvocation"/> resource
+                /// name property.
+                /// </summary>
+                public WorkflowInvocationName WorkflowInvocationAsWorkflowInvocationName
+                {
+                    get => string.IsNullOrEmpty(WorkflowInvocation) ? null : WorkflowInvocationName.Parse(WorkflowInvocation, allowUnparsed: true);
+                    set => WorkflowInvocation = value?.ToString() ?? "";
+                }
+            }
         }
     }
 
