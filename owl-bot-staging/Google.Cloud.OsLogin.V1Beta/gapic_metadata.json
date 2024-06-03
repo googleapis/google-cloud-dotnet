@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.oslogin.v1beta",
+  "libraryPackage": "Google.Cloud.OsLogin.V1Beta",
+  "services": {
+    "OsLoginService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OsLoginServiceClient",
+          "rpcs": {
+            "CreateSshPublicKey": {
+              "methods": [
+                "CreateSshPublicKey",
+                "CreateSshPublicKeyAsync"
+              ]
+            },
+            "DeletePosixAccount": {
+              "methods": [
+                "DeletePosixAccount",
+                "DeletePosixAccountAsync"
+              ]
+            },
+            "DeleteSshPublicKey": {
+              "methods": [
+                "DeleteSshPublicKey",
+                "DeleteSshPublicKeyAsync"
+              ]
+            },
+            "GetLoginProfile": {
+              "methods": [
+                "GetLoginProfile",
+                "GetLoginProfileAsync"
+              ]
+            },
+            "GetSshPublicKey": {
+              "methods": [
+                "GetSshPublicKey",
+                "GetSshPublicKeyAsync"
+              ]
+            },
+            "ImportSshPublicKey": {
+              "methods": [
+                "ImportSshPublicKey",
+                "ImportSshPublicKeyAsync"
+              ]
+            },
+            "SignSshPublicKey": {
+              "methods": [
+                "SignSshPublicKey",
+                "SignSshPublicKeyAsync"
+              ]
+            },
+            "UpdateSshPublicKey": {
+              "methods": [
+                "UpdateSshPublicKey",
+                "UpdateSshPublicKeyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
