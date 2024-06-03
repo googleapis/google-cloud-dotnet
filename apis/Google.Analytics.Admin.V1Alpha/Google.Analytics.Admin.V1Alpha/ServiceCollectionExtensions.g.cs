@@ -18,8 +18,8 @@
 using gaav = Google.Analytics.Admin.V1Alpha;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

@@ -19,8 +19,8 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcfv = Google.Cloud.Firestore.V1;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

@@ -18,8 +18,8 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Dataform.V1Beta1
