@@ -1266,7 +1266,7 @@
     },
     {
       "id": "Google.Cloud.CloudBuild.V1",
-      "version": "2.10.0",
+      "version": "2.11.0",
       "type": "grpc",
       "productName": "Cloud Build",
       "productUrl": "https://cloud.google.com/cloud-build",
@@ -1276,7 +1276,7 @@
         "cloudbuild"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/devtools/cloudbuild/v1",
