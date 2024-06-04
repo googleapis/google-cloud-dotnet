@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.6.0, released 2024-06-04
+
+### New features
+
+- Add fine-grained restore ([commit 34adaa4](https://github.com/googleapis/google-cloud-dotnet/commit/34adaa426a01647954131fe89a383ae1d00c5b17))
+- Add volume restore flexibility ([commit 34adaa4](https://github.com/googleapis/google-cloud-dotnet/commit/34adaa426a01647954131fe89a383ae1d00c5b17))
+- Add restore order ([commit 34adaa4](https://github.com/googleapis/google-cloud-dotnet/commit/34adaa426a01647954131fe89a383ae1d00c5b17))
+- Add strict-permissive mode ([commit 34adaa4](https://github.com/googleapis/google-cloud-dotnet/commit/34adaa426a01647954131fe89a383ae1d00c5b17))
+- Add gitops ([commit 34adaa4](https://github.com/googleapis/google-cloud-dotnet/commit/34adaa426a01647954131fe89a383ae1d00c5b17))
+
+### Documentation improvements
+
+- Update duration comment to include new validation from smart scheduling ([commit 34adaa4](https://github.com/googleapis/google-cloud-dotnet/commit/34adaa426a01647954131fe89a383ae1d00c5b17))
+
 ## Version 2.5.0, released 2024-05-14
 
 ### New features
