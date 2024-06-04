@@ -4,7 +4,7 @@
     <Version>2.0.0-beta06</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to administer Cloud Memorystore for Memcache (v1beta2).</Description>
+    <Description>Recommended Google client library to administer Cloud Memorystore for Memcached (v1beta2).</Description>
     <PackageTags>Redis;Memorystore;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
