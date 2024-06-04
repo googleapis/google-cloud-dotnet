@@ -5943,7 +5943,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Reports.V1Beta",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
@@ -5953,7 +5953,7 @@
         "reports"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta05"
+        "Google.Shopping.Type": "1.0.0-beta06"
       },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/reports/v1beta",
