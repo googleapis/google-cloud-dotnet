@@ -96,7 +96,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "dGF0ZRJECg5uZXdfdGFza19zdGF0ZRgDIAEoDjIsLmdvb2dsZS5jbG91ZC5i",
             "YXRjaC52MWFscGhhLlRhc2tTdGF0dXMuU3RhdGUiSwoEVHlwZRIUChBUWVBF",
             "X1VOU1BFQ0lGSUVEEAASFQoRSk9CX1NUQVRFX0NIQU5HRUQQARIWChJUQVNL",
-            "X1NUQVRFX0NIQU5HRUQQAiKxEQoQQWxsb2NhdGlvblBvbGljeRJNCghsb2Nh",
+            "X1NUQVRFX0NIQU5HRUQQAiLREQoQQWxsb2NhdGlvblBvbGljeRJNCghsb2Nh",
             "dGlvbhgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9j",
             "YXRpb25Qb2xpY3kuTG9jYXRpb25Qb2xpY3kSUQoIaW5zdGFuY2UYAiABKAsy",
             "Oy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5",
@@ -132,45 +132,46 @@ namespace Google.Cloud.Batch.V1Alpha {
             "EkQKCWJvb3RfZGlzaxgIIAEoCzIxLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
             "cGhhLkFsbG9jYXRpb25Qb2xpY3kuRGlzaxJICgVkaXNrcxgGIAMoCzI5Lmdv",
             "b2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuQXR0",
-            "YWNoZWREaXNrEhgKC3Jlc2VydmF0aW9uGAcgASgJQgPgQQEatgEKGEluc3Rh",
+            "YWNoZWREaXNrEhgKC3Jlc2VydmF0aW9uGAcgASgJQgPgQQEa1gEKGEluc3Rh",
             "bmNlUG9saWN5T3JUZW1wbGF0ZRJNCgZwb2xpY3kYASABKAsyOy5nb29nbGUu",
             "Y2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5Lkluc3RhbmNl",
             "UG9saWN5SAASGwoRaW5zdGFuY2VfdGVtcGxhdGUYAiABKAlIABIbChNpbnN0",
-            "YWxsX2dwdV9kcml2ZXJzGAMgASgIQhEKD3BvbGljeV90ZW1wbGF0ZRpXChBO",
-            "ZXR3b3JrSW50ZXJmYWNlEg8KB25ldHdvcmsYASABKAkSEgoKc3VibmV0d29y",
-            "axgCIAEoCRIeChZub19leHRlcm5hbF9pcF9hZGRyZXNzGAMgASgIGmoKDU5l",
-            "dHdvcmtQb2xpY3kSWQoSbmV0d29ya19pbnRlcmZhY2VzGAEgAygLMj0uZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5OZXR3",
-            "b3JrSW50ZXJmYWNlGjwKD1BsYWNlbWVudFBvbGljeRITCgtjb2xsb2NhdGlv",
-            "bhgBIAEoCRIUCgxtYXhfZGlzdGFuY2UYAiABKAMaLQoLTGFiZWxzRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJgChFQcm92aXNpb25p",
-            "bmdNb2RlbBIiCh5QUk9WSVNJT05JTkdfTU9ERUxfVU5TUEVDSUZJRUQQABIM",
-            "CghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIt8GCglU",
-            "YXNrR3JvdXASEQoEbmFtZRgBIAEoCUID4EEDEjwKCXRhc2tfc3BlYxgDIAEo",
-            "CzIkLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tTcGVjQgPgQQIS",
-            "EgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJhbGxlbGlzbRgFIAEoAxJRChFz",
-            "Y2hlZHVsaW5nX3BvbGljeRgGIAEoDjI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52",
-            "MWFscGhhLlRhc2tHcm91cC5TY2hlZHVsaW5nUG9saWN5EkcKEWFsbG9jYXRp",
-            "b25fcG9saWN5GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEu",
-            "QWxsb2NhdGlvblBvbGljeRJBCgZsYWJlbHMYCCADKAsyMS5nb29nbGUuY2xv",
-            "dWQuYmF0Y2gudjFhbHBoYS5UYXNrR3JvdXAuTGFiZWxzRW50cnkSQgoRdGFz",
-            "a19lbnZpcm9ubWVudHMYCSADKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
-            "bHBoYS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAogASgD",
-            "EhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3Nz",
-            "aBgMIAEoCBIcCg9ydW5fYXNfbm9uX3Jvb3QYDiABKAhCA+BBARJICg9zZXJ2",
-            "aWNlX2FjY291bnQYDyABKAsyKi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
-            "YS5TZXJ2aWNlQWNjb3VudEID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXAoQU2NoZWR1bGluZ1BvbGljeRIh",
-            "Ch1TQ0hFRFVMSU5HX1BPTElDWV9VTlNQRUNJRklFRBAAEhcKE0FTX1NPT05f",
-            "QVNfUE9TU0lCTEUQARIMCghJTl9PUkRFUhACOm/qQWwKHmJhdGNoLmdvb2ds",
-            "ZWFwaXMuY29tL1Rhc2tHcm91cBJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2pvYnMve2pvYn0vdGFza0dyb3Vwcy97dGFza19n",
-            "cm91cH0iLwoOU2VydmljZUFjY291bnQSDQoFZW1haWwYASABKAkSDgoGc2Nv",
-            "cGVzGAIgAygJQsIBCh5jb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFC",
-            "CEpvYlByb3RvUAFaNGNsb3VkLmdvb2dsZS5jb20vZ28vYmF0Y2gvYXBpdjFh",
-            "bHBoYS9iYXRjaHBiO2JhdGNocGKiAgNHQ0KqAhpHb29nbGUuQ2xvdWQuQmF0",
-            "Y2guVjFBbHBoYcoCGkdvb2dsZVxDbG91ZFxCYXRjaFxWMWFscGhh6gIdR29v",
-            "Z2xlOjpDbG91ZDo6QmF0Y2g6OlYxYWxwaGFiBnByb3RvMw=="));
+            "YWxsX2dwdV9kcml2ZXJzGAMgASgIEh4KEWluc3RhbGxfb3BzX2FnZW50GAQg",
+            "ASgIQgPgQQFCEQoPcG9saWN5X3RlbXBsYXRlGlcKEE5ldHdvcmtJbnRlcmZh",
+            "Y2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEh4KFm5v",
+            "X2V4dGVybmFsX2lwX2FkZHJlc3MYAyABKAgaagoNTmV0d29ya1BvbGljeRJZ",
+            "ChJuZXR3b3JrX2ludGVyZmFjZXMYASADKAsyPS5nb29nbGUuY2xvdWQuYmF0",
+            "Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtJbnRlcmZhY2Ua",
+            "PAoPUGxhY2VtZW50UG9saWN5EhMKC2NvbGxvY2F0aW9uGAEgASgJEhQKDG1h",
+            "eF9kaXN0YW5jZRgCIAEoAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBImAKEVByb3Zpc2lvbmluZ01vZGVsEiIKHlBS",
+            "T1ZJU0lPTklOR19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAES",
+            "CAoEU1BPVBACEg8KC1BSRUVNUFRJQkxFEAMi3wYKCVRhc2tHcm91cBIRCgRu",
+            "YW1lGAEgASgJQgPgQQMSPAoJdGFza19zcGVjGAMgASgLMiQuZ29vZ2xlLmNs",
+            "b3VkLmJhdGNoLnYxYWxwaGEuVGFza1NwZWNCA+BBAhISCgp0YXNrX2NvdW50",
+            "GAQgASgDEhMKC3BhcmFsbGVsaXNtGAUgASgDElEKEXNjaGVkdWxpbmdfcG9s",
+            "aWN5GAYgASgOMjYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza0dy",
+            "b3VwLlNjaGVkdWxpbmdQb2xpY3kSRwoRYWxsb2NhdGlvbl9wb2xpY3kYByAB",
+            "KAsyLC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9s",
+            "aWN5EkEKBmxhYmVscxgIIAMoCzIxLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
+            "cGhhLlRhc2tHcm91cC5MYWJlbHNFbnRyeRJCChF0YXNrX2Vudmlyb25tZW50",
+            "cxgJIAMoCzInLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkVudmlyb25t",
+            "ZW50EhsKE3Rhc2tfY291bnRfcGVyX25vZGUYCiABKAMSGgoScmVxdWlyZV9o",
+            "b3N0c19maWxlGAsgASgIEhYKDnBlcm1pc3NpdmVfc3NoGAwgASgIEhwKD3J1",
+            "bl9hc19ub25fcm9vdBgOIAEoCEID4EEBEkgKD3NlcnZpY2VfYWNjb3VudBgP",
+            "IAEoCzIqLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlNlcnZpY2VBY2Nv",
+            "dW50QgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ASJcChBTY2hlZHVsaW5nUG9saWN5EiEKHVNDSEVEVUxJTkdf",
+            "UE9MSUNZX1VOU1BFQ0lGSUVEEAASFwoTQVNfU09PTl9BU19QT1NTSUJMRRAB",
+            "EgwKCElOX09SREVSEAI6b+pBbAoeYmF0Y2guZ29vZ2xlYXBpcy5jb20vVGFz",
+            "a0dyb3VwEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vam9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIvCg5TZXJ2",
+            "aWNlQWNjb3VudBINCgVlbWFpbBgBIAEoCRIOCgZzY29wZXMYAiADKAlCwgEK",
+            "HmNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYUIISm9iUHJvdG9QAVo0",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRjaC9hcGl2MWFscGhhL2JhdGNocGI7",
+            "YmF0Y2hwYqICA0dDQqoCGkdvb2dsZS5DbG91ZC5CYXRjaC5WMUFscGhhygIa",
+            "R29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHqAh1Hb29nbGU6OkNsb3VkOjpC",
+            "YXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -187,7 +188,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk.Parser, new[]{ "NewDisk", "ExistingDisk", "DeviceName" }, new[]{ "Attached" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers", "DriverVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "AllowedMachineTypes", "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "BootDisk", "Disks", "Reservation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers" }, new[]{ "PolicyTemplate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers", "InstallOpsAgent" }, new[]{ "PolicyTemplate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy.Parser, new[]{ "Collocation", "MaxDistance" }, null, null, null, null),
@@ -5902,6 +5903,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InstancePolicyOrTemplate(InstancePolicyOrTemplate other) : this() {
           installGpuDrivers_ = other.installGpuDrivers_;
+          installOpsAgent_ = other.installOpsAgent_;
           switch (other.PolicyTemplateCase) {
             case PolicyTemplateOneofCase.Policy:
               Policy = other.Policy.Clone();
@@ -5970,9 +5972,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int InstallGpuDriversFieldNumber = 3;
         private bool installGpuDrivers_;
         /// <summary>
-        /// Set this field true if users want Batch to help fetch drivers from a
-        /// third party location and install them for GPUs specified in
-        /// policy.accelerators or instance_template on their behalf. Default is
+        /// Set this field true if you want Batch to help fetch drivers from a third
+        /// party location and install them for GPUs specified in
+        /// `policy.accelerators` or `instance_template` on your behalf. Default is
         /// false.
         ///
         /// For Container-Optimized Image cases, Batch will install the
@@ -5987,6 +5989,22 @@ namespace Google.Cloud.Batch.V1Alpha {
           get { return installGpuDrivers_; }
           set {
             installGpuDrivers_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "install_ops_agent" field.</summary>
+        public const int InstallOpsAgentFieldNumber = 4;
+        private bool installOpsAgent_;
+        /// <summary>
+        /// Optional. Set this field true if you want Batch to install Ops Agent on
+        /// your behalf. Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool InstallOpsAgent {
+          get { return installOpsAgent_; }
+          set {
+            installOpsAgent_ = value;
           }
         }
 
@@ -6029,6 +6047,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (!object.Equals(Policy, other.Policy)) return false;
           if (InstanceTemplate != other.InstanceTemplate) return false;
           if (InstallGpuDrivers != other.InstallGpuDrivers) return false;
+          if (InstallOpsAgent != other.InstallOpsAgent) return false;
           if (PolicyTemplateCase != other.PolicyTemplateCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -6040,6 +6059,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (policyTemplateCase_ == PolicyTemplateOneofCase.Policy) hash ^= Policy.GetHashCode();
           if (HasInstanceTemplate) hash ^= InstanceTemplate.GetHashCode();
           if (InstallGpuDrivers != false) hash ^= InstallGpuDrivers.GetHashCode();
+          if (InstallOpsAgent != false) hash ^= InstallOpsAgent.GetHashCode();
           hash ^= (int) policyTemplateCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -6071,6 +6091,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(24);
             output.WriteBool(InstallGpuDrivers);
           }
+          if (InstallOpsAgent != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(InstallOpsAgent);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6093,6 +6117,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(24);
             output.WriteBool(InstallGpuDrivers);
           }
+          if (InstallOpsAgent != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(InstallOpsAgent);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6112,6 +6140,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (InstallGpuDrivers != false) {
             size += 1 + 1;
           }
+          if (InstallOpsAgent != false) {
+            size += 1 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -6126,6 +6157,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (other.InstallGpuDrivers != false) {
             InstallGpuDrivers = other.InstallGpuDrivers;
+          }
+          if (other.InstallOpsAgent != false) {
+            InstallOpsAgent = other.InstallOpsAgent;
           }
           switch (other.PolicyTemplateCase) {
             case PolicyTemplateOneofCase.Policy:
@@ -6171,6 +6205,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 InstallGpuDrivers = input.ReadBool();
                 break;
               }
+              case 32: {
+                InstallOpsAgent = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -6201,6 +6239,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               }
               case 24: {
                 InstallGpuDrivers = input.ReadBool();
+                break;
+              }
+              case 32: {
+                InstallOpsAgent = input.ReadBool();
                 break;
               }
             }
