@@ -4052,7 +4052,7 @@
     },
     {
       "id": "Google.Cloud.Retail.V2",
-      "version": "2.9.0",
+      "version": "2.10.0",
       "type": "grpc",
       "productName": "Retail",
       "productUrl": "https://cloud.google.com/retail/docs",
@@ -4061,8 +4061,8 @@
         "retail"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/retail/v2",
