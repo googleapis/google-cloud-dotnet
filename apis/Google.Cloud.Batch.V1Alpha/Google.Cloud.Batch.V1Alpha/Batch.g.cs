@@ -1058,7 +1058,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     private global::Google.Cloud.Batch.V1Alpha.Job job_;
     /// <summary>
     /// Required. The Job to update.
-    /// Only fields specified in `update_mask` are updated.
+    /// Only fields specified in `updateMask` are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1075,8 +1075,21 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// <summary>
     /// Required. Mask of fields to update.
     ///
-    /// UpdateJob request now only supports update on `task_count` field in a job's
-    /// first task group. Other fields will be ignored.
+    /// The `jobs.patch` method can only be used while a job is in the `QUEUED`,
+    /// `SCHEDULED`, or `RUNNING` state and currently only supports increasing the
+    /// value of the first `taskCount` field in the job's `taskGroups` field.
+    /// Therefore, you must set the value of `updateMask` to `taskGroups`. Any
+    /// other job fields in the update request will be ignored.
+    ///
+    /// For example, to update a job's `taskCount` to `2`, set `updateMask` to
+    /// `taskGroups` and use the following request body:
+    /// ```
+    /// {
+    ///   "taskGroups":[{
+    ///     "taskCount": 2
+    ///   }]
+    /// }
+    /// ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
