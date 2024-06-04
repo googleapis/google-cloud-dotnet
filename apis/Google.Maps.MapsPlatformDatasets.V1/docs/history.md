@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-06-04
+
+### New features
+
+- Added support for getting/listing active version(s) ([commit 9a3cd7b](https://github.com/googleapis/google-cloud-dotnet/commit/9a3cd7bd79258a14b54f95586db028cd78b33f2c))
+
+### Documentation improvements
+
+- General improvements ([commit 9a3cd7b](https://github.com/googleapis/google-cloud-dotnet/commit/9a3cd7bd79258a14b54f95586db028cd78b33f2c))
+
 ## Version 1.0.0-beta04, released 2024-05-08
 
 ### New features
