@@ -3183,7 +3183,7 @@
     },
     {
       "id": "Google.Cloud.Metastore.V1Beta",
-      "version": "2.0.0-beta10",
+      "version": "2.0.0-beta11",
       "type": "grpc",
       "productName": "Dataproc Metastore",
       "productUrl": "https://cloud.google.com/dataproc-metastore/docs",
@@ -3193,9 +3193,9 @@
         "metastore"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/metastore/v1beta",
