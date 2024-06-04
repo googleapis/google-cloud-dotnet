@@ -2073,7 +2073,7 @@
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
-      "version": "1.0.0-beta13",
+      "version": "1.0.0-beta14",
       "type": "grpc",
       "productName": "Discovery Engine",
       "productUrl": "https://cloud.google.com/discovery-engine/docs",
@@ -2083,8 +2083,8 @@
         "media"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/discoveryengine/v1beta",

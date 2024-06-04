@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+- Add control service APIs ([commit 50fe0e3](https://github.com/googleapis/google-cloud-dotnet/commit/50fe0e313e7fb11bb196f62128e5907b47bf711c))
+- Support writing user events for blended engines ([commit 50fe0e3](https://github.com/googleapis/google-cloud-dotnet/commit/50fe0e313e7fb11bb196f62128e5907b47bf711c))
+- Support cancelling import operations ([commit 50fe0e3](https://github.com/googleapis/google-cloud-dotnet/commit/50fe0e313e7fb11bb196f62128e5907b47bf711c))
+- Add custom model list API ([commit 50fe0e3](https://github.com/googleapis/google-cloud-dotnet/commit/50fe0e313e7fb11bb196f62128e5907b47bf711c))
+- Add provision project API ([commit 50fe0e3](https://github.com/googleapis/google-cloud-dotnet/commit/50fe0e313e7fb11bb196f62128e5907b47bf711c))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 50fe0e3](https://github.com/googleapis/google-cloud-dotnet/commit/50fe0e313e7fb11bb196f62128e5907b47bf711c))
+
 ## Version 1.0.0-beta13, released 2024-05-08
 
 ### New features
