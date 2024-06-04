@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.20.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
 ## Version 4.19.0, released 2024-05-13
 
 ### New features
