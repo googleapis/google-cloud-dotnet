@@ -4713,7 +4713,7 @@
     },
     {
       "id": "Google.Cloud.Speech.V2",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Cloud Speech-to-Text",
       "productUrl": "https://cloud.google.com/speech",
@@ -4722,8 +4722,8 @@
         "speech"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/speech/v2",
