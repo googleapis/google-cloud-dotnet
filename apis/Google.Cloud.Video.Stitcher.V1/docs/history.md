@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.3.0, released 2024-06-04
+
+### New features
+
+- Add apis for Create, Read, Update, Delete for VODConfigs ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+- Allowed usage for VODConfigs in VODSession ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+- Added token config for MediaCdnKey ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+- Added targetting parameter support to Livesession ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+- Added adtracking to Livesession ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+- Added fetchoptions with custom headers for Live and VODConfigs ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+
+### Documentation improvements
+
+- Added apis for Create, Read, Update, Delete For VODConfigs. Added vodConfig usage in VODSession. Added TokenConfig for MediaCdnKey. Added targeting_parameter and ad_tracking for Livesession. Added FetchOptions for Live and VOD configs. ([commit cd0f56e](https://github.com/googleapis/google-cloud-dotnet/commit/cd0f56e7b7677feff24624233ba04446ed60674c))
+
 ## Version 3.2.0, released 2024-05-14
 
 ### New features
