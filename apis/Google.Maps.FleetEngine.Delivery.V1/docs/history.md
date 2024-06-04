@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2024-06-04
+
+### Documentation improvements
+
+- Remove comment about deleted SearchTasks method ([commit baba90c](https://github.com/googleapis/google-cloud-dotnet/commit/baba90cf3feb33c19c036e90ebc2066e9269add1))
+
 ## Version 2.0.0, released 2024-05-08
 
 ### Bug fixes
