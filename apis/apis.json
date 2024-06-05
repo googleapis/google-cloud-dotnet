@@ -2030,15 +2030,15 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.V2Beta1",
-      "version": "1.0.0-beta16",
+      "version": "1.0.0-beta17",
       "type": "grpc",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
       "description": "Recommended Google client library to access the Google Dialogflow API (v2beta1).",
       "tags": [],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/dialogflow/v2beta1",
