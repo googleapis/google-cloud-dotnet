@@ -37,7 +37,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             "b3RvIowECgxCdXNpbmVzc0luZm8SEQoEbmFtZRgBIAEoCUID4EEIEjUKB2Fk",
             "ZHJlc3MYAiABKAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzQgPgQQFI",
             "AIgBARIxCgVwaG9uZRgDIAEoCzIYLmdvb2dsZS50eXBlLlBob25lTnVtYmVy",
-            "QgPgQQFIAYgBARJsChhwaG9uZV92ZXJpZmljYXRpb25fc3RhdGUYBCABKA4y",
+            "QgPgQQNIAYgBARJsChhwaG9uZV92ZXJpZmljYXRpb25fc3RhdGUYBCABKA4y",
             "QC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLlBo",
             "b25lVmVyaWZpY2F0aW9uU3RhdGVCA+BBA0gCiAEBEl0KEGN1c3RvbWVyX3Nl",
             "cnZpY2UYBSABKAsyOS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3Vu",
@@ -169,7 +169,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int PhoneFieldNumber = 3;
     private global::Google.Type.PhoneNumber phone_;
     /// <summary>
-    /// Optional. The phone number of the business.
+    /// Output only. The phone number of the business.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
