@@ -5265,7 +5265,7 @@
     },
     {
       "id": "Google.Cloud.VmwareEngine.V1",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "type": "grpc",
       "productName": "VMware Engine",
       "productUrl": "https://cloud.google.com/vmware-engine/docs",
@@ -5274,9 +5274,9 @@
         "vmware"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/vmwareengine/v1",
