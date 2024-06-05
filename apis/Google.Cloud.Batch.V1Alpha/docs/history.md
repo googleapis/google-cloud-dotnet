@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-alpha29, released 2024-06-04
+
+### New features
+
+- Add a install_ops_agent field to InstancePolicyOrTemplate for Ops Agent support ([commit 81aaa3d](https://github.com/googleapis/google-cloud-dotnet/commit/81aaa3dda894862048aae85a718e6cb4e3f2f061))
+
+### Documentation improvements
+
+- A comment for field `max_run_duration` in message `google.cloud.batch.v1alpha.TaskSpec` is changed ([commit 81aaa3d](https://github.com/googleapis/google-cloud-dotnet/commit/81aaa3dda894862048aae85a718e6cb4e3f2f061))
+- Refine doc for the update_mask field in message `google.cloud.batch.v1alpha.UpdateJobRequest` ([commit 81aaa3d](https://github.com/googleapis/google-cloud-dotnet/commit/81aaa3dda894862048aae85a718e6cb4e3f2f061))
+- Refine description for field `task_execution` ([commit f2e7e66](https://github.com/googleapis/google-cloud-dotnet/commit/f2e7e660cec9cbb940a894098f37b3f503c65f43))
+
 ## Version 1.0.0-alpha28, released 2024-05-13
 
 ### New features
