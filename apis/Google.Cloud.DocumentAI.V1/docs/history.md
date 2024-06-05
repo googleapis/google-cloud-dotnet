@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.17.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+- Make Layout Parser generally available in V1 ([commit 25c96f8](https://github.com/googleapis/google-cloud-dotnet/commit/25c96f82e50204a67c9a6222c8dd9af5cb8059cb))
+- Make Layout Parser generally available in V1 ([commit 7359623](https://github.com/googleapis/google-cloud-dotnet/commit/735962332f058547aa816eea244e251591973243))
+
+### Documentation improvements
+
+- Clarify the unavailability of some features ([commit b14ce7d](https://github.com/googleapis/google-cloud-dotnet/commit/b14ce7d087969abb5e061692cd34be171439165f))
+
 ## Version 3.16.0, released 2024-05-14
 
 ### New features

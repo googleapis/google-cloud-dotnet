@@ -2120,7 +2120,7 @@
     },
     {
       "id": "Google.Cloud.DocumentAI.V1",
-      "version": "3.16.0",
+      "version": "3.17.0",
       "type": "grpc",
       "productName": "Cloud Document AI",
       "productUrl": "https://cloud.google.com/solutions/document-ai",
@@ -2134,8 +2134,8 @@
         "automl"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/documentai/v1",
