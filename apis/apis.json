@@ -1980,7 +1980,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
-      "version": "2.18.0",
+      "version": "2.19.0",
       "type": "grpc",
       "productName": "Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow/cx/docs",
@@ -1991,8 +1991,8 @@
         "agents"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/dialogflow/cx/v3",
