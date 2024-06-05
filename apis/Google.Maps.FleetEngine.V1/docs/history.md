@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2024-06-04
+
+### Documentation improvements
+
+- Mark TerminalPointId as deprecated ([commit 40c4541](https://github.com/googleapis/google-cloud-dotnet/commit/40c45419528066621c26d6442e1f3d8bc734d616))
+
 ## Version 2.0.0, released 2024-05-08
 
 ### Bug fixes
