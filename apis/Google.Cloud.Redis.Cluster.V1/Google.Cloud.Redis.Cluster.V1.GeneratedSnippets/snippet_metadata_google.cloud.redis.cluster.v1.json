@@ -1421,6 +1421,293 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetClusterCertificateAuthority_sync",
+      "title": "GetClusterCertificateAuthorityRequestObject",
+      "description": "Snippet for GetClusterCertificateAuthority",
+      "file": "CloudRedisClusterClient.GetClusterCertificateAuthorityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterCertificateAuthority",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetClusterCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.CertificateAuthority",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetClusterCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetClusterCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetClusterCertificateAuthority_async",
+      "title": "GetClusterCertificateAuthorityRequestObjectAsync",
+      "description": "Snippet for GetClusterCertificateAuthorityAsync",
+      "file": "CloudRedisClusterClient.GetClusterCertificateAuthorityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterCertificateAuthorityAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetClusterCertificateAuthorityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.CertificateAuthority>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetClusterCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetClusterCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetClusterCertificateAuthority_sync_flattened",
+      "title": "GetClusterCertificateAuthority",
+      "description": "Snippet for GetClusterCertificateAuthority",
+      "file": "CloudRedisClusterClient.GetClusterCertificateAuthoritySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterCertificateAuthority",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetClusterCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.CertificateAuthority",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetClusterCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetClusterCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetClusterCertificateAuthority_async_flattened",
+      "title": "GetClusterCertificateAuthorityAsync",
+      "description": "Snippet for GetClusterCertificateAuthorityAsync",
+      "file": "CloudRedisClusterClient.GetClusterCertificateAuthorityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterCertificateAuthorityAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetClusterCertificateAuthorityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.CertificateAuthority>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetClusterCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetClusterCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetClusterCertificateAuthority_sync_flattened_resourceNames",
+      "title": "GetClusterCertificateAuthorityResourceNames",
+      "description": "Snippet for GetClusterCertificateAuthority",
+      "file": "CloudRedisClusterClient.GetClusterCertificateAuthorityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterCertificateAuthority",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetClusterCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.CertificateAuthority",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetClusterCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetClusterCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetClusterCertificateAuthority_async_flattened_resourceNames",
+      "title": "GetClusterCertificateAuthorityResourceNamesAsync",
+      "description": "Snippet for GetClusterCertificateAuthorityAsync",
+      "file": "CloudRedisClusterClient.GetClusterCertificateAuthorityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterCertificateAuthorityAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetClusterCertificateAuthorityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.CertificateAuthority>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetClusterCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetClusterCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
