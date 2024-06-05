@@ -5178,7 +5178,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
@@ -5189,7 +5189,7 @@
         "content"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/video/stitcher/v1",
