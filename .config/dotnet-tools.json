@@ -15,7 +15,7 @@
       ]
     },
     "Google.Cloud.Tools.ReleaseProgressReporter": {
-      "version": "0.4.1",
+      "version": "0.4.2",
       "commands": [
         "release-progress-reporter"
       ]
