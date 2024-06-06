@@ -48,8 +48,8 @@ public class PublishReporter
         string message = string.IsNullOrEmpty(buildUrl) ?
             "The release build has started, but the build log URL could not be determined."
             : $"The release build has started; the log can be viewed [here]({buildUrl}).";
-        
-        await _pullRequest.AddComment(_client, message);
+
+        await CatchOctokitOverflow(_pullRequest.AddComment(_client, message), "adding comment");
     }
 
     /// <summary>
@@ -61,9 +61,9 @@ public class PublishReporter
             ? ("Release build succeeded.", "autorelease: published")
             : ("The release build failed! Please investigate!", "autorelease: failed");
         message += "\n" + details;
-        await _pullRequest.AddComment(_client, message);
-        await _pullRequest.AddLabel(_client, label);
-        await _pullRequest.RemoveLabel(_client, "autorelease: tagged");
+        await CatchOctokitOverflow(_pullRequest.AddComment(_client, message), "adding comment");
+        await CatchOctokitOverflow(_pullRequest.AddLabel(_client, label), "adding label");
+        await CatchOctokitOverflow(_pullRequest.RemoveLabel(_client, "autorelease: tagged"), "removing label");
     }
 
     public static async Task<PublishReporter> Create()
@@ -99,6 +99,19 @@ public class PublishReporter
                 throw new InvalidOperationException($"Environment variable '{variable}' must be set and non-empty.");
             }
             return value;
+        }
+    }
+
+    // Workaround for https://github.com/octokit/octokit.net/issues/2927 and similar issues
+    private static async Task CatchOctokitOverflow(Task task, string description)
+    {
+        try
+        {
+            await task;
+        }
+        catch (OverflowException e) when (e.StackTrace?.Contains("Octokit.Internal.JsonHttpPipeline.DeserializeResponse") == true)
+        {
+            Console.WriteLine($"Ignoring OverflowException from Octokit when {description}");
         }
     }
 }
