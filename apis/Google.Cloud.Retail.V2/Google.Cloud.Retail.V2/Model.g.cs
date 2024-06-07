@@ -28,7 +28,7 @@ namespace Google.Cloud.Retail.V2 {
             "Y2xvdWQucmV0YWlsLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
             "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUvY2xvdWQv",
             "cmV0YWlsL3YyL2NvbW1vbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byKiCgoFTW9kZWwSEQoEbmFtZRgBIAEoCUID4EECEhkKDGRp",
+            "dGFtcC5wcm90byKXDgoFTW9kZWwSEQoEbmFtZRgBIAEoCUID4EECEhkKDGRp",
             "c3BsYXlfbmFtZRgCIAEoCUID4EECEkgKDnRyYWluaW5nX3N0YXRlGAMgASgO",
             "MisuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbC5UcmFpbmluZ1N0YXRl",
             "QgPgQQESRgoNc2VydmluZ19zdGF0ZRgEIAEoDjIqLmdvb2dsZS5jbG91ZC5y",
@@ -45,27 +45,40 @@ namespace Google.Cloud.Retail.V2 {
             "X29wdGlvbhgSIAEoDjI2Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUmVjb21t",
             "ZW5kYXRpb25zRmlsdGVyaW5nT3B0aW9uQgPgQQESUgoUc2VydmluZ19jb25m",
             "aWdfbGlzdHMYEyADKAsyLy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLk1vZGVs",
-            "LlNlcnZpbmdDb25maWdMaXN0QgPgQQMaNAoRU2VydmluZ0NvbmZpZ0xpc3QS",
-            "HwoSc2VydmluZ19jb25maWdfaWRzGAEgAygJQgPgQQEiUgoMU2VydmluZ1N0",
-            "YXRlEh0KGVNFUlZJTkdfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghJTkFDVElW",
-            "RRABEgoKBkFDVElWRRACEgkKBVRVTkVEEAMiSQoNVHJhaW5pbmdTdGF0ZRIe",
-            "ChpUUkFJTklOR19TVEFURV9VTlNQRUNJRklFRBAAEgoKBlBBVVNFRBABEgwK",
-            "CFRSQUlOSU5HEAIikAEKE1BlcmlvZGljVHVuaW5nU3RhdGUSJQohUEVSSU9E",
-            "SUNfVFVOSU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAASHAoYUEVSSU9ESUNfVFVO",
-            "SU5HX0RJU0FCTEVEEAESFwoTQUxMX1RVTklOR19ESVNBQkxFRBADEhsKF1BF",
-            "UklPRElDX1RVTklOR19FTkFCTEVEEAIiRAoJRGF0YVN0YXRlEhoKFkRBVEFf",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdEQVRBX09LEAESDgoKREFUQV9FUlJP",
-            "UhACOmvqQWgKG3JldGFpbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBJJcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhdGFsb2dzL3tj",
-            "YXRhbG9nfS9tb2RlbHMve21vZGVsfUK1AQoaY29tLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjJCCk1vZGVsUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
-            "ZXRhaWwvYXBpdjIvcmV0YWlscGI7cmV0YWlscGKiAgZSRVRBSUyqAhZHb29n",
-            "bGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoC",
-            "GUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "LlNlcnZpbmdDb25maWdMaXN0QgPgQQMSVQoVbW9kZWxfZmVhdHVyZXNfY29u",
+            "ZmlnGBYgASgLMjEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbC5Nb2Rl",
+            "bEZlYXR1cmVzQ29uZmlnQgPgQQEaNAoRU2VydmluZ0NvbmZpZ0xpc3QSHwoS",
+            "c2VydmluZ19jb25maWdfaWRzGAEgAygJQgPgQQEafwomRnJlcXVlbnRseUJv",
+            "dWdodFRvZ2V0aGVyRmVhdHVyZXNDb25maWcSVQoVY29udGV4dF9wcm9kdWN0",
+            "c190eXBlGAIgASgOMjEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbC5D",
+            "b250ZXh0UHJvZHVjdHNUeXBlQgPgQQEaoQEKE01vZGVsRmVhdHVyZXNDb25m",
+            "aWcScQohZnJlcXVlbnRseV9ib3VnaHRfdG9nZXRoZXJfY29uZmlnGAEgASgL",
+            "MkQuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbC5GcmVxdWVudGx5Qm91",
+            "Z2h0VG9nZXRoZXJGZWF0dXJlc0NvbmZpZ0gAQhcKFXR5cGVfZGVkaWNhdGVk",
+            "X2NvbmZpZyJSCgxTZXJ2aW5nU3RhdGUSHQoZU0VSVklOR19TVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgwKCElOQUNUSVZFEAESCgoGQUNUSVZFEAISCQoFVFVORUQQ",
+            "AyJJCg1UcmFpbmluZ1N0YXRlEh4KGlRSQUlOSU5HX1NUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASCgoGUEFVU0VEEAESDAoIVFJBSU5JTkcQAiKQAQoTUGVyaW9kaWNU",
+            "dW5pbmdTdGF0ZRIlCiFQRVJJT0RJQ19UVU5JTkdfU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABIcChhQRVJJT0RJQ19UVU5JTkdfRElTQUJMRUQQARIXChNBTExfVFVO",
+            "SU5HX0RJU0FCTEVEEAMSGwoXUEVSSU9ESUNfVFVOSU5HX0VOQUJMRUQQAiJE",
+            "CglEYXRhU3RhdGUSGgoWREFUQV9TVEFURV9VTlNQRUNJRklFRBAAEgsKB0RB",
+            "VEFfT0sQARIOCgpEQVRBX0VSUk9SEAIidwoTQ29udGV4dFByb2R1Y3RzVHlw",
+            "ZRIlCiFDT05URVhUX1BST0RVQ1RTX1RZUEVfVU5TUEVDSUZJRUQQABIaChZT",
+            "SU5HTEVfQ09OVEVYVF9QUk9EVUNUEAESHQoZTVVMVElQTEVfQ09OVEVYVF9Q",
+            "Uk9EVUNUUxACOmvqQWgKG3JldGFpbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBJJ",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhdGFs",
+            "b2dzL3tjYXRhbG9nfS9tb2RlbHMve21vZGVsfUK1AQoaY29tLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjJCCk1vZGVsUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9yZXRhaWwvYXBpdjIvcmV0YWlscGI7cmV0YWlscGKiAgZSRVRBSUyq",
+            "AhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFp",
+            "bFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Model), global::Google.Cloud.Retail.V2.Model.Parser, new[]{ "Name", "DisplayName", "TrainingState", "ServingState", "CreateTime", "UpdateTime", "Type", "OptimizationObjective", "PeriodicTuningState", "LastTuneTime", "TuningOperation", "DataState", "FilteringOption", "ServingConfigLists" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.Model.Types.ServingState), typeof(global::Google.Cloud.Retail.V2.Model.Types.TrainingState), typeof(global::Google.Cloud.Retail.V2.Model.Types.PeriodicTuningState), typeof(global::Google.Cloud.Retail.V2.Model.Types.DataState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Model.Types.ServingConfigList), global::Google.Cloud.Retail.V2.Model.Types.ServingConfigList.Parser, new[]{ "ServingConfigIds" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Model), global::Google.Cloud.Retail.V2.Model.Parser, new[]{ "Name", "DisplayName", "TrainingState", "ServingState", "CreateTime", "UpdateTime", "Type", "OptimizationObjective", "PeriodicTuningState", "LastTuneTime", "TuningOperation", "DataState", "FilteringOption", "ServingConfigLists", "ModelFeaturesConfig" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.Model.Types.ServingState), typeof(global::Google.Cloud.Retail.V2.Model.Types.TrainingState), typeof(global::Google.Cloud.Retail.V2.Model.Types.PeriodicTuningState), typeof(global::Google.Cloud.Retail.V2.Model.Types.DataState), typeof(global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Model.Types.ServingConfigList), global::Google.Cloud.Retail.V2.Model.Types.ServingConfigList.Parser, new[]{ "ServingConfigIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig), global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig.Parser, new[]{ "ContextProductsType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig), global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig.Parser, new[]{ "FrequentlyBoughtTogetherConfig" }, new[]{ "TypeDedicatedConfig" }, null, null, null)})
           }));
     }
     #endregion
@@ -128,6 +141,7 @@ namespace Google.Cloud.Retail.V2 {
       dataState_ = other.dataState_;
       filteringOption_ = other.filteringOption_;
       servingConfigLists_ = other.servingConfigLists_.Clone();
+      modelFeaturesConfig_ = other.modelFeaturesConfig_ != null ? other.modelFeaturesConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -416,6 +430,21 @@ namespace Google.Cloud.Retail.V2 {
       get { return servingConfigLists_; }
     }
 
+    /// <summary>Field number for the "model_features_config" field.</summary>
+    public const int ModelFeaturesConfigFieldNumber = 22;
+    private global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig modelFeaturesConfig_;
+    /// <summary>
+    /// Optional. Additional model features config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig ModelFeaturesConfig {
+      get { return modelFeaturesConfig_; }
+      set {
+        modelFeaturesConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -445,6 +474,7 @@ namespace Google.Cloud.Retail.V2 {
       if (DataState != other.DataState) return false;
       if (FilteringOption != other.FilteringOption) return false;
       if(!servingConfigLists_.Equals(other.servingConfigLists_)) return false;
+      if (!object.Equals(ModelFeaturesConfig, other.ModelFeaturesConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -466,6 +496,7 @@ namespace Google.Cloud.Retail.V2 {
       if (DataState != global::Google.Cloud.Retail.V2.Model.Types.DataState.Unspecified) hash ^= DataState.GetHashCode();
       if (FilteringOption != global::Google.Cloud.Retail.V2.RecommendationsFilteringOption.Unspecified) hash ^= FilteringOption.GetHashCode();
       hash ^= servingConfigLists_.GetHashCode();
+      if (modelFeaturesConfig_ != null) hash ^= ModelFeaturesConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -537,6 +568,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteEnum((int) FilteringOption);
       }
       servingConfigLists_.WriteTo(output, _repeated_servingConfigLists_codec);
+      if (modelFeaturesConfig_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ModelFeaturesConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -600,6 +635,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteEnum((int) FilteringOption);
       }
       servingConfigLists_.WriteTo(ref output, _repeated_servingConfigLists_codec);
+      if (modelFeaturesConfig_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ModelFeaturesConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -650,6 +689,9 @@ namespace Google.Cloud.Retail.V2 {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) FilteringOption);
       }
       size += servingConfigLists_.CalculateSize(_repeated_servingConfigLists_codec);
+      if (modelFeaturesConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelFeaturesConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -711,6 +753,12 @@ namespace Google.Cloud.Retail.V2 {
         FilteringOption = other.FilteringOption;
       }
       servingConfigLists_.Add(other.servingConfigLists_);
+      if (other.modelFeaturesConfig_ != null) {
+        if (modelFeaturesConfig_ == null) {
+          ModelFeaturesConfig = new global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig();
+        }
+        ModelFeaturesConfig.MergeFrom(other.ModelFeaturesConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -791,6 +839,13 @@ namespace Google.Cloud.Retail.V2 {
             servingConfigLists_.AddEntriesFrom(input, _repeated_servingConfigLists_codec);
             break;
           }
+          case 178: {
+            if (modelFeaturesConfig_ == null) {
+              ModelFeaturesConfig = new global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig();
+            }
+            input.ReadMessage(ModelFeaturesConfig);
+            break;
+          }
         }
       }
     #endif
@@ -869,6 +924,13 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 154: {
             servingConfigLists_.AddEntriesFrom(ref input, _repeated_servingConfigLists_codec);
+            break;
+          }
+          case 178: {
+            if (modelFeaturesConfig_ == null) {
+              ModelFeaturesConfig = new global::Google.Cloud.Retail.V2.Model.Types.ModelFeaturesConfig();
+            }
+            input.ReadMessage(ModelFeaturesConfig);
             break;
           }
         }
@@ -973,6 +1035,28 @@ namespace Google.Cloud.Retail.V2 {
         /// messages can be queried via Stackdriver.
         /// </summary>
         [pbr::OriginalName("DATA_ERROR")] DataError = 2,
+      }
+
+      /// <summary>
+      /// Use single or multiple context products for recommendations.
+      /// </summary>
+      public enum ContextProductsType {
+        /// <summary>
+        /// Unspecified default value, should never be explicitly set.
+        /// Defaults to
+        /// [MULTIPLE_CONTEXT_PRODUCTS][google.cloud.retail.v2.Model.ContextProductsType.MULTIPLE_CONTEXT_PRODUCTS].
+        /// </summary>
+        [pbr::OriginalName("CONTEXT_PRODUCTS_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Use only a single product as context for the recommendation. Typically
+        /// used on pages like add-to-cart or product details.
+        /// </summary>
+        [pbr::OriginalName("SINGLE_CONTEXT_PRODUCT")] SingleContextProduct = 1,
+        /// <summary>
+        /// Use one or multiple products as context for the recommendation. Typically
+        /// used on shopping cart pages.
+        /// </summary>
+        [pbr::OriginalName("MULTIPLE_CONTEXT_PRODUCTS")] MultipleContextProducts = 2,
       }
 
       /// <summary>
@@ -1153,6 +1237,444 @@ namespace Google.Cloud.Retail.V2 {
                 break;
               case 10: {
                 servingConfigIds_.AddEntriesFrom(ref input, _repeated_servingConfigIds_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Additional configs for the frequently-bought-together model type.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FrequentlyBoughtTogetherFeaturesConfig : pb::IMessage<FrequentlyBoughtTogetherFeaturesConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FrequentlyBoughtTogetherFeaturesConfig> _parser = new pb::MessageParser<FrequentlyBoughtTogetherFeaturesConfig>(() => new FrequentlyBoughtTogetherFeaturesConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FrequentlyBoughtTogetherFeaturesConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.Model.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FrequentlyBoughtTogetherFeaturesConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FrequentlyBoughtTogetherFeaturesConfig(FrequentlyBoughtTogetherFeaturesConfig other) : this() {
+          contextProductsType_ = other.contextProductsType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FrequentlyBoughtTogetherFeaturesConfig Clone() {
+          return new FrequentlyBoughtTogetherFeaturesConfig(this);
+        }
+
+        /// <summary>Field number for the "context_products_type" field.</summary>
+        public const int ContextProductsTypeFieldNumber = 2;
+        private global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType contextProductsType_ = global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType.Unspecified;
+        /// <summary>
+        /// Optional. Specifies the context of the model when it is used in predict
+        /// requests. Can only be set for the `frequently-bought-together` type. If
+        /// it isn't specified, it defaults to
+        /// [MULTIPLE_CONTEXT_PRODUCTS][google.cloud.retail.v2.Model.ContextProductsType.MULTIPLE_CONTEXT_PRODUCTS].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType ContextProductsType {
+          get { return contextProductsType_; }
+          set {
+            contextProductsType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FrequentlyBoughtTogetherFeaturesConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FrequentlyBoughtTogetherFeaturesConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ContextProductsType != other.ContextProductsType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ContextProductsType != global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType.Unspecified) hash ^= ContextProductsType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ContextProductsType != global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ContextProductsType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ContextProductsType != global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ContextProductsType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ContextProductsType != global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContextProductsType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FrequentlyBoughtTogetherFeaturesConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ContextProductsType != global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType.Unspecified) {
+            ContextProductsType = other.ContextProductsType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 16: {
+                ContextProductsType = (global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 16: {
+                ContextProductsType = (global::Google.Cloud.Retail.V2.Model.Types.ContextProductsType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Additional model features config.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ModelFeaturesConfig : pb::IMessage<ModelFeaturesConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ModelFeaturesConfig> _parser = new pb::MessageParser<ModelFeaturesConfig>(() => new ModelFeaturesConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ModelFeaturesConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.Model.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModelFeaturesConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModelFeaturesConfig(ModelFeaturesConfig other) : this() {
+          switch (other.TypeDedicatedConfigCase) {
+            case TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig:
+              FrequentlyBoughtTogetherConfig = other.FrequentlyBoughtTogetherConfig.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModelFeaturesConfig Clone() {
+          return new ModelFeaturesConfig(this);
+        }
+
+        /// <summary>Field number for the "frequently_bought_together_config" field.</summary>
+        public const int FrequentlyBoughtTogetherConfigFieldNumber = 1;
+        /// <summary>
+        /// Additional configs for frequently-bought-together models.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig FrequentlyBoughtTogetherConfig {
+          get { return typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig ? (global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig) typeDedicatedConfig_ : null; }
+          set {
+            typeDedicatedConfig_ = value;
+            typeDedicatedConfigCase_ = value == null ? TypeDedicatedConfigOneofCase.None : TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig;
+          }
+        }
+
+        private object typeDedicatedConfig_;
+        /// <summary>Enum of possible cases for the "type_dedicated_config" oneof.</summary>
+        public enum TypeDedicatedConfigOneofCase {
+          None = 0,
+          FrequentlyBoughtTogetherConfig = 1,
+        }
+        private TypeDedicatedConfigOneofCase typeDedicatedConfigCase_ = TypeDedicatedConfigOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TypeDedicatedConfigOneofCase TypeDedicatedConfigCase {
+          get { return typeDedicatedConfigCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTypeDedicatedConfig() {
+          typeDedicatedConfigCase_ = TypeDedicatedConfigOneofCase.None;
+          typeDedicatedConfig_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ModelFeaturesConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ModelFeaturesConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(FrequentlyBoughtTogetherConfig, other.FrequentlyBoughtTogetherConfig)) return false;
+          if (TypeDedicatedConfigCase != other.TypeDedicatedConfigCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig) hash ^= FrequentlyBoughtTogetherConfig.GetHashCode();
+          hash ^= (int) typeDedicatedConfigCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig) {
+            output.WriteRawTag(10);
+            output.WriteMessage(FrequentlyBoughtTogetherConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig) {
+            output.WriteRawTag(10);
+            output.WriteMessage(FrequentlyBoughtTogetherConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FrequentlyBoughtTogetherConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ModelFeaturesConfig other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.TypeDedicatedConfigCase) {
+            case TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig:
+              if (FrequentlyBoughtTogetherConfig == null) {
+                FrequentlyBoughtTogetherConfig = new global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig();
+              }
+              FrequentlyBoughtTogetherConfig.MergeFrom(other.FrequentlyBoughtTogetherConfig);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig subBuilder = new global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig();
+                if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig) {
+                  subBuilder.MergeFrom(FrequentlyBoughtTogetherConfig);
+                }
+                input.ReadMessage(subBuilder);
+                FrequentlyBoughtTogetherConfig = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig subBuilder = new global::Google.Cloud.Retail.V2.Model.Types.FrequentlyBoughtTogetherFeaturesConfig();
+                if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.FrequentlyBoughtTogetherConfig) {
+                  subBuilder.MergeFrom(FrequentlyBoughtTogetherConfig);
+                }
+                input.ReadMessage(subBuilder);
+                FrequentlyBoughtTogetherConfig = subBuilder;
                 break;
               }
             }

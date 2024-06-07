@@ -28,7 +28,7 @@ namespace Google.Cloud.Retail.V2 {
             "EhZnb29nbGUuY2xvdWQucmV0YWlsLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29n",
             "bGUvY2xvdWQvcmV0YWlsL3YyL2NvbW1vbi5wcm90bxorZ29vZ2xlL2Nsb3Vk",
-            "L3JldGFpbC92Mi9zZWFyY2hfc2VydmljZS5wcm90byL4BwoNU2VydmluZ0Nv",
+            "L3JldGFpbC92Mi9zZWFyY2hfc2VydmljZS5wcm90byKWCAoNU2VydmluZ0Nv",
             "bmZpZxIRCgRuYW1lGAEgASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAIgASgJ",
             "QgPgQQISEAoIbW9kZWxfaWQYAyABKAkSHQoVcHJpY2VfcmVyYW5raW5nX2xl",
             "dmVsGAQgASgJEhkKEWZhY2V0X2NvbnRyb2xfaWRzGAUgAygJElIKEmR5bmFt",
@@ -42,24 +42,25 @@ namespace Google.Cloud.Retail.V2 {
             "X2NvbnRyb2xfaWRzGA8gAygJEhcKD2RpdmVyc2l0eV9sZXZlbBgIIAEoCRJL",
             "Cg5kaXZlcnNpdHlfdHlwZRgUIAEoDjIzLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
             "djIuU2VydmluZ0NvbmZpZy5EaXZlcnNpdHlUeXBlEiQKHGVuYWJsZV9jYXRl",
-            "Z29yeV9maWx0ZXJfbGV2ZWwYECABKAkSVwoUcGVyc29uYWxpemF0aW9uX3Nw",
-            "ZWMYFSABKAsyOS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlcXVl",
-            "c3QuUGVyc29uYWxpemF0aW9uU3BlYxJECg5zb2x1dGlvbl90eXBlcxgTIAMo",
-            "DjIkLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU29sdXRpb25UeXBlQgbgQQLg",
-            "QQUiZAoNRGl2ZXJzaXR5VHlwZRIeChpESVZFUlNJVFlfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEhgKFFJVTEVfQkFTRURfRElWRVJTSVRZEAISGQoVREFUQV9EUklW",
-            "RU5fRElWRVJTSVRZEAM6hQHqQYEBCiNyZXRhaWwuZ29vZ2xlYXBpcy5jb20v",
-            "U2VydmluZ0NvbmZpZxJacHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2NhdGFsb2dzL3tjYXRhbG9nfS9zZXJ2aW5nQ29uZmlncy97",
-            "c2VydmluZ19jb25maWd9Qr0BChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "MkISU2VydmluZ0NvbmZpZ1Byb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "cmV0YWlsL2FwaXYyL3JldGFpbHBiO3JldGFpbHBiogIGUkVUQUlMqgIWR29v",
-            "Z2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLq",
-            "AhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "Z29yeV9maWx0ZXJfbGV2ZWwYECABKAkSHAoUaWdub3JlX3JlY3NfZGVueWxp",
+            "c3QYGCABKAgSVwoUcGVyc29uYWxpemF0aW9uX3NwZWMYFSABKAsyOS5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlcXVlc3QuUGVyc29uYWxpemF0",
+            "aW9uU3BlYxJECg5zb2x1dGlvbl90eXBlcxgTIAMoDjIkLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuU29sdXRpb25UeXBlQgbgQQLgQQUiZAoNRGl2ZXJzaXR5",
+            "VHlwZRIeChpESVZFUlNJVFlfVFlQRV9VTlNQRUNJRklFRBAAEhgKFFJVTEVf",
+            "QkFTRURfRElWRVJTSVRZEAISGQoVREFUQV9EUklWRU5fRElWRVJTSVRZEAM6",
+            "hQHqQYEBCiNyZXRhaWwuZ29vZ2xlYXBpcy5jb20vU2VydmluZ0NvbmZpZxJa",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhdGFs",
+            "b2dzL3tjYXRhbG9nfS9zZXJ2aW5nQ29uZmlncy97c2VydmluZ19jb25maWd9",
+            "Qr0BChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52MkISU2VydmluZ0NvbmZp",
+            "Z1Byb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYyL3Jl",
+            "dGFpbHBiO3JldGFpbHBiogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFp",
+            "bC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3Vk",
+            "OjpSZXRhaWw6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.SearchServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ServingConfig), global::Google.Cloud.Retail.V2.ServingConfig.Parser, new[]{ "Name", "DisplayName", "ModelId", "PriceRerankingLevel", "FacetControlIds", "DynamicFacetSpec", "BoostControlIds", "FilterControlIds", "RedirectControlIds", "TwowaySynonymsControlIds", "OnewaySynonymsControlIds", "DoNotAssociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "DiversityLevel", "DiversityType", "EnableCategoryFilterLevel", "PersonalizationSpec", "SolutionTypes" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ServingConfig), global::Google.Cloud.Retail.V2.ServingConfig.Parser, new[]{ "Name", "DisplayName", "ModelId", "PriceRerankingLevel", "FacetControlIds", "DynamicFacetSpec", "BoostControlIds", "FilterControlIds", "RedirectControlIds", "TwowaySynonymsControlIds", "OnewaySynonymsControlIds", "DoNotAssociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "DiversityLevel", "DiversityType", "EnableCategoryFilterLevel", "IgnoreRecsDenylist", "PersonalizationSpec", "SolutionTypes" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType) }, null, null)
           }));
     }
     #endregion
@@ -122,6 +123,7 @@ namespace Google.Cloud.Retail.V2 {
       diversityLevel_ = other.diversityLevel_;
       diversityType_ = other.diversityType_;
       enableCategoryFilterLevel_ = other.enableCategoryFilterLevel_;
+      ignoreRecsDenylist_ = other.ignoreRecsDenylist_;
       personalizationSpec_ = other.personalizationSpec_ != null ? other.personalizationSpec_.Clone() : null;
       solutionTypes_ = other.solutionTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -518,6 +520,22 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "ignore_recs_denylist" field.</summary>
+    public const int IgnoreRecsDenylistFieldNumber = 24;
+    private bool ignoreRecsDenylist_;
+    /// <summary>
+    /// When the flag is enabled, the products in the denylist will not be filtered
+    /// out in the recommendation filtering results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IgnoreRecsDenylist {
+      get { return ignoreRecsDenylist_; }
+      set {
+        ignoreRecsDenylist_ = value;
+      }
+    }
+
     /// <summary>Field number for the "personalization_spec" field.</summary>
     public const int PersonalizationSpecFieldNumber = 21;
     private global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec personalizationSpec_;
@@ -593,6 +611,7 @@ namespace Google.Cloud.Retail.V2 {
       if (DiversityLevel != other.DiversityLevel) return false;
       if (DiversityType != other.DiversityType) return false;
       if (EnableCategoryFilterLevel != other.EnableCategoryFilterLevel) return false;
+      if (IgnoreRecsDenylist != other.IgnoreRecsDenylist) return false;
       if (!object.Equals(PersonalizationSpec, other.PersonalizationSpec)) return false;
       if(!solutionTypes_.Equals(other.solutionTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -619,6 +638,7 @@ namespace Google.Cloud.Retail.V2 {
       if (DiversityLevel.Length != 0) hash ^= DiversityLevel.GetHashCode();
       if (DiversityType != global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified) hash ^= DiversityType.GetHashCode();
       if (EnableCategoryFilterLevel.Length != 0) hash ^= EnableCategoryFilterLevel.GetHashCode();
+      if (IgnoreRecsDenylist != false) hash ^= IgnoreRecsDenylist.GetHashCode();
       if (personalizationSpec_ != null) hash ^= PersonalizationSpec.GetHashCode();
       hash ^= solutionTypes_.GetHashCode();
       if (_unknownFields != null) {
@@ -685,6 +705,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(PersonalizationSpec);
       }
+      if (IgnoreRecsDenylist != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(IgnoreRecsDenylist);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -741,6 +765,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(PersonalizationSpec);
       }
+      if (IgnoreRecsDenylist != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(IgnoreRecsDenylist);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -783,6 +811,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (EnableCategoryFilterLevel.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(EnableCategoryFilterLevel);
+      }
+      if (IgnoreRecsDenylist != false) {
+        size += 2 + 1;
       }
       if (personalizationSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PersonalizationSpec);
@@ -835,6 +866,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.EnableCategoryFilterLevel.Length != 0) {
         EnableCategoryFilterLevel = other.EnableCategoryFilterLevel;
+      }
+      if (other.IgnoreRecsDenylist != false) {
+        IgnoreRecsDenylist = other.IgnoreRecsDenylist;
       }
       if (other.personalizationSpec_ != null) {
         if (personalizationSpec_ == null) {
@@ -941,6 +975,10 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(PersonalizationSpec);
             break;
           }
+          case 192: {
+            IgnoreRecsDenylist = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1037,6 +1075,10 @@ namespace Google.Cloud.Retail.V2 {
               PersonalizationSpec = new global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec();
             }
             input.ReadMessage(PersonalizationSpec);
+            break;
+          }
+          case 192: {
+            IgnoreRecsDenylist = input.ReadBool();
             break;
           }
         }

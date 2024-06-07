@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 MaxSuggestions = 0,
                 Dataset = "",
                 VisitorId = "",
+                EnableAttributeSuggestions = false,
                 Entity = "",
             };
             // Make the request
@@ -63,6 +64,7 @@ namespace GoogleCSharpSnippets
                 MaxSuggestions = 0,
                 Dataset = "",
                 VisitorId = "",
+                EnableAttributeSuggestions = false,
                 Entity = "",
             };
             // Make the request

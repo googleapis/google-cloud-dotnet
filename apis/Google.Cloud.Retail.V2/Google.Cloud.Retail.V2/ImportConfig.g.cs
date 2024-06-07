@@ -1591,7 +1591,8 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Indicates which fields in the provided imported `products` to update. If
-    /// not set, all fields are updated.
+    /// not set, all fields are updated. If provided, only the existing product
+    /// fields are updated. Missing products will not be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1631,9 +1632,14 @@ namespace Google.Cloud.Retail.V2 {
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has
     /// to be within the same project as
     /// [ImportProductsRequest.parent][google.cloud.retail.v2.ImportProductsRequest.parent].
-    /// Make sure that `service-&lt;project
-    /// number>@gcp-sa-retail.iam.gserviceaccount.com` has the
-    /// `pubsub.topics.publish` IAM permission on the topic.
+    /// Make sure that both
+    /// `cloud-retail-customer-data-access@system.gserviceaccount.com` and
+    /// `service-&lt;project number>@gcp-sa-retail.iam.gserviceaccount.com`
+    /// have the `pubsub.topics.publish` IAM permission on the topic.
+    ///
+    /// Only supported when
+    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// is set to `FULL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

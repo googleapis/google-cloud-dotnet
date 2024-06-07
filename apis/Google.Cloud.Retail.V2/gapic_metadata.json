@@ -274,6 +274,12 @@
                 "ListProductsAsync"
               ]
             },
+            "PurgeProducts": {
+              "methods": [
+                "PurgeProducts",
+                "PurgeProductsAsync"
+              ]
+            },
             "RemoveFulfillmentPlaces": {
               "methods": [
                 "RemoveFulfillmentPlaces",
