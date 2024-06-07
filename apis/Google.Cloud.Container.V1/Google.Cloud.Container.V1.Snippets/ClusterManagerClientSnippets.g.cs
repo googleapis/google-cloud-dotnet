@@ -1185,7 +1185,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListOperations</summary>
-        public void ListOperations()
+        public void ListOperations1()
         {
             // Snippet: ListOperations(string, string, CallSettings)
             // Create client
@@ -1201,7 +1201,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync()
+        public async Task ListOperations1Async()
         {
             // Snippet: ListOperationsAsync(string, string, CallSettings)
             // Additional: ListOperationsAsync(string, string, CancellationToken)
@@ -1214,6 +1214,33 @@ namespace GoogleCSharpSnippets
 #pragma warning disable CS0612
             ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
 #pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOperations</summary>
+        public void ListOperations2()
+        {
+            // Snippet: ListOperations(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListOperationsResponse response = clusterManagerClient.ListOperations(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOperationsAsync</summary>
+        public async Task ListOperations2Async()
+        {
+            // Snippet: ListOperationsAsync(string, CallSettings)
+            // Additional: ListOperationsAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(parent);
             // End snippet
         }
 

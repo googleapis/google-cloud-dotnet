@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START container_v1_generated_ClusterManager_ListOperations_sync_flattened]
+    // [START container_v1_generated_ClusterManager_ListOperations_async_flattened1]
     using Google.Cloud.Container.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedClusterManagerClientSnippets
     {
-        /// <summary>Snippet for ListOperations</summary>
+        /// <summary>Snippet for ListOperationsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,18 +30,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListOperations()
+        public async Task ListOperations1Async()
         {
             // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             // Make the request
 #pragma warning disable CS0612
-            ListOperationsResponse response = clusterManagerClient.ListOperations(projectId, zone);
+            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
 #pragma warning restore CS0612
         }
     }
-    // [END container_v1_generated_ClusterManager_ListOperations_sync_flattened]
+    // [END container_v1_generated_ClusterManager_ListOperations_async_flattened1]
 }
