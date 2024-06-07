@@ -1,0 +1,13 @@
+{
+  "metadata": [
+    {
+      "src": [{ "files": [
+        "Src/Support/Google.Apis/Google.Apis.csproj",
+        "Src/Support/Google.Apis.Core/Google.Apis.Core.csproj",
+        "Src/Support/Google.Apis.Auth.AspNetCore3/Google.Apis.Auth.AspNetCore3.csproj",
+        "Src/Support/Google.Apis.Auth/Google.Apis.Auth.csproj",
+      ] }],
+      "dest": "api",
+    }
+  ]
+}
