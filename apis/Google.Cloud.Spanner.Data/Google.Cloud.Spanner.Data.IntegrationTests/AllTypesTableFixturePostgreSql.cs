@@ -31,24 +31,8 @@ public class AllTypesTableFixturePostgreSql : SpannerTableFixturePostgreSql, ICo
     public string CreateInsertCommand() =>
         $@"INSERT INTO {TableName} (
             K,
-            ""Int64Value"",
-            ""BoolValue"",
-            ""Float64Value"",
-            ""StringValue"",
             ""PgNumericValue"",
-            ""BytesValue"",
-            ""TimestampValue"",
-            ""DateValue"",
-            ""PgJsonbValue"",
-            ""BoolArrayValue"",
-            ""Int64ArrayValue"",
-            ""Float64ArrayValue"",
             ""PgNumericArrayValue"",
-            ""StringArrayValue"",
-            ""BytesArrayValue"",
-            ""Base64ArrayValue"",
-            ""TimestampArrayValue"",
-            ""DateArrayValue"",
             ""PgJsonbArrayValue""
             ) VALUES(
             $1,
@@ -56,45 +40,15 @@ public class AllTypesTableFixturePostgreSql : SpannerTableFixturePostgreSql, ICo
             $3,
             $4,
             $5,
-            $6,
-            $7,
-            $8,
-            $9,
-            $10,
-            $11,
-            $12,
-            $13,
-            $14,
-            $15,
-            $16,
-            $17,
-            $18,
-            $19,
-            $20
             )";
 
     protected override void CreateTable() =>
         // PostgreSQL column names are folded to lower case if not double quoted while table creation.
         ExecuteDdl($@"CREATE TABLE {TableName}(
             K                       VARCHAR(4096) NOT NULL PRIMARY KEY,
-            ""Int64Value""          BIGINT,
-            ""BoolValue""           BOOLEAN,
-            ""Float64Value""        FLOAT,
-            ""StringValue""         TEXT,
             ""PgNumericValue""      NUMERIC,
-            ""BytesValue""          BYTEA,
-            ""TimestampValue""      TIMESTAMPTZ,
-            ""DateValue""           DATE,
             ""PgJsonbValue""        JSONB,
-            ""BoolArrayValue""      BOOLEAN[],
-            ""Int64ArrayValue""     BIGINT[],
-            ""Float64ArrayValue""   FLOAT[],
             ""PgNumericArrayValue"" NUMERIC[],
-            ""StringArrayValue""    TEXT[],
-            ""BytesArrayValue""     BYTEA[],
-            ""Base64ArrayValue""    BYTEA[],
-            ""TimestampArrayValue"" TIMESTAMPTZ[],
-            ""DateArrayValue""      DATE[],
             ""PgJsonbArrayValue""   JSONB[]
             );");
 }
