@@ -3525,10 +3525,10 @@
       ]
     },
     {
-      "regionTag": "container_v1_generated_ClusterManager_ListOperations_sync_flattened",
-      "title": "ListOperations",
+      "regionTag": "container_v1_generated_ClusterManager_ListOperations_sync_flattened1",
+      "title": "ListOperations1",
       "description": "Snippet for ListOperations",
-      "file": "ClusterManagerClient.ListOperationsSnippet.g.cs",
+      "file": "ClusterManagerClient.ListOperations1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListOperations",
@@ -3576,10 +3576,10 @@
       ]
     },
     {
-      "regionTag": "container_v1_generated_ClusterManager_ListOperations_async_flattened",
-      "title": "ListOperationsAsync",
+      "regionTag": "container_v1_generated_ClusterManager_ListOperations_async_flattened1",
+      "title": "ListOperations1Async",
       "description": "Snippet for ListOperationsAsync",
-      "file": "ClusterManagerClient.ListOperationsAsyncSnippet.g.cs",
+      "file": "ClusterManagerClient.ListOperations1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListOperationsAsync",
@@ -3623,6 +3623,101 @@
         {
           "start": 35,
           "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_ListOperations_sync_flattened2",
+      "title": "ListOperations2",
+      "description": "Snippet for ListOperations",
+      "file": "ClusterManagerClient.ListOperations2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOperations",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListOperations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Container.V1.ListOperationsResponse",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "ListOperations",
+          "fullName": "google.container.v1.ClusterManager.ListOperations",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_ListOperations_async_flattened2",
+      "title": "ListOperations2Async",
+      "description": "Snippet for ListOperationsAsync",
+      "file": "ClusterManagerClient.ListOperations2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOperationsAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListOperationsResponse>",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "ListOperations",
+          "fullName": "google.container.v1.ClusterManager.ListOperations",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

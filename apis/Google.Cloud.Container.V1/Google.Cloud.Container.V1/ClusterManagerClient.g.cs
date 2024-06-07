@@ -2990,6 +2990,45 @@ namespace Google.Cloud.Container.V1
             ListOperationsAsync(projectId, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists all operations in a project in a specific zone or all zones.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent (project and location) where the operations will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// Location "-" matches all zones and all regions.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListOperationsResponse ListOperations(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListOperations(new ListOperationsRequest { Parent = parent ?? "", }, callSettings);
+
+        /// <summary>
+        /// Lists all operations in a project in a specific zone or all zones.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent (project and location) where the operations will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// Location "-" matches all zones and all regions.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListOperationsAsync(new ListOperationsRequest { Parent = parent ?? "", }, callSettings);
+
+        /// <summary>
+        /// Lists all operations in a project in a specific zone or all zones.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent (project and location) where the operations will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// Location "-" matches all zones and all regions.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(string parent, st::CancellationToken cancellationToken) =>
+            ListOperationsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the specified operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
