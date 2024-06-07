@@ -784,7 +784,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of users.
-        /// Format: `accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -809,7 +809,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of users.
-        /// Format: `accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -834,7 +834,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of users.
-        /// Format: `accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -859,7 +859,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of users.
-        /// Format: `accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

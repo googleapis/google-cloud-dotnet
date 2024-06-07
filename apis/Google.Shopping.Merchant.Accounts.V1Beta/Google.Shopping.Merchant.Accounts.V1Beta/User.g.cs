@@ -1397,7 +1397,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent, which owns this collection of users.
-    /// Format: `accounts/{account}
+    /// Format: `accounts/{account}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
