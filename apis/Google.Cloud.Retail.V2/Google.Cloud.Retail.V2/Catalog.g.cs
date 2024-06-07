@@ -28,75 +28,98 @@ namespace Google.Cloud.Retail.V2 {
             "ZS5jbG91ZC5yZXRhaWwudjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91",
             "ZC9yZXRhaWwvdjIvY29tbW9uLnByb3RvGipnb29nbGUvY2xvdWQvcmV0YWls",
-            "L3YyL2ltcG9ydF9jb25maWcucHJvdG8iXgoSUHJvZHVjdExldmVsQ29uZmln",
-            "Eh4KFmluZ2VzdGlvbl9wcm9kdWN0X3R5cGUYASABKAkSKAogbWVyY2hhbnRf",
-            "Y2VudGVyX3Byb2R1Y3RfaWRfZmllbGQYAiABKAkivwkKEENhdGFsb2dBdHRy",
-            "aWJ1dGUSEAoDa2V5GAEgASgJQgPgQQISEwoGaW5fdXNlGAkgASgIQgPgQQMS",
-            "SQoEdHlwZRgKIAEoDjI2Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxv",
-            "Z0F0dHJpYnV0ZS5BdHRyaWJ1dGVUeXBlQgPgQQMSUgoQaW5kZXhhYmxlX29w",
-            "dGlvbhgFIAEoDjI4Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0",
-            "dHJpYnV0ZS5JbmRleGFibGVPcHRpb24SYQoYZHluYW1pY19mYWNldGFibGVf",
-            "b3B0aW9uGAYgASgOMj8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9n",
-            "QXR0cmlidXRlLkR5bmFtaWNGYWNldGFibGVPcHRpb24SVAoRc2VhcmNoYWJs",
-            "ZV9vcHRpb24YByABKA4yOS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNhdGFs",
-            "b2dBdHRyaWJ1dGUuU2VhcmNoYWJsZU9wdGlvbhJfChdleGFjdF9zZWFyY2hh",
-            "YmxlX29wdGlvbhgLIAEoDjI+Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0",
-            "YWxvZ0F0dHJpYnV0ZS5FeGFjdFNlYXJjaGFibGVPcHRpb24SVgoScmV0cmll",
-            "dmFibGVfb3B0aW9uGAwgASgOMjouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5D",
-            "YXRhbG9nQXR0cmlidXRlLlJldHJpZXZhYmxlT3B0aW9uIjgKDUF0dHJpYnV0",
-            "ZVR5cGUSCwoHVU5LTk9XThAAEgsKB1RFWFRVQUwQARINCglOVU1FUklDQUwQ",
-            "AiJiCg9JbmRleGFibGVPcHRpb24SIAocSU5ERVhBQkxFX09QVElPTl9VTlNQ",
-            "RUNJRklFRBAAEhUKEUlOREVYQUJMRV9FTkFCTEVEEAESFgoSSU5ERVhBQkxF",
-            "X0RJU0FCTEVEEAIigQEKFkR5bmFtaWNGYWNldGFibGVPcHRpb24SKAokRFlO",
-            "QU1JQ19GQUNFVEFCTEVfT1BUSU9OX1VOU1BFQ0lGSUVEEAASHQoZRFlOQU1J",
-            "Q19GQUNFVEFCTEVfRU5BQkxFRBABEh4KGkRZTkFNSUNfRkFDRVRBQkxFX0RJ",
-            "U0FCTEVEEAIiZgoQU2VhcmNoYWJsZU9wdGlvbhIhCh1TRUFSQ0hBQkxFX09Q",
-            "VElPTl9VTlNQRUNJRklFRBAAEhYKElNFQVJDSEFCTEVfRU5BQkxFRBABEhcK",
-            "E1NFQVJDSEFCTEVfRElTQUJMRUQQAiJ9ChVFeGFjdFNlYXJjaGFibGVPcHRp",
-            "b24SJwojRVhBQ1RfU0VBUkNIQUJMRV9PUFRJT05fVU5TUEVDSUZJRUQQABIc",
-            "ChhFWEFDVF9TRUFSQ0hBQkxFX0VOQUJMRUQQARIdChlFWEFDVF9TRUFSQ0hB",
-            "QkxFX0RJU0FCTEVEEAIiagoRUmV0cmlldmFibGVPcHRpb24SIgoeUkVUUklF",
-            "VkFCTEVfT1BUSU9OX1VOU1BFQ0lGSUVEEAASFwoTUkVUUklFVkFCTEVfRU5B",
-            "QkxFRBABEhgKFFJFVFJJRVZBQkxFX0RJU0FCTEVEEAIitgMKEEF0dHJpYnV0",
-            "ZXNDb25maWcSFAoEbmFtZRgBIAEoCUIG4EEC4EEFElsKEmNhdGFsb2dfYXR0",
-            "cmlidXRlcxgCIAMoCzI/Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQXR0cmli",
-            "dXRlc0NvbmZpZy5DYXRhbG9nQXR0cmlidXRlc0VudHJ5ElEKFmF0dHJpYnV0",
-            "ZV9jb25maWdfbGV2ZWwYAyABKA4yLC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LkF0dHJpYnV0ZUNvbmZpZ0xldmVsQgPgQQMaYgoWQ2F0YWxvZ0F0dHJpYnV0",
-            "ZXNFbnRyeRILCgNrZXkYASABKAkSNwoFdmFsdWUYAiABKAsyKC5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLkNhdGFsb2dBdHRyaWJ1dGU6AjgBOnjqQXUKJnJl",
-            "dGFpbC5nb29nbGVhcGlzLmNvbS9BdHRyaWJ1dGVzQ29uZmlnEktwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2Nh",
-            "dGFsb2d9L2F0dHJpYnV0ZXNDb25maWcimQUKEENvbXBsZXRpb25Db25maWcS",
-            "FAoEbmFtZRgBIAEoCUIG4EEC4EEFEhYKDm1hdGNoaW5nX29yZGVyGAIgASgJ",
-            "EhcKD21heF9zdWdnZXN0aW9ucxgDIAEoBRIZChFtaW5fcHJlZml4X2xlbmd0",
-            "aBgEIAEoBRIVCg1hdXRvX2xlYXJuaW5nGAsgASgIElgKGHN1Z2dlc3Rpb25z",
-            "X2lucHV0X2NvbmZpZxgFIAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "Q29tcGxldGlvbkRhdGFJbnB1dENvbmZpZ0ID4EEDEi4KIWxhc3Rfc3VnZ2Vz",
-            "dGlvbnNfaW1wb3J0X29wZXJhdGlvbhgGIAEoCUID4EEDElUKFWRlbnlsaXN0",
-            "X2lucHV0X2NvbmZpZxgHIAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "Q29tcGxldGlvbkRhdGFJbnB1dENvbmZpZ0ID4EEDEisKHmxhc3RfZGVueWxp",
-            "c3RfaW1wb3J0X29wZXJhdGlvbhgIIAEoCUID4EEDElYKFmFsbG93bGlzdF9p",
-            "bnB1dF9jb25maWcYCSABKAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNv",
-            "bXBsZXRpb25EYXRhSW5wdXRDb25maWdCA+BBAxIsCh9sYXN0X2FsbG93bGlz",
-            "dF9pbXBvcnRfb3BlcmF0aW9uGAogASgJQgPgQQM6eOpBdQomcmV0YWlsLmdv",
-            "b2dsZWFwaXMuY29tL0NvbXBsZXRpb25Db25maWcSS3Byb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30v",
-            "Y29tcGxldGlvbkNvbmZpZyLsAQoHQ2F0YWxvZxIUCgRuYW1lGAEgASgJQgbg",
-            "QQLgQQUSHAoMZGlzcGxheV9uYW1lGAIgASgJQgbgQQLgQQUSTQoUcHJvZHVj",
-            "dF9sZXZlbF9jb25maWcYBCABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LlByb2R1Y3RMZXZlbENvbmZpZ0ID4EECOl7qQVsKHXJldGFpbC5nb29nbGVh",
-            "cGlzLmNvbS9DYXRhbG9nEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9QrcBChpjb20uZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52MkIMQ2F0YWxvZ1Byb3RvUAFaMmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vcmV0YWlsL2FwaXYyL3JldGFpbHBiO3JldGFpbHBiogIGUkVU",
-            "QUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxS",
-            "ZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "L3YyL2ltcG9ydF9jb25maWcucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
+            "c3RhbXAucHJvdG8iXgoSUHJvZHVjdExldmVsQ29uZmlnEh4KFmluZ2VzdGlv",
+            "bl9wcm9kdWN0X3R5cGUYASABKAkSKAogbWVyY2hhbnRfY2VudGVyX3Byb2R1",
+            "Y3RfaWRfZmllbGQYAiABKAki9w8KEENhdGFsb2dBdHRyaWJ1dGUSEAoDa2V5",
+            "GAEgASgJQgPgQQISEwoGaW5fdXNlGAkgASgIQgPgQQMSSQoEdHlwZRgKIAEo",
+            "DjI2Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0ZS5B",
+            "dHRyaWJ1dGVUeXBlQgPgQQMSUgoQaW5kZXhhYmxlX29wdGlvbhgFIAEoDjI4",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0ZS5JbmRl",
+            "eGFibGVPcHRpb24SYQoYZHluYW1pY19mYWNldGFibGVfb3B0aW9uGAYgASgO",
+            "Mj8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9nQXR0cmlidXRlLkR5",
+            "bmFtaWNGYWNldGFibGVPcHRpb24SVAoRc2VhcmNoYWJsZV9vcHRpb24YByAB",
+            "KA4yOS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNhdGFsb2dBdHRyaWJ1dGUu",
+            "U2VhcmNoYWJsZU9wdGlvbhJfChdleGFjdF9zZWFyY2hhYmxlX29wdGlvbhgL",
+            "IAEoDjI+Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0",
+            "ZS5FeGFjdFNlYXJjaGFibGVPcHRpb24SVgoScmV0cmlldmFibGVfb3B0aW9u",
+            "GAwgASgOMjouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9nQXR0cmli",
+            "dXRlLlJldHJpZXZhYmxlT3B0aW9uEkoKDGZhY2V0X2NvbmZpZxgNIAEoCzI0",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0ZS5GYWNl",
+            "dENvbmZpZxrpBQoLRmFjZXRDb25maWcSOQoPZmFjZXRfaW50ZXJ2YWxzGAEg",
+            "AygLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbnRlcnZhbBJlChRpZ25v",
+            "cmVkX2ZhY2V0X3ZhbHVlcxgCIAMoCzJHLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djIuQ2F0YWxvZ0F0dHJpYnV0ZS5GYWNldENvbmZpZy5JZ25vcmVkRmFjZXRW",
+            "YWx1ZXMSYgoTbWVyZ2VkX2ZhY2V0X3ZhbHVlcxgDIAMoCzJFLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0ZS5GYWNldENvbmZpZy5N",
+            "ZXJnZWRGYWNldFZhbHVlElYKDG1lcmdlZF9mYWNldBgEIAEoCzJALmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0ZS5GYWNldENvbmZp",
+            "Zy5NZXJnZWRGYWNldBJYCg1yZXJhbmtfY29uZmlnGAUgASgLMkEuZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52Mi5DYXRhbG9nQXR0cmlidXRlLkZhY2V0Q29uZmln",
+            "LlJlcmFua0NvbmZpZxqCAQoSSWdub3JlZEZhY2V0VmFsdWVzEg4KBnZhbHVl",
+            "cxgBIAMoCRIuCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXAaOAoQTWVyZ2VkRmFjZXRWYWx1ZRIOCgZ2YWx1ZXMYASAD",
+            "KAkSFAoMbWVyZ2VkX3ZhbHVlGAIgASgJGicKC01lcmdlZEZhY2V0EhgKEG1l",
+            "cmdlZF9mYWNldF9rZXkYASABKAkaOgoMUmVyYW5rQ29uZmlnEhQKDHJlcmFu",
+            "a19mYWNldBgBIAEoCBIUCgxmYWNldF92YWx1ZXMYAiADKAkiOAoNQXR0cmli",
+            "dXRlVHlwZRILCgdVTktOT1dOEAASCwoHVEVYVFVBTBABEg0KCU5VTUVSSUNB",
+            "TBACImIKD0luZGV4YWJsZU9wdGlvbhIgChxJTkRFWEFCTEVfT1BUSU9OX1VO",
+            "U1BFQ0lGSUVEEAASFQoRSU5ERVhBQkxFX0VOQUJMRUQQARIWChJJTkRFWEFC",
+            "TEVfRElTQUJMRUQQAiKBAQoWRHluYW1pY0ZhY2V0YWJsZU9wdGlvbhIoCiRE",
+            "WU5BTUlDX0ZBQ0VUQUJMRV9PUFRJT05fVU5TUEVDSUZJRUQQABIdChlEWU5B",
+            "TUlDX0ZBQ0VUQUJMRV9FTkFCTEVEEAESHgoaRFlOQU1JQ19GQUNFVEFCTEVf",
+            "RElTQUJMRUQQAiJmChBTZWFyY2hhYmxlT3B0aW9uEiEKHVNFQVJDSEFCTEVf",
+            "T1BUSU9OX1VOU1BFQ0lGSUVEEAASFgoSU0VBUkNIQUJMRV9FTkFCTEVEEAES",
+            "FwoTU0VBUkNIQUJMRV9ESVNBQkxFRBACIn0KFUV4YWN0U2VhcmNoYWJsZU9w",
+            "dGlvbhInCiNFWEFDVF9TRUFSQ0hBQkxFX09QVElPTl9VTlNQRUNJRklFRBAA",
+            "EhwKGEVYQUNUX1NFQVJDSEFCTEVfRU5BQkxFRBABEh0KGUVYQUNUX1NFQVJD",
+            "SEFCTEVfRElTQUJMRUQQAiJqChFSZXRyaWV2YWJsZU9wdGlvbhIiCh5SRVRS",
+            "SUVWQUJMRV9PUFRJT05fVU5TUEVDSUZJRUQQABIXChNSRVRSSUVWQUJMRV9F",
+            "TkFCTEVEEAESGAoUUkVUUklFVkFCTEVfRElTQUJMRUQQAiK2AwoQQXR0cmli",
+            "dXRlc0NvbmZpZxIUCgRuYW1lGAEgASgJQgbgQQLgQQUSWwoSY2F0YWxvZ19h",
+            "dHRyaWJ1dGVzGAIgAygLMj8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5BdHRy",
+            "aWJ1dGVzQ29uZmlnLkNhdGFsb2dBdHRyaWJ1dGVzRW50cnkSUQoWYXR0cmli",
+            "dXRlX2NvbmZpZ19sZXZlbBgDIAEoDjIsLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djIuQXR0cmlidXRlQ29uZmlnTGV2ZWxCA+BBAxpiChZDYXRhbG9nQXR0cmli",
+            "dXRlc0VudHJ5EgsKA2tleRgBIAEoCRI3CgV2YWx1ZRgCIAEoCzIoLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0dHJpYnV0ZToCOAE6eOpBdQom",
+            "cmV0YWlsLmdvb2dsZWFwaXMuY29tL0F0dHJpYnV0ZXNDb25maWcSS3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9ncy97",
+            "Y2F0YWxvZ30vYXR0cmlidXRlc0NvbmZpZyKZBQoQQ29tcGxldGlvbkNvbmZp",
+            "ZxIUCgRuYW1lGAEgASgJQgbgQQLgQQUSFgoObWF0Y2hpbmdfb3JkZXIYAiAB",
+            "KAkSFwoPbWF4X3N1Z2dlc3Rpb25zGAMgASgFEhkKEW1pbl9wcmVmaXhfbGVu",
+            "Z3RoGAQgASgFEhUKDWF1dG9fbGVhcm5pbmcYCyABKAgSWAoYc3VnZ2VzdGlv",
+            "bnNfaW5wdXRfY29uZmlnGAUgASgLMjEuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "Mi5Db21wbGV0aW9uRGF0YUlucHV0Q29uZmlnQgPgQQMSLgohbGFzdF9zdWdn",
+            "ZXN0aW9uc19pbXBvcnRfb3BlcmF0aW9uGAYgASgJQgPgQQMSVQoVZGVueWxp",
+            "c3RfaW5wdXRfY29uZmlnGAcgASgLMjEuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "Mi5Db21wbGV0aW9uRGF0YUlucHV0Q29uZmlnQgPgQQMSKwoebGFzdF9kZW55",
+            "bGlzdF9pbXBvcnRfb3BlcmF0aW9uGAggASgJQgPgQQMSVgoWYWxsb3dsaXN0",
+            "X2lucHV0X2NvbmZpZxgJIAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "Q29tcGxldGlvbkRhdGFJbnB1dENvbmZpZ0ID4EEDEiwKH2xhc3RfYWxsb3ds",
+            "aXN0X2ltcG9ydF9vcGVyYXRpb24YCiABKAlCA+BBAzp46kF1CiZyZXRhaWwu",
+            "Z29vZ2xlYXBpcy5jb20vQ29tcGxldGlvbkNvbmZpZxJLcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhdGFsb2dzL3tjYXRhbG9n",
+            "fS9jb21wbGV0aW9uQ29uZmlnIuwBCgdDYXRhbG9nEhQKBG5hbWUYASABKAlC",
+            "BuBBAuBBBRIcCgxkaXNwbGF5X25hbWUYAiABKAlCBuBBAuBBBRJNChRwcm9k",
+            "dWN0X2xldmVsX2NvbmZpZxgEIAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djIuUHJvZHVjdExldmVsQ29uZmlnQgPgQQI6XupBWwodcmV0YWlsLmdvb2ds",
+            "ZWFwaXMuY29tL0NhdGFsb2cSOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ31CtwEKGmNvbS5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyQgxDYXRhbG9nUHJvdG9QAVoyY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9yZXRhaWwvYXBpdjIvcmV0YWlscGI7cmV0YWlscGKiAgZS",
+            "RVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3Vk",
+            "XFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductLevelConfig), global::Google.Cloud.Retail.V2.ProductLevelConfig.Parser, new[]{ "IngestionProductType", "MerchantCenterProductIdField" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute), global::Google.Cloud.Retail.V2.CatalogAttribute.Parser, new[]{ "Key", "InUse", "Type", "IndexableOption", "DynamicFacetableOption", "SearchableOption", "ExactSearchableOption", "RetrievableOption" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute), global::Google.Cloud.Retail.V2.CatalogAttribute.Parser, new[]{ "Key", "InUse", "Type", "IndexableOption", "DynamicFacetableOption", "SearchableOption", "ExactSearchableOption", "RetrievableOption", "FacetConfig" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig), global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Parser, new[]{ "FacetIntervals", "IgnoredFacetValues", "MergedFacetValues", "MergedFacet", "RerankConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues), global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues.Parser, new[]{ "Values", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue), global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue.Parser, new[]{ "Values", "MergedValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet), global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet.Parser, new[]{ "MergedFacetKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig), global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig.Parser, new[]{ "RerankFacet", "FacetValues" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AttributesConfig), global::Google.Cloud.Retail.V2.AttributesConfig.Parser, new[]{ "Name", "CatalogAttributes", "AttributeConfigLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CompletionConfig), global::Google.Cloud.Retail.V2.CompletionConfig.Parser, new[]{ "Name", "MatchingOrder", "MaxSuggestions", "MinPrefixLength", "AutoLearning", "SuggestionsInputConfig", "LastSuggestionsImportOperation", "DenylistInputConfig", "LastDenylistImportOperation", "AllowlistInputConfig", "LastAllowlistImportOperation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Catalog), global::Google.Cloud.Retail.V2.Catalog.Parser, new[]{ "Name", "DisplayName", "ProductLevelConfig" }, null, null, null, null)
@@ -434,6 +457,7 @@ namespace Google.Cloud.Retail.V2 {
       searchableOption_ = other.searchableOption_;
       exactSearchableOption_ = other.exactSearchableOption_;
       retrievableOption_ = other.retrievableOption_;
+      facetConfig_ = other.facetConfig_ != null ? other.facetConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -531,7 +555,9 @@ namespace Google.Cloud.Retail.V2 {
     /// are indexed so that it can be filtered, faceted, or boosted in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
     ///
-    /// Must be specified, otherwise throws INVALID_FORMAT error.
+    /// Must be specified when
+    /// [AttributesConfig.attribute_config_level][google.cloud.retail.v2.AttributesConfig.attribute_config_level]
+    /// is CATALOG_LEVEL_ATTRIBUTE_CONFIG, otherwise throws INVALID_FORMAT error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -577,7 +603,9 @@ namespace Google.Cloud.Retail.V2 {
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search], as
     /// there are no text values associated to numerical attributes.
     ///
-    /// Must be specified, otherwise throws INVALID_FORMAT error.
+    /// Must be specified, when
+    /// [AttributesConfig.attribute_config_level][google.cloud.retail.v2.AttributesConfig.attribute_config_level]
+    /// is CATALOG_LEVEL_ATTRIBUTE_CONFIG, otherwise throws INVALID_FORMAT error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -624,6 +652,21 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "facet_config" field.</summary>
+    public const int FacetConfigFieldNumber = 13;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig facetConfig_;
+    /// <summary>
+    /// Contains facet options.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig FacetConfig {
+      get { return facetConfig_; }
+      set {
+        facetConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -647,6 +690,7 @@ namespace Google.Cloud.Retail.V2 {
       if (SearchableOption != other.SearchableOption) return false;
       if (ExactSearchableOption != other.ExactSearchableOption) return false;
       if (RetrievableOption != other.RetrievableOption) return false;
+      if (!object.Equals(FacetConfig, other.FacetConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -662,6 +706,7 @@ namespace Google.Cloud.Retail.V2 {
       if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) hash ^= SearchableOption.GetHashCode();
       if (ExactSearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified) hash ^= ExactSearchableOption.GetHashCode();
       if (RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) hash ^= RetrievableOption.GetHashCode();
+      if (facetConfig_ != null) hash ^= FacetConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -712,6 +757,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(96);
         output.WriteEnum((int) RetrievableOption);
       }
+      if (facetConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FacetConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -754,6 +803,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(96);
         output.WriteEnum((int) RetrievableOption);
       }
+      if (facetConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FacetConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -787,6 +840,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RetrievableOption);
+      }
+      if (facetConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FacetConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -823,6 +879,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) {
         RetrievableOption = other.RetrievableOption;
+      }
+      if (other.facetConfig_ != null) {
+        if (facetConfig_ == null) {
+          FacetConfig = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig();
+        }
+        FacetConfig.MergeFrom(other.FacetConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -871,6 +933,13 @@ namespace Google.Cloud.Retail.V2 {
             RetrievableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) input.ReadEnum();
             break;
           }
+          case 106: {
+            if (facetConfig_ == null) {
+              FacetConfig = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig();
+            }
+            input.ReadMessage(FacetConfig);
+            break;
+          }
         }
       }
     #endif
@@ -916,6 +985,13 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 96: {
             RetrievableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            if (facetConfig_ == null) {
+              FacetConfig = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig();
+            }
+            input.ReadMessage(FacetConfig);
             break;
           }
         }
@@ -1037,6 +1113,1347 @@ namespace Google.Cloud.Retail.V2 {
         /// Retrievable option disabled for an attribute.
         /// </summary>
         [pbr::OriginalName("RETRIEVABLE_DISABLED")] RetrievableDisabled = 2,
+      }
+
+      /// <summary>
+      /// Possible options for the facet that corresponds to the current attribute
+      /// config.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FacetConfig : pb::IMessage<FacetConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FacetConfig> _parser = new pb::MessageParser<FacetConfig>(() => new FacetConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FacetConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.CatalogAttribute.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FacetConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FacetConfig(FacetConfig other) : this() {
+          facetIntervals_ = other.facetIntervals_.Clone();
+          ignoredFacetValues_ = other.ignoredFacetValues_.Clone();
+          mergedFacetValues_ = other.mergedFacetValues_.Clone();
+          mergedFacet_ = other.mergedFacet_ != null ? other.mergedFacet_.Clone() : null;
+          rerankConfig_ = other.rerankConfig_ != null ? other.rerankConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FacetConfig Clone() {
+          return new FacetConfig(this);
+        }
+
+        /// <summary>Field number for the "facet_intervals" field.</summary>
+        public const int FacetIntervalsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.Interval> _repeated_facetIntervals_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Retail.V2.Interval.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Interval> facetIntervals_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Interval>();
+        /// <summary>
+        /// If you don't set the facet
+        /// [SearchRequest.FacetSpec.FacetKey.intervals][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.intervals]
+        /// in the request to a numerical attribute, then we use the computed
+        /// intervals with rounded bounds obtained from all its product numerical
+        /// attribute values. The computed intervals might not be ideal for some
+        /// attributes. Therefore, we give you the option to overwrite them with the
+        /// facet_intervals field. The maximum of facet intervals per
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] is 40. Each
+        /// interval must have a lower bound or an upper bound. If both bounds are
+        /// provided, then the lower bound must be smaller or equal than the upper
+        /// bound.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Interval> FacetIntervals {
+          get { return facetIntervals_; }
+        }
+
+        /// <summary>Field number for the "ignored_facet_values" field.</summary>
+        public const int IgnoredFacetValuesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues> _repeated_ignoredFacetValues_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues> ignoredFacetValues_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues>();
+        /// <summary>
+        /// Each instance represents a list of attribute values to ignore as facet
+        /// values for a specific time range. The maximum number of instances per
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] is 25.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.IgnoredFacetValues> IgnoredFacetValues {
+          get { return ignoredFacetValues_; }
+        }
+
+        /// <summary>Field number for the "merged_facet_values" field.</summary>
+        public const int MergedFacetValuesFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue> _repeated_mergedFacetValues_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue> mergedFacetValues_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue>();
+        /// <summary>
+        /// Each instance replaces a list of facet values by a merged facet
+        /// value. If a facet value is not in any list, then it will stay the same.
+        /// To avoid conflicts, only paths of length 1 are accepted. In other words,
+        /// if "dark_blue" merged into "BLUE", then the latter can't merge into
+        /// "blues" because this would create a path of length 2. The maximum number
+        /// of instances of MergedFacetValue per
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] is 100. This
+        /// feature is available only for textual custom attributes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacetValue> MergedFacetValues {
+          get { return mergedFacetValues_; }
+        }
+
+        /// <summary>Field number for the "merged_facet" field.</summary>
+        public const int MergedFacetFieldNumber = 4;
+        private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet mergedFacet_;
+        /// <summary>
+        /// Use this field only if you want to merge a facet key into another facet
+        /// key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet MergedFacet {
+          get { return mergedFacet_; }
+          set {
+            mergedFacet_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rerank_config" field.</summary>
+        public const int RerankConfigFieldNumber = 5;
+        private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig rerankConfig_;
+        /// <summary>
+        /// Set this field only if you want to rerank based on facet values engaged
+        /// by the user for the current key. This option is only possible for custom
+        /// facetable textual keys.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig RerankConfig {
+          get { return rerankConfig_; }
+          set {
+            rerankConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FacetConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FacetConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!facetIntervals_.Equals(other.facetIntervals_)) return false;
+          if(!ignoredFacetValues_.Equals(other.ignoredFacetValues_)) return false;
+          if(!mergedFacetValues_.Equals(other.mergedFacetValues_)) return false;
+          if (!object.Equals(MergedFacet, other.MergedFacet)) return false;
+          if (!object.Equals(RerankConfig, other.RerankConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= facetIntervals_.GetHashCode();
+          hash ^= ignoredFacetValues_.GetHashCode();
+          hash ^= mergedFacetValues_.GetHashCode();
+          if (mergedFacet_ != null) hash ^= MergedFacet.GetHashCode();
+          if (rerankConfig_ != null) hash ^= RerankConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          facetIntervals_.WriteTo(output, _repeated_facetIntervals_codec);
+          ignoredFacetValues_.WriteTo(output, _repeated_ignoredFacetValues_codec);
+          mergedFacetValues_.WriteTo(output, _repeated_mergedFacetValues_codec);
+          if (mergedFacet_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(MergedFacet);
+          }
+          if (rerankConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(RerankConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          facetIntervals_.WriteTo(ref output, _repeated_facetIntervals_codec);
+          ignoredFacetValues_.WriteTo(ref output, _repeated_ignoredFacetValues_codec);
+          mergedFacetValues_.WriteTo(ref output, _repeated_mergedFacetValues_codec);
+          if (mergedFacet_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(MergedFacet);
+          }
+          if (rerankConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(RerankConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += facetIntervals_.CalculateSize(_repeated_facetIntervals_codec);
+          size += ignoredFacetValues_.CalculateSize(_repeated_ignoredFacetValues_codec);
+          size += mergedFacetValues_.CalculateSize(_repeated_mergedFacetValues_codec);
+          if (mergedFacet_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MergedFacet);
+          }
+          if (rerankConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RerankConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FacetConfig other) {
+          if (other == null) {
+            return;
+          }
+          facetIntervals_.Add(other.facetIntervals_);
+          ignoredFacetValues_.Add(other.ignoredFacetValues_);
+          mergedFacetValues_.Add(other.mergedFacetValues_);
+          if (other.mergedFacet_ != null) {
+            if (mergedFacet_ == null) {
+              MergedFacet = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet();
+            }
+            MergedFacet.MergeFrom(other.MergedFacet);
+          }
+          if (other.rerankConfig_ != null) {
+            if (rerankConfig_ == null) {
+              RerankConfig = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig();
+            }
+            RerankConfig.MergeFrom(other.RerankConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                facetIntervals_.AddEntriesFrom(input, _repeated_facetIntervals_codec);
+                break;
+              }
+              case 18: {
+                ignoredFacetValues_.AddEntriesFrom(input, _repeated_ignoredFacetValues_codec);
+                break;
+              }
+              case 26: {
+                mergedFacetValues_.AddEntriesFrom(input, _repeated_mergedFacetValues_codec);
+                break;
+              }
+              case 34: {
+                if (mergedFacet_ == null) {
+                  MergedFacet = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet();
+                }
+                input.ReadMessage(MergedFacet);
+                break;
+              }
+              case 42: {
+                if (rerankConfig_ == null) {
+                  RerankConfig = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig();
+                }
+                input.ReadMessage(RerankConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                facetIntervals_.AddEntriesFrom(ref input, _repeated_facetIntervals_codec);
+                break;
+              }
+              case 18: {
+                ignoredFacetValues_.AddEntriesFrom(ref input, _repeated_ignoredFacetValues_codec);
+                break;
+              }
+              case 26: {
+                mergedFacetValues_.AddEntriesFrom(ref input, _repeated_mergedFacetValues_codec);
+                break;
+              }
+              case 34: {
+                if (mergedFacet_ == null) {
+                  MergedFacet = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.MergedFacet();
+                }
+                input.ReadMessage(MergedFacet);
+                break;
+              }
+              case 42: {
+                if (rerankConfig_ == null) {
+                  RerankConfig = new global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Types.RerankConfig();
+                }
+                input.ReadMessage(RerankConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the FacetConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// [Facet values][google.cloud.retail.v2.SearchResponse.Facet.values] to
+          /// ignore on [facets][google.cloud.retail.v2.SearchResponse.Facet] during
+          /// the specified time range for the given
+          /// [SearchResponse.Facet.key][google.cloud.retail.v2.SearchResponse.Facet.key]
+          /// attribute.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class IgnoredFacetValues : pb::IMessage<IgnoredFacetValues>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<IgnoredFacetValues> _parser = new pb::MessageParser<IgnoredFacetValues>(() => new IgnoredFacetValues());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<IgnoredFacetValues> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public IgnoredFacetValues() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public IgnoredFacetValues(IgnoredFacetValues other) : this() {
+              values_ = other.values_.Clone();
+              startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+              endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public IgnoredFacetValues Clone() {
+              return new IgnoredFacetValues(this);
+            }
+
+            /// <summary>Field number for the "values" field.</summary>
+            public const int ValuesFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_values_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// List of facet values to ignore for the following time range. The facet
+            /// values are the same as the attribute values. There is a limit of 10
+            /// values per instance of IgnoredFacetValues. Each value can have at most
+            /// 128 characters.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Values {
+              get { return values_; }
+            }
+
+            /// <summary>Field number for the "start_time" field.</summary>
+            public const int StartTimeFieldNumber = 2;
+            private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+            /// <summary>
+            /// Time range for the current list of facet values to ignore.
+            /// If multiple time ranges are specified for an facet value for the
+            /// current attribute, consider all of them. If both are empty, ignore
+            /// always. If start time and end time are set, then start time
+            /// must be before end time.
+            /// If start time is not empty and end time is empty, then will ignore
+            /// these facet values after the start time.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+              get { return startTime_; }
+              set {
+                startTime_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "end_time" field.</summary>
+            public const int EndTimeFieldNumber = 3;
+            private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+            /// <summary>
+            /// If start time is empty and end time is not empty, then ignore these
+            /// facet values before end time.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+              get { return endTime_; }
+              set {
+                endTime_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as IgnoredFacetValues);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(IgnoredFacetValues other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!values_.Equals(other.values_)) return false;
+              if (!object.Equals(StartTime, other.StartTime)) return false;
+              if (!object.Equals(EndTime, other.EndTime)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= values_.GetHashCode();
+              if (startTime_ != null) hash ^= StartTime.GetHashCode();
+              if (endTime_ != null) hash ^= EndTime.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              values_.WriteTo(output, _repeated_values_codec);
+              if (startTime_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(StartTime);
+              }
+              if (endTime_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(EndTime);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              values_.WriteTo(ref output, _repeated_values_codec);
+              if (startTime_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(StartTime);
+              }
+              if (endTime_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(EndTime);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += values_.CalculateSize(_repeated_values_codec);
+              if (startTime_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+              }
+              if (endTime_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(IgnoredFacetValues other) {
+              if (other == null) {
+                return;
+              }
+              values_.Add(other.values_);
+              if (other.startTime_ != null) {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                StartTime.MergeFrom(other.StartTime);
+              }
+              if (other.endTime_ != null) {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                EndTime.MergeFrom(other.EndTime);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    values_.AddEntriesFrom(input, _repeated_values_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (startTime_ == null) {
+                      StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(StartTime);
+                    break;
+                  }
+                  case 26: {
+                    if (endTime_ == null) {
+                      EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(EndTime);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    values_.AddEntriesFrom(ref input, _repeated_values_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (startTime_ == null) {
+                      StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(StartTime);
+                    break;
+                  }
+                  case 26: {
+                    if (endTime_ == null) {
+                      EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(EndTime);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Replaces a set of textual facet values by the same (possibly different)
+          /// merged facet value. Each facet value should appear at most once as a
+          /// value per [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute].
+          /// This feature is available only for textual custom attributes.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class MergedFacetValue : pb::IMessage<MergedFacetValue>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MergedFacetValue> _parser = new pb::MessageParser<MergedFacetValue>(() => new MergedFacetValue());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MergedFacetValue> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MergedFacetValue() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MergedFacetValue(MergedFacetValue other) : this() {
+              values_ = other.values_.Clone();
+              mergedValue_ = other.mergedValue_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MergedFacetValue Clone() {
+              return new MergedFacetValue(this);
+            }
+
+            /// <summary>Field number for the "values" field.</summary>
+            public const int ValuesFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_values_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// All the facet values that are replaces by the same
+            /// [merged_value][google.cloud.retail.v2.CatalogAttribute.FacetConfig.MergedFacetValue.merged_value]
+            /// that follows. The maximum number of values per MergedFacetValue is 25.
+            /// Each value can have up to 128 characters.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Values {
+              get { return values_; }
+            }
+
+            /// <summary>Field number for the "merged_value" field.</summary>
+            public const int MergedValueFieldNumber = 2;
+            private string mergedValue_ = "";
+            /// <summary>
+            /// All the previous values are replaced by this merged facet value.
+            /// This merged_value must be non-empty and can have up to 128 characters.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string MergedValue {
+              get { return mergedValue_; }
+              set {
+                mergedValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MergedFacetValue);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MergedFacetValue other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!values_.Equals(other.values_)) return false;
+              if (MergedValue != other.MergedValue) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= values_.GetHashCode();
+              if (MergedValue.Length != 0) hash ^= MergedValue.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              values_.WriteTo(output, _repeated_values_codec);
+              if (MergedValue.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(MergedValue);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              values_.WriteTo(ref output, _repeated_values_codec);
+              if (MergedValue.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(MergedValue);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += values_.CalculateSize(_repeated_values_codec);
+              if (MergedValue.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(MergedValue);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MergedFacetValue other) {
+              if (other == null) {
+                return;
+              }
+              values_.Add(other.values_);
+              if (other.MergedValue.Length != 0) {
+                MergedValue = other.MergedValue;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    values_.AddEntriesFrom(input, _repeated_values_codec);
+                    break;
+                  }
+                  case 18: {
+                    MergedValue = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    values_.AddEntriesFrom(ref input, _repeated_values_codec);
+                    break;
+                  }
+                  case 18: {
+                    MergedValue = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// The current facet key (i.e. attribute config) maps into the
+          /// [merged_facet_key][google.cloud.retail.v2.CatalogAttribute.FacetConfig.MergedFacet.merged_facet_key].
+          /// A facet key can have at most one child. The current facet key and the
+          /// merged facet key need both to be textual custom attributes or both
+          /// numerical custom attributes (same type).
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class MergedFacet : pb::IMessage<MergedFacet>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MergedFacet> _parser = new pb::MessageParser<MergedFacet>(() => new MergedFacet());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MergedFacet> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MergedFacet() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MergedFacet(MergedFacet other) : this() {
+              mergedFacetKey_ = other.mergedFacetKey_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MergedFacet Clone() {
+              return new MergedFacet(this);
+            }
+
+            /// <summary>Field number for the "merged_facet_key" field.</summary>
+            public const int MergedFacetKeyFieldNumber = 1;
+            private string mergedFacetKey_ = "";
+            /// <summary>
+            /// The merged facet key should be a valid facet key that is different than
+            /// the facet key of the current catalog attribute. We refer this is
+            /// merged facet key as the child of the current catalog attribute. This
+            /// merged facet key can't be a parent of another facet key (i.e. no
+            /// directed path of length 2). This merged facet key needs to be either a
+            /// textual custom attribute or a numerical custom attribute.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string MergedFacetKey {
+              get { return mergedFacetKey_; }
+              set {
+                mergedFacetKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MergedFacet);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MergedFacet other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (MergedFacetKey != other.MergedFacetKey) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (MergedFacetKey.Length != 0) hash ^= MergedFacetKey.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (MergedFacetKey.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(MergedFacetKey);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (MergedFacetKey.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(MergedFacetKey);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (MergedFacetKey.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(MergedFacetKey);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MergedFacet other) {
+              if (other == null) {
+                return;
+              }
+              if (other.MergedFacetKey.Length != 0) {
+                MergedFacetKey = other.MergedFacetKey;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    MergedFacetKey = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    MergedFacetKey = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Options to rerank based on facet values engaged by the user for the
+          /// current key. That key needs to be a custom textual key and facetable.
+          /// To use this control, you also need to pass all the facet keys engaged by
+          /// the user in the request using the field [SearchRequest.FacetSpec]. In
+          /// particular, if you don't pass the facet keys engaged that you want to
+          /// rerank on, this control won't be effective. Moreover, to obtain better
+          /// results, the facet values that you want to rerank on should be close to
+          /// English (ideally made of words, underscores, and spaces).
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class RerankConfig : pb::IMessage<RerankConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<RerankConfig> _parser = new pb::MessageParser<RerankConfig>(() => new RerankConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<RerankConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Retail.V2.CatalogAttribute.Types.FacetConfig.Descriptor.NestedTypes[3]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RerankConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RerankConfig(RerankConfig other) : this() {
+              rerankFacet_ = other.rerankFacet_;
+              facetValues_ = other.facetValues_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RerankConfig Clone() {
+              return new RerankConfig(this);
+            }
+
+            /// <summary>Field number for the "rerank_facet" field.</summary>
+            public const int RerankFacetFieldNumber = 1;
+            private bool rerankFacet_;
+            /// <summary>
+            /// If set to true, then we also rerank the dynamic facets based on the
+            /// facet values engaged by the user for the current attribute key during
+            /// serving.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool RerankFacet {
+              get { return rerankFacet_; }
+              set {
+                rerankFacet_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "facet_values" field.</summary>
+            public const int FacetValuesFieldNumber = 2;
+            private static readonly pb::FieldCodec<string> _repeated_facetValues_codec
+                = pb::FieldCodec.ForString(18);
+            private readonly pbc::RepeatedField<string> facetValues_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// If empty, rerank on all facet values for the current key. Otherwise,
+            /// will rerank on the facet values from this list only.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> FacetValues {
+              get { return facetValues_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as RerankConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(RerankConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (RerankFacet != other.RerankFacet) return false;
+              if(!facetValues_.Equals(other.facetValues_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (RerankFacet != false) hash ^= RerankFacet.GetHashCode();
+              hash ^= facetValues_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (RerankFacet != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(RerankFacet);
+              }
+              facetValues_.WriteTo(output, _repeated_facetValues_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (RerankFacet != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(RerankFacet);
+              }
+              facetValues_.WriteTo(ref output, _repeated_facetValues_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (RerankFacet != false) {
+                size += 1 + 1;
+              }
+              size += facetValues_.CalculateSize(_repeated_facetValues_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(RerankConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.RerankFacet != false) {
+                RerankFacet = other.RerankFacet;
+              }
+              facetValues_.Add(other.facetValues_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    RerankFacet = input.ReadBool();
+                    break;
+                  }
+                  case 18: {
+                    facetValues_.AddEntriesFrom(input, _repeated_facetValues_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    RerankFacet = input.ReadBool();
+                    break;
+                  }
+                  case 18: {
+                    facetValues_.AddEntriesFrom(ref input, _repeated_facetValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
       }
 
     }
@@ -1498,8 +2915,8 @@ namespace Google.Cloud.Retail.V2 {
     /// Output only. Name of the LRO corresponding to the latest suggestion terms
     /// list import.
     ///
-    /// Can use [GetOperation][google.longrunning.Operations.GetOperation] API to
-    /// retrieve the latest state of the Long Running Operation.
+    /// Can use [GetOperation][google.longrunning.Operations.GetOperation] API
+    /// method to retrieve the latest state of the Long Running Operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

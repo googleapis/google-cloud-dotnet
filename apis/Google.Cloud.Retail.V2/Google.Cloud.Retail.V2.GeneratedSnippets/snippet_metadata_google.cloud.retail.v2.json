@@ -2500,12 +2500,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 49,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -2549,12 +2549,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -7726,6 +7726,103 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_PurgeProducts_sync",
+      "title": "PurgeProductsRequestObject",
+      "description": "Snippet for PurgeProducts",
+      "file": "ProductServiceClient.PurgeProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeProducts",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.PurgeProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PurgeProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.PurgeProductsResponse, Google.Cloud.Retail.V2.PurgeProductsMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeProducts",
+          "fullName": "google.cloud.retail.v2.ProductService.PurgeProducts",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_PurgeProducts_async",
+      "title": "PurgeProductsRequestObjectAsync",
+      "description": "Snippet for PurgeProductsAsync",
+      "file": "ProductServiceClient.PurgeProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeProductsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.PurgeProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PurgeProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.PurgeProductsResponse, Google.Cloud.Retail.V2.PurgeProductsMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeProducts",
+          "fullName": "google.cloud.retail.v2.ProductService.PurgeProducts",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
           "type": "SHORT"
         }
       ]

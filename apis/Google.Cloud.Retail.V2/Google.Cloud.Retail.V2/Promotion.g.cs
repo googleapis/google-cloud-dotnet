@@ -100,8 +100,8 @@ namespace Google.Cloud.Retail.V2 {
     /// id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is
     /// returned.
     ///
-    /// Google Merchant Center property
-    /// [promotion](https://support.google.com/merchants/answer/7050148).
+    /// Corresponds to Google Merchant Center property
+    /// [promotion_id](https://support.google.com/merchants/answer/7050148).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
