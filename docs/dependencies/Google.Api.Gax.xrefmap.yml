@@ -1,6 +1,6 @@
 ### YamlMime:XRefMap
 baseUrl: https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/
-sorted: true
+sorted: false
 references:
 - uid: Google.Api.Gax
   name: Google.Api.Gax

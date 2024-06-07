@@ -1,6 +1,6 @@
-baseUrl: https://googleapis.dev/dotnet/Google.Apis.Bigquery.v2/1.57.0.2668/
 ### YamlMime:XRefMap
-sorted: true
+baseUrl: https://googleapis.dev/dotnet/Google.Apis.Bigquery.v2/1.57.0.2668/
+sorted: false
 references:
 - uid: Google.Apis.Bigquery.v2
   name: Google.Apis.Bigquery.v2
