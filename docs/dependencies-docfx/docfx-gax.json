@@ -1,0 +1,15 @@
+{
+  "metadata": [
+    {
+      "src": [{ "files": [
+        "Google.Api.Gax/Google.Api.Gax.csproj",
+        "Google.Api.Gax.Rest/Google.Api.Gax.Rest.csproj",
+        "Google.Api.Gax.Grpc/Google.Api.Gax.Grpc.csproj",
+        "Google.Api.Gax.Grpc.Testing/Google.Api.Gax.Grpc.Testing.csproj",
+        "Google.Api.Gax.Testing/Google.Api.Gax.Testing.csproj"
+      ] }],
+      "properties": { "TargetFramework": "netstandard2.0" },
+      "dest": "api",
+    }
+  ]
+}

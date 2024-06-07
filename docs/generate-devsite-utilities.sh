@@ -34,19 +34,20 @@ fi
 set -eu -o pipefail
 
 declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
+declare -r UTILITY_TYPE=$1
 declare -r VERSION=$2
 
 # These are listed in the order of dependencies:
 # each type only depends on types listed earlier
-case $1 in
+case $UTILITY_TYPE in
+  # It's clearer to users if we specify the NuGet
+  # package version, but the tag needs to be the
+  # "main" protobuf version. At the moment, that's
+  # just a matter of replacing "3." with "v".
   protobuf)
     declare -r REPO=https://github.com/protocolbuffers/protobuf
-    declare -r TAG=v$VERSION
+    declare -r TAG=$(echo $VERSION | sed 's/^3\./v/g')
     declare -r DEVSITE_PACKAGE=Google.Protobuf
-    declare -a PROJECTS=(
-      'csharp/src/Google.Protobuf'
-    )
-    declare -r TARGET_FRAMEWORK=netstandard2.0
     declare -a XREFS=(
     )
     ;;
@@ -54,13 +55,6 @@ case $1 in
     declare -r REPO=https://github.com/googleapis/google-api-dotnet-client
     declare -r DEVSITE_PACKAGE=Google.Apis
     declare -r TAG=v$VERSION
-    declare -a PROJECTS=(
-      'Src/Support/Google.Apis'
-      'Src/Support/Google.Apis.Auth'
-      'Src/Support/Google.Apis.Auth.AspNetCore3'
-      'Src/Support/Google.Apis.Core'
-    )
-    declare -r TARGET_FRAMEWORK=netcoreapp3.1
     declare -a XREFS=(
     )
     ;;
@@ -68,10 +62,6 @@ case $1 in
     declare -r REPO=https://github.com/googleapis/gax-dotnet
     declare -r TAG=Google.Api.CommonProtos-$VERSION
     declare -r DEVSITE_PACKAGE=Google.Api.CommonProtos
-    declare -a PROJECTS=(
-      'Google.Api.CommonProtos'
-    )
-    declare -r TARGET_FRAMEWORK=net461
     declare -a XREFS=(
       'Google.Protobuf'
     )
@@ -80,11 +70,6 @@ case $1 in
     declare -r REPO=https://github.com/grpc/grpc-dotnet
     declare -r TAG=v$VERSION
     declare -r DEVSITE_PACKAGE=Grpc.Core
-    declare -a PROJECTS=(
-      'src/Grpc.Auth'
-      'src/Grpc.Core.Api'
-    )
-    declare -r TARGET_FRAMEWORK=netstandard2.0
     declare -a XREFS=(
       'Google.Apis'
     )
@@ -93,14 +78,6 @@ case $1 in
     declare -r REPO=https://github.com/googleapis/gax-dotnet
     declare -r TAG=Google.Api.Gax-$VERSION
     declare -r DEVSITE_PACKAGE=Google.Api.Gax
-    declare -a PROJECTS=(
-      'Google.Api.Gax'
-      'Google.Api.Gax.Grpc'
-      'Google.Api.Gax.Grpc.Testing'
-      'Google.Api.Gax.Rest'
-      'Google.Api.Gax.Testing'
-    )
-    declare -r TARGET_FRAMEWORK=net462
     declare -a XREFS=(
       'Google.Protobuf'
       'Google.Api.CommonProtos'
@@ -118,21 +95,20 @@ mkdir output
 echo "Cloning $REPO"
 git clone -q $REPO -b $TAG --depth=1 -c advice.detachedHead=false output/repo
 
-PROJECTS_TMP=""
-for project in "${PROJECTS[@]}"
-do
-  PROJECTS_TMP="$PROJECTS_TMP output/repo/$project/*.csproj"
-done
+# Hack for google-apis; harmless for others.
+mkdir -p output/repo/NuPkgs/Support
+
+cp dependencies-docfx/docfx-$UTILITY_TYPE.json output/repo/docfx.json
 
 echo 'Running docfx metadata'
-dotnet docfx metadata --logLevel Error -o output --property TargetFramework=$TARGET_FRAMEWORK $PROJECTS_TMP
+dotnet docfx metadata --logLevel Error output/repo/docfx.json
 
-# This will have created an output/output directory. 
-# (For some reason docfx takes "output" and doubles it to output/output.)
-# We rename this to output/utility/devsite/api so we can use output/utility/devsite as the
-# "root" directory for docuploader.
-# (This will make it easier to add snippets in the future if we want to.)
-# Having the pseudo-package-name of "utility" makes this more consistent with other tooling, too.
+if [[ ! -d output/repo/api ]]
+then
+  echo "No API metadata generated. Exiting."
+  exit 1
+fi
+
 cd output
 mkdir -p utility/devsite
 
@@ -141,9 +117,9 @@ mkdir -p utility/devsite
 mv_attempts=10
 until [[ $mv_attempts == 0 ]]
 do
-  mv output/ utility/devsite/api/ && break
+  mv repo/api utility/devsite/api/ && break
   mv_attempts=$((mv_attempts-1))
-  if [[ mv_attempts == 0 ]]
+  if [[ $mv_attempts == 0 ]]
   then
     echo 'Failed to move output directory. Aborting.'
     exit 1
@@ -175,20 +151,27 @@ do
   fi
 done
 
+if [[ $XREF_TMP == "" ]]
+then
+  XREF_FLAGS=""
+else
+  XREF_FLAGS="--xrefs $XREF_TMP"
+fi
+
 dotnet docuploader create-metadata \
---name $DEVSITE_PACKAGE \
---version $VERSION \
---language dotnet \
---xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
---xrefs $XREF_TMP
+  --name $DEVSITE_PACKAGE \
+  --version $VERSION \
+  --language dotnet \
+  --xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
+  $XREF_FLAGS
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
    dotnet docuploader upload \
-    --documentation-path . \
-    --credentials $SERVICE_ACCOUNT_JSON \
-    --staging-bucket $DEVSITE_STAGING_BUCKET \
-    --destination-prefix docfx
+     --documentation-path . \
+     --credentials $SERVICE_ACCOUNT_JSON \
+     --staging-bucket $DEVSITE_STAGING_BUCKET \
+     --destination-prefix docfx
 else
   echo 'Service account JSON file not specified; skipping upload'
 fi

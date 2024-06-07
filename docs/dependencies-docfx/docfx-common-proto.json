@@ -1,7 +1,9 @@
 {
   "metadata": [
     {
-      "src": [{ "files": ["csharp/src/Google.Protobuf/Google.Protobuf.csproj"] }],
+      "src": [{ "files": [
+        "Google.Api.CommonProtos/Google.Api.CommonProtos.csproj"
+      ] }],
       "properties": { "TargetFramework": "netstandard2.0" },
       "dest": "api",
     }
