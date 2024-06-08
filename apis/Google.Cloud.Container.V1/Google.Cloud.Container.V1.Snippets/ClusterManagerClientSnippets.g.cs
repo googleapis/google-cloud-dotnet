@@ -431,10 +431,15 @@ namespace GoogleCSharpSnippets
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
                 WindowsNodeConfig = new WindowsNodeConfig(),
+                Accelerators =
+                {
+                    new AcceleratorConfig(),
+                },
                 MachineType = "",
                 DiskType = "",
                 DiskSizeGb = 0L,
                 ResourceManagerTags = new ResourceManagerTags(),
+                ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
             };
             // Make the request
@@ -472,10 +477,15 @@ namespace GoogleCSharpSnippets
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
                 WindowsNodeConfig = new WindowsNodeConfig(),
+                Accelerators =
+                {
+                    new AcceleratorConfig(),
+                },
                 MachineType = "",
                 DiskType = "",
                 DiskSizeGb = 0L,
                 ResourceManagerTags = new ResourceManagerTags(),
+                ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
             };
             // Make the request
