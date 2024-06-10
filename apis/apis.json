@@ -4052,7 +4052,7 @@
     },
     {
       "id": "Google.Cloud.Retail.V2",
-      "version": "2.10.0",
+      "version": "2.11.0",
       "type": "grpc",
       "productName": "Retail",
       "productUrl": "https://cloud.google.com/retail/docs",
