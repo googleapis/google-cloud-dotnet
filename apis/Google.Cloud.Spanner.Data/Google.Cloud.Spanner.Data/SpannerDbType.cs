@@ -128,13 +128,13 @@ namespace Google.Cloud.Spanner.Data
         internal TypeAnnotationCode TypeAnnotationCode { get; }
 
         /// <summary>
-        /// When TypeCode is Array, this is the array element type. (Null for non-arrays.)
+        /// When TypeCode is Array, this is the array element type. Null for non-arrays.
         /// </summary>
         private SpannerDbType ArrayElementType { get; }
 
         /// <summary>
-        /// The field names and types within a struct. (Null for non-structs.) This is of type
-        /// List rather than IList so we can use the protobuf-supplied Lists class for equality
+        /// The field names and types within a struct. Null for non-structs.
+        /// This is of type List rather than IList so we can use the protobuf-supplied Lists class for equality
         /// and hash codes.
         /// </summary>
         private List<StructField> StructFields { get; }
@@ -153,12 +153,22 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int? Size { get; }
 
-        private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
-            : this(typeCode) => ArrayElementType = arrayElementType;
+        /// <summary>
+        /// Builds an instance of <see cref="SpannerDbType"/> that represents an array type
+        /// whose elements are of type <paramref name="arrayElementType"/>.
+        /// </summary>
+        private SpannerDbType(SpannerDbType arrayElementType)
+            : this(TypeCode.Array) => ArrayElementType = arrayElementType;
 
-        // Note: the list reference is copied directly; callers are expected to be careful.
-        private SpannerDbType(TypeCode typeCode, List<StructField> structFields)
-            : this(typeCode) => StructFields = structFields;
+        /// <summary>
+        /// Builds an instance of <see cref="SpannerDbType"/> that represents a struct type
+        /// whose fields are <paramref name="structFields"/>.
+        /// </summary>
+        /// <remark>
+        /// The list reference is copied directly; callers are expected to be careful.
+        /// </remark>
+        private SpannerDbType(List<StructField> structFields)
+            : this(TypeCode.Struct) => StructFields = structFields;
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -236,7 +246,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Json:
                     return typeof(string);
                 default:
-                    // If we don't recognize it (or it's a struct), we use the protobuf Value well-known type.
+                    // If we don't recognize it, we use the protobuf Value well-known type.
                     return typeof(Value);
             }
         }
@@ -269,12 +279,9 @@ namespace Google.Cloud.Spanner.Data
             switch (type.Code)
             {
                 case TypeCode.Array:
-                    return new SpannerDbType(
-                        TypeCode.Array,
-                        FromProtobufType(type.ArrayElementType));
+                    return new SpannerDbType(FromProtobufType(type.ArrayElementType));
                 case TypeCode.Struct:
-                    return new SpannerDbType(TypeCode.Struct,
-                        type.StructType.Fields.Select(f => new StructField(f.Name, SpannerDbType.FromProtobufType(f.Type))).ToList());
+                    return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
                 default:
                     return FromType(type);
             }
@@ -314,7 +321,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="elementType">The type of each item in the array.</param>
         public static SpannerDbType ArrayOf(SpannerDbType elementType) =>
-            new SpannerDbType(TypeCode.Array, elementType);
+            new SpannerDbType(elementType);
 
 
         /// <summary>
@@ -322,7 +329,7 @@ namespace Google.Cloud.Spanner.Data
         /// method; making this internal allows us to avoid exposing constructors even internally.
         /// </summary>
         internal static SpannerDbType ForStruct(SpannerStruct spannerStruct) =>
-            new SpannerDbType(TypeCode.Struct, spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
+            new SpannerDbType(spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
