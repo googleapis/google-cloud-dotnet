@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.3.0, released 2024-06-10
+
+### New features
+
+- [Memorystore for Redis Cluster] Add support for different node types ([commit 536acb5](https://github.com/googleapis/google-cloud-dotnet/commit/536acb56ba7e3f849aedba247d604707fcf841db))
+- [Memorystore for Redis Cluster] Add persistence support ([commit 536acb5](https://github.com/googleapis/google-cloud-dotnet/commit/536acb56ba7e3f849aedba247d604707fcf841db))
+- [Memorystore for Redis Cluster] Get details of certificate authority from redis cluster ([commit 536acb5](https://github.com/googleapis/google-cloud-dotnet/commit/536acb56ba7e3f849aedba247d604707fcf841db))
+
+### Documentation improvements
+
+- [Memorystore for Redis Cluster] size_gb field shows the size of the cluster rounded up to the next integer, precise_size_gb field will show the exact size of the cluster ([commit 536acb5](https://github.com/googleapis/google-cloud-dotnet/commit/536acb56ba7e3f849aedba247d604707fcf841db))
+
 ## Version 1.2.0, released 2024-05-14
 
 ### New features
