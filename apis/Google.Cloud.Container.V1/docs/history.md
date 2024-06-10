@@ -1,5 +1,36 @@
 # Version history
 
+## Version 3.28.0, released 2024-06-10
+
+### New features
+
+- A new message `HugepagesConfig` is added ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `hugepages` is added to message `.google.container.v1.LinuxNodeConfig` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `containerd_config` is added to message `.google.container.v1.NodeConfig` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `enable_nested_virtualization` is added to message `.google.container.v1.AdvancedMachineFeatures` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new message `ContainerdConfig` is added ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `satisfies_pzs` is added to message `.google.container.v1.Cluster` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `satisfies_pzi` is added to message `.google.container.v1.Cluster` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new value `ENTERPRISE` is added to enum `Mode` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `node_kubelet_config` is added to message `.google.container.v1.NodePoolAutoConfig` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `containerd_config` is added to message `.google.container.v1.NodeConfigDefaults` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `node_kubelet_config` is added to message `.google.container.v1.NodeConfigDefaults` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `desired_containerd_config` is added to message `.google.container.v1.ClusterUpdate` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `desired_node_kubelet_config` is added to message `.google.container.v1.ClusterUpdate` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `desired_node_pool_auto_config_kubelet_config` is added to message `.google.container.v1.ClusterUpdate` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `accelerators` is added to message `.google.container.v1.UpdateNodePoolRequest` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `containerd_config` is added to message `.google.container.v1.UpdateNodePoolRequest` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new value `MPS` is added to enum `GPUSharingStrategy` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new field `additive_vpc_scope_dns_domain` is added to message `.google.container.v1.DNSConfig` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new value `CADVISOR` is added to enum `Component` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new value `KUBELET` is added to enum `Component` ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A new method_signature `parent` is added to method `ListOperations` in service `ClusterManager` ([commit caf8bb6](https://github.com/googleapis/google-cloud-dotnet/commit/caf8bb6d68e4edda758a38e9970558f6e5a27225))
+
+### Documentation improvements
+
+- A comment for field `desired_private_cluster_config` in message `.google.container.v1.ClusterUpdate` is changed ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+- A comment for field `in_transit_encryption_config` in message `.google.container.v1.NetworkConfig` is changed ([commit ea40436](https://github.com/googleapis/google-cloud-dotnet/commit/ea40436c66cc0917dd68e8a61f967dadbf689001))
+
 ## Version 3.27.0, released 2024-06-04
 
 ### New features
