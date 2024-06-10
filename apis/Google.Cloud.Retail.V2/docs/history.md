@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.11.0, released 2024-06-10
+
+### New features
+
+- Support merged facets ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Add product purge API ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Add page_categories to control condition ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Support attribute suggestion in autocomplete ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Support frequent bought together model config ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Allow to skip denylist postfiltering in recommendations ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+
 ## Version 2.10.0, released 2024-06-04
 
 ### New features
