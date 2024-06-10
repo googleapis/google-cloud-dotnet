@@ -31,8 +31,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Regenera
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DocfxMetadata", "..\tools\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj", "{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.FetchDependencyXrefmaps", "..\tools\Google.Cloud.Tools.FetchDependencyXrefmaps\Google.Cloud.Tools.FetchDependencyXrefmaps.csproj", "{3734E267-99C5-4C80-9D73-D411B6773BC5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1", "..\apis\Google.Cloud.Language.V1\Google.Cloud.Language.V1\Google.Cloud.Language.V1.csproj", "{33357DA1-7028-42CA-8798-28EC86EC32C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.Storage.V1", "..\apis\Google.Cloud.BigQuery.Storage.V1\Google.Cloud.BigQuery.Storage.V1\Google.Cloud.BigQuery.Storage.V1.csproj", "{0E29A05C-77A0-48DE-8966-58E484813B07}"
@@ -217,18 +215,6 @@ Global
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x64.Build.0 = Release|Any CPU
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x86.ActiveCfg = Release|Any CPU
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x86.Build.0 = Release|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x64.Build.0 = Debug|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x86.Build.0 = Debug|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x64.ActiveCfg = Release|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x64.Build.0 = Release|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.ActiveCfg = Release|Any CPU
-		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.Build.0 = Release|Any CPU
 		{33357DA1-7028-42CA-8798-28EC86EC32C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33357DA1-7028-42CA-8798-28EC86EC32C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33357DA1-7028-42CA-8798-28EC86EC32C1}.Debug|x64.ActiveCfg = Debug|Any CPU
