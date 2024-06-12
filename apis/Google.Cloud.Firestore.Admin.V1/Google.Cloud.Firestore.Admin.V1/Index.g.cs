@@ -658,7 +658,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// <summary>Field number for the "vector_config" field.</summary>
         public const int VectorConfigFieldNumber = 4;
         /// <summary>
-        /// Indicates that this field supports nearest neighbors and distance
+        /// Indicates that this field supports nearest neighbor and distance
         /// operations on vector.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

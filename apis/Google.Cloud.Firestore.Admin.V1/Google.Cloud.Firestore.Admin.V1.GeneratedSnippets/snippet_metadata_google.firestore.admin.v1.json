@@ -2576,6 +2576,293 @@
       ]
     },
     {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_BulkDeleteDocuments_sync",
+      "title": "BulkDeleteDocumentsRequestObject",
+      "description": "Snippet for BulkDeleteDocuments",
+      "file": "FirestoreAdminClient.BulkDeleteDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteDocuments",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.BulkDeleteDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsResponse, Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteDocuments",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.BulkDeleteDocuments",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_BulkDeleteDocuments_async",
+      "title": "BulkDeleteDocumentsRequestObjectAsync",
+      "description": "Snippet for BulkDeleteDocumentsAsync",
+      "file": "FirestoreAdminClient.BulkDeleteDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteDocumentsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.BulkDeleteDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsResponse, Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteDocuments",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.BulkDeleteDocuments",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_BulkDeleteDocuments_sync_flattened",
+      "title": "BulkDeleteDocuments",
+      "description": "Snippet for BulkDeleteDocuments",
+      "file": "FirestoreAdminClient.BulkDeleteDocumentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteDocuments",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.BulkDeleteDocuments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsResponse, Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteDocuments",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.BulkDeleteDocuments",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_BulkDeleteDocuments_async_flattened",
+      "title": "BulkDeleteDocumentsAsync",
+      "description": "Snippet for BulkDeleteDocumentsAsync",
+      "file": "FirestoreAdminClient.BulkDeleteDocumentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteDocumentsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.BulkDeleteDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsResponse, Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteDocuments",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.BulkDeleteDocuments",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_BulkDeleteDocuments_sync_flattened_resourceNames",
+      "title": "BulkDeleteDocumentsResourceNames",
+      "description": "Snippet for BulkDeleteDocuments",
+      "file": "FirestoreAdminClient.BulkDeleteDocumentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteDocuments",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.BulkDeleteDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsResponse, Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteDocuments",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.BulkDeleteDocuments",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_BulkDeleteDocuments_async_flattened_resourceNames",
+      "title": "BulkDeleteDocumentsResourceNamesAsync",
+      "description": "Snippet for BulkDeleteDocumentsAsync",
+      "file": "FirestoreAdminClient.BulkDeleteDocumentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteDocumentsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.BulkDeleteDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsResponse, Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteDocuments",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.BulkDeleteDocuments",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_sync",
       "title": "CreateDatabaseRequestObject",
       "description": "Snippet for CreateDatabase",
@@ -3219,12 +3506,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -3268,12 +3555,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]

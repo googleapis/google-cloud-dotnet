@@ -121,6 +121,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest> __Marshaller_google_firestore_admin_v1_BulkDeleteDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest> __Marshaller_google_firestore_admin_v1_CreateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest> __Marshaller_google_firestore_admin_v1_GetDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest.Parser));
@@ -231,6 +233,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         __ServiceName,
         "ImportDocuments",
         __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest, global::Google.LongRunning.Operation> __Method_BulkDeleteDocuments = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BulkDeleteDocuments",
+        __Marshaller_google_firestore_admin_v1_BulkDeleteDocumentsRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -505,6 +515,25 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
 
       /// <summary>
+      /// Bulk deletes a subset of documents from Google Cloud Firestore.
+      /// Documents created or updated after the underlying system starts to process
+      /// the request will not be deleted. The bulk delete occurs in the background
+      /// and its progress can be monitored and managed via the Operation resource
+      /// that is created.
+      ///
+      /// For more details on bulk delete behavior, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BulkDeleteDocuments(global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Create a database.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -605,7 +634,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       ///
       /// The new database must be in the same cloud region or multi-region location
       /// as the existing backup. This behaves similar to
-      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
       /// except instead of creating a new empty database, a new database is created
       /// with the database type, index configuration, and documents from an existing
       /// backup.
@@ -1316,6 +1345,82 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ImportDocuments, null, options, request);
       }
       /// <summary>
+      /// Bulk deletes a subset of documents from Google Cloud Firestore.
+      /// Documents created or updated after the underlying system starts to process
+      /// the request will not be deleted. The bulk delete occurs in the background
+      /// and its progress can be monitored and managed via the Operation resource
+      /// that is created.
+      ///
+      /// For more details on bulk delete behavior, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkDeleteDocuments(global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkDeleteDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Bulk deletes a subset of documents from Google Cloud Firestore.
+      /// Documents created or updated after the underlying system starts to process
+      /// the request will not be deleted. The bulk delete occurs in the background
+      /// and its progress can be monitored and managed via the Operation resource
+      /// that is created.
+      ///
+      /// For more details on bulk delete behavior, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkDeleteDocuments(global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BulkDeleteDocuments, null, options, request);
+      }
+      /// <summary>
+      /// Bulk deletes a subset of documents from Google Cloud Firestore.
+      /// Documents created or updated after the underlying system starts to process
+      /// the request will not be deleted. The bulk delete occurs in the background
+      /// and its progress can be monitored and managed via the Operation resource
+      /// that is created.
+      ///
+      /// For more details on bulk delete behavior, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkDeleteDocumentsAsync(global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkDeleteDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Bulk deletes a subset of documents from Google Cloud Firestore.
+      /// Documents created or updated after the underlying system starts to process
+      /// the request will not be deleted. The bulk delete occurs in the background
+      /// and its progress can be monitored and managed via the Operation resource
+      /// that is created.
+      ///
+      /// For more details on bulk delete behavior, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkDeleteDocumentsAsync(global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BulkDeleteDocuments, null, options, request);
+      }
+      /// <summary>
       /// Create a database.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1704,7 +1809,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       ///
       /// The new database must be in the same cloud region or multi-region location
       /// as the existing backup. This behaves similar to
-      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
       /// except instead of creating a new empty database, a new database is created
       /// with the database type, index configuration, and documents from an existing
       /// backup.
@@ -1733,7 +1838,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       ///
       /// The new database must be in the same cloud region or multi-region location
       /// as the existing backup. This behaves similar to
-      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
       /// except instead of creating a new empty database, a new database is created
       /// with the database type, index configuration, and documents from an existing
       /// backup.
@@ -1760,7 +1865,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       ///
       /// The new database must be in the same cloud region or multi-region location
       /// as the existing backup. This behaves similar to
-      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
       /// except instead of creating a new empty database, a new database is created
       /// with the database type, index configuration, and documents from an existing
       /// backup.
@@ -1789,7 +1894,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       ///
       /// The new database must be in the same cloud region or multi-region location
       /// as the existing backup. This behaves similar to
-      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
       /// except instead of creating a new empty database, a new database is created
       /// with the database type, index configuration, and documents from an existing
       /// backup.
@@ -2082,6 +2187,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_ListFields, serviceImpl.ListFields)
           .AddMethod(__Method_ExportDocuments, serviceImpl.ExportDocuments)
           .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments)
+          .AddMethod(__Method_BulkDeleteDocuments, serviceImpl.BulkDeleteDocuments)
           .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
@@ -2114,6 +2220,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_ListFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse>(serviceImpl.ListFields));
       serviceBinder.AddMethod(__Method_ExportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportDocuments));
       serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
+      serviceBinder.AddMethod(__Method_BulkDeleteDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.BulkDeleteDocuments));
       serviceBinder.AddMethod(__Method_CreateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatabase));
       serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database>(serviceImpl.GetDatabase));
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));

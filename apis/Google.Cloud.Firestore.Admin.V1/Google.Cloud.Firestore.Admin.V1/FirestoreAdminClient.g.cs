@@ -62,6 +62,8 @@ namespace Google.Cloud.Firestore.Admin.V1
             ExportDocumentsOperationsSettings = existing.ExportDocumentsOperationsSettings.Clone();
             ImportDocumentsSettings = existing.ImportDocumentsSettings;
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
+            BulkDeleteDocumentsSettings = existing.BulkDeleteDocumentsSettings;
+            BulkDeleteDocumentsOperationsSettings = existing.BulkDeleteDocumentsOperationsSettings.Clone();
             CreateDatabaseSettings = existing.CreateDatabaseSettings;
             CreateDatabaseOperationsSettings = existing.CreateDatabaseOperationsSettings.Clone();
             GetDatabaseSettings = existing.GetDatabaseSettings;
@@ -307,6 +309,36 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ImportDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.BulkDeleteDocuments</c> and <c>FirestoreAdminClient.BulkDeleteDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkDeleteDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.BulkDeleteDocuments</c> and
+        /// <c>FirestoreAdminClient.BulkDeleteDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkDeleteDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2124,6 +2156,207 @@ namespace Google.Cloud.Firestore.Admin.V1
             ImportDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest request, st::CancellationToken cancellationToken) =>
+            BulkDeleteDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkDeleteDocuments</c>.</summary>
+        public virtual lro::OperationsClient BulkDeleteDocumentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BulkDeleteDocuments</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> PollOnceBulkDeleteDocuments(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDeleteDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> PollOnceBulkDeleteDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocuments(new BulkDeleteDocumentsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocumentsAsync(new BulkDeleteDocumentsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(string name, st::CancellationToken cancellationToken) =>
+            BulkDeleteDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocuments(new BulkDeleteDocumentsRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocumentsAsync(new BulkDeleteDocumentsRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(DatabaseName name, st::CancellationToken cancellationToken) =>
+            BulkDeleteDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Create a database.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3182,7 +3415,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// 
         /// The new database must be in the same cloud region or multi-region location
         /// as the existing backup. This behaves similar to
-        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
         /// except instead of creating a new empty database, a new database is created
         /// with the database type, index configuration, and documents from an existing
         /// backup.
@@ -3207,7 +3440,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// 
         /// The new database must be in the same cloud region or multi-region location
         /// as the existing backup. This behaves similar to
-        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
         /// except instead of creating a new empty database, a new database is created
         /// with the database type, index configuration, and documents from an existing
         /// backup.
@@ -3232,7 +3465,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// 
         /// The new database must be in the same cloud region or multi-region location
         /// as the existing backup. This behaves similar to
-        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
         /// except instead of creating a new empty database, a new database is created
         /// with the database type, index configuration, and documents from an existing
         /// backup.
@@ -3927,6 +4160,8 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
 
+        private readonly gaxgrpc::ApiCall<BulkDeleteDocumentsRequest, lro::Operation> _callBulkDeleteDocuments;
+
         private readonly gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> _callCreateDatabase;
 
         private readonly gaxgrpc::ApiCall<GetDatabaseRequest, Database> _callGetDatabase;
@@ -3974,6 +4209,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             UpdateFieldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFieldOperationsSettings, logger);
             ExportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentsOperationsSettings, logger);
             ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            BulkDeleteDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkDeleteDocumentsOperationsSettings, logger);
             CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings, logger);
             UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
             DeleteDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatabaseOperationsSettings, logger);
@@ -4006,6 +4242,9 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportDocuments);
             Modify_ImportDocumentsApiCall(ref _callImportDocuments);
+            _callBulkDeleteDocuments = clientHelper.BuildApiCall<BulkDeleteDocumentsRequest, lro::Operation>("BulkDeleteDocuments", grpcClient.BulkDeleteDocumentsAsync, grpcClient.BulkDeleteDocuments, effectiveSettings.BulkDeleteDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callBulkDeleteDocuments);
+            Modify_BulkDeleteDocumentsApiCall(ref _callBulkDeleteDocuments);
             _callCreateDatabase = clientHelper.BuildApiCall<CreateDatabaseRequest, lro::Operation>("CreateDatabase", grpcClient.CreateDatabaseAsync, grpcClient.CreateDatabase, effectiveSettings.CreateDatabaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDatabase);
             Modify_CreateDatabaseApiCall(ref _callCreateDatabase);
@@ -4071,6 +4310,8 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
 
+        partial void Modify_BulkDeleteDocumentsApiCall(ref gaxgrpc::ApiCall<BulkDeleteDocumentsRequest, lro::Operation> call);
+
         partial void Modify_CreateDatabaseApiCall(ref gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> call);
 
         partial void Modify_GetDatabaseApiCall(ref gaxgrpc::ApiCall<GetDatabaseRequest, Database> call);
@@ -4124,6 +4365,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_ExportDocumentsRequest(ref ExportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BulkDeleteDocumentsRequest(ref BulkDeleteDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDatabaseRequest(ref CreateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4463,6 +4706,47 @@ namespace Google.Cloud.Firestore.Admin.V1
             return new lro::Operation<wkt::Empty, ImportDocumentsMetadata>(await _callImportDocuments.Async(request, callSettings).ConfigureAwait(false), ImportDocumentsOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>BulkDeleteDocuments</c>.</summary>
+        public override lro::OperationsClient BulkDeleteDocumentsOperationsClient { get; }
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>(_callBulkDeleteDocuments.Sync(request, callSettings), BulkDeleteDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>(await _callBulkDeleteDocuments.Async(request, callSettings).ConfigureAwait(false), BulkDeleteDocumentsOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>CreateDatabase</c>.</summary>
         public override lro::OperationsClient CreateDatabaseOperationsClient { get; }
 
@@ -4672,7 +4956,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// 
         /// The new database must be in the same cloud region or multi-region location
         /// as the existing backup. This behaves similar to
-        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
         /// except instead of creating a new empty database, a new database is created
         /// with the database type, index configuration, and documents from an existing
         /// backup.
@@ -4700,7 +4984,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// 
         /// The new database must be in the same cloud region or multi-region location
         /// as the existing backup. This behaves similar to
-        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
         /// except instead of creating a new empty database, a new database is created
         /// with the database type, index configuration, and documents from an existing
         /// backup.

@@ -1542,6 +1542,193 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BulkDeleteDocuments</summary>
+        public void BulkDeleteDocumentsRequestObject()
+        {
+            // Snippet: BulkDeleteDocuments(BulkDeleteDocumentsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::BulkDeleteDocumentsRequest request = new gcfav::BulkDeleteDocumentsRequest
+            {
+                DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                CollectionIds = { "", },
+                NamespaceIds = { "", },
+            };
+            // Make the request
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> response = firestoreAdminClient.BulkDeleteDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::BulkDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceBulkDeleteDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::BulkDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteDocumentsAsync</summary>
+        public async Task BulkDeleteDocumentsRequestObjectAsync()
+        {
+            // Snippet: BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest, CallSettings)
+            // Additional: BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::BulkDeleteDocumentsRequest request = new gcfav::BulkDeleteDocumentsRequest
+            {
+                DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                CollectionIds = { "", },
+                NamespaceIds = { "", },
+            };
+            // Make the request
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> response = await firestoreAdminClient.BulkDeleteDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::BulkDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceBulkDeleteDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::BulkDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteDocuments</summary>
+        public void BulkDeleteDocuments()
+        {
+            // Snippet: BulkDeleteDocuments(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> response = firestoreAdminClient.BulkDeleteDocuments(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::BulkDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceBulkDeleteDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::BulkDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteDocumentsAsync</summary>
+        public async Task BulkDeleteDocumentsAsync()
+        {
+            // Snippet: BulkDeleteDocumentsAsync(string, CallSettings)
+            // Additional: BulkDeleteDocumentsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> response = await firestoreAdminClient.BulkDeleteDocumentsAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::BulkDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceBulkDeleteDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::BulkDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteDocuments</summary>
+        public void BulkDeleteDocumentsResourceNames()
+        {
+            // Snippet: BulkDeleteDocuments(DatabaseName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DatabaseName name = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> response = firestoreAdminClient.BulkDeleteDocuments(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::BulkDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceBulkDeleteDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::BulkDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteDocumentsAsync</summary>
+        public async Task BulkDeleteDocumentsResourceNamesAsync()
+        {
+            // Snippet: BulkDeleteDocumentsAsync(DatabaseName, CallSettings)
+            // Additional: BulkDeleteDocumentsAsync(DatabaseName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DatabaseName name = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> response = await firestoreAdminClient.BulkDeleteDocumentsAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::BulkDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::BulkDeleteDocumentsResponse, gcfav::BulkDeleteDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceBulkDeleteDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::BulkDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateDatabase</summary>
         public void CreateDatabaseRequestObject()
         {
@@ -1834,6 +2021,7 @@ namespace GoogleCSharpSnippets
             gcfav::ListDatabasesRequest request = new gcfav::ListDatabasesRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ShowDeleted = false,
             };
             // Make the request
             gcfav::ListDatabasesResponse response = firestoreAdminClient.ListDatabases(request);
@@ -1851,6 +2039,7 @@ namespace GoogleCSharpSnippets
             gcfav::ListDatabasesRequest request = new gcfav::ListDatabasesRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ShowDeleted = false,
             };
             // Make the request
             gcfav::ListDatabasesResponse response = await firestoreAdminClient.ListDatabasesAsync(request);

@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ShowDeleted = false,
             };
             // Make the request
             ListDatabasesResponse response = firestoreAdminClient.ListDatabases(request);
