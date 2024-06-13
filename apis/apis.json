@@ -1582,7 +1582,8 @@
       "shortName": "container",
       "serviceConfigFile": "container_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DataCatalog.Lineage.V1",
