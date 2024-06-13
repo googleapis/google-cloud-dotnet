@@ -45,9 +45,16 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             Console.WriteLine();
             Console.WriteLine("Unreleased (at current minor) packages:");
-            foreach (var api in catalog.Apis.Where(api => api.Version.EndsWith("00")))
+            foreach (var api in catalog.Apis.Where(api => api.Version.EndsWith("00") && api.BlockRelease is null))
             {
                 Console.WriteLine($"{api.Id,-50}{api.Version,-20}");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Release-blocked packages:");
+            foreach (var api in catalog.Apis.Where(api => api.BlockRelease is not null))
+            {
+                Console.WriteLine($"{api.Id,-50}{api.BlockRelease}");
             }
             return 0;
         }
