@@ -7002,8 +7002,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int AssertionRowCountFieldNumber = 13;
     private long assertionRowCount_;
     /// <summary>
-    /// The number of rows returned by the sql statement in the SqlAssertion rule.
-    /// This field is only valid for SqlAssertion rules.
+    /// The number of rows returned by the SQL statement in a SQL assertion rule.
+    /// This field is only valid for SQL assertion rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7447,48 +7447,48 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("RULE_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#nonnullexpectation.
+        /// See
+        /// [DataQualityRule.NonNullExpectation][google.cloud.dataplex.v1.DataQualityRule.NonNullExpectation].
         /// </summary>
         [pbr::OriginalName("NON_NULL_EXPECTATION")] NonNullExpectation = 1,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#rangeexpectation.
+        /// See
+        /// [DataQualityRule.RangeExpectation][google.cloud.dataplex.v1.DataQualityRule.RangeExpectation].
         /// </summary>
         [pbr::OriginalName("RANGE_EXPECTATION")] RangeExpectation = 2,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#regexexpectation.
+        /// See
+        /// [DataQualityRule.RegexExpectation][google.cloud.dataplex.v1.DataQualityRule.RegexExpectation].
         /// </summary>
         [pbr::OriginalName("REGEX_EXPECTATION")] RegexExpectation = 3,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#rowconditionexpectation.
+        /// See
+        /// [DataQualityRule.RowConditionExpectation][google.cloud.dataplex.v1.DataQualityRule.RowConditionExpectation].
         /// </summary>
         [pbr::OriginalName("ROW_CONDITION_EXPECTATION")] RowConditionExpectation = 4,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#setexpectation.
+        /// See
+        /// [DataQualityRule.SetExpectation][google.cloud.dataplex.v1.DataQualityRule.SetExpectation].
         /// </summary>
         [pbr::OriginalName("SET_EXPECTATION")] SetExpectation = 5,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#statisticrangeexpectation.
+        /// See
+        /// [DataQualityRule.StatisticRangeExpectation][google.cloud.dataplex.v1.DataQualityRule.StatisticRangeExpectation].
         /// </summary>
         [pbr::OriginalName("STATISTIC_RANGE_EXPECTATION")] StatisticRangeExpectation = 6,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#tableconditionexpectation.
+        /// See
+        /// [DataQualityRule.TableConditionExpectation][google.cloud.dataplex.v1.DataQualityRule.TableConditionExpectation].
         /// </summary>
         [pbr::OriginalName("TABLE_CONDITION_EXPECTATION")] TableConditionExpectation = 7,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#uniquenessexpectation.
+        /// See
+        /// [DataQualityRule.UniquenessExpectation][google.cloud.dataplex.v1.DataQualityRule.UniquenessExpectation].
         /// </summary>
         [pbr::OriginalName("UNIQUENESS_EXPECTATION")] UniquenessExpectation = 8,
         /// <summary>
-        /// Please see
-        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#sqlAssertion.
+        /// See
+        /// [DataQualityRule.SqlAssertion][google.cloud.dataplex.v1.DataQualityRule.SqlAssertion].
         /// </summary>
         [pbr::OriginalName("SQL_ASSERTION")] SqlAssertion = 9,
       }
