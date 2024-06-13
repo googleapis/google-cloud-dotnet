@@ -1925,7 +1925,8 @@
       "shortName": "developerconnect",
       "serviceConfigFile": "developerconnect_v1.yaml",
       "transport": "grpc+rest",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "blockRelease": "See b/342251668"
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
@@ -3064,7 +3065,7 @@
       "serviceConfigFile": "managedkafka_v1.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true,
-      "blockRelease": "Not ready for a public release yet"
+      "blockRelease": "Not ready for a public release yet, see b/342492906"
     },
     {
       "id": "Google.Cloud.MediaTranslation.V1Beta1",
@@ -3789,7 +3790,8 @@
       "shortName": "privilegedaccessmanager",
       "serviceConfigFile": "privilegedaccessmanager_v1.yaml",
       "transport": "grpc+rest",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "blockRelease": "Not ready for release; see b/343854910"
     },
     {
       "id": "Google.Cloud.Profiler.V2",
@@ -4212,7 +4214,8 @@
       "shortName": "securesourcemanager",
       "serviceConfigFile": "securesourcemanager_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "blockRelease": "See b/305053862"
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
