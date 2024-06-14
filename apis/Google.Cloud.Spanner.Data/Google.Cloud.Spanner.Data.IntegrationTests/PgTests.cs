@@ -24,7 +24,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests;
 
 [Collection(nameof(AllTypesTableFixturePostgreSql))]
 [CommonTestDiagnostics]
-[Trait(Constants.SupportedOnEmulator, Constants.No)]
 public class PgTests
 {
     private readonly AllTypesTableFixturePostgreSql _fixture;
