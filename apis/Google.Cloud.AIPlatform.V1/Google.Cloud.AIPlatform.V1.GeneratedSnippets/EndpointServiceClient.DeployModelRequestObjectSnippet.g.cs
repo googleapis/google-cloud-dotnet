@@ -38,7 +38,15 @@ namespace GoogleCSharpSnippets
             DeployModelRequest request = new DeployModelRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                DeployedModel = new DeployedModel(),
+                DeployedModel = new DeployedModel
+                {
+                    ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                    DedicatedResources = new DedicatedResources
+                    {
+                        MachineSpec = new MachineSpec { },
+                        MinReplicaCount = 0,
+                    },
+                },
                 TrafficSplit = { { "", 0 }, },
             };
             // Make the request

@@ -39,7 +39,12 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]";
             IEnumerable<CreateTensorboardRunRequest> requests = new CreateTensorboardRunRequest[]
             {
-                new CreateTensorboardRunRequest(),
+                new CreateTensorboardRunRequest
+                {
+                    ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                    TensorboardRun = new TensorboardRun { DisplayName = "", },
+                    TensorboardRunId = "",
+                },
             };
             // Make the request
             BatchCreateTensorboardRunsResponse response = await tensorboardServiceClient.BatchCreateTensorboardRunsAsync(parent, requests);

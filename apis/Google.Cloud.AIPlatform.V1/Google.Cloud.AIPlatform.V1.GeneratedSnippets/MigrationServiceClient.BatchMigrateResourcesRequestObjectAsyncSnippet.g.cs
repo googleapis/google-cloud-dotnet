@@ -42,7 +42,15 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 MigrateResourceRequests =
                 {
-                    new MigrateResourceRequest(),
+                    new MigrateResourceRequest
+                    {
+                        MigrateMlEngineModelVersionConfig = new MigrateResourceRequest.Types.MigrateMlEngineModelVersionConfig
+                        {
+                            Endpoint = "",
+                            ModelVersionAsVersionName = VersionName.FromProjectModelVersion("[PROJECT]", "[MODEL]", "[VERSION]"),
+                            ModelDisplayName = "",
+                        },
+                    },
                 },
             };
             // Make the request

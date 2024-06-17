@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             CompleteTrialRequest request = new CompleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
-                FinalMeasurement = new Measurement(),
+                FinalMeasurement = new Measurement { },
                 TrialInfeasible = false,
                 InfeasibleReason = "",
             };

@@ -38,7 +38,20 @@ namespace GoogleCSharpSnippets
             CreateCustomJobRequest request = new CreateCustomJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CustomJob = new CustomJob(),
+                CustomJob = new CustomJob
+                {
+                    DisplayName = "",
+                    JobSpec = new CustomJobSpec
+                    {
+                        WorkerPoolSpecs =
+                        {
+                            new WorkerPoolSpec
+                            {
+                                ContainerSpec = new ContainerSpec { ImageUri = "", },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             CustomJob response = jobServiceClient.CreateCustomJob(request);

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
                 ModelEvaluationSlices =
                 {
-                    new ModelEvaluationSlice(),
+                    new ModelEvaluationSlice { },
                 },
             };
             // Make the request

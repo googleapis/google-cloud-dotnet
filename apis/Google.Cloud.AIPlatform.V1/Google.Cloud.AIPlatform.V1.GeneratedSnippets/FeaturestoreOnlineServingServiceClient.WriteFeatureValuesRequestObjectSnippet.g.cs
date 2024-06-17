@@ -39,7 +39,17 @@ namespace GoogleCSharpSnippets
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
                 Payloads =
                 {
-                    new WriteFeatureValuesPayload(),
+                    new WriteFeatureValuesPayload
+                    {
+                        EntityId = "",
+                        FeatureValues =
+                        {
+                            {
+                                "",
+                                new FeatureValue { BoolValue = false, }
+                            },
+                        },
+                    },
                 },
             };
             // Make the request

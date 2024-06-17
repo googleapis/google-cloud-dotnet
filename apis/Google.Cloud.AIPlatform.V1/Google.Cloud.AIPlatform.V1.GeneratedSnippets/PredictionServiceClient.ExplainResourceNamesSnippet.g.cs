@@ -39,8 +39,17 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
-            wkt::Value parameters = new wkt::Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[]
+            {
+                new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+            };
+            wkt::Value parameters = new wkt::Value
+            {
+                NullValue = wkt::NullValue.NullValue,
+            };
             string deployedModelId = "";
             // Make the request
             ExplainResponse response = predictionServiceClient.Explain(endpoint, instances, parameters, deployedModelId);

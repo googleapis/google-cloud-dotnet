@@ -38,7 +38,13 @@ namespace GoogleCSharpSnippets
             FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            FeatureGroup featureGroup = new FeatureGroup();
+            FeatureGroup featureGroup = new FeatureGroup
+            {
+                BigQuery = new FeatureGroup.Types.BigQuery
+                {
+                    BigQuerySource = new BigQuerySource { InputUri = "", },
+                },
+            };
             string featureGroupId = "";
             // Make the request
             Operation<FeatureGroup, CreateFeatureGroupOperationMetadata> response = await featureRegistryServiceClient.CreateFeatureGroupAsync(parent, featureGroup, featureGroupId);

@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]";
-            Context context = new Context();
+            Context context = new Context { };
             string contextId = "";
             // Make the request
             Context response = await metadataServiceClient.CreateContextAsync(parent, context, contextId);

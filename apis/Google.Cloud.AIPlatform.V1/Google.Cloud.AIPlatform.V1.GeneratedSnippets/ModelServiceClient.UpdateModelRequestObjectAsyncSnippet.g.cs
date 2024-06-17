@@ -38,8 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateModelRequest request = new UpdateModelRequest
             {
-                Model = new Model(),
-                UpdateMask = new FieldMask(),
+                Model = new Model { DisplayName = "", },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Model response = await modelServiceClient.UpdateModelAsync(request);

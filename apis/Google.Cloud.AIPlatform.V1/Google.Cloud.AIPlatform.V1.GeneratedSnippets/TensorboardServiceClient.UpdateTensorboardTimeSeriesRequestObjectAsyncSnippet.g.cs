@@ -38,8 +38,12 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateTensorboardTimeSeriesRequest request = new UpdateTensorboardTimeSeriesRequest
             {
-                UpdateMask = new FieldMask(),
-                TensorboardTimeSeries = new TensorboardTimeSeries(),
+                UpdateMask = new FieldMask { },
+                TensorboardTimeSeries = new TensorboardTimeSeries
+                {
+                    DisplayName = "",
+                    ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                },
             };
             // Make the request
             TensorboardTimeSeries response = await tensorboardServiceClient.UpdateTensorboardTimeSeriesAsync(request);

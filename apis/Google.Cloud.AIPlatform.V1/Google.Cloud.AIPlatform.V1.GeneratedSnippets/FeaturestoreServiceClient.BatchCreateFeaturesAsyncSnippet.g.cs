@@ -40,7 +40,12 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
             IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
             {
-                new CreateFeatureRequest(),
+                new CreateFeatureRequest
+                {
+                    ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                    Feature = new Feature { },
+                    FeatureId = "",
+                },
             };
             // Make the request
             Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featurestoreServiceClient.BatchCreateFeaturesAsync(parent, requests);

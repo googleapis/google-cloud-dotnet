@@ -39,13 +39,20 @@ namespace GoogleCSharpSnippets
             ExportFeatureValuesRequest request = new ExportFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
-                SnapshotExport = new ExportFeatureValuesRequest.Types.SnapshotExport(),
-                Destination = new FeatureValueDestination(),
-                FeatureSelector = new FeatureSelector(),
+                SnapshotExport = new ExportFeatureValuesRequest.Types.SnapshotExport { },
+                Destination = new FeatureValueDestination
+                {
+                    BigqueryDestination = new BigQueryDestination { OutputUri = "", },
+                },
+                FeatureSelector = new FeatureSelector
+                {
+                    IdMatcher = new IdMatcher { Ids = { "", }, },
+                },
                 Settings =
                 {
-                    new DestinationFeatureSetting(),
+                    new DestinationFeatureSetting { FeatureId = "", },
                 },
+                FullExport = new ExportFeatureValuesRequest.Types.FullExport { },
             };
             // Make the request
             Operation<ExportFeatureValuesResponse, ExportFeatureValuesOperationMetadata> response = await featurestoreServiceClient.ExportFeatureValuesAsync(request);

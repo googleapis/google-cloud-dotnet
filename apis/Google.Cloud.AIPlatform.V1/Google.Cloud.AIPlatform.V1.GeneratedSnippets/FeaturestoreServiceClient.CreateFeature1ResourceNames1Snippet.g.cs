@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
             // Initialize request argument(s)
             EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
-            Feature feature = new Feature();
+            Feature feature = new Feature { };
             // Make the request
             Operation<Feature, CreateFeatureOperationMetadata> response = featurestoreServiceClient.CreateFeature(parent, feature);
 

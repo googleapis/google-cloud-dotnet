@@ -35,8 +35,12 @@ namespace GoogleCSharpSnippets
             // Create client
             TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
             // Initialize request argument(s)
-            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries();
-            FieldMask updateMask = new FieldMask();
+            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries
+            {
+                DisplayName = "",
+                ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             TensorboardTimeSeries response = tensorboardServiceClient.UpdateTensorboardTimeSeries(tensorboardTimeSeries, updateMask);
         }

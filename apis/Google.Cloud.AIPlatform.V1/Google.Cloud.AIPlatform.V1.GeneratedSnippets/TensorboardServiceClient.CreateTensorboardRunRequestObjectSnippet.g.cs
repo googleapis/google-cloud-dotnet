@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
-                TensorboardRun = new TensorboardRun(),
+                TensorboardRun = new TensorboardRun { DisplayName = "", },
                 TensorboardRunId = "",
             };
             // Make the request

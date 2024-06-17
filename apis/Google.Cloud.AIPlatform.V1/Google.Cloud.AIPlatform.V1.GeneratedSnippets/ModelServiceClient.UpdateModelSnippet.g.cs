@@ -35,8 +35,8 @@ namespace GoogleCSharpSnippets
             // Create client
             ModelServiceClient modelServiceClient = ModelServiceClient.Create();
             // Initialize request argument(s)
-            Model model = new Model();
-            FieldMask updateMask = new FieldMask();
+            Model model = new Model { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Model response = modelServiceClient.UpdateModel(model, updateMask);
         }

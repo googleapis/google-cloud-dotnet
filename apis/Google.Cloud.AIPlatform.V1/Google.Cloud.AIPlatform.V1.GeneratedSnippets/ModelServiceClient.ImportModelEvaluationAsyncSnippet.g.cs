@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
-            ModelEvaluation modelEvaluation = new ModelEvaluation();
+            ModelEvaluation modelEvaluation = new ModelEvaluation { };
             // Make the request
             ModelEvaluation response = await modelServiceClient.ImportModelEvaluationAsync(parent, modelEvaluation);
         }

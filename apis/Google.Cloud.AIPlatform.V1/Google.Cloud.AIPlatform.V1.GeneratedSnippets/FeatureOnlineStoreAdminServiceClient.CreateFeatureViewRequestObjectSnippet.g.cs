@@ -38,7 +38,14 @@ namespace GoogleCSharpSnippets
             CreateFeatureViewRequest request = new CreateFeatureViewRequest
             {
                 ParentAsFeatureOnlineStoreName = FeatureOnlineStoreName.FromProjectLocationFeatureOnlineStore("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]"),
-                FeatureView = new FeatureView(),
+                FeatureView = new FeatureView
+                {
+                    BigQuerySource = new FeatureView.Types.BigQuerySource
+                    {
+                        Uri = "",
+                        EntityIdColumns = { "", },
+                    },
+                },
                 FeatureViewId = "",
                 RunSyncImmediately = false,
             };

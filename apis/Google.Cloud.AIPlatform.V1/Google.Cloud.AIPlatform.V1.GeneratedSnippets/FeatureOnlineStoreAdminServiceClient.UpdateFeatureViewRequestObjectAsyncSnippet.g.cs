@@ -39,8 +39,15 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateFeatureViewRequest request = new UpdateFeatureViewRequest
             {
-                FeatureView = new FeatureView(),
-                UpdateMask = new FieldMask(),
+                FeatureView = new FeatureView
+                {
+                    BigQuerySource = new FeatureView.Types.BigQuerySource
+                    {
+                        Uri = "",
+                        EntityIdColumns = { "", },
+                    },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<FeatureView, UpdateFeatureViewOperationMetadata> response = await featureOnlineStoreAdminServiceClient.UpdateFeatureViewAsync(request);

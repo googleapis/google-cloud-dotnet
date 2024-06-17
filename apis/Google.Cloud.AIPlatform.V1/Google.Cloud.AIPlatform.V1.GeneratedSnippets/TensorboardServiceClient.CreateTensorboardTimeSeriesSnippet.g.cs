@@ -35,7 +35,11 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]/runs/[RUN]/timeSeries/[TIME_SERIES]";
-            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries();
+            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries
+            {
+                DisplayName = "",
+                ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+            };
             // Make the request
             TensorboardTimeSeries response = tensorboardServiceClient.CreateTensorboardTimeSeries(parent, tensorboardTimeSeries);
         }

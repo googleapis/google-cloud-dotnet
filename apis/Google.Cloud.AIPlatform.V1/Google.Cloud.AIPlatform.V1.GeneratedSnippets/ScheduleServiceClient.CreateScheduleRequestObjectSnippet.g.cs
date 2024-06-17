@@ -38,7 +38,17 @@ namespace GoogleCSharpSnippets
             CreateScheduleRequest request = new CreateScheduleRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Schedule = new Schedule(),
+                Schedule = new Schedule
+                {
+                    DisplayName = "",
+                    Cron = "",
+                    MaxConcurrentRunCount = 0L,
+                    CreatePipelineJobRequest = new CreatePipelineJobRequest
+                    {
+                        ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                        PipelineJob = new PipelineJob { },
+                    },
+                },
             };
             // Make the request
             Schedule response = scheduleServiceClient.CreateSchedule(request);

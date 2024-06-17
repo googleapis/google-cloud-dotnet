@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                ModelEvaluation = new ModelEvaluation(),
+                ModelEvaluation = new ModelEvaluation { },
             };
             // Make the request
             ModelEvaluation response = await modelServiceClient.ImportModelEvaluationAsync(request);

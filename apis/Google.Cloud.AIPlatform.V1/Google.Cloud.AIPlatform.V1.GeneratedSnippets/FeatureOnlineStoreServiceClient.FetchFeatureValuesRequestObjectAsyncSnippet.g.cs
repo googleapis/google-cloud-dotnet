@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             FetchFeatureValuesRequest request = new FetchFeatureValuesRequest
             {
                 FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
-                DataKey = new FeatureViewDataKey(),
+                DataKey = new FeatureViewDataKey { Key = "", },
                 DataFormat = FeatureViewDataFormat.Unspecified,
             };
             // Make the request

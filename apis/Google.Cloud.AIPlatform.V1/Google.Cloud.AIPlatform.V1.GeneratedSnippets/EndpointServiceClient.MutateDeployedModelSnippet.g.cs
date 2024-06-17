@@ -37,8 +37,16 @@ namespace GoogleCSharpSnippets
             EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            DeployedModel deployedModel = new DeployedModel();
-            FieldMask updateMask = new FieldMask();
+            DeployedModel deployedModel = new DeployedModel
+            {
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DedicatedResources = new DedicatedResources
+                {
+                    MachineSpec = new MachineSpec { },
+                    MinReplicaCount = 0,
+                },
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = endpointServiceClient.MutateDeployedModel(endpoint, deployedModel, updateMask);
 

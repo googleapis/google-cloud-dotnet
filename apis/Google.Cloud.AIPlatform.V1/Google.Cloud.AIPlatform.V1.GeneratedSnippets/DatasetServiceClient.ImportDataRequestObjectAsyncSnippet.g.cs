@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 ImportConfigs =
                 {
-                    new ImportDataConfig(),
+                    new ImportDataConfig
+                    {
+                        GcsSource = new GcsSource { Uris = { "", }, },
+                        ImportSchemaUri = "",
+                    },
                 },
             };
             // Make the request

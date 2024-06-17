@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
             ListSpecialistPoolsRequest request = new ListSpecialistPoolsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedAsyncEnumerable<ListSpecialistPoolsResponse, SpecialistPool> response = specialistPoolServiceClient.ListSpecialistPoolsAsync(request);

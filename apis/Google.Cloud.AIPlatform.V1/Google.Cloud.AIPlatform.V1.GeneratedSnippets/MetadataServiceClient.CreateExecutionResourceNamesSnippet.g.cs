@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
             MetadataStoreName parent = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]");
-            Execution execution = new Execution();
+            Execution execution = new Execution { };
             string executionId = "";
             // Make the request
             Execution response = metadataServiceClient.CreateExecution(parent, execution, executionId);

@@ -39,7 +39,11 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             NotebookRuntimeTemplateName notebookRuntimeTemplate = NotebookRuntimeTemplateName.FromProjectLocationNotebookRuntimeTemplate("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME_TEMPLATE]");
-            NotebookRuntime notebookRuntime = new NotebookRuntime();
+            NotebookRuntime notebookRuntime = new NotebookRuntime
+            {
+                RuntimeUser = "",
+                DisplayName = "",
+            };
             string notebookRuntimeId = "";
             // Make the request
             Operation<NotebookRuntime, AssignNotebookRuntimeOperationMetadata> response = await notebookServiceClient.AssignNotebookRuntimeAsync(parent, notebookRuntimeTemplate, notebookRuntime, notebookRuntimeId);

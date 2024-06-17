@@ -36,7 +36,16 @@ namespace GoogleCSharpSnippets
             PersistentResourceServiceClient persistentResourceServiceClient = PersistentResourceServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            PersistentResource persistentResource = new PersistentResource();
+            PersistentResource persistentResource = new PersistentResource
+            {
+                ResourcePools =
+                {
+                    new ResourcePool
+                    {
+                        MachineSpec = new MachineSpec { },
+                    },
+                },
+            };
             string persistentResourceId = "";
             // Make the request
             Operation<PersistentResource, CreatePersistentResourceOperationMetadata> response = persistentResourceServiceClient.CreatePersistentResource(parent, persistentResource, persistentResourceId);

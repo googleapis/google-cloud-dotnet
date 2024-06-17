@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             UploadModelRequest request = new UploadModelRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Model = new Model(),
+                Model = new Model { DisplayName = "", },
                 ParentModel = "",
                 ModelId = "",
                 ServiceAccount = "",

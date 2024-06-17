@@ -38,7 +38,11 @@ namespace GoogleCSharpSnippets
             MutateDeployedIndexRequest request = new MutateDeployedIndexRequest
             {
                 IndexEndpointAsIndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
-                DeployedIndex = new DeployedIndex(),
+                DeployedIndex = new DeployedIndex
+                {
+                    Id = "",
+                    IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                },
             };
             // Make the request
             Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = indexEndpointServiceClient.MutateDeployedIndex(request);

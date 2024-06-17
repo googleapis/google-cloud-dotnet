@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
-            Feature feature = new Feature();
+            Feature feature = new Feature { };
             string featureId = "";
             // Make the request
             Operation<Feature, CreateFeatureOperationMetadata> response = featureRegistryServiceClient.CreateFeature(parent, feature, featureId);

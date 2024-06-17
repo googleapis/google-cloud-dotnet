@@ -39,7 +39,14 @@ namespace GoogleCSharpSnippets
             CreateTuningJobRequest request = new CreateTuningJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                TuningJob = new TuningJob(),
+                TuningJob = new TuningJob
+                {
+                    BaseModel = "",
+                    SupervisedTuningSpec = new SupervisedTuningSpec
+                    {
+                        TrainingDatasetUri = "",
+                    },
+                },
             };
             // Make the request
             TuningJob response = await genAiTuningServiceClient.CreateTuningJobAsync(request);

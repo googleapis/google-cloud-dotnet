@@ -35,7 +35,14 @@ namespace GoogleCSharpSnippets
             GenAiTuningServiceClient genAiTuningServiceClient = GenAiTuningServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            TuningJob tuningJob = new TuningJob();
+            TuningJob tuningJob = new TuningJob
+            {
+                BaseModel = "",
+                SupervisedTuningSpec = new SupervisedTuningSpec
+                {
+                    TrainingDatasetUri = "",
+                },
+            };
             // Make the request
             TuningJob response = genAiTuningServiceClient.CreateTuningJob(parent, tuningJob);
         }

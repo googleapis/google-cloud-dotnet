@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
-                MetadataSchema = new MetadataSchema(),
+                MetadataSchema = new MetadataSchema { Schema = "", },
                 MetadataSchemaId = "",
             };
             // Make the request

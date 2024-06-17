@@ -46,7 +46,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedAsyncEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(request);

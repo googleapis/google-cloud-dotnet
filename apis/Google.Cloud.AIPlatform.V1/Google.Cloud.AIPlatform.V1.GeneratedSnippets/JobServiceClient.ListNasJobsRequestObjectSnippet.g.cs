@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobs(request);

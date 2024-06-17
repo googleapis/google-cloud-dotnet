@@ -36,8 +36,12 @@ namespace GoogleCSharpSnippets
             // Create client
             SpecialistPoolServiceClient specialistPoolServiceClient = SpecialistPoolServiceClient.Create();
             // Initialize request argument(s)
-            SpecialistPool specialistPool = new SpecialistPool();
-            FieldMask updateMask = new FieldMask();
+            SpecialistPool specialistPool = new SpecialistPool
+            {
+                SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
+                DisplayName = "",
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<SpecialistPool, UpdateSpecialistPoolOperationMetadata> response = specialistPoolServiceClient.UpdateSpecialistPool(specialistPool, updateMask);
 

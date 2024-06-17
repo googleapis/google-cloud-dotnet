@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             AddTrialMeasurementRequest request = new AddTrialMeasurementRequest
             {
                 TrialNameAsTrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
-                Measurement = new Measurement(),
+                Measurement = new Measurement { },
             };
             // Make the request
             Trial response = await vizierServiceClient.AddTrialMeasurementAsync(request);

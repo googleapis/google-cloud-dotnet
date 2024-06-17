@@ -14,11 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_PipelineService_CreateTrainingPipeline_async_flattened]
     using Google.Cloud.AIPlatform.V1;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedPipelineServiceClientSnippets
     {
@@ -36,7 +39,15 @@ namespace GoogleCSharpSnippets
             PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            TrainingPipeline trainingPipeline = new TrainingPipeline();
+            TrainingPipeline trainingPipeline = new TrainingPipeline
+            {
+                DisplayName = "",
+                TrainingTaskDefinition = "",
+                TrainingTaskInputs = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+            };
             // Make the request
             TrainingPipeline response = await pipelineServiceClient.CreateTrainingPipelineAsync(parent, trainingPipeline);
         }

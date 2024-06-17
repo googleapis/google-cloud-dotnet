@@ -40,7 +40,13 @@ namespace GoogleCSharpSnippets
             ComputeTokensRequest request = new ComputeTokensRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new wkt::Value(), },
+                Instances =
+                {
+                    new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                },
             };
             // Make the request
             ComputeTokensResponse response = llmUtilityServiceClient.ComputeTokens(request);

@@ -39,8 +39,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateFeaturestoreRequest request = new UpdateFeaturestoreRequest
             {
-                Featurestore = new Featurestore(),
-                UpdateMask = new FieldMask(),
+                Featurestore = new Featurestore { },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<Featurestore, UpdateFeaturestoreOperationMetadata> response = await featurestoreServiceClient.UpdateFeaturestoreAsync(request);

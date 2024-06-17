@@ -35,8 +35,8 @@ namespace GoogleCSharpSnippets
             // Create client
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
-            Context context = new Context();
-            FieldMask updateMask = new FieldMask();
+            Context context = new Context { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Context response = metadataServiceClient.UpdateContext(context, updateMask);
         }

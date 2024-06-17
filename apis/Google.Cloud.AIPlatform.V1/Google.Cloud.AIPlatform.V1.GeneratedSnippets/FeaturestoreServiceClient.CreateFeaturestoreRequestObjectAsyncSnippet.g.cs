@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             CreateFeaturestoreRequest request = new CreateFeaturestoreRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Featurestore = new Featurestore(),
+                Featurestore = new Featurestore { },
                 FeaturestoreId = "",
             };
             // Make the request

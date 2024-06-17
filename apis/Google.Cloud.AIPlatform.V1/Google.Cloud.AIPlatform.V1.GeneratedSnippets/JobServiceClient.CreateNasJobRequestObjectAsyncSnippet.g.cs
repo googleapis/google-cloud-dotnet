@@ -39,7 +39,31 @@ namespace GoogleCSharpSnippets
             CreateNasJobRequest request = new CreateNasJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                NasJob = new NasJob(),
+                NasJob = new NasJob
+                {
+                    DisplayName = "",
+                    NasJobSpec = new NasJobSpec
+                    {
+                        MultiTrialAlgorithmSpec = new NasJobSpec.Types.MultiTrialAlgorithmSpec
+                        {
+                            SearchTrialSpec = new NasJobSpec.Types.MultiTrialAlgorithmSpec.Types.SearchTrialSpec
+                            {
+                                SearchTrialJobSpec = new CustomJobSpec
+                                {
+                                    WorkerPoolSpecs =
+                                    {
+                                        new WorkerPoolSpec
+                                        {
+                                            ContainerSpec = new ContainerSpec { ImageUri = "", },
+                                        },
+                                    },
+                                },
+                                MaxTrialCount = 0,
+                                MaxParallelTrialCount = 0,
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             NasJob response = await jobServiceClient.CreateNasJobAsync(request);

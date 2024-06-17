@@ -36,7 +36,14 @@ namespace GoogleCSharpSnippets
             DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
             // Initialize request argument(s)
             DatasetName name = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
-            ExportDataConfig exportConfig = new ExportDataConfig();
+            ExportDataConfig exportConfig = new ExportDataConfig
+            {
+                GcsDestination = new GcsDestination
+                {
+                    OutputUriPrefix = "",
+                },
+                FractionSplit = new ExportFractionSplit { },
+            };
             // Make the request
             Operation<ExportDataResponse, ExportDataOperationMetadata> response = datasetServiceClient.ExportData(name, exportConfig);
 

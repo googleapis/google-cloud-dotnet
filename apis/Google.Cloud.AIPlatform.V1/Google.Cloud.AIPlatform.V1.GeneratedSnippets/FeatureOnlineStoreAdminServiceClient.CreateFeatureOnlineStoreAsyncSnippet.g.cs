@@ -37,7 +37,17 @@ namespace GoogleCSharpSnippets
             FeatureOnlineStoreAdminServiceClient featureOnlineStoreAdminServiceClient = await FeatureOnlineStoreAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            FeatureOnlineStore featureOnlineStore = new FeatureOnlineStore();
+            FeatureOnlineStore featureOnlineStore = new FeatureOnlineStore
+            {
+                Bigtable = new FeatureOnlineStore.Types.Bigtable
+                {
+                    AutoScaling = new FeatureOnlineStore.Types.Bigtable.Types.AutoScaling
+                    {
+                        MinNodeCount = 0,
+                        MaxNodeCount = 0,
+                    },
+                },
+            };
             string featureOnlineStoreId = "";
             // Make the request
             Operation<FeatureOnlineStore, CreateFeatureOnlineStoreOperationMetadata> response = await featureOnlineStoreAdminServiceClient.CreateFeatureOnlineStoreAsync(parent, featureOnlineStore, featureOnlineStoreId);

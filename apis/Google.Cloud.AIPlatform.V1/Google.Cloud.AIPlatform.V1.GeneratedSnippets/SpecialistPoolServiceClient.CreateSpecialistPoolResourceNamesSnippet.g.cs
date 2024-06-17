@@ -37,7 +37,11 @@ namespace GoogleCSharpSnippets
             SpecialistPoolServiceClient specialistPoolServiceClient = SpecialistPoolServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            SpecialistPool specialistPool = new SpecialistPool();
+            SpecialistPool specialistPool = new SpecialistPool
+            {
+                SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
+                DisplayName = "",
+            };
             // Make the request
             Operation<SpecialistPool, CreateSpecialistPoolOperationMetadata> response = specialistPoolServiceClient.CreateSpecialistPool(parent, specialistPool);
 

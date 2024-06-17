@@ -36,7 +36,46 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            HyperparameterTuningJob hyperparameterTuningJob = new HyperparameterTuningJob();
+            HyperparameterTuningJob hyperparameterTuningJob = new HyperparameterTuningJob
+            {
+                DisplayName = "",
+                StudySpec = new StudySpec
+                {
+                    Metrics =
+                    {
+                        new StudySpec.Types.MetricSpec
+                        {
+                            MetricId = "",
+                            Goal = StudySpec.Types.MetricSpec.Types.GoalType.Unspecified,
+                        },
+                    },
+                    Parameters =
+                    {
+                        new StudySpec.Types.ParameterSpec
+                        {
+                            ParameterId = "",
+                            DoubleValueSpec = new StudySpec.Types.ParameterSpec.Types.DoubleValueSpec
+                            {
+                                MinValue = 0,
+                                MaxValue = 0,
+                            },
+                        },
+                    },
+                    DecayCurveStoppingSpec = new StudySpec.Types.DecayCurveAutomatedStoppingSpec { },
+                },
+                MaxTrialCount = 0,
+                ParallelTrialCount = 0,
+                TrialJobSpec = new CustomJobSpec
+                {
+                    WorkerPoolSpecs =
+                    {
+                        new WorkerPoolSpec
+                        {
+                            ContainerSpec = new ContainerSpec { ImageUri = "", },
+                        },
+                    },
+                },
+            };
             // Make the request
             HyperparameterTuningJob response = jobServiceClient.CreateHyperparameterTuningJob(parent, hyperparameterTuningJob);
         }

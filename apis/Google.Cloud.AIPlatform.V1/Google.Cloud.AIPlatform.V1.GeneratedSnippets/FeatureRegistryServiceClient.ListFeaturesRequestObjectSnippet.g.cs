@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
                 Filter = "",
                 OrderBy = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
                 LatestStatsCount = 0,
             };
             // Make the request

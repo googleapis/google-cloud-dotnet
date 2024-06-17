@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             StreamRawPredictRequest request = new StreamRawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                HttpBody = new HttpBody(),
+                HttpBody = new HttpBody { },
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamRawPredictStream response = predictionServiceClient.StreamRawPredict(request);

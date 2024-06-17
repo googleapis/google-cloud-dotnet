@@ -38,7 +38,14 @@ namespace GoogleCSharpSnippets
             DeploymentResourcePoolServiceClient deploymentResourcePoolServiceClient = await DeploymentResourcePoolServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DeploymentResourcePool deploymentResourcePool = new DeploymentResourcePool();
+            DeploymentResourcePool deploymentResourcePool = new DeploymentResourcePool
+            {
+                DedicatedResources = new DedicatedResources
+                {
+                    MachineSpec = new MachineSpec { },
+                    MinReplicaCount = 0,
+                },
+            };
             string deploymentResourcePoolId = "";
             // Make the request
             Operation<DeploymentResourcePool, CreateDeploymentResourcePoolOperationMetadata> response = await deploymentResourcePoolServiceClient.CreateDeploymentResourcePoolAsync(parent, deploymentResourcePool, deploymentResourcePoolId);

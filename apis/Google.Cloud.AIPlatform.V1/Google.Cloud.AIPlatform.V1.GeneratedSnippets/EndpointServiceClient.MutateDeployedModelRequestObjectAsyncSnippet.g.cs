@@ -40,8 +40,16 @@ namespace GoogleCSharpSnippets
             MutateDeployedModelRequest request = new MutateDeployedModelRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                DeployedModel = new DeployedModel(),
-                UpdateMask = new FieldMask(),
+                DeployedModel = new DeployedModel
+                {
+                    ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                    DedicatedResources = new DedicatedResources
+                    {
+                        MachineSpec = new MachineSpec { },
+                        MinReplicaCount = 0,
+                    },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = await endpointServiceClient.MutateDeployedModelAsync(request);

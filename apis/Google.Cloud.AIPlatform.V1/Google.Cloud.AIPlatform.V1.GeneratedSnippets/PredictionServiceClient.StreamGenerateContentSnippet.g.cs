@@ -38,7 +38,20 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             string model = "";
-            IEnumerable<Content> contents = new Content[] { new Content(), };
+            IEnumerable<Content> contents = new Content[]
+            {
+                new Content
+                {
+                    Parts =
+                    {
+                        new Part
+                        {
+                            Text = "",
+                            VideoMetadata = new VideoMetadata { },
+                        },
+                    },
+                },
+            };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamGenerateContentStream response = predictionServiceClient.StreamGenerateContent(model, contents);
 

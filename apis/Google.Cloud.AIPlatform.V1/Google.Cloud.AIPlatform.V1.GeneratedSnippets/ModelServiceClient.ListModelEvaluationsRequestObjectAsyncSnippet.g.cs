@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> response = modelServiceClient.ListModelEvaluationsAsync(request);

@@ -39,7 +39,15 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             IEnumerable<MigrateResourceRequest> migrateResourceRequests = new MigrateResourceRequest[]
             {
-                new MigrateResourceRequest(),
+                new MigrateResourceRequest
+                {
+                    MigrateMlEngineModelVersionConfig = new MigrateResourceRequest.Types.MigrateMlEngineModelVersionConfig
+                    {
+                        Endpoint = "",
+                        ModelVersionAsVersionName = VersionName.FromProjectModelVersion("[PROJECT]", "[MODEL]", "[VERSION]"),
+                        ModelDisplayName = "",
+                    },
+                },
             };
             // Make the request
             Operation<BatchMigrateResourcesResponse, BatchMigrateResourcesOperationMetadata> response = migrationServiceClient.BatchMigrateResources(parent, migrateResourceRequests);

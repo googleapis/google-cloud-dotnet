@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             CreateEndpointRequest request = new CreateEndpointRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint { DisplayName = "", },
                 EndpointId = "",
             };
             // Make the request

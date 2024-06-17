@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]";
-            TensorboardExperiment tensorboardExperiment = new TensorboardExperiment();
+            TensorboardExperiment tensorboardExperiment = new TensorboardExperiment { };
             string tensorboardExperimentId = "";
             // Make the request
             TensorboardExperiment response = await tensorboardServiceClient.CreateTensorboardExperimentAsync(parent, tensorboardExperiment, tensorboardExperimentId);

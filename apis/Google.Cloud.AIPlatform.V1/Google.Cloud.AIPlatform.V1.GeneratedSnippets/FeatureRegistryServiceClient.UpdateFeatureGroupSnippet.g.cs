@@ -36,8 +36,14 @@ namespace GoogleCSharpSnippets
             // Create client
             FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
             // Initialize request argument(s)
-            FeatureGroup featureGroup = new FeatureGroup();
-            FieldMask updateMask = new FieldMask();
+            FeatureGroup featureGroup = new FeatureGroup
+            {
+                BigQuery = new FeatureGroup.Types.BigQuery
+                {
+                    BigQuerySource = new BigQuerySource { InputUri = "", },
+                },
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<FeatureGroup, UpdateFeatureGroupOperationMetadata> response = featureRegistryServiceClient.UpdateFeatureGroup(featureGroup, updateMask);
 

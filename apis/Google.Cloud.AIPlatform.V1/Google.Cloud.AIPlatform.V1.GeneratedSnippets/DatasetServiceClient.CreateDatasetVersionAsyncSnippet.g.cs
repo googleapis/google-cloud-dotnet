@@ -14,12 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_DatasetService_CreateDatasetVersion_async_flattened]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDatasetServiceClientSnippets
     {
@@ -37,7 +40,13 @@ namespace GoogleCSharpSnippets
             DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
-            DatasetVersion datasetVersion = new DatasetVersion();
+            DatasetVersion datasetVersion = new DatasetVersion
+            {
+                Metadata = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+            };
             // Make the request
             Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = await datasetServiceClient.CreateDatasetVersionAsync(parent, datasetVersion);
 

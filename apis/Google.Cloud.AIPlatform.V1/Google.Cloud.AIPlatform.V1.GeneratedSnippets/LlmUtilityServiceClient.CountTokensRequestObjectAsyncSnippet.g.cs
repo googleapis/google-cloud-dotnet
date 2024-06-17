@@ -41,9 +41,28 @@ namespace GoogleCSharpSnippets
             CountTokensRequest request = new CountTokensRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new wkt::Value(), },
+                Instances =
+                {
+                    new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                },
                 Model = "",
-                Contents = { new Content(), },
+                Contents =
+                {
+                    new Content
+                    {
+                        Parts =
+                        {
+                            new Part
+                            {
+                                Text = "",
+                                VideoMetadata = new VideoMetadata { },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             CountTokensResponse response = await llmUtilityServiceClient.CountTokensAsync(request);

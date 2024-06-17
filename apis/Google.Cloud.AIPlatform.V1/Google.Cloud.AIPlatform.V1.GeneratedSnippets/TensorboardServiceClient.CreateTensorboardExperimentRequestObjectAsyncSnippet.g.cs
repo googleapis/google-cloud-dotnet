@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
-                TensorboardExperiment = new TensorboardExperiment(),
+                TensorboardExperiment = new TensorboardExperiment { },
                 TensorboardExperimentId = "",
             };
             // Make the request

@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateExecutionRequest request = new UpdateExecutionRequest
             {
-                Execution = new Execution(),
-                UpdateMask = new FieldMask(),
+                Execution = new Execution { },
+                UpdateMask = new FieldMask { },
                 AllowMissing = false,
             };
             // Make the request

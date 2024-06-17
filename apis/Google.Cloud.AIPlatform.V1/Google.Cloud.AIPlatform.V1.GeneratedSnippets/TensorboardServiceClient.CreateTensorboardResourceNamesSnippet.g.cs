@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
             // Initialize request argument(s)
             TensorboardName parent = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
-            Tensorboard tensorboard = new Tensorboard();
+            Tensorboard tensorboard = new Tensorboard { DisplayName = "", };
             // Make the request
             Operation<Tensorboard, CreateTensorboardOperationMetadata> response = tensorboardServiceClient.CreateTensorboard(parent, tensorboard);
 

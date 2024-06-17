@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START aiplatform_v1_generated_JobService_CreateModelDeploymentMonitoringJob_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedJobServiceClientSnippets
     {
@@ -36,7 +37,20 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob
+            {
+                DisplayName = "",
+                EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                ModelDeploymentMonitoringObjectiveConfigs =
+                {
+                    new ModelDeploymentMonitoringObjectiveConfig { },
+                },
+                ModelDeploymentMonitoringScheduleConfig = new ModelDeploymentMonitoringScheduleConfig
+                {
+                    MonitorInterval = new Duration { },
+                },
+                LoggingSamplingStrategy = new SamplingStrategy { },
+            };
             // Make the request
             ModelDeploymentMonitoringJob response = jobServiceClient.CreateModelDeploymentMonitoringJob(parent, modelDeploymentMonitoringJob);
         }

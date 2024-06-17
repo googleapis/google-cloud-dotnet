@@ -40,7 +40,17 @@ namespace GoogleCSharpSnippets
             CreateFeatureOnlineStoreRequest request = new CreateFeatureOnlineStoreRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                FeatureOnlineStore = new FeatureOnlineStore(),
+                FeatureOnlineStore = new FeatureOnlineStore
+                {
+                    Bigtable = new FeatureOnlineStore.Types.Bigtable
+                    {
+                        AutoScaling = new FeatureOnlineStore.Types.Bigtable.Types.AutoScaling
+                        {
+                            MinNodeCount = 0,
+                            MaxNodeCount = 0,
+                        },
+                    },
+                },
                 FeatureOnlineStoreId = "",
             };
             // Make the request

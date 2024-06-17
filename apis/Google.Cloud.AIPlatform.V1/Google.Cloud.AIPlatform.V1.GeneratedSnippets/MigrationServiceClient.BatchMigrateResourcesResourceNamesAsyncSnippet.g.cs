@@ -41,7 +41,15 @@ namespace GoogleCSharpSnippets
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             IEnumerable<MigrateResourceRequest> migrateResourceRequests = new MigrateResourceRequest[]
             {
-                new MigrateResourceRequest(),
+                new MigrateResourceRequest
+                {
+                    MigrateMlEngineModelVersionConfig = new MigrateResourceRequest.Types.MigrateMlEngineModelVersionConfig
+                    {
+                        Endpoint = "",
+                        ModelVersionAsVersionName = VersionName.FromProjectModelVersion("[PROJECT]", "[MODEL]", "[VERSION]"),
+                        ModelDisplayName = "",
+                    },
+                },
             };
             // Make the request
             Operation<BatchMigrateResourcesResponse, BatchMigrateResourcesOperationMetadata> response = await migrationServiceClient.BatchMigrateResourcesAsync(parent, migrateResourceRequests);

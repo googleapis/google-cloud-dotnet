@@ -39,7 +39,16 @@ namespace GoogleCSharpSnippets
             CreatePersistentResourceRequest request = new CreatePersistentResourceRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                PersistentResource = new PersistentResource(),
+                PersistentResource = new PersistentResource
+                {
+                    ResourcePools =
+                    {
+                        new ResourcePool
+                        {
+                            MachineSpec = new MachineSpec { },
+                        },
+                    },
+                },
                 PersistentResourceId = "",
             };
             // Make the request

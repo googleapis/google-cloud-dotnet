@@ -40,17 +40,31 @@ namespace GoogleCSharpSnippets
             BatchReadFeatureValuesRequest request = new BatchReadFeatureValuesRequest
             {
                 FeaturestoreAsFeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
-                CsvReadInstances = new CsvSource(),
-                Destination = new FeatureValueDestination(),
+                CsvReadInstances = new CsvSource
+                {
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                },
+                Destination = new FeatureValueDestination
+                {
+                    BigqueryDestination = new BigQueryDestination { OutputUri = "", },
+                },
+                BigqueryReadInstances = new BigQuerySource { InputUri = "", },
                 EntityTypeSpecs =
                 {
-                    new BatchReadFeatureValuesRequest.Types.EntityTypeSpec(),
+                    new BatchReadFeatureValuesRequest.Types.EntityTypeSpec
+                    {
+                        EntityTypeId = "",
+                        FeatureSelector = new FeatureSelector
+                        {
+                            IdMatcher = new IdMatcher { Ids = { "", }, },
+                        },
+                    },
                 },
                 PassThroughFields =
                 {
-                    new BatchReadFeatureValuesRequest.Types.PassThroughField(),
+                    new BatchReadFeatureValuesRequest.Types.PassThroughField { FieldName = "", },
                 },
-                StartTime = new Timestamp(),
+                StartTime = new Timestamp { },
             };
             // Make the request
             Operation<BatchReadFeatureValuesResponse, BatchReadFeatureValuesOperationMetadata> response = await featurestoreServiceClient.BatchReadFeatureValuesAsync(request);

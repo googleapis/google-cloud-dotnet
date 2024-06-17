@@ -36,7 +36,14 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
             string execution = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]/executions/[EXECUTION]";
-            IEnumerable<Event> events = new Event[] { new Event(), };
+            IEnumerable<Event> events = new Event[]
+            {
+                new Event
+                {
+                    ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
+                    Type = Event.Types.Type.Unspecified,
+                },
+            };
             // Make the request
             AddExecutionEventsResponse response = metadataServiceClient.AddExecutionEvents(execution, events);
         }

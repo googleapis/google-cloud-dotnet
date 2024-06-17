@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             VizierServiceClient vizierServiceClient = VizierServiceClient.Create();
             // Initialize request argument(s)
             StudyName parent = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]");
-            Trial trial = new Trial();
+            Trial trial = new Trial { };
             // Make the request
             Trial response = vizierServiceClient.CreateTrial(parent, trial);
         }

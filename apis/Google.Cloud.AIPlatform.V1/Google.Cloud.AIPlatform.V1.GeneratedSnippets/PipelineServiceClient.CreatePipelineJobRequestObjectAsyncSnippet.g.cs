@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                PipelineJob = new PipelineJob(),
+                PipelineJob = new PipelineJob { },
                 PipelineJobId = "",
             };
             // Make the request

@@ -41,10 +41,19 @@ namespace GoogleCSharpSnippets
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new wkt::Value(), },
+                Instances =
+                {
+                    new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                },
                 DeployedModelId = "",
-                Parameters = new wkt::Value(),
-                ExplanationSpecOverride = new ExplanationSpecOverride(),
+                Parameters = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+                ExplanationSpecOverride = new ExplanationSpecOverride { },
             };
             // Make the request
             ExplainResponse response = await predictionServiceClient.ExplainAsync(request);

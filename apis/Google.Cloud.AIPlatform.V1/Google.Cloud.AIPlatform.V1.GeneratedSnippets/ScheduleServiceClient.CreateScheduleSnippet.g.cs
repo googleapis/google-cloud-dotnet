@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_ScheduleService_CreateSchedule_sync_flattened]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
 
     public sealed partial class GeneratedScheduleServiceClientSnippets
@@ -35,7 +36,17 @@ namespace GoogleCSharpSnippets
             ScheduleServiceClient scheduleServiceClient = ScheduleServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Schedule schedule = new Schedule();
+            Schedule schedule = new Schedule
+            {
+                DisplayName = "",
+                Cron = "",
+                MaxConcurrentRunCount = 0L,
+                CreatePipelineJobRequest = new CreatePipelineJobRequest
+                {
+                    ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                    PipelineJob = new PipelineJob { },
+                },
+            };
             // Make the request
             Schedule response = scheduleServiceClient.CreateSchedule(parent, schedule);
         }

@@ -36,8 +36,8 @@ namespace GoogleCSharpSnippets
             // Create client
             NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate();
-            FieldMask updateMask = new FieldMask();
+            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             NotebookRuntimeTemplate response = await notebookServiceClient.UpdateNotebookRuntimeTemplateAsync(notebookRuntimeTemplate, updateMask);
         }

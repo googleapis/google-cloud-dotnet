@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Featurestore featurestore = new Featurestore();
+            Featurestore featurestore = new Featurestore { };
             string featurestoreId = "";
             // Make the request
             Operation<Featurestore, CreateFeaturestoreOperationMetadata> response = await featurestoreServiceClient.CreateFeaturestoreAsync(parent, featurestore, featurestoreId);

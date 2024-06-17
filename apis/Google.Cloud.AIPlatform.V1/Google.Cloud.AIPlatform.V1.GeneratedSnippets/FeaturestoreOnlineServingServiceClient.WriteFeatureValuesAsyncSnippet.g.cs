@@ -39,7 +39,17 @@ namespace GoogleCSharpSnippets
             string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
             IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
             {
-                new WriteFeatureValuesPayload(),
+                new WriteFeatureValuesPayload
+                {
+                    EntityId = "",
+                    FeatureValues =
+                    {
+                        {
+                            "",
+                            new FeatureValue { BoolValue = false, }
+                        },
+                    },
+                },
             };
             // Make the request
             WriteFeatureValuesResponse response = await featurestoreOnlineServingServiceClient.WriteFeatureValuesAsync(entityType, payloads);

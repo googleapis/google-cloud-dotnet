@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             CreateNotebookRuntimeTemplateRequest request = new CreateNotebookRuntimeTemplateRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                NotebookRuntimeTemplate = new NotebookRuntimeTemplate(),
+                NotebookRuntimeTemplate = new NotebookRuntimeTemplate { DisplayName = "", },
                 NotebookRuntimeTemplateId = "",
             };
             // Make the request

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             CreateMetadataStoreRequest request = new CreateMetadataStoreRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                MetadataStore = new MetadataStore(),
+                MetadataStore = new MetadataStore { },
                 MetadataStoreId = "",
             };
             // Make the request

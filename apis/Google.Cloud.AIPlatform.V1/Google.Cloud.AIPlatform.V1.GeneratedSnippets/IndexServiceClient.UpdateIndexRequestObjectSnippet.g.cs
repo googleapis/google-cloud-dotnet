@@ -38,8 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateIndexRequest request = new UpdateIndexRequest
             {
-                Index = new Index(),
-                UpdateMask = new FieldMask(),
+                Index = new Index { DisplayName = "", },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<Index, UpdateIndexOperationMetadata> response = indexServiceClient.UpdateIndex(request);

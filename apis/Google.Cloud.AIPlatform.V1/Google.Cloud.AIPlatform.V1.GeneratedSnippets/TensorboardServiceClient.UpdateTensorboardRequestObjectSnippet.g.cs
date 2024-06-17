@@ -38,8 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateTensorboardRequest request = new UpdateTensorboardRequest
             {
-                UpdateMask = new FieldMask(),
-                Tensorboard = new Tensorboard(),
+                UpdateMask = new FieldMask { },
+                Tensorboard = new Tensorboard { DisplayName = "", },
             };
             // Make the request
             Operation<Tensorboard, UpdateTensorboardOperationMetadata> response = tensorboardServiceClient.UpdateTensorboard(request);

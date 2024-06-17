@@ -36,8 +36,8 @@ namespace GoogleCSharpSnippets
             // Create client
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Feature feature = new Feature();
-            FieldMask updateMask = new FieldMask();
+            Feature feature = new Feature { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Feature response = await featurestoreServiceClient.UpdateFeatureAsync(feature, updateMask);
         }

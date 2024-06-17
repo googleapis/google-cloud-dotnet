@@ -35,8 +35,8 @@ namespace GoogleCSharpSnippets
             // Create client
             TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
             // Initialize request argument(s)
-            TensorboardRun tensorboardRun = new TensorboardRun();
-            FieldMask updateMask = new FieldMask();
+            TensorboardRun tensorboardRun = new TensorboardRun { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             TensorboardRun response = tensorboardServiceClient.UpdateTensorboardRun(tensorboardRun, updateMask);
         }

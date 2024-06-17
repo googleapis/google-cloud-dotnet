@@ -39,8 +39,8 @@ namespace GoogleCSharpSnippets
             StreamingPredictRequest request = new StreamingPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Inputs = { new Tensor(), },
-                Parameters = new Tensor(),
+                Inputs = { new Tensor { }, },
+                Parameters = new Tensor { },
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.ServerStreamingPredictStream response = predictionServiceClient.ServerStreamingPredict(request);

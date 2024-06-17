@@ -37,7 +37,14 @@ namespace GoogleCSharpSnippets
             FeatureOnlineStoreAdminServiceClient featureOnlineStoreAdminServiceClient = await FeatureOnlineStoreAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/featureOnlineStores/[FEATURE_ONLINE_STORE]";
-            FeatureView featureView = new FeatureView();
+            FeatureView featureView = new FeatureView
+            {
+                BigQuerySource = new FeatureView.Types.BigQuerySource
+                {
+                    Uri = "",
+                    EntityIdColumns = { "", },
+                },
+            };
             string featureViewId = "";
             // Make the request
             Operation<FeatureView, CreateFeatureViewOperationMetadata> response = await featureOnlineStoreAdminServiceClient.CreateFeatureViewAsync(parent, featureView, featureViewId);

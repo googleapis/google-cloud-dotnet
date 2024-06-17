@@ -38,8 +38,21 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateModelDeploymentMonitoringJobRequest request = new UpdateModelDeploymentMonitoringJobRequest
             {
-                ModelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob(),
-                UpdateMask = new FieldMask(),
+                ModelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob
+                {
+                    DisplayName = "",
+                    EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                    ModelDeploymentMonitoringObjectiveConfigs =
+                    {
+                        new ModelDeploymentMonitoringObjectiveConfig { },
+                    },
+                    ModelDeploymentMonitoringScheduleConfig = new ModelDeploymentMonitoringScheduleConfig
+                    {
+                        MonitorInterval = new Duration { },
+                    },
+                    LoggingSamplingStrategy = new SamplingStrategy { },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> response = jobServiceClient.UpdateModelDeploymentMonitoringJob(request);

@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateContextRequest request = new UpdateContextRequest
             {
-                Context = new Context(),
-                UpdateMask = new FieldMask(),
+                Context = new Context { },
+                UpdateMask = new FieldMask { },
                 AllowMissing = false,
             };
             // Make the request

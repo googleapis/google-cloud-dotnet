@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Create client
             IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Index index = new Index();
-            FieldMask updateMask = new FieldMask();
+            Index index = new Index { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<Index, UpdateIndexOperationMetadata> response = await indexServiceClient.UpdateIndexAsync(index, updateMask);
 

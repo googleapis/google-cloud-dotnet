@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
-                Trial = new Trial(),
+                Trial = new Trial { },
             };
             // Make the request
             Trial response = await vizierServiceClient.CreateTrialAsync(request);

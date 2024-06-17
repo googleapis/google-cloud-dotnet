@@ -36,7 +36,13 @@ namespace GoogleCSharpSnippets
             FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            FeatureGroup featureGroup = new FeatureGroup();
+            FeatureGroup featureGroup = new FeatureGroup
+            {
+                BigQuery = new FeatureGroup.Types.BigQuery
+                {
+                    BigQuerySource = new BigQuerySource { InputUri = "", },
+                },
+            };
             string featureGroupId = "";
             // Make the request
             Operation<FeatureGroup, CreateFeatureGroupOperationMetadata> response = featureRegistryServiceClient.CreateFeatureGroup(parent, featureGroup, featureGroupId);

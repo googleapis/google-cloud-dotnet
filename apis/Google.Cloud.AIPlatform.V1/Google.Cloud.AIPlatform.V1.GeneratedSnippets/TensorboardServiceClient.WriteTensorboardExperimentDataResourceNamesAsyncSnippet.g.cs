@@ -39,7 +39,25 @@ namespace GoogleCSharpSnippets
             TensorboardExperimentName tensorboardExperiment = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]");
             IEnumerable<WriteTensorboardRunDataRequest> writeRunDataRequests = new WriteTensorboardRunDataRequest[]
             {
-                new WriteTensorboardRunDataRequest(),
+                new WriteTensorboardRunDataRequest
+                {
+                    TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
+                    TimeSeriesData =
+                    {
+                        new TimeSeriesData
+                        {
+                            TensorboardTimeSeriesId = "",
+                            ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                            Values =
+                            {
+                                new TimeSeriesDataPoint
+                                {
+                                    Scalar = new Scalar { },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             // Make the request
             WriteTensorboardExperimentDataResponse response = await tensorboardServiceClient.WriteTensorboardExperimentDataAsync(tensorboardExperiment, writeRunDataRequests);

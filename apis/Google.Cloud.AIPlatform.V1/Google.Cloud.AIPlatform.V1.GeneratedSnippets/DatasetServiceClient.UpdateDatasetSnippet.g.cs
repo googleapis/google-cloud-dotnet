@@ -14,11 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_DatasetService_UpdateDataset_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
-    using Google.Protobuf.WellKnownTypes;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDatasetServiceClientSnippets
     {
@@ -35,8 +37,16 @@ namespace GoogleCSharpSnippets
             // Create client
             DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
             // Initialize request argument(s)
-            Dataset dataset = new Dataset();
-            FieldMask updateMask = new FieldMask();
+            Dataset dataset = new Dataset
+            {
+                DisplayName = "",
+                MetadataSchemaUri = "",
+                Metadata = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+            };
+            wkt::FieldMask updateMask = new wkt::FieldMask { };
             // Make the request
             Dataset response = datasetServiceClient.UpdateDataset(dataset, updateMask);
         }

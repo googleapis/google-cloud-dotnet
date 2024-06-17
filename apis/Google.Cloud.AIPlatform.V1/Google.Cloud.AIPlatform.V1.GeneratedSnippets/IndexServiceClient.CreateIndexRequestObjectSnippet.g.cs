@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             CreateIndexRequest request = new CreateIndexRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Index = new Index(),
+                Index = new Index { DisplayName = "", },
             };
             // Make the request
             Operation<Index, CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(request);

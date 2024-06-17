@@ -62,8 +62,8 @@ namespace GoogleCSharpSnippets
                 StreamDirectPredictRequest request = new StreamDirectPredictRequest
                 {
                     EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                    Inputs = { new Tensor(), },
-                    Parameters = new Tensor(),
+                    Inputs = { new Tensor { }, },
+                    Parameters = new Tensor { },
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

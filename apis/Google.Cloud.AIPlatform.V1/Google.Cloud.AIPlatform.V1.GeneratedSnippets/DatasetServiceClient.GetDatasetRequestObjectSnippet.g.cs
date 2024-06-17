@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             Dataset response = datasetServiceClient.GetDataset(request);

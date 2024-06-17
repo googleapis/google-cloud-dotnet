@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 ParentAsFeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
                 Filter = "",
                 OrderBy = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = featurestoreServiceClient.ListEntityTypesAsync(request);

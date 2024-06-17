@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             ModelServiceClient modelServiceClient = ModelServiceClient.Create();
             // Initialize request argument(s)
             ModelName parent = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
-            ModelEvaluation modelEvaluation = new ModelEvaluation();
+            ModelEvaluation modelEvaluation = new ModelEvaluation { };
             // Make the request
             ModelEvaluation response = modelServiceClient.ImportModelEvaluation(parent, modelEvaluation);
         }

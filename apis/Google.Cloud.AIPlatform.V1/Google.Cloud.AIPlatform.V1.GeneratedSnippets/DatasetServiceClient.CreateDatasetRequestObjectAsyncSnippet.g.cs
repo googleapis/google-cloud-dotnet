@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_DatasetService_CreateDataset_async]
@@ -21,6 +23,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDatasetServiceClientSnippets
     {
@@ -40,7 +43,15 @@ namespace GoogleCSharpSnippets
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DisplayName = "",
+                    MetadataSchemaUri = "",
+                    Metadata = new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                },
             };
             // Make the request
             Operation<Dataset, CreateDatasetOperationMetadata> response = await datasetServiceClient.CreateDatasetAsync(request);

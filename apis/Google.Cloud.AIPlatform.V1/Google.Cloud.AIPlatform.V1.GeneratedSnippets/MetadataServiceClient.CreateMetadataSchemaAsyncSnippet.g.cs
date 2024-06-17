@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]";
-            MetadataSchema metadataSchema = new MetadataSchema();
+            MetadataSchema metadataSchema = new MetadataSchema { Schema = "", };
             string metadataSchemaId = "";
             // Make the request
             MetadataSchema response = await metadataServiceClient.CreateMetadataSchemaAsync(parent, metadataSchema, metadataSchemaId);

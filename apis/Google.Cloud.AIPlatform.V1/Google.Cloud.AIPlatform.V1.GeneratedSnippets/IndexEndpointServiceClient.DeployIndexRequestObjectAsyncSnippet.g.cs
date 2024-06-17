@@ -39,7 +39,11 @@ namespace GoogleCSharpSnippets
             DeployIndexRequest request = new DeployIndexRequest
             {
                 IndexEndpointAsIndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
-                DeployedIndex = new DeployedIndex(),
+                DeployedIndex = new DeployedIndex
+                {
+                    Id = "",
+                    IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                },
             };
             // Make the request
             Operation<DeployIndexResponse, DeployIndexOperationMetadata> response = await indexEndpointServiceClient.DeployIndexAsync(request);

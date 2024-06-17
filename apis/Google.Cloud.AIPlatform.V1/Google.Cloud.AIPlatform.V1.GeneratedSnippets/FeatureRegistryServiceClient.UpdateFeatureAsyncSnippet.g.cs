@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Create client
             FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Feature feature = new Feature();
-            FieldMask updateMask = new FieldMask();
+            Feature feature = new Feature { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<Feature, UpdateFeatureOperationMetadata> response = await featureRegistryServiceClient.UpdateFeatureAsync(feature, updateMask);
 

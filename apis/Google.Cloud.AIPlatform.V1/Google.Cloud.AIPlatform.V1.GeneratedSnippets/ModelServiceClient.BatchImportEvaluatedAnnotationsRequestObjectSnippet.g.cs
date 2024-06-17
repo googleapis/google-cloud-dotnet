@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 ParentAsModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
                 EvaluatedAnnotations =
                 {
-                    new EvaluatedAnnotation(),
+                    new EvaluatedAnnotation { },
                 },
             };
             // Make the request

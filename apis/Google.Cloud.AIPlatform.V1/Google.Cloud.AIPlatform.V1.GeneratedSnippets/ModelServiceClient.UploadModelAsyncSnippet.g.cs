@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Model model = new Model();
+            Model model = new Model { DisplayName = "", };
             // Make the request
             Operation<UploadModelResponse, UploadModelOperationMetadata> response = await modelServiceClient.UploadModelAsync(parent, model);
 

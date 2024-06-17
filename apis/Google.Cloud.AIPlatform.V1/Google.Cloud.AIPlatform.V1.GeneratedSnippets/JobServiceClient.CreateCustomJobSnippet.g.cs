@@ -35,7 +35,20 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            CustomJob customJob = new CustomJob();
+            CustomJob customJob = new CustomJob
+            {
+                DisplayName = "",
+                JobSpec = new CustomJobSpec
+                {
+                    WorkerPoolSpecs =
+                    {
+                        new WorkerPoolSpec
+                        {
+                            ContainerSpec = new ContainerSpec { ImageUri = "", },
+                        },
+                    },
+                },
+            };
             // Make the request
             CustomJob response = jobServiceClient.CreateCustomJob(parent, customJob);
         }

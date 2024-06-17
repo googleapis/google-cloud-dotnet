@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]";
             IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
             {
-                new ModelEvaluationSlice(),
+                new ModelEvaluationSlice { },
             };
             // Make the request
             BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(parent, modelEvaluationSlices);

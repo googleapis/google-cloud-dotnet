@@ -35,8 +35,8 @@ namespace GoogleCSharpSnippets
             // Create client
             FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
             // Initialize request argument(s)
-            EntityType entityType = new EntityType();
-            FieldMask updateMask = new FieldMask();
+            EntityType entityType = new EntityType { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             EntityType response = featurestoreServiceClient.UpdateEntityType(entityType, updateMask);
         }

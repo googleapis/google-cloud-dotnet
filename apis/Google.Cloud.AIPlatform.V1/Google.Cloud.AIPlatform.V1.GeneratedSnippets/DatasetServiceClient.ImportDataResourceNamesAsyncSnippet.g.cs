@@ -40,7 +40,11 @@ namespace GoogleCSharpSnippets
             DatasetName name = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
             IEnumerable<ImportDataConfig> importConfigs = new ImportDataConfig[]
             {
-                new ImportDataConfig(),
+                new ImportDataConfig
+                {
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                    ImportSchemaUri = "",
+                },
             };
             // Make the request
             Operation<ImportDataResponse, ImportDataOperationMetadata> response = await datasetServiceClient.ImportDataAsync(name, importConfigs);

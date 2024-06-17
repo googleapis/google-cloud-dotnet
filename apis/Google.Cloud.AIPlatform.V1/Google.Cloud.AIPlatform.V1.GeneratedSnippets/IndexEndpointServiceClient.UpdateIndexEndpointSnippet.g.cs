@@ -35,8 +35,8 @@ namespace GoogleCSharpSnippets
             // Create client
             IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
             // Initialize request argument(s)
-            IndexEndpoint indexEndpoint = new IndexEndpoint();
-            FieldMask updateMask = new FieldMask();
+            IndexEndpoint indexEndpoint = new IndexEndpoint { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             IndexEndpoint response = indexEndpointServiceClient.UpdateIndexEndpoint(indexEndpoint, updateMask);
         }

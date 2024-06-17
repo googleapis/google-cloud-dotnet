@@ -35,7 +35,34 @@ namespace GoogleCSharpSnippets
             VizierServiceClient vizierServiceClient = VizierServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Study study = new Study();
+            Study study = new Study
+            {
+                DisplayName = "",
+                StudySpec = new StudySpec
+                {
+                    Metrics =
+                    {
+                        new StudySpec.Types.MetricSpec
+                        {
+                            MetricId = "",
+                            Goal = StudySpec.Types.MetricSpec.Types.GoalType.Unspecified,
+                        },
+                    },
+                    Parameters =
+                    {
+                        new StudySpec.Types.ParameterSpec
+                        {
+                            ParameterId = "",
+                            DoubleValueSpec = new StudySpec.Types.ParameterSpec.Types.DoubleValueSpec
+                            {
+                                MinValue = 0,
+                                MaxValue = 0,
+                            },
+                        },
+                    },
+                    DecayCurveStoppingSpec = new StudySpec.Types.DecayCurveAutomatedStoppingSpec { },
+                },
+            };
             // Make the request
             Study response = vizierServiceClient.CreateStudy(parent, study);
         }

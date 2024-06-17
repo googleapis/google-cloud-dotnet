@@ -41,7 +41,11 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NotebookRuntimeTemplateAsNotebookRuntimeTemplateName = NotebookRuntimeTemplateName.FromProjectLocationNotebookRuntimeTemplate("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME_TEMPLATE]"),
-                NotebookRuntime = new NotebookRuntime(),
+                NotebookRuntime = new NotebookRuntime
+                {
+                    RuntimeUser = "",
+                    DisplayName = "",
+                },
                 NotebookRuntimeId = "",
             };
             // Make the request

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             AnnotationSpec response = await datasetServiceClient.GetAnnotationSpecAsync(request);

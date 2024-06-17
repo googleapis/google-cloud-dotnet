@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
-                Execution = new Execution(),
+                Execution = new Execution { },
                 ExecutionId = "",
             };
             // Make the request

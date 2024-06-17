@@ -36,16 +36,43 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GenerateContentRequest request = new GenerateContentRequest
             {
-                Contents = { new Content(), },
+                Contents =
+                {
+                    new Content
+                    {
+                        Parts =
+                        {
+                            new Part
+                            {
+                                Text = "",
+                                VideoMetadata = new VideoMetadata { },
+                            },
+                        },
+                    },
+                },
                 SafetySettings =
                 {
-                    new SafetySetting(),
+                    new SafetySetting
+                    {
+                        Category = HarmCategory.Unspecified,
+                        Threshold = SafetySetting.Types.HarmBlockThreshold.Unspecified,
+                    },
                 },
-                GenerationConfig = new GenerationConfig(),
+                GenerationConfig = new GenerationConfig { },
                 Model = "",
-                Tools = { new Tool(), },
-                ToolConfig = new ToolConfig(),
-                SystemInstruction = new Content(),
+                Tools = { new Tool { }, },
+                ToolConfig = new ToolConfig { },
+                SystemInstruction = new Content
+                {
+                    Parts =
+                    {
+                        new Part
+                        {
+                            Text = "",
+                            VideoMetadata = new VideoMetadata { },
+                        },
+                    },
+                },
             };
             // Make the request
             GenerateContentResponse response = predictionServiceClient.GenerateContent(request);

@@ -39,7 +39,15 @@ namespace GoogleCSharpSnippets
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
                 Requests =
                 {
-                    new CreateTensorboardTimeSeriesRequest(),
+                    new CreateTensorboardTimeSeriesRequest
+                    {
+                        ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
+                        TensorboardTimeSeries = new TensorboardTimeSeries
+                        {
+                            DisplayName = "",
+                            ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                        },
+                    },
                 },
             };
             // Make the request

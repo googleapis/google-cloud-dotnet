@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedEnumerable<ListTensorboardsResponse, Tensorboard> response = tensorboardServiceClient.ListTensorboards(request);

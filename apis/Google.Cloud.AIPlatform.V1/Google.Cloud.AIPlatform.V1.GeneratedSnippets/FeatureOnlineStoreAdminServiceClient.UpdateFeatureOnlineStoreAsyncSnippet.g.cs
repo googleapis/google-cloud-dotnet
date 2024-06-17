@@ -37,8 +37,18 @@ namespace GoogleCSharpSnippets
             // Create client
             FeatureOnlineStoreAdminServiceClient featureOnlineStoreAdminServiceClient = await FeatureOnlineStoreAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            FeatureOnlineStore featureOnlineStore = new FeatureOnlineStore();
-            FieldMask updateMask = new FieldMask();
+            FeatureOnlineStore featureOnlineStore = new FeatureOnlineStore
+            {
+                Bigtable = new FeatureOnlineStore.Types.Bigtable
+                {
+                    AutoScaling = new FeatureOnlineStore.Types.Bigtable.Types.AutoScaling
+                    {
+                        MinNodeCount = 0,
+                        MaxNodeCount = 0,
+                    },
+                },
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<FeatureOnlineStore, UpdateFeatureOnlineStoreOperationMetadata> response = await featureOnlineStoreAdminServiceClient.UpdateFeatureOnlineStoreAsync(featureOnlineStore, updateMask);
 

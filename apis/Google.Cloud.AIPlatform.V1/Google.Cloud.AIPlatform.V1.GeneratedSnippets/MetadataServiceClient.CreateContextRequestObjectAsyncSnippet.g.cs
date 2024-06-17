@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
-                Context = new Context(),
+                Context = new Context { },
                 ContextId = "",
             };
             // Make the request

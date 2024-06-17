@@ -37,7 +37,20 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string model = "";
-            IEnumerable<Content> contents = new Content[] { new Content(), };
+            IEnumerable<Content> contents = new Content[]
+            {
+                new Content
+                {
+                    Parts =
+                    {
+                        new Part
+                        {
+                            Text = "",
+                            VideoMetadata = new VideoMetadata { },
+                        },
+                    },
+                },
+            };
             // Make the request
             GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(model, contents);
         }

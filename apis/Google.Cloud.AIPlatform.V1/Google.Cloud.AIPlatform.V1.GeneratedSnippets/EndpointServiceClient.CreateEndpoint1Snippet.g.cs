@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Endpoint endpoint = new Endpoint();
+            Endpoint endpoint = new Endpoint { DisplayName = "", };
             // Make the request
             Operation<Endpoint, CreateEndpointOperationMetadata> response = endpointServiceClient.CreateEndpoint(parent, endpoint);
 

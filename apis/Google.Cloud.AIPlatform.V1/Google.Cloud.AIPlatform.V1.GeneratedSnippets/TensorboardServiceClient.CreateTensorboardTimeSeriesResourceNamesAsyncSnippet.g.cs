@@ -36,7 +36,11 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
             // Initialize request argument(s)
             TensorboardTimeSeriesName parent = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]");
-            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries();
+            TensorboardTimeSeries tensorboardTimeSeries = new TensorboardTimeSeries
+            {
+                DisplayName = "",
+                ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+            };
             // Make the request
             TensorboardTimeSeries response = await tensorboardServiceClient.CreateTensorboardTimeSeriesAsync(parent, tensorboardTimeSeries);
         }

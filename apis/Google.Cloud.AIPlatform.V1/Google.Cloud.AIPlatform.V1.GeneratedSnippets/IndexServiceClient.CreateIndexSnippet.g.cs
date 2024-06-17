@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             IndexServiceClient indexServiceClient = IndexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Index index = new Index();
+            Index index = new Index { DisplayName = "", };
             // Make the request
             Operation<Index, CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(parent, index);
 

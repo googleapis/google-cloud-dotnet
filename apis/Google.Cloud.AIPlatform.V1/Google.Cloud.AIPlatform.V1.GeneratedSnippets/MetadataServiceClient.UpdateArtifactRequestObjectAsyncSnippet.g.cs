@@ -38,8 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateArtifactRequest request = new UpdateArtifactRequest
             {
-                Artifact = new Artifact(),
-                UpdateMask = new FieldMask(),
+                Artifact = new Artifact { },
+                UpdateMask = new FieldMask { },
                 AllowMissing = false,
             };
             // Make the request

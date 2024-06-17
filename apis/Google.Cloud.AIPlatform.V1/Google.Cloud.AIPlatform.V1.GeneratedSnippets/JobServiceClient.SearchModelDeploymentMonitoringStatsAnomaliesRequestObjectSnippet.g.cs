@@ -44,10 +44,10 @@ namespace GoogleCSharpSnippets
                 FeatureDisplayName = "",
                 Objectives =
                 {
-                    new SearchModelDeploymentMonitoringStatsAnomaliesRequest.Types.StatsAnomaliesObjective(),
+                    new SearchModelDeploymentMonitoringStatsAnomaliesRequest.Types.StatsAnomaliesObjective { },
                 },
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                StartTime = new Timestamp { },
+                EndTime = new Timestamp { },
             };
             // Make the request
             PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomalies(request);

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate();
+            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate { DisplayName = "", };
             string notebookRuntimeTemplateId = "";
             // Make the request
             Operation<NotebookRuntimeTemplate, CreateNotebookRuntimeTemplateOperationMetadata> response = await notebookServiceClient.CreateNotebookRuntimeTemplateAsync(parent, notebookRuntimeTemplate, notebookRuntimeTemplateId);

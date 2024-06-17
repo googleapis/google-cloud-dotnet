@@ -36,8 +36,8 @@ namespace GoogleCSharpSnippets
             // Create client
             ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Model model = new Model();
-            FieldMask updateMask = new FieldMask();
+            Model model = new Model { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Model response = await modelServiceClient.UpdateModelAsync(model, updateMask);
         }

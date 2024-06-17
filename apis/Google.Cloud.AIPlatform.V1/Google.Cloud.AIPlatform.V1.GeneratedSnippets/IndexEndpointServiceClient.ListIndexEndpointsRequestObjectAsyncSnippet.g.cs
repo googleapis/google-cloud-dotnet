@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedAsyncEnumerable<ListIndexEndpointsResponse, IndexEndpoint> response = indexEndpointServiceClient.ListIndexEndpointsAsync(request);

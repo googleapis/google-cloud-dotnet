@@ -38,7 +38,15 @@ namespace GoogleCSharpSnippets
             EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            DeployedModel deployedModel = new DeployedModel();
+            DeployedModel deployedModel = new DeployedModel
+            {
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DedicatedResources = new DedicatedResources
+                {
+                    MachineSpec = new MachineSpec { },
+                    MinReplicaCount = 0,
+                },
+            };
             IDictionary<string, int> trafficSplit = new Dictionary<string, int> { { "", 0 }, };
             // Make the request
             Operation<DeployModelResponse, DeployModelOperationMetadata> response = await endpointServiceClient.DeployModelAsync(endpoint, deployedModel, trafficSplit);

@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            IndexEndpoint indexEndpoint = new IndexEndpoint();
+            IndexEndpoint indexEndpoint = new IndexEndpoint { DisplayName = "", };
             // Make the request
             Operation<IndexEndpoint, CreateIndexEndpointOperationMetadata> response = indexEndpointServiceClient.CreateIndexEndpoint(parent, indexEndpoint);
 

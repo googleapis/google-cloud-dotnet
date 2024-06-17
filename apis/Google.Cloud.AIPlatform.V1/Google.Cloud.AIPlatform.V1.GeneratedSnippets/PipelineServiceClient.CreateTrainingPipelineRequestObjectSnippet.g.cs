@@ -14,11 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_PipelineService_CreateTrainingPipeline_sync]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedPipelineServiceClientSnippets
     {
@@ -38,7 +41,15 @@ namespace GoogleCSharpSnippets
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                TrainingPipeline = new TrainingPipeline(),
+                TrainingPipeline = new TrainingPipeline
+                {
+                    DisplayName = "",
+                    TrainingTaskDefinition = "",
+                    TrainingTaskInputs = new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                },
             };
             // Make the request
             TrainingPipeline response = pipelineServiceClient.CreateTrainingPipeline(request);

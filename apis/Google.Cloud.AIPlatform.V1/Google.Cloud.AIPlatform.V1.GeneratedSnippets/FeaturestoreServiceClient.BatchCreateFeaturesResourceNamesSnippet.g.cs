@@ -39,7 +39,12 @@ namespace GoogleCSharpSnippets
             EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
             IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
             {
-                new CreateFeatureRequest(),
+                new CreateFeatureRequest
+                {
+                    ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                    Feature = new Feature { },
+                    FeatureId = "",
+                },
             };
             // Make the request
             Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featurestoreServiceClient.BatchCreateFeatures(parent, requests);

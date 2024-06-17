@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            PipelineJob pipelineJob = new PipelineJob();
+            PipelineJob pipelineJob = new PipelineJob { };
             string pipelineJobId = "";
             // Make the request
             PipelineJob response = pipelineServiceClient.CreatePipelineJob(parent, pipelineJob, pipelineJobId);

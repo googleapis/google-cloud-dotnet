@@ -39,7 +39,23 @@ namespace GoogleCSharpSnippets
             CreateBatchPredictionJobRequest request = new CreateBatchPredictionJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                BatchPredictionJob = new BatchPredictionJob(),
+                BatchPredictionJob = new BatchPredictionJob
+                {
+                    DisplayName = "",
+                    InputConfig = new BatchPredictionJob.Types.InputConfig
+                    {
+                        InstancesFormat = "",
+                        GcsSource = new GcsSource { Uris = { "", }, },
+                    },
+                    OutputConfig = new BatchPredictionJob.Types.OutputConfig
+                    {
+                        PredictionsFormat = "",
+                        GcsDestination = new GcsDestination
+                        {
+                            OutputUriPrefix = "",
+                        },
+                    },
+                },
             };
             // Make the request
             BatchPredictionJob response = await jobServiceClient.CreateBatchPredictionJobAsync(request);

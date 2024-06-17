@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
-                Endpoint = new Endpoint(),
-                UpdateMask = new FieldMask(),
+                Endpoint = new Endpoint { DisplayName = "", },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Endpoint response = endpointServiceClient.UpdateEndpoint(request);

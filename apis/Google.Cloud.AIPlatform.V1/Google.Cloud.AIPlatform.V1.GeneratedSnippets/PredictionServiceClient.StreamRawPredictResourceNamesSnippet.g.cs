@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            HttpBody httpBody = new HttpBody();
+            HttpBody httpBody = new HttpBody { };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamRawPredictStream response = predictionServiceClient.StreamRawPredict(endpoint, httpBody);
 

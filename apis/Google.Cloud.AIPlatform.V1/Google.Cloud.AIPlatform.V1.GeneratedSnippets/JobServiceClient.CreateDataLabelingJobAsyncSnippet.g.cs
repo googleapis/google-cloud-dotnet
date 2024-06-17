@@ -14,11 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_JobService_CreateDataLabelingJob_async_flattened]
     using Google.Cloud.AIPlatform.V1;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedJobServiceClientSnippets
     {
@@ -36,7 +39,21 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            DataLabelingJob dataLabelingJob = new DataLabelingJob();
+            DataLabelingJob dataLabelingJob = new DataLabelingJob
+            {
+                DisplayName = "",
+                DatasetsAsDatasetNames =
+                {
+                    DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                },
+                LabelerCount = 0,
+                InstructionUri = "",
+                InputsSchemaUri = "",
+                Inputs = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+            };
             // Make the request
             DataLabelingJob response = await jobServiceClient.CreateDataLabelingJobAsync(parent, dataLabelingJob);
         }

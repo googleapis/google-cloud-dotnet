@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsFeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
-                EntityType = new EntityType(),
+                EntityType = new EntityType { },
                 EntityTypeId = "",
             };
             // Make the request

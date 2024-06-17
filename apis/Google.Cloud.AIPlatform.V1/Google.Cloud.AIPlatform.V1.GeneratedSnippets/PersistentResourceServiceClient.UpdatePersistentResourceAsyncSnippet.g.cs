@@ -37,8 +37,17 @@ namespace GoogleCSharpSnippets
             // Create client
             PersistentResourceServiceClient persistentResourceServiceClient = await PersistentResourceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            PersistentResource persistentResource = new PersistentResource();
-            FieldMask updateMask = new FieldMask();
+            PersistentResource persistentResource = new PersistentResource
+            {
+                ResourcePools =
+                {
+                    new ResourcePool
+                    {
+                        MachineSpec = new MachineSpec { },
+                    },
+                },
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Operation<PersistentResource, UpdatePersistentResourceOperationMetadata> response = await persistentResourceServiceClient.UpdatePersistentResourceAsync(persistentResource, updateMask);
 

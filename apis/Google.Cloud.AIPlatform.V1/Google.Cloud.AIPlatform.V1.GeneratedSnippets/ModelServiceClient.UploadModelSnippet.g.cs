@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             ModelServiceClient modelServiceClient = ModelServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Model model = new Model();
+            Model model = new Model { DisplayName = "", };
             // Make the request
             Operation<UploadModelResponse, UploadModelOperationMetadata> response = modelServiceClient.UploadModel(parent, model);
 

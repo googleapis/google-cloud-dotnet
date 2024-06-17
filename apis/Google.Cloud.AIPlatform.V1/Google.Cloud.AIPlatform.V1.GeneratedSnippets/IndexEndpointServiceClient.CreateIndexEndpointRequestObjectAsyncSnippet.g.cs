@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             CreateIndexEndpointRequest request = new CreateIndexEndpointRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                IndexEndpoint = new IndexEndpoint(),
+                IndexEndpoint = new IndexEndpoint { DisplayName = "", },
             };
             // Make the request
             Operation<IndexEndpoint, CreateIndexEndpointOperationMetadata> response = await indexEndpointServiceClient.CreateIndexEndpointAsync(request);

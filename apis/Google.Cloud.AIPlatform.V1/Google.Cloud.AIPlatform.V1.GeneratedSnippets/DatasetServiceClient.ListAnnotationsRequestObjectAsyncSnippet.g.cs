@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsDataItemName = DataItemName.FromProjectLocationDatasetDataItem("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATA_ITEM]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
                 OrderBy = "",
             };
             // Make the request

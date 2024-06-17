@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             VizierServiceClient vizierServiceClient = await VizierServiceClient.CreateAsync();
             // Initialize request argument(s)
             StudyName parent = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]");
-            Trial trial = new Trial();
+            Trial trial = new Trial { };
             // Make the request
             Trial response = await vizierServiceClient.CreateTrialAsync(parent, trial);
         }

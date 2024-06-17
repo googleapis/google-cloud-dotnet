@@ -39,7 +39,13 @@ namespace GoogleCSharpSnippets
             CreateFeatureGroupRequest request = new CreateFeatureGroupRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                FeatureGroup = new FeatureGroup(),
+                FeatureGroup = new FeatureGroup
+                {
+                    BigQuery = new FeatureGroup.Types.BigQuery
+                    {
+                        BigQuerySource = new BigQuerySource { InputUri = "", },
+                    },
+                },
                 FeatureGroupId = "",
             };
             // Make the request

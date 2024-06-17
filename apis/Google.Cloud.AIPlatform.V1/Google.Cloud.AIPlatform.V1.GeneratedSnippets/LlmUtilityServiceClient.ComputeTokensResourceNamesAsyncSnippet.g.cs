@@ -40,7 +40,13 @@ namespace GoogleCSharpSnippets
             LlmUtilityServiceClient llmUtilityServiceClient = await LlmUtilityServiceClient.CreateAsync();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            IEnumerable<wkt::Value> instances = new wkt::Value[]
+            {
+                new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
+            };
             // Make the request
             ComputeTokensResponse response = await llmUtilityServiceClient.ComputeTokensAsync(endpoint, instances);
         }

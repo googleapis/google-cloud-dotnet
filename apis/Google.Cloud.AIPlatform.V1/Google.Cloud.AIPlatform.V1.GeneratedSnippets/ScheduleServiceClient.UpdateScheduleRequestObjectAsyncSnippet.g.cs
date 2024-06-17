@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_ScheduleService_UpdateSchedule_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -38,8 +39,18 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateScheduleRequest request = new UpdateScheduleRequest
             {
-                Schedule = new Schedule(),
-                UpdateMask = new FieldMask(),
+                Schedule = new Schedule
+                {
+                    DisplayName = "",
+                    Cron = "",
+                    MaxConcurrentRunCount = 0L,
+                    CreatePipelineJobRequest = new CreatePipelineJobRequest
+                    {
+                        ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                        PipelineJob = new PipelineJob { },
+                    },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Schedule response = await scheduleServiceClient.UpdateScheduleAsync(request);

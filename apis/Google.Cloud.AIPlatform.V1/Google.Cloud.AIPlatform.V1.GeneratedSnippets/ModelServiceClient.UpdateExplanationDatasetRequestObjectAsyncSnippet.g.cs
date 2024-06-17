@@ -14,12 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedModelServiceClientSnippets
     {
@@ -39,7 +42,14 @@ namespace GoogleCSharpSnippets
             UpdateExplanationDatasetRequest request = new UpdateExplanationDatasetRequest
             {
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Examples = new Examples(),
+                Examples = new Examples
+                {
+                    NearestNeighborSearchConfig = new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                    ExampleGcsSource = new Examples.Types.ExampleGcsSource { },
+                },
             };
             // Make the request
             Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(request);

@@ -38,8 +38,17 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdatePersistentResourceRequest request = new UpdatePersistentResourceRequest
             {
-                PersistentResource = new PersistentResource(),
-                UpdateMask = new FieldMask(),
+                PersistentResource = new PersistentResource
+                {
+                    ResourcePools =
+                    {
+                        new ResourcePool
+                        {
+                            MachineSpec = new MachineSpec { },
+                        },
+                    },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<PersistentResource, UpdatePersistentResourceOperationMetadata> response = persistentResourceServiceClient.UpdatePersistentResource(request);

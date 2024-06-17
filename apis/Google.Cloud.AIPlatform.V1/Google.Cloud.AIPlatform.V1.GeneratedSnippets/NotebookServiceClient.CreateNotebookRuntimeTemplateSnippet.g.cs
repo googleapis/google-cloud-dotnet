@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate();
+            NotebookRuntimeTemplate notebookRuntimeTemplate = new NotebookRuntimeTemplate { DisplayName = "", };
             string notebookRuntimeTemplateId = "";
             // Make the request
             Operation<NotebookRuntimeTemplate, CreateNotebookRuntimeTemplateOperationMetadata> response = notebookServiceClient.CreateNotebookRuntimeTemplate(parent, notebookRuntimeTemplate, notebookRuntimeTemplateId);

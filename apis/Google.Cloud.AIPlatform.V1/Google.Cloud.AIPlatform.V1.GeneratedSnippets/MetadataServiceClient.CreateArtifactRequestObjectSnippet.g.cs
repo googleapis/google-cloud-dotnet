@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
-                Artifact = new Artifact(),
+                Artifact = new Artifact { },
                 ArtifactId = "",
             };
             // Make the request

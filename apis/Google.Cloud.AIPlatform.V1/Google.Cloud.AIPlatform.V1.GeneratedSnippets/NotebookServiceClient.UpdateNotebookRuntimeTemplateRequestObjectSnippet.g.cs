@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateNotebookRuntimeTemplateRequest request = new UpdateNotebookRuntimeTemplateRequest
             {
-                NotebookRuntimeTemplate = new NotebookRuntimeTemplate(),
-                UpdateMask = new FieldMask(),
+                NotebookRuntimeTemplate = new NotebookRuntimeTemplate { DisplayName = "", },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             NotebookRuntimeTemplate response = notebookServiceClient.UpdateNotebookRuntimeTemplate(request);

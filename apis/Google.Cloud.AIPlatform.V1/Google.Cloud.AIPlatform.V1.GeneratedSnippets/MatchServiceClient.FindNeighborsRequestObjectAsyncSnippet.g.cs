@@ -41,7 +41,15 @@ namespace GoogleCSharpSnippets
                 DeployedIndexId = "",
                 Queries =
                 {
-                    new FindNeighborsRequest.Types.Query(),
+                    new FindNeighborsRequest.Types.Query
+                    {
+                        Datapoint = new IndexDatapoint
+                        {
+                            DatapointId = "",
+                            FeatureVector = { 0F, },
+                        },
+                        Rrf = new FindNeighborsRequest.Types.Query.Types.RRF { Alpha = 0F, },
+                    },
                 },
                 ReturnFullDatapoint = false,
             };

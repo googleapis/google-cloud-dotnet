@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
-                Feature = new Feature(),
-                UpdateMask = new FieldMask(),
+                Feature = new Feature { },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Feature response = featurestoreServiceClient.UpdateFeature(request);

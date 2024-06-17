@@ -36,8 +36,8 @@ namespace GoogleCSharpSnippets
             // Create client
             EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Endpoint endpoint = new Endpoint();
-            FieldMask updateMask = new FieldMask();
+            Endpoint endpoint = new Endpoint { DisplayName = "", };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Endpoint response = await endpointServiceClient.UpdateEndpointAsync(endpoint, updateMask);
         }

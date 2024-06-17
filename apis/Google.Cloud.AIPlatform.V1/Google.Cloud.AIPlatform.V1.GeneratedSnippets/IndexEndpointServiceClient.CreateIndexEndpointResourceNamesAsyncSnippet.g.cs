@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             IndexEndpointServiceClient indexEndpointServiceClient = await IndexEndpointServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            IndexEndpoint indexEndpoint = new IndexEndpoint();
+            IndexEndpoint indexEndpoint = new IndexEndpoint { DisplayName = "", };
             // Make the request
             Operation<IndexEndpoint, CreateIndexEndpointOperationMetadata> response = await indexEndpointServiceClient.CreateIndexEndpointAsync(parent, indexEndpoint);
 

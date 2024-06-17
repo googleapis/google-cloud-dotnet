@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 Filter = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
                 OrderBy = "",
             };
             // Make the request

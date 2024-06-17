@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]/runs/[RUN]";
-            TensorboardRun tensorboardRun = new TensorboardRun();
+            TensorboardRun tensorboardRun = new TensorboardRun { DisplayName = "", };
             string tensorboardRunId = "";
             // Make the request
             TensorboardRun response = tensorboardServiceClient.CreateTensorboardRun(parent, tensorboardRun, tensorboardRunId);

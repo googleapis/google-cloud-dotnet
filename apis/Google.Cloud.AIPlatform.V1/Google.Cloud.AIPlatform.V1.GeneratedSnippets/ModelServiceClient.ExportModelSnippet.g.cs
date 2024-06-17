@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             ModelServiceClient modelServiceClient = ModelServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
-            ExportModelRequest.Types.OutputConfig outputConfig = new ExportModelRequest.Types.OutputConfig();
+            ExportModelRequest.Types.OutputConfig outputConfig = new ExportModelRequest.Types.OutputConfig { };
             // Make the request
             Operation<ExportModelResponse, ExportModelOperationMetadata> response = modelServiceClient.ExportModel(name, outputConfig);
 

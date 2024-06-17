@@ -38,7 +38,14 @@ namespace GoogleCSharpSnippets
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
-                Events = { new Event(), },
+                Events =
+                {
+                    new Event
+                    {
+                        ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
+                        Type = Event.Types.Type.Unspecified,
+                    },
+                },
             };
             // Make the request
             AddExecutionEventsResponse response = await metadataServiceClient.AddExecutionEventsAsync(request);

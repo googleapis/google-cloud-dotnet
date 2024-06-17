@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             GetDatasetVersionRequest request = new GetDatasetVersionRequest
             {
                 DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             DatasetVersion response = await datasetServiceClient.GetDatasetVersionAsync(request);

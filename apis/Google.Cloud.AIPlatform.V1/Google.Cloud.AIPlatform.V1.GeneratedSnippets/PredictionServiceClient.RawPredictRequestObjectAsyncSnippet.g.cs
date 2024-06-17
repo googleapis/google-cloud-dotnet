@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                HttpBody = new HttpBody(),
+                HttpBody = new HttpBody { },
             };
             // Make the request
             HttpBody response = await predictionServiceClient.RawPredictAsync(request);

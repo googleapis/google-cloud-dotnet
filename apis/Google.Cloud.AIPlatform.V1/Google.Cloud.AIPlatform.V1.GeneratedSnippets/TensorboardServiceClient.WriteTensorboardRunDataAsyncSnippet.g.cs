@@ -39,7 +39,18 @@ namespace GoogleCSharpSnippets
             string tensorboardRun = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]/runs/[RUN]";
             IEnumerable<TimeSeriesData> timeSeriesData = new TimeSeriesData[]
             {
-                new TimeSeriesData(),
+                new TimeSeriesData
+                {
+                    TensorboardTimeSeriesId = "",
+                    ValueType = TensorboardTimeSeries.Types.ValueType.Unspecified,
+                    Values =
+                    {
+                        new TimeSeriesDataPoint
+                        {
+                            Scalar = new Scalar { },
+                        },
+                    },
+                },
             };
             // Make the request
             WriteTensorboardRunDataResponse response = await tensorboardServiceClient.WriteTensorboardRunDataAsync(tensorboardRun, timeSeriesData);

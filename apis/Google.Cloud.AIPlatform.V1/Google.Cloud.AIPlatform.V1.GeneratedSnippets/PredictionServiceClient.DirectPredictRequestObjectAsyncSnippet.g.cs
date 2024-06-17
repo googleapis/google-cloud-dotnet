@@ -38,8 +38,8 @@ namespace GoogleCSharpSnippets
             DirectPredictRequest request = new DirectPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Inputs = { new Tensor(), },
-                Parameters = new Tensor(),
+                Inputs = { new Tensor { }, },
+                Parameters = new Tensor { },
             };
             // Make the request
             DirectPredictResponse response = await predictionServiceClient.DirectPredictAsync(request);

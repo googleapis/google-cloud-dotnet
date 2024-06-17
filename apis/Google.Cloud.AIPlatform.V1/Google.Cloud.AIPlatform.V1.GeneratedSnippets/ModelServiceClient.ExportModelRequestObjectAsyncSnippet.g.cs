@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ExportModelRequest request = new ExportModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                OutputConfig = new ExportModelRequest.Types.OutputConfig(),
+                OutputConfig = new ExportModelRequest.Types.OutputConfig { },
             };
             // Make the request
             Operation<ExportModelResponse, ExportModelOperationMetadata> response = await modelServiceClient.ExportModelAsync(request);

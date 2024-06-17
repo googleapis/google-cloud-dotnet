@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
                 Filter = "",
                 OrderBy = "",
-                ReadMask = new FieldMask(),
+                ReadMask = new FieldMask { },
             };
             // Make the request
             PagedEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> response = tensorboardServiceClient.ListTensorboardTimeSeries(request);

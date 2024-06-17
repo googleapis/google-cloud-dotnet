@@ -37,7 +37,20 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            CustomJob customJob = new CustomJob();
+            CustomJob customJob = new CustomJob
+            {
+                DisplayName = "",
+                JobSpec = new CustomJobSpec
+                {
+                    WorkerPoolSpecs =
+                    {
+                        new WorkerPoolSpec
+                        {
+                            ContainerSpec = new ContainerSpec { ImageUri = "", },
+                        },
+                    },
+                },
+            };
             // Make the request
             CustomJob response = await jobServiceClient.CreateCustomJobAsync(parent, customJob);
         }

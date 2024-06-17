@@ -41,8 +41,9 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SourceModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                EncryptionSpec = new EncryptionSpec(),
+                EncryptionSpec = new EncryptionSpec { KmsKeyName = "", },
                 ModelId = "",
+                ParentModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
             };
             // Make the request
             Operation<CopyModelResponse, CopyModelOperationMetadata> response = await modelServiceClient.CopyModelAsync(request);

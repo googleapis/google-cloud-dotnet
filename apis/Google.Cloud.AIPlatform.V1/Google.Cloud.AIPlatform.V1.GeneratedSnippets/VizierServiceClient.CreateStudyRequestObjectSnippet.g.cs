@@ -38,7 +38,34 @@ namespace GoogleCSharpSnippets
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Study = new Study(),
+                Study = new Study
+                {
+                    DisplayName = "",
+                    StudySpec = new StudySpec
+                    {
+                        Metrics =
+                        {
+                            new StudySpec.Types.MetricSpec
+                            {
+                                MetricId = "",
+                                Goal = StudySpec.Types.MetricSpec.Types.GoalType.Unspecified,
+                            },
+                        },
+                        Parameters =
+                        {
+                            new StudySpec.Types.ParameterSpec
+                            {
+                                ParameterId = "",
+                                DoubleValueSpec = new StudySpec.Types.ParameterSpec.Types.DoubleValueSpec
+                                {
+                                    MinValue = 0,
+                                    MaxValue = 0,
+                                },
+                            },
+                        },
+                        DecayCurveStoppingSpec = new StudySpec.Types.DecayCurveAutomatedStoppingSpec { },
+                    },
+                },
             };
             // Make the request
             Study response = vizierServiceClient.CreateStudy(request);

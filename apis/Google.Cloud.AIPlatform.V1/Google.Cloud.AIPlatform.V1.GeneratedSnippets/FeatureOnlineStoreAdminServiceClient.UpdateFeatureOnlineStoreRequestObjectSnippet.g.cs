@@ -38,8 +38,18 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateFeatureOnlineStoreRequest request = new UpdateFeatureOnlineStoreRequest
             {
-                FeatureOnlineStore = new FeatureOnlineStore(),
-                UpdateMask = new FieldMask(),
+                FeatureOnlineStore = new FeatureOnlineStore
+                {
+                    Bigtable = new FeatureOnlineStore.Types.Bigtable
+                    {
+                        AutoScaling = new FeatureOnlineStore.Types.Bigtable.Types.AutoScaling
+                        {
+                            MinNodeCount = 0,
+                            MaxNodeCount = 0,
+                        },
+                    },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Operation<FeatureOnlineStore, UpdateFeatureOnlineStoreOperationMetadata> response = featureOnlineStoreAdminServiceClient.UpdateFeatureOnlineStore(request);

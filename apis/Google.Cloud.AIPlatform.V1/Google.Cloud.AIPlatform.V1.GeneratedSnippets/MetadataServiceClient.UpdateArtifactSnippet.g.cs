@@ -35,8 +35,8 @@ namespace GoogleCSharpSnippets
             // Create client
             MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
             // Initialize request argument(s)
-            Artifact artifact = new Artifact();
-            FieldMask updateMask = new FieldMask();
+            Artifact artifact = new Artifact { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Artifact response = metadataServiceClient.UpdateArtifact(artifact, updateMask);
         }

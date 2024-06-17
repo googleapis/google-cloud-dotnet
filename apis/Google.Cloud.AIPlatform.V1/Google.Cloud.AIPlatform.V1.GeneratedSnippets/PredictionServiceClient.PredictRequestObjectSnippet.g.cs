@@ -40,8 +40,17 @@ namespace GoogleCSharpSnippets
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new wkt::Value(), },
-                Parameters = new wkt::Value(),
+                Instances =
+                {
+                    new wkt::Value
+                    {
+                        NullValue = wkt::NullValue.NullValue,
+                    },
+                },
+                Parameters = new wkt::Value
+                {
+                    NullValue = wkt::NullValue.NullValue,
+                },
             };
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(request);

@@ -36,8 +36,8 @@ namespace GoogleCSharpSnippets
             // Create client
             MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Execution execution = new Execution();
-            FieldMask updateMask = new FieldMask();
+            Execution execution = new Execution { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Execution response = await metadataServiceClient.UpdateExecutionAsync(execution, updateMask);
         }

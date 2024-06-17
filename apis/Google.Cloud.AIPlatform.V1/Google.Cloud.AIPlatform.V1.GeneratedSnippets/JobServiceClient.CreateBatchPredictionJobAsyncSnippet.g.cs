@@ -36,7 +36,23 @@ namespace GoogleCSharpSnippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            BatchPredictionJob batchPredictionJob = new BatchPredictionJob();
+            BatchPredictionJob batchPredictionJob = new BatchPredictionJob
+            {
+                DisplayName = "",
+                InputConfig = new BatchPredictionJob.Types.InputConfig
+                {
+                    InstancesFormat = "",
+                    GcsSource = new GcsSource { Uris = { "", }, },
+                },
+                OutputConfig = new BatchPredictionJob.Types.OutputConfig
+                {
+                    PredictionsFormat = "",
+                    GcsDestination = new GcsDestination
+                    {
+                        OutputUriPrefix = "",
+                    },
+                },
+            };
             // Make the request
             BatchPredictionJob response = await jobServiceClient.CreateBatchPredictionJobAsync(parent, batchPredictionJob);
         }

@@ -36,8 +36,8 @@ namespace GoogleCSharpSnippets
             // Create client
             MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Artifact artifact = new Artifact();
-            FieldMask updateMask = new FieldMask();
+            Artifact artifact = new Artifact { };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Artifact response = await metadataServiceClient.UpdateArtifactAsync(artifact, updateMask);
         }

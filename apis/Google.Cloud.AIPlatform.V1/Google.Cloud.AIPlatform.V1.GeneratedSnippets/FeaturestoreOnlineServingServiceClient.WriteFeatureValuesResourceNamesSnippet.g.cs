@@ -38,7 +38,17 @@ namespace GoogleCSharpSnippets
             EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
             IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
             {
-                new WriteFeatureValuesPayload(),
+                new WriteFeatureValuesPayload
+                {
+                    EntityId = "",
+                    FeatureValues =
+                    {
+                        {
+                            "",
+                            new FeatureValue { BoolValue = false, }
+                        },
+                    },
+                },
             };
             // Make the request
             WriteFeatureValuesResponse response = featurestoreOnlineServingServiceClient.WriteFeatureValues(entityType, payloads);

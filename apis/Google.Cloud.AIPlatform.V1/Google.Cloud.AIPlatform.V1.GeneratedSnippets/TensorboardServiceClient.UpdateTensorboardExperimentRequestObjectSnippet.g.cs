@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateTensorboardExperimentRequest request = new UpdateTensorboardExperimentRequest
             {
-                UpdateMask = new FieldMask(),
-                TensorboardExperiment = new TensorboardExperiment(),
+                UpdateMask = new FieldMask { },
+                TensorboardExperiment = new TensorboardExperiment { },
             };
             // Make the request
             TensorboardExperiment response = tensorboardServiceClient.UpdateTensorboardExperiment(request);

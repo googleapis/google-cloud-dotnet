@@ -40,7 +40,14 @@ namespace GoogleCSharpSnippets
             CreateDeploymentResourcePoolRequest request = new CreateDeploymentResourcePoolRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeploymentResourcePool = new DeploymentResourcePool(),
+                DeploymentResourcePool = new DeploymentResourcePool
+                {
+                    DedicatedResources = new DedicatedResources
+                    {
+                        MachineSpec = new MachineSpec { },
+                        MinReplicaCount = 0,
+                    },
+                },
                 DeploymentResourcePoolId = "",
             };
             // Make the request

@@ -37,8 +37,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
-                EntityType = new EntityType(),
-                UpdateMask = new FieldMask(),
+                EntityType = new EntityType { },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             EntityType response = featurestoreServiceClient.UpdateEntityType(request);
