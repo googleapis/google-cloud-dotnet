@@ -36,8 +36,11 @@ namespace GoogleCSharpSnippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Secret secret = new Secret();
-            FieldMask updateMask = new FieldMask();
+            Secret secret = new Secret
+            {
+                ExpireTime = new Timestamp { },
+            };
+            FieldMask updateMask = new FieldMask { };
             // Make the request
             Secret response = await secretManagerServiceClient.UpdateSecretAsync(secret, updateMask);
         }

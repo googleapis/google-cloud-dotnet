@@ -40,8 +40,8 @@ namespace GoogleCSharpSnippets
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                Policy = new Policy(),
-                UpdateMask = new FieldMask(),
+                Policy = new Policy { },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Policy response = secretManagerServiceClient.SetIamPolicy(request);

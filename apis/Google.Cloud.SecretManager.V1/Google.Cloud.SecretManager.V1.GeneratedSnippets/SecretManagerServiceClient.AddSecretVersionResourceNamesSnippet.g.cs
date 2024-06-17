@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
             SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
-            SecretPayload payload = new SecretPayload();
+            SecretPayload payload = new SecretPayload { };
             // Make the request
             SecretVersion response = secretManagerServiceClient.AddSecretVersion(parent, payload);
         }

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_async_flattened_resourceNames2]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecretManager.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
@@ -38,7 +39,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string secretId = "";
-            Secret secret = new Secret();
+            Secret secret = new Secret
+            {
+                ExpireTime = new Timestamp { },
+            };
             // Make the request
             Secret response = await secretManagerServiceClient.CreateSecretAsync(parent, secretId, secret);
         }

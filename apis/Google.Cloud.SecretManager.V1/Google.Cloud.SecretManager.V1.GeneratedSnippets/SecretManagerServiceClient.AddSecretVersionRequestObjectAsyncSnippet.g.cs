@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload { },
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.AddSecretVersionAsync(request);

@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/secrets/[SECRET]";
-            SecretPayload payload = new SecretPayload();
+            SecretPayload payload = new SecretPayload { };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.AddSecretVersionAsync(parent, payload);
         }

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_async]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecretManager.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
@@ -40,7 +41,10 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 SecretId = "",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    ExpireTime = new Timestamp { },
+                },
             };
             // Make the request
             Secret response = await secretManagerServiceClient.CreateSecretAsync(request);

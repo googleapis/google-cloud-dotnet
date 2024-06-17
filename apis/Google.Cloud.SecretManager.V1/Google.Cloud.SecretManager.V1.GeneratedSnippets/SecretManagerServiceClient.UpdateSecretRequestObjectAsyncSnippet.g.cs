@@ -38,8 +38,11 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateSecretRequest request = new UpdateSecretRequest
             {
-                Secret = new Secret(),
-                UpdateMask = new FieldMask(),
+                Secret = new Secret
+                {
+                    ExpireTime = new Timestamp { },
+                },
+                UpdateMask = new FieldMask { },
             };
             // Make the request
             Secret response = await secretManagerServiceClient.UpdateSecretAsync(request);

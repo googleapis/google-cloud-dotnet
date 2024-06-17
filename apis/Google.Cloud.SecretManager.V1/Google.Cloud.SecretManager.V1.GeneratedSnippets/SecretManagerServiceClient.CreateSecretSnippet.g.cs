@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_sync_flattened]
     using Google.Cloud.SecretManager.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
     {
@@ -36,7 +37,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string secretId = "";
-            Secret secret = new Secret();
+            Secret secret = new Secret
+            {
+                ExpireTime = new Timestamp { },
+            };
             // Make the request
             Secret response = secretManagerServiceClient.CreateSecret(parent, secretId, secret);
         }
