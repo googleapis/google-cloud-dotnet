@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertDiskRequest request = new InsertDiskRequest
             {
                 Zone = "",
-                DiskResource = new Disk(),
+                DiskResource = new Disk { },
                 RequestId = "",
                 SourceImage = "",
                 Project = "",

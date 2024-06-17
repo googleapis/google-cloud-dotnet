@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string forwardingRule = "";
-            TargetReference targetReferenceResource = new TargetReference();
+            TargetReference targetReferenceResource = new TargetReference { };
             // Make the request
             lro::Operation<Operation, Operation> response = await globalForwardingRulesClient.SetTargetAsync(project, forwardingRule, targetReferenceResource);
 

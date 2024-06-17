@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource = new InstancesSetMachineTypeRequest();
+            InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource = new InstancesSetMachineTypeRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetMachineType(project, zone, instance, instancesSetMachineTypeRequestResource);
 

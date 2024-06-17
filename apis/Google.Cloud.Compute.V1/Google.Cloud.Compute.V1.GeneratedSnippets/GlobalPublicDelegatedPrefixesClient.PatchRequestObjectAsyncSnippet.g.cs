@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             PatchGlobalPublicDelegatedPrefixeRequest request = new PatchGlobalPublicDelegatedPrefixeRequest
             {
                 RequestId = "",
-                PublicDelegatedPrefixResource = new PublicDelegatedPrefix(),
+                PublicDelegatedPrefixResource = new PublicDelegatedPrefix { },
                 PublicDelegatedPrefix = "",
                 Project = "",
             };

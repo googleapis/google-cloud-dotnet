@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 TargetPool = "",
                 Region = "",
                 Project = "",
-                InstanceReferenceResource = new InstanceReference(),
+                InstanceReferenceResource = new InstanceReference { },
             };
             // Make the request
             TargetPoolInstanceHealth response = await targetPoolsClient.GetHealthAsync(request);

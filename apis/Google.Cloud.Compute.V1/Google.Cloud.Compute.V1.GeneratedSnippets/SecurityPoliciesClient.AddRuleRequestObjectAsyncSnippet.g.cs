@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 Project = "",
                 ValidateOnly = false,
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                SecurityPolicyRuleResource = new SecurityPolicyRule { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.AddRuleAsync(request);

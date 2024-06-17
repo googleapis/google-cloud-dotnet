@@ -45,7 +45,7 @@ namespace GoogleCSharpSnippets
                 Reservation = "",
                 Paths = "",
                 Project = "",
-                ReservationResource = new Reservation(),
+                ReservationResource = new Reservation { },
                 UpdateMask = "",
             };
             // Make the request

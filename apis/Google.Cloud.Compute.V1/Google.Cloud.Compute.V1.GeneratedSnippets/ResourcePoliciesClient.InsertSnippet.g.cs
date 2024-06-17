@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            ResourcePolicy resourcePolicyResource = new ResourcePolicy();
+            ResourcePolicy resourcePolicyResource = new ResourcePolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = resourcePoliciesClient.Insert(project, region, resourcePolicyResource);
 

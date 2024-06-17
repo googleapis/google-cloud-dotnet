@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            SslPolicy sslPolicyResource = new SslPolicy();
+            SslPolicy sslPolicyResource = new SslPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = sslPoliciesClient.Insert(project, sslPolicyResource);
 

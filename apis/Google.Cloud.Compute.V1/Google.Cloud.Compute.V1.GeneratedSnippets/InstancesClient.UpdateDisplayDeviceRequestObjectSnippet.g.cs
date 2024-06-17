@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                DisplayDeviceResource = new DisplayDevice(),
+                DisplayDeviceResource = new DisplayDevice { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.UpdateDisplayDevice(request);

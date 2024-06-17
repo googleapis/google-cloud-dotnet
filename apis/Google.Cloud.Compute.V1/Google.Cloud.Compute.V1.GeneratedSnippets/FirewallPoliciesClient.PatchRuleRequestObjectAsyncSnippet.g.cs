@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             PatchRuleFirewallPolicyRequest request = new PatchRuleFirewallPolicyRequest
             {
                 RequestId = "",
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
+                FirewallPolicyRuleResource = new FirewallPolicyRule { },
                 Priority = 0,
                 FirewallPolicy = "",
             };

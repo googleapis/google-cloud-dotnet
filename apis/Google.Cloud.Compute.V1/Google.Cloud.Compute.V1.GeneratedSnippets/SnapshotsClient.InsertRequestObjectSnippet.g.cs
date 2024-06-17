@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                SnapshotResource = new Snapshot(),
+                SnapshotResource = new Snapshot { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = snapshotsClient.Insert(request);

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            UsageExportLocation usageExportLocationResource = new UsageExportLocation();
+            UsageExportLocation usageExportLocationResource = new UsageExportLocation { };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.SetUsageExportBucketAsync(project, usageExportLocationResource);
 

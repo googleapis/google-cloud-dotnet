@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertGlobalPublicDelegatedPrefixeRequest request = new InsertGlobalPublicDelegatedPrefixeRequest
             {
                 RequestId = "",
-                PublicDelegatedPrefixResource = new PublicDelegatedPrefix(),
+                PublicDelegatedPrefixResource = new PublicDelegatedPrefix { },
                 Project = "",
             };
             // Make the request

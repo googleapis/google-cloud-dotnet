@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string forwardingRule = "";
-            ForwardingRule forwardingRuleResource = new ForwardingRule();
+            ForwardingRule forwardingRuleResource = new ForwardingRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = await forwardingRulesClient.PatchAsync(project, region, forwardingRule, forwardingRuleResource);
 

@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 TargetHttpsProxy = "",
                 Project = "",
-                TargetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest(),
+                TargetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetHttpsProxiesClient.SetCertificateMapAsync(request);

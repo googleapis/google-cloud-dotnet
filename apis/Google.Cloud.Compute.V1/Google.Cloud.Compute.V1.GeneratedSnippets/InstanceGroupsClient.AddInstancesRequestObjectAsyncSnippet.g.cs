@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 InstanceGroup = "",
                 Project = "",
-                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest(),
+                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupsClient.AddInstancesAsync(request);

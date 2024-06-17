@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             PatchHealthCheckRequest request = new PatchHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheckResource = new HealthCheck(),
+                HealthCheckResource = new HealthCheck { },
                 Project = "",
                 HealthCheck = "",
             };

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string reservation = "";
-            Reservation reservationResource = new Reservation();
+            Reservation reservationResource = new Reservation { };
             // Make the request
             lro::Operation<Operation, Operation> response = await reservationsClient.UpdateAsync(project, zone, reservation, reservationResource);
 

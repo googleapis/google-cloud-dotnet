@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             FirewallsClient firewallsClient = await FirewallsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Firewall firewallResource = new Firewall();
+            Firewall firewallResource = new Firewall { };
             // Make the request
             lro::Operation<Operation, Operation> response = await firewallsClient.InsertAsync(project, firewallResource);
 

@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetHealthBackendServiceRequest request = new GetHealthBackendServiceRequest
             {
-                ResourceGroupReferenceResource = new ResourceGroupReference(),
+                ResourceGroupReferenceResource = new ResourceGroupReference { },
                 Project = "",
                 BackendService = "",
             };

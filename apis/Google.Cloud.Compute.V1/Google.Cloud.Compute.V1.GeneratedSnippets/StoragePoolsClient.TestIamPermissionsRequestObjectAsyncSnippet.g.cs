@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Resource = "",
                 Project = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
+                TestPermissionsRequestResource = new TestPermissionsRequest { },
             };
             // Make the request
             TestPermissionsResponse response = await storagePoolsClient.TestIamPermissionsAsync(request);

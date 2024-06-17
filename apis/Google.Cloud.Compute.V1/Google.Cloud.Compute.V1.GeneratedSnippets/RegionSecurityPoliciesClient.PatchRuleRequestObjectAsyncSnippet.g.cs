@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 Project = "",
                 ValidateOnly = false,
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                SecurityPolicyRuleResource = new SecurityPolicyRule { },
                 Priority = 0,
                 UpdateMask = "",
             };

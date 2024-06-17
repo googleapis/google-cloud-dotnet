@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             CreateInstancesInstanceGroupManagerRequest request = new CreateInstancesInstanceGroupManagerRequest
             {
                 Zone = "",
-                InstanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest(),
+                InstanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest { },
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",

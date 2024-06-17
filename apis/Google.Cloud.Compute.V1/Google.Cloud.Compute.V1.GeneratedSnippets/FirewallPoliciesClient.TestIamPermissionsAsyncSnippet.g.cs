@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "";
-            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest { };
             // Make the request
             TestPermissionsResponse response = await firewallPoliciesClient.TestIamPermissionsAsync(resource, testPermissionsRequestResource);
         }

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Metadata metadataResource = new Metadata();
+            Metadata metadataResource = new Metadata { };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.SetCommonInstanceMetadataAsync(project, metadataResource);
 

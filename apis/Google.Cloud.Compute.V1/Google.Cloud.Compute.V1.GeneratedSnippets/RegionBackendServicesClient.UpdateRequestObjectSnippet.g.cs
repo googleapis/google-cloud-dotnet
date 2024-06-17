@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 BackendService = "",
-                BackendServiceResource = new BackendService(),
+                BackendServiceResource = new BackendService { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionBackendServicesClient.Update(request);

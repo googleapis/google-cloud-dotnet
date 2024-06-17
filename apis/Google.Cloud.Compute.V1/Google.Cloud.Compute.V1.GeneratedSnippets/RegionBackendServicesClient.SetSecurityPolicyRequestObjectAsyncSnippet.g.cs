@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                SecurityPolicyReferenceResource = new SecurityPolicyReference { },
                 Project = "",
                 BackendService = "",
             };

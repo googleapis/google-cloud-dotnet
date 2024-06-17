@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest();
+            NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.SimulateMaintenanceEventAsync(project, zone, nodeGroup, nodeGroupsSimulateMaintenanceEventRequestResource);
 

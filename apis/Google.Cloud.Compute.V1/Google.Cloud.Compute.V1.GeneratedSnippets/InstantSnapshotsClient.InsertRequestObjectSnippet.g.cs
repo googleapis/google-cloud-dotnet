@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                InstantSnapshotResource = new InstantSnapshot(),
+                InstantSnapshotResource = new InstantSnapshot { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instantSnapshotsClient.Insert(request);

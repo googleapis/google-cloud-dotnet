@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 Project = "",
                 UrlMap = "",
-                UrlMapsValidateRequestResource = new UrlMapsValidateRequest(),
+                UrlMapsValidateRequestResource = new UrlMapsValidateRequest { },
             };
             // Make the request
             UrlMapsValidateResponse response = urlMapsClient.Validate(request);

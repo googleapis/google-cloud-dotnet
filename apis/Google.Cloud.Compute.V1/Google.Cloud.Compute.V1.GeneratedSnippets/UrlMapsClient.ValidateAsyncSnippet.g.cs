@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string urlMap = "";
-            UrlMapsValidateRequest urlMapsValidateRequestResource = new UrlMapsValidateRequest();
+            UrlMapsValidateRequest urlMapsValidateRequestResource = new UrlMapsValidateRequest { };
             // Make the request
             UrlMapsValidateResponse response = await urlMapsClient.ValidateAsync(project, urlMap, urlMapsValidateRequestResource);
         }

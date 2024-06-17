@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                SnapshotSettingsResource = new SnapshotSettings(),
+                SnapshotSettingsResource = new SnapshotSettings { },
                 UpdateMask = "",
             };
             // Make the request

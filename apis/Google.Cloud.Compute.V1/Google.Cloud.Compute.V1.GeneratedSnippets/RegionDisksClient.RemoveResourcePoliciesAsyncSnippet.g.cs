@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest();
+            RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.RemoveResourcePoliciesAsync(project, region, disk, regionDisksRemoveResourcePoliciesRequestResource);
 

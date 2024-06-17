@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string instanceGroupManager = "";
-            RegionInstanceGroupManagerUpdateInstanceConfigReq regionInstanceGroupManagerUpdateInstanceConfigReqResource = new RegionInstanceGroupManagerUpdateInstanceConfigReq();
+            RegionInstanceGroupManagerUpdateInstanceConfigReq regionInstanceGroupManagerUpdateInstanceConfigReqResource = new RegionInstanceGroupManagerUpdateInstanceConfigReq { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.UpdatePerInstanceConfigsAsync(project, region, instanceGroupManager, regionInstanceGroupManagerUpdateInstanceConfigReqResource);
 

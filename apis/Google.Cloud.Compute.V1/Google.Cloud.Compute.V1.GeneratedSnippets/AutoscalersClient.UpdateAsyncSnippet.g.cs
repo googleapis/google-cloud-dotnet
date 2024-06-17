@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            Autoscaler autoscalerResource = new Autoscaler();
+            Autoscaler autoscalerResource = new Autoscaler { };
             // Make the request
             lro::Operation<Operation, Operation> response = await autoscalersClient.UpdateAsync(project, zone, autoscalerResource);
 

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Resource = "",
                 Project = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
+                TestPermissionsRequestResource = new TestPermissionsRequest { },
             };
             // Make the request
             TestPermissionsResponse response = networkEndpointGroupsClient.TestIamPermissions(request);

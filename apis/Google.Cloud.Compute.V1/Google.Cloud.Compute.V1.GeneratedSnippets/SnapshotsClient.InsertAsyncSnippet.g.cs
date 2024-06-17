@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             SnapshotsClient snapshotsClient = await SnapshotsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Snapshot snapshotResource = new Snapshot();
+            Snapshot snapshotResource = new Snapshot { };
             // Make the request
             lro::Operation<Operation, Operation> response = await snapshotsClient.InsertAsync(project, snapshotResource);
 

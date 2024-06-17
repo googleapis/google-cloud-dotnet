@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string securityPolicy = "";
-            SecurityPolicy securityPolicyResource = new SecurityPolicy();
+            SecurityPolicy securityPolicyResource = new SecurityPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.Patch(project, region, securityPolicy, securityPolicyResource);
 

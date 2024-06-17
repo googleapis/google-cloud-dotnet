@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string router = "";
-            Router routerResource = new Router();
+            Router routerResource = new Router { };
             // Make the request
             lro::Operation<Operation, Operation> response = await routersClient.UpdateAsync(project, region, router, routerResource);
 

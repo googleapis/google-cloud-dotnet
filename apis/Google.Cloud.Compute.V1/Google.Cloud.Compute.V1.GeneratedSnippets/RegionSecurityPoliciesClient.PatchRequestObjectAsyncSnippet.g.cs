@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 SecurityPolicy = "",
-                SecurityPolicyResource = new SecurityPolicy(),
+                SecurityPolicyResource = new SecurityPolicy { },
                 Project = "",
                 UpdateMask = "",
             };

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource = new RegionDisksStartAsyncReplicationRequest();
+            RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource = new RegionDisksStartAsyncReplicationRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.StartAsyncReplicationAsync(project, region, disk, regionDisksStartAsyncReplicationRequestResource);
 

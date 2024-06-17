@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
-                InstanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq(),
+                InstanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchPerInstanceConfigsAsync(request);

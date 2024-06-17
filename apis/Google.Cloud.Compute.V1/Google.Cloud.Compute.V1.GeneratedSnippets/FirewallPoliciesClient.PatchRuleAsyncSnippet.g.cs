@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string firewallPolicy = "";
-            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
+            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = await firewallPoliciesClient.PatchRuleAsync(firewallPolicy, firewallPolicyRuleResource);
 

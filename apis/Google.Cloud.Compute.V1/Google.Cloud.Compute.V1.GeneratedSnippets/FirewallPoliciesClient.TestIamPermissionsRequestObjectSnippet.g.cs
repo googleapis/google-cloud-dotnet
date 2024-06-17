@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
+                TestPermissionsRequestResource = new TestPermissionsRequest { },
             };
             // Make the request
             TestPermissionsResponse response = firewallPoliciesClient.TestIamPermissions(request);

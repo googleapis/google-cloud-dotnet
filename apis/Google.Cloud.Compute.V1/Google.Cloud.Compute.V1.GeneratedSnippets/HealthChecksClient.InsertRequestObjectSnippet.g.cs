@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertHealthCheckRequest request = new InsertHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheckResource = new HealthCheck(),
+                HealthCheckResource = new HealthCheck { },
                 Project = "",
             };
             // Make the request

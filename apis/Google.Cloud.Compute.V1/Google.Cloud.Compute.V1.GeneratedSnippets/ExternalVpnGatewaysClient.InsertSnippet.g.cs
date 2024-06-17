@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ExternalVpnGatewaysClient externalVpnGatewaysClient = ExternalVpnGatewaysClient.Create();
             // Initialize request argument(s)
             string project = "";
-            ExternalVpnGateway externalVpnGatewayResource = new ExternalVpnGateway();
+            ExternalVpnGateway externalVpnGatewayResource = new ExternalVpnGateway { };
             // Make the request
             lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.Insert(project, externalVpnGatewayResource);
 

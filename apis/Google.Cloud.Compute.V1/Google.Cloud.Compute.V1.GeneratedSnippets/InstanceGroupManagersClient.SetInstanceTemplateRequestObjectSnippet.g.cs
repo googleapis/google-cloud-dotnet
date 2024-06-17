@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             SetInstanceTemplateInstanceGroupManagerRequest request = new SetInstanceTemplateInstanceGroupManagerRequest
             {
                 Zone = "",
-                InstanceGroupManagersSetInstanceTemplateRequestResource = new InstanceGroupManagersSetInstanceTemplateRequest(),
+                InstanceGroupManagersSetInstanceTemplateRequestResource = new InstanceGroupManagersSetInstanceTemplateRequest { },
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",

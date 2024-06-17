@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                NetworkEndpointGroupResource = new NetworkEndpointGroup(),
+                NetworkEndpointGroupResource = new NetworkEndpointGroup { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.Insert(request);

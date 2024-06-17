@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesSetMachineResourcesRequestResource = new InstancesSetMachineResourcesRequest(),
+                InstancesSetMachineResourcesRequestResource = new InstancesSetMachineResourcesRequest { },
                 Project = "",
             };
             // Make the request

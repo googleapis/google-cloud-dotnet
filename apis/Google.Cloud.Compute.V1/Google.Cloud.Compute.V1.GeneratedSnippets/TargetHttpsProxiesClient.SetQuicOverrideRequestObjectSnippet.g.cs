@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                TargetHttpsProxiesSetQuicOverrideRequestResource = new TargetHttpsProxiesSetQuicOverrideRequest(),
+                TargetHttpsProxiesSetQuicOverrideRequestResource = new TargetHttpsProxiesSetQuicOverrideRequest { },
                 Project = "",
             };
             // Make the request

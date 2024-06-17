@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 BackendBucket = "",
                 Project = "",
-                SignedUrlKeyResource = new SignedUrlKey(),
+                SignedUrlKeyResource = new SignedUrlKey { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await backendBucketsClient.AddSignedUrlKeyAsync(request);

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Resource = "",
                 Project = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest { },
             };
             // Make the request
             Policy response = instancesClient.SetIamPolicy(request);

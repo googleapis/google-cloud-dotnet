@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetTcpProxy = "";
-            TargetTcpProxiesSetBackendServiceRequest targetTcpProxiesSetBackendServiceRequestResource = new TargetTcpProxiesSetBackendServiceRequest();
+            TargetTcpProxiesSetBackendServiceRequest targetTcpProxiesSetBackendServiceRequestResource = new TargetTcpProxiesSetBackendServiceRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetTcpProxiesClient.SetBackendServiceAsync(project, targetTcpProxy, targetTcpProxiesSetBackendServiceRequestResource);
 

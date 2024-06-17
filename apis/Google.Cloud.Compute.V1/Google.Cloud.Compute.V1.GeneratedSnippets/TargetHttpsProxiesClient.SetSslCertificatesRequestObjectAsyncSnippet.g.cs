@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                TargetHttpsProxiesSetSslCertificatesRequestResource = new TargetHttpsProxiesSetSslCertificatesRequest(),
+                TargetHttpsProxiesSetSslCertificatesRequestResource = new TargetHttpsProxiesSetSslCertificatesRequest { },
                 Project = "",
             };
             // Make the request

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string image = "";
-            Image imageResource = new Image();
+            Image imageResource = new Image { };
             // Make the request
             lro::Operation<Operation, Operation> response = imagesClient.Patch(project, image, imageResource);
 

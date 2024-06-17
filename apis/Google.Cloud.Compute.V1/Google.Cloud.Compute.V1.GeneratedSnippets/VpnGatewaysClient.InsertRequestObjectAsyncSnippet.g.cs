@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                VpnGatewayResource = new VpnGateway(),
+                VpnGatewayResource = new VpnGateway { },
                 Project = "",
             };
             // Make the request

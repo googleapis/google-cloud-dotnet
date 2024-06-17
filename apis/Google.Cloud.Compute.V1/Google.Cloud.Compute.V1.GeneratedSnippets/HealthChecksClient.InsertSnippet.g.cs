@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             HealthChecksClient healthChecksClient = HealthChecksClient.Create();
             // Initialize request argument(s)
             string project = "";
-            HealthCheck healthCheckResource = new HealthCheck();
+            HealthCheck healthCheckResource = new HealthCheck { };
             // Make the request
             lro::Operation<Operation, Operation> response = healthChecksClient.Insert(project, healthCheckResource);
 

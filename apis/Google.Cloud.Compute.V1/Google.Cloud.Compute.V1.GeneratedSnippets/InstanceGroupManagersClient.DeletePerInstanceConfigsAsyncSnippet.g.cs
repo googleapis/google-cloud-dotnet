@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq();
+            InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeletePerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersDeletePerInstanceConfigsReqResource);
 

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest();
+            ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.SetCloudArmorTierAsync(project, projectsSetCloudArmorTierRequestResource);
 

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertNetworkRequest request = new InsertNetworkRequest
             {
                 RequestId = "",
-                NetworkResource = new Network(),
+                NetworkResource = new Network { },
                 Project = "",
             };
             // Make the request

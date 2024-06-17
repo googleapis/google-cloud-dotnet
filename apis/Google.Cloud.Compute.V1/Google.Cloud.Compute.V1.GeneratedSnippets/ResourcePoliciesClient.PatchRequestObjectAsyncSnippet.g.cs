@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             PatchResourcePolicyRequest request = new PatchResourcePolicyRequest
             {
                 RequestId = "",
-                ResourcePolicyResource = new ResourcePolicy(),
+                ResourcePolicyResource = new ResourcePolicy { },
                 Region = "",
                 ResourcePolicy = "",
                 Project = "",

@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Resource = "",
                 Project = "",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = disksClient.SetLabels(request);

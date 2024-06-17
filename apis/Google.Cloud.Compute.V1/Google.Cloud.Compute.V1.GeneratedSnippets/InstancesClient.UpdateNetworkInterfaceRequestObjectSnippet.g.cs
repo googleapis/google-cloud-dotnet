@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                NetworkInterfaceResource = new NetworkInterface(),
+                NetworkInterfaceResource = new NetworkInterface { },
                 NetworkInterface = "",
             };
             // Make the request

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                SecurityPolicyResource = new SecurityPolicy(),
+                SecurityPolicyResource = new SecurityPolicy { },
                 Project = "",
                 ValidateOnly = false,
             };

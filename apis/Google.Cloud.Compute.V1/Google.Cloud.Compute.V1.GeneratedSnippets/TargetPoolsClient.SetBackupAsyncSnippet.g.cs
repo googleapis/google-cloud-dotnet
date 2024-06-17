@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string targetPool = "";
-            TargetReference targetReferenceResource = new TargetReference();
+            TargetReference targetReferenceResource = new TargetReference { };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetPoolsClient.SetBackupAsync(project, region, targetPool, targetReferenceResource);
 

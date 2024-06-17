@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            SslPolicy sslPolicyResource = new SslPolicy();
+            SslPolicy sslPolicyResource = new SslPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await sslPoliciesClient.InsertAsync(project, sslPolicyResource);
 

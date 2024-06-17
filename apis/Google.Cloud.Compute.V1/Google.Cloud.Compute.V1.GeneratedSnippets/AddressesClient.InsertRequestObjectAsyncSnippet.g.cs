@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                AddressResource = new Address(),
+                AddressResource = new Address { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await addressesClient.InsertAsync(request);

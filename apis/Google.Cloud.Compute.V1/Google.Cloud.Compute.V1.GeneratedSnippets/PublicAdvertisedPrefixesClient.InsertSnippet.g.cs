@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = PublicAdvertisedPrefixesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            PublicAdvertisedPrefix publicAdvertisedPrefixResource = new PublicAdvertisedPrefix();
+            PublicAdvertisedPrefix publicAdvertisedPrefixResource = new PublicAdvertisedPrefix { };
             // Make the request
             lro::Operation<Operation, Operation> response = publicAdvertisedPrefixesClient.Insert(project, publicAdvertisedPrefixResource);
 

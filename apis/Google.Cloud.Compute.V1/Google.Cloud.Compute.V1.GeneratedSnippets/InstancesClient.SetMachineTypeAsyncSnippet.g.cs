@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource = new InstancesSetMachineTypeRequest();
+            InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource = new InstancesSetMachineTypeRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetMachineTypeAsync(project, zone, instance, instancesSetMachineTypeRequestResource);
 

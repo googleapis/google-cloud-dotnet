@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroupsSetNodeTemplateRequest nodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest();
+            NodeGroupsSetNodeTemplateRequest nodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = nodeGroupsClient.SetNodeTemplate(project, zone, nodeGroup, nodeGroupsSetNodeTemplateRequestResource);
 

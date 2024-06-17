@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DeletePerInstanceConfigsRegionInstanceGroupManagerRequest request = new DeletePerInstanceConfigsRegionInstanceGroupManagerRequest
             {
-                RegionInstanceGroupManagerDeleteInstanceConfigReqResource = new RegionInstanceGroupManagerDeleteInstanceConfigReq(),
+                RegionInstanceGroupManagerDeleteInstanceConfigReqResource = new RegionInstanceGroupManagerDeleteInstanceConfigReq { },
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",

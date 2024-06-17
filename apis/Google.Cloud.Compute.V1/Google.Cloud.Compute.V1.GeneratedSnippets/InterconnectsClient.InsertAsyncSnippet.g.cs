@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             InterconnectsClient interconnectsClient = await InterconnectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Interconnect interconnectResource = new Interconnect();
+            Interconnect interconnectResource = new Interconnect { };
             // Make the request
             lro::Operation<Operation, Operation> response = await interconnectsClient.InsertAsync(project, interconnectResource);
 

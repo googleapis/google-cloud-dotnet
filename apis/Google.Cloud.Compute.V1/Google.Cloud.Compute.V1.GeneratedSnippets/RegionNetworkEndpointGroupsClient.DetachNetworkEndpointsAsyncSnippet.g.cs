@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string networkEndpointGroup = "";
-            RegionNetworkEndpointGroupsDetachEndpointsRequest regionNetworkEndpointGroupsDetachEndpointsRequestResource = new RegionNetworkEndpointGroupsDetachEndpointsRequest();
+            RegionNetworkEndpointGroupsDetachEndpointsRequest regionNetworkEndpointGroupsDetachEndpointsRequestResource = new RegionNetworkEndpointGroupsDetachEndpointsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync(project, region, networkEndpointGroup, regionNetworkEndpointGroupsDetachEndpointsRequestResource);
 

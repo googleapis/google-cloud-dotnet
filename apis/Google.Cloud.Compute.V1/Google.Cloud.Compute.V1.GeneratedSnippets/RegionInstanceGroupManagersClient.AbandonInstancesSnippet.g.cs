@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string instanceGroupManager = "";
-            RegionInstanceGroupManagersAbandonInstancesRequest regionInstanceGroupManagersAbandonInstancesRequestResource = new RegionInstanceGroupManagersAbandonInstancesRequest();
+            RegionInstanceGroupManagersAbandonInstancesRequest regionInstanceGroupManagersAbandonInstancesRequestResource = new RegionInstanceGroupManagersAbandonInstancesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.AbandonInstances(project, region, instanceGroupManager, regionInstanceGroupManagersAbandonInstancesRequestResource);
 

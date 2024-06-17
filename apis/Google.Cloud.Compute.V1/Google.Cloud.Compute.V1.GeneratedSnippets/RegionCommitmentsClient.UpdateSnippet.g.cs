@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string commitment = "";
-            Commitment commitmentResource = new Commitment();
+            Commitment commitmentResource = new Commitment { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionCommitmentsClient.Update(project, region, commitment, commitmentResource);
 

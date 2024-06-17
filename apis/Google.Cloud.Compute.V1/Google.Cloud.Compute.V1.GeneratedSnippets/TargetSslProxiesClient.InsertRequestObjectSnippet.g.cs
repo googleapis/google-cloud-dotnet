@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertTargetSslProxyRequest request = new InsertTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxyResource = new TargetSslProxy(),
+                TargetSslProxyResource = new TargetSslProxy { },
                 Project = "",
             };
             // Make the request

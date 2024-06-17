@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                InstancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest(),
+                InstancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetServiceAccountAsync(request);

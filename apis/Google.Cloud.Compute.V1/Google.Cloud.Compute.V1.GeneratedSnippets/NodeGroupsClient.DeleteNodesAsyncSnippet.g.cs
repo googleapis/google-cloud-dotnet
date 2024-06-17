@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroupsDeleteNodesRequest nodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest();
+            NodeGroupsDeleteNodesRequest nodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.DeleteNodesAsync(project, zone, nodeGroup, nodeGroupsDeleteNodesRequestResource);
 

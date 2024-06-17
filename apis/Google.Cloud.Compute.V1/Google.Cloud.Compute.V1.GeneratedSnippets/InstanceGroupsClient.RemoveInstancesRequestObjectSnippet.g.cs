@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 InstanceGroup = "",
                 Project = "",
-                InstanceGroupsRemoveInstancesRequestResource = new InstanceGroupsRemoveInstancesRequest(),
+                InstanceGroupsRemoveInstancesRequestResource = new InstanceGroupsRemoveInstancesRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupsClient.RemoveInstances(request);

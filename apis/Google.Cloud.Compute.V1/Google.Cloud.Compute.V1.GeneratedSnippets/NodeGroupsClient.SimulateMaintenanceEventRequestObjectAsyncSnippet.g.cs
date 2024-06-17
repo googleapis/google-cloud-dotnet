@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                NodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest(),
+                NodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest { },
                 NodeGroup = "",
             };
             // Make the request

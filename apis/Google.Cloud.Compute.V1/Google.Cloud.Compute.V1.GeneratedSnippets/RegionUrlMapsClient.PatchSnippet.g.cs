@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string urlMap = "";
-            UrlMap urlMapResource = new UrlMap();
+            UrlMap urlMapResource = new UrlMap { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionUrlMapsClient.Patch(project, region, urlMap, urlMapResource);
 

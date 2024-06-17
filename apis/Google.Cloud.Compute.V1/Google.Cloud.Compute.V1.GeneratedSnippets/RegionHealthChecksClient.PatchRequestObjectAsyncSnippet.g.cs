@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                HealthCheckResource = new HealthCheck(),
+                HealthCheckResource = new HealthCheck { },
                 Project = "",
                 HealthCheck = "",
             };

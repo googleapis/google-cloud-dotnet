@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string healthCheckService = "";
-            HealthCheckService healthCheckServiceResource = new HealthCheckService();
+            HealthCheckService healthCheckServiceResource = new HealthCheckService { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionHealthCheckServicesClient.PatchAsync(project, region, healthCheckService, healthCheckServiceResource);
 

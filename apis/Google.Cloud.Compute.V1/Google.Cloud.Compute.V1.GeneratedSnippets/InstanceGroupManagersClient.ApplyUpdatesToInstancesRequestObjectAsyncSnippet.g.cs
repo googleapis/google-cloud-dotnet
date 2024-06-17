@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Project = "",
                 InstanceGroupManager = "",
-                InstanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest(),
+                InstanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.ApplyUpdatesToInstancesAsync(request);

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string publicDelegatedPrefix = "";
-            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix();
+            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix { };
             // Make the request
             lro::Operation<Operation, Operation> response = await publicDelegatedPrefixesClient.PatchAsync(project, region, publicDelegatedPrefix, publicDelegatedPrefixResource);
 

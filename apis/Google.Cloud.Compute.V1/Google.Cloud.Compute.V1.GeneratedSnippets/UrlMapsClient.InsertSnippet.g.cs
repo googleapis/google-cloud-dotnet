@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             UrlMapsClient urlMapsClient = UrlMapsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            UrlMap urlMapResource = new UrlMap();
+            UrlMap urlMapResource = new UrlMap { };
             // Make the request
             lro::Operation<Operation, Operation> response = urlMapsClient.Insert(project, urlMapResource);
 

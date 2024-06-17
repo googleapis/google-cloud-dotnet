@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string securityPolicy = "";
-            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule();
+            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.AddRuleAsync(project, region, securityPolicy, securityPolicyRuleResource);
 

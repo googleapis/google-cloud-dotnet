@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                ShieldedInstanceConfigResource = new ShieldedInstanceConfig(),
+                ShieldedInstanceConfigResource = new ShieldedInstanceConfig { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.UpdateShieldedInstanceConfig(request);

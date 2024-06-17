@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                PacketMirroringResource = new PacketMirroring(),
+                PacketMirroringResource = new PacketMirroring { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = packetMirroringsClient.Insert(request);

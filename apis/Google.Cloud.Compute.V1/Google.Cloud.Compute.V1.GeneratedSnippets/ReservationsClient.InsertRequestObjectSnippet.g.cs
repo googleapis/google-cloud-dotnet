@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                ReservationResource = new Reservation(),
+                ReservationResource = new Reservation { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = reservationsClient.Insert(request);

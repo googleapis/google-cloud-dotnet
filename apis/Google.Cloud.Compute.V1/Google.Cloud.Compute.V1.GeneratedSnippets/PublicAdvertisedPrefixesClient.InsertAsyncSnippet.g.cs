@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = await PublicAdvertisedPrefixesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            PublicAdvertisedPrefix publicAdvertisedPrefixResource = new PublicAdvertisedPrefix();
+            PublicAdvertisedPrefix publicAdvertisedPrefixResource = new PublicAdvertisedPrefix { };
             // Make the request
             lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.InsertAsync(project, publicAdvertisedPrefixResource);
 

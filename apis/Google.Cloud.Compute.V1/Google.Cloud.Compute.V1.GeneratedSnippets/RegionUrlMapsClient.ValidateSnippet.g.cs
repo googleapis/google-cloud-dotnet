@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string urlMap = "";
-            RegionUrlMapsValidateRequest regionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest();
+            RegionUrlMapsValidateRequest regionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest { };
             // Make the request
             UrlMapsValidateResponse response = regionUrlMapsClient.Validate(project, region, urlMap, regionUrlMapsValidateRequestResource);
         }

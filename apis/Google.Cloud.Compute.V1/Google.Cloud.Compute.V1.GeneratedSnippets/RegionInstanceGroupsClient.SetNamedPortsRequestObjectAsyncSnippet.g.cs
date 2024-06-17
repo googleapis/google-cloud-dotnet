@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SetNamedPortsRegionInstanceGroupRequest request = new SetNamedPortsRegionInstanceGroupRequest
             {
-                RegionInstanceGroupsSetNamedPortsRequestResource = new RegionInstanceGroupsSetNamedPortsRequest(),
+                RegionInstanceGroupsSetNamedPortsRequestResource = new RegionInstanceGroupsSetNamedPortsRequest { },
                 RequestId = "",
                 InstanceGroup = "",
                 Region = "",

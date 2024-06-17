@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 TargetPool = "",
                 Region = "",
                 Project = "",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetPoolsClient.AddInstanceAsync(request);

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string resource = "";
-            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest { };
             // Make the request
             TestPermissionsResponse response = await instantSnapshotsClient.TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource);
         }

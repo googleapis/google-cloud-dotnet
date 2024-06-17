@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource = new InstancesSetMinCpuPlatformRequest();
+            InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource = new InstancesSetMinCpuPlatformRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetMinCpuPlatform(project, zone, instance, instancesSetMinCpuPlatformRequestResource);
 

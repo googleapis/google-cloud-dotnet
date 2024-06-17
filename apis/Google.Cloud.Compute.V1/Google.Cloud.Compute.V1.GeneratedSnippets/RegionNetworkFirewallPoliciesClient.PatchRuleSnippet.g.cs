@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string firewallPolicy = "";
-            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
+            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionNetworkFirewallPoliciesClient.PatchRule(project, region, firewallPolicy, firewallPolicyRuleResource);
 

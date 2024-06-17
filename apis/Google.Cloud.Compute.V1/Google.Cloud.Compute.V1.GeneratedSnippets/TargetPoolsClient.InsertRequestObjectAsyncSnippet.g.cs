@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             InsertTargetPoolRequest request = new InsertTargetPoolRequest
             {
                 RequestId = "",
-                TargetPoolResource = new TargetPool(),
+                TargetPoolResource = new TargetPool { },
                 Region = "",
                 Project = "",
             };

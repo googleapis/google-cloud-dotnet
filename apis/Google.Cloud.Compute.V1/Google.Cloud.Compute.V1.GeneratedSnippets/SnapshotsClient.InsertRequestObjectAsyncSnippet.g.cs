@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                SnapshotResource = new Snapshot(),
+                SnapshotResource = new Snapshot { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await snapshotsClient.InsertAsync(request);

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string securityPolicy = "";
-            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule();
+            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.PatchRule(project, securityPolicy, securityPolicyRuleResource);
 

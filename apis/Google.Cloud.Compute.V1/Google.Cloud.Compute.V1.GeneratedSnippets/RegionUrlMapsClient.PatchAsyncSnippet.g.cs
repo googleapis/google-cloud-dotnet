@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string urlMap = "";
-            UrlMap urlMapResource = new UrlMap();
+            UrlMap urlMapResource = new UrlMap { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionUrlMapsClient.PatchAsync(project, region, urlMap, urlMapResource);
 

@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 InitialNodeCount = 0,
                 Project = "",
-                NodeGroupResource = new NodeGroup(),
+                NodeGroupResource = new NodeGroup { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = nodeGroupsClient.Insert(request);

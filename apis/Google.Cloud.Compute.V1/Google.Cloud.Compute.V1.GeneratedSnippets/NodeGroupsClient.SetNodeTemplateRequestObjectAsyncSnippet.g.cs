@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
+                NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest { },
                 Project = "",
                 NodeGroup = "",
             };

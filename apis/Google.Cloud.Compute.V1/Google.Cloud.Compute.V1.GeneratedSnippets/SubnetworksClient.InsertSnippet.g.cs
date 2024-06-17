@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Subnetwork subnetworkResource = new Subnetwork();
+            Subnetwork subnetworkResource = new Subnetwork { };
             // Make the request
             lro::Operation<Operation, Operation> response = subnetworksClient.Insert(project, region, subnetworkResource);
 

@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 ForwardingRule = "",
-                ForwardingRuleResource = new ForwardingRule(),
+                ForwardingRuleResource = new ForwardingRule { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await globalForwardingRulesClient.PatchAsync(request);

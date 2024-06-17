@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroup = "";
-            InstanceGroupsListInstancesRequest instanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest();
+            InstanceGroupsListInstancesRequest instanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest { };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupsListInstances, InstanceWithNamedPorts> response = instanceGroupsClient.ListInstancesAsync(project, zone, instanceGroup, instanceGroupsListInstancesRequestResource);
 

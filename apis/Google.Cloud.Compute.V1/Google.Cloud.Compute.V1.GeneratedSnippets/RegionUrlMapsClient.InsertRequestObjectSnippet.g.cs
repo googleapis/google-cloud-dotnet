@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                UrlMapResource = new UrlMap(),
+                UrlMapResource = new UrlMap { },
                 Project = "",
             };
             // Make the request

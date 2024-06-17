@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesRemoveResourcePoliciesRequestResource = new InstancesRemoveResourcePoliciesRequest(),
+                InstancesRemoveResourcePoliciesRequestResource = new InstancesRemoveResourcePoliciesRequest { },
                 Project = "",
             };
             // Make the request

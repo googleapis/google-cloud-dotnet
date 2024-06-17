@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             SnapshotSettingsServiceClient snapshotSettingsServiceClient = await SnapshotSettingsServiceClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            SnapshotSettings snapshotSettingsResource = new SnapshotSettings();
+            SnapshotSettings snapshotSettingsResource = new SnapshotSettings { };
             // Make the request
             lro::Operation<Operation, Operation> response = await snapshotSettingsServiceClient.PatchAsync(project, snapshotSettingsResource);
 

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            UsageExportLocation usageExportLocationResource = new UsageExportLocation();
+            UsageExportLocation usageExportLocationResource = new UsageExportLocation { };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.SetUsageExportBucket(project, usageExportLocationResource);
 

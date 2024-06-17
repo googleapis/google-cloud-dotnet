@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            AttachedDisk attachedDiskResource = new AttachedDisk();
+            AttachedDisk attachedDiskResource = new AttachedDisk { };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.AttachDisk(project, zone, instance, attachedDiskResource);
 

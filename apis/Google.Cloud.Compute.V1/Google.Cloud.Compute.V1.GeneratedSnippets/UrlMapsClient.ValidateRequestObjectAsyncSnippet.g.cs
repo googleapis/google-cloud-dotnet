@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Project = "",
                 UrlMap = "",
-                UrlMapsValidateRequestResource = new UrlMapsValidateRequest(),
+                UrlMapsValidateRequestResource = new UrlMapsValidateRequest { },
             };
             // Make the request
             UrlMapsValidateResponse response = await urlMapsClient.ValidateAsync(request);

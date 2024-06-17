@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionNetworkEndpointGroupsDetachEndpointsRequestResource = new RegionNetworkEndpointGroupsDetachEndpointsRequest(),
+                RegionNetworkEndpointGroupsDetachEndpointsRequestResource = new RegionNetworkEndpointGroupsDetachEndpointsRequest { },
                 NetworkEndpointGroup = "",
             };
             // Make the request

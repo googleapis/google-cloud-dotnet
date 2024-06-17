@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 NetworkEndpointGroup = "",
-                NetworkEndpointGroupsDetachEndpointsRequestResource = new NetworkEndpointGroupsDetachEndpointsRequest(),
+                NetworkEndpointGroupsDetachEndpointsRequestResource = new NetworkEndpointGroupsDetachEndpointsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await networkEndpointGroupsClient.DetachNetworkEndpointsAsync(request);

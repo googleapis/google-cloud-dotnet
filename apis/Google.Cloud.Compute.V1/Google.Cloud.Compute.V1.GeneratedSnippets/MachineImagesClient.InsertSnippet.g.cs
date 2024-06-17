@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             MachineImagesClient machineImagesClient = MachineImagesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            MachineImage machineImageResource = new MachineImage();
+            MachineImage machineImageResource = new MachineImage { };
             // Make the request
             lro::Operation<Operation, Operation> response = machineImagesClient.Insert(project, machineImageResource);
 

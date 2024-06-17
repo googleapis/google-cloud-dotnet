@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             RemoveResourcePoliciesRegionDiskRequest request = new RemoveResourcePoliciesRegionDiskRequest
             {
                 Disk = "",
-                RegionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest(),
+                RegionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest { },
                 RequestId = "",
                 Region = "",
                 Project = "",

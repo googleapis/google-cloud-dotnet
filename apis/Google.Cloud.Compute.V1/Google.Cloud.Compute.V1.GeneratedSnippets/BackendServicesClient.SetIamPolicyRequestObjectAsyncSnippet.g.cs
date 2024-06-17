@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Resource = "",
                 Project = "",
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest { },
             };
             // Make the request
             Policy response = await backendServicesClient.SetIamPolicyAsync(request);

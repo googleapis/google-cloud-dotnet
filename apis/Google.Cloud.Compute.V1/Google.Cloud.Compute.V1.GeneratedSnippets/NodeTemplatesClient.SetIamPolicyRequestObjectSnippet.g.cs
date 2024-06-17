@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Resource = "",
                 Project = "",
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest { },
             };
             // Make the request
             Policy response = nodeTemplatesClient.SetIamPolicy(request);

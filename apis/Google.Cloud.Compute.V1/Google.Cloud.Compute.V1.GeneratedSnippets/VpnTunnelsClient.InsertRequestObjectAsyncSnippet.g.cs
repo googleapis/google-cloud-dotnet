@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             InsertVpnTunnelRequest request = new InsertVpnTunnelRequest
             {
                 RequestId = "",
-                VpnTunnelResource = new VpnTunnel(),
+                VpnTunnelResource = new VpnTunnel { },
                 Region = "",
                 Project = "",
             };

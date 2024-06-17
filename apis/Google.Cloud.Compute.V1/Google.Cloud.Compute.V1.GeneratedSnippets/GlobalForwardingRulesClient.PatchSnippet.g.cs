@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string forwardingRule = "";
-            ForwardingRule forwardingRuleResource = new ForwardingRule();
+            ForwardingRule forwardingRuleResource = new ForwardingRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = globalForwardingRulesClient.Patch(project, forwardingRule, forwardingRuleResource);
 

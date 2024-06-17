@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string router = "";
-            Router routerResource = new Router();
+            Router routerResource = new Router { };
             // Make the request
             RoutersPreviewResponse response = routersClient.Preview(project, region, router, routerResource);
         }

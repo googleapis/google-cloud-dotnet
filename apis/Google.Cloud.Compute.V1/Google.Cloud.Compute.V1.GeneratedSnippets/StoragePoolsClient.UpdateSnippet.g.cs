@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string storagePool = "";
-            StoragePool storagePoolResource = new StoragePool();
+            StoragePool storagePoolResource = new StoragePool { };
             // Make the request
             lro::Operation<Operation, Operation> response = storagePoolsClient.Update(project, zone, storagePool, storagePoolResource);
 

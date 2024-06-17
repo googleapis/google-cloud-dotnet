@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            TargetPool targetPoolResource = new TargetPool();
+            TargetPool targetPoolResource = new TargetPool { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetPoolsClient.Insert(project, region, targetPoolResource);
 

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             SslCertificatesClient sslCertificatesClient = await SslCertificatesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            SslCertificate sslCertificateResource = new SslCertificate();
+            SslCertificate sslCertificateResource = new SslCertificate { };
             // Make the request
             lro::Operation<Operation, Operation> response = await sslCertificatesClient.InsertAsync(project, sslCertificateResource);
 

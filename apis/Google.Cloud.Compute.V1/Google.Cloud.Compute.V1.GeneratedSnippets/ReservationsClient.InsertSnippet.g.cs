@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            Reservation reservationResource = new Reservation();
+            Reservation reservationResource = new Reservation { };
             // Make the request
             lro::Operation<Operation, Operation> response = reservationsClient.Insert(project, zone, reservationResource);
 

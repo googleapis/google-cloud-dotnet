@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                ResourceGroupReferenceResource = new ResourceGroupReference(),
+                ResourceGroupReferenceResource = new ResourceGroupReference { },
                 Region = "",
                 Project = "",
                 BackendService = "",

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersSetTargetPoolsRequest instanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest();
+            InstanceGroupManagersSetTargetPoolsRequest instanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetTargetPools(project, zone, instanceGroupManager, instanceGroupManagersSetTargetPoolsRequestResource);
 

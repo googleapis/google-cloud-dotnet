@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Interconnect = "",
                 Project = "",
-                InterconnectResource = new Interconnect(),
+                InterconnectResource = new Interconnect { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = interconnectsClient.Patch(request);

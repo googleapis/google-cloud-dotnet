@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetSslProxy = "";
-            TargetSslProxiesSetProxyHeaderRequest targetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest();
+            TargetSslProxiesSetProxyHeaderRequest targetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetSslProxiesClient.SetProxyHeader(project, targetSslProxy, targetSslProxiesSetProxyHeaderRequestResource);
 

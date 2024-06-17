@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource { },
                 Project = "",
             };
             // Make the request

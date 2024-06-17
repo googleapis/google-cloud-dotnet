@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
+                TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest { },
                 Project = "",
                 TargetSslProxy = "",
             };

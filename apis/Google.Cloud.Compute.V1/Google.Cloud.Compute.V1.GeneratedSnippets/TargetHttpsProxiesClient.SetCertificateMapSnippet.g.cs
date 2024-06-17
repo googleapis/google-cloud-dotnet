@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetHttpsProxy = "";
-            TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest();
+            TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.SetCertificateMap(project, targetHttpsProxy, targetHttpsProxiesSetCertificateMapRequestResource);
 

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             TargetTcpProxiesClient targetTcpProxiesClient = TargetTcpProxiesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            TargetTcpProxy targetTcpProxyResource = new TargetTcpProxy();
+            TargetTcpProxy targetTcpProxyResource = new TargetTcpProxy { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetTcpProxiesClient.Insert(project, targetTcpProxyResource);
 

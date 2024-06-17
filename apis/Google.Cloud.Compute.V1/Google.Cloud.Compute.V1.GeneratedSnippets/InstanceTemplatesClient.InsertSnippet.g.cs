@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             InstanceTemplatesClient instanceTemplatesClient = InstanceTemplatesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            InstanceTemplate instanceTemplateResource = new InstanceTemplate();
+            InstanceTemplate instanceTemplateResource = new InstanceTemplate { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceTemplatesClient.Insert(project, instanceTemplateResource);
 

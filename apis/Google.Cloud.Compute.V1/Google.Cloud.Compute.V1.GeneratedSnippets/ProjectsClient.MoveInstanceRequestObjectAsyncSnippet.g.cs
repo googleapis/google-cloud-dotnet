@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
+                InstanceMoveRequestResource = new InstanceMoveRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.MoveInstanceAsync(request);

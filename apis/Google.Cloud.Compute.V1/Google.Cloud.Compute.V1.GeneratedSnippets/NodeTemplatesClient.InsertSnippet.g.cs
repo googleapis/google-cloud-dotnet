@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NodeTemplate nodeTemplateResource = new NodeTemplate();
+            NodeTemplate nodeTemplateResource = new NodeTemplate { };
             // Make the request
             lro::Operation<Operation, Operation> response = nodeTemplatesClient.Insert(project, region, nodeTemplateResource);
 

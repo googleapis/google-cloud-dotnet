@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Resource = "",
                 Project = "",
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.SetLabelsAsync(request);

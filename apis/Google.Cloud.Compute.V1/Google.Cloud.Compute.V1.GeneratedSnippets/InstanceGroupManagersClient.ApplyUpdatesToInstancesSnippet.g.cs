@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersApplyUpdatesRequest instanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest();
+            InstanceGroupManagersApplyUpdatesRequest instanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.ApplyUpdatesToInstances(project, zone, instanceGroupManager, instanceGroupManagersApplyUpdatesRequestResource);
 

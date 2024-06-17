@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             UpdateUrlMapRequest request = new UpdateUrlMapRequest
             {
                 RequestId = "",
-                UrlMapResource = new UrlMap(),
+                UrlMapResource = new UrlMap { },
                 Project = "",
                 UrlMap = "",
             };

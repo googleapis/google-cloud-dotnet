@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest();
+            RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionDisksClient.AddResourcePolicies(project, region, disk, regionDisksAddResourcePoliciesRequestResource);
 

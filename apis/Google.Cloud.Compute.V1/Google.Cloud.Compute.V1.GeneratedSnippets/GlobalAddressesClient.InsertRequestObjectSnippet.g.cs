@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                AddressResource = new Address(),
+                AddressResource = new Address { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = globalAddressesClient.Insert(request);

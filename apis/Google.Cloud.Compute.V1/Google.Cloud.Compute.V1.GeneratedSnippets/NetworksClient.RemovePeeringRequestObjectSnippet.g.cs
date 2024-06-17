@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 Network = "",
-                NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
+                NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = networksClient.RemovePeering(request);

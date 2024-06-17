@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                ShieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy(),
+                ShieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetShieldedInstanceIntegrityPolicy(request);

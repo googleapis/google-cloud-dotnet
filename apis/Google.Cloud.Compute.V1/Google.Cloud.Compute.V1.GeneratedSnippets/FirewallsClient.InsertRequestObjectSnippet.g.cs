@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertFirewallRequest request = new InsertFirewallRequest
             {
                 RequestId = "",
-                FirewallResource = new Firewall(),
+                FirewallResource = new Firewall { },
                 Project = "",
             };
             // Make the request

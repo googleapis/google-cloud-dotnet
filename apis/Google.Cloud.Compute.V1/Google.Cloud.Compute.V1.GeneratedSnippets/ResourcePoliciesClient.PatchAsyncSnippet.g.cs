@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string resourcePolicy = "";
-            ResourcePolicy resourcePolicyResource = new ResourcePolicy();
+            ResourcePolicy resourcePolicyResource = new ResourcePolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await resourcePoliciesClient.PatchAsync(project, region, resourcePolicy, resourcePolicyResource);
 

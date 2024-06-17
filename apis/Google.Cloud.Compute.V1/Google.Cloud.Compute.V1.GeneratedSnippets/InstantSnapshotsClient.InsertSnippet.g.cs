@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            InstantSnapshot instantSnapshotResource = new InstantSnapshot();
+            InstantSnapshot instantSnapshotResource = new InstantSnapshot { };
             // Make the request
             lro::Operation<Operation, Operation> response = instantSnapshotsClient.Insert(project, zone, instantSnapshotResource);
 

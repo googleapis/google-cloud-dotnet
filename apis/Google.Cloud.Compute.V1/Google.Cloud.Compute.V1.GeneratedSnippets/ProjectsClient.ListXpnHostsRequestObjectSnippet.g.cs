@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
-                ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
+                ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest { },
                 Filter = "",
                 ReturnPartialSuccess = false,
             };

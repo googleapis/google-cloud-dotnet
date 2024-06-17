@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             HealthChecksClient healthChecksClient = await HealthChecksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            HealthCheck healthCheckResource = new HealthCheck();
+            HealthCheck healthCheckResource = new HealthCheck { };
             // Make the request
             lro::Operation<Operation, Operation> response = await healthChecksClient.InsertAsync(project, healthCheckResource);
 

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix();
+            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix { };
             // Make the request
             lro::Operation<Operation, Operation> response = publicDelegatedPrefixesClient.Insert(project, region, publicDelegatedPrefixResource);
 

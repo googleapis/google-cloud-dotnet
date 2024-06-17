@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string subnetwork = "";
-            Subnetwork subnetworkResource = new Subnetwork();
+            Subnetwork subnetworkResource = new Subnetwork { };
             // Make the request
             lro::Operation<Operation, Operation> response = await subnetworksClient.PatchAsync(project, region, subnetwork, subnetworkResource);
 

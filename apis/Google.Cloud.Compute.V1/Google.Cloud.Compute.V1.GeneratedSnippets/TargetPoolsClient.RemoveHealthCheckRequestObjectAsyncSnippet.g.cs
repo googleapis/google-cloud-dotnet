@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 TargetPool = "",
                 Region = "",
                 Project = "",
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetPoolsClient.RemoveHealthCheckAsync(request);

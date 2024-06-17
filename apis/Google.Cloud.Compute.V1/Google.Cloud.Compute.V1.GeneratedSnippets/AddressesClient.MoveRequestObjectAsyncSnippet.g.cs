@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionAddressesMoveRequestResource = new RegionAddressesMoveRequest(),
+                RegionAddressesMoveRequestResource = new RegionAddressesMoveRequest { },
                 Address = "",
             };
             // Make the request

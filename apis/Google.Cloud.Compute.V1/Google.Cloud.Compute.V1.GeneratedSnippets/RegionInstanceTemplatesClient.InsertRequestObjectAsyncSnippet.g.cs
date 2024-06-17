@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertRegionInstanceTemplateRequest request = new InsertRegionInstanceTemplateRequest
             {
-                InstanceTemplateResource = new InstanceTemplate(),
+                InstanceTemplateResource = new InstanceTemplate { },
                 RequestId = "",
                 Region = "",
                 Project = "",

@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 ValidateOnly = false,
-                NetworkEdgeSecurityServiceResource = new NetworkEdgeSecurityService(),
+                NetworkEdgeSecurityServiceResource = new NetworkEdgeSecurityService { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await networkEdgeSecurityServicesClient.InsertAsync(request);

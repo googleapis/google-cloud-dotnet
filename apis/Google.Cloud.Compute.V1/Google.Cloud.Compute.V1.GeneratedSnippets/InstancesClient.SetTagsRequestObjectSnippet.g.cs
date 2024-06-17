@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                TagsResource = new Tags(),
+                TagsResource = new Tags { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetTags(request);

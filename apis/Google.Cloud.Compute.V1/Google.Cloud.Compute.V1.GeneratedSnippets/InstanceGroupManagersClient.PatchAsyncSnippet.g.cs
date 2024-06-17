@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManager instanceGroupManagerResource = new InstanceGroupManager();
+            InstanceGroupManager instanceGroupManagerResource = new InstanceGroupManager { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchAsync(project, zone, instanceGroupManager, instanceGroupManagerResource);
 

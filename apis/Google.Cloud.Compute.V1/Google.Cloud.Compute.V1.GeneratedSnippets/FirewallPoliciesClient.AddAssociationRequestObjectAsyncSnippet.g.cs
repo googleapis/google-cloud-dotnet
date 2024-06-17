@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 ReplaceExistingAssociation = false,
-                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
+                FirewallPolicyAssociationResource = new FirewallPolicyAssociation { },
                 FirewallPolicy = "",
             };
             // Make the request

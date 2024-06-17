@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string interconnectAttachment = "";
-            InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment();
+            InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment { };
             // Make the request
             lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Patch(project, region, interconnectAttachment, interconnectAttachmentResource);
 

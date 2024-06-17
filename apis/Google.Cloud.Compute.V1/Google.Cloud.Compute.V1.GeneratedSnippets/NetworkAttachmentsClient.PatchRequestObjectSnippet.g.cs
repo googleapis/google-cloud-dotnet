@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                NetworkAttachmentResource = new NetworkAttachment(),
+                NetworkAttachmentResource = new NetworkAttachment { },
                 NetworkAttachment = "",
                 Project = "",
             };

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             SetEdgeSecurityPolicyBackendServiceRequest request = new SetEdgeSecurityPolicyBackendServiceRequest
             {
                 RequestId = "",
-                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                SecurityPolicyReferenceResource = new SecurityPolicyReference { },
                 Project = "",
                 BackendService = "",
             };

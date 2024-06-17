@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest();
+            ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest { };
             // Make the request
             PagedEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHosts(project, projectsListXpnHostsRequestResource);
 

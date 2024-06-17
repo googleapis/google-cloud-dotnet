@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                ServiceAttachmentResource = new ServiceAttachment(),
+                ServiceAttachmentResource = new ServiceAttachment { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = serviceAttachmentsClient.Insert(request);

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            TargetHttpsProxy targetHttpsProxyResource = new TargetHttpsProxy();
+            TargetHttpsProxy targetHttpsProxyResource = new TargetHttpsProxy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionTargetHttpsProxiesClient.InsertAsync(project, region, targetHttpsProxyResource);
 

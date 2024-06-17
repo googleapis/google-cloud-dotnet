@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string interconnect = "";
-            Interconnect interconnectResource = new Interconnect();
+            Interconnect interconnectResource = new Interconnect { };
             // Make the request
             lro::Operation<Operation, Operation> response = await interconnectsClient.PatchAsync(project, interconnect, interconnectResource);
 

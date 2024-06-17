@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                SslCertificateResource = new SslCertificate(),
+                SslCertificateResource = new SslCertificate { },
                 Project = "",
             };
             // Make the request

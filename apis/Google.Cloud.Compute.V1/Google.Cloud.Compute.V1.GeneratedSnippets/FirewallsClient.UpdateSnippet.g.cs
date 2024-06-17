@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string firewall = "";
-            Firewall firewallResource = new Firewall();
+            Firewall firewallResource = new Firewall { };
             // Make the request
             lro::Operation<Operation, Operation> response = firewallsClient.Update(project, firewall, firewallResource);
 

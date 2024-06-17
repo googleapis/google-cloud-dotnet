@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                SnapshotResource = new Snapshot(),
+                SnapshotResource = new Snapshot { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.CreateSnapshotAsync(request);

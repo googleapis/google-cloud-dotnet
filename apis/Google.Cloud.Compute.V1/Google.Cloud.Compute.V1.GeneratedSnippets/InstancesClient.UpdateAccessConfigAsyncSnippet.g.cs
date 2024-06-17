@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             string zone = "";
             string instance = "";
             string networkInterface = "";
-            AccessConfig accessConfigResource = new AccessConfig();
+            AccessConfig accessConfigResource = new AccessConfig { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.UpdateAccessConfigAsync(project, zone, instance, networkInterface, accessConfigResource);
 

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 ParentId = "",
-                FirewallPolicyResource = new FirewallPolicy(),
+                FirewallPolicyResource = new FirewallPolicy { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = firewallPoliciesClient.Insert(request);

@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                InterconnectAttachmentResource = new InterconnectAttachment(),
+                InterconnectAttachmentResource = new InterconnectAttachment { },
                 Project = "",
                 ValidateOnly = false,
             };

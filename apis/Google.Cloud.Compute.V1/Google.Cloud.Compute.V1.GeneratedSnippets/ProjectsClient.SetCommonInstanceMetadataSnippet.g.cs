@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            Metadata metadataResource = new Metadata();
+            Metadata metadataResource = new Metadata { };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.SetCommonInstanceMetadata(project, metadataResource);
 

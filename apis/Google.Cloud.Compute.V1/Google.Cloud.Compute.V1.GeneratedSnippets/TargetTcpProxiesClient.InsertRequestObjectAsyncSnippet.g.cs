@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             InsertTargetTcpProxyRequest request = new InsertTargetTcpProxyRequest
             {
                 RequestId = "",
-                TargetTcpProxyResource = new TargetTcpProxy(),
+                TargetTcpProxyResource = new TargetTcpProxy { },
                 Project = "",
             };
             // Make the request

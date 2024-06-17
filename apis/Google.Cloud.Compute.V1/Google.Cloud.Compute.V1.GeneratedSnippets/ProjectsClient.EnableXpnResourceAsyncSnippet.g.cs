@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            ProjectsEnableXpnResourceRequest projectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest();
+            ProjectsEnableXpnResourceRequest projectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.EnableXpnResourceAsync(project, projectsEnableXpnResourceRequestResource);
 

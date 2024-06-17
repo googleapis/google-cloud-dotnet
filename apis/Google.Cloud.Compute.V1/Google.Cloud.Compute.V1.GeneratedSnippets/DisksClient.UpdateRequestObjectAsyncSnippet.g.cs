@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Disk = "",
                 Zone = "",
-                DiskResource = new Disk(),
+                DiskResource = new Disk { },
                 RequestId = "",
                 Paths = "",
                 Project = "",

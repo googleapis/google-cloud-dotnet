@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                AttachedDiskResource = new AttachedDisk(),
+                AttachedDiskResource = new AttachedDisk { },
                 ForceAttach = false,
                 Project = "",
             };

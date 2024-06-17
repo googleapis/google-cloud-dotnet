@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertRegionDiskRequest request = new InsertRegionDiskRequest
             {
-                DiskResource = new Disk(),
+                DiskResource = new Disk { },
                 RequestId = "",
                 SourceImage = "",
                 Region = "",

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest();
+            InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetServiceAccountAsync(project, zone, instance, instancesSetServiceAccountRequestResource);
 

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             NetworksClient networksClient = NetworksClient.Create();
             // Initialize request argument(s)
             string project = "";
-            Network networkResource = new Network();
+            Network networkResource = new Network { };
             // Make the request
             lro::Operation<Operation, Operation> response = networksClient.Insert(project, networkResource);
 

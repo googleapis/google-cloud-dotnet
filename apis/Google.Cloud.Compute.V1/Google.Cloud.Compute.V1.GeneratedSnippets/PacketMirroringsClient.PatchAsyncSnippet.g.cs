@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string packetMirroring = "";
-            PacketMirroring packetMirroringResource = new PacketMirroring();
+            PacketMirroring packetMirroringResource = new PacketMirroring { };
             // Make the request
             lro::Operation<Operation, Operation> response = await packetMirroringsClient.PatchAsync(project, region, packetMirroring, packetMirroringResource);
 

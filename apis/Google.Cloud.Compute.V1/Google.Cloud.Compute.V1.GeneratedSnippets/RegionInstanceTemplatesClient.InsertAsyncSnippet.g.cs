@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            InstanceTemplate instanceTemplateResource = new InstanceTemplate();
+            InstanceTemplate instanceTemplateResource = new InstanceTemplate { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceTemplatesClient.InsertAsync(project, region, instanceTemplateResource);
 

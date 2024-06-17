@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                StoragePoolResource = new StoragePool(),
+                StoragePoolResource = new StoragePool { },
                 Project = "",
                 StoragePool = "",
                 UpdateMask = "",

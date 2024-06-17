@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             SetSecurityPolicyBackendServiceRequest request = new SetSecurityPolicyBackendServiceRequest
             {
                 RequestId = "",
-                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                SecurityPolicyReferenceResource = new SecurityPolicyReference { },
                 Project = "",
                 BackendService = "",
             };

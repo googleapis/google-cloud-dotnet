@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             GlobalPublicDelegatedPrefixesClient globalPublicDelegatedPrefixesClient = await GlobalPublicDelegatedPrefixesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix();
+            PublicDelegatedPrefix publicDelegatedPrefixResource = new PublicDelegatedPrefix { };
             // Make the request
             lro::Operation<Operation, Operation> response = await globalPublicDelegatedPrefixesClient.InsertAsync(project, publicDelegatedPrefixResource);
 

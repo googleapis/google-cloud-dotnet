@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 TargetHttpsProxy = "",
                 Project = "",
-                TargetHttpsProxyResource = new TargetHttpsProxy(),
+                TargetHttpsProxyResource = new TargetHttpsProxy { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.Patch(request);

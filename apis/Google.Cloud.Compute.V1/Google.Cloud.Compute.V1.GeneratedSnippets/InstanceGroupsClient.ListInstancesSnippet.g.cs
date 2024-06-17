@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroup = "";
-            InstanceGroupsListInstancesRequest instanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest();
+            InstanceGroupsListInstancesRequest instanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest { };
             // Make the request
             PagedEnumerable<InstanceGroupsListInstances, InstanceWithNamedPorts> response = instanceGroupsClient.ListInstances(project, zone, instanceGroup, instanceGroupsListInstancesRequestResource);
 

@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 RequestId = "",
-                AutoscalerResource = new Autoscaler(),
+                AutoscalerResource = new Autoscaler { },
                 Project = "",
             };
             // Make the request

@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
-                RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),
+                RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest { },
                 Region = "",
                 Project = "",
                 UrlMap = "",

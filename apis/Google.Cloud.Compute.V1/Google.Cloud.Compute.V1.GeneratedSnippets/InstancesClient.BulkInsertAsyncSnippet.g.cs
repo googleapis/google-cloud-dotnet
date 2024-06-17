@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            BulkInsertInstanceResource bulkInsertInstanceResourceResource = new BulkInsertInstanceResource();
+            BulkInsertInstanceResource bulkInsertInstanceResourceResource = new BulkInsertInstanceResource { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.BulkInsertAsync(project, zone, bulkInsertInstanceResourceResource);
 

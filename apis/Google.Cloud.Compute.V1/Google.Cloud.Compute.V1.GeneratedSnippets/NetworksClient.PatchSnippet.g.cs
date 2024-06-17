@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string network = "";
-            Network networkResource = new Network();
+            Network networkResource = new Network { };
             // Make the request
             lro::Operation<Operation, Operation> response = networksClient.Patch(project, network, networkResource);
 

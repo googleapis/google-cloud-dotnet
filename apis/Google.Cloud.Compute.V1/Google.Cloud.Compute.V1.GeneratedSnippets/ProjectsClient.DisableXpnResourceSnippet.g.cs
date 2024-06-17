@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            ProjectsDisableXpnResourceRequest projectsDisableXpnResourceRequestResource = new ProjectsDisableXpnResourceRequest();
+            ProjectsDisableXpnResourceRequest projectsDisableXpnResourceRequestResource = new ProjectsDisableXpnResourceRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.DisableXpnResource(project, projectsDisableXpnResourceRequestResource);
 

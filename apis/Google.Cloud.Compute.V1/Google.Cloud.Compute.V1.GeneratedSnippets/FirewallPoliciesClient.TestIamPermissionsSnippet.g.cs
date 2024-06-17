@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
             string resource = "";
-            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest { };
             // Make the request
             TestPermissionsResponse response = firewallPoliciesClient.TestIamPermissions(resource, testPermissionsRequestResource);
         }

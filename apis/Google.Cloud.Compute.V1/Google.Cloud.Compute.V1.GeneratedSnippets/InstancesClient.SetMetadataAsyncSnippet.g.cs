@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            Metadata metadataResource = new Metadata();
+            Metadata metadataResource = new Metadata { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetMetadataAsync(project, zone, instance, metadataResource);
 

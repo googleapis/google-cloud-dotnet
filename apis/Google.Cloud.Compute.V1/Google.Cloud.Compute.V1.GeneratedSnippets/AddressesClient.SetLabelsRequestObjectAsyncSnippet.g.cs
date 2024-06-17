@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Resource = "",
                 Project = "",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await addressesClient.SetLabelsAsync(request);

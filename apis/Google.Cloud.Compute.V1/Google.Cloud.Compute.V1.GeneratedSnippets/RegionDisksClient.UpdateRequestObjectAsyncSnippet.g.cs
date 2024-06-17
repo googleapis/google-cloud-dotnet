@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             UpdateRegionDiskRequest request = new UpdateRegionDiskRequest
             {
                 Disk = "",
-                DiskResource = new Disk(),
+                DiskResource = new Disk { },
                 RequestId = "",
                 Paths = "",
                 Region = "",

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string instanceGroup = "";
-            RegionInstanceGroupsSetNamedPortsRequest regionInstanceGroupsSetNamedPortsRequestResource = new RegionInstanceGroupsSetNamedPortsRequest();
+            RegionInstanceGroupsSetNamedPortsRequest regionInstanceGroupsSetNamedPortsRequestResource = new RegionInstanceGroupsSetNamedPortsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupsClient.SetNamedPorts(project, region, instanceGroup, regionInstanceGroupsSetNamedPortsRequestResource);
 

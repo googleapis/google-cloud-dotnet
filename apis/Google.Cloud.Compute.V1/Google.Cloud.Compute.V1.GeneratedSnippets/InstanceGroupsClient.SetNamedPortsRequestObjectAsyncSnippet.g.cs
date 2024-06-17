@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 InstanceGroup = "",
                 Project = "",
-                InstanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest(),
+                InstanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupsClient.SetNamedPortsAsync(request);

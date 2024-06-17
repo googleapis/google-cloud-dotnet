@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string reservation = "";
-            ReservationsResizeRequest reservationsResizeRequestResource = new ReservationsResizeRequest();
+            ReservationsResizeRequest reservationsResizeRequestResource = new ReservationsResizeRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await reservationsClient.ResizeAsync(project, zone, reservation, reservationsResizeRequestResource);
 

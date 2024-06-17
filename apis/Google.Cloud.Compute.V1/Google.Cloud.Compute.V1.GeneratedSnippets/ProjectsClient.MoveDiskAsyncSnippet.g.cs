@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            DiskMoveRequest diskMoveRequestResource = new DiskMoveRequest();
+            DiskMoveRequest diskMoveRequestResource = new DiskMoveRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.MoveDiskAsync(project, diskMoveRequestResource);
 

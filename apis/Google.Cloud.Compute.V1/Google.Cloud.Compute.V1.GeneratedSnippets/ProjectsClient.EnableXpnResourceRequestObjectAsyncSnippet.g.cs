@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.EnableXpnResourceAsync(request);

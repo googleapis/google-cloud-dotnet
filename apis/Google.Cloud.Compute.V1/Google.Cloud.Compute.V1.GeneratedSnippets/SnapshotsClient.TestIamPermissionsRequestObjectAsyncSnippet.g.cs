@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Resource = "",
                 Project = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
+                TestPermissionsRequestResource = new TestPermissionsRequest { },
             };
             // Make the request
             TestPermissionsResponse response = await snapshotsClient.TestIamPermissionsAsync(request);

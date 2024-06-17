@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 GuestFlush = false,
-                SnapshotResource = new Snapshot(),
+                SnapshotResource = new Snapshot { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = disksClient.CreateSnapshot(request);

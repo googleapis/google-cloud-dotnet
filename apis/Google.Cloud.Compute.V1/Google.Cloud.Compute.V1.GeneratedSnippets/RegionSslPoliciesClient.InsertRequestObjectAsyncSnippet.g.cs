@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                SslPolicyResource = new SslPolicy(),
+                SslPolicyResource = new SslPolicy { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionSslPoliciesClient.InsertAsync(request);

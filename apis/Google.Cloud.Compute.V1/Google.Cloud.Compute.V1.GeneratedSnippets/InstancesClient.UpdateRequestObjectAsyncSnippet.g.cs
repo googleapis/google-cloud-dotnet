@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 MostDisruptiveAllowedAction = "",
-                InstanceResource = new Instance(),
+                InstanceResource = new Instance { },
                 Project = "",
                 MinimalAction = "",
             };

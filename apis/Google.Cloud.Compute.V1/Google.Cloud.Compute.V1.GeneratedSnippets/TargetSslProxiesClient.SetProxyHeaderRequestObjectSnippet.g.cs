@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
+                TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest { },
                 Project = "",
                 TargetSslProxy = "",
             };

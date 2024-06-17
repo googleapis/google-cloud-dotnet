@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             FirewallsClient firewallsClient = FirewallsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            Firewall firewallResource = new Firewall();
+            Firewall firewallResource = new Firewall { };
             // Make the request
             lro::Operation<Operation, Operation> response = firewallsClient.Insert(project, firewallResource);
 

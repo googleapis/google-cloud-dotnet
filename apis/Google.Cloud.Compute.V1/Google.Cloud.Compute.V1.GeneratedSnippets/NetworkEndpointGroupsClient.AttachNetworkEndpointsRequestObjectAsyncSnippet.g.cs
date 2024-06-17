@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AttachNetworkEndpointsNetworkEndpointGroupRequest request = new AttachNetworkEndpointsNetworkEndpointGroupRequest
             {
-                NetworkEndpointGroupsAttachEndpointsRequestResource = new NetworkEndpointGroupsAttachEndpointsRequest(),
+                NetworkEndpointGroupsAttachEndpointsRequestResource = new NetworkEndpointGroupsAttachEndpointsRequest { },
                 Zone = "",
                 RequestId = "",
                 Project = "",

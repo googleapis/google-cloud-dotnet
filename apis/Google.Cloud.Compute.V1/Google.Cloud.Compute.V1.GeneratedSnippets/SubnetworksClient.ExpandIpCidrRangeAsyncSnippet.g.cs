@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string subnetwork = "";
-            SubnetworksExpandIpCidrRangeRequest subnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest();
+            SubnetworksExpandIpCidrRangeRequest subnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await subnetworksClient.ExpandIpCidrRangeAsync(project, region, subnetwork, subnetworksExpandIpCidrRangeRequestResource);
 

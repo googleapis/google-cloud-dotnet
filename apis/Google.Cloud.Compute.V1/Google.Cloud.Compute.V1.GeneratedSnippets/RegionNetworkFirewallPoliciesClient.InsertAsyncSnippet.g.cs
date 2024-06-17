@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            FirewallPolicy firewallPolicyResource = new FirewallPolicy();
+            FirewallPolicy firewallPolicyResource = new FirewallPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNetworkFirewallPoliciesClient.InsertAsync(project, region, firewallPolicyResource);
 

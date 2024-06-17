@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             GlobalForwardingRulesClient globalForwardingRulesClient = GlobalForwardingRulesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            ForwardingRule forwardingRuleResource = new ForwardingRule();
+            ForwardingRule forwardingRuleResource = new ForwardingRule { };
             // Make the request
             lro::Operation<Operation, Operation> response = globalForwardingRulesClient.Insert(project, forwardingRuleResource);
 

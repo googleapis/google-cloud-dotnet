@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             BulkInsertRegionInstanceRequest request = new BulkInsertRegionInstanceRequest
             {
                 RequestId = "",
-                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource { },
                 Region = "",
                 Project = "",
             };

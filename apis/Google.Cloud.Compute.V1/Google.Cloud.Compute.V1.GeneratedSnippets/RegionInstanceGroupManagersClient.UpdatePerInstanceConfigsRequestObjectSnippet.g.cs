@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest request = new UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest
             {
                 RequestId = "",
-                RegionInstanceGroupManagerUpdateInstanceConfigReqResource = new RegionInstanceGroupManagerUpdateInstanceConfigReq(),
+                RegionInstanceGroupManagerUpdateInstanceConfigReqResource = new RegionInstanceGroupManagerUpdateInstanceConfigReq { },
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             UrlMapsClient urlMapsClient = await UrlMapsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            UrlMap urlMapResource = new UrlMap();
+            UrlMap urlMapResource = new UrlMap { };
             // Make the request
             lro::Operation<Operation, Operation> response = await urlMapsClient.InsertAsync(project, urlMapResource);
 

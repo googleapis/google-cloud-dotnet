@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                InstancesSetNameRequestResource = new InstancesSetNameRequest(),
+                InstancesSetNameRequestResource = new InstancesSetNameRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetNameAsync(request);

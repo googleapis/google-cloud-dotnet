@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            BackendService backendServiceResource = new BackendService();
+            BackendService backendServiceResource = new BackendService { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionBackendServicesClient.InsertAsync(project, region, backendServiceResource);
 

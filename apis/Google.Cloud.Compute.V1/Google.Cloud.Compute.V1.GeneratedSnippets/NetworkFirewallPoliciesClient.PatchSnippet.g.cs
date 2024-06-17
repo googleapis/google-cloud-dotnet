@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string firewallPolicy = "";
-            FirewallPolicy firewallPolicyResource = new FirewallPolicy();
+            FirewallPolicy firewallPolicyResource = new FirewallPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.Patch(project, firewallPolicy, firewallPolicyResource);
 

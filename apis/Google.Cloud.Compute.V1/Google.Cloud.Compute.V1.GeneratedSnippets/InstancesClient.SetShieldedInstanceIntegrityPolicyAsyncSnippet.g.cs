@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy();
+            ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetShieldedInstanceIntegrityPolicyAsync(project, zone, instance, shieldedInstanceIntegrityPolicyResource);
 

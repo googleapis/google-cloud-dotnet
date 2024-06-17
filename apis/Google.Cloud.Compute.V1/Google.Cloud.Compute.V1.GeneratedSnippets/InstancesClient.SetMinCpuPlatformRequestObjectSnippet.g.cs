@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesSetMinCpuPlatformRequestResource = new InstancesSetMinCpuPlatformRequest(),
+                InstancesSetMinCpuPlatformRequestResource = new InstancesSetMinCpuPlatformRequest { },
                 Project = "",
             };
             // Make the request

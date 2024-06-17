@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             GlobalAddressesClient globalAddressesClient = await GlobalAddressesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Address addressResource = new Address();
+            Address addressResource = new Address { };
             // Make the request
             lro::Operation<Operation, Operation> response = await globalAddressesClient.InsertAsync(project, addressResource);
 

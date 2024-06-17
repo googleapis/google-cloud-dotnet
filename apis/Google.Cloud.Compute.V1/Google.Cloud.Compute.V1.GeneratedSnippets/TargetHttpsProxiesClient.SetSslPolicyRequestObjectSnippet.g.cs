@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 TargetHttpsProxy = "",
                 Project = "",
-                SslPolicyReferenceResource = new SslPolicyReference(),
+                SslPolicyReferenceResource = new SslPolicyReference { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.SetSslPolicy(request);

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string networkEdgeSecurityService = "";
-            NetworkEdgeSecurityService networkEdgeSecurityServiceResource = new NetworkEdgeSecurityService();
+            NetworkEdgeSecurityService networkEdgeSecurityServiceResource = new NetworkEdgeSecurityService { };
             // Make the request
             lro::Operation<Operation, Operation> response = networkEdgeSecurityServicesClient.Patch(project, region, networkEdgeSecurityService, networkEdgeSecurityServiceResource);
 

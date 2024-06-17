@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertSecurityPolicyRequest request = new InsertSecurityPolicyRequest
             {
                 RequestId = "",
-                SecurityPolicyResource = new SecurityPolicy(),
+                SecurityPolicyResource = new SecurityPolicy { },
                 Project = "",
                 ValidateOnly = false,
             };

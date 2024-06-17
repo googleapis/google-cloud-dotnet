@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string resource = "";
-            ZoneSetPolicyRequest zoneSetPolicyRequestResource = new ZoneSetPolicyRequest();
+            ZoneSetPolicyRequest zoneSetPolicyRequestResource = new ZoneSetPolicyRequest { };
             // Make the request
             Policy response = await nodeGroupsClient.SetIamPolicyAsync(project, zone, resource, zoneSetPolicyRequestResource);
         }

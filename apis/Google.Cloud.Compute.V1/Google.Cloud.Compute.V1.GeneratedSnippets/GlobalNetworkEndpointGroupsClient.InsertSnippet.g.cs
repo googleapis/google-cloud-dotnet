@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = GlobalNetworkEndpointGroupsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup();
+            NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup { };
             // Make the request
             lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.Insert(project, networkEndpointGroupResource);
 

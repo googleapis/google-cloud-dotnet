@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                NotificationEndpointResource = new NotificationEndpoint(),
+                NotificationEndpointResource = new NotificationEndpoint { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.InsertAsync(request);

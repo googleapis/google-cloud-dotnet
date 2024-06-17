@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
-                InstanceGroupManagerResizeRequestResource = new InstanceGroupManagerResizeRequest(),
+                InstanceGroupManagerResizeRequestResource = new InstanceGroupManagerResizeRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagerResizeRequestsClient.Insert(request);

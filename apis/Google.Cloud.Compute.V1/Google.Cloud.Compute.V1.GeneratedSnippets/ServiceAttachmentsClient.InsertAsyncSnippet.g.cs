@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            ServiceAttachment serviceAttachmentResource = new ServiceAttachment();
+            ServiceAttachment serviceAttachmentResource = new ServiceAttachment { };
             // Make the request
             lro::Operation<Operation, Operation> response = await serviceAttachmentsClient.InsertAsync(project, region, serviceAttachmentResource);
 

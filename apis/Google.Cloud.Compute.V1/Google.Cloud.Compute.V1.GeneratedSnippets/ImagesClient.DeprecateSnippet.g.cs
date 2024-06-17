@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string image = "";
-            DeprecationStatus deprecationStatusResource = new DeprecationStatus();
+            DeprecationStatus deprecationStatusResource = new DeprecationStatus { };
             // Make the request
             lro::Operation<Operation, Operation> response = imagesClient.Deprecate(project, image, deprecationStatusResource);
 

@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 ForwardingRule = "",
-                TargetReferenceResource = new TargetReference(),
+                TargetReferenceResource = new TargetReference { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await forwardingRulesClient.SetTargetAsync(request);

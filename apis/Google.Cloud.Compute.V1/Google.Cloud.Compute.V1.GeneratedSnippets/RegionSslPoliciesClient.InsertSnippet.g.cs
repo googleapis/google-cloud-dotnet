@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            SslPolicy sslPolicyResource = new SslPolicy();
+            SslPolicy sslPolicyResource = new SslPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionSslPoliciesClient.Insert(project, region, sslPolicyResource);
 

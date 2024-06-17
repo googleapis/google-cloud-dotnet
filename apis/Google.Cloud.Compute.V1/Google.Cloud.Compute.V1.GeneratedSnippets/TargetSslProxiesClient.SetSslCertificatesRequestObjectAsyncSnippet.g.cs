@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
+                TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest { },
                 Project = "",
                 TargetSslProxy = "",
             };

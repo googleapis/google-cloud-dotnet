@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string healthCheck = "";
-            HealthCheck healthCheckResource = new HealthCheck();
+            HealthCheck healthCheckResource = new HealthCheck { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionHealthChecksClient.Update(project, region, healthCheck, healthCheckResource);
 

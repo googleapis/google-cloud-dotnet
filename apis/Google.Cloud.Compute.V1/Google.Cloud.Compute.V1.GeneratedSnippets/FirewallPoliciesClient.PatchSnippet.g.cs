@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
             string firewallPolicy = "";
-            FirewallPolicy firewallPolicyResource = new FirewallPolicy();
+            FirewallPolicy firewallPolicyResource = new FirewallPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = firewallPoliciesClient.Patch(firewallPolicy, firewallPolicyResource);
 

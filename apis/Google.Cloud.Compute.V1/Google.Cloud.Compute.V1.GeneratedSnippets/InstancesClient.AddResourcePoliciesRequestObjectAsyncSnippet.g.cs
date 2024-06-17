@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                InstancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest(),
+                InstancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.AddResourcePoliciesAsync(request);

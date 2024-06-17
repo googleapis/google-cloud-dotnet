@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string backendService = "";
-            ResourceGroupReference resourceGroupReferenceResource = new ResourceGroupReference();
+            ResourceGroupReference resourceGroupReferenceResource = new ResourceGroupReference { };
             // Make the request
             BackendServiceGroupHealth response = regionBackendServicesClient.GetHealth(project, region, backendService, resourceGroupReferenceResource);
         }

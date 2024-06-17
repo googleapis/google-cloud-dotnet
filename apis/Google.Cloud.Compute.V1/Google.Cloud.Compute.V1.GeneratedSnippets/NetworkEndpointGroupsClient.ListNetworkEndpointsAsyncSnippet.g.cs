@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string networkEndpointGroup = "";
-            NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest();
+            NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest { };
             // Make the request
             PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = networkEndpointGroupsClient.ListNetworkEndpointsAsync(project, zone, networkEndpointGroup, networkEndpointGroupsListEndpointsRequestResource);
 

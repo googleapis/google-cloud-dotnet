@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             SslCertificatesClient sslCertificatesClient = SslCertificatesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            SslCertificate sslCertificateResource = new SslCertificate();
+            SslCertificate sslCertificateResource = new SslCertificate { };
             // Make the request
             lro::Operation<Operation, Operation> response = sslCertificatesClient.Insert(project, sslCertificateResource);
 

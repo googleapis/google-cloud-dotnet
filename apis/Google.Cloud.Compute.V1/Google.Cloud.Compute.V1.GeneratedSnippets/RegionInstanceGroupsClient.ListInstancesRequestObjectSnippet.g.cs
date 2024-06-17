@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListInstancesRegionInstanceGroupsRequest request = new ListInstancesRegionInstanceGroupsRequest
             {
-                RegionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest(),
+                RegionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest { },
                 InstanceGroup = "",
                 Region = "",
                 OrderBy = "",

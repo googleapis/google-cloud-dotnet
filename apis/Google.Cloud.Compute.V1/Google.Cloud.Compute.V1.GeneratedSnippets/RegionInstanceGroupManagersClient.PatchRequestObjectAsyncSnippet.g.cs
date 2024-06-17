@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
-                InstanceGroupManagerResource = new InstanceGroupManager(),
+                InstanceGroupManagerResource = new InstanceGroupManager { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.PatchAsync(request);

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetHttpsProxy = "";
-            TargetHttpsProxiesSetQuicOverrideRequest targetHttpsProxiesSetQuicOverrideRequestResource = new TargetHttpsProxiesSetQuicOverrideRequest();
+            TargetHttpsProxiesSetQuicOverrideRequest targetHttpsProxiesSetQuicOverrideRequestResource = new TargetHttpsProxiesSetQuicOverrideRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.SetQuicOverride(project, targetHttpsProxy, targetHttpsProxiesSetQuicOverrideRequestResource);
 

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string backendService = "";
-            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference { };
             // Make the request
             lro::Operation<Operation, Operation> response = backendServicesClient.SetSecurityPolicy(project, backendService, securityPolicyReferenceResource);
 

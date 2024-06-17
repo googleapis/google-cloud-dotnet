@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             InterconnectsClient interconnectsClient = InterconnectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            Interconnect interconnectResource = new Interconnect();
+            Interconnect interconnectResource = new Interconnect { };
             // Make the request
             lro::Operation<Operation, Operation> response = interconnectsClient.Insert(project, interconnectResource);
 

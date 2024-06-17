@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Resource = "",
                 Project = "",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = targetVpnGatewaysClient.SetLabels(request);

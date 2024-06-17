@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                LicenseResource = new License(),
+                LicenseResource = new License { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = licensesClient.Insert(request);

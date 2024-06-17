@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 BackendBucket = "",
                 Project = "",
-                BackendBucketResource = new BackendBucket(),
+                BackendBucketResource = new BackendBucket { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = backendBucketsClient.Patch(request);

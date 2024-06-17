@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                SecurityPolicyReferenceResource = new SecurityPolicyReference { },
                 Project = "",
             };
             // Make the request

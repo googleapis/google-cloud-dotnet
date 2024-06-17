@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             SecurityPoliciesClient securityPoliciesClient = SecurityPoliciesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            SecurityPolicy securityPolicyResource = new SecurityPolicy();
+            SecurityPolicy securityPolicyResource = new SecurityPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.Insert(project, securityPolicyResource);
 

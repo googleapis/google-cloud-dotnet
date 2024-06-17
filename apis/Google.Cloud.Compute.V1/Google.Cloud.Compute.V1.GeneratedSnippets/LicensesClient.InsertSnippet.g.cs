@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             LicensesClient licensesClient = LicensesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            License licenseResource = new License();
+            License licenseResource = new License { };
             // Make the request
             lro::Operation<Operation, Operation> response = licensesClient.Insert(project, licenseResource);
 

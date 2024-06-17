@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetHttpsProxy = "";
-            SslPolicyReference sslPolicyReferenceResource = new SslPolicyReference();
+            SslPolicyReference sslPolicyReferenceResource = new SslPolicyReference { };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetHttpsProxiesClient.SetSslPolicyAsync(project, targetHttpsProxy, sslPolicyReferenceResource);
 

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetSslProxy = "";
-            TargetSslProxiesSetCertificateMapRequest targetSslProxiesSetCertificateMapRequestResource = new TargetSslProxiesSetCertificateMapRequest();
+            TargetSslProxiesSetCertificateMapRequest targetSslProxiesSetCertificateMapRequestResource = new TargetSslProxiesSetCertificateMapRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetSslProxiesClient.SetCertificateMapAsync(project, targetSslProxy, targetSslProxiesSetCertificateMapRequestResource);
 

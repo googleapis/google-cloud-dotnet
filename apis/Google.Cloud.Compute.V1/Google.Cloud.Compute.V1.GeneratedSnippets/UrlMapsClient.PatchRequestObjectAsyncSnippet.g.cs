@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             PatchUrlMapRequest request = new PatchUrlMapRequest
             {
                 RequestId = "",
-                UrlMapResource = new UrlMap(),
+                UrlMapResource = new UrlMap { },
                 Project = "",
                 UrlMap = "",
             };

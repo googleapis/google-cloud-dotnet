@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 ReplaceExistingAssociation = false,
                 Project = "",
-                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
+                FirewallPolicyAssociationResource = new FirewallPolicyAssociation { },
                 FirewallPolicy = "",
             };
             // Make the request

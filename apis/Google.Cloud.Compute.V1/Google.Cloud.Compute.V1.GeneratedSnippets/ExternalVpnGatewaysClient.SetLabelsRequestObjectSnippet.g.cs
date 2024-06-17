@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 Resource = "",
                 Project = "",
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.SetLabels(request);

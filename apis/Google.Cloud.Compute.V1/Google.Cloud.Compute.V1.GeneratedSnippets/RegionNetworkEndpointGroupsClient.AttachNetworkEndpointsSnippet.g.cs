@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string networkEndpointGroup = "";
-            RegionNetworkEndpointGroupsAttachEndpointsRequest regionNetworkEndpointGroupsAttachEndpointsRequestResource = new RegionNetworkEndpointGroupsAttachEndpointsRequest();
+            RegionNetworkEndpointGroupsAttachEndpointsRequest regionNetworkEndpointGroupsAttachEndpointsRequestResource = new RegionNetworkEndpointGroupsAttachEndpointsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionNetworkEndpointGroupsClient.AttachNetworkEndpoints(project, region, networkEndpointGroup, regionNetworkEndpointGroupsAttachEndpointsRequestResource);
 

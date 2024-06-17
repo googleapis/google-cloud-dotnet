@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
             string resource = "";
-            GlobalOrganizationSetPolicyRequest globalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest();
+            GlobalOrganizationSetPolicyRequest globalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest { };
             // Make the request
             Policy response = firewallPoliciesClient.SetIamPolicy(resource, globalOrganizationSetPolicyRequestResource);
         }

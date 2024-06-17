@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest();
+            ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest { };
             // Make the request
             PagedAsyncEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHostsAsync(project, projectsListXpnHostsRequestResource);
 

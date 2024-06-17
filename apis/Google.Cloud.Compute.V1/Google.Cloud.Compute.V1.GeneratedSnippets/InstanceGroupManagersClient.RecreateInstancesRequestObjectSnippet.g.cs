@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             RecreateInstancesInstanceGroupManagerRequest request = new RecreateInstancesInstanceGroupManagerRequest
             {
                 Zone = "",
-                InstanceGroupManagersRecreateInstancesRequestResource = new InstanceGroupManagersRecreateInstancesRequest(),
+                InstanceGroupManagersRecreateInstancesRequestResource = new InstanceGroupManagersRecreateInstancesRequest { },
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",

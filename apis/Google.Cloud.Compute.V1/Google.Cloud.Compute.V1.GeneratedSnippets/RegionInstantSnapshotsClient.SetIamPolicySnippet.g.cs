@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string resource = "";
-            RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest();
+            RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest { };
             // Make the request
             Policy response = regionInstantSnapshotsClient.SetIamPolicy(project, region, resource, regionSetPolicyRequestResource);
         }

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             SetProxyHeaderTargetTcpProxyRequest request = new SetProxyHeaderTargetTcpProxyRequest
             {
                 RequestId = "",
-                TargetTcpProxiesSetProxyHeaderRequestResource = new TargetTcpProxiesSetProxyHeaderRequest(),
+                TargetTcpProxiesSetProxyHeaderRequestResource = new TargetTcpProxiesSetProxyHeaderRequest { },
                 Project = "",
                 TargetTcpProxy = "",
             };

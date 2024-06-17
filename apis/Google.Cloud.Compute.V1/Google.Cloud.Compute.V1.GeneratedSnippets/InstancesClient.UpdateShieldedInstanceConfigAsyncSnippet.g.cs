@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            ShieldedInstanceConfig shieldedInstanceConfigResource = new ShieldedInstanceConfig();
+            ShieldedInstanceConfig shieldedInstanceConfigResource = new ShieldedInstanceConfig { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.UpdateShieldedInstanceConfigAsync(project, zone, instance, shieldedInstanceConfigResource);
 

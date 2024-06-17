@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             UpdatePeeringNetworkRequest request = new UpdatePeeringNetworkRequest
             {
                 RequestId = "",
-                NetworksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest(),
+                NetworksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest { },
                 Project = "",
                 Network = "",
             };

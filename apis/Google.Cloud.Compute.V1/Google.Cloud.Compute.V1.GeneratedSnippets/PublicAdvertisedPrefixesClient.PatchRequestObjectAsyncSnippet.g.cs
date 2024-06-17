@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 PublicAdvertisedPrefix = "",
                 Project = "",
-                PublicAdvertisedPrefixResource = new PublicAdvertisedPrefix(),
+                PublicAdvertisedPrefixResource = new PublicAdvertisedPrefix { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.PatchAsync(request);

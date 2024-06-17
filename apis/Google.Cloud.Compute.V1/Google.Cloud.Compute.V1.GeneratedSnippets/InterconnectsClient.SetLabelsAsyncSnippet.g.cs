@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string resource = "";
-            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await interconnectsClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
 

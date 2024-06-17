@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 SourceMachineImage = "",
                 RequestId = "",
-                InstanceResource = new Instance(),
+                InstanceResource = new Instance { },
                 Project = "",
                 SourceInstanceTemplate = "",
             };

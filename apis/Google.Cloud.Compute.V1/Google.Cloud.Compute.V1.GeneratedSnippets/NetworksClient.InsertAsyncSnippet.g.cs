@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             NetworksClient networksClient = await NetworksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            Network networkResource = new Network();
+            Network networkResource = new Network { };
             // Make the request
             lro::Operation<Operation, Operation> response = await networksClient.InsertAsync(project, networkResource);
 

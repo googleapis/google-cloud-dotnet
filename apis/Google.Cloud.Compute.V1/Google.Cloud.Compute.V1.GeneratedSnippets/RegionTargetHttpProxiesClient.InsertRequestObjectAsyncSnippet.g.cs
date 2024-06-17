@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertRegionTargetHttpProxyRequest request = new InsertRegionTargetHttpProxyRequest
             {
-                TargetHttpProxyResource = new TargetHttpProxy(),
+                TargetHttpProxyResource = new TargetHttpProxy { },
                 RequestId = "",
                 Region = "",
                 Project = "",

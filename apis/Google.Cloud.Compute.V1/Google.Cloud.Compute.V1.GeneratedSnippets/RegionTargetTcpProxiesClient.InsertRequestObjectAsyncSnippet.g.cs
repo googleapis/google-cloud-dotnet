@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                TargetTcpProxyResource = new TargetTcpProxy(),
+                TargetTcpProxyResource = new TargetTcpProxy { },
                 Project = "",
             };
             // Make the request

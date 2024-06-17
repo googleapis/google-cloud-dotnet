@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string disk = "";
-            Snapshot snapshotResource = new Snapshot();
+            Snapshot snapshotResource = new Snapshot { };
             // Make the request
             lro::Operation<Operation, Operation> response = await disksClient.CreateSnapshotAsync(project, zone, disk, snapshotResource);
 

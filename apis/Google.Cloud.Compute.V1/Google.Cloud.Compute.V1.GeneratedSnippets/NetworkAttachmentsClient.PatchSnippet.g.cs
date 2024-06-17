@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string networkAttachment = "";
-            NetworkAttachment networkAttachmentResource = new NetworkAttachment();
+            NetworkAttachment networkAttachmentResource = new NetworkAttachment { };
             // Make the request
             lro::Operation<Operation, Operation> response = networkAttachmentsClient.Patch(project, region, networkAttachment, networkAttachmentResource);
 

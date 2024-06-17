@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersRecreateInstancesRequest instanceGroupManagersRecreateInstancesRequestResource = new InstanceGroupManagersRecreateInstancesRequest();
+            InstanceGroupManagersRecreateInstancesRequest instanceGroupManagersRecreateInstancesRequestResource = new InstanceGroupManagersRecreateInstancesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.RecreateInstances(project, zone, instanceGroupManager, instanceGroupManagersRecreateInstancesRequestResource);
 

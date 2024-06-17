@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertRouteRequest request = new InsertRouteRequest
             {
                 RequestId = "",
-                RouteResource = new Route(),
+                RouteResource = new Route { },
                 Project = "",
             };
             // Make the request

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string networkEndpointGroup = "";
-            GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest();
+            GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.DetachNetworkEndpoints(project, networkEndpointGroup, globalNetworkEndpointGroupsDetachEndpointsRequestResource);
 

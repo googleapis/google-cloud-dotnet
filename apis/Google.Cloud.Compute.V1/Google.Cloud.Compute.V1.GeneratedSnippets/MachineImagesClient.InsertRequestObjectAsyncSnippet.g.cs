@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             InsertMachineImageRequest request = new InsertMachineImageRequest
             {
                 RequestId = "",
-                MachineImageResource = new MachineImage(),
+                MachineImageResource = new MachineImage { },
                 Project = "",
                 SourceInstance = "",
             };

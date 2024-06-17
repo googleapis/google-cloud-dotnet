@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                ExternalVpnGatewayResource = new ExternalVpnGateway(),
+                ExternalVpnGatewayResource = new ExternalVpnGateway { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.Insert(request);

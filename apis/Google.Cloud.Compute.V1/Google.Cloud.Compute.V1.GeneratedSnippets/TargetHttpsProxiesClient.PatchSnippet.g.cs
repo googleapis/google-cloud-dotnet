@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetHttpsProxy = "";
-            TargetHttpsProxy targetHttpsProxyResource = new TargetHttpsProxy();
+            TargetHttpsProxy targetHttpsProxyResource = new TargetHttpsProxy { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.Patch(project, targetHttpsProxy, targetHttpsProxyResource);
 

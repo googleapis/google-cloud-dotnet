@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             MachineImagesClient machineImagesClient = await MachineImagesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            MachineImage machineImageResource = new MachineImage();
+            MachineImage machineImageResource = new MachineImage { };
             // Make the request
             lro::Operation<Operation, Operation> response = await machineImagesClient.InsertAsync(project, machineImageResource);
 

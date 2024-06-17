@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Commitment commitmentResource = new Commitment();
+            Commitment commitmentResource = new Commitment { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionCommitmentsClient.InsertAsync(project, region, commitmentResource);
 

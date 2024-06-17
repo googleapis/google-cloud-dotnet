@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Disk diskResource = new Disk();
+            Disk diskResource = new Disk { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionDisksClient.Insert(project, region, diskResource);
 

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Autoscaler autoscalerResource = new Autoscaler();
+            Autoscaler autoscalerResource = new Autoscaler { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionAutoscalersClient.Insert(project, region, autoscalerResource);
 

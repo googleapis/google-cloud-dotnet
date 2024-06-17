@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
-                InstancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest(),
+                InstancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetSecurityPolicyAsync(request);

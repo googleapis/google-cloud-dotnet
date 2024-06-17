@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string resource = "";
-            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest { };
             // Make the request
             Policy response = await instanceTemplatesClient.SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource);
         }

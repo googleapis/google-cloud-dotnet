@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string targetHttpProxy = "";
-            UrlMapReference urlMapReferenceResource = new UrlMapReference();
+            UrlMapReference urlMapReferenceResource = new UrlMapReference { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.SetUrlMapAsync(project, region, targetHttpProxy, urlMapReferenceResource);
 

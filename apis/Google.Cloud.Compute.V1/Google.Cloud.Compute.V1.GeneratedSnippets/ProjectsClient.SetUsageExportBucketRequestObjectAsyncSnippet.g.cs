@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SetUsageExportBucketProjectRequest request = new SetUsageExportBucketProjectRequest
             {
-                UsageExportLocationResource = new UsageExportLocation(),
+                UsageExportLocationResource = new UsageExportLocation { },
                 RequestId = "",
                 Project = "",
             };

@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            InstanceSettings instanceSettingsResource = new InstanceSettings();
+            InstanceSettings instanceSettingsResource = new InstanceSettings { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceSettingsServiceClient.Patch(project, zone, instanceSettingsResource);
 

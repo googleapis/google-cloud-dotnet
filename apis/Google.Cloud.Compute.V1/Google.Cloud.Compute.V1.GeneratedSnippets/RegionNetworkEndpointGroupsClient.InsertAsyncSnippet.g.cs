@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup();
+            NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionNetworkEndpointGroupsClient.InsertAsync(project, region, networkEndpointGroupResource);
 

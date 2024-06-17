@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string serviceAttachment = "";
-            ServiceAttachment serviceAttachmentResource = new ServiceAttachment();
+            ServiceAttachment serviceAttachmentResource = new ServiceAttachment { };
             // Make the request
             lro::Operation<Operation, Operation> response = await serviceAttachmentsClient.PatchAsync(project, region, serviceAttachment, serviceAttachmentResource);
 

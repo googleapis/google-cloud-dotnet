@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
+                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest { },
                 ReturnPartialSuccess = false,
             };
             // Make the request

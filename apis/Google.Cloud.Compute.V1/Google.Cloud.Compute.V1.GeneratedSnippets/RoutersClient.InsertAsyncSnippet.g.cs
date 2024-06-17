@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Router routerResource = new Router();
+            Router routerResource = new Router { };
             // Make the request
             lro::Operation<Operation, Operation> response = await routersClient.InsertAsync(project, region, routerResource);
 

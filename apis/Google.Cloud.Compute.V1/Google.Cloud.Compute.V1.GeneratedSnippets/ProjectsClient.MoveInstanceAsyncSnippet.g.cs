@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            InstanceMoveRequest instanceMoveRequestResource = new InstanceMoveRequest();
+            InstanceMoveRequest instanceMoveRequestResource = new InstanceMoveRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.MoveInstanceAsync(project, instanceMoveRequestResource);
 

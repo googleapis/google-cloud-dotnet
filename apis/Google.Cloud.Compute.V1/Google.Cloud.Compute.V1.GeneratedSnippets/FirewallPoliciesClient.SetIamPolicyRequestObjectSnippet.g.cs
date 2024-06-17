@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
-                GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
+                GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest { },
                 Resource = "",
             };
             // Make the request

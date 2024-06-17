@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NotificationEndpoint notificationEndpointResource = new NotificationEndpoint();
+            NotificationEndpoint notificationEndpointResource = new NotificationEndpoint { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionNotificationEndpointsClient.Insert(project, region, notificationEndpointResource);
 

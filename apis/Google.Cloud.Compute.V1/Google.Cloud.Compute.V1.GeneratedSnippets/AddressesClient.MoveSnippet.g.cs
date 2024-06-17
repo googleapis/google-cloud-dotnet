@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string address = "";
-            RegionAddressesMoveRequest regionAddressesMoveRequestResource = new RegionAddressesMoveRequest();
+            RegionAddressesMoveRequest regionAddressesMoveRequestResource = new RegionAddressesMoveRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = addressesClient.Move(project, region, address, regionAddressesMoveRequestResource);
 

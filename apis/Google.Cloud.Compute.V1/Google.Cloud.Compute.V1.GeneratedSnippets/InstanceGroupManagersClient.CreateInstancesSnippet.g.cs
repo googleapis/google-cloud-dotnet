@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersCreateInstancesRequest instanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest();
+            InstanceGroupManagersCreateInstancesRequest instanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.CreateInstances(project, zone, instanceGroupManager, instanceGroupManagersCreateInstancesRequestResource);
 

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string zone = "";
-            InstanceGroup instanceGroupResource = new InstanceGroup();
+            InstanceGroup instanceGroupResource = new InstanceGroup { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupsClient.InsertAsync(project, zone, instanceGroupResource);
 

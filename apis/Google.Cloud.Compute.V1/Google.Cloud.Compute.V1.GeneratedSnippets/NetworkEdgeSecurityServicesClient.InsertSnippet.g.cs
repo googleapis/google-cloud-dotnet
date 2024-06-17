@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            NetworkEdgeSecurityService networkEdgeSecurityServiceResource = new NetworkEdgeSecurityService();
+            NetworkEdgeSecurityService networkEdgeSecurityServiceResource = new NetworkEdgeSecurityService { };
             // Make the request
             lro::Operation<Operation, Operation> response = networkEdgeSecurityServicesClient.Insert(project, region, networkEdgeSecurityServiceResource);
 

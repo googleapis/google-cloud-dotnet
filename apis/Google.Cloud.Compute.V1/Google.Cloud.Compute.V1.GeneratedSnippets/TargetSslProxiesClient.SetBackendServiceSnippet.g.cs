@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetSslProxy = "";
-            TargetSslProxiesSetBackendServiceRequest targetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest();
+            TargetSslProxiesSetBackendServiceRequest targetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = targetSslProxiesClient.SetBackendService(project, targetSslProxy, targetSslProxiesSetBackendServiceRequestResource);
 

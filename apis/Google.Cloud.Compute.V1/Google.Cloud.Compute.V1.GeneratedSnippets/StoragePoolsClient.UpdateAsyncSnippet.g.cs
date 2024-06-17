@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string storagePool = "";
-            StoragePool storagePoolResource = new StoragePool();
+            StoragePool storagePoolResource = new StoragePool { };
             // Make the request
             lro::Operation<Operation, Operation> response = await storagePoolsClient.UpdateAsync(project, zone, storagePool, storagePoolResource);
 

@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                CacheInvalidationRuleResource = new CacheInvalidationRule(),
+                CacheInvalidationRuleResource = new CacheInvalidationRule { },
                 UrlMap = "",
             };
             // Make the request

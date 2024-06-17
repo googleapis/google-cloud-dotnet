@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Region = "",
-                RouterResource = new Router(),
+                RouterResource = new Router { },
                 Project = "",
             };
             // Make the request

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertNodeTemplateRequest request = new InsertNodeTemplateRequest
             {
                 RequestId = "",
-                NodeTemplateResource = new NodeTemplate(),
+                NodeTemplateResource = new NodeTemplate { },
                 Region = "",
                 Project = "",
             };

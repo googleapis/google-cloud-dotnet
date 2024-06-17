@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            ProjectsSetDefaultNetworkTierRequest projectsSetDefaultNetworkTierRequestResource = new ProjectsSetDefaultNetworkTierRequest();
+            ProjectsSetDefaultNetworkTierRequest projectsSetDefaultNetworkTierRequestResource = new ProjectsSetDefaultNetworkTierRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.SetDefaultNetworkTier(project, projectsSetDefaultNetworkTierRequestResource);
 

@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesSetLabelsRequestResource = new InstancesSetLabelsRequest(),
+                InstancesSetLabelsRequestResource = new InstancesSetLabelsRequest { },
                 Project = "",
             };
             // Make the request

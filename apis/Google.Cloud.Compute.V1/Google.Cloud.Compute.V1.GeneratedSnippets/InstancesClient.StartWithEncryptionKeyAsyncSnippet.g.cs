@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest();
+            InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.StartWithEncryptionKeyAsync(project, zone, instance, instancesStartWithEncryptionKeyRequestResource);
 

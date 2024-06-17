@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetLabelsRequest instancesSetLabelsRequestResource = new InstancesSetLabelsRequest();
+            InstancesSetLabelsRequest instancesSetLabelsRequestResource = new InstancesSetLabelsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SetLabels(project, zone, instance, instancesSetLabelsRequestResource);
 

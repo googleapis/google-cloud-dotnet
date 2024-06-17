@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment();
+            InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment { };
             // Make the request
             lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.InsertAsync(project, region, interconnectAttachmentResource);
 

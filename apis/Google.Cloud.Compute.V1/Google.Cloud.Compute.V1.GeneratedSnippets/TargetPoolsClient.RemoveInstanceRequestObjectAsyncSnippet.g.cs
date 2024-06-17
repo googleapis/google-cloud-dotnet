@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RemoveInstanceTargetPoolRequest request = new RemoveInstanceTargetPoolRequest
             {
-                TargetPoolsRemoveInstanceRequestResource = new TargetPoolsRemoveInstanceRequest(),
+                TargetPoolsRemoveInstanceRequestResource = new TargetPoolsRemoveInstanceRequest { },
                 RequestId = "",
                 TargetPool = "",
                 Region = "",

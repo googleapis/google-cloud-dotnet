@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             RoutesClient routesClient = RoutesClient.Create();
             // Initialize request argument(s)
             string project = "";
-            Route routeResource = new Route();
+            Route routeResource = new Route { };
             // Make the request
             lro::Operation<Operation, Operation> response = routesClient.Insert(project, routeResource);
 

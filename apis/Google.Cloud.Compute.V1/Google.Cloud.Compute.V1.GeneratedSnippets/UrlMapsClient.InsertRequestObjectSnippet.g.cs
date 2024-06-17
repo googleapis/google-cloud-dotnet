@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             InsertUrlMapRequest request = new InsertUrlMapRequest
             {
                 RequestId = "",
-                UrlMapResource = new UrlMap(),
+                UrlMapResource = new UrlMap { },
                 Project = "",
             };
             // Make the request

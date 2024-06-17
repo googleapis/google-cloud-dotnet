@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertTargetVpnGatewayRequest request = new InsertTargetVpnGatewayRequest
             {
-                TargetVpnGatewayResource = new TargetVpnGateway(),
+                TargetVpnGatewayResource = new TargetVpnGateway { },
                 RequestId = "",
                 Region = "",
                 Project = "",

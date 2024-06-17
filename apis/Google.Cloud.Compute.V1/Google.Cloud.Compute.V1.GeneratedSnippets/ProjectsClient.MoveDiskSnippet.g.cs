@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             ProjectsClient projectsClient = ProjectsClient.Create();
             // Initialize request argument(s)
             string project = "";
-            DiskMoveRequest diskMoveRequestResource = new DiskMoveRequest();
+            DiskMoveRequest diskMoveRequestResource = new DiskMoveRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = projectsClient.MoveDisk(project, diskMoveRequestResource);
 

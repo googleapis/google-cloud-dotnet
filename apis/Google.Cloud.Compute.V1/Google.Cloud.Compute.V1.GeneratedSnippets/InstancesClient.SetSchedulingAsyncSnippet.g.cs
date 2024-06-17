@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            Scheduling schedulingResource = new Scheduling();
+            Scheduling schedulingResource = new Scheduling { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetSchedulingAsync(project, zone, instance, schedulingResource);
 

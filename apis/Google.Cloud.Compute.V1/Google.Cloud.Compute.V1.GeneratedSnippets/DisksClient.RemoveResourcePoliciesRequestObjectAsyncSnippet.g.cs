@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await disksClient.RemoveResourcePoliciesAsync(request);

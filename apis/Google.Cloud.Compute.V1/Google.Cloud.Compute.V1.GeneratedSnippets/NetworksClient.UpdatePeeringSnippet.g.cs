@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string network = "";
-            NetworksUpdatePeeringRequest networksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest();
+            NetworksUpdatePeeringRequest networksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = networksClient.UpdatePeering(project, network, networksUpdatePeeringRequestResource);
 

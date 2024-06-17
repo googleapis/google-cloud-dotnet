@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource = new InstancesRemoveResourcePoliciesRequest();
+            InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource = new InstancesRemoveResourcePoliciesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.RemoveResourcePolicies(project, zone, instance, instancesRemoveResourcePoliciesRequestResource);
 

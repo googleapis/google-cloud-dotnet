@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string resource = "";
-            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest { };
             // Make the request
             TestPermissionsResponse response = await vpnGatewaysClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
         }

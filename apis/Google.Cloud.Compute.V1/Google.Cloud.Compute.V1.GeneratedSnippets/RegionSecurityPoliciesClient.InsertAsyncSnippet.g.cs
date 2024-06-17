@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            SecurityPolicy securityPolicyResource = new SecurityPolicy();
+            SecurityPolicy securityPolicyResource = new SecurityPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.InsertAsync(project, region, securityPolicyResource);
 

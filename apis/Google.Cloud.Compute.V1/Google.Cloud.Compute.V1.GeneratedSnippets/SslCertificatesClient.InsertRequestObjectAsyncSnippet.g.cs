@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             InsertSslCertificateRequest request = new InsertSslCertificateRequest
             {
                 RequestId = "",
-                SslCertificateResource = new SslCertificate(),
+                SslCertificateResource = new SslCertificate { },
                 Project = "",
             };
             // Make the request

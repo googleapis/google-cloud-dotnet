@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                CommitmentResource = new Commitment(),
+                CommitmentResource = new Commitment { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionCommitmentsClient.InsertAsync(request);

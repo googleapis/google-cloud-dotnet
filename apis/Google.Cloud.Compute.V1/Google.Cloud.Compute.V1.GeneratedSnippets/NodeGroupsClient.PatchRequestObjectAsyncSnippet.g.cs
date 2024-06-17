@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 NodeGroup = "",
-                NodeGroupResource = new NodeGroup(),
+                NodeGroupResource = new NodeGroup { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.PatchAsync(request);

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string backendBucket = "";
-            BackendBucket backendBucketResource = new BackendBucket();
+            BackendBucket backendBucketResource = new BackendBucket { };
             // Make the request
             lro::Operation<Operation, Operation> response = await backendBucketsClient.UpdateAsync(project, backendBucket, backendBucketResource);
 

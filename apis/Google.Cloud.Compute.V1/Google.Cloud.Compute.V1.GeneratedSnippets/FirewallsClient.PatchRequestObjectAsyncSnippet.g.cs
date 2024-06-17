@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             PatchFirewallRequest request = new PatchFirewallRequest
             {
                 RequestId = "",
-                FirewallResource = new Firewall(),
+                FirewallResource = new Firewall { },
                 Project = "",
                 Firewall = "",
             };

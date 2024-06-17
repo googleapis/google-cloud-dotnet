@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq();
+            InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeletePerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersDeletePerInstanceConfigsReqResource);
 

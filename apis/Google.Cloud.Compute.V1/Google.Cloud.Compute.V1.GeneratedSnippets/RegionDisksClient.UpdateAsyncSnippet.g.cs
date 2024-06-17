@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            Disk diskResource = new Disk();
+            Disk diskResource = new Disk { };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionDisksClient.UpdateAsync(project, region, disk, diskResource);
 

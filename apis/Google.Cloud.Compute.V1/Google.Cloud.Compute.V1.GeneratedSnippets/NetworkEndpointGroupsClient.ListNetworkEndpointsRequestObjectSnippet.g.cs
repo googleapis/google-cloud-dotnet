@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
             {
                 Zone = "",
-                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
+                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest { },
                 OrderBy = "",
                 Project = "",
                 Filter = "",

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string disk = "";
-            RegionDisksResizeRequest regionDisksResizeRequestResource = new RegionDisksResizeRequest();
+            RegionDisksResizeRequest regionDisksResizeRequestResource = new RegionDisksResizeRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = regionDisksClient.Resize(project, region, disk, regionDisksResizeRequestResource);
 

@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 RequestId = "",
                 Project = "",
-                DiskMoveRequestResource = new DiskMoveRequest(),
+                DiskMoveRequestResource = new DiskMoveRequest { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await projectsClient.MoveDiskAsync(request);

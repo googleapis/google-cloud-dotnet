@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             PatchTargetHttpProxyRequest request = new PatchTargetHttpProxyRequest
             {
-                TargetHttpProxyResource = new TargetHttpProxy(),
+                TargetHttpProxyResource = new TargetHttpProxy { },
                 RequestId = "",
                 TargetHttpProxy = "",
                 Project = "",

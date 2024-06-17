@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroupsDeleteNodesRequest nodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest();
+            NodeGroupsDeleteNodesRequest nodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = nodeGroupsClient.DeleteNodes(project, zone, nodeGroup, nodeGroupsDeleteNodesRequestResource);
 

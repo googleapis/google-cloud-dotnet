@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroup nodeGroupResource = new NodeGroup();
+            NodeGroup nodeGroupResource = new NodeGroup { };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.PatchAsync(project, zone, nodeGroup, nodeGroupResource);
 

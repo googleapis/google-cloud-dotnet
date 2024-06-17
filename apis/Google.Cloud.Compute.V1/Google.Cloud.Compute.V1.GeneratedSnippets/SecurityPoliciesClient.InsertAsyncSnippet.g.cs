@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             SecurityPoliciesClient securityPoliciesClient = await SecurityPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
-            SecurityPolicy securityPolicyResource = new SecurityPolicy();
+            SecurityPolicy securityPolicyResource = new SecurityPolicy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.InsertAsync(project, securityPolicyResource);
 

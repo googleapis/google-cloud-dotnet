@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string address = "";
-            GlobalAddressesMoveRequest globalAddressesMoveRequestResource = new GlobalAddressesMoveRequest();
+            GlobalAddressesMoveRequest globalAddressesMoveRequestResource = new GlobalAddressesMoveRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = globalAddressesClient.Move(project, address, globalAddressesMoveRequestResource);
 

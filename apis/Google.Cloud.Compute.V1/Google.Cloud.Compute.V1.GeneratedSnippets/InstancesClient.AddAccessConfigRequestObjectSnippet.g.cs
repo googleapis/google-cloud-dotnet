@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 NetworkInterface = "",
-                AccessConfigResource = new AccessConfig(),
+                AccessConfigResource = new AccessConfig { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.AddAccessConfig(request);

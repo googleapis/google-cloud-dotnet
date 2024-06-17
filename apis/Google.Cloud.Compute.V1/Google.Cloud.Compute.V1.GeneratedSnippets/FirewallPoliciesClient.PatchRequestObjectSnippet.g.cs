@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             PatchFirewallPolicyRequest request = new PatchFirewallPolicyRequest
             {
                 RequestId = "",
-                FirewallPolicyResource = new FirewallPolicy(),
+                FirewallPolicyResource = new FirewallPolicy { },
                 FirewallPolicy = "",
             };
             // Make the request

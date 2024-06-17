@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string targetGrpcProxy = "";
-            TargetGrpcProxy targetGrpcProxyResource = new TargetGrpcProxy();
+            TargetGrpcProxy targetGrpcProxyResource = new TargetGrpcProxy { };
             // Make the request
             lro::Operation<Operation, Operation> response = await targetGrpcProxiesClient.PatchAsync(project, targetGrpcProxy, targetGrpcProxyResource);
 

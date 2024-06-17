@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string project = "";
             string region = "";
-            Address addressResource = new Address();
+            Address addressResource = new Address { };
             // Make the request
             lro::Operation<Operation, Operation> response = addressesClient.Insert(project, region, addressResource);
 

@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string region = "";
             string resource = "";
-            RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
+            RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = forwardingRulesClient.SetLabels(project, region, resource, regionSetLabelsRequestResource);
 

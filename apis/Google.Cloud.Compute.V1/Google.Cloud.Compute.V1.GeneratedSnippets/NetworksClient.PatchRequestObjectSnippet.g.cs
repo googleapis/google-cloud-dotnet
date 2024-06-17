@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             PatchNetworkRequest request = new PatchNetworkRequest
             {
                 RequestId = "",
-                NetworkResource = new Network(),
+                NetworkResource = new Network { },
                 Project = "",
                 Network = "",
             };

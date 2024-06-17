@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string nodeGroup = "";
-            NodeGroupsAddNodesRequest nodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest();
+            NodeGroupsAddNodesRequest nodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await nodeGroupsClient.AddNodesAsync(project, zone, nodeGroup, nodeGroupsAddNodesRequestResource);
 

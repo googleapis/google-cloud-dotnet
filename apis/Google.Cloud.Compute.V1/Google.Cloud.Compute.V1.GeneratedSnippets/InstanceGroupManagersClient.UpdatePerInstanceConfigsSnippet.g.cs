@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instanceGroupManager = "";
-            InstanceGroupManagersUpdatePerInstanceConfigsReq instanceGroupManagersUpdatePerInstanceConfigsReqResource = new InstanceGroupManagersUpdatePerInstanceConfigsReq();
+            InstanceGroupManagersUpdatePerInstanceConfigsReq instanceGroupManagersUpdatePerInstanceConfigsReqResource = new InstanceGroupManagersUpdatePerInstanceConfigsReq { };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.UpdatePerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersUpdatePerInstanceConfigsReqResource);
 

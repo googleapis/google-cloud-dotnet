@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            Instance instanceResource = new Instance();
+            Instance instanceResource = new Instance { };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.Update(project, zone, instance, instanceResource);
 

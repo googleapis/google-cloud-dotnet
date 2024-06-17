@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
             string project = "";
             string zone = "";
             string instance = "";
-            InstancesSetNameRequest instancesSetNameRequestResource = new InstancesSetNameRequest();
+            InstancesSetNameRequest instancesSetNameRequestResource = new InstancesSetNameRequest { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SetNameAsync(project, zone, instance, instancesSetNameRequestResource);
 

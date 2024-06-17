@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
             string zone = "";
             string instance = "";
             string networkInterface = "";
-            NetworkInterface networkInterfaceResource = new NetworkInterface();
+            NetworkInterface networkInterfaceResource = new NetworkInterface { };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.UpdateNetworkInterfaceAsync(project, zone, instance, networkInterface, networkInterfaceResource);
 

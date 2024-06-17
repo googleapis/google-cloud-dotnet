@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Zone = "",
                 RequestId = "",
                 Project = "",
-                ReservationResource = new Reservation(),
+                ReservationResource = new Reservation { },
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await reservationsClient.InsertAsync(request);

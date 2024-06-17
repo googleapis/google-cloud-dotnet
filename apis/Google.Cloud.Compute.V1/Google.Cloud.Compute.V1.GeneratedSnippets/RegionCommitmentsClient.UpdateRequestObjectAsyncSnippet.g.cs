@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Paths = "",
                 Region = "",
                 Project = "",
-                CommitmentResource = new Commitment(),
+                CommitmentResource = new Commitment { },
                 Commitment = "",
                 UpdateMask = "",
             };
