@@ -4739,7 +4739,7 @@
     },
     {
       "id": "Google.Cloud.Storage.Control.V2",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud Storage",
       "productUrl": "https://cloud.google.com/storage/docs/overview",
@@ -4752,7 +4752,7 @@
         "gcs"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/storage/control/v2",
