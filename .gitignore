@@ -18,6 +18,7 @@ launchSettings.json
 
 # Used when generating APIs
 tmp
+nuget
 googleapis
 googleapis-discovery
 gapic-generator
