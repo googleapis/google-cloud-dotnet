@@ -1,0 +1,72 @@
+[
+  {
+    "method": "ListLbTrafficExtensions",
+    "client": "DepServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListLbRouteExtensions",
+    "client": "DepServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListTlsRoutes",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListServiceBindings",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListMeshes",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListHttpRoutes",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListTcpRoutes",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListEndpointPolicies",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListGateways",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListGrpcRoutes",
+    "client": "NetworkServicesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
