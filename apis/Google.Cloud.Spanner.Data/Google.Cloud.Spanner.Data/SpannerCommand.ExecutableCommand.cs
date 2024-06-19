@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -275,7 +276,8 @@ namespace Google.Cloud.Spanner.Data
                         {
                             ParentAsInstanceName = parent,
                             CreateStatement = CommandTextBuilder.CommandText,
-                            ExtraStatements = { CommandTextBuilder.ExtraStatements ?? new string[0] }
+                            ExtraStatements = { CommandTextBuilder.ExtraStatements ?? new string[0] },
+                            ProtoDescriptors = CommandTextBuilder.ProtobufDescriptors?.ToByteString() ?? ByteString.Empty,
                         };
                         var response = await databaseAdminClient.CreateDatabaseAsync(request).ConfigureAwait(false);
                         response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
@@ -291,6 +293,11 @@ namespace Google.Cloud.Spanner.Data
                             throw new InvalidOperationException(
                                 "Drop database commands do not support additional ddl statements");
                         }
+                        if (CommandTextBuilder.ProtobufDescriptors is not null)
+                        {
+                            throw new InvalidOperationException(
+                                "Drop database commands do not support protobuf descriptors");
+                        }
                         var dbName = new DatabaseName(Connection.Project, Connection.SpannerInstance, CommandTextBuilder.DatabaseToDrop);
                         await databaseAdminClient.DropDatabaseAsync(dbName, cancellationToken).ConfigureAwait(false);
                     }
@@ -305,7 +312,8 @@ namespace Google.Cloud.Spanner.Data
                         var request = new UpdateDatabaseDdlRequest
                         {
                             DatabaseAsDatabaseName = builder.DatabaseName,
-                            Statements = { commandText, CommandTextBuilder.ExtraStatements ?? Enumerable.Empty<string>() }
+                            Statements = { commandText, CommandTextBuilder.ExtraStatements ?? Enumerable.Empty<string>() },
+                            ProtoDescriptors = CommandTextBuilder.ProtobufDescriptors?.ToByteString() ?? ByteString.Empty,
                         };
 
                         var response = await databaseAdminClient.UpdateDatabaseDdlAsync(request).ConfigureAwait(false);

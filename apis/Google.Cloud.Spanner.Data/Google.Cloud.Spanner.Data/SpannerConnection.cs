@@ -19,6 +19,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
+using Google.Protobuf.Reflection;
 using Grpc.Core;
 using System;
 using System.ComponentModel;
@@ -790,7 +791,20 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDdlCommand(
             string ddlStatement, params string[] extraDdlStatements) =>
-            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
+            CreateDdlCommand(ddlStatement, protobufDescriptors: null, extraDdlStatements);
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to execute a DDL (CREATE/DROP TABLE, etc) statement.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="ddlStatement">The DDL statement (eg 'CREATE TABLE MYTABLE ...').  Must not be null.</param>
+        /// <param name="protobufDescriptors">The set of protobuf descriptors that can be used to create proto bundles. May be null.</param>
+        /// <param name="extraDdlStatements">An optional set of additional DDL statements to execute after
+        /// the first statement.  Extra Ddl statements cannot be used to create additional databases.</param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateDdlCommand(
+            string ddlStatement, FileDescriptorSet protobufDescriptors, params string[] extraDdlStatements) =>
+            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, protobufDescriptors, extraDdlStatements), this);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a general DML (UPDATE, INSERT, DELETE) statement.

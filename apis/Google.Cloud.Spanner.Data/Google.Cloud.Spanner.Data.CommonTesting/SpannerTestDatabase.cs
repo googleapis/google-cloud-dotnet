@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.Reflection;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 
@@ -69,8 +71,18 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
 
     protected override bool TryCreateDatabase()
     {
+        FileDescriptorSet fileDescriptorSet = new FileDescriptorSet
+        {
+            File = { Value.Descriptor.File.ToProto(), Duration.Descriptor.File.ToProto() }
+        };
+
         using var connection = new SpannerConnection(NoDbConnectionString);
-        var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
+        var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}",protobufDescriptors: fileDescriptorSet,
+            $"CREATE PROTO BUNDLE (" +
+            $"{Duration.Descriptor.FullName}, " +
+            $"{Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}, " +
+            $"{ListValue.Descriptor.FullName}, " +
+            $"{Value.Descriptor.FullName})");
         try
         {
             createCmd.ExecuteNonQuery();
