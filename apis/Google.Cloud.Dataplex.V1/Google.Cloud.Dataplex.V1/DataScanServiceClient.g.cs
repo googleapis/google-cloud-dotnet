@@ -1512,7 +1512,10 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1521,7 +1524,10 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1530,7 +1536,10 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1539,13 +1548,18 @@ namespace Google.Cloud.Dataplex.V1
             GenerateDataQualityRulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="name">
-        /// Required. The name should be either
-        /// * the name of a datascan with at least one successful completed data
-        /// profiling job, or
-        /// * the name of a successful completed data profiling datascan job.
+        /// Required. The name must be one of the following:
+        /// 
+        /// * The name of a data scan with at least one successful, completed data
+        /// profiling job
+        /// * The name of a successful, completed data profiling job (a data scan job
+        /// where the job type is data profiling)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1556,13 +1570,18 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="name">
-        /// Required. The name should be either
-        /// * the name of a datascan with at least one successful completed data
-        /// profiling job, or
-        /// * the name of a successful completed data profiling datascan job.
+        /// Required. The name must be one of the following:
+        /// 
+        /// * The name of a data scan with at least one successful, completed data
+        /// profiling job
+        /// * The name of a successful, completed data profiling job (a data scan job
+        /// where the job type is data profiling)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1573,13 +1592,18 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="name">
-        /// Required. The name should be either
-        /// * the name of a datascan with at least one successful completed data
-        /// profiling job, or
-        /// * the name of a successful completed data profiling datascan job.
+        /// Required. The name must be one of the following:
+        /// 
+        /// * The name of a data scan with at least one successful, completed data
+        /// profiling job
+        /// * The name of a successful, completed data profiling job (a data scan job
+        /// where the job type is data profiling)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1914,7 +1938,10 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1926,7 +1953,10 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

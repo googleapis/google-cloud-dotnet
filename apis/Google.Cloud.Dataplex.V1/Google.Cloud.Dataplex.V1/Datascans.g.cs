@@ -3175,7 +3175,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Generate recommended DataQualityRules request.
+  /// Request details for generating data quality rule recommendations.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateDataQualityRulesRequest : pb::IMessage<GenerateDataQualityRulesRequest>
@@ -3226,10 +3226,12 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name should be either
-    /// * the name of a datascan with at least one successful completed data
-    /// profiling job, or
-    /// * the name of a successful completed data profiling datascan job.
+    /// Required. The name must be one of the following:
+    ///
+    /// * The name of a data scan with at least one successful, completed data
+    /// profiling job
+    /// * The name of a successful, completed data profiling job (a data scan job
+    /// where the job type is data profiling)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3374,7 +3376,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Generate recommended DataQualityRules response.
+  /// Response details for data quality rule recommendations.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateDataQualityRulesResponse : pb::IMessage<GenerateDataQualityRulesResponse>
@@ -3427,7 +3429,8 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.DataQualityRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataQualityRule> rule_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataQualityRule>();
     /// <summary>
-    /// Generated recommended {@link DataQualityRule}s.
+    /// The data quality rules that Dataplex generates based on the results
+    /// of a data profiling scan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
