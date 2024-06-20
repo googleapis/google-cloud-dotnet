@@ -404,7 +404,6 @@ namespace Google.Cloud.Storage.Control.V2 {
   /// <summary>
   /// A folder resource. This resource can only exist in a hierarchical namespace
   /// enabled bucket.
-  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Folder : pb::IMessage<Folder>
@@ -795,7 +794,6 @@ namespace Google.Cloud.Storage.Control.V2 {
   /// <summary>
   /// Request message for GetFolder. This operation is only applicable to a
   /// hierarchical namespace enabled bucket.
-  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFolderRequest : pb::IMessage<GetFolderRequest>
@@ -1149,7 +1147,6 @@ namespace Google.Cloud.Storage.Control.V2 {
   /// <summary>
   /// Request message for CreateFolder. This operation is only applicable to a
   /// hierarchical namespace enabled bucket.
-  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFolderRequest : pb::IMessage<CreateFolderRequest>
@@ -1526,7 +1523,6 @@ namespace Google.Cloud.Storage.Control.V2 {
   /// <summary>
   /// Request message for DeleteFolder. This operation is only applicable to a
   /// hierarchical namespace enabled bucket.
-  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFolderRequest : pb::IMessage<DeleteFolderRequest>
@@ -1880,7 +1876,6 @@ namespace Google.Cloud.Storage.Control.V2 {
   /// <summary>
   /// Request message for ListFolders. This operation is only applicable to a
   /// hierarchical namespace enabled bucket.
-  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFoldersRequest : pb::IMessage<ListFoldersRequest>
@@ -2597,7 +2592,6 @@ namespace Google.Cloud.Storage.Control.V2 {
   /// <summary>
   /// Request message for RenameFolder. This operation is only applicable to a
   /// hierarchical namespace enabled bucket.
-  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RenameFolderRequest : pb::IMessage<RenameFolderRequest>
