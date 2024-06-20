@@ -73,16 +73,33 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
     {
         FileDescriptorSet fileDescriptorSet = new FileDescriptorSet
         {
-            File = { Value.Descriptor.File.ToProto(), Duration.Descriptor.File.ToProto() }
+            File =
+            {
+                Duration.Descriptor.File.ToProto(),
+                Rectangle.Descriptor.File.ToProto(),
+                ValueWrapper.Descriptor.File.ToProto(),
+            }
         };
+
+        if (!SpannerClientCreationOptions.UsesEmulator)
+        {
+            // b/348716298
+            fileDescriptorSet.File.Add(Value.Descriptor.File.ToProto());
+            fileDescriptorSet.File.Add(Person.Descriptor.File.ToProto());
+        }
 
         using var connection = new SpannerConnection(NoDbConnectionString);
         var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}",protobufDescriptors: fileDescriptorSet,
             $"CREATE PROTO BUNDLE (" +
-            $"{Duration.Descriptor.FullName}, " +
-            $"{Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}, " +
-            $"{ListValue.Descriptor.FullName}, " +
-            $"{Value.Descriptor.FullName})");
+            $"{Point.Descriptor.FullName}" +
+            $", {Rectangle.Descriptor.FullName}" +
+            $", {Duration.Descriptor.FullName}" +
+            EmptyOnEmulator($", {Person.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {ValueWrapper.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {ListValue.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {Value.Descriptor.FullName}"/* b/348716298 */) +
+            $")");
         try
         {
             createCmd.ExecuteNonQuery();
@@ -94,4 +111,6 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             return false;
         }
     }
+
+    private string EmptyOnEmulator(string text) => SpannerClientCreationOptions.UsesEmulator ? "" : text;
 }

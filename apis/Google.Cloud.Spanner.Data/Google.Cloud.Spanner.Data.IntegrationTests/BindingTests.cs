@@ -14,6 +14,7 @@
 
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CommonTestDiagnostics]
     public class BindingTests
     {
+        private static readonly Rectangle testRectangle = new Rectangle
+        {
+            TopRight = new Point { X = 1, Y = 1 },
+            Width = 10,
+            Height = 5,
+        };
+
+        private static readonly Person testPerson = new Person
+        {
+            Name = "John",
+            Siblings = { new Person { Name = "Jane" } }
+        };
+
+        private static readonly ValueWrapper testValueWrapper = new ValueWrapper { OneValue = Value.ForString("Hello") };
+
         private readonly SpannerDatabaseFixture _fixture;
 
         public BindingTests(SpannerDatabaseFixture fixture) =>
@@ -42,6 +58,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
+            SpannerDbType.FromClrType(typeof(Duration)),
+            SpannerDbType.FromClrType(typeof(Rectangle)),
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
@@ -49,7 +67,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            SpannerDbType.ArrayOf(SpannerDbType.Bytes)
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle)))
         };
 
         // These SpannerDbTypes are unsupported on emulator.
@@ -59,6 +79,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
+            // b/348716298
+            SpannerDbType.FromClrType(typeof(Person)),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
+            SpannerDbType.FromClrType(typeof(ValueWrapper)),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            // b/348716298 Makes it unsupported in the emulator
+            // b/348711708 Makes it unsupported in production
+            // SpannerDbType.FromClrType(typeof(Value)),
         };
 
         // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
@@ -276,6 +305,89 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindJsonEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             new string[] { });
+
+        [Fact(Skip = "b/348711708 makes it unsupported in production")]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298 makes it unsupported by the emulator
+        public async Task BindProtobufValue() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Value)),
+            Value.ForString("Hello"),
+            r => r.GetFieldValue<Value>(0));
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+                new Value[] { Value.ForNumber(10), null, Value.ForString("Hello world") });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            new Value[] { });
+
+        [Fact]
+        public async Task BindProtobufDuration() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Duration)),
+            Duration.FromTimeSpan(TimeSpan.FromHours(1)),
+            r => r.GetFieldValue<Duration>(0));
+
+        [Fact]
+        public async Task BindProtobufDurationArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+                new Duration[] { Duration.FromTimeSpan(TimeSpan.FromHours(1)), null, Duration.FromTimeSpan(TimeSpan.FromSeconds(10)) });
+
+        [Fact]
+        public async Task BindProtobufDurationEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+            new Duration[] { });
+
+        [Fact]
+        public async Task BindProtobufRectangle() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Rectangle)), testRectangle, r => r.GetFieldValue<Rectangle>(0));
+
+        [Fact]
+        public async Task BindProtobufRectanlgeArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
+                new Rectangle[] { testRectangle, null, new Rectangle() });
+
+        [Fact]
+        public async Task BindProtobufRectangleEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
+            new Rectangle[] { });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufPerson() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Person)), testPerson, r => r.GetFieldValue<Person>(0));
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufPersonArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
+                new Person[] { testPerson, null, new Person() });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufPersonEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
+            new Person[] { });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueWrapper() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(ValueWrapper)), testValueWrapper, r => r.GetFieldValue<ValueWrapper>(0));
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueWrapperArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
+                new ValueWrapper[] { testValueWrapper, null, new ValueWrapper() });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueWrapperEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
+            new ValueWrapper[] { });
 
         private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
             Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any(data => spannerDbType.Equals(data[0])),

@@ -107,6 +107,13 @@ namespace Google.Cloud.Spanner.Data
                     }
                     spannerDbType = new SpannerDbType(fields);
                     return true;
+                case TypeCode.Proto:
+                    if (string.IsNullOrEmpty(remainder))
+                    {
+                        return false;
+                    }
+                    spannerDbType = new SpannerDbType(remainder);
+                    return true;
                 default:
                     return false;
             }
@@ -221,6 +228,10 @@ namespace Google.Cloud.Spanner.Data
                 }
                 s.Append(">");
                 return s.ToString();
+            }
+            if (ProtobufTypeName != null)
+            {
+                return $"PROTO<{ProtobufTypeName}>";
             }
             if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
             {

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -487,6 +488,131 @@ namespace Google.Cloud.Spanner.Data.Tests
                 complexStruct, complexStruct.GetSpannerDbType(),
                 $"[ {s_sampleStructSerialized}, [ \"4\", \"5\", \"6\" ] ]",
                 TestType.ClrToValue
+            };
+
+            var duration10s = Duration.FromTimeSpan(TimeSpan.FromSeconds(10));
+            var duration20s = Duration.FromTimeSpan(TimeSpan.FromSeconds(20));
+            var duration10sWire = Value.ForString(Convert.ToBase64String(duration10s.ToByteArray()));
+            var duration20sWire = Value.ForString(Convert.ToBase64String(duration20s.ToByteArray()));
+            var trueValue = Value.ForBool(true);
+            var falseValue = Value.ForBool(false);
+            var trueValueWire = Value.ForString(Convert.ToBase64String(trueValue.ToByteArray()));
+            var falseValueWire = Value.ForString(Convert.ToBase64String(falseValue.ToByteArray()));
+            var testRectangle1 = new Rectangle
+            {
+                TopRight = new Point { X = 1, Y = 1 },
+                Width = 10,
+                Height = 5,
+            };
+            var testRectangle2 = new Rectangle();
+            var testRectangle1Wire = Value.ForString(Convert.ToBase64String(testRectangle1.ToByteArray()));
+            var testRectangle2Wire = Value.ForString(Convert.ToBase64String(testRectangle2.ToByteArray()));
+            var testPerson1 = new Person
+            {
+                Name = "John",
+                Siblings = { new Person { Name = "Jane" } }
+            };
+            var testPerson2 = new Person();
+            var testPerson1Wire = Value.ForString(Convert.ToBase64String(testPerson1.ToByteArray()));
+            var testPerson2Wire = Value.ForString(Convert.ToBase64String(testPerson2.ToByteArray()));
+            var testValueWrapper1 = new ValueWrapper { OneValue = Value.ForString("Hello") };
+            var testValueWrapper2 = new ValueWrapper();
+            var testValueWrapper1Wire = Value.ForString(Convert.ToBase64String(testValueWrapper1.ToByteArray()));
+            var testValueWrapper2Wire = Value.ForString(Convert.ToBase64String(testValueWrapper2.ToByteArray()));
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                duration10s,
+                SpannerDbType.FromClrType(typeof(Duration)),
+                duration10sWire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                duration10sWire,
+                SpannerDbType.ForProtobuf(Duration.Descriptor.FullName),
+                duration10sWire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Duration>{ duration10s, duration20s },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+                $"[ {duration10sWire}, {duration20sWire} ]",
+            };
+
+            yield return new object[]
+            {   // Value is being itself used as a type.
+                trueValue,
+                SpannerDbType.FromClrType(typeof(Value)),
+                trueValueWire.ToString(),
+            };
+            yield return new object[]
+            {   // The values is serialized/deserialized by calling code.
+                new List<Value> { duration10sWire, duration20sWire },
+                SpannerDbType.ArrayOf(SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)),
+                $"[ {duration10sWire}, {duration20sWire} ]",
+            };
+            yield return new object[]
+            {   // Value is being itself used as a type.
+                new List<Value> { trueValue, falseValue },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+                $"[ {trueValueWire}, {falseValueWire} ]",
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                testRectangle1,
+                SpannerDbType.FromClrType(typeof(Rectangle)),
+                testRectangle1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                testRectangle1,
+                SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName),
+                testRectangle1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Rectangle>{ testRectangle1, testRectangle2 },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
+                $"[ {testRectangle1Wire}, {testRectangle2Wire} ]",
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                testPerson1,
+                SpannerDbType.FromClrType(typeof(Person)),
+                testPerson1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                testPerson1,
+                SpannerDbType.ForProtobuf(Person.Descriptor.FullName),
+                testPerson1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Person>{ testPerson1, testPerson2 },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
+                $"[ {testPerson1Wire}, {testPerson2Wire} ]",
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                testValueWrapper1,
+                SpannerDbType.FromClrType(typeof(ValueWrapper)),
+                testValueWrapper1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                testValueWrapper1,
+                SpannerDbType.ForProtobuf(ValueWrapper.Descriptor.FullName),
+                testValueWrapper1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<ValueWrapper>{ testValueWrapper1, testValueWrapper2 },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
+                $"[ {testValueWrapper1Wire}, {testValueWrapper2Wire} ]",
             };
         }
 

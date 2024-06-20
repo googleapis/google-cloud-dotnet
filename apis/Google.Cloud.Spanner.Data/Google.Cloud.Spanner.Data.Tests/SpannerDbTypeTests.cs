@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -52,6 +53,10 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null},
                 }.GetSpannerDbType()
             };
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Duration)), SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)};
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Rectangle)), SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName)};
         }
 
         [Theory]
@@ -121,6 +126,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             yield return new object[] { "ARRAY<STRING(5)>", SpannerDbType.ArrayOf(SpannerDbType.String), false };
             yield return new object[] { "ARRAY<BYTES(5)>", SpannerDbType.ArrayOf(SpannerDbType.Bytes), false };
+
+            yield return new object[] { $"PROTO<{Duration.Descriptor.FullName}>", SpannerDbType.FromClrType(typeof(Duration)) };
+            yield return new object[] { $"ARRAY<PROTO<{Duration.Descriptor.FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) };
+
+            yield return new object[] { $"PROTO<{Rectangle.Descriptor.FullName}>", SpannerDbType.FromClrType(typeof(Rectangle)) };
+            yield return new object[] { $"ARRAY<PROTO<{Rectangle.Descriptor.FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))) };
 
             yield return new object[] { "ARRAY <  STRING (   5 )>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
             yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
