@@ -303,7 +303,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -328,7 +328,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -353,7 +353,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -378,7 +378,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
