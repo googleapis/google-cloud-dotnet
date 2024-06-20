@@ -171,7 +171,7 @@ namespace Google.Cloud.Billing.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name for the service.
-    /// Example: "services/DA34-426B-A397"
+    /// Example: "services/6F81-5844-456A"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace Google.Cloud.Billing.V1 {
     private string serviceId_ = "";
     /// <summary>
     /// The identifier for the service.
-    /// Example: "DA34-426B-A397"
+    /// Example: "6F81-5844-456A"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -435,7 +435,7 @@ namespace Google.Cloud.Billing.V1 {
   }
 
   /// <summary>
-  /// Encapsulates a single SKU in Google Cloud Platform
+  /// Encapsulates a single SKU in Google Cloud
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Sku : pb::IMessage<Sku>
@@ -494,7 +494,7 @@ namespace Google.Cloud.Billing.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name for the SKU.
-    /// Example: "services/DA34-426B-A397/skus/AA95-CD31-42FE"
+    /// Example: "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -510,7 +510,7 @@ namespace Google.Cloud.Billing.V1 {
     private string skuId_ = "";
     /// <summary>
     /// The identifier for the SKU.
-    /// Example: "AA95-CD31-42FE"
+    /// Example: "D041-B8A1-6E0B"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3415,7 +3415,7 @@ namespace Google.Cloud.Billing.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the service.
-    /// Example: "services/DA34-426B-A397"
+    /// Example: "services/6F81-5844-456A"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
