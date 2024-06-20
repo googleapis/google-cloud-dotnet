@@ -32,7 +32,7 @@ namespace Google.Cloud.Kms.V1 {
             "bmcSEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOmHqQV4KH2Nsb3Vka21z",
             "Lmdvb2dsZWFwaXMuY29tL0tleVJpbmcSO3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9Iq4HCglD",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9IpEICglD",
             "cnlwdG9LZXkSEQoEbmFtZRgBIAEoCUID4EEDEjsKB3ByaW1hcnkYAiABKAsy",
             "JS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb25CA+BBAxJF",
             "CgdwdXJwb3NlGAMgASgOMi8uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9L",
@@ -46,135 +46,150 @@ namespace Google.Cloud.Kms.V1 {
             "c0VudHJ5EhgKC2ltcG9ydF9vbmx5GA0gASgIQgPgQQUSQgoaZGVzdHJveV9z",
             "Y2hlZHVsZWRfZHVyYXRpb24YDiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
             "YXRpb25CA+BBBRIlChJjcnlwdG9fa2V5X2JhY2tlbmQYDyABKAlCCeBBBfpB",
-            "AwoBKhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBIpoBChBDcnlwdG9LZXlQdXJwb3NlEiIKHkNSWVBUT19LRVlfUFVS",
-            "UE9TRV9VTlNQRUNJRklFRBAAEhMKD0VOQ1JZUFRfREVDUllQVBABEhMKD0FT",
-            "WU1NRVRSSUNfU0lHThAFEhYKEkFTWU1NRVRSSUNfREVDUllQVBAGEhcKE1JB",
-            "V19FTkNSWVBUX0RFQ1JZUFQQBxIHCgNNQUMQCTp76kF4CiFjbG91ZGttcy5n",
-            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0",
-            "b0tleXMve2NyeXB0b19rZXl9QhMKEXJvdGF0aW9uX3NjaGVkdWxlIrMBChhD",
-            "cnlwdG9LZXlWZXJzaW9uVGVtcGxhdGUSPgoQcHJvdGVjdGlvbl9sZXZlbBgB",
-            "IAEoDjIkLmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsElcK",
-            "CWFsZ29yaXRobRgDIAEoDjI/Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRv",
-            "S2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uQWxnb3JpdGhtQgPgQQIisQMK",
-            "F0tleU9wZXJhdGlvbkF0dGVzdGF0aW9uElMKBmZvcm1hdBgEIAEoDjI+Lmdv",
-            "b2dsZS5jbG91ZC5rbXMudjEuS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb24uQXR0",
-            "ZXN0YXRpb25Gb3JtYXRCA+BBAxIUCgdjb250ZW50GAUgASgMQgPgQQMSWAoL",
-            "Y2VydF9jaGFpbnMYBiABKAsyPi5nb29nbGUuY2xvdWQua21zLnYxLktleU9w",
-            "ZXJhdGlvbkF0dGVzdGF0aW9uLkNlcnRpZmljYXRlQ2hhaW5zQgPgQQMaZAoR",
-            "Q2VydGlmaWNhdGVDaGFpbnMSFAoMY2F2aXVtX2NlcnRzGAEgAygJEhkKEWdv",
-            "b2dsZV9jYXJkX2NlcnRzGAIgAygJEh4KFmdvb2dsZV9wYXJ0aXRpb25fY2Vy",
-            "dHMYAyADKAkiawoRQXR0ZXN0YXRpb25Gb3JtYXQSIgoeQVRURVNUQVRJT05f",
-            "Rk9STUFUX1VOU1BFQ0lGSUVEEAASGAoUQ0FWSVVNX1YxX0NPTVBSRVNTRUQQ",
-            "AxIYChRDQVZJVU1fVjJfQ09NUFJFU1NFRBAEIoETChBDcnlwdG9LZXlWZXJz",
-            "aW9uEhEKBG5hbWUYASABKAlCA+BBAxJKCgVzdGF0ZRgDIAEoDjI7Lmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJz",
-            "aW9uU3RhdGUSQwoQcHJvdGVjdGlvbl9sZXZlbBgHIAEoDjIkLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsQgPgQQMSVwoJYWxnb3JpdGht",
-            "GAogASgOMj8uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9u",
-            "LkNyeXB0b0tleVZlcnNpb25BbGdvcml0aG1CA+BBAxJGCgthdHRlc3RhdGlv",
-            "bhgIIAEoCzIsLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5T3BlcmF0aW9uQXR0",
-            "ZXN0YXRpb25CA+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI2Cg1nZW5lcmF0ZV90aW1lGAsgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjUKDGRlc3Ryb3lf",
-            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI7",
-            "ChJkZXN0cm95X2V2ZW50X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSFwoKaW1wb3J0X2pvYhgOIAEoCUID4EEDEjQKC2lt",
-            "cG9ydF90aW1lGA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEiIKFWltcG9ydF9mYWlsdXJlX3JlYXNvbhgQIAEoCUID4EEDEiYKGWdl",
-            "bmVyYXRpb25fZmFpbHVyZV9yZWFzb24YEyABKAlCA+BBAxIwCiNleHRlcm5h",
-            "bF9kZXN0cnVjdGlvbl9mYWlsdXJlX3JlYXNvbhgUIAEoCUID4EEDEl4KIWV4",
-            "dGVybmFsX3Byb3RlY3Rpb25fbGV2ZWxfb3B0aW9ucxgRIAEoCzIzLmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuRXh0ZXJuYWxQcm90ZWN0aW9uTGV2ZWxPcHRpb25z",
-            "Eh4KEXJlaW1wb3J0X2VsaWdpYmxlGBIgASgIQgPgQQMi4gcKGUNyeXB0b0tl",
-            "eVZlcnNpb25BbGdvcml0aG0SLAooQ1JZUFRPX0tFWV9WRVJTSU9OX0FMR09S",
-            "SVRITV9VTlNQRUNJRklFRBAAEh8KG0dPT0dMRV9TWU1NRVRSSUNfRU5DUllQ",
-            "VElPThABEg8KC0FFU18xMjhfR0NNECkSDwoLQUVTXzI1Nl9HQ00QExIPCgtB",
-            "RVNfMTI4X0NCQxAqEg8KC0FFU18yNTZfQ0JDECsSDwoLQUVTXzEyOF9DVFIQ",
-            "LBIPCgtBRVNfMjU2X0NUUhAtEhwKGFJTQV9TSUdOX1BTU18yMDQ4X1NIQTI1",
-            "NhACEhwKGFJTQV9TSUdOX1BTU18zMDcyX1NIQTI1NhADEhwKGFJTQV9TSUdO",
-            "X1BTU180MDk2X1NIQTI1NhAEEhwKGFJTQV9TSUdOX1BTU180MDk2X1NIQTUx",
-            "MhAPEh4KGlJTQV9TSUdOX1BLQ1MxXzIwNDhfU0hBMjU2EAUSHgoaUlNBX1NJ",
-            "R05fUEtDUzFfMzA3Ml9TSEEyNTYQBhIeChpSU0FfU0lHTl9QS0NTMV80MDk2",
-            "X1NIQTI1NhAHEh4KGlJTQV9TSUdOX1BLQ1MxXzQwOTZfU0hBNTEyEBASGwoX",
-            "UlNBX1NJR05fUkFXX1BLQ1MxXzIwNDgQHBIbChdSU0FfU0lHTl9SQVdfUEtD",
-            "UzFfMzA3MhAdEhsKF1JTQV9TSUdOX1JBV19QS0NTMV80MDk2EB4SIAocUlNB",
-            "X0RFQ1JZUFRfT0FFUF8yMDQ4X1NIQTI1NhAIEiAKHFJTQV9ERUNSWVBUX09B",
-            "RVBfMzA3Ml9TSEEyNTYQCRIgChxSU0FfREVDUllQVF9PQUVQXzQwOTZfU0hB",
-            "MjU2EAoSIAocUlNBX0RFQ1JZUFRfT0FFUF80MDk2X1NIQTUxMhAREh4KGlJT",
-            "QV9ERUNSWVBUX09BRVBfMjA0OF9TSEExECUSHgoaUlNBX0RFQ1JZUFRfT0FF",
-            "UF8zMDcyX1NIQTEQJhIeChpSU0FfREVDUllQVF9PQUVQXzQwOTZfU0hBMRAn",
-            "EhcKE0VDX1NJR05fUDI1Nl9TSEEyNTYQDBIXChNFQ19TSUdOX1AzODRfU0hB",
-            "Mzg0EA0SHAoYRUNfU0lHTl9TRUNQMjU2SzFfU0hBMjU2EB8SEwoPRUNfU0lH",
-            "Tl9FRDI1NTE5ECgSDwoLSE1BQ19TSEEyNTYQIBINCglITUFDX1NIQTEQIRIP",
-            "CgtITUFDX1NIQTM4NBAiEg8KC0hNQUNfU0hBNTEyECMSDwoLSE1BQ19TSEEy",
-            "MjQQJBIhCh1FWFRFUk5BTF9TWU1NRVRSSUNfRU5DUllQVElPThASIpsCChVD",
-            "cnlwdG9LZXlWZXJzaW9uU3RhdGUSKAokQ1JZUFRPX0tFWV9WRVJTSU9OX1NU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASFgoSUEVORElOR19HRU5FUkFUSU9OEAUSCwoH",
-            "RU5BQkxFRBABEgwKCERJU0FCTEVEEAISDQoJREVTVFJPWUVEEAMSFQoRREVT",
-            "VFJPWV9TQ0hFRFVMRUQQBBISCg5QRU5ESU5HX0lNUE9SVBAGEhEKDUlNUE9S",
-            "VF9GQUlMRUQQBxIVChFHRU5FUkFUSU9OX0ZBSUxFRBAIEiAKHFBFTkRJTkdf",
-            "RVhURVJOQUxfREVTVFJVQ1RJT04QCRIfChtFWFRFUk5BTF9ERVNUUlVDVElP",
-            "Tl9GQUlMRUQQCiJJChRDcnlwdG9LZXlWZXJzaW9uVmlldxInCiNDUllQVE9f",
-            "S0VZX1ZFUlNJT05fVklFV19VTlNQRUNJRklFRBAAEggKBEZVTEwQATqqAepB",
-            "pgEKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24S",
-            "enByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlS",
-            "aW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0",
-            "b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259IpwDCglQdWJsaWNL",
-            "ZXkSCwoDcGVtGAEgASgJElIKCWFsZ29yaXRobRgCIAEoDjI/Lmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9u",
-            "QWxnb3JpdGhtEi8KCnBlbV9jcmMzMmMYAyABKAsyGy5nb29nbGUucHJvdG9i",
-            "dWYuSW50NjRWYWx1ZRIMCgRuYW1lGAQgASgJEj4KEHByb3RlY3Rpb25fbGV2",
-            "ZWwYBSABKA4yJC5nb29nbGUuY2xvdWQua21zLnYxLlByb3RlY3Rpb25MZXZl",
-            "bDquAepBqgEKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL1B1YmxpY0tleRKE",
-            "AXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlS",
-            "aW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0",
-            "b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259L3B1YmxpY0tleSLU",
-            "CAoJSW1wb3J0Sm9iEhEKBG5hbWUYASABKAlCA+BBAxJKCg1pbXBvcnRfbWV0",
-            "aG9kGAIgASgOMisuZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBvcnRKb2IuSW1w",
-            "b3J0TWV0aG9kQgbgQQLgQQUSRgoQcHJvdGVjdGlvbl9sZXZlbBgJIAEoDjIk",
-            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsQgbgQQLgQQUS",
-            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNgoNZ2VuZXJhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBpcmVfdGltZRgFIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI6ChFleHBpcmVfZXZlbnRf",
-            "dGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJB",
-            "CgVzdGF0ZRgGIAEoDjItLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9i",
-            "LkltcG9ydEpvYlN0YXRlQgPgQQMSSQoKcHVibGljX2tleRgHIAEoCzIwLmdv",
-            "b2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9iLldyYXBwaW5nUHVibGljS2V5",
-            "QgPgQQMSRgoLYXR0ZXN0YXRpb24YCCABKAsyLC5nb29nbGUuY2xvdWQua21z",
-            "LnYxLktleU9wZXJhdGlvbkF0dGVzdGF0aW9uQgPgQQMaIAoRV3JhcHBpbmdQ",
-            "dWJsaWNLZXkSCwoDcGVtGAEgASgJIuUBCgxJbXBvcnRNZXRob2QSHQoZSU1Q",
-            "T1JUX01FVEhPRF9VTlNQRUNJRklFRBAAEh4KGlJTQV9PQUVQXzMwNzJfU0hB",
-            "MV9BRVNfMjU2EAESHgoaUlNBX09BRVBfNDA5Nl9TSEExX0FFU18yNTYQAhIg",
-            "ChxSU0FfT0FFUF8zMDcyX1NIQTI1Nl9BRVNfMjU2EAMSIAocUlNBX09BRVBf",
-            "NDA5Nl9TSEEyNTZfQUVTXzI1NhAEEhgKFFJTQV9PQUVQXzMwNzJfU0hBMjU2",
-            "EAUSGAoUUlNBX09BRVBfNDA5Nl9TSEEyNTYQBiJjCg5JbXBvcnRKb2JTdGF0",
-            "ZRIgChxJTVBPUlRfSk9CX1NUQVRFX1VOU1BFQ0lGSUVEEAASFgoSUEVORElO",
-            "R19HRU5FUkFUSU9OEAESCgoGQUNUSVZFEAISCwoHRVhQSVJFRBADOnvqQXgK",
-            "IWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0ltcG9ydEpvYhJTcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlf",
-            "cmluZ30vaW1wb3J0Sm9icy97aW1wb3J0X2pvYn0iWwoeRXh0ZXJuYWxQcm90",
-            "ZWN0aW9uTGV2ZWxPcHRpb25zEhgKEGV4dGVybmFsX2tleV91cmkYASABKAkS",
-            "HwoXZWttX2Nvbm5lY3Rpb25fa2V5X3BhdGgYAiABKAkqagoPUHJvdGVjdGlv",
-            "bkxldmVsEiAKHFBST1RFQ1RJT05fTEVWRUxfVU5TUEVDSUZJRUQQABIMCghT",
-            "T0ZUV0FSRRABEgcKA0hTTRACEgwKCEVYVEVSTkFMEAMSEAoMRVhURVJOQUxf",
-            "VlBDEARCiAEKF2NvbS5nb29nbGUuY2xvdWQua21zLnYxQhFLbXNSZXNvdXJj",
-            "ZXNQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2ttcy9hcGl2MS9rbXNw",
-            "YjtrbXNwYvgBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xv",
-            "dWRcS21zXFYxYgZwcm90bzM="));
+            "AwoBKhJhCiBrZXlfYWNjZXNzX2p1c3RpZmljYXRpb25zX3BvbGljeRgRIAEo",
+            "CzIyLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5QWNjZXNzSnVzdGlmaWNhdGlv",
+            "bnNQb2xpY3lCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBIpoBChBDcnlwdG9LZXlQdXJwb3NlEiIKHkNSWVBU",
+            "T19LRVlfUFVSUE9TRV9VTlNQRUNJRklFRBAAEhMKD0VOQ1JZUFRfREVDUllQ",
+            "VBABEhMKD0FTWU1NRVRSSUNfU0lHThAFEhYKEkFTWU1NRVRSSUNfREVDUllQ",
+            "VBAGEhcKE1JBV19FTkNSWVBUX0RFQ1JZUFQQBxIHCgNNQUMQCTp76kF4CiFj",
+            "bG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jp",
+            "bmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9QhMKEXJvdGF0aW9uX3NjaGVk",
+            "dWxlIrMBChhDcnlwdG9LZXlWZXJzaW9uVGVtcGxhdGUSPgoQcHJvdGVjdGlv",
+            "bl9sZXZlbBgBIAEoDjIkLmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlv",
+            "bkxldmVsElcKCWFsZ29yaXRobRgDIAEoDjI/Lmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uQWxnb3JpdGht",
+            "QgPgQQIisQMKF0tleU9wZXJhdGlvbkF0dGVzdGF0aW9uElMKBmZvcm1hdBgE",
+            "IAEoDjI+Lmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5T3BlcmF0aW9uQXR0ZXN0",
+            "YXRpb24uQXR0ZXN0YXRpb25Gb3JtYXRCA+BBAxIUCgdjb250ZW50GAUgASgM",
+            "QgPgQQMSWAoLY2VydF9jaGFpbnMYBiABKAsyPi5nb29nbGUuY2xvdWQua21z",
+            "LnYxLktleU9wZXJhdGlvbkF0dGVzdGF0aW9uLkNlcnRpZmljYXRlQ2hhaW5z",
+            "QgPgQQMaZAoRQ2VydGlmaWNhdGVDaGFpbnMSFAoMY2F2aXVtX2NlcnRzGAEg",
+            "AygJEhkKEWdvb2dsZV9jYXJkX2NlcnRzGAIgAygJEh4KFmdvb2dsZV9wYXJ0",
+            "aXRpb25fY2VydHMYAyADKAkiawoRQXR0ZXN0YXRpb25Gb3JtYXQSIgoeQVRU",
+            "RVNUQVRJT05fRk9STUFUX1VOU1BFQ0lGSUVEEAASGAoUQ0FWSVVNX1YxX0NP",
+            "TVBSRVNTRUQQAxIYChRDQVZJVU1fVjJfQ09NUFJFU1NFRBAEIoETChBDcnlw",
+            "dG9LZXlWZXJzaW9uEhEKBG5hbWUYASABKAlCA+BBAxJKCgVzdGF0ZRgDIAEo",
+            "DjI7Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5Dcnlw",
+            "dG9LZXlWZXJzaW9uU3RhdGUSQwoQcHJvdGVjdGlvbl9sZXZlbBgHIAEoDjIk",
+            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsQgPgQQMSVwoJ",
+            "YWxnb3JpdGhtGAogASgOMj8uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9L",
+            "ZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNpb25BbGdvcml0aG1CA+BBAxJGCgth",
+            "dHRlc3RhdGlvbhgIIAEoCzIsLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5T3Bl",
+            "cmF0aW9uQXR0ZXN0YXRpb25CA+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI2Cg1nZW5lcmF0ZV90",
+            "aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjUK",
+            "DGRlc3Ryb3lfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI7ChJkZXN0cm95X2V2ZW50X3RpbWUYBiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFwoKaW1wb3J0X2pvYhgOIAEoCUID",
+            "4EEDEjQKC2ltcG9ydF90aW1lGA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEiIKFWltcG9ydF9mYWlsdXJlX3JlYXNvbhgQIAEoCUID",
+            "4EEDEiYKGWdlbmVyYXRpb25fZmFpbHVyZV9yZWFzb24YEyABKAlCA+BBAxIw",
+            "CiNleHRlcm5hbF9kZXN0cnVjdGlvbl9mYWlsdXJlX3JlYXNvbhgUIAEoCUID",
+            "4EEDEl4KIWV4dGVybmFsX3Byb3RlY3Rpb25fbGV2ZWxfb3B0aW9ucxgRIAEo",
+            "CzIzLmdvb2dsZS5jbG91ZC5rbXMudjEuRXh0ZXJuYWxQcm90ZWN0aW9uTGV2",
+            "ZWxPcHRpb25zEh4KEXJlaW1wb3J0X2VsaWdpYmxlGBIgASgIQgPgQQMi4gcK",
+            "GUNyeXB0b0tleVZlcnNpb25BbGdvcml0aG0SLAooQ1JZUFRPX0tFWV9WRVJT",
+            "SU9OX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEh8KG0dPT0dMRV9TWU1NRVRS",
+            "SUNfRU5DUllQVElPThABEg8KC0FFU18xMjhfR0NNECkSDwoLQUVTXzI1Nl9H",
+            "Q00QExIPCgtBRVNfMTI4X0NCQxAqEg8KC0FFU18yNTZfQ0JDECsSDwoLQUVT",
+            "XzEyOF9DVFIQLBIPCgtBRVNfMjU2X0NUUhAtEhwKGFJTQV9TSUdOX1BTU18y",
+            "MDQ4X1NIQTI1NhACEhwKGFJTQV9TSUdOX1BTU18zMDcyX1NIQTI1NhADEhwK",
+            "GFJTQV9TSUdOX1BTU180MDk2X1NIQTI1NhAEEhwKGFJTQV9TSUdOX1BTU180",
+            "MDk2X1NIQTUxMhAPEh4KGlJTQV9TSUdOX1BLQ1MxXzIwNDhfU0hBMjU2EAUS",
+            "HgoaUlNBX1NJR05fUEtDUzFfMzA3Ml9TSEEyNTYQBhIeChpSU0FfU0lHTl9Q",
+            "S0NTMV80MDk2X1NIQTI1NhAHEh4KGlJTQV9TSUdOX1BLQ1MxXzQwOTZfU0hB",
+            "NTEyEBASGwoXUlNBX1NJR05fUkFXX1BLQ1MxXzIwNDgQHBIbChdSU0FfU0lH",
+            "Tl9SQVdfUEtDUzFfMzA3MhAdEhsKF1JTQV9TSUdOX1JBV19QS0NTMV80MDk2",
+            "EB4SIAocUlNBX0RFQ1JZUFRfT0FFUF8yMDQ4X1NIQTI1NhAIEiAKHFJTQV9E",
+            "RUNSWVBUX09BRVBfMzA3Ml9TSEEyNTYQCRIgChxSU0FfREVDUllQVF9PQUVQ",
+            "XzQwOTZfU0hBMjU2EAoSIAocUlNBX0RFQ1JZUFRfT0FFUF80MDk2X1NIQTUx",
+            "MhAREh4KGlJTQV9ERUNSWVBUX09BRVBfMjA0OF9TSEExECUSHgoaUlNBX0RF",
+            "Q1JZUFRfT0FFUF8zMDcyX1NIQTEQJhIeChpSU0FfREVDUllQVF9PQUVQXzQw",
+            "OTZfU0hBMRAnEhcKE0VDX1NJR05fUDI1Nl9TSEEyNTYQDBIXChNFQ19TSUdO",
+            "X1AzODRfU0hBMzg0EA0SHAoYRUNfU0lHTl9TRUNQMjU2SzFfU0hBMjU2EB8S",
+            "EwoPRUNfU0lHTl9FRDI1NTE5ECgSDwoLSE1BQ19TSEEyNTYQIBINCglITUFD",
+            "X1NIQTEQIRIPCgtITUFDX1NIQTM4NBAiEg8KC0hNQUNfU0hBNTEyECMSDwoL",
+            "SE1BQ19TSEEyMjQQJBIhCh1FWFRFUk5BTF9TWU1NRVRSSUNfRU5DUllQVElP",
+            "ThASIpsCChVDcnlwdG9LZXlWZXJzaW9uU3RhdGUSKAokQ1JZUFRPX0tFWV9W",
+            "RVJTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASFgoSUEVORElOR19HRU5FUkFU",
+            "SU9OEAUSCwoHRU5BQkxFRBABEgwKCERJU0FCTEVEEAISDQoJREVTVFJPWUVE",
+            "EAMSFQoRREVTVFJPWV9TQ0hFRFVMRUQQBBISCg5QRU5ESU5HX0lNUE9SVBAG",
+            "EhEKDUlNUE9SVF9GQUlMRUQQBxIVChFHRU5FUkFUSU9OX0ZBSUxFRBAIEiAK",
+            "HFBFTkRJTkdfRVhURVJOQUxfREVTVFJVQ1RJT04QCRIfChtFWFRFUk5BTF9E",
+            "RVNUUlVDVElPTl9GQUlMRUQQCiJJChRDcnlwdG9LZXlWZXJzaW9uVmlldxIn",
+            "CiNDUllQVE9fS0VZX1ZFUlNJT05fVklFV19VTlNQRUNJRklFRBAAEggKBEZV",
+            "TEwQATqqAepBpgEKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
+            "eVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19r",
+            "ZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259IpwD",
+            "CglQdWJsaWNLZXkSCwoDcGVtGAEgASgJElIKCWFsZ29yaXRobRgCIAEoDjI/",
+            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9L",
+            "ZXlWZXJzaW9uQWxnb3JpdGhtEi8KCnBlbV9jcmMzMmMYAyABKAsyGy5nb29n",
+            "bGUucHJvdG9idWYuSW50NjRWYWx1ZRIMCgRuYW1lGAQgASgJEj4KEHByb3Rl",
+            "Y3Rpb25fbGV2ZWwYBSABKA4yJC5nb29nbGUuY2xvdWQua21zLnYxLlByb3Rl",
+            "Y3Rpb25MZXZlbDquAepBqgEKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL1B1",
+            "YmxpY0tleRKEAXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19r",
+            "ZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259L3B1",
+            "YmxpY0tleSLUCAoJSW1wb3J0Sm9iEhEKBG5hbWUYASABKAlCA+BBAxJKCg1p",
+            "bXBvcnRfbWV0aG9kGAIgASgOMisuZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBv",
+            "cnRKb2IuSW1wb3J0TWV0aG9kQgbgQQLgQQUSRgoQcHJvdGVjdGlvbl9sZXZl",
+            "bBgJIAEoDjIkLmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVs",
+            "QgbgQQLgQQUSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSNgoNZ2VuZXJhdGVfdGltZRgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBpcmVfdGltZRgF",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI6ChFleHBp",
+            "cmVfZXZlbnRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxJBCgVzdGF0ZRgGIAEoDjItLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "SW1wb3J0Sm9iLkltcG9ydEpvYlN0YXRlQgPgQQMSSQoKcHVibGljX2tleRgH",
+            "IAEoCzIwLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9iLldyYXBwaW5n",
+            "UHVibGljS2V5QgPgQQMSRgoLYXR0ZXN0YXRpb24YCCABKAsyLC5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLktleU9wZXJhdGlvbkF0dGVzdGF0aW9uQgPgQQMaIAoR",
+            "V3JhcHBpbmdQdWJsaWNLZXkSCwoDcGVtGAEgASgJIuUBCgxJbXBvcnRNZXRo",
+            "b2QSHQoZSU1QT1JUX01FVEhPRF9VTlNQRUNJRklFRBAAEh4KGlJTQV9PQUVQ",
+            "XzMwNzJfU0hBMV9BRVNfMjU2EAESHgoaUlNBX09BRVBfNDA5Nl9TSEExX0FF",
+            "U18yNTYQAhIgChxSU0FfT0FFUF8zMDcyX1NIQTI1Nl9BRVNfMjU2EAMSIAoc",
+            "UlNBX09BRVBfNDA5Nl9TSEEyNTZfQUVTXzI1NhAEEhgKFFJTQV9PQUVQXzMw",
+            "NzJfU0hBMjU2EAUSGAoUUlNBX09BRVBfNDA5Nl9TSEEyNTYQBiJjCg5JbXBv",
+            "cnRKb2JTdGF0ZRIgChxJTVBPUlRfSk9CX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "FgoSUEVORElOR19HRU5FUkFUSU9OEAESCgoGQUNUSVZFEAISCwoHRVhQSVJF",
+            "RBADOnvqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0ltcG9ydEpvYhJT",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJp",
+            "bmdzL3trZXlfcmluZ30vaW1wb3J0Sm9icy97aW1wb3J0X2pvYn0iWwoeRXh0",
+            "ZXJuYWxQcm90ZWN0aW9uTGV2ZWxPcHRpb25zEhgKEGV4dGVybmFsX2tleV91",
+            "cmkYASABKAkSHwoXZWttX2Nvbm5lY3Rpb25fa2V5X3BhdGgYAiABKAkiYgod",
+            "S2V5QWNjZXNzSnVzdGlmaWNhdGlvbnNQb2xpY3kSQQoWYWxsb3dlZF9hY2Nl",
+            "c3NfcmVhc29ucxgBIAMoDjIhLmdvb2dsZS5jbG91ZC5rbXMudjEuQWNjZXNz",
+            "UmVhc29uKmoKD1Byb3RlY3Rpb25MZXZlbBIgChxQUk9URUNUSU9OX0xFVkVM",
+            "X1VOU1BFQ0lGSUVEEAASDAoIU09GVFdBUkUQARIHCgNIU00QAhIMCghFWFRF",
+            "Uk5BTBADEhAKDEVYVEVSTkFMX1ZQQxAEKqsDCgxBY2Nlc3NSZWFzb24SFgoS",
+            "UkVBU09OX1VOU1BFQ0lGSUVEEAASHgoaQ1VTVE9NRVJfSU5JVElBVEVEX1NV",
+            "UFBPUlQQARIcChhHT09HTEVfSU5JVElBVEVEX1NFUlZJQ0UQAhIcChhUSElS",
+            "RF9QQVJUWV9EQVRBX1JFUVVFU1QQAxIbChdHT09HTEVfSU5JVElBVEVEX1JF",
+            "VklFVxAEEh0KGUNVU1RPTUVSX0lOSVRJQVRFRF9BQ0NFU1MQBRIlCiFHT09H",
+            "TEVfSU5JVElBVEVEX1NZU1RFTV9PUEVSQVRJT04QBhIXChNSRUFTT05fTk9U",
+            "X0VYUEVDVEVEEAcSJgoiTU9ESUZJRURfQ1VTVE9NRVJfSU5JVElBVEVEX0FD",
+            "Q0VTUxAIEi4KKk1PRElGSUVEX0dPT0dMRV9JTklUSUFURURfU1lTVEVNX09Q",
+            "RVJBVElPThAJEicKI0dPT0dMRV9SRVNQT05TRV9UT19QUk9EVUNUSU9OX0FM",
+            "RVJUEAoSKgomQ1VTVE9NRVJfQVVUSE9SSVpFRF9XT1JLRkxPV19TRVJWSUNJ",
+            "TkcQC0KIAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMudjFCEUttc1Jlc291cmNl",
+            "c1Byb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28va21zL2FwaXYxL2ttc3Bi",
+            "O2ttc3Bi+AEBqgITR29vZ2xlLkNsb3VkLkttcy5WMcoCE0dvb2dsZVxDbG91",
+            "ZFxLbXNcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), typeof(global::Google.Cloud.Kms.V1.AccessReason), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyRing), global::Google.Cloud.Kms.V1.KeyRing.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "VersionTemplate", "Labels", "ImportOnly", "DestroyScheduledDuration", "CryptoKeyBackend" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "VersionTemplate", "Labels", "ImportOnly", "DestroyScheduledDuration", "CryptoKeyBackend", "KeyAccessJustificationsPolicy" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate), global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate.Parser, new[]{ "ProtectionLevel", "Algorithm" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation), global::Google.Cloud.Kms.V1.KeyOperationAttestation.Parser, new[]{ "Format", "Content", "CertChains" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.CertificateChains), global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.CertificateChains.Parser, new[]{ "CaviumCerts", "GoogleCardCerts", "GooglePartitionCerts" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser, new[]{ "Name", "State", "ProtectionLevel", "Algorithm", "Attestation", "CreateTime", "GenerateTime", "DestroyTime", "DestroyEventTime", "ImportJob", "ImportTime", "ImportFailureReason", "GenerationFailureReason", "ExternalDestructionFailureReason", "ExternalProtectionLevelOptions", "ReimportEligible" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.PublicKey), global::Google.Cloud.Kms.V1.PublicKey.Parser, new[]{ "Pem", "Algorithm", "PemCrc32C", "Name", "ProtectionLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob), global::Google.Cloud.Kms.V1.ImportJob.Parser, new[]{ "Name", "ImportMethod", "ProtectionLevel", "CreateTime", "GenerateTime", "ExpireTime", "ExpireEventTime", "State", "PublicKey", "Attestation" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportMethod), typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportJobState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey), global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey.Parser, new[]{ "Pem" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions), global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions.Parser, new[]{ "ExternalKeyUri", "EkmConnectionKeyPath" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions), global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions.Parser, new[]{ "ExternalKeyUri", "EkmConnectionKeyPath" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy), global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy.Parser, new[]{ "AllowedAccessReasons" }, null, null, null, null)
           }));
     }
     #endregion
@@ -207,6 +222,88 @@ namespace Google.Cloud.Kms.V1 {
     /// Crypto operations are performed in an EKM-over-VPC backend.
     /// </summary>
     [pbr::OriginalName("EXTERNAL_VPC")] ExternalVpc = 4,
+  }
+
+  /// <summary>
+  /// Describes the reason for a data access. Please refer to
+  /// https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-codes
+  /// for the detailed semantic meaning of justification reason codes.
+  /// </summary>
+  public enum AccessReason {
+    /// <summary>
+    /// Unspecified access reason.
+    /// </summary>
+    [pbr::OriginalName("REASON_UNSPECIFIED")] ReasonUnspecified = 0,
+    /// <summary>
+    /// Customer-initiated support.
+    /// </summary>
+    [pbr::OriginalName("CUSTOMER_INITIATED_SUPPORT")] CustomerInitiatedSupport = 1,
+    /// <summary>
+    /// Google-initiated access for system management and troubleshooting.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_INITIATED_SERVICE")] GoogleInitiatedService = 2,
+    /// <summary>
+    /// Google-initiated access in response to a legal request or legal process.
+    /// </summary>
+    [pbr::OriginalName("THIRD_PARTY_DATA_REQUEST")] ThirdPartyDataRequest = 3,
+    /// <summary>
+    /// Google-initiated access for security, fraud, abuse, or compliance purposes.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_INITIATED_REVIEW")] GoogleInitiatedReview = 4,
+    /// <summary>
+    /// Customer uses their account to perform any access to their own data which
+    /// their IAM policy authorizes.
+    /// </summary>
+    [pbr::OriginalName("CUSTOMER_INITIATED_ACCESS")] CustomerInitiatedAccess = 5,
+    /// <summary>
+    /// Google systems access customer data to help optimize the structure of the
+    /// data or quality for future uses by the customer.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_INITIATED_SYSTEM_OPERATION")] GoogleInitiatedSystemOperation = 6,
+    /// <summary>
+    /// No reason is expected for this key request.
+    /// </summary>
+    [pbr::OriginalName("REASON_NOT_EXPECTED")] ReasonNotExpected = 7,
+    /// <summary>
+    /// Customer uses their account to perform any access to their own data which
+    /// their IAM policy authorizes, and one of the following is true:
+    ///
+    /// * A Google administrator has reset the root-access account associated with
+    ///   the user's organization within the past 7 days.
+    /// * A Google-initiated emergency access operation has interacted with a
+    ///   resource in the same project or folder as the currently accessed resource
+    ///   within the past 7 days.
+    /// </summary>
+    [pbr::OriginalName("MODIFIED_CUSTOMER_INITIATED_ACCESS")] ModifiedCustomerInitiatedAccess = 8,
+    /// <summary>
+    /// Google systems access customer data to help optimize the structure of the
+    /// data or quality for future uses by the customer, and one of the following
+    /// is true:
+    ///
+    /// * A Google administrator has reset the root-access account associated with
+    ///   the user's organization within the past 7 days.
+    /// * A Google-initiated emergency access operation has interacted with a
+    ///   resource in the same project or folder as the currently accessed resource
+    ///   within the past 7 days.
+    /// </summary>
+    [pbr::OriginalName("MODIFIED_GOOGLE_INITIATED_SYSTEM_OPERATION")] ModifiedGoogleInitiatedSystemOperation = 9,
+    /// <summary>
+    /// Google-initiated access to maintain system reliability.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_RESPONSE_TO_PRODUCTION_ALERT")] GoogleResponseToProductionAlert = 10,
+    /// <summary>
+    /// One of the following operations is being executed while simultaneously
+    /// encountering an internal technical issue which prevented a more precise
+    /// justification code from being generated:
+    ///
+    /// * Your account has been used to perform any access to your own data which
+    ///   your IAM policy authorizes.
+    /// * An automated Google system operates on encrypted customer data which your
+    ///   IAM policy authorizes.
+    /// * Customer-initiated Google support access.
+    /// * Google-initiated support access to protect system reliability.
+    /// </summary>
+    [pbr::OriginalName("CUSTOMER_AUTHORIZED_WORKFLOW_SERVICING")] CustomerAuthorizedWorkflowServicing = 11,
   }
 
   #endregion
@@ -514,6 +611,7 @@ namespace Google.Cloud.Kms.V1 {
       importOnly_ = other.importOnly_;
       destroyScheduledDuration_ = other.destroyScheduledDuration_ != null ? other.destroyScheduledDuration_.Clone() : null;
       cryptoKeyBackend_ = other.cryptoKeyBackend_;
+      keyAccessJustificationsPolicy_ = other.keyAccessJustificationsPolicy_ != null ? other.keyAccessJustificationsPolicy_.Clone() : null;
       switch (other.RotationScheduleCase) {
         case RotationScheduleOneofCase.RotationPeriod:
           RotationPeriod = other.RotationPeriod.Clone();
@@ -754,6 +852,28 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "key_access_justifications_policy" field.</summary>
+    public const int KeyAccessJustificationsPolicyFieldNumber = 17;
+    private global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy keyAccessJustificationsPolicy_;
+    /// <summary>
+    /// Optional. The policy used for Key Access Justifications Policy Enforcement.
+    /// If this field is present and this key is enrolled in Key Access
+    /// Justifications Policy Enforcement, the policy will be evaluated in encrypt,
+    /// decrypt, and sign operations, and the operation will fail if rejected by
+    /// the policy. The policy is defined by specifying zero or more allowed
+    /// justification codes.
+    /// https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-codes
+    /// By default, this field is absent, and all justification codes are allowed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy KeyAccessJustificationsPolicy {
+      get { return keyAccessJustificationsPolicy_; }
+      set {
+        keyAccessJustificationsPolicy_ = value;
+      }
+    }
+
     private object rotationSchedule_;
     /// <summary>Enum of possible cases for the "rotation_schedule" oneof.</summary>
     public enum RotationScheduleOneofCase {
@@ -800,6 +920,7 @@ namespace Google.Cloud.Kms.V1 {
       if (ImportOnly != other.ImportOnly) return false;
       if (!object.Equals(DestroyScheduledDuration, other.DestroyScheduledDuration)) return false;
       if (CryptoKeyBackend != other.CryptoKeyBackend) return false;
+      if (!object.Equals(KeyAccessJustificationsPolicy, other.KeyAccessJustificationsPolicy)) return false;
       if (RotationScheduleCase != other.RotationScheduleCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -819,6 +940,7 @@ namespace Google.Cloud.Kms.V1 {
       if (ImportOnly != false) hash ^= ImportOnly.GetHashCode();
       if (destroyScheduledDuration_ != null) hash ^= DestroyScheduledDuration.GetHashCode();
       if (CryptoKeyBackend.Length != 0) hash ^= CryptoKeyBackend.GetHashCode();
+      if (keyAccessJustificationsPolicy_ != null) hash ^= KeyAccessJustificationsPolicy.GetHashCode();
       hash ^= (int) rotationScheduleCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -879,6 +1001,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(122);
         output.WriteString(CryptoKeyBackend);
       }
+      if (keyAccessJustificationsPolicy_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(KeyAccessJustificationsPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -930,6 +1056,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(122);
         output.WriteString(CryptoKeyBackend);
       }
+      if (keyAccessJustificationsPolicy_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(KeyAccessJustificationsPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -970,6 +1100,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (CryptoKeyBackend.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CryptoKeyBackend);
+      }
+      if (keyAccessJustificationsPolicy_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KeyAccessJustificationsPolicy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1025,6 +1158,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.CryptoKeyBackend.Length != 0) {
         CryptoKeyBackend = other.CryptoKeyBackend;
+      }
+      if (other.keyAccessJustificationsPolicy_ != null) {
+        if (keyAccessJustificationsPolicy_ == null) {
+          KeyAccessJustificationsPolicy = new global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy();
+        }
+        KeyAccessJustificationsPolicy.MergeFrom(other.KeyAccessJustificationsPolicy);
       }
       switch (other.RotationScheduleCase) {
         case RotationScheduleOneofCase.RotationPeriod:
@@ -1114,6 +1253,13 @@ namespace Google.Cloud.Kms.V1 {
             CryptoKeyBackend = input.ReadString();
             break;
           }
+          case 138: {
+            if (keyAccessJustificationsPolicy_ == null) {
+              KeyAccessJustificationsPolicy = new global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy();
+            }
+            input.ReadMessage(KeyAccessJustificationsPolicy);
+            break;
+          }
         }
       }
     #endif
@@ -1191,6 +1337,13 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 122: {
             CryptoKeyBackend = input.ReadString();
+            break;
+          }
+          case 138: {
+            if (keyAccessJustificationsPolicy_ == null) {
+              KeyAccessJustificationsPolicy = new global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy();
+            }
+            input.ReadMessage(KeyAccessJustificationsPolicy);
             break;
           }
         }
@@ -4893,6 +5046,201 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 18: {
             EkmConnectionKeyPath = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A
+  /// [KeyAccessJustificationsPolicy][google.cloud.kms.v1.KeyAccessJustificationsPolicy]
+  /// specifies zero or more allowed
+  /// [AccessReason][google.cloud.kms.v1.AccessReason] values for encrypt, decrypt,
+  /// and sign operations on a [CryptoKey][google.cloud.kms.v1.CryptoKey].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class KeyAccessJustificationsPolicy : pb::IMessage<KeyAccessJustificationsPolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KeyAccessJustificationsPolicy> _parser = new pb::MessageParser<KeyAccessJustificationsPolicy>(() => new KeyAccessJustificationsPolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KeyAccessJustificationsPolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyAccessJustificationsPolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyAccessJustificationsPolicy(KeyAccessJustificationsPolicy other) : this() {
+      allowedAccessReasons_ = other.allowedAccessReasons_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyAccessJustificationsPolicy Clone() {
+      return new KeyAccessJustificationsPolicy(this);
+    }
+
+    /// <summary>Field number for the "allowed_access_reasons" field.</summary>
+    public const int AllowedAccessReasonsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Kms.V1.AccessReason> _repeated_allowedAccessReasons_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.Kms.V1.AccessReason) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Kms.V1.AccessReason> allowedAccessReasons_ = new pbc::RepeatedField<global::Google.Cloud.Kms.V1.AccessReason>();
+    /// <summary>
+    /// The list of allowed reasons for access to a
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. Zero allowed access reasons
+    /// means all encrypt, decrypt, and sign operations for the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with this policy will
+    /// fail.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Kms.V1.AccessReason> AllowedAccessReasons {
+      get { return allowedAccessReasons_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KeyAccessJustificationsPolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KeyAccessJustificationsPolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!allowedAccessReasons_.Equals(other.allowedAccessReasons_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= allowedAccessReasons_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      allowedAccessReasons_.WriteTo(output, _repeated_allowedAccessReasons_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      allowedAccessReasons_.WriteTo(ref output, _repeated_allowedAccessReasons_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += allowedAccessReasons_.CalculateSize(_repeated_allowedAccessReasons_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KeyAccessJustificationsPolicy other) {
+      if (other == null) {
+        return;
+      }
+      allowedAccessReasons_.Add(other.allowedAccessReasons_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            allowedAccessReasons_.AddEntriesFrom(input, _repeated_allowedAccessReasons_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            allowedAccessReasons_.AddEntriesFrom(ref input, _repeated_allowedAccessReasons_codec);
             break;
           }
         }
