@@ -413,7 +413,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -424,7 +423,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -435,7 +433,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -446,7 +443,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which the folder will reside. The bucket
@@ -478,7 +474,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which the folder will reside. The bucket
@@ -510,7 +505,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which the folder will reside. The bucket
@@ -537,7 +531,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which the folder will reside. The bucket
@@ -569,7 +562,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which the folder will reside. The bucket
@@ -601,7 +593,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which the folder will reside. The bucket
@@ -628,7 +619,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -639,7 +629,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -650,7 +639,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -661,7 +649,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -678,7 +665,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -695,7 +681,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -709,7 +694,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -726,7 +710,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -743,7 +726,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -757,7 +739,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -768,7 +749,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -779,7 +759,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -790,7 +769,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -807,7 +785,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -824,7 +801,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -838,7 +814,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -855,7 +830,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -872,7 +846,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the folder.
@@ -886,7 +859,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -897,7 +869,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -908,7 +879,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for folders. The bucket must
@@ -935,7 +905,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for folders. The bucket must
@@ -962,7 +931,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for folders. The bucket must
@@ -989,7 +957,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for folders. The bucket must
@@ -1018,7 +985,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1031,7 +997,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1044,7 +1009,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1083,7 +1047,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the source folder being renamed.
@@ -1106,7 +1069,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the source folder being renamed.
@@ -1129,7 +1091,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the source folder being renamed.
@@ -1148,7 +1109,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the source folder being renamed.
@@ -1171,7 +1131,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the source folder being renamed.
@@ -1194,7 +1153,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the source folder being renamed.
@@ -1966,7 +1924,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1985,7 +1942,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
         /// namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2004,7 +1960,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2023,7 +1978,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Permanently deletes an empty folder. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2042,7 +1996,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2061,7 +2014,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Returns metadata for the specified folder. This operation is only
         /// applicable to a hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2080,7 +2032,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2094,7 +2045,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
         /// hierarchical namespace enabled bucket.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2113,7 +2063,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2134,7 +2083,6 @@ namespace Google.Cloud.Storage.Control.V2
         /// applicable to a hierarchical namespace enabled bucket. During a rename, the
         /// source and destination folders are locked until the long running operation
         /// completes.
-        /// Hierarchical namespace buckets are in allowlist preview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
