@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.0.1, released 2024-06-20
+
+No API surface changes; this release is purely to publish
+documentation which did not happen in the 1.0.0 release.
+
 ## Version 1.0.0, released 2024-06-18
 
 No API surface changes; just dependency updates and promotion to GA.
