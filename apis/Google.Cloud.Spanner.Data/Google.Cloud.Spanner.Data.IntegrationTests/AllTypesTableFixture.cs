@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Protobuf.WellKnownTypes;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
@@ -46,6 +47,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  TimestampValue,
                  {EmptyOnEmulator("JsonValue,")}
                  DateValue,
+                 ProtobufValueValue,
+                 ProtobufDurationValue,
                  BoolArrayValue,
                  Int64ArrayValue,
                  {EmptyOnEmulator("Float32ArrayValue,")}
@@ -56,7 +59,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  BytesArrayValue,
                  TimestampArrayValue,
                  {EmptyOnEmulator("JsonArrayValue,")}
-                 DateArrayValue) VALUES(
+                 DateArrayValue,
+                 ProtobufValueArrayValue,
+                 ProtobufDurationArrayValue) VALUES(
                  @K,
                  @BoolValue,
                  @Int64Value,
@@ -68,6 +73,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @TimestampValue,
                  {EmptyOnEmulator("@JsonValue,")}
                  @DateValue,
+                 @ProtobufValueValue,
+                 @ProtobufDurationValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
                  {EmptyOnEmulator("@Float32ArrayValue,")}
@@ -78,34 +85,40 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @BytesArrayValue,
                  @TimestampArrayValue,
                  {EmptyOnEmulator("@JsonArrayValue,")}
-                 @DateArrayValue
+                 @DateArrayValue,
+                 @ProtobufValueArrayValue,
+                 @ProtobufDurationArrayValue
                )";
 
         // Note: the emulator doesn't yet support the JSON type.
         protected override void CreateTable() =>
             ExecuteDdl($@"CREATE TABLE {TableName}(
-                            K                   STRING(MAX) NOT NULL,
-                            BoolValue           BOOL,
-                            Int64Value          INT64,
-                            {EmptyOnEmulator("Float32Value        FLOAT32,")}
-                            Float64Value        FLOAT64,
-                            StringValue         STRING(MAX),
-                            NumericValue        NUMERIC,
-                            BytesValue          BYTES(MAX),
-                            TimestampValue      TIMESTAMP,
-                            {EmptyOnEmulator("JsonValue      JSON,")}
-                            DateValue           DATE,
-                            BoolArrayValue      ARRAY<BOOL>,
-                            Int64ArrayValue     ARRAY<INT64>,
-                            {EmptyOnEmulator("Float32ArrayValue   ARRAY<FLOAT32>,")}
-                            Float64ArrayValue   ARRAY<FLOAT64>,
-                            NumericArrayValue   ARRAY<NUMERIC>,
-                            StringArrayValue    ARRAY<STRING(MAX)>,
-                            Base64ArrayValue    ARRAY<BYTES(MAX)>,
-                            BytesArrayValue     ARRAY<BYTES(MAX)>,
-                            TimestampArrayValue ARRAY<TIMESTAMP>,
-                            {EmptyOnEmulator("JsonArrayValue      ARRAY<JSON>,")}
-                            DateArrayValue      ARRAY<DATE>
+                            K                                       STRING(MAX) NOT NULL,
+                            BoolValue                               BOOL,
+                            Int64Value                              INT64,
+                            {EmptyOnEmulator("Float32Value          FLOAT32,")}
+                            Float64Value                            FLOAT64,
+                            StringValue                             STRING(MAX),
+                            NumericValue                            NUMERIC,
+                            BytesValue                              BYTES(MAX),
+                            TimestampValue                          TIMESTAMP,
+                            {EmptyOnEmulator("JsonValue             JSON,")}
+                            DateValue                               DATE,
+                            ProtobufValueValue                      {Value.Descriptor.FullName},
+                            ProtobufDurationValue                   {Duration.Descriptor.FullName},
+                            BoolArrayValue                          ARRAY<BOOL>,
+                            Int64ArrayValue                         ARRAY<INT64>,
+                            {EmptyOnEmulator("Float32ArrayValue     ARRAY<FLOAT32>,")}
+                            Float64ArrayValue                       ARRAY<FLOAT64>,
+                            NumericArrayValue                       ARRAY<NUMERIC>,
+                            StringArrayValue                        ARRAY<STRING(MAX)>,
+                            Base64ArrayValue                        ARRAY<BYTES(MAX)>,
+                            BytesArrayValue                         ARRAY<BYTES(MAX)>,
+                            TimestampArrayValue                     ARRAY<TIMESTAMP>,
+                            {EmptyOnEmulator("JsonArrayValue        ARRAY<JSON>,")}
+                            DateArrayValue                          ARRAY<DATE>,
+                            ProtobufValueArrayValue                 ARRAY<{Value.Descriptor.FullName}>,
+                            ProtobufDurationArrayValue              ARRAY<{Duration.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 
         private string EmptyOnEmulator(string text) => RunningOnEmulator ? "" : text;

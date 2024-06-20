@@ -488,7 +488,77 @@ namespace Google.Cloud.Spanner.Data.Tests
                 $"[ {s_sampleStructSerialized}, [ \"4\", \"5\", \"6\" ] ]",
                 TestType.ClrToValue
             };
+
+            var duration10s = Duration.FromTimeSpan(TimeSpan.FromSeconds(10));
+            var duration20s = Duration.FromTimeSpan(TimeSpan.FromSeconds(20));
+            var duration10sWire = Value.ForString(Convert.ToBase64String(duration10s.ToByteArray()));
+            var duration20sWire = Value.ForString(Convert.ToBase64String(duration20s.ToByteArray()));
+            var trueValue = Value.ForBool(true);
+            var falseValue = Value.ForBool(false);
+            var trueValueWire = Value.ForString(Convert.ToBase64String(trueValue.ToByteArray()));
+            var falseValueWire = Value.ForString(Convert.ToBase64String(falseValue.ToByteArray()));
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                duration10s,
+                SpannerDbType.FromClrType(typeof(Duration)),
+                duration10sWire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                duration10sWire,
+                SpannerDbType.ForProtobuf(Duration.Descriptor.FullName),
+                duration10sWire.ToString(),
+            };
+            yield return new object[]
+            {   // Value is being itself used as a type.
+                trueValue,
+                SpannerDbType.FromClrType(typeof(Value)),
+                trueValueWire.ToString(),
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Duration>{ duration10s, duration20s },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+                $"[ {duration10sWire}, {duration20sWire} ]",
+            };
+            yield return new object[]
+            {   // The values is serialized/deserialized by calling code.
+                new List<Value> { duration10sWire, duration20sWire },
+                SpannerDbType.ArrayOf(SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)),
+                $"[ {duration10sWire}, {duration20sWire} ]",
+            };
+            yield return new object[]
+            {   // Value is being itself used as a type.
+                new List<Value> { trueValue, falseValue },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+                $"[ {trueValueWire}, {falseValueWire} ]",
+            };
         }
+
+        public static TheoryData<object, Value, SpannerDbType, System.Type> ProtobufConversions => new TheoryData<object, Value, SpannerDbType, System.Type>
+        {
+             //CLR value, wire value, SpannerDbType, CLR type
+            {   // We perform automatic serialization/deserialization.
+                Duration.FromTimeSpan(TimeSpan.FromSeconds(10)),
+                Value.ForString(Convert.ToBase64String(Duration.FromTimeSpan(TimeSpan.FromSeconds(10)).ToByteArray())),
+                SpannerDbType.FromClrType(typeof(Duration)),
+                typeof(Duration)
+            },
+            {   // The value is serialized/deserialized by calling code.
+                Value.ForString(Convert.ToBase64String(Duration.FromTimeSpan(TimeSpan.FromSeconds(10)).ToByteArray())),
+                Value.ForString(Convert.ToBase64String(Duration.FromTimeSpan(TimeSpan.FromSeconds(10)).ToByteArray())),
+                SpannerDbType.ForProtobuf(Duration.Descriptor.FullName),
+                typeof(Value)
+            },
+            {   // Value is being itself used as a type.
+                Value.ForBool(true),
+                Value.ForString(Convert.ToBase64String(Value.ForBool(true).ToByteArray())),
+                SpannerDbType.FromClrType(typeof(Value)),
+                typeof(Value)
+            }
+        };
 
         public static IEnumerable<object[]> GetInvalidValueConversions()
         {

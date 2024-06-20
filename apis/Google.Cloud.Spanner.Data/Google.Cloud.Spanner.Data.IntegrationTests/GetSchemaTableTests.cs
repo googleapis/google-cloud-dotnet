@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,6 +85,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
                 { "DateValue", typeof(DateTime), SpannerDbType.Date },
+                { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
+                { "ProtobufDurationValue", typeof(Value), SpannerDbType.FromClrType(typeof(Duration)) },
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
                 { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
@@ -93,7 +96,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Base64ArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
-                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) }
+                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
+                { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
+                { "ProtobufDurationArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) },
             };
 
         internal static async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(string columnName, System.Type type, SpannerDbType spannerDbType, string connectionString, string selectQuery)

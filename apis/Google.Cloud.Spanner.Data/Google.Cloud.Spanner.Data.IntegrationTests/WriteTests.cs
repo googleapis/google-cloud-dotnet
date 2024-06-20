@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,6 +85,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "TimestampValue", SpannerDbType.Timestamp, null },
                 { "DateValue", SpannerDbType.Date, null },
                 { "NumericValue", SpannerDbType.Numeric, null },
+                { "ProtobufValueValue", SpannerDbType.FromClrType(typeof(Value)), null },
+                { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), null },
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null },
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), null },
                 { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), null },
@@ -92,7 +95,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), null },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), null },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null },
-                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null }
+                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null },
+                { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), null },
+                { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), null },
             };
 
             // The emulator doesn't yet support the JSON type.
@@ -115,6 +120,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufDurationValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64ArrayValue")));
@@ -124,6 +131,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufDurationArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32Value")));
@@ -160,6 +169,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             DateTime?[] dtArray = { new DateTime(2017, 3, 17), null, new DateTime(2017, 5, 9) };
             DateTime?[] tmArray = { new DateTime(2017, 3, 17, 5, 30, 0), null, new DateTime(2017, 5, 9, 12, 45, 0) };
 
+            Value[] pvArray = { Value.ForNumber(10), null, Value.ForString("Hello") };
+            Duration[] pdArray = { Duration.FromTimeSpan(TimeSpan.FromHours(1)), null, Duration.FromTimeSpan(TimeSpan.FromSeconds(10)) };
+
             var parameters = new SpannerParameterCollection
             {
                 { "BoolValue", SpannerDbType.Bool, true },
@@ -170,6 +182,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "TimestampValue", SpannerDbType.Timestamp, testTimestamp },
                 { "DateValue", SpannerDbType.Date, testDate },
                 { "NumericValue", SpannerDbType.Numeric, SpannerNumeric.Parse("2.0") },
+                { "ProtobufValueValue", SpannerDbType.FromClrType(typeof(Value)), Value.ForString("Hello") },
+                { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), Duration.FromTimeSpan(TimeSpan.FromHours(1)) },
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), bArray },
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), lArray },
                 { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), dArray },
@@ -178,7 +192,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), byteArray },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), tmArray },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), dtArray },
-                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray }
+                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray },
+                { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), pvArray },
+                { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), pdArray },
             };
 
             // The emulator doesn't yet support the JSON type.
@@ -205,6 +221,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
                 Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
+                Assert.Equal(Value.ForString("Hello"), reader.GetFieldValue<Value>(reader.GetOrdinal("ProtobufValueValue")));
+                Assert.Equal(Duration.FromTimeSpan(TimeSpan.FromHours(1)), reader.GetFieldValue<Duration>(reader.GetOrdinal("ProtobufDurationValue")));
                 Assert.Equal(bArray, reader.GetFieldValue<bool?[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(lArray, reader.GetFieldValue<long?[]>(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.Equal(dArray, reader.GetFieldValue<double?[]>(reader.GetOrdinal("Float64ArrayValue")));
@@ -214,6 +232,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(tmArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(dtArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
                 Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
+                Assert.Equal(pvArray, reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
+                Assert.Equal(pdArray, reader.GetFieldValue<Duration[]>(reader.GetOrdinal("ProtobufDurationArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
                     Assert.Equal(2.718f, reader.GetFieldValue<float>(reader.GetOrdinal("Float32Value")), 3);
@@ -294,7 +314,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), new byte[0][] },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), new DateTime[0] },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), new DateTime[0] },
-                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0] }
+                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0] },
+                { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), new Value[0] },
+                { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), new Duration[0] }
             };
 
             // The emulator doesn't yet support the JSON type.
@@ -316,6 +338,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
                 Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
+                Assert.Equal(new Value[] { }, reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
+                Assert.Equal(new Duration[] { }, reader.GetFieldValue<Duration[]>(reader.GetOrdinal("ProtobufDurationArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
                     Assert.Equal(new float[] { }, reader.GetFieldValue<float[]>(reader.GetOrdinal("Float32ArrayValue")));
