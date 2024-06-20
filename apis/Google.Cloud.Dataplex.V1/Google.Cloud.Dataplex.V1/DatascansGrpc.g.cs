@@ -277,7 +277,10 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// Generates recommended data quality rules based on the results of a data
+      /// profiling scan.
+      ///
+      /// Use the recommendations to build rules for a data quality scan.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -702,7 +705,10 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataScanJobs, null, options, request);
       }
       /// <summary>
-      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// Generates recommended data quality rules based on the results of a data
+      /// profiling scan.
+      ///
+      /// Use the recommendations to build rules for a data quality scan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -715,7 +721,10 @@ namespace Google.Cloud.Dataplex.V1 {
         return GenerateDataQualityRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// Generates recommended data quality rules based on the results of a data
+      /// profiling scan.
+      ///
+      /// Use the recommendations to build rules for a data quality scan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -726,7 +735,10 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateDataQualityRules, null, options, request);
       }
       /// <summary>
-      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// Generates recommended data quality rules based on the results of a data
+      /// profiling scan.
+      ///
+      /// Use the recommendations to build rules for a data quality scan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -739,7 +751,10 @@ namespace Google.Cloud.Dataplex.V1 {
         return GenerateDataQualityRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// Generates recommended data quality rules based on the results of a data
+      /// profiling scan.
+      ///
+      /// Use the recommendations to build rules for a data quality scan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
