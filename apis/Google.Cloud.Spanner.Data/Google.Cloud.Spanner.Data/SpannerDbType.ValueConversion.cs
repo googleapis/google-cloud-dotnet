@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
@@ -210,7 +211,26 @@ namespace Google.Cloud.Spanner.Data
                         };
                     }
                     throw new ArgumentException("Struct parameters must be of type SpannerStruct");
-
+                case TypeCode.Proto:
+                    // We have two cases here:
+                    // 1. The value is of type Value but the ProtobufTypeName is not.
+                    //    In that case we assume calling code has serialized the protobuf value
+                    //    correctly in value and we return that.
+                    // 2. The value is of a protobuf message type, including Value being itself used as a type.
+                    //    We serialize the value ourselves.
+                    //    Note we don't validate that ProtobufTypeName matches the actual protobuf type.
+                    //    Spanner will if it cannot convert this value to the expected type.
+                    if (value is Value maybeWireValue
+                        && ProtobufTypeName != Value.Descriptor.FullName
+                        && maybeWireValue.KindCase == Value.KindOneofCase.StringValue)
+                    {
+                        return maybeWireValue;
+                    }
+                    if (value is IMessage message)
+                    {
+                        return Value.ForString(Convert.ToBase64String(message.ToByteArray()));
+                    }
+                    throw new ArgumentException($"Proto parameters must implement {typeof(IMessage).FullName}");
                 case TypeCode.Numeric:
                     if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
                     {
@@ -275,9 +295,11 @@ namespace Google.Cloud.Spanner.Data
 
         private object ConvertToClrTypeImpl(Value wireValue, System.Type targetClrType, SpannerConversionOptions options)
         {
-            //If the wireValue itself is assignable to the target type, just return it
-            //This covers both typeof(Value) and typeof(object).
-            if (wireValue == null || targetClrType == null || targetClrType == typeof(Value))
+            // If the wireValue itself is assignable to the target type, just return it
+            // This covers both typeof(Value) and typeof(object).
+            if (wireValue == null || targetClrType == null
+                // Let's make certain Value is not being used itself as a protubuf type.
+                || (targetClrType == typeof(Value) && ProtobufTypeName != Value.Descriptor.FullName))
             {
                 return wireValue;
             }
@@ -675,6 +697,16 @@ namespace Google.Cloud.Spanner.Data
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
                 }
             }
+
+            // Protobuf:
+            if (TypeCode == TypeCode.Proto
+                && wireValue.KindCase == Value.KindOneofCase.StringValue
+                && ProtobufCache.GetProtobufMessageParser(targetClrType) is MessageParser parser)
+            {
+                var messageBytes = Convert.FromBase64String(wireValue.StringValue);
+                return parser.ParseFrom(messageBytes);
+            }
+
             throw new ArgumentException(
                 $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
         }

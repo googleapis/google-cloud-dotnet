@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -23,6 +26,13 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerParameterTests
     {
+        private static readonly Rectangle testRectangle = new Rectangle
+        {
+            TopRight = new Point { X = 1, Y = 1 },
+            Width = 10,
+            Height = 5,
+        };
+
         public static IEnumerable<object[]> GetDbTypeConversions()
         {
             yield return new object[] { SpannerDbType.Bytes, DbType.Binary, true };
@@ -35,11 +45,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
-            // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb
-            // or SpannerDbType.PgOid.
+            // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb,
+            // SpannerDbType.PgOid, or SpannerDbType protobuf.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
             yield return new object[] { SpannerDbType.PgJsonb, DbType.String, false };
             yield return new object[] { SpannerDbType.PgOid, DbType.Int64, false };
+            yield return new object[] { SpannerDbType.FromClrType(typeof(Duration)), DbType.Object, false };
+            yield return new object[] { SpannerDbType.FromClrType(typeof(Rectangle)), DbType.Object, false };
         }
 
         [Theory]
@@ -83,6 +95,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
             yield return new object[] { (PgNumeric)3.14m, SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
             yield return new object[] { "test", SpannerDbType.String, DbType.String, typeof(string) };
+
+            // Tests for protobuf
+            // Note that the default CLR type here is always Value, because in general, we only know the the name of the protobuf type and from there
+            // we can't get the CLR type.
+            // We test with Value specifically being used as the data type.
+            yield return new object[] { Value.ForBool(true), SpannerDbType.FromClrType(typeof(Value)), DbType.Object, typeof(Value) };
+            // We also test with Duration and Rectangle as a general case.
+            yield return new object[] { Duration.FromTimeSpan(TimeSpan.FromSeconds(10)), SpannerDbType.FromClrType(typeof(Duration)), DbType.Object, typeof(Value) };
+            yield return new object[] { testRectangle, SpannerDbType.FromClrType(typeof(Rectangle)), DbType.Object, typeof(Value) };
         }
 
         [Theory]
@@ -94,6 +115,20 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(defaultClrType, spannerType.DefaultClrType);
             Assert.Equal(spannerType, parameter.SpannerDbType);
             Assert.Equal(adoType, parameter.DbType);
+        }
+
+        [Fact]
+        public void ValueMappings_SerializedValue()
+        {
+            // Testing with an already serialized value requires that we set the SpannerDbType explicitly.
+            object value = Value.ForString(Convert.ToBase64String(testRectangle.ToByteArray()));
+            SpannerDbType spannerDbType = SpannerDbType.FromClrType(typeof(Rectangle));
+
+            var parameter = new SpannerParameter { Value = value, SpannerDbType = spannerDbType };
+
+            Assert.Equal(typeof(Value), spannerDbType.DefaultClrType);
+            Assert.Equal(spannerDbType, parameter.SpannerDbType);
+            Assert.Equal(DbType.Object, parameter.DbType);
         }
 
         public static IEnumerable<object[]> GetDbTypeSizes()
