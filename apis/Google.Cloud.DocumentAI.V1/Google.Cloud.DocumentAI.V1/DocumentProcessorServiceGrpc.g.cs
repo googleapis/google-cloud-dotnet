@@ -484,7 +484,11 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Creates a processor from the
       /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
-      /// processor will be at `ENABLED` state by default after its creation.
+      /// processor will be at `ENABLED` state by default after its creation. Note
+      /// that this method requires the `documentai.processors.create` permission on
+      /// the project, which is highly privileged. A user or service account with
+      /// this permission can create new processors that can interact with any gcs
+      /// bucket in your project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1278,7 +1282,11 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Creates a processor from the
       /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
-      /// processor will be at `ENABLED` state by default after its creation.
+      /// processor will be at `ENABLED` state by default after its creation. Note
+      /// that this method requires the `documentai.processors.create` permission on
+      /// the project, which is highly privileged. A user or service account with
+      /// this permission can create new processors that can interact with any gcs
+      /// bucket in your project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1293,7 +1301,11 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Creates a processor from the
       /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
-      /// processor will be at `ENABLED` state by default after its creation.
+      /// processor will be at `ENABLED` state by default after its creation. Note
+      /// that this method requires the `documentai.processors.create` permission on
+      /// the project, which is highly privileged. A user or service account with
+      /// this permission can create new processors that can interact with any gcs
+      /// bucket in your project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1306,7 +1318,11 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Creates a processor from the
       /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
-      /// processor will be at `ENABLED` state by default after its creation.
+      /// processor will be at `ENABLED` state by default after its creation. Note
+      /// that this method requires the `documentai.processors.create` permission on
+      /// the project, which is highly privileged. A user or service account with
+      /// this permission can create new processors that can interact with any gcs
+      /// bucket in your project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1321,7 +1337,11 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Creates a processor from the
       /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
-      /// processor will be at `ENABLED` state by default after its creation.
+      /// processor will be at `ENABLED` state by default after its creation. Note
+      /// that this method requires the `documentai.processors.create` permission on
+      /// the project, which is highly privileged. A user or service account with
+      /// this permission can create new processors that can interact with any gcs
+      /// bucket in your project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
