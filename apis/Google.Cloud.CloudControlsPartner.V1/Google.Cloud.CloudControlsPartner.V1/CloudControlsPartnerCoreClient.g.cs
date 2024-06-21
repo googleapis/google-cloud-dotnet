@@ -1034,25 +1034,30 @@ namespace Google.Cloud.CloudControlsPartner.V1
             GetPartnerPermissionsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
@@ -1069,6 +1074,7 @@ namespace Google.Cloud.CloudControlsPartner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequests(new ListAccessApprovalRequestsRequest
             {
@@ -1078,7 +1084,8 @@ namespace Google.Cloud.CloudControlsPartner.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
@@ -1095,6 +1102,7 @@ namespace Google.Cloud.CloudControlsPartner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequestsAsync(new ListAccessApprovalRequestsRequest
             {
@@ -1104,7 +1112,8 @@ namespace Google.Cloud.CloudControlsPartner.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
@@ -1121,6 +1130,7 @@ namespace Google.Cloud.CloudControlsPartner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequests(new ListAccessApprovalRequestsRequest
             {
@@ -1130,7 +1140,8 @@ namespace Google.Cloud.CloudControlsPartner.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
@@ -1147,6 +1158,7 @@ namespace Google.Cloud.CloudControlsPartner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequestsAsync(new ListAccessApprovalRequestsRequest
             {
@@ -1325,7 +1337,9 @@ namespace Google.Cloud.CloudControlsPartner.V1
             _callGetPartnerPermissions = clientHelper.BuildApiCall<GetPartnerPermissionsRequest, PartnerPermissions>("GetPartnerPermissions", grpcClient.GetPartnerPermissionsAsync, grpcClient.GetPartnerPermissions, effectiveSettings.GetPartnerPermissionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPartnerPermissions);
             Modify_GetPartnerPermissionsApiCall(ref _callGetPartnerPermissions);
+#pragma warning disable CS0612
             _callListAccessApprovalRequests = clientHelper.BuildApiCall<ListAccessApprovalRequestsRequest, ListAccessApprovalRequestsResponse>("ListAccessApprovalRequests", grpcClient.ListAccessApprovalRequestsAsync, grpcClient.ListAccessApprovalRequests, effectiveSettings.ListAccessApprovalRequestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAccessApprovalRequests);
             Modify_ListAccessApprovalRequestsApiCall(ref _callListAccessApprovalRequests);
             _callGetPartner = clientHelper.BuildApiCall<GetPartnerRequest, Partner>("GetPartner", grpcClient.GetPartnerAsync, grpcClient.GetPartner, effectiveSettings.GetPartnerSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -1518,11 +1532,13 @@ namespace Google.Cloud.CloudControlsPartner.V1
         }
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAccessApprovalRequestsRequest(ref request, ref callSettings);
@@ -1530,11 +1546,13 @@ namespace Google.Cloud.CloudControlsPartner.V1
         }
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAccessApprovalRequestsRequest(ref request, ref callSettings);
