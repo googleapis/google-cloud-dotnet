@@ -40,7 +40,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/customers/[CUSTOMER]/workloads/[WORKLOAD]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> response = cloudControlsPartnerCoreClient.ListAccessApprovalRequestsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((AccessApprovalRequest item) =>
