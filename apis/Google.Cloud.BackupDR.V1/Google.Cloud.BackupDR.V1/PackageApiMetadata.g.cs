@@ -55,8 +55,8 @@ namespace Google.Cloud.BackupDR.V1
                 },
                 {
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
-                    // { "post": "/v1/{resource=projects/*/locations/*/managementServers/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/backupVaults/*}:testIamPermissions", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkwvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbWFuYWdlbWVudFNlcnZlcnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWkwiRy92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9iYWNrdXBWYXVsdHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq")
+                    // { "post": "/v1/{resource=projects/*/locations/*/managementServers/*}:testIamPermissions", "body": "*" }
+                    proto::ByteString.FromBase64("IkwvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbWFuYWdlbWVudFNlcnZlcnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq")
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
