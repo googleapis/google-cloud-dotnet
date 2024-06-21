@@ -279,7 +279,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -311,7 +311,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -343,7 +343,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -375,7 +375,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -427,7 +427,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -442,7 +442,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -457,7 +457,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -469,7 +469,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -484,7 +484,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -499,7 +499,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -38,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             WorkloadName parent = WorkloadName.FromOrganizationLocationCustomerWorkload("[ORGANIZATION]", "[LOCATION]", "[CUSTOMER]", "[WORKLOAD]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> response = cloudControlsPartnerCoreClient.ListAccessApprovalRequests(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AccessApprovalRequest item in response)

@@ -161,7 +161,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -271,9 +271,9 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     /// <summary>
     /// Output only. Immutable. Name of the OrgPolicy which was modified with
     /// non-compliant change and resulted this violation. Format:
-    ///  projects/{project_number}/policies/{constraint_name}
-    ///  folders/{folder_id}/policies/{constraint_name}
-    ///  organizations/{organization_id}/policies/{constraint_name}
+    ///  `projects/{project_number}/policies/{constraint_name}`
+    ///  `folders/{folder_id}/policies/{constraint_name}`
+    ///  `organizations/{organization_id}/policies/{constraint_name}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1857,7 +1857,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     /// <summary>
     /// Required. Parent resource
     /// Format
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2518,7 +2518,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/violations/{violation}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

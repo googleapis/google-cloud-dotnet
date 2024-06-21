@@ -43,7 +43,9 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> response = cloudControlsPartnerCoreClient.ListAccessApprovalRequests(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AccessApprovalRequest item in response)

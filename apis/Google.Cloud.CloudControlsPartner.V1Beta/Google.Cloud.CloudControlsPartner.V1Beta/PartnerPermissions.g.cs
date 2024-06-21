@@ -114,7 +114,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -372,7 +372,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. Name of the resource to get in the format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

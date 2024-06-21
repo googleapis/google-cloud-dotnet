@@ -119,7 +119,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -344,7 +344,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

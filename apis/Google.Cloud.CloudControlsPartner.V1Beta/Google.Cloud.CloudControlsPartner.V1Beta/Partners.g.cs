@@ -126,7 +126,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the partner.
-    /// Format: organizations/{organization}/locations/{location}/partner
+    /// Format: `organizations/{organization}/locations/{location}/partner`
     /// Example: "organizations/123456/locations/us-central1/partner"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -545,7 +545,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Format: organizations/{organization}/locations/{location}/partner
+    /// Required. Format:
+    /// `organizations/{organization}/locations/{location}/partner`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
