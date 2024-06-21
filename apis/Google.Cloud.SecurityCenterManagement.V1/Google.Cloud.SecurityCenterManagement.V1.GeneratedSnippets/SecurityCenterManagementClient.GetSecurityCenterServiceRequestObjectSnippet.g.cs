@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             GetSecurityCenterServiceRequest request = new GetSecurityCenterServiceRequest
             {
                 SecurityCenterServiceName = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ShowEligibleModulesOnly = false,
             };
             // Make the request
             SecurityCenterService response = securityCenterManagementClient.GetSecurityCenterService(request);

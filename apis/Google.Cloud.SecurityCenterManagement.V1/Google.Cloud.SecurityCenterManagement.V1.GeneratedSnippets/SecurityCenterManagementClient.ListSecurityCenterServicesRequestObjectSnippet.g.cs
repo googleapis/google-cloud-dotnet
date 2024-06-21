@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListSecurityCenterServicesRequest request = new ListSecurityCenterServicesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ShowEligibleModulesOnly = false,
             };
             // Make the request
             PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(request);
