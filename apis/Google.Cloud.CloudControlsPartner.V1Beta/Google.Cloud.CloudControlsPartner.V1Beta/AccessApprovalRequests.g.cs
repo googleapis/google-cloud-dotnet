@@ -132,7 +132,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/accessApprovalRequests/{access_approval_request}.
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/accessApprovalRequests/{access_approval_request}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -479,7 +479,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     /// <summary>
     /// Required. Parent resource
     /// Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

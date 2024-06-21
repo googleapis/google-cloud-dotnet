@@ -155,7 +155,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -730,7 +730,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     /// <summary>
     /// Required. Parent resource
     /// Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1340,7 +1340,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. Format:
-    /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+    /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -381,7 +381,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -396,7 +396,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -411,7 +411,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -423,7 +423,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -438,7 +438,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -453,7 +453,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -484,7 +484,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -510,7 +510,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -536,7 +536,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -562,7 +562,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -614,7 +614,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -629,7 +629,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -644,7 +644,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -656,7 +656,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -671,7 +671,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -686,7 +686,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -716,7 +716,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
-        /// Format: organizations/{organization}/locations/{location}
+        /// Format: `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -741,7 +741,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
-        /// Format: organizations/{organization}/locations/{location}
+        /// Format: `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -766,7 +766,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
-        /// Format: organizations/{organization}/locations/{location}
+        /// Format: `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -791,7 +791,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
-        /// Format: organizations/{organization}/locations/{location}
+        /// Format: `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -843,7 +843,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -858,7 +858,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -873,7 +873,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -885,7 +885,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -900,7 +900,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -915,7 +915,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/ekmConnections`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -954,7 +954,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource to get in the format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -969,7 +969,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource to get in the format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -984,7 +984,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource to get in the format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -996,7 +996,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource to get in the format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource to get in the format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1026,7 +1026,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource to get in the format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}/partnerPermissions`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1034,30 +1034,35 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
             GetPartnerPermissionsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1069,6 +1074,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequests(new ListAccessApprovalRequestsRequest
             {
@@ -1078,12 +1084,13 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1095,6 +1102,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequestsAsync(new ListAccessApprovalRequestsRequest
             {
@@ -1104,12 +1112,13 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1121,6 +1130,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequests(new ListAccessApprovalRequestsRequest
             {
@@ -1130,12 +1140,13 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent resource
         /// Format:
-        /// organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}
+        /// `organizations/{organization}/locations/{location}/customers/{customer}/workloads/{workload}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1147,6 +1158,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAccessApprovalRequestsAsync(new ListAccessApprovalRequestsRequest
             {
@@ -1186,7 +1198,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// Get details of a Partner.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: organizations/{organization}/locations/{location}/partner
+        /// Required. Format:
+        /// `organizations/{organization}/locations/{location}/partner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1200,7 +1213,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// Get details of a Partner.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: organizations/{organization}/locations/{location}/partner
+        /// Required. Format:
+        /// `organizations/{organization}/locations/{location}/partner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1214,7 +1228,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// Get details of a Partner.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: organizations/{organization}/locations/{location}/partner
+        /// Required. Format:
+        /// `organizations/{organization}/locations/{location}/partner`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1225,7 +1240,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// Get details of a Partner.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: organizations/{organization}/locations/{location}/partner
+        /// Required. Format:
+        /// `organizations/{organization}/locations/{location}/partner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1239,7 +1255,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// Get details of a Partner.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: organizations/{organization}/locations/{location}/partner
+        /// Required. Format:
+        /// `organizations/{organization}/locations/{location}/partner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1253,7 +1270,8 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// Get details of a Partner.
         /// </summary>
         /// <param name="name">
-        /// Required. Format: organizations/{organization}/locations/{location}/partner
+        /// Required. Format:
+        /// `organizations/{organization}/locations/{location}/partner`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1319,7 +1337,9 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
             _callGetPartnerPermissions = clientHelper.BuildApiCall<GetPartnerPermissionsRequest, PartnerPermissions>("GetPartnerPermissions", grpcClient.GetPartnerPermissionsAsync, grpcClient.GetPartnerPermissions, effectiveSettings.GetPartnerPermissionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPartnerPermissions);
             Modify_GetPartnerPermissionsApiCall(ref _callGetPartnerPermissions);
+#pragma warning disable CS0612
             _callListAccessApprovalRequests = clientHelper.BuildApiCall<ListAccessApprovalRequestsRequest, ListAccessApprovalRequestsResponse>("ListAccessApprovalRequests", grpcClient.ListAccessApprovalRequestsAsync, grpcClient.ListAccessApprovalRequests, effectiveSettings.ListAccessApprovalRequestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAccessApprovalRequests);
             Modify_ListAccessApprovalRequestsApiCall(ref _callListAccessApprovalRequests);
             _callGetPartner = clientHelper.BuildApiCall<GetPartnerRequest, Partner>("GetPartner", grpcClient.GetPartnerAsync, grpcClient.GetPartner, effectiveSettings.GetPartnerSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -1512,11 +1532,13 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         }
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAccessApprovalRequestsRequest(ref request, ref callSettings);
@@ -1524,11 +1546,13 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         }
 
         /// <summary>
-        /// Lists access requests associated with a workload
+        /// Deprecated: Only returns access approval requests directly associated with
+        /// an assured workload folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(ListAccessApprovalRequestsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAccessApprovalRequestsRequest(ref request, ref callSettings);

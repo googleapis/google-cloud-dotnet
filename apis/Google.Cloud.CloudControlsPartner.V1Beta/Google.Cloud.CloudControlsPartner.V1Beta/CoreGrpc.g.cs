@@ -243,11 +243,13 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
       }
 
       /// <summary>
-      /// Lists access requests associated with a workload
+      /// Deprecated: Only returns access approval requests directly associated with
+      /// an assured workload folder.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsResponse> ListAccessApprovalRequests(global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsRequest request, grpc::ServerCallContext context)
       {
@@ -584,48 +586,56 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetPartnerPermissions, null, options, request);
       }
       /// <summary>
-      /// Lists access requests associated with a workload
+      /// Deprecated: Only returns access approval requests directly associated with
+      /// an assured workload folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsResponse ListAccessApprovalRequests(global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAccessApprovalRequests(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists access requests associated with a workload
+      /// Deprecated: Only returns access approval requests directly associated with
+      /// an assured workload folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsResponse ListAccessApprovalRequests(global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAccessApprovalRequests, null, options, request);
       }
       /// <summary>
-      /// Lists access requests associated with a workload
+      /// Deprecated: Only returns access approval requests directly associated with
+      /// an assured workload folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsResponse> ListAccessApprovalRequestsAsync(global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAccessApprovalRequestsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists access requests associated with a workload
+      /// Deprecated: Only returns access approval requests directly associated with
+      /// an assured workload folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsResponse> ListAccessApprovalRequestsAsync(global::Google.Cloud.CloudControlsPartner.V1Beta.ListAccessApprovalRequestsRequest request, grpc::CallOptions options)
       {
