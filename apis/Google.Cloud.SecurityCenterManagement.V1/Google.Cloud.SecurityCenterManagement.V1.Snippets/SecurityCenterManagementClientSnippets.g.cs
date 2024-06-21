@@ -3842,6 +3842,7 @@ namespace GoogleCSharpSnippets
             GetSecurityCenterServiceRequest request = new GetSecurityCenterServiceRequest
             {
                 SecurityCenterServiceName = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ShowEligibleModulesOnly = false,
             };
             // Make the request
             SecurityCenterService response = securityCenterManagementClient.GetSecurityCenterService(request);
@@ -3859,6 +3860,7 @@ namespace GoogleCSharpSnippets
             GetSecurityCenterServiceRequest request = new GetSecurityCenterServiceRequest
             {
                 SecurityCenterServiceName = SecurityCenterServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ShowEligibleModulesOnly = false,
             };
             // Make the request
             SecurityCenterService response = await securityCenterManagementClient.GetSecurityCenterServiceAsync(request);
@@ -3929,6 +3931,7 @@ namespace GoogleCSharpSnippets
             ListSecurityCenterServicesRequest request = new ListSecurityCenterServicesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ShowEligibleModulesOnly = false,
             };
             // Make the request
             PagedEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServices(request);
@@ -3977,6 +3980,7 @@ namespace GoogleCSharpSnippets
             ListSecurityCenterServicesRequest request = new ListSecurityCenterServicesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ShowEligibleModulesOnly = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(request);
