@@ -43,7 +43,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
-            SpannerDbType.FromClrType(typeof(Value)),
             SpannerDbType.FromClrType(typeof(Duration)),
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
@@ -53,7 +52,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
-            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
         };
 
@@ -64,6 +62,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
+            // b/348716298
+            SpannerDbType.FromClrType(typeof(Value)),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
         };
 
         // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
@@ -283,17 +284,20 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new string[] { });
 
         [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
         public async Task BindProtobufValue() => await TestBindNonNull(
             SpannerDbType.FromClrType(typeof(Value)),
             Value.ForString("Hello"),
             r => r.GetFieldValue<Value>(0));
 
         [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
         public async Task BindProtobufValueArray() => await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
                 new Value[] { Value.ForNumber(10), null, Value.ForString("Hello world") });
 
         [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
         public async Task BindProtobufValueEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
             new Value[] { });

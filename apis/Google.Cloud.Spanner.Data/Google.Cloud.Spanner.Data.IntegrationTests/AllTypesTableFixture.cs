@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  TimestampValue,
                  {EmptyOnEmulator("JsonValue,")}
                  DateValue,
-                 ProtobufValueValue,
+                 {EmptyOnEmulator("ProtobufValueValue,")/* b/348716298 */}
                  ProtobufDurationValue,
                  BoolArrayValue,
                  Int64ArrayValue,
@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  TimestampArrayValue,
                  {EmptyOnEmulator("JsonArrayValue,")}
                  DateArrayValue,
-                 ProtobufValueArrayValue,
+                 {EmptyOnEmulator("ProtobufValueArrayValue,")/* b/348716298 */}
                  ProtobufDurationArrayValue) VALUES(
                  @K,
                  @BoolValue,
@@ -73,7 +73,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @TimestampValue,
                  {EmptyOnEmulator("@JsonValue,")}
                  @DateValue,
-                 @ProtobufValueValue,
+                 {EmptyOnEmulator("@ProtobufValueValue,")/* b/348716298 */}
                  @ProtobufDurationValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
@@ -86,38 +86,38 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @TimestampArrayValue,
                  {EmptyOnEmulator("@JsonArrayValue,")}
                  @DateArrayValue,
-                 @ProtobufValueArrayValue,
+                 {EmptyOnEmulator("@ProtobufValueArrayValue,")/* b/348716298 */}
                  @ProtobufDurationArrayValue
                )";
 
         // Note: the emulator doesn't yet support the JSON type.
         protected override void CreateTable() =>
             ExecuteDdl($@"CREATE TABLE {TableName}(
-                            K                                       STRING(MAX) NOT NULL,
-                            BoolValue                               BOOL,
-                            Int64Value                              INT64,
-                            {EmptyOnEmulator("Float32Value          FLOAT32,")}
-                            Float64Value                            FLOAT64,
-                            StringValue                             STRING(MAX),
-                            NumericValue                            NUMERIC,
-                            BytesValue                              BYTES(MAX),
-                            TimestampValue                          TIMESTAMP,
-                            {EmptyOnEmulator("JsonValue             JSON,")}
-                            DateValue                               DATE,
-                            ProtobufValueValue                      {Value.Descriptor.FullName},
-                            ProtobufDurationValue                   {Duration.Descriptor.FullName},
-                            BoolArrayValue                          ARRAY<BOOL>,
-                            Int64ArrayValue                         ARRAY<INT64>,
-                            {EmptyOnEmulator("Float32ArrayValue     ARRAY<FLOAT32>,")}
-                            Float64ArrayValue                       ARRAY<FLOAT64>,
-                            NumericArrayValue                       ARRAY<NUMERIC>,
-                            StringArrayValue                        ARRAY<STRING(MAX)>,
-                            Base64ArrayValue                        ARRAY<BYTES(MAX)>,
-                            BytesArrayValue                         ARRAY<BYTES(MAX)>,
-                            TimestampArrayValue                     ARRAY<TIMESTAMP>,
-                            {EmptyOnEmulator("JsonArrayValue        ARRAY<JSON>,")}
-                            DateArrayValue                          ARRAY<DATE>,
-                            ProtobufValueArrayValue                 ARRAY<{Value.Descriptor.FullName}>,
+                            K                                           STRING(MAX) NOT NULL,
+                            BoolValue                                   BOOL,
+                            Int64Value                                  INT64,
+                            {EmptyOnEmulator("Float32Value              FLOAT32,")}
+                            Float64Value                                FLOAT64,
+                            StringValue                                 STRING(MAX),
+                            NumericValue                                NUMERIC,
+                            BytesValue                                  BYTES(MAX),
+                            TimestampValue                              TIMESTAMP,
+                            {EmptyOnEmulator("JsonValue                 JSON,")}
+                            DateValue                                   DATE,
+                            {EmptyOnEmulator($"ProtobufValueValue       {Value.Descriptor.FullName},")/* b/348716298 */}
+                            ProtobufDurationValue                       {Duration.Descriptor.FullName},
+                            BoolArrayValue                              ARRAY<BOOL>,
+                            Int64ArrayValue                             ARRAY<INT64>,
+                            {EmptyOnEmulator("Float32ArrayValue         ARRAY<FLOAT32>,")}
+                            Float64ArrayValue                           ARRAY<FLOAT64>,
+                            NumericArrayValue                           ARRAY<NUMERIC>,
+                            StringArrayValue                            ARRAY<STRING(MAX)>,
+                            Base64ArrayValue                            ARRAY<BYTES(MAX)>,
+                            BytesArrayValue                             ARRAY<BYTES(MAX)>,
+                            TimestampArrayValue                         ARRAY<TIMESTAMP>,
+                            {EmptyOnEmulator("JsonArrayValue            ARRAY<JSON>,")}
+                            DateArrayValue                              ARRAY<DATE>,
+                            {EmptyOnEmulator($"ProtobufValueArrayValue   ARRAY<{Value.Descriptor.FullName}>,")/* b/348716298 */}
                             ProtobufDurationArrayValue              ARRAY<{Duration.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 

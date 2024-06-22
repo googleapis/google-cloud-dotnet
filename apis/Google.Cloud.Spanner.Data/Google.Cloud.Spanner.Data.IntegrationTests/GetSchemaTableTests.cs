@@ -69,7 +69,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Float32Value", typeof(float), SpannerDbType.Float32 },
                 { "Float32ArrayValue", typeof(List<float>), SpannerDbType.ArrayOf(SpannerDbType.Float32) },
                 { "JsonValue", typeof(string), SpannerDbType.Json },
-                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) }
+                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
+                // b/348716298
+                { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
+                { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
             };
 
         // These SpannerDbTypes are supported on emulator.
@@ -84,8 +87,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "StringValue", typeof(string), SpannerDbType.String },
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
-                { "DateValue", typeof(DateTime), SpannerDbType.Date },
-                { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
+                { "DateValue", typeof(DateTime), SpannerDbType.Date },                
                 { "ProtobufDurationValue", typeof(Value), SpannerDbType.FromClrType(typeof(Duration)) },
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
@@ -97,7 +99,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
                 { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
-                { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
                 { "ProtobufDurationArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) },
             };
 
