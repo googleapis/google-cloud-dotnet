@@ -63,8 +63,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             // b/348716298
-            SpannerDbType.FromClrType(typeof(Value)),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            // b/348716298 Makes it unsupported in the emulator
+            // b/348711708 Makes it unsupported in production
+            // SpannerDbType.FromClrType(typeof(Value)),
         };
 
         // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
@@ -283,8 +285,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             new string[] { });
 
-        [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        [Fact(Skip = "b/348711708 makes it unsupported in production")]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298 makes it unsupported by the emulator
         public async Task BindProtobufValue() => await TestBindNonNull(
             SpannerDbType.FromClrType(typeof(Value)),
             Value.ForString("Hello"),

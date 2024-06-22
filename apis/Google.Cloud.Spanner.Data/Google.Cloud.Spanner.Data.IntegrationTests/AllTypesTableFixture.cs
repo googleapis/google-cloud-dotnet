@@ -34,7 +34,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         /// Note that the emulator doesn't yet support the JSON type.
         /// </summary>
         /// <returns>The DML command to insert data into a table.</returns>
-        public string CreateInsertCommand() =>
+        public string CreateInsertCommand(bool skipProtobufValue = false) =>
             $@"INSERT {TableName} (
                  K,
                  BoolValue,
@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  TimestampValue,
                  {EmptyOnEmulator("JsonValue,")}
                  DateValue,
-                 {EmptyOnEmulator("ProtobufValueValue,")/* b/348716298 */}
+                 {MaybeEmpty(EmptyOnEmulator("ProtobufValueValue,"), skipProtobufValue)/* b/348716298 and b/348711708 */}
                  ProtobufDurationValue,
                  BoolArrayValue,
                  Int64ArrayValue,
@@ -73,7 +73,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @TimestampValue,
                  {EmptyOnEmulator("@JsonValue,")}
                  @DateValue,
-                 {EmptyOnEmulator("@ProtobufValueValue,")/* b/348716298 */}
+                 {MaybeEmpty(EmptyOnEmulator("@ProtobufValueValue,"), skipProtobufValue)/* b/348716298 and b/348711708 */}
                  @ProtobufDurationValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
@@ -122,5 +122,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                           ) PRIMARY KEY(K)");
 
         private string EmptyOnEmulator(string text) => RunningOnEmulator ? "" : text;
+
+        private string MaybeEmpty(string text, bool skip) => skip ? "" : text;
     }
 }

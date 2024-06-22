@@ -75,6 +75,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task ExecuteWriteNullsTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
         {
+            // b/348711708 google.protobuf.Value is not supported for DML
+            bool isDml = insertCommand.Method.Name == nameof(InsertDmlAsync);
             var parameters = new SpannerParameterCollection
             {
                 { "BoolValue", SpannerDbType.Bool, null },
@@ -106,8 +108,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 parameters.Add("JsonValue", SpannerDbType.Json, null);
                 parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null);
                 // b/348716298
-                parameters.Add("ProtobufValueValue", SpannerDbType.FromClrType(typeof(Value)), null);
                 parameters.Add("ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), null);
+                // b/348716298 makes it not supported on the emulator
+                // b/348711708 makes it not supported in DML
+                if (!isDml)
+                {
+                    parameters.Add("ProtobufValueValue", SpannerDbType.FromClrType(typeof(Value)), null);
+                }
             }
 
             Assert.Equal(1, await insertCommand(parameters));
@@ -139,14 +146,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonValue")));
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonArrayValue")));
                     // b/348716298
-                    Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueValue")));
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueArrayValue")));
+                    // b/348716298 makes it not supported on the emulator
+                    // b/348711708 makes it not supported in DML
+                    if (!isDml)
+                    {
+                        Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueValue")));
+                    }
                 }
             }, GetConnection(), GetWriteTestReader);
         }
 
         private async Task ExecuteWriteValuesTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
         {
+            // b/348711708 google.protobuf.Value is not supported for DML
+            bool isDml = insertCommand.Method.Name == nameof(InsertDmlAsync);
             var testTimestamp = new DateTime(2017, 3, 17, 15, 30, 0);
             var testDate = new DateTime(2017, 5, 9);
             bool?[] bArray = { true, null, false };
@@ -205,8 +219,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 parameters.Add("JsonValue", SpannerDbType.Json, "{\"f1\":\"v1\"}");
                 parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), jsonArray);
                 // b/348716298
-                parameters.Add("ProtobufValueValue", SpannerDbType.FromClrType(typeof(Value)), Value.ForString("Hello"));
                 parameters.Add("ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), pvArray);
+                // b/348716298 makes it not supported on the emulator
+                // b/348711708 makes it not supported in DML
+                if (!isDml)
+                {
+                    parameters.Add("ProtobufValueValue", SpannerDbType.FromClrType(typeof(Value)), Value.ForString("Hello"));
+                }
             }
 
             Assert.Equal(1, await insertCommand(parameters));
@@ -242,8 +261,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal("{\"f1\":\"v1\"}", reader.GetFieldValue<string>(reader.GetOrdinal("JsonValue")));
                     Assert.Equal(jsonArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                     // b/348716298
-                    Assert.Equal(Value.ForString("Hello"), reader.GetFieldValue<Value>(reader.GetOrdinal("ProtobufValueValue")));
                     Assert.Equal(pvArray, reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
+                    // b/348716298 makes it not supported on the emulator
+                    // b/348711708 makes it not supported in DML
+                    if (!isDml)
+                    {
+                        Assert.Equal(Value.ForString("Hello"), reader.GetFieldValue<Value>(reader.GetOrdinal("ProtobufValueValue")));
+                    }
                 }
             }, GetConnection(), GetWriteTestReader);
         }
@@ -259,7 +283,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = GetConnection())
             {
                 values.Add("K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid());
-                SpannerCommand cmd = connection.CreateDmlCommand(_fixture.CreateInsertCommand(), values);
+                // b/348711708 means that DML inserts do not work for google.protobuf.Value
+                SpannerCommand cmd = connection.CreateDmlCommand(_fixture.CreateInsertCommand(skipProtobufValue: true), values);
                 return await cmd.ExecuteNonQueryAsync();
             }
         }
