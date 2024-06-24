@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.10.0, released 2024-06-24
+
+### New features
+
+- Add bulk delete api ([commit 75848dd](https://github.com/googleapis/google-cloud-dotnet/commit/75848dd15ccd47ad3ca9d03d771b75b2d06a8816))
+
+### Documentation improvements
+
+- Update field api description ([commit 75848dd](https://github.com/googleapis/google-cloud-dotnet/commit/75848dd15ccd47ad3ca9d03d771b75b2d06a8816))
+
 ## Version 3.9.0, released 2024-05-08
 
 ### New features
