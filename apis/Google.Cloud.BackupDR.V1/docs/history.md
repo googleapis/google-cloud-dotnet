@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.1.0, released 2024-06-24
+
+### New features
+
+- A new field `satisfies_pzs` is added ([commit 401cd38](https://github.com/googleapis/google-cloud-dotnet/commit/401cd38b79392a8e702bdd7718e99d69e26b5a8f))
+- A new field `satisfies_pzi` is added ([commit 401cd38](https://github.com/googleapis/google-cloud-dotnet/commit/401cd38b79392a8e702bdd7718e99d69e26b5a8f))
+- Updated documentation URI ([commit 401cd38](https://github.com/googleapis/google-cloud-dotnet/commit/401cd38b79392a8e702bdd7718e99d69e26b5a8f))
 ## Version 1.0.0, released 2024-05-24
 
 No API surface changes; just dependency updates and promotion to GA.
