@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.13.0, released 2024-06-24
+
+### New features
+
+- Support Key Access Justifications policy configuration ([commit 801775b](https://github.com/googleapis/google-cloud-dotnet/commit/801775b978e387c2cc0bff81a1450fd002fdbf30))
+
 ## Version 3.12.0, released 2024-06-04
 
 ### New features
