@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.2.0, released 2024-06-24
+
+### New features
+
+- Exposing EntrySource.location field that contains location of a resource in the source system ([commit 4ce6d1e](https://github.com/googleapis/google-cloud-dotnet/commit/4ce6d1e6a9841ba9b1ffe7be7935d01f98e69b1e))
+
+### Documentation improvements
+
+- Scrub descriptions for GenerateDataQualityRules ([commit 4ce6d1e](https://github.com/googleapis/google-cloud-dotnet/commit/4ce6d1e6a9841ba9b1ffe7be7935d01f98e69b1e))
+- Clarify DataQualityRule.sql_assertion descriptions ([commit 5c4607f](https://github.com/googleapis/google-cloud-dotnet/commit/5c4607f3690d4b65941a6dcd8cf341f4243d8662))
+- Fix links to RuleType proto references ([commit 5c4607f](https://github.com/googleapis/google-cloud-dotnet/commit/5c4607f3690d4b65941a6dcd8cf341f4243d8662))
+
 ## Version 3.1.0, released 2024-06-04
 
 ### New features
