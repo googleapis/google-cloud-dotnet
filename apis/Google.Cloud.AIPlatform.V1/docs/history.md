@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.2.0, released 2024-06-24
+
+### New features
+
+- Add MALFORMED_FUNCTION_CALL to FinishReason ([commit 7e31c25](https://github.com/googleapis/google-cloud-dotnet/commit/7e31c25d0fa8eb19d26835bab8f12b6da839b68f))
+- Add preflight_validations to PipelineJob ([commit 7e31c25](https://github.com/googleapis/google-cloud-dotnet/commit/7e31c25d0fa8eb19d26835bab8f12b6da839b68f))
+- Add encryption_spec to TuningJob ([commit 7e31c25](https://github.com/googleapis/google-cloud-dotnet/commit/7e31c25d0fa8eb19d26835bab8f12b6da839b68f))
+
 ## Version 3.1.0, released 2024-06-04
 
 ### New features
