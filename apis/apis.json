@@ -641,7 +641,7 @@
     },
     {
       "id": "Google.Cloud.BackupDR.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Backup and DR Service",
       "productUrl": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr",
