@@ -17,6 +17,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Datastore.Admin.V1;
 using Google.Cloud.Firestore.Admin.V1;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -40,6 +41,8 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         private readonly DatastoreAdminClient _datastoreAdminClient;
 
         internal bool RunningOnEmulator { get; }
+
+        private readonly IList<string> _indexesToDelete = new List<string>();
 
         // Creating databases and indexes can take a while.
         // We don't want to wait *forever* (which would be the behavior of default poll settings)
@@ -67,6 +70,22 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var response = client.RunQuery(new RunQueryRequest { ProjectId = ProjectId, PartitionId = PartitionId, Query = query });
             var deletions = response.Batch.EntityResults.Select(entityResult => entityResult.Entity.ToDelete());
             client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, deletions);
+
+            foreach (var indexId in _indexesToDelete)
+            {
+                try
+                {
+                    _datastoreAdminClient.DeleteIndex(new Admin.V1.DeleteIndexRequest
+                    {
+                        IndexId = indexId,
+                        ProjectId = ProjectId
+                    });
+                }
+                catch
+                {
+                    // We delete indexes on a best effort basis.
+                }
+            }
         }
 
         // Helper methods to retry query operations. Global queries are eventually consistent, so we retry queries for a short while.
@@ -189,7 +208,8 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 ProjectId = ProjectId
             };
             var operation = await _datastoreAdminClient.CreateIndexAsync(request);
-            await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
+            operation = await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
+            _indexesToDelete.Add(operation.Result.IndexId);
         }
 
         private async Task DeleteDatabaseAsync(string databaseId)
