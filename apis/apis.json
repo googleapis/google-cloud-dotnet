@@ -2394,7 +2394,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "3.7.0",
+      "version": "3.8.0",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "description": "Recommended Google client library to access the Firestore API.",
@@ -2411,7 +2411,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Api.Gax.Testing": "default",
-        "Google.Cloud.Firestore.Admin.V1": "3.8.0",
+        "Google.Cloud.Firestore.Admin.V1": "3.9.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.6.24"
@@ -2425,7 +2425,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "3.7.0",
+      "version": "3.8.0",
       "type": "grpc",
       "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
       "tags": [
@@ -2434,8 +2434,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0",
         "Grpc.Core": "2.46.6"
       },
       "shortName": "firestore",
