@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.1.0, released 2024-06-24
+
+### New features
+
+- Add `TOXIC_COMBINATION` to `FindingClass` enum ([commit 67f599e](https://github.com/googleapis/google-cloud-dotnet/commit/67f599eecc849a94b692b42648410ac685d7c88b))
+- Add `show_eligible_modules_only` field to `GetSecurityCenterServiceRequest` message ([commit 67f599e](https://github.com/googleapis/google-cloud-dotnet/commit/67f599eecc849a94b692b42648410ac685d7c88b))
+- Add an INGEST_ONLY EnablementState ([commit 2e6ed33](https://github.com/googleapis/google-cloud-dotnet/commit/2e6ed3391be2710d674d3606a473ccd5d8058947))
+
+### Documentation improvements
+
+- Minor docs formatting in `UpdateSecurityCenterServiceRequest.validate_only` ([commit ee64d62](https://github.com/googleapis/google-cloud-dotnet/commit/ee64d62302a7d363b15dd105d56bb839b4e746fc))
+
 ## Version 1.0.0, released 2024-05-24
 
 ### New features
