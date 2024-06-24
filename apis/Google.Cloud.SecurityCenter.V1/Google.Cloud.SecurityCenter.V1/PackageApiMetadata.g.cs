@@ -74,6 +74,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return FileReflection.Descriptor;
             yield return FindingReflection.Descriptor;
             yield return FolderReflection.Descriptor;
+            yield return GroupMembershipReflection.Descriptor;
             yield return IamBindingReflection.Descriptor;
             yield return IndicatorReflection.Descriptor;
             yield return KernelRootkitReflection.Descriptor;
@@ -97,6 +98,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return SecurityPostureReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
             yield return SourceReflection.Descriptor;
+            yield return ToxicCombinationReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
