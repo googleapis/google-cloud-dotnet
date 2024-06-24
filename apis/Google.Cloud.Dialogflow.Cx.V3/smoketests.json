@@ -2,6 +2,7 @@
   {
     "method": "ListAgents",
     "client": "AgentsClient",
+    "endpoint": "usa-dialogflow.googleapis.com",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us"
     }
@@ -9,6 +10,7 @@
   {
     "method": "ListSecuritySettings",
     "client": "SecuritySettingsServiceClient",
+    "endpoint": "usa-dialogflow.googleapis.com",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us"
     }
