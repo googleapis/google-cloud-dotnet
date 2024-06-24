@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2024-06-24
+
+### New features
+
+- Add support to add links in AlertPolicy ([commit 3513b82](https://github.com/googleapis/google-cloud-dotnet/commit/3513b829e9f69a503494975f9e86e4568db66dad))
+
 ## Version 3.10.0, released 2024-06-04
 
 ### New features
