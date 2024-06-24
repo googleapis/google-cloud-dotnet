@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.8.0, released 2024-06-24
+
+### New features
+
+- Add dependency injection support for FirestoreDb ([commit 1a7e44b](https://github.com/googleapis/google-cloud-dotnet/commit/1a7e44bc3c0f0638977191bb48a4e993a75ece03))
+
+### Documentation improvements
+
+- Fix documentation for FirestoreDocumentUpdateTimestampAttribute ([commit 836de44](https://github.com/googleapis/google-cloud-dotnet/commit/836de44bedbcd0fc3b652b293b6aa1ab48e07e39))
+
 ## Version 3.7.0, released 2024-05-03
 
 ### Bug fixes
