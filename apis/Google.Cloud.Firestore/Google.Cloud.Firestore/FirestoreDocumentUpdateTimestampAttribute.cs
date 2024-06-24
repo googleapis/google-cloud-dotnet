@@ -18,7 +18,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Firestore
 {
     /// <summary>
-    /// Attribute indicating that a property should be populated with the read timestamp from a Firestore document snapshot.
+    /// Attribute indicating that a property should be populated with the update timestamp from a Firestore document snapshot.
     /// </summary>
     /// <remarks>
     /// This attribute must only be applied to properties of <see cref="DateTime"/>, <see cref="DateTimeOffset"/>, <see cref="Timestamp" />,
