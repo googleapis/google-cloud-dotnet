@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.15.0, released 2024-06-24
+
+### New features
+
+- Add use_topic_schema for Cloud Storage Subscriptions ([commit d557116](https://github.com/googleapis/google-cloud-dotnet/commit/d557116c5844dc4fdd4da4637d7713b325d7dfe7))
+
 ## Version 3.14.0, released 2024-05-31
 
 ### Bug fixes
