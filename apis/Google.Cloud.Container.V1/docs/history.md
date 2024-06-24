@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.29.0, released 2024-06-24
+
+### New features
+
+- Enable REST transport for google/container/v1 ([commit 198c8c6](https://github.com/googleapis/google-cloud-dotnet/commit/198c8c65d3b7142ddacf671789521c37f62dd721))
+
 ## Version 3.28.0, released 2024-06-10
 
 ### New features
