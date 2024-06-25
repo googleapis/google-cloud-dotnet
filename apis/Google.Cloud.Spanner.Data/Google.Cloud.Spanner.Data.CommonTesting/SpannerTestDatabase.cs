@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.Reflection;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 
@@ -69,8 +71,23 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
 
     protected override bool TryCreateDatabase()
     {
+        FileDescriptorSet fileDescriptorSet = new FileDescriptorSet();
+        fileDescriptorSet.File.Add(Duration.Descriptor.File.ToProto());
+
+        if (!SpannerClientCreationOptions.UsesEmulator)
+        {
+            // b/348716298
+            fileDescriptorSet.File.Add(Value.Descriptor.File.ToProto());
+        }
+
         using var connection = new SpannerConnection(NoDbConnectionString);
-        var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
+        var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}",protobufDescriptors: fileDescriptorSet,
+            $"CREATE PROTO BUNDLE (" +
+            $"{Duration.Descriptor.FullName}" +
+            EmptyOnEmulator($", {Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {ListValue.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {Value.Descriptor.FullName}"/* b/348716298 */) +
+            $")");
         try
         {
             createCmd.ExecuteNonQuery();
@@ -82,4 +99,6 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             return false;
         }
     }
+
+    private string EmptyOnEmulator(string text) => SpannerClientCreationOptions.UsesEmulator ? "" : text;
 }

@@ -52,6 +52,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null},
                 }.GetSpannerDbType()
             };
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Duration)), SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)};
         }
 
         [Theory]
@@ -121,6 +123,9 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             yield return new object[] { "ARRAY<STRING(5)>", SpannerDbType.ArrayOf(SpannerDbType.String), false };
             yield return new object[] { "ARRAY<BYTES(5)>", SpannerDbType.ArrayOf(SpannerDbType.Bytes), false };
+
+            yield return new object[] { "PROTO<google.protobuf.Duration>", SpannerDbType.FromClrType(typeof(Duration)) };
+            yield return new object[] { "ARRAY<PROTO<google.protobuf.Duration>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) };
 
             yield return new object[] { "ARRAY <  STRING (   5 )>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
             yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };

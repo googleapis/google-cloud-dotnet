@@ -14,12 +14,15 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using Google.Protobuf.Collections;
+using Google.Protobuf.Reflection;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
@@ -128,16 +131,21 @@ namespace Google.Cloud.Spanner.Data
         internal TypeAnnotationCode TypeAnnotationCode { get; }
 
         /// <summary>
-        /// When TypeCode is Array, this is the array element type. (Null for non-arrays.)
+        /// When TypeCode is Array, this is the array element type. Null for non-arrays.
         /// </summary>
         private SpannerDbType ArrayElementType { get; }
 
         /// <summary>
-        /// The field names and types within a struct. (Null for non-structs.) This is of type
-        /// List rather than IList so we can use the protobuf-supplied Lists class for equality
+        /// The field names and types within a struct. Null for non-structs.
+        /// This is of type List rather than IList so we can use the protobuf-supplied Lists class for equality
         /// and hash codes.
         /// </summary>
         private List<StructField> StructFields { get; }
+
+        /// <summary>
+        /// The fully qualified protobuf message type name if this is a protobuf type. Null for non-protobufs
+        /// </summary>
+        private string ProtobufTypeName { get; }
 
         private SpannerDbType(TypeCode typeCode, TypeAnnotationCode typeAnnotationCode = TypeAnnotationCode.Unspecified,
             int? size = null)
@@ -153,12 +161,15 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int? Size { get; }
 
-        private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
-            : this(typeCode) => ArrayElementType = arrayElementType;
+        private SpannerDbType(SpannerDbType arrayElementType)
+            : this(TypeCode.Array) => ArrayElementType = arrayElementType;
 
         // Note: the list reference is copied directly; callers are expected to be careful.
-        private SpannerDbType(TypeCode typeCode, List<StructField> structFields)
-            : this(typeCode) => StructFields = structFields;
+        private SpannerDbType(List<StructField> structFields)
+            : this(TypeCode.Struct) => StructFields = structFields;
+
+        private SpannerDbType(string protobufTypeName)
+            : this(TypeCode.Proto) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -236,7 +247,11 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Json:
                     return typeof(string);
                 default:
-                    // If we don't recognize it (or it's a struct), we use the protobuf Value well-known type.
+                    // If we don't recognize it, we use the protobuf Value well-known type.
+                    // But since, as of June 2024, we support protobuf, we need to handle Value
+                    // as a special case, as it may be used explicitly as a column type.
+                    // We don't do that here though, we do that when we use the CLR value
+                    // for conversions.
                     return typeof(Value);
             }
         }
@@ -269,12 +284,11 @@ namespace Google.Cloud.Spanner.Data
             switch (type.Code)
             {
                 case TypeCode.Array:
-                    return new SpannerDbType(
-                        TypeCode.Array,
-                        FromProtobufType(type.ArrayElementType));
+                    return new SpannerDbType(FromProtobufType(type.ArrayElementType));
                 case TypeCode.Struct:
-                    return new SpannerDbType(TypeCode.Struct,
-                        type.StructType.Fields.Select(f => new StructField(f.Name, SpannerDbType.FromProtobufType(f.Type))).ToList());
+                    return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
+                case TypeCode.Proto:
+                    return new SpannerDbType(type.ProtoTypeFqn);
                 default:
                     return FromType(type);
             }
@@ -300,6 +314,12 @@ namespace Google.Cloud.Spanner.Data
                                 Fields = { StructFields.Select(f => f.ToFieldType()) }
                             }
                     };
+                case TypeCode.Proto:
+                    return new V1.Type
+                    {
+                        Code = TypeCode,
+                        ProtoTypeFqn = ProtobufTypeName
+                    };
                 default: return new V1.Type { Code = TypeCode, TypeAnnotation = TypeAnnotationCode };
             }
         }
@@ -314,7 +334,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="elementType">The type of each item in the array.</param>
         public static SpannerDbType ArrayOf(SpannerDbType elementType) =>
-            new SpannerDbType(TypeCode.Array, elementType);
+            new SpannerDbType(elementType);
 
 
         /// <summary>
@@ -322,7 +342,11 @@ namespace Google.Cloud.Spanner.Data
         /// method; making this internal allows us to avoid exposing constructors even internally.
         /// </summary>
         internal static SpannerDbType ForStruct(SpannerStruct spannerStruct) =>
-            new SpannerDbType(TypeCode.Struct, spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
+            new SpannerDbType(spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
+
+        // Internal for testing, and to continue with the practice of not exposing constructors even internally.
+        internal static SpannerDbType ForProtobuf(string protobufTypeName) =>
+            new SpannerDbType(protobufTypeName);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
@@ -373,6 +397,13 @@ namespace Google.Cloud.Spanner.Data
             {
                 return String;
             }
+            if (typeof(IMessage).IsAssignableFrom(type)
+                && type.GetProperty("Descriptor", BindingFlags.Static | BindingFlags.Public) is PropertyInfo descriptorProperty
+                && descriptorProperty.CanRead
+                && descriptorProperty.GetValue(null) is MessageDescriptor descriptor)
+            {
+                return new SpannerDbType(descriptor.FullName);
+            }
             return Unspecified;
         }
 
@@ -401,11 +432,62 @@ namespace Google.Cloud.Spanner.Data
             && TypeCode == other.TypeCode
             && TypeAnnotationCode == other.TypeAnnotationCode
             && Size == other.Size
-            && Equals(ArrayElementType, other.ArrayElementType);
+            && Equals(ArrayElementType, other.ArrayElementType)
+            && ProtobufTypeName == other.ProtobufTypeName;
 
         /// <inheritdoc />
         public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Lists.GetHashCode(StructFields), Size.GetValueOrDefault(0).GetHashCode(),
-            TypeCode.GetHashCode(), TypeAnnotationCode.GetHashCode(), ArrayElementType?.GetHashCode() ?? 0);
+            TypeCode.GetHashCode(), TypeAnnotationCode.GetHashCode(), ArrayElementType?.GetHashCode() ?? 0, ProtobufTypeName?.GetHashCode() ?? 0);
+
+        /// <summary>
+        /// Helper method for obtaining the Descriptor or Parser property values from a protobuf CLR type.
+        /// This handles the <see cref="Value"/> special cases as <see cref="Value"/> can now be used as a column type
+        /// on its own, but it's still the type used by Spanner on the wire.
+        /// </summary>
+        /// <typeparam name="T">The type of the property whose value is to be returned.
+        /// Only <see cref="MessageDescriptor"/> or <see cref="MessageParser"/> allowed.</typeparam>
+        /// <param name="clrProtobufTypeTarget">The CLR type for the protobuf.</param>
+        /// <param name="actualProtobufTypeName">The protobuf type name that we know of.</param>
+        /// <returns>
+        /// The value of the property of type <typeparamref name="T"/> for <paramref name="clrProtobufTypeTarget"/> if <paramref name="clrProtobufTypeTarget"/>
+        /// is truly the CLR type of a protobuf message. If <paramref name="clrProtobufTypeTarget"/> represents <see cref="Value"/> then
+        /// <paramref name="actualProtobufTypeName"/> needs to also be for <see cref="Value"/>.
+        /// Otherwise this returns null.
+        /// </returns>
+        private static T GetProtobufPropertyValue<T>(System.Type clrProtobufTypeTarget, string actualProtobufTypeName)
+        {
+            var requested = typeof(T);
+            string propertyName;
+            if (requested == typeof(MessageDescriptor))
+            {
+                propertyName = "Descriptor";
+            }
+            else if (requested == typeof(MessageParser))
+            {
+                propertyName = "Parser";
+            }
+            else
+            {
+                throw new ArgumentException("Only Descriptor and Parser properties currently supported.");
+            }
+
+            // If the SpannerDbType is explicitly Value, we treat it as any other protobuf type.
+            // Else, this is Value because that's the default type returned from GetConfiguredClrType.
+            if (clrProtobufTypeTarget == typeof(Value) && actualProtobufTypeName != Value.Descriptor.FullName)
+            {
+                return default;
+            }
+
+            if (typeof(IMessage).IsAssignableFrom(clrProtobufTypeTarget)
+                && clrProtobufTypeTarget.GetProperty(propertyName, BindingFlags.Static | BindingFlags.Public) is PropertyInfo descriptorProperty
+                && descriptorProperty.CanRead
+                && descriptorProperty.GetValue(null) is T propertyValue)
+            {
+                return propertyValue;
+            }
+
+            return default;
+        }
 
         /// <summary>
         /// Value type representing the name and type of a field within a struct. This is like SpannerStruct.Field

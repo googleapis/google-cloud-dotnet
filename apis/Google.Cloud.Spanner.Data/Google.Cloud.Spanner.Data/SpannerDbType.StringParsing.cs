@@ -63,7 +63,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return false;
                     }
-                    spannerDbType = new SpannerDbType(type.Code, elementType);
+                    spannerDbType = new SpannerDbType(elementType);
                     return true;
                 case TypeCode.Struct:
                     // There could be nested structs, so we need to be careful about parsing the inner string.
@@ -105,7 +105,14 @@ namespace Google.Cloud.Spanner.Data
                         fields.Add(new StructField(fieldName, fieldDbType));
                         currentIndex = endFieldIndex + 1;
                     }
-                    spannerDbType = new SpannerDbType(type.Code, fields);
+                    spannerDbType = new SpannerDbType(fields);
+                    return true;
+                case TypeCode.Proto:
+                    if (string.IsNullOrEmpty(remainder))
+                    {
+                        return false;
+                    }
+                    spannerDbType = new SpannerDbType(remainder);
                     return true;
                 default:
                     return false;
@@ -221,6 +228,10 @@ namespace Google.Cloud.Spanner.Data
                 }
                 s.Append(">");
                 return s.ToString();
+            }
+            if (ProtobufTypeName != null)
+            {
+                return $"PROTO<{ProtobufTypeName}>";
             }
             if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
             {

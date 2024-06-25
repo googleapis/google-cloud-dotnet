@@ -14,6 +14,7 @@
 
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
+            SpannerDbType.FromClrType(typeof(Duration)),
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
@@ -49,7 +51,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            SpannerDbType.ArrayOf(SpannerDbType.Bytes)
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
         };
 
         // These SpannerDbTypes are unsupported on emulator.
@@ -59,6 +62,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
+            // b/348716298
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            // b/348716298 Makes it unsupported in the emulator
+            // b/348711708 Makes it unsupported in production
+            // SpannerDbType.FromClrType(typeof(Value)),
         };
 
         // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
@@ -276,6 +284,41 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindJsonEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             new string[] { });
+
+        [Fact(Skip = "b/348711708 makes it unsupported in production")]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298 makes it unsupported by the emulator
+        public async Task BindProtobufValue() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Value)),
+            Value.ForString("Hello"),
+            r => r.GetFieldValue<Value>(0));
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+                new Value[] { Value.ForNumber(10), null, Value.ForString("Hello world") });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)] // b/348716298
+        public async Task BindProtobufValueEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            new Value[] { });
+
+        [Fact]
+        public async Task BindProtobufDuration() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Duration)),
+            Duration.FromTimeSpan(TimeSpan.FromHours(1)),
+            r => r.GetFieldValue<Duration>(0));
+
+        [Fact]
+        public async Task BindProtobufDurationArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+                new Duration[] { Duration.FromTimeSpan(TimeSpan.FromHours(1)), null, Duration.FromTimeSpan(TimeSpan.FromSeconds(10)) });
+
+        [Fact]
+        public async Task BindProtobufDurationEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+            new Duration[] { });
 
         private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
             Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any(data => spannerDbType.Equals(data[0])),
