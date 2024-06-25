@@ -1549,10 +1549,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Signs an SSH public key for a user to authenticate to an instance.
         /// </summary>
         /// <param name="parent">
-        /// The parent project and zone for the signing request. This is needed to
-        /// properly ensure per-organization ISS processing and potentially to provide
-        /// for the possibility of zone-specific certificates used in the signing
-        /// process.
+        /// The parent project and region for the signing request.
         /// </param>
         /// <param name="sshPublicKey">
         /// The SSH public key to sign.
@@ -1570,10 +1567,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Signs an SSH public key for a user to authenticate to an instance.
         /// </summary>
         /// <param name="parent">
-        /// The parent project and zone for the signing request. This is needed to
-        /// properly ensure per-organization ISS processing and potentially to provide
-        /// for the possibility of zone-specific certificates used in the signing
-        /// process.
+        /// The parent project and region for the signing request.
         /// </param>
         /// <param name="sshPublicKey">
         /// The SSH public key to sign.
@@ -1591,10 +1585,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Signs an SSH public key for a user to authenticate to an instance.
         /// </summary>
         /// <param name="parent">
-        /// The parent project and zone for the signing request. This is needed to
-        /// properly ensure per-organization ISS processing and potentially to provide
-        /// for the possibility of zone-specific certificates used in the signing
-        /// process.
+        /// The parent project and region for the signing request.
         /// </param>
         /// <param name="sshPublicKey">
         /// The SSH public key to sign.

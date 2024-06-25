@@ -3391,10 +3391,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public const int ParentFieldNumber = 2;
     private string parent_ = "";
     /// <summary>
-    /// The parent project and zone for the signing request. This is needed to
-    /// properly ensure per-organization ISS processing and potentially to provide
-    /// for the possibility of zone-specific certificates used in the signing
-    /// process.
+    /// The parent project and region for the signing request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
