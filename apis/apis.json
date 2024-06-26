@@ -2536,6 +2536,29 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.GdcHardwareManagement.V1Alpha",
+      "version": "1.0.0-alpha00",
+      "type": "grpc",
+      "productName": "GDC Hardware Management",
+      "productUrl": "https://cloud.google.com/distributed-cloud/edge/latest/docs",
+      "description": "Recommended Google client library to access the Google Distributed Cloud Hardware Management API (v1alpha)",
+      "tags": [
+        "hardware",
+        "distributed-cloud"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/gdchardwaremanagement/v1alpha",
+      "includeCommonResourcesProto": true,
+      "shortName": "gdchardwaremanagement",
+      "serviceConfigFile": "gdchardwaremanagement_v1alpha.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.GkeBackup.V1",
       "version": "2.6.0",
       "type": "grpc",
