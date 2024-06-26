@@ -1,0 +1,37 @@
+[
+  {
+    "method": "ListZones",
+    "client": "GDCHardwareManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListHardware",
+    "client": "GDCHardwareManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListSkus",
+    "client": "GDCHardwareManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListOrders",
+    "client": "GDCHardwareManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListSites",
+    "client": "GDCHardwareManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]

@@ -120,6 +120,7 @@
     "apis/Google.Cloud.Functions.V2/Google.Cloud.Functions.V2/**",
     "apis/Google.Cloud.Functions.V2Beta/Google.Cloud.Functions.V2Beta/**",
     "apis/Google.Cloud.GSuiteAddOns.V1/Google.Cloud.GSuiteAddOns.V1/**",
+    "apis/Google.Cloud.GdcHardwareManagement.V1Alpha/Google.Cloud.GdcHardwareManagement.V1Alpha/**",
     "apis/Google.Cloud.GkeBackup.V1/Google.Cloud.GkeBackup.V1/**",
     "apis/Google.Cloud.GkeConnect.Gateway.V1Beta1/Google.Cloud.GkeConnect.Gateway.V1Beta1/**",
     "apis/Google.Cloud.GkeHub.V1Beta1/Google.Cloud.GkeHub.V1Beta1/**",
