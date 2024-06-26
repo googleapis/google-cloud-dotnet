@@ -217,8 +217,6 @@ namespace Google.Apps.Chat.V1 {
     public const int GroupMemberFieldNumber = 5;
     /// <summary>
     /// The Google Group the membership corresponds to.
-    /// Only supports read operations. Other operations, like
-    /// creating or updating a membership, aren't currently supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
