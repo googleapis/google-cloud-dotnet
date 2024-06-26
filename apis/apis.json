@@ -2537,7 +2537,7 @@
     },
     {
       "id": "Google.Cloud.GdcHardwareManagement.V1Alpha",
-      "version": "1.0.0-alpha00",
+      "version": "1.0.0-alpha01",
       "type": "grpc",
       "productName": "GDC Hardware Management",
       "productUrl": "https://cloud.google.com/distributed-cloud/edge/latest/docs",
