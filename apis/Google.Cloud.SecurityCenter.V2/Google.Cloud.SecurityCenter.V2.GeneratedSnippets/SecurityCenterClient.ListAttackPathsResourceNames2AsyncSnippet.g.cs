@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames]
+    // [START securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Cloud.SecurityCenter.V2;
     using System;
@@ -33,7 +33,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListAttackPathsResourceNamesAsync()
+        public async Task ListAttackPathsResourceNames2Async()
         {
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
@@ -75,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames]
+    // [END securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames2]
 }

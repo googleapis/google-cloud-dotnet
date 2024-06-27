@@ -16,15 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_sync_flattened_resourceNames]
+    // [START securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames1]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecurityCenter.V2;
     using System;
 
     public sealed partial class GeneratedSecurityCenterClientSnippets
     {
-        /// <summary>Snippet for ListResourceValueConfigs</summary>
+        /// <summary>Snippet for ListAttackPaths</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,28 +31,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListResourceValueConfigsResourceNames()
+        public void ListAttackPathsResourceNames1()
         {
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            OrganizationValuedResourceName parent = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
             // Make the request
-            PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigs(parent);
+            PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ResourceValueConfig item in response)
+            foreach (AttackPath item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListResourceValueConfigsResponse page in response.AsRawResponses())
+            foreach (ListAttackPathsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ResourceValueConfig item in page)
+                foreach (AttackPath item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -62,10 +61,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ResourceValueConfig> singlePage = response.ReadPage(pageSize);
+            Page<AttackPath> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ResourceValueConfig item in singlePage)
+            foreach (AttackPath item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -74,5 +73,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_sync_flattened_resourceNames]
+    // [END securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames1]
 }

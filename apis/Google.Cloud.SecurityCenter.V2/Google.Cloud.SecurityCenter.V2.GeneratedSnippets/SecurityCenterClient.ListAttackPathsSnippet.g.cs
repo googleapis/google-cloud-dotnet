@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
             // Make the request
             PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
 

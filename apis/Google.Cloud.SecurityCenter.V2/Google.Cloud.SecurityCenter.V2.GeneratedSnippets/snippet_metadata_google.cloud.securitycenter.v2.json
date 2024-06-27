@@ -211,10 +211,10 @@
       ]
     },
     {
-      "regionTag": "securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_sync_flattened_resourceNames",
-      "title": "BatchCreateResourceValueConfigsResourceNames",
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_sync_flattened_resourceNames1",
+      "title": "BatchCreateResourceValueConfigsResourceNames1",
       "description": "Snippet for BatchCreateResourceValueConfigs",
-      "file": "SecurityCenterClient.BatchCreateResourceValueConfigsResourceNamesSnippet.g.cs",
+      "file": "SecurityCenterClient.BatchCreateResourceValueConfigsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "BatchCreateResourceValueConfigs",
@@ -262,10 +262,10 @@
       ]
     },
     {
-      "regionTag": "securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_async_flattened_resourceNames",
-      "title": "BatchCreateResourceValueConfigsResourceNamesAsync",
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_async_flattened_resourceNames1",
+      "title": "BatchCreateResourceValueConfigsResourceNames1Async",
       "description": "Snippet for BatchCreateResourceValueConfigsAsync",
-      "file": "SecurityCenterClient.BatchCreateResourceValueConfigsResourceNamesAsyncSnippet.g.cs",
+      "file": "SecurityCenterClient.BatchCreateResourceValueConfigsResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "BatchCreateResourceValueConfigsAsync",
@@ -309,6 +309,109 @@
         {
           "start": 37,
           "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_sync_flattened_resourceNames2",
+      "title": "BatchCreateResourceValueConfigsResourceNames2",
+      "description": "Snippet for BatchCreateResourceValueConfigs",
+      "file": "SecurityCenterClient.BatchCreateResourceValueConfigsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateResourceValueConfigs",
+        "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient.BatchCreateResourceValueConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.SecurityCenter.V2.CreateResourceValueConfigRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V2.BatchCreateResourceValueConfigsResponse",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "BatchCreateResourceValueConfigs",
+          "fullName": "google.cloud.securitycenter.v2.SecurityCenter.BatchCreateResourceValueConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v2.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_async_flattened_resourceNames2",
+      "title": "BatchCreateResourceValueConfigsResourceNames2Async",
+      "description": "Snippet for BatchCreateResourceValueConfigsAsync",
+      "file": "SecurityCenterClient.BatchCreateResourceValueConfigsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateResourceValueConfigsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient.BatchCreateResourceValueConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.SecurityCenter.V2.CreateResourceValueConfigRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V2.BatchCreateResourceValueConfigsResponse>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "BatchCreateResourceValueConfigs",
+          "fullName": "google.cloud.securitycenter.v2.SecurityCenter.BatchCreateResourceValueConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v2.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -7154,10 +7257,121 @@
       ]
     },
     {
-      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames",
-      "title": "ListAttackPathsResourceNames",
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames1",
+      "title": "ListAttackPathsResourceNames1",
       "description": "Snippet for ListAttackPaths",
-      "file": "SecurityCenterClient.ListAttackPathsResourceNamesSnippet.g.cs",
+      "file": "SecurityCenterClient.ListAttackPathsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttackPaths",
+        "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient.ListAttackPaths",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V2.OrganizationValuedResourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V2.ListAttackPathsResponse, Google.Cloud.SecurityCenter.V2.AttackPath>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListAttackPaths",
+          "fullName": "google.cloud.securitycenter.v2.SecurityCenter.ListAttackPaths",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v2.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames1",
+      "title": "ListAttackPathsResourceNames1Async",
+      "description": "Snippet for ListAttackPathsAsync",
+      "file": "SecurityCenterClient.ListAttackPathsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttackPathsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient.ListAttackPathsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V2.OrganizationValuedResourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V2.ListAttackPathsResponse, Google.Cloud.SecurityCenter.V2.AttackPath>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListAttackPaths",
+          "fullName": "google.cloud.securitycenter.v2.SecurityCenter.ListAttackPaths",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v2.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames2",
+      "title": "ListAttackPathsResourceNames2",
+      "description": "Snippet for ListAttackPaths",
+      "file": "SecurityCenterClient.ListAttackPathsResourceNames2Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListAttackPaths",
@@ -7209,10 +7423,10 @@
       ]
     },
     {
-      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames",
-      "title": "ListAttackPathsResourceNamesAsync",
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames2",
+      "title": "ListAttackPathsResourceNames2Async",
       "description": "Snippet for ListAttackPathsAsync",
-      "file": "SecurityCenterClient.ListAttackPathsResourceNamesAsyncSnippet.g.cs",
+      "file": "SecurityCenterClient.ListAttackPathsResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListAttackPathsAsync",
@@ -9748,10 +9962,10 @@
       ]
     },
     {
-      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_sync_flattened_resourceNames",
-      "title": "ListResourceValueConfigsResourceNames",
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_sync_flattened_resourceNames1",
+      "title": "ListResourceValueConfigsResourceNames1",
       "description": "Snippet for ListResourceValueConfigs",
-      "file": "SecurityCenterClient.ListResourceValueConfigsResourceNamesSnippet.g.cs",
+      "file": "SecurityCenterClient.ListResourceValueConfigsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListResourceValueConfigs",
@@ -9803,10 +10017,10 @@
       ]
     },
     {
-      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_async_flattened_resourceNames",
-      "title": "ListResourceValueConfigsResourceNamesAsync",
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_async_flattened_resourceNames1",
+      "title": "ListResourceValueConfigsResourceNames1Async",
       "description": "Snippet for ListResourceValueConfigsAsync",
-      "file": "SecurityCenterClient.ListResourceValueConfigsResourceNamesAsyncSnippet.g.cs",
+      "file": "SecurityCenterClient.ListResourceValueConfigsResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListResourceValueConfigsAsync",
@@ -9854,6 +10068,117 @@
         {
           "start": 39,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_sync_flattened_resourceNames2",
+      "title": "ListResourceValueConfigsResourceNames2",
+      "description": "Snippet for ListResourceValueConfigs",
+      "file": "SecurityCenterClient.ListResourceValueConfigsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceValueConfigs",
+        "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient.ListResourceValueConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V2.ListResourceValueConfigsResponse, Google.Cloud.SecurityCenter.V2.ResourceValueConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListResourceValueConfigs",
+          "fullName": "google.cloud.securitycenter.v2.SecurityCenter.ListResourceValueConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v2.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_async_flattened_resourceNames2",
+      "title": "ListResourceValueConfigsResourceNames2Async",
+      "description": "Snippet for ListResourceValueConfigsAsync",
+      "file": "SecurityCenterClient.ListResourceValueConfigsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceValueConfigsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient.ListResourceValueConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V2.ListResourceValueConfigsResponse, Google.Cloud.SecurityCenter.V2.ResourceValueConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V2.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListResourceValueConfigs",
+          "fullName": "google.cloud.securitycenter.v2.SecurityCenter.ListResourceValueConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v2.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]

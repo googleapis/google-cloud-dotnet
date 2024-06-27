@@ -27,25 +27,29 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "Ci9nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvc2ltdWxhdGlvbi5w",
             "cm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvGjRnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvdmFsdWVk",
-            "X3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIrUCCgpTaW11bGF0aW9uEgwKBG5hbWUYASABKAkSNAoLY3JlYXRlX3Rp",
-            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSZAof",
-            "cmVzb3VyY2VfdmFsdWVfY29uZmlnc19tZXRhZGF0YRgDIAMoCzI7Lmdvb2ds",
-            "ZS5jbG91ZC5zZWN1cml0eWNlbnRlci52Mi5SZXNvdXJjZVZhbHVlQ29uZmln",
-            "TWV0YWRhdGE6fepBegooc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20v",
-            "U2ltdWxhdGlvbhI1b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9zaW11",
-            "bGF0aW9ucy97c2ltdWxhdGlvbn0qC3NpbXVsYXRpb25zMgpzaW11bGF0aW9u",
-            "QukBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQg9TaW11",
-            "bGF0aW9uUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNl",
-            "bnRlci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKq",
-            "Ah5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29nbGVcQ2xv",
-            "dWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0",
-            "eUNlbnRlcjo6VjJiBnByb3RvMw=="));
+            "LnByb3RvGi1nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvcmVzb3Vy",
+            "Y2UucHJvdG8aNGdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92Mi92YWx1",
+            "ZWRfcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
+            "cHJvdG8iygMKClNpbXVsYXRpb24SDAoEbmFtZRgBIAEoCRI0CgtjcmVhdGVf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJk",
+            "Ch9yZXNvdXJjZV92YWx1ZV9jb25maWdzX21ldGFkYXRhGAMgAygLMjsuZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyLlJlc291cmNlVmFsdWVDb25m",
+            "aWdNZXRhZGF0YRJFCg5jbG91ZF9wcm92aWRlchgEIAEoDjItLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52Mi5DbG91ZFByb3ZpZGVyOsoB6kHGAQoo",
+            "c2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vU2ltdWxhdGlvbhI1b3Jn",
+            "YW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9zaW11bGF0aW9ucy97c2ltdWxh",
+            "dGlvbn0SSm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vc2ltdWxhdGlvbnMve3NpbWx1YXRpb259KgtzaW11bGF0",
+            "aW9uczIKc2ltdWxhdGlvbkLpAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MkIPU2ltdWxhdGlvblByb3RvUAFaSmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50ZXJwYjtz",
+            "ZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVy",
+            "LlYyygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xl",
+            "OjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V2.ValuedResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V2.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V2.ValuedResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Simulation), global::Google.Cloud.SecurityCenter.V2.Simulation.Parser, new[]{ "Name", "CreateTime", "ResourceValueConfigsMetadata" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Simulation), global::Google.Cloud.SecurityCenter.V2.Simulation.Parser, new[]{ "Name", "CreateTime", "ResourceValueConfigsMetadata", "CloudProvider" }, null, null, null, null)
           }));
     }
     #endregion
@@ -93,6 +97,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       resourceValueConfigsMetadata_ = other.resourceValueConfigsMetadata_.Clone();
+      cloudProvider_ = other.cloudProvider_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -148,6 +153,21 @@ namespace Google.Cloud.SecurityCenter.V2 {
       get { return resourceValueConfigsMetadata_; }
     }
 
+    /// <summary>Field number for the "cloud_provider" field.</summary>
+    public const int CloudProviderFieldNumber = 4;
+    private global::Google.Cloud.SecurityCenter.V2.CloudProvider cloudProvider_ = global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified;
+    /// <summary>
+    /// Indicates which cloud provider was used in this simulation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V2.CloudProvider CloudProvider {
+      get { return cloudProvider_; }
+      set {
+        cloudProvider_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -166,6 +186,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (Name != other.Name) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if(!resourceValueConfigsMetadata_.Equals(other.resourceValueConfigsMetadata_)) return false;
+      if (CloudProvider != other.CloudProvider) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,6 +197,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       hash ^= resourceValueConfigsMetadata_.GetHashCode();
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) hash ^= CloudProvider.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -203,6 +225,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteMessage(CreateTime);
       }
       resourceValueConfigsMetadata_.WriteTo(output, _repeated_resourceValueConfigsMetadata_codec);
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CloudProvider);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -222,6 +248,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteMessage(CreateTime);
       }
       resourceValueConfigsMetadata_.WriteTo(ref output, _repeated_resourceValueConfigsMetadata_codec);
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CloudProvider);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -239,6 +269,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       size += resourceValueConfigsMetadata_.CalculateSize(_repeated_resourceValueConfigsMetadata_codec);
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CloudProvider);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -261,6 +294,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         CreateTime.MergeFrom(other.CreateTime);
       }
       resourceValueConfigsMetadata_.Add(other.resourceValueConfigsMetadata_);
+      if (other.CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        CloudProvider = other.CloudProvider;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -291,6 +327,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             resourceValueConfigsMetadata_.AddEntriesFrom(input, _repeated_resourceValueConfigsMetadata_codec);
             break;
           }
+          case 32: {
+            CloudProvider = (global::Google.Cloud.SecurityCenter.V2.CloudProvider) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -319,6 +359,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
           }
           case 26: {
             resourceValueConfigsMetadata_.AddEntriesFrom(ref input, _repeated_resourceValueConfigsMetadata_codec);
+            break;
+          }
+          case 32: {
+            CloudProvider = (global::Google.Cloud.SecurityCenter.V2.CloudProvider) input.ReadEnum();
             break;
           }
         }

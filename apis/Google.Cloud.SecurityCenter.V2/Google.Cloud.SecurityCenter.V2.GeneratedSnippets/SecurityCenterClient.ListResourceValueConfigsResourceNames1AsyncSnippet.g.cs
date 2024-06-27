@@ -16,8 +16,9 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened]
+    // [START securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_async_flattened_resourceNames1]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecurityCenter.V2;
     using System;
     using System.Linq;
@@ -25,7 +26,7 @@ namespace GoogleCSharpSnippets
 
     public sealed partial class GeneratedSecurityCenterClientSnippets
     {
-        /// <summary>Snippet for ListAttackPathsAsync</summary>
+        /// <summary>Snippet for ListResourceValueConfigsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -33,28 +34,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListAttackPathsAsync()
+        public async Task ListResourceValueConfigsResourceNames1Async()
         {
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
-            PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(parent);
+            PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AttackPath item) =>
+            await response.ForEachAsync((ResourceValueConfig item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAttackPathsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((ListResourceValueConfigsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AttackPath item in page)
+                foreach (ResourceValueConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -63,10 +64,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AttackPath> singlePage = await response.ReadPageAsync(pageSize);
+            Page<ResourceValueConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AttackPath item in singlePage)
+            foreach (ResourceValueConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -75,5 +76,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened]
+    // [END securitycenter_v2_generated_SecurityCenter_ListResourceValueConfigs_async_flattened_resourceNames1]
 }

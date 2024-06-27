@@ -16,15 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_async_flattened_resourceNames]
-    using Google.Api.Gax.ResourceNames;
+    // [START securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_sync_flattened_resourceNames2]
     using Google.Cloud.SecurityCenter.V2;
     using System.Collections.Generic;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecurityCenterClientSnippets
     {
-        /// <summary>Snippet for BatchCreateResourceValueConfigsAsync</summary>
+        /// <summary>Snippet for BatchCreateResourceValueConfigs</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,19 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task BatchCreateResourceValueConfigsResourceNamesAsync()
+        public void BatchCreateResourceValueConfigsResourceNames2()
         {
             // Create client
-            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
             {
                 new CreateResourceValueConfigRequest(),
             };
             // Make the request
-            BatchCreateResourceValueConfigsResponse response = await securityCenterClient.BatchCreateResourceValueConfigsAsync(parent, requests);
+            BatchCreateResourceValueConfigsResponse response = securityCenterClient.BatchCreateResourceValueConfigs(parent, requests);
         }
     }
-    // [END securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_async_flattened_resourceNames]
+    // [END securitycenter_v2_generated_SecurityCenter_BatchCreateResourceValueConfigs_sync_flattened_resourceNames2]
 }

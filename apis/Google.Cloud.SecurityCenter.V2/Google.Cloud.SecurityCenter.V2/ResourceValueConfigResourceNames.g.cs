@@ -35,9 +35,17 @@ namespace Google.Cloud.SecurityCenter.V2
             /// <c>organizations/{organization}/resourceValueConfigs/{resource_value_config}</c>.
             /// </summary>
             OrganizationResourceValueConfig = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>.
+            /// </summary>
+            OrganizationLocationResourceValueConfig = 2,
         }
 
         private static gax::PathTemplate s_organizationResourceValueConfig = new gax::PathTemplate("organizations/{organization}/resourceValueConfigs/{resource_value_config}");
+
+        private static gax::PathTemplate s_organizationLocationResourceValueConfig = new gax::PathTemplate("organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}");
 
         /// <summary>Creates a <see cref="ResourceValueConfigName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -61,6 +69,21 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </returns>
         public static ResourceValueConfigName FromOrganizationResourceValueConfig(string organizationId, string resourceValueConfigId) =>
             new ResourceValueConfigName(ResourceNameType.OrganizationResourceValueConfig, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), resourceValueConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(resourceValueConfigId, nameof(resourceValueConfigId)));
+
+        /// <summary>
+        /// Creates a <see cref="ResourceValueConfigName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="resourceValueConfigId">
+        /// The <c>ResourceValueConfig</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="ResourceValueConfigName"/> constructed from the provided ids.
+        /// </returns>
+        public static ResourceValueConfigName FromOrganizationLocationResourceValueConfig(string organizationId, string locationId, string resourceValueConfigId) =>
+            new ResourceValueConfigName(ResourceNameType.OrganizationLocationResourceValueConfig, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), resourceValueConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(resourceValueConfigId, nameof(resourceValueConfigId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ResourceValueConfigName"/> with pattern
@@ -93,6 +116,22 @@ namespace Google.Cloud.SecurityCenter.V2
             s_organizationResourceValueConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(resourceValueConfigId, nameof(resourceValueConfigId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ResourceValueConfigName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="resourceValueConfigId">
+        /// The <c>ResourceValueConfig</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="ResourceValueConfigName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationResourceValueConfig(string organizationId, string locationId, string resourceValueConfigId) =>
+            s_organizationLocationResourceValueConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(resourceValueConfigId, nameof(resourceValueConfigId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="ResourceValueConfigName"/> instance.
         /// </summary>
         /// <remarks>
@@ -100,6 +139,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <list type="bullet">
         /// <item>
         /// <description><c>organizations/{organization}/resourceValueConfigs/{resource_value_config}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -116,6 +160,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <list type="bullet">
         /// <item>
         /// <description><c>organizations/{organization}/resourceValueConfigs/{resource_value_config}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -139,6 +188,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <item>
         /// <description><c>organizations/{organization}/resourceValueConfigs/{resource_value_config}</c></description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="resourceValueConfigName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -159,6 +213,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <list type="bullet">
         /// <item>
         /// <description><c>organizations/{organization}/resourceValueConfigs/{resource_value_config}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/resourceValueConfigs/{resource_value_config}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -183,6 +242,11 @@ namespace Google.Cloud.SecurityCenter.V2
                 result = FromOrganizationResourceValueConfig(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_organizationLocationResourceValueConfig.TryParseName(resourceValueConfigName, out resourceName))
+            {
+                result = FromOrganizationLocationResourceValueConfig(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(resourceValueConfigName, out gax::UnparsedResourceName unparsedResourceName))
@@ -195,10 +259,11 @@ namespace Google.Cloud.SecurityCenter.V2
             return false;
         }
 
-        private ResourceValueConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string organizationId = null, string resourceValueConfigId = null)
+        private ResourceValueConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string organizationId = null, string resourceValueConfigId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
             OrganizationId = organizationId;
             ResourceValueConfigId = resourceValueConfigId;
         }
@@ -225,14 +290,19 @@ namespace Google.Cloud.SecurityCenter.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
 
         /// <summary>
-        /// The <c>ResourceValueConfig</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
+        /// The <c>ResourceValueConfig</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ResourceValueConfigId { get; }
 
@@ -247,6 +317,7 @@ namespace Google.Cloud.SecurityCenter.V2
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationResourceValueConfig: return s_organizationResourceValueConfig.Expand(OrganizationId, ResourceValueConfigId);
+                case ResourceNameType.OrganizationLocationResourceValueConfig: return s_organizationLocationResourceValueConfig.Expand(OrganizationId, LocationId, ResourceValueConfigId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
