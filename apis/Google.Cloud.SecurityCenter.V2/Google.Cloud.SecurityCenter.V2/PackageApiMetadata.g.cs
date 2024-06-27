@@ -61,6 +61,7 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return AttackPathReflection.Descriptor;
             yield return BackupDisasterRecoveryReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
+            yield return CloudArmorReflection.Descriptor;
             yield return CloudDlpDataProfileReflection.Descriptor;
             yield return CloudDlpInspectionReflection.Descriptor;
             yield return ComplianceReflection.Descriptor;
@@ -72,6 +73,7 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
             yield return FindingReflection.Descriptor;
+            yield return FolderReflection.Descriptor;
             yield return GroupMembershipReflection.Descriptor;
             yield return IamBindingReflection.Descriptor;
             yield return IndicatorReflection.Descriptor;
@@ -82,6 +84,7 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return LogEntryReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
             yield return MuteConfigReflection.Descriptor;
+            yield return NotebookReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
             yield return OrgPolicyReflection.Descriptor;

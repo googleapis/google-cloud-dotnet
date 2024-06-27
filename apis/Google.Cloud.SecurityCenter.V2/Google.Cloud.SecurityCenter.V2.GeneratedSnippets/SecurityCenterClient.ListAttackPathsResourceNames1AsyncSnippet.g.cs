@@ -16,14 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames]
+    // [START securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud.SecurityCenter.V2;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecurityCenterClientSnippets
     {
-        /// <summary>Snippet for ListAttackPaths</summary>
+        /// <summary>Snippet for ListAttackPathsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,24 +33,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListAttackPathsResourceNames()
+        public async Task ListAttackPathsResourceNames1Async()
         {
             // Create client
-            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            ValuedResourceName parent = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            OrganizationValuedResourceName parent = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
             // Make the request
-            PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
+            PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (AttackPath item in response)
+            await response.ForEachAsync((AttackPath item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAttackPathsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListAttackPathsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -57,11 +59,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AttackPath> singlePage = response.ReadPage(pageSize);
+            Page<AttackPath> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (AttackPath item in singlePage)
@@ -73,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END securitycenter_v2_generated_SecurityCenter_ListAttackPaths_sync_flattened_resourceNames]
+    // [END securitycenter_v2_generated_SecurityCenter_ListAttackPaths_async_flattened_resourceNames1]
 }

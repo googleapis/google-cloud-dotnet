@@ -905,6 +905,71 @@ namespace Google.Cloud.SecurityCenter.V2
             BatchCreateResourceValueConfigsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(OrganizationLocationName parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateResourceValueConfigs(new BatchCreateResourceValueConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(OrganizationLocationName parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateResourceValueConfigsAsync(new BatchCreateResourceValueConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(OrganizationLocationName parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateResourceValueConfigsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Kicks off an LRO to bulk mute findings for a parent based on a filter. If
         /// no location is specified, findings are muted in global. The parent
         /// can be either an organization, folder, or project. The findings matched by
@@ -4461,14 +4526,6 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Expression that defines what assets fields to use for grouping.
         /// The string value should follow SQL syntax: comma separated list of fields.
         /// For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4532,14 +4589,6 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Expression that defines what assets fields to use for grouping.
         /// The string value should follow SQL syntax: comma separated list of fields.
         /// For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4603,14 +4652,6 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Expression that defines what assets fields to use for grouping.
         /// The string value should follow SQL syntax: comma separated list of fields.
         /// For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4674,14 +4715,6 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Expression that defines what assets fields to use for grouping.
         /// The string value should follow SQL syntax: comma separated list of fields.
         /// For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4780,6 +4813,68 @@ namespace Google.Cloud.SecurityCenter.V2
             ListAttackPathsAsync(new ListAttackPathsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list attack paths.
+        /// 
+        /// Valid formats:
+        /// "organizations/{organization}",
+        /// "organizations/{organization}/simulations/{simulation}"
+        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(OrganizationValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAttackPaths(new ListAttackPathsRequest
+            {
+                ParentAsOrganizationValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list attack paths.
+        /// 
+        /// Valid formats:
+        /// "organizations/{organization}",
+        /// "organizations/{organization}/simulations/{simulation}"
+        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(OrganizationValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAttackPathsAsync(new ListAttackPathsRequest
+            {
+                ParentAsOrganizationValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -6170,6 +6265,58 @@ namespace Google.Cloud.SecurityCenter.V2
             ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of resource value configs.
+        /// Its format is
+        /// "organizations/[organization_id]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListResourceValueConfigs(new ListResourceValueConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of resource value configs.
+        /// Its format is
+        /// "organizations/[organization_id]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -7790,6 +7937,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="updateMask">
         /// The list of fields to be updated.
         /// If empty all mutable fields will be updated.
+        /// 
+        /// To update nested fields, include the top level field in the mask
+        /// For example, to update gcp_metadata.resource_type, include the
+        /// "gcp_metadata" field mask
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7809,6 +7960,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="updateMask">
         /// The list of fields to be updated.
         /// If empty all mutable fields will be updated.
+        /// 
+        /// To update nested fields, include the top level field in the mask
+        /// For example, to update gcp_metadata.resource_type, include the
+        /// "gcp_metadata" field mask
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7828,6 +7983,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="updateMask">
         /// The list of fields to be updated.
         /// If empty all mutable fields will be updated.
+        /// 
+        /// To update nested fields, include the top level field in the mask
+        /// For example, to update gcp_metadata.resource_type, include the
+        /// "gcp_metadata" field mask
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

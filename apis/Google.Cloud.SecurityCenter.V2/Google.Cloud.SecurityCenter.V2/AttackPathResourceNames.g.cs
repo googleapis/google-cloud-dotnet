@@ -37,9 +37,19 @@ namespace Google.Cloud.SecurityCenter.V2
             /// .
             /// </summary>
             OrganizationSimulationValuedResourceAttackPath = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+            /// .
+            /// </summary>
+            OrganizationLocationSimulationValuedResourceAttackPath = 2,
         }
 
         private static gax::PathTemplate s_organizationSimulationValuedResourceAttackPath = new gax::PathTemplate("organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}");
+
+        private static gax::PathTemplate s_organizationLocationSimulationValuedResourceAttackPath = new gax::PathTemplate("organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}");
 
         /// <summary>Creates a <see cref="AttackPathName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -63,6 +73,21 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <returns>A new instance of <see cref="AttackPathName"/> constructed from the provided ids.</returns>
         public static AttackPathName FromOrganizationSimulationValuedResourceAttackPath(string organizationId, string simulationId, string valuedResourceId, string attackPathId) =>
             new AttackPathName(ResourceNameType.OrganizationSimulationValuedResourceAttackPath, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), simulationId: gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), valuedResourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)), attackPathId: gax::GaxPreconditions.CheckNotNullOrEmpty(attackPathId, nameof(attackPathId)));
+
+        /// <summary>
+        /// Creates a <see cref="AttackPathName"/> with the pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// .
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="simulationId">The <c>Simulation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="valuedResourceId">The <c>ValuedResource</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="attackPathId">The <c>AttackPath</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AttackPathName"/> constructed from the provided ids.</returns>
+        public static AttackPathName FromOrganizationLocationSimulationValuedResourceAttackPath(string organizationId, string locationId, string simulationId, string valuedResourceId, string attackPathId) =>
+            new AttackPathName(ResourceNameType.OrganizationLocationSimulationValuedResourceAttackPath, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), simulationId: gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), valuedResourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)), attackPathId: gax::GaxPreconditions.CheckNotNullOrEmpty(attackPathId, nameof(attackPathId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AttackPathName"/> with pattern
@@ -102,6 +127,26 @@ namespace Google.Cloud.SecurityCenter.V2
         public static string FormatOrganizationSimulationValuedResourceAttackPath(string organizationId, string simulationId, string valuedResourceId, string attackPathId) =>
             s_organizationSimulationValuedResourceAttackPath.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(attackPathId, nameof(attackPathId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AttackPathName"/> with pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// .
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="simulationId">The <c>Simulation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="valuedResourceId">The <c>ValuedResource</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="attackPathId">The <c>AttackPath</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AttackPathName"/> with pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// .
+        /// </returns>
+        public static string FormatOrganizationLocationSimulationValuedResourceAttackPath(string organizationId, string locationId, string simulationId, string valuedResourceId, string attackPathId) =>
+            s_organizationLocationSimulationValuedResourceAttackPath.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(attackPathId, nameof(attackPathId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="AttackPathName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -110,6 +155,12 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <description>
         /// <c>
         /// organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -129,6 +180,12 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <description>
         /// <c>
         /// organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -156,6 +213,12 @@ namespace Google.Cloud.SecurityCenter.V2
         /// organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="attackPathName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -177,6 +240,12 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <description>
         /// <c>
         /// organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}/attackPaths/{attack_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -201,6 +270,11 @@ namespace Google.Cloud.SecurityCenter.V2
                 result = FromOrganizationSimulationValuedResourceAttackPath(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
+            if (s_organizationLocationSimulationValuedResourceAttackPath.TryParseName(attackPathName, out resourceName))
+            {
+                result = FromOrganizationLocationSimulationValuedResourceAttackPath(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(attackPathName, out gax::UnparsedResourceName unparsedResourceName))
@@ -213,11 +287,12 @@ namespace Google.Cloud.SecurityCenter.V2
             return false;
         }
 
-        private AttackPathName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string attackPathId = null, string organizationId = null, string simulationId = null, string valuedResourceId = null)
+        private AttackPathName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string attackPathId = null, string locationId = null, string organizationId = null, string simulationId = null, string valuedResourceId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AttackPathId = attackPathId;
+            LocationId = locationId;
             OrganizationId = organizationId;
             SimulationId = simulationId;
             ValuedResourceId = valuedResourceId;
@@ -246,24 +321,31 @@ namespace Google.Cloud.SecurityCenter.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>AttackPath</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>AttackPath</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string AttackPathId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
 
         /// <summary>
-        /// The <c>Simulation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Simulation</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string SimulationId { get; }
 
         /// <summary>
-        /// The <c>ValuedResource</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>ValuedResource</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ValuedResourceId { get; }
 
@@ -278,6 +360,7 @@ namespace Google.Cloud.SecurityCenter.V2
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationSimulationValuedResourceAttackPath: return s_organizationSimulationValuedResourceAttackPath.Expand(OrganizationId, SimulationId, ValuedResourceId, AttackPathId);
+                case ResourceNameType.OrganizationLocationSimulationValuedResourceAttackPath: return s_organizationLocationSimulationValuedResourceAttackPath.Expand(OrganizationId, LocationId, SimulationId, ValuedResourceId, AttackPathId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

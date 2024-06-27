@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListAttackPathsRequest request = new ListAttackPathsRequest
             {
-                ParentAsValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+                ParentAsOrganizationValuedResourceName = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
                 Filter = "",
             };
             // Make the request

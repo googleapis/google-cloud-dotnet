@@ -27,40 +27,46 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "Cjpnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvcmVzb3VyY2VfdmFs",
             "dWVfY29uZmlnLnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
             "djIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8ipgcKE1Jlc291cmNlVmFsdWVDb25maWcSDAoEbmFtZRgBIAEoCRJF",
-            "Cg5yZXNvdXJjZV92YWx1ZRgCIAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eWNlbnRlci52Mi5SZXNvdXJjZVZhbHVlEhcKCnRhZ192YWx1ZXMYAyADKAlC",
-            "A+BBAhIVCg1yZXNvdXJjZV90eXBlGAQgASgJEg0KBXNjb3BlGAUgASgJEnEK",
-            "GHJlc291cmNlX2xhYmVsc19zZWxlY3RvchgGIAMoCzJPLmdvb2dsZS5jbG91",
-            "ZC5zZWN1cml0eWNlbnRlci52Mi5SZXNvdXJjZVZhbHVlQ29uZmlnLlJlc291",
-            "cmNlTGFiZWxzU2VsZWN0b3JFbnRyeRITCgtkZXNjcmlwdGlvbhgHIAEoCRI0",
-            "CgtjcmVhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxJ9CiFzZW5zaXRpdmVfZGF0YV9wcm90ZWN0aW9u",
-            "X21hcHBpbmcYCyABKAsyUi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
-            "djIuUmVzb3VyY2VWYWx1ZUNvbmZpZy5TZW5zaXRpdmVEYXRhUHJvdGVjdGlv",
-            "bk1hcHBpbmcaxAEKHlNlbnNpdGl2ZURhdGFQcm90ZWN0aW9uTWFwcGluZxJP",
-            "ChhoaWdoX3NlbnNpdGl2aXR5X21hcHBpbmcYASABKA4yLS5nb29nbGUuY2xv",
-            "dWQuc2VjdXJpdHljZW50ZXIudjIuUmVzb3VyY2VWYWx1ZRJRChptZWRpdW1f",
-            "c2Vuc2l0aXZpdHlfbWFwcGluZxgCIAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1",
-            "cml0eWNlbnRlci52Mi5SZXNvdXJjZVZhbHVlGj0KG1Jlc291cmNlTGFiZWxz",
-            "U2VsZWN0b3JFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "OoEB6kF+CjFzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9SZXNvdXJj",
-            "ZVZhbHVlQ29uZmlnEklvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3Jl",
-            "c291cmNlVmFsdWVDb25maWdzL3tyZXNvdXJjZV92YWx1ZV9jb25maWd9KlgK",
-            "DVJlc291cmNlVmFsdWUSHgoaUkVTT1VSQ0VfVkFMVUVfVU5TUEVDSUZJRUQQ",
-            "ABIICgRISUdIEAESCgoGTUVESVVNEAISBwoDTE9XEAMSCAoETk9ORRAEQvIB",
-            "CiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQhhSZXNvdXJj",
-            "ZVZhbHVlQ29uZmlnUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1",
-            "cml0eWNlbnRlci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2Vu",
-            "dGVycGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29n",
-            "bGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpT",
-            "ZWN1cml0eUNlbnRlcjo6VjJiBnByb3RvMw=="));
+            "cGkvcmVzb3VyY2UucHJvdG8aLWdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRl",
+            "ci92Mi9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
+            "cC5wcm90byL5CAoTUmVzb3VyY2VWYWx1ZUNvbmZpZxIMCgRuYW1lGAEgASgJ",
+            "EkUKDnJlc291cmNlX3ZhbHVlGAIgASgOMi0uZ29vZ2xlLmNsb3VkLnNlY3Vy",
+            "aXR5Y2VudGVyLnYyLlJlc291cmNlVmFsdWUSFwoKdGFnX3ZhbHVlcxgDIAMo",
+            "CUID4EECEhUKDXJlc291cmNlX3R5cGUYBCABKAkSDQoFc2NvcGUYBSABKAkS",
+            "cQoYcmVzb3VyY2VfbGFiZWxzX3NlbGVjdG9yGAYgAygLMk8uZ29vZ2xlLmNs",
+            "b3VkLnNlY3VyaXR5Y2VudGVyLnYyLlJlc291cmNlVmFsdWVDb25maWcuUmVz",
+            "b3VyY2VMYWJlbHNTZWxlY3RvckVudHJ5EhMKC2Rlc2NyaXB0aW9uGAcgASgJ",
+            "EjQKC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEkUKDmNsb3VkX3Byb3ZpZGVyGAogASgOMi0u",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyLkNsb3VkUHJvdmlkZXIS",
+            "fQohc2Vuc2l0aXZlX2RhdGFfcHJvdGVjdGlvbl9tYXBwaW5nGAsgASgLMlIu",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyLlJlc291cmNlVmFsdWVD",
+            "b25maWcuU2Vuc2l0aXZlRGF0YVByb3RlY3Rpb25NYXBwaW5nGsQBCh5TZW5z",
+            "aXRpdmVEYXRhUHJvdGVjdGlvbk1hcHBpbmcSTwoYaGlnaF9zZW5zaXRpdml0",
+            "eV9tYXBwaW5nGAEgASgOMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
+            "LnYyLlJlc291cmNlVmFsdWUSUQoabWVkaXVtX3NlbnNpdGl2aXR5X21hcHBp",
+            "bmcYAiABKA4yLS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIuUmVz",
+            "b3VyY2VWYWx1ZRo9ChtSZXNvdXJjZUxhYmVsc1NlbGVjdG9yRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqNAupBiQIKMXNlY3VyaXR5",
+            "Y2VudGVyLmdvb2dsZWFwaXMuY29tL1Jlc291cmNlVmFsdWVDb25maWcSSW9y",
+            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vcmVzb3VyY2VWYWx1ZUNvbmZp",
+            "Z3Mve3Jlc291cmNlX3ZhbHVlX2NvbmZpZ30SXm9yZ2FuaXphdGlvbnMve29y",
+            "Z2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVzb3VyY2VWYWx1",
+            "ZUNvbmZpZ3Mve3Jlc291cmNlX3ZhbHVlX2NvbmZpZ30qFHJlc291cmNlVmFs",
+            "dWVDb25maWdzMhNyZXNvdXJjZVZhbHVlQ29uZmlnKlgKDVJlc291cmNlVmFs",
+            "dWUSHgoaUkVTT1VSQ0VfVkFMVUVfVU5TUEVDSUZJRUQQABIICgRISUdIEAES",
+            "CgoGTUVESVVNEAISBwoDTE9XEAMSCAoETk9ORRAEQvIBCiJjb20uZ29vZ2xl",
+            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQhhSZXNvdXJjZVZhbHVlQ29uZmln",
+            "UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRlci9h",
+            "cGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKqAh5Hb29n",
+            "bGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29nbGVcQ2xvdWRcU2Vj",
+            "dXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRl",
+            "cjo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V2.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.SecurityCenter.V2.ResourceValue), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig), global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Parser, new[]{ "Name", "ResourceValue", "TagValues", "ResourceType", "Scope", "ResourceLabelsSelector", "Description", "CreateTime", "UpdateTime", "SensitiveDataProtectionMapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Types.SensitiveDataProtectionMapping), global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Types.SensitiveDataProtectionMapping.Parser, new[]{ "HighSensitivityMapping", "MediumSensitivityMapping" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig), global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Parser, new[]{ "Name", "ResourceValue", "TagValues", "ResourceType", "Scope", "ResourceLabelsSelector", "Description", "CreateTime", "UpdateTime", "CloudProvider", "SensitiveDataProtectionMapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Types.SensitiveDataProtectionMapping), global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Types.SensitiveDataProtectionMapping.Parser, new[]{ "HighSensitivityMapping", "MediumSensitivityMapping" }, null, null, null, null),
             null, })
           }));
     }
@@ -98,8 +104,8 @@ namespace Google.Cloud.SecurityCenter.V2 {
 
   #region Messages
   /// <summary>
-  /// A resource value config (RVC) is a mapping configuration of user's resources
-  /// to resource values. Used in Attack path simulations.
+  /// A resource value configuration (RVC) is a mapping configuration of user's
+  /// resources to resource values. Used in Attack path simulations.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceValueConfig : pb::IMessage<ResourceValueConfig>
@@ -145,6 +151,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       description_ = other.description_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      cloudProvider_ = other.cloudProvider_;
       sensitiveDataProtectionMapping_ = other.sensitiveDataProtectionMapping_ != null ? other.sensitiveDataProtectionMapping_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -159,7 +166,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name for the resource value config
+    /// Name for the resource value configuration
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -192,9 +199,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> tagValues_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Tag values combined with AND to check against.
+    /// Required. Tag values combined with &lt;code>AND&lt;/code> to check against.
     /// Values in the form "tagValues/123"
-    /// E.g. [ "tagValues/123", "tagValues/456", "tagValues/789" ]
+    /// Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
     /// https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -208,9 +215,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
     private string resourceType_ = "";
     /// <summary>
     /// Apply resource_value only to resources that match resource_type.
-    /// resource_type will be checked with "AND" of other resources.
-    /// E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH" will
-    /// apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+    /// resource_type will be checked with &lt;code>AND&lt;/code> of other resources.
+    /// For example, "storage.googleapis.com/Bucket" with resource_value "HIGH"
+    /// will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -225,10 +232,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int ScopeFieldNumber = 5;
     private string scope_ = "";
     /// <summary>
-    /// Project or folder to scope this config to.
-    /// For example, "project/456" would apply this config only to resources in
-    /// "project/456"
-    /// scope will be checked with "AND" of other resources.
+    /// Project or folder to scope this configuration to.
+    /// For example, "project/456" would apply this configuration only to resources
+    /// in "project/456" scope will be checked with &lt;code>AND&lt;/code> of other
+    /// resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -245,9 +252,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> resourceLabelsSelector_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// List of resource labels to search for, evaluated with AND.
-    /// E.g. "resource_labels_selector": {"key": "value", "env": "prod"}
-    /// will match resources with labels "key": "value" AND "env": "prod"
+    /// List of resource labels to search for, evaluated with &lt;code>AND&lt;/code>.
+    /// For example, "resource_labels_selector": {"key": "value", "env": "prod"}
+    /// will match resources with labels "key": "value" &lt;code>AND&lt;/code> "env":
+    /// "prod"
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -260,7 +268,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int DescriptionFieldNumber = 7;
     private string description_ = "";
     /// <summary>
-    /// Description of the resource value config.
+    /// Description of the resource value configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -275,7 +283,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int CreateTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Timestamp this resource value config was created.
+    /// Output only. Timestamp this resource value configuration was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -290,7 +298,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int UpdateTimeFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Timestamp this resource value config was last updated.
+    /// Output only. Timestamp this resource value configuration was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -298,6 +306,21 @@ namespace Google.Cloud.SecurityCenter.V2 {
       get { return updateTime_; }
       set {
         updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cloud_provider" field.</summary>
+    public const int CloudProviderFieldNumber = 10;
+    private global::Google.Cloud.SecurityCenter.V2.CloudProvider cloudProvider_ = global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified;
+    /// <summary>
+    /// Cloud provider this configuration applies to
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V2.CloudProvider CloudProvider {
+      get { return cloudProvider_; }
+      set {
+        cloudProvider_ = value;
       }
     }
 
@@ -343,6 +366,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (Description != other.Description) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (CloudProvider != other.CloudProvider) return false;
       if (!object.Equals(SensitiveDataProtectionMapping, other.SensitiveDataProtectionMapping)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -360,6 +384,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) hash ^= CloudProvider.GetHashCode();
       if (sensitiveDataProtectionMapping_ != null) hash ^= SensitiveDataProtectionMapping.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -409,6 +434,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(UpdateTime);
       }
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) CloudProvider);
+      }
       if (sensitiveDataProtectionMapping_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(SensitiveDataProtectionMapping);
@@ -453,6 +482,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(UpdateTime);
       }
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) CloudProvider);
+      }
       if (sensitiveDataProtectionMapping_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(SensitiveDataProtectionMapping);
@@ -489,6 +522,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CloudProvider);
       }
       if (sensitiveDataProtectionMapping_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitiveDataProtectionMapping);
@@ -533,6 +569,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.CloudProvider != global::Google.Cloud.SecurityCenter.V2.CloudProvider.Unspecified) {
+        CloudProvider = other.CloudProvider;
       }
       if (other.sensitiveDataProtectionMapping_ != null) {
         if (sensitiveDataProtectionMapping_ == null) {
@@ -597,6 +636,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 80: {
+            CloudProvider = (global::Google.Cloud.SecurityCenter.V2.CloudProvider) input.ReadEnum();
+            break;
+          }
           case 90: {
             if (sensitiveDataProtectionMapping_ == null) {
               SensitiveDataProtectionMapping = new global::Google.Cloud.SecurityCenter.V2.ResourceValueConfig.Types.SensitiveDataProtectionMapping();
@@ -659,6 +702,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 80: {
+            CloudProvider = (global::Google.Cloud.SecurityCenter.V2.CloudProvider) input.ReadEnum();
             break;
           }
           case 90: {

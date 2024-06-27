@@ -494,6 +494,316 @@ namespace Google.Cloud.SecurityCenter.V2
         public static bool operator !=(FolderLocationName a, FolderLocationName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>OrganizationValuedResource</c> resource.</summary>
+    public sealed partial class OrganizationValuedResourceName : gax::IResourceName, sys::IEquatable<OrganizationValuedResourceName>
+    {
+        /// <summary>The possible contents of <see cref="OrganizationValuedResourceName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+            /// .
+            /// </summary>
+            OrganizationLocationSimulationValuedResource = 1,
+        }
+
+        private static gax::PathTemplate s_organizationLocationSimulationValuedResource = new gax::PathTemplate("organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}");
+
+        /// <summary>
+        /// Creates a <see cref="OrganizationValuedResourceName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="OrganizationValuedResourceName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static OrganizationValuedResourceName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new OrganizationValuedResourceName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="OrganizationValuedResourceName"/> with the pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// .
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="simulationId">The <c>Simulation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="valuedResourceId">The <c>ValuedResource</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="OrganizationValuedResourceName"/> constructed from the provided ids.
+        /// </returns>
+        public static OrganizationValuedResourceName FromOrganizationLocationSimulationValuedResource(string organizationId, string locationId, string simulationId, string valuedResourceId) =>
+            new OrganizationValuedResourceName(ResourceNameType.OrganizationLocationSimulationValuedResource, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), simulationId: gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), valuedResourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="OrganizationValuedResourceName"/> with
+        /// pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// .
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="simulationId">The <c>Simulation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="valuedResourceId">The <c>ValuedResource</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="OrganizationValuedResourceName"/> with pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// .
+        /// </returns>
+        public static string Format(string organizationId, string locationId, string simulationId, string valuedResourceId) =>
+            FormatOrganizationLocationSimulationValuedResource(organizationId, locationId, simulationId, valuedResourceId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="OrganizationValuedResourceName"/> with
+        /// pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// .
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="simulationId">The <c>Simulation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="valuedResourceId">The <c>ValuedResource</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="OrganizationValuedResourceName"/> with pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// .
+        /// </returns>
+        public static string FormatOrganizationLocationSimulationValuedResource(string organizationId, string locationId, string simulationId, string valuedResourceId) =>
+            s_organizationLocationSimulationValuedResource.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="OrganizationValuedResourceName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="organizationValuedResourceName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="OrganizationValuedResourceName"/> if successful.</returns>
+        public static OrganizationValuedResourceName Parse(string organizationValuedResourceName) =>
+            Parse(organizationValuedResourceName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="OrganizationValuedResourceName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="organizationValuedResourceName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="OrganizationValuedResourceName"/> if successful.</returns>
+        public static OrganizationValuedResourceName Parse(string organizationValuedResourceName, bool allowUnparsed) =>
+            TryParse(organizationValuedResourceName, allowUnparsed, out OrganizationValuedResourceName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="OrganizationValuedResourceName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="organizationValuedResourceName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="OrganizationValuedResourceName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationValuedResourceName, out OrganizationValuedResourceName result) =>
+            TryParse(organizationValuedResourceName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="OrganizationValuedResourceName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="organizationValuedResourceName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="OrganizationValuedResourceName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationValuedResourceName, bool allowUnparsed, out OrganizationValuedResourceName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationValuedResourceName, nameof(organizationValuedResourceName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationLocationSimulationValuedResource.TryParseName(organizationValuedResourceName, out resourceName))
+            {
+                result = FromOrganizationLocationSimulationValuedResource(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(organizationValuedResourceName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private OrganizationValuedResourceName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string organizationId = null, string simulationId = null, string valuedResourceId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            OrganizationId = organizationId;
+            SimulationId = simulationId;
+            ValuedResourceId = valuedResourceId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="OrganizationValuedResourceName"/> class from the component parts
+        /// of pattern
+        /// <c>
+        /// organizations/{organization}/locations/{location}/simulations/{simulation}/valuedResources/{valued_resource}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="simulationId">The <c>Simulation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="valuedResourceId">The <c>ValuedResource</c> ID. Must not be <c>null</c> or empty.</param>
+        public OrganizationValuedResourceName(string organizationId, string locationId, string simulationId, string valuedResourceId) : this(ResourceNameType.OrganizationLocationSimulationValuedResource, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), simulationId: gax::GaxPreconditions.CheckNotNullOrEmpty(simulationId, nameof(simulationId)), valuedResourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(valuedResourceId, nameof(valuedResourceId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Simulation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string SimulationId { get; }
+
+        /// <summary>
+        /// The <c>ValuedResource</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string ValuedResourceId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationLocationSimulationValuedResource: return s_organizationLocationSimulationValuedResource.Expand(OrganizationId, LocationId, SimulationId, ValuedResourceId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as OrganizationValuedResourceName);
+
+        /// <inheritdoc/>
+        public bool Equals(OrganizationValuedResourceName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(OrganizationValuedResourceName a, OrganizationValuedResourceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(OrganizationValuedResourceName a, OrganizationValuedResourceName b) => !(a == b);
+    }
+
     public partial class BatchCreateResourceValueConfigsRequest
     {
         /// <summary>
@@ -502,6 +812,39 @@ namespace Google.Cloud.SecurityCenter.V2
         public gagr::OrganizationName ParentAsOrganizationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -751,6 +1094,39 @@ namespace Google.Cloud.SecurityCenter.V2
             get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class CreateSourceRequest
@@ -886,11 +1262,45 @@ namespace Google.Cloud.SecurityCenter.V2
     public partial class ListAttackPathsRequest
     {
         /// <summary>
+        /// <see cref="OrganizationValuedResourceName"/>-typed view over the <see cref="Parent"/> resource name
+        /// property.
+        /// </summary>
+        public OrganizationValuedResourceName ParentAsOrganizationValuedResourceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationValuedResourceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="ValuedResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ValuedResourceName ParentAsValuedResourceName
         {
             get => string.IsNullOrEmpty(Parent) ? null : ValuedResourceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationValuedResourceName.TryParse(Parent, out OrganizationValuedResourceName organizationValuedResource))
+                {
+                    return organizationValuedResource;
+                }
+                if (ValuedResourceName.TryParse(Parent, out ValuedResourceName valuedResource))
+                {
+                    return valuedResource;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -1150,6 +1560,39 @@ namespace Google.Cloud.SecurityCenter.V2
         public gagr::OrganizationName ParentAsOrganizationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

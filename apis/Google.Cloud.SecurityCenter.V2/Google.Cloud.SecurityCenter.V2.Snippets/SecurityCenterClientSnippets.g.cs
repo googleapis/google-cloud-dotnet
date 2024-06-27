@@ -107,7 +107,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for BatchCreateResourceValueConfigs</summary>
-        public void BatchCreateResourceValueConfigsResourceNames()
+        public void BatchCreateResourceValueConfigsResourceNames1()
         {
             // Snippet: BatchCreateResourceValueConfigs(OrganizationName, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
             // Create client
@@ -124,7 +124,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for BatchCreateResourceValueConfigsAsync</summary>
-        public async Task BatchCreateResourceValueConfigsResourceNamesAsync()
+        public async Task BatchCreateResourceValueConfigsResourceNames1Async()
         {
             // Snippet: BatchCreateResourceValueConfigsAsync(OrganizationName, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
             // Additional: BatchCreateResourceValueConfigsAsync(OrganizationName, IEnumerable<CreateResourceValueConfigRequest>, CancellationToken)
@@ -132,6 +132,41 @@ namespace GoogleCSharpSnippets
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
+            {
+                new CreateResourceValueConfigRequest(),
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = await securityCenterClient.BatchCreateResourceValueConfigsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigs</summary>
+        public void BatchCreateResourceValueConfigsResourceNames2()
+        {
+            // Snippet: BatchCreateResourceValueConfigs(OrganizationLocationName, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
+            {
+                new CreateResourceValueConfigRequest(),
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = securityCenterClient.BatchCreateResourceValueConfigs(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigsAsync</summary>
+        public async Task BatchCreateResourceValueConfigsResourceNames2Async()
+        {
+            // Snippet: BatchCreateResourceValueConfigsAsync(OrganizationLocationName, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
+            // Additional: BatchCreateResourceValueConfigsAsync(OrganizationLocationName, IEnumerable<CreateResourceValueConfigRequest>, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
             {
                 new CreateResourceValueConfigRequest(),
@@ -2433,7 +2468,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListAttackPathsRequest request = new ListAttackPathsRequest
             {
-                ParentAsValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+                ParentAsOrganizationValuedResourceName = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
                 Filter = "",
             };
             // Make the request
@@ -2482,7 +2517,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListAttackPathsRequest request = new ListAttackPathsRequest
             {
-                ParentAsValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+                ParentAsOrganizationValuedResourceName = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
                 Filter = "",
             };
             // Make the request
@@ -2529,7 +2564,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
             // Make the request
             PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
 
@@ -2574,7 +2609,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
             // Make the request
             PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(parent);
 
@@ -2613,7 +2648,97 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListAttackPaths</summary>
-        public void ListAttackPathsResourceNames()
+        public void ListAttackPathsResourceNames1()
+        {
+            // Snippet: ListAttackPaths(OrganizationValuedResourceName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationValuedResourceName parent = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            // Make the request
+            PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AttackPath item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAttackPathsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPathsAsync</summary>
+        public async Task ListAttackPathsResourceNames1Async()
+        {
+            // Snippet: ListAttackPathsAsync(OrganizationValuedResourceName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationValuedResourceName parent = OrganizationValuedResourceName.FromOrganizationLocationSimulationValuedResource("[ORGANIZATION]", "[LOCATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AttackPath item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAttackPathsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPaths</summary>
+        public void ListAttackPathsResourceNames2()
         {
             // Snippet: ListAttackPaths(ValuedResourceName, string, int?, CallSettings)
             // Create client
@@ -2658,7 +2783,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListAttackPathsAsync</summary>
-        public async Task ListAttackPathsResourceNamesAsync()
+        public async Task ListAttackPathsResourceNames2Async()
         {
             // Snippet: ListAttackPathsAsync(ValuedResourceName, string, int?, CallSettings)
             // Create client
@@ -4809,7 +4934,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListResourceValueConfigs</summary>
-        public void ListResourceValueConfigsResourceNames()
+        public void ListResourceValueConfigsResourceNames1()
         {
             // Snippet: ListResourceValueConfigs(OrganizationName, string, int?, CallSettings)
             // Create client
@@ -4854,13 +4979,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListResourceValueConfigsAsync</summary>
-        public async Task ListResourceValueConfigsResourceNamesAsync()
+        public async Task ListResourceValueConfigsResourceNames1Async()
         {
             // Snippet: ListResourceValueConfigsAsync(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceValueConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceValueConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigs</summary>
+        public void ListResourceValueConfigsResourceNames2()
+        {
+            // Snippet: ListResourceValueConfigs(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceValueConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceValueConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigsAsync</summary>
+        public async Task ListResourceValueConfigsResourceNames2Async()
+        {
+            // Snippet: ListResourceValueConfigsAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigsAsync(parent);
 
