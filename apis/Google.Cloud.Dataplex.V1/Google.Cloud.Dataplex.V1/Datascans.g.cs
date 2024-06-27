@@ -75,7 +75,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiNAofR2VuZXJhdGVEYXRhUXVhbGl0eVJ1",
             "bGVzUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiWwogR2VuZXJhdGVEYXRh",
             "UXVhbGl0eVJ1bGVzUmVzcG9uc2USNwoEcnVsZRgBIAMoCzIpLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUisQoKCERhdGFTY2Fu",
+            "bG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUi8goKCERhdGFTY2Fu",
             "EhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQYAiABKAlCA+BBAxIYCgtkZXNj",
             "cmlwdGlvbhgDIAEoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgEIAEoCUID4EEB",
             "EkMKBmxhYmVscxgFIAMoCzIuLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5E",
@@ -98,81 +98,83 @@ namespace Google.Cloud.Dataplex.V1 {
             "Ky5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHRC",
             "A+BBA0gBGm0KDUV4ZWN1dGlvblNwZWMSNwoHdHJpZ2dlchgBIAEoCzIhLmdv",
             "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5UcmlnZ2VyQgPgQQESFAoFZmllbGQY",
-            "ZCABKAlCA+BBBUgAQg0KC2luY3JlbWVudGFsGoUBCg9FeGVjdXRpb25TdGF0",
+            "ZCABKAlCA+BBBUgAQg0KC2luY3JlbWVudGFsGsYBCg9FeGVjdXRpb25TdGF0",
             "dXMSOQoVbGF0ZXN0X2pvYl9zdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
             "b3RvYnVmLlRpbWVzdGFtcBI3ChNsYXRlc3Rfam9iX2VuZF90aW1lGAUgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBotCgtMYWJlbHNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmPqQWAKIGRhdGFwbGV4",
-            "Lmdvb2dsZWFwaXMuY29tL0RhdGFTY2FuEjxwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVNjYW5zL3tkYXRhU2Nhbn1CBgoE",
-            "c3BlY0IICgZyZXN1bHQi4gYKC0RhdGFTY2FuSm9iEhEKBG5hbWUYASABKAlC",
-            "A+BBAxIQCgN1aWQYAiABKAlCA+BBAxIzCgpzdGFydF90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj8KBXN0YXRl",
-            "GAUgASgOMisuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuSm9i",
-            "LlN0YXRlQgPgQQMSFAoHbWVzc2FnZRgGIAEoCUID4EEDEjkKBHR5cGUYByAB",
-            "KA4yJi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVNjYW5UeXBlQgPg",
-            "QQMSSwoRZGF0YV9xdWFsaXR5X3NwZWMYZCABKAsyKS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlTcGVjQgPgQQNIABJLChFkYXRhX3By",
-            "b2ZpbGVfc3BlYxhlIAEoCzIpLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5E",
-            "YXRhUHJvZmlsZVNwZWNCA+BBA0gAElAKE2RhdGFfcXVhbGl0eV9yZXN1bHQY",
-            "yAEgASgLMisuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5",
-            "UmVzdWx0QgPgQQNIARJQChNkYXRhX3Byb2ZpbGVfcmVzdWx0GMkBIAEoCzIr",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdEID",
-            "4EEDSAEicQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5O",
-            "SU5HEAESDQoJQ0FOQ0VMSU5HEAISDQoJQ0FOQ0VMTEVEEAMSDQoJU1VDQ0VF",
-            "REVEEAQSCgoGRkFJTEVEEAUSCwoHUEVORElORxAHOnHqQW4KI2RhdGFwbGV4",
-            "Lmdvb2dsZWFwaXMuY29tL0RhdGFTY2FuSm9iEkdwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVNjYW5zL3tkYXRhU2Nhbn0v",
-            "am9icy97am9ifUIGCgRzcGVjQggKBnJlc3VsdCpSCgxEYXRhU2NhblR5cGUS",
-            "HgoaREFUQV9TQ0FOX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxEQVRBX1FVQUxJ",
-            "VFkQARIQCgxEQVRBX1BST0ZJTEUQAjK2DwoPRGF0YVNjYW5TZXJ2aWNlEuMB",
-            "Cg5DcmVhdGVEYXRhU2NhbhIvLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5D",
-            "cmVhdGVEYXRhU2NhblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIoABykEdCghEYXRhU2NhbhIRT3BlcmF0aW9uTWV0YWRhdGHaQR1w",
-            "YXJlbnQsZGF0YV9zY2FuLGRhdGFfc2Nhbl9pZILT5JMCOiItL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YVNjYW5zOglkYXRhX3Nj",
-            "YW4S5QEKDlVwZGF0ZURhdGFTY2FuEi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLlVwZGF0ZURhdGFTY2FuUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24iggHKQR0KCERhdGFTY2FuEhFPcGVyYXRpb25NZXRhZGF0",
-            "YdpBFWRhdGFfc2Nhbix1cGRhdGVfbWFza4LT5JMCRDI3L3YxL3tkYXRhX3Nj",
-            "YW4ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTY2Fucy8qfToJ",
-            "ZGF0YV9zY2FuEssBCg5EZWxldGVEYXRhU2NhbhIvLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5EZWxldGVEYXRhU2NhblJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uImnKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIvKi0vdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMvKn0SnQEKC0dldERh",
-            "dGFTY2FuEiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldERhdGFTY2Fu",
-            "UmVxdWVzdBoiLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbiI8",
-            "2kEEbmFtZYLT5JMCLxItL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovZGF0YVNjYW5zLyp9ErABCg1MaXN0RGF0YVNjYW5zEi4uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkxpc3REYXRhU2NhbnNSZXF1ZXN0Gi8uZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLkxpc3REYXRhU2NhbnNSZXNwb25zZSI+2kEG",
-            "cGFyZW50gtPkkwIvEi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS9kYXRhU2NhbnMSrwEKC1J1bkRhdGFTY2FuEiwuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLlJ1bkRhdGFTY2FuUmVxdWVzdBotLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5SdW5EYXRhU2NhblJlc3BvbnNlIkPaQQRuYW1lgtPk",
-            "kwI2IjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2Nh",
-            "bnMvKn06cnVuOgEqEq0BCg5HZXREYXRhU2NhbkpvYhIvLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5HZXREYXRhU2NhbkpvYlJlcXVlc3QaJS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YVNjYW5Kb2IiQ9pBBG5hbWWC0+STAjYS",
-            "NC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTY2Fucy8q",
-            "L2pvYnMvKn0SwAEKEExpc3REYXRhU2NhbkpvYnMSMS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuTGlzdERhdGFTY2FuSm9ic1JlcXVlc3QaMi5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuTGlzdERhdGFTY2FuSm9ic1Jlc3BvbnNlIkXa",
-            "QQZwYXJlbnSC0+STAjYSNC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovZGF0YVNjYW5zLyp9L2pvYnMSwQIKGEdlbmVyYXRlRGF0YVF1YWxp",
-            "dHlSdWxlcxI5Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5HZW5lcmF0ZURh",
-            "dGFRdWFsaXR5UnVsZXNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLkdlbmVyYXRlRGF0YVF1YWxpdHlSdWxlc1Jlc3BvbnNlIq0B2kEEbmFt",
-            "ZYLT5JMCnwEiRi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Rh",
-            "dGFTY2Fucy8qfTpnZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXM6ASpaUiJNL3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVNjYW5zLyovam9i",
-            "cy8qfTpnZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXM6ASoaS8pBF2RhdGFwbGV4",
-            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybUJqChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxQg5EYXRhU2NhbnNQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI/ChZsYXRlc3Rfam9iX2Ny",
+            "ZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6Y+pBYAogZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRGF0YVNjYW4S",
+            "PHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRh",
+            "U2NhbnMve2RhdGFTY2FufUIGCgRzcGVjQggKBnJlc3VsdCLiBgoLRGF0YVNj",
+            "YW5Kb2ISEQoEbmFtZRgBIAEoCUID4EEDEhAKA3VpZBgCIAEoCUID4EEDEjMK",
+            "CnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSMQoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSPwoFc3RhdGUYBSABKA4yKy5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuRGF0YVNjYW5Kb2IuU3RhdGVCA+BBAxIUCgdtZXNzYWdlGAYg",
+            "ASgJQgPgQQMSOQoEdHlwZRgHIAEoDjImLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5EYXRhU2NhblR5cGVCA+BBAxJLChFkYXRhX3F1YWxpdHlfc3BlYxhk",
+            "IAEoCzIpLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVNw",
+            "ZWNCA+BBA0gAEksKEWRhdGFfcHJvZmlsZV9zcGVjGGUgASgLMikuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlU3BlY0ID4EEDSAASUAoT",
+            "ZGF0YV9xdWFsaXR5X3Jlc3VsdBjIASABKAsyKy5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuRGF0YVF1YWxpdHlSZXN1bHRCA+BBA0gBElAKE2RhdGFfcHJv",
+            "ZmlsZV9yZXN1bHQYyQEgASgLMisuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "LkRhdGFQcm9maWxlUmVzdWx0QgPgQQNIASJxCgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARINCglDQU5DRUxJTkcQAhINCglD",
+            "QU5DRUxMRUQQAxINCglTVUNDRUVERUQQBBIKCgZGQUlMRUQQBRILCgdQRU5E",
+            "SU5HEAc6cepBbgojZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRGF0YVNjYW5K",
+            "b2ISR3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9k",
+            "YXRhU2NhbnMve2RhdGFTY2FufS9qb2JzL3tqb2J9QgYKBHNwZWNCCAoGcmVz",
+            "dWx0KlIKDERhdGFTY2FuVHlwZRIeChpEQVRBX1NDQU5fVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEhAKDERBVEFfUVVBTElUWRABEhAKDERBVEFfUFJPRklMRRACMrYP",
+            "Cg9EYXRhU2NhblNlcnZpY2US4wEKDkNyZWF0ZURhdGFTY2FuEi8uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZURhdGFTY2FuUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igAHKQR0KCERhdGFTY2FuEhFP",
+            "cGVyYXRpb25NZXRhZGF0YdpBHXBhcmVudCxkYXRhX3NjYW4sZGF0YV9zY2Fu",
+            "X2lkgtPkkwI6Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "fS9kYXRhU2NhbnM6CWRhdGFfc2NhbhLlAQoOVXBkYXRlRGF0YVNjYW4SLy5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVXBkYXRlRGF0YVNjYW5SZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKCAcpBHQoIRGF0YVNj",
+            "YW4SEU9wZXJhdGlvbk1ldGFkYXRh2kEVZGF0YV9zY2FuLHVwZGF0ZV9tYXNr",
+            "gtPkkwJEMjcvdjEve2RhdGFfc2Nhbi5uYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovZGF0YVNjYW5zLyp9OglkYXRhX3NjYW4SywEKDkRlbGV0ZURhdGFT",
+            "Y2FuEi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRlbGV0ZURhdGFTY2Fu",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iacpBKgoV",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5h",
+            "bWWC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Rh",
+            "dGFTY2Fucy8qfRKdAQoLR2V0RGF0YVNjYW4SLC5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuR2V0RGF0YVNjYW5SZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLkRhdGFTY2FuIjzaQQRuYW1lgtPkkwIvEi0vdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMvKn0SsAEKDUxpc3RE",
+            "YXRhU2NhbnMSLi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdERhdGFT",
+            "Y2Fuc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdERh",
+            "dGFTY2Fuc1Jlc3BvbnNlIj7aQQZwYXJlbnSC0+STAi8SLS92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2RhdGFTY2FucxKvAQoLUnVuRGF0",
+            "YVNjYW4SLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuUnVuRGF0YVNjYW5S",
+            "ZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlJ1bkRhdGFTY2Fu",
+            "UmVzcG9uc2UiQ9pBBG5hbWWC0+STAjYiMS92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2RhdGFTY2Fucy8qfTpydW46ASoSrQEKDkdldERhdGFT",
+            "Y2FuSm9iEi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldERhdGFTY2Fu",
+            "Sm9iUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2Nh",
+            "bkpvYiJD2kEEbmFtZYLT5JMCNhI0L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZGF0YVNjYW5zLyovam9icy8qfRLAAQoQTGlzdERhdGFTY2Fu",
+            "Sm9icxIxLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0RGF0YVNjYW5K",
+            "b2JzUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0RGF0",
+            "YVNjYW5Kb2JzUmVzcG9uc2UiRdpBBnBhcmVudILT5JMCNhI0L3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMvKn0vam9icxLB",
+            "AgoYR2VuZXJhdGVEYXRhUXVhbGl0eVJ1bGVzEjkuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLkdlbmVyYXRlRGF0YVF1YWxpdHlSdWxlc1JlcXVlc3QaOi5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuR2VuZXJhdGVEYXRhUXVhbGl0eVJ1",
+            "bGVzUmVzcG9uc2UirQHaQQRuYW1lgtPkkwKfASJGL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZGF0YVNjYW5zLyp9OmdlbmVyYXRlRGF0YVF1",
+            "YWxpdHlSdWxlczoBKlpSIk0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9kYXRhU2NhbnMvKi9qb2JzLyp9OmdlbmVyYXRlRGF0YVF1YWxpdHlS",
+            "dWxlczoBKhpLykEXZGF0YXBsZXguZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQmoKHGNv",
+            "bS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDkRhdGFTY2Fuc1Byb3RvUAFa",
+            "OGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhw",
+            "YjtkYXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DataProfileReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DataQualityReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ResourcesReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ServiceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.DataScanType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -190,7 +192,7 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest), global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse), global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse.Parser, new[]{ "Rule" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan), global::Google.Cloud.Dataplex.V1.DataScan.Parser, new[]{ "Name", "Uid", "Description", "DisplayName", "Labels", "State", "CreateTime", "UpdateTime", "Data", "ExecutionSpec", "ExecutionStatus", "Type", "DataQualitySpec", "DataProfileSpec", "DataQualityResult", "DataProfileResult" }, new[]{ "Spec", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec), global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec.Parser, new[]{ "Trigger", "Field" }, new[]{ "Incremental" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionStatus), global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionStatus.Parser, new[]{ "LatestJobStartTime", "LatestJobEndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionStatus), global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionStatus.Parser, new[]{ "LatestJobStartTime", "LatestJobEndTime", "LatestJobCreateTime" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanJob), global::Google.Cloud.Dataplex.V1.DataScanJob.Parser, new[]{ "Name", "Uid", "StartTime", "EndTime", "State", "Message", "Type", "DataQualitySpec", "DataProfileSpec", "DataQualityResult", "DataProfileResult" }, new[]{ "Spec", "Result" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataScanJob.Types.State) }, null, null)
           }));
@@ -4866,6 +4868,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public ExecutionStatus(ExecutionStatus other) : this() {
           latestJobStartTime_ = other.latestJobStartTime_ != null ? other.latestJobStartTime_.Clone() : null;
           latestJobEndTime_ = other.latestJobEndTime_ != null ? other.latestJobEndTime_.Clone() : null;
+          latestJobCreateTime_ = other.latestJobCreateTime_ != null ? other.latestJobCreateTime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4905,6 +4908,21 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "latest_job_create_time" field.</summary>
+        public const int LatestJobCreateTimeFieldNumber = 6;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp latestJobCreateTime_;
+        /// <summary>
+        /// Optional. The time when the DataScanJob execution was created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp LatestJobCreateTime {
+          get { return latestJobCreateTime_; }
+          set {
+            latestJobCreateTime_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4922,6 +4940,7 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (!object.Equals(LatestJobStartTime, other.LatestJobStartTime)) return false;
           if (!object.Equals(LatestJobEndTime, other.LatestJobEndTime)) return false;
+          if (!object.Equals(LatestJobCreateTime, other.LatestJobCreateTime)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4931,6 +4950,7 @@ namespace Google.Cloud.Dataplex.V1 {
           int hash = 1;
           if (latestJobStartTime_ != null) hash ^= LatestJobStartTime.GetHashCode();
           if (latestJobEndTime_ != null) hash ^= LatestJobEndTime.GetHashCode();
+          if (latestJobCreateTime_ != null) hash ^= LatestJobCreateTime.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4957,6 +4977,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(LatestJobEndTime);
           }
+          if (latestJobCreateTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(LatestJobCreateTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4975,6 +4999,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(LatestJobEndTime);
           }
+          if (latestJobCreateTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(LatestJobCreateTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4990,6 +5018,9 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (latestJobEndTime_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(LatestJobEndTime);
+          }
+          if (latestJobCreateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LatestJobCreateTime);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5014,6 +5045,12 @@ namespace Google.Cloud.Dataplex.V1 {
               LatestJobEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             LatestJobEndTime.MergeFrom(other.LatestJobEndTime);
+          }
+          if (other.latestJobCreateTime_ != null) {
+            if (latestJobCreateTime_ == null) {
+              LatestJobCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            LatestJobCreateTime.MergeFrom(other.LatestJobCreateTime);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5044,6 +5081,13 @@ namespace Google.Cloud.Dataplex.V1 {
                 input.ReadMessage(LatestJobEndTime);
                 break;
               }
+              case 50: {
+                if (latestJobCreateTime_ == null) {
+                  LatestJobCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LatestJobCreateTime);
+                break;
+              }
             }
           }
         #endif
@@ -5071,6 +5115,13 @@ namespace Google.Cloud.Dataplex.V1 {
                   LatestJobEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
                 input.ReadMessage(LatestJobEndTime);
+                break;
+              }
+              case 50: {
+                if (latestJobCreateTime_ == null) {
+                  LatestJobCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LatestJobCreateTime);
                 break;
               }
             }
