@@ -129,7 +129,7 @@ namespace Google.Cloud.Spanner.Data
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
                 ISpannerTransaction effectiveTransaction = Transaction ?? Connection.AmbientTransaction;
-                if (singleUseReadSettings != null && Transaction != null)
+                if (singleUseReadSettings != null && effectiveTransaction != null)
                 {
                     throw new InvalidOperationException("singleUseReadSettings cannot be used within another transaction.");
                 }
