@@ -56,6 +56,8 @@ namespace Google.Cloud.AIPlatform.V1
             CreateDeploymentResourcePoolOperationsSettings = existing.CreateDeploymentResourcePoolOperationsSettings.Clone();
             GetDeploymentResourcePoolSettings = existing.GetDeploymentResourcePoolSettings;
             ListDeploymentResourcePoolsSettings = existing.ListDeploymentResourcePoolsSettings;
+            UpdateDeploymentResourcePoolSettings = existing.UpdateDeploymentResourcePoolSettings;
+            UpdateDeploymentResourcePoolOperationsSettings = existing.UpdateDeploymentResourcePoolOperationsSettings.Clone();
             DeleteDeploymentResourcePoolSettings = existing.DeleteDeploymentResourcePoolSettings;
             DeleteDeploymentResourcePoolOperationsSettings = existing.DeleteDeploymentResourcePoolOperationsSettings.Clone();
             QueryDeployedModelsSettings = existing.QueryDeployedModelsSettings;
@@ -123,6 +125,38 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDeploymentResourcePoolsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePool</c> and
+        /// <c>DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDeploymentResourcePoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to
+        /// <c>DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePool</c> and
+        /// <c>DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDeploymentResourcePoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -778,6 +812,125 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> UpdateDeploymentResourcePool(UpdateDeploymentResourcePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>> UpdateDeploymentResourcePoolAsync(UpdateDeploymentResourcePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>> UpdateDeploymentResourcePoolAsync(UpdateDeploymentResourcePoolRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDeploymentResourcePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDeploymentResourcePool</c>.</summary>
+        public virtual lro::OperationsClient UpdateDeploymentResourcePoolOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDeploymentResourcePool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> PollOnceUpdateDeploymentResourcePool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDeploymentResourcePoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDeploymentResourcePool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>> PollOnceUpdateDeploymentResourcePoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDeploymentResourcePoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="deploymentResourcePool">
+        /// Required. The DeploymentResourcePool to update.
+        /// 
+        /// The DeploymentResourcePool's `name` field is used to identify the
+        /// DeploymentResourcePool to update.
+        /// Format:
+        /// `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> UpdateDeploymentResourcePool(DeploymentResourcePool deploymentResourcePool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDeploymentResourcePool(new UpdateDeploymentResourcePoolRequest
+            {
+                DeploymentResourcePool = gax::GaxPreconditions.CheckNotNull(deploymentResourcePool, nameof(deploymentResourcePool)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="deploymentResourcePool">
+        /// Required. The DeploymentResourcePool to update.
+        /// 
+        /// The DeploymentResourcePool's `name` field is used to identify the
+        /// DeploymentResourcePool to update.
+        /// Format:
+        /// `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>> UpdateDeploymentResourcePoolAsync(DeploymentResourcePool deploymentResourcePool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDeploymentResourcePoolAsync(new UpdateDeploymentResourcePoolRequest
+            {
+                DeploymentResourcePool = gax::GaxPreconditions.CheckNotNull(deploymentResourcePool, nameof(deploymentResourcePool)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="deploymentResourcePool">
+        /// Required. The DeploymentResourcePool to update.
+        /// 
+        /// The DeploymentResourcePool's `name` field is used to identify the
+        /// DeploymentResourcePool to update.
+        /// Format:
+        /// `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>> UpdateDeploymentResourcePoolAsync(DeploymentResourcePool deploymentResourcePool, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDeploymentResourcePoolAsync(deploymentResourcePool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Delete a DeploymentResourcePool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1004,6 +1157,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListDeploymentResourcePoolsRequest, ListDeploymentResourcePoolsResponse> _callListDeploymentResourcePools;
 
+        private readonly gaxgrpc::ApiCall<UpdateDeploymentResourcePoolRequest, lro::Operation> _callUpdateDeploymentResourcePool;
+
         private readonly gaxgrpc::ApiCall<DeleteDeploymentResourcePoolRequest, lro::Operation> _callDeleteDeploymentResourcePool;
 
         private readonly gaxgrpc::ApiCall<QueryDeployedModelsRequest, QueryDeployedModelsResponse> _callQueryDeployedModels;
@@ -1027,6 +1182,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Logger = logger,
             });
             CreateDeploymentResourcePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDeploymentResourcePoolOperationsSettings, logger);
+            UpdateDeploymentResourcePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDeploymentResourcePoolOperationsSettings, logger);
             DeleteDeploymentResourcePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeploymentResourcePoolOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
@@ -1039,6 +1195,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callListDeploymentResourcePools = clientHelper.BuildApiCall<ListDeploymentResourcePoolsRequest, ListDeploymentResourcePoolsResponse>("ListDeploymentResourcePools", grpcClient.ListDeploymentResourcePoolsAsync, grpcClient.ListDeploymentResourcePools, effectiveSettings.ListDeploymentResourcePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDeploymentResourcePools);
             Modify_ListDeploymentResourcePoolsApiCall(ref _callListDeploymentResourcePools);
+            _callUpdateDeploymentResourcePool = clientHelper.BuildApiCall<UpdateDeploymentResourcePoolRequest, lro::Operation>("UpdateDeploymentResourcePool", grpcClient.UpdateDeploymentResourcePoolAsync, grpcClient.UpdateDeploymentResourcePool, effectiveSettings.UpdateDeploymentResourcePoolSettings).WithGoogleRequestParam("deployment_resource_pool.name", request => request.DeploymentResourcePool?.Name);
+            Modify_ApiCall(ref _callUpdateDeploymentResourcePool);
+            Modify_UpdateDeploymentResourcePoolApiCall(ref _callUpdateDeploymentResourcePool);
             _callDeleteDeploymentResourcePool = clientHelper.BuildApiCall<DeleteDeploymentResourcePoolRequest, lro::Operation>("DeleteDeploymentResourcePool", grpcClient.DeleteDeploymentResourcePoolAsync, grpcClient.DeleteDeploymentResourcePool, effectiveSettings.DeleteDeploymentResourcePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDeploymentResourcePool);
             Modify_DeleteDeploymentResourcePoolApiCall(ref _callDeleteDeploymentResourcePool);
@@ -1055,6 +1214,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_GetDeploymentResourcePoolApiCall(ref gaxgrpc::ApiCall<GetDeploymentResourcePoolRequest, DeploymentResourcePool> call);
 
         partial void Modify_ListDeploymentResourcePoolsApiCall(ref gaxgrpc::ApiCall<ListDeploymentResourcePoolsRequest, ListDeploymentResourcePoolsResponse> call);
+
+        partial void Modify_UpdateDeploymentResourcePoolApiCall(ref gaxgrpc::ApiCall<UpdateDeploymentResourcePoolRequest, lro::Operation> call);
 
         partial void Modify_DeleteDeploymentResourcePoolApiCall(ref gaxgrpc::ApiCall<DeleteDeploymentResourcePoolRequest, lro::Operation> call);
 
@@ -1076,6 +1237,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_GetDeploymentResourcePoolRequest(ref GetDeploymentResourcePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDeploymentResourcePoolsRequest(ref ListDeploymentResourcePoolsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDeploymentResourcePoolRequest(ref UpdateDeploymentResourcePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDeploymentResourcePoolRequest(ref DeleteDeploymentResourcePoolRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1154,6 +1317,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ListDeploymentResourcePoolsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDeploymentResourcePoolsRequest, ListDeploymentResourcePoolsResponse, DeploymentResourcePool>(_callListDeploymentResourcePools, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDeploymentResourcePool</c>.</summary>
+        public override lro::OperationsClient UpdateDeploymentResourcePoolOperationsClient { get; }
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> UpdateDeploymentResourcePool(UpdateDeploymentResourcePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDeploymentResourcePoolRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>(_callUpdateDeploymentResourcePool.Sync(request, callSettings), UpdateDeploymentResourcePoolOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a DeploymentResourcePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>> UpdateDeploymentResourcePoolAsync(UpdateDeploymentResourcePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDeploymentResourcePoolRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata>(await _callUpdateDeploymentResourcePool.Async(request, callSettings).ConfigureAwait(false), UpdateDeploymentResourcePoolOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteDeploymentResourcePool</c>.</summary>

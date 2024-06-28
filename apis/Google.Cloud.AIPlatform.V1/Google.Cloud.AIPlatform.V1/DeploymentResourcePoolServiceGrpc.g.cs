@@ -76,6 +76,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListDeploymentResourcePoolsResponse> __Marshaller_google_cloud_aiplatform_v1_ListDeploymentResourcePoolsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListDeploymentResourcePoolsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateDeploymentResourcePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteDeploymentResourcePoolRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteDeploymentResourcePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteDeploymentResourcePoolRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.QueryDeployedModelsRequest> __Marshaller_google_cloud_aiplatform_v1_QueryDeployedModelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.QueryDeployedModelsRequest.Parser));
@@ -105,6 +107,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "ListDeploymentResourcePools",
         __Marshaller_google_cloud_aiplatform_v1_ListDeploymentResourcePoolsRequest,
         __Marshaller_google_cloud_aiplatform_v1_ListDeploymentResourcePoolsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest, global::Google.LongRunning.Operation> __Method_UpdateDeploymentResourcePool = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDeploymentResourcePool",
+        __Marshaller_google_cloud_aiplatform_v1_UpdateDeploymentResourcePoolRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteDeploymentResourcePoolRequest, global::Google.LongRunning.Operation> __Method_DeleteDeploymentResourcePool = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteDeploymentResourcePoolRequest, global::Google.LongRunning.Operation>(
@@ -164,6 +174,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListDeploymentResourcePoolsResponse> ListDeploymentResourcePools(global::Google.Cloud.AIPlatform.V1.ListDeploymentResourcePoolsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a DeploymentResourcePool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDeploymentResourcePool(global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -366,6 +388,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeploymentResourcePools, null, options, request);
       }
       /// <summary>
+      /// Update a DeploymentResourcePool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDeploymentResourcePool(global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDeploymentResourcePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a DeploymentResourcePool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDeploymentResourcePool(global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDeploymentResourcePool, null, options, request);
+      }
+      /// <summary>
+      /// Update a DeploymentResourcePool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDeploymentResourcePoolAsync(global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDeploymentResourcePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a DeploymentResourcePool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDeploymentResourcePoolAsync(global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDeploymentResourcePool, null, options, request);
+      }
+      /// <summary>
       /// Delete a DeploymentResourcePool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -478,6 +548,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_CreateDeploymentResourcePool, serviceImpl.CreateDeploymentResourcePool)
           .AddMethod(__Method_GetDeploymentResourcePool, serviceImpl.GetDeploymentResourcePool)
           .AddMethod(__Method_ListDeploymentResourcePools, serviceImpl.ListDeploymentResourcePools)
+          .AddMethod(__Method_UpdateDeploymentResourcePool, serviceImpl.UpdateDeploymentResourcePool)
           .AddMethod(__Method_DeleteDeploymentResourcePool, serviceImpl.DeleteDeploymentResourcePool)
           .AddMethod(__Method_QueryDeployedModels, serviceImpl.QueryDeployedModels).Build();
     }
@@ -492,6 +563,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_CreateDeploymentResourcePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateDeploymentResourcePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDeploymentResourcePool));
       serviceBinder.AddMethod(__Method_GetDeploymentResourcePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetDeploymentResourcePoolRequest, global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool>(serviceImpl.GetDeploymentResourcePool));
       serviceBinder.AddMethod(__Method_ListDeploymentResourcePools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListDeploymentResourcePoolsRequest, global::Google.Cloud.AIPlatform.V1.ListDeploymentResourcePoolsResponse>(serviceImpl.ListDeploymentResourcePools));
+      serviceBinder.AddMethod(__Method_UpdateDeploymentResourcePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDeploymentResourcePool));
       serviceBinder.AddMethod(__Method_DeleteDeploymentResourcePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteDeploymentResourcePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDeploymentResourcePool));
       serviceBinder.AddMethod(__Method_QueryDeployedModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.QueryDeployedModelsRequest, global::Google.Cloud.AIPlatform.V1.QueryDeployedModelsResponse>(serviceImpl.QueryDeployedModels));
     }
