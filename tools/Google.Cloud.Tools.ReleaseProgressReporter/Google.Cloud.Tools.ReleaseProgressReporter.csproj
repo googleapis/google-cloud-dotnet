@@ -17,7 +17,7 @@
     <PackageReference Include="LibGit2Sharp" Version="0.30.0" />
     <EmbeddedResource Include="publish_reporter.sh" />
     <PackageReference Include="GitHubJwt" Version="0.0.6" />
-    <PackageReference Include="Octokit" Version="12.0.0" />
+    <PackageReference Include="Octokit" Version="13.0.0" />
   </ItemGroup>
 
 </Project>
