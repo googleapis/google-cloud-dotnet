@@ -586,6 +586,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDeploymentResourcePool</summary>
+        public void UpdateDeploymentResourcePoolRequestObject()
+        {
+            // Snippet: UpdateDeploymentResourcePool(UpdateDeploymentResourcePoolRequest, CallSettings)
+            // Create client
+            DeploymentResourcePoolServiceClient deploymentResourcePoolServiceClient = DeploymentResourcePoolServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDeploymentResourcePoolRequest request = new UpdateDeploymentResourcePoolRequest
+            {
+                DeploymentResourcePool = new DeploymentResourcePool(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> response = deploymentResourcePoolServiceClient.UpdateDeploymentResourcePool(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentResourcePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> retrievedResponse = deploymentResourcePoolServiceClient.PollOnceUpdateDeploymentResourcePool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentResourcePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentResourcePoolAsync</summary>
+        public async Task UpdateDeploymentResourcePoolRequestObjectAsync()
+        {
+            // Snippet: UpdateDeploymentResourcePoolAsync(UpdateDeploymentResourcePoolRequest, CallSettings)
+            // Additional: UpdateDeploymentResourcePoolAsync(UpdateDeploymentResourcePoolRequest, CancellationToken)
+            // Create client
+            DeploymentResourcePoolServiceClient deploymentResourcePoolServiceClient = await DeploymentResourcePoolServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDeploymentResourcePoolRequest request = new UpdateDeploymentResourcePoolRequest
+            {
+                DeploymentResourcePool = new DeploymentResourcePool(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> response = await deploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentResourcePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> retrievedResponse = await deploymentResourcePoolServiceClient.PollOnceUpdateDeploymentResourcePoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentResourcePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentResourcePool</summary>
+        public void UpdateDeploymentResourcePool()
+        {
+            // Snippet: UpdateDeploymentResourcePool(DeploymentResourcePool, FieldMask, CallSettings)
+            // Create client
+            DeploymentResourcePoolServiceClient deploymentResourcePoolServiceClient = DeploymentResourcePoolServiceClient.Create();
+            // Initialize request argument(s)
+            DeploymentResourcePool deploymentResourcePool = new DeploymentResourcePool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> response = deploymentResourcePoolServiceClient.UpdateDeploymentResourcePool(deploymentResourcePool, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentResourcePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> retrievedResponse = deploymentResourcePoolServiceClient.PollOnceUpdateDeploymentResourcePool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentResourcePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentResourcePoolAsync</summary>
+        public async Task UpdateDeploymentResourcePoolAsync()
+        {
+            // Snippet: UpdateDeploymentResourcePoolAsync(DeploymentResourcePool, FieldMask, CallSettings)
+            // Additional: UpdateDeploymentResourcePoolAsync(DeploymentResourcePool, FieldMask, CancellationToken)
+            // Create client
+            DeploymentResourcePoolServiceClient deploymentResourcePoolServiceClient = await DeploymentResourcePoolServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentResourcePool deploymentResourcePool = new DeploymentResourcePool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> response = await deploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsync(deploymentResourcePool, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentResourcePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentResourcePool, UpdateDeploymentResourcePoolOperationMetadata> retrievedResponse = await deploymentResourcePoolServiceClient.PollOnceUpdateDeploymentResourcePoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentResourcePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteDeploymentResourcePool</summary>
         public void DeleteDeploymentResourcePoolRequestObject()
         {

@@ -162,6 +162,12 @@
                 "QueryDeployedModels",
                 "QueryDeployedModelsAsync"
               ]
+            },
+            "UpdateDeploymentResourcePool": {
+              "methods": [
+                "UpdateDeploymentResourcePool",
+                "UpdateDeploymentResourcePoolAsync"
+              ]
             }
           }
         }

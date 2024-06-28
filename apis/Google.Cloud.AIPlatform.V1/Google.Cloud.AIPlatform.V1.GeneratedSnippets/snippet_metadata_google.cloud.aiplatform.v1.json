@@ -6249,6 +6249,206 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_DeploymentResourcePoolService_UpdateDeploymentResourcePool_sync",
+      "title": "UpdateDeploymentResourcePoolRequestObject",
+      "description": "Snippet for UpdateDeploymentResourcePool",
+      "file": "DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentResourcePool",
+        "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DeploymentResourcePool, Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolOperationMetadata>",
+        "client": {
+          "shortName": "DeploymentResourcePoolServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentResourcePool",
+          "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService.UpdateDeploymentResourcePool",
+          "service": {
+            "shortName": "DeploymentResourcePoolService",
+            "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DeploymentResourcePoolService_UpdateDeploymentResourcePool_async",
+      "title": "UpdateDeploymentResourcePoolRequestObjectAsync",
+      "description": "Snippet for UpdateDeploymentResourcePoolAsync",
+      "file": "DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentResourcePoolAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DeploymentResourcePool, Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolOperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentResourcePoolServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentResourcePool",
+          "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService.UpdateDeploymentResourcePool",
+          "service": {
+            "shortName": "DeploymentResourcePoolService",
+            "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DeploymentResourcePoolService_UpdateDeploymentResourcePool_sync_flattened",
+      "title": "UpdateDeploymentResourcePool",
+      "description": "Snippet for UpdateDeploymentResourcePool",
+      "file": "DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentResourcePool",
+        "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeploymentResourcePool",
+            "name": "deploymentResourcePool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DeploymentResourcePool, Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolOperationMetadata>",
+        "client": {
+          "shortName": "DeploymentResourcePoolServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentResourcePool",
+          "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService.UpdateDeploymentResourcePool",
+          "service": {
+            "shortName": "DeploymentResourcePoolService",
+            "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DeploymentResourcePoolService_UpdateDeploymentResourcePool_async_flattened",
+      "title": "UpdateDeploymentResourcePoolAsync",
+      "description": "Snippet for UpdateDeploymentResourcePoolAsync",
+      "file": "DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentResourcePoolAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient.UpdateDeploymentResourcePoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeploymentResourcePool",
+            "name": "deploymentResourcePool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DeploymentResourcePool, Google.Cloud.AIPlatform.V1.UpdateDeploymentResourcePoolOperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentResourcePoolServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DeploymentResourcePoolServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentResourcePool",
+          "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService.UpdateDeploymentResourcePool",
+          "service": {
+            "shortName": "DeploymentResourcePoolService",
+            "fullName": "google.cloud.aiplatform.v1.DeploymentResourcePoolService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DeploymentResourcePoolService_DeleteDeploymentResourcePool_sync",
       "title": "DeleteDeploymentResourcePoolRequestObject",
       "description": "Snippet for DeleteDeploymentResourcePool",
