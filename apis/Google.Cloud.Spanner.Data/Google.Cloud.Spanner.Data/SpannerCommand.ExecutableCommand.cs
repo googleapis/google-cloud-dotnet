@@ -204,9 +204,13 @@ namespace Google.Cloud.Spanner.Data
             internal async Task<long> ExecutePartitionedUpdateAsync(CancellationToken cancellationToken)
             {
                 ValidateConnectionAndCommandTextBuilder();
-                GaxPreconditions.CheckState(Transaction is null && Connection.AmbientTransaction is null, "Partitioned updates cannot be executed within another transaction");
                 GaxPreconditions.CheckState(CommandTextBuilder.SpannerCommandType == SpannerCommandType.Dml, "Only general DML commands can be executed in as partitioned updates");
+
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
+
+                // Opening the connection may enlist it in a scoped transaction, so we need to check for ambient transactions after opening the connection.
+                GaxPreconditions.CheckState(Transaction is null && Connection.AmbientTransaction is null, "Partitioned updates cannot be executed within another transaction");
+
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
 
                 var transaction = new EphemeralTransaction(Connection, Priority, MaxCommitDelay, singleUseTransactionOptions: null);
