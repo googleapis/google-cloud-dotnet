@@ -5754,7 +5754,7 @@
     },
     {
       "id": "Google.Maps.RouteOptimization.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Route Optimization",
       "productUrl": "https://developers.google.com/maps/documentation/route-optimization",
@@ -5764,7 +5764,7 @@
         "optimization"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/routeoptimization/v1",
