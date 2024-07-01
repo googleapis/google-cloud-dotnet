@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.3.0, released 2024-07-01
+
+### New features
+
+- Add UpdateDeploymentResourcePool method to DeploymentResourcePoolService v1 ([commit 66af553](https://github.com/googleapis/google-cloud-dotnet/commit/66af5538e93ab19a2de6b1d640c4b61c040585e2))
+- Add private_service_connect_config and service_attachment fields to DedicatedServingEndpoint v1 ([commit 66af553](https://github.com/googleapis/google-cloud-dotnet/commit/66af5538e93ab19a2de6b1d640c4b61c040585e2))
+- Add satisfies_pzs and satisfies_pzi fields to Model v1 ([commit 66af553](https://github.com/googleapis/google-cloud-dotnet/commit/66af5538e93ab19a2de6b1d640c4b61c040585e2))
+- Add deploy_metadata to PublisherModel.Deploy v1 ([commit 66af553](https://github.com/googleapis/google-cloud-dotnet/commit/66af5538e93ab19a2de6b1d640c4b61c040585e2))
+- Add satisfies_pzs and satisfies_pzi fields to Tensorboard v1 ([commit 66af553](https://github.com/googleapis/google-cloud-dotnet/commit/66af5538e93ab19a2de6b1d640c4b61c040585e2))
+
+### Documentation improvements
+
+- Update comments of AutoscalingSpec v1 ([commit 66af553](https://github.com/googleapis/google-cloud-dotnet/commit/66af5538e93ab19a2de6b1d640c4b61c040585e2))
+
 ## Version 3.2.0, released 2024-06-24
 
 ### New features
