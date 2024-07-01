@@ -36,10 +36,14 @@ build_api_docs() {
   
   dotnet docfx metadata --logLevel Warning output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
+  # Remove references generated from SourceLink
+  sed -E -i '/^\s+href: https:\/\/github.com\//d' output/$api/obj/api/*.yml
 
   # Build metadata for devsite
   dotnet docfx metadata --logLevel Warning output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
+  # Remove references generated from SourceLink
+  sed -E -i '/^\s+href: https:\/\/github.com\//d' output/$api/obj/bareapi/*.yml
 
   # Generate the snippet markdown
   dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
