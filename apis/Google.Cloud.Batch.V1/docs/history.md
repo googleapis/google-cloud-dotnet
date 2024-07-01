@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.11.0, released 2024-07-01
+
+### New features
+
+- Add a install_ops_agent field to InstancePolicyOrTemplate for Ops Agent support ([commit d8e69ab](https://github.com/googleapis/google-cloud-dotnet/commit/d8e69ab0b8dfe4d31a10f2ffbd197da1c7f4cee5))
+
+### Documentation improvements
+
+- Add instructions on how to configure cross-project pubsub publisher ([commit d8e69ab](https://github.com/googleapis/google-cloud-dotnet/commit/d8e69ab0b8dfe4d31a10f2ffbd197da1c7f4cee5))
+- Document default disk type: pd-standard for non boot disk, pd-balanced for boot disk ([commit d8e69ab](https://github.com/googleapis/google-cloud-dotnet/commit/d8e69ab0b8dfe4d31a10f2ffbd197da1c7f4cee5))
+- Update list of volume.mount_options field ([commit d8e69ab](https://github.com/googleapis/google-cloud-dotnet/commit/d8e69ab0b8dfe4d31a10f2ffbd197da1c7f4cee5))
+- Update GCS description of volume.mount_options field ([commit d8e69ab](https://github.com/googleapis/google-cloud-dotnet/commit/d8e69ab0b8dfe4d31a10f2ffbd197da1c7f4cee5))
+- Update links in the description of volume.mount_options field ([commit d8e69ab](https://github.com/googleapis/google-cloud-dotnet/commit/d8e69ab0b8dfe4d31a10f2ffbd197da1c7f4cee5))
+- Documentation improvements ([commit 5d53acd](https://github.com/googleapis/google-cloud-dotnet/commit/5d53acd9466eb6fccc74f0d195bb0b5c23c4c6f9))
+- Refine description for field `task_execution` ([commit 7115e29](https://github.com/googleapis/google-cloud-dotnet/commit/7115e2973ebcad9290fbb5748f12ac4f5c50eb11))
+
 ## Version 2.10.0, released 2024-05-08
 
 ### New features
