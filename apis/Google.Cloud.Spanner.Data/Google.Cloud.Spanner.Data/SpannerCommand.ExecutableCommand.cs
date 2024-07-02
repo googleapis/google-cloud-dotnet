@@ -128,11 +128,6 @@ namespace Google.Cloud.Spanner.Data
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
-                // Three transaction options:
-                // - A single-use transaction. This doesn't go through a BeginTransaction request; instead, the transaction options are in the request.
-                // - One specified in the command
-                // - The default based on the connection (may be ephemeral, may be implicit via TransactionScope)
-
                 ISpannerTransaction effectiveTransaction = Transaction ?? Connection.AmbientTransaction;
                 if (singleUseReadSettings != null && Transaction != null)
                 {
