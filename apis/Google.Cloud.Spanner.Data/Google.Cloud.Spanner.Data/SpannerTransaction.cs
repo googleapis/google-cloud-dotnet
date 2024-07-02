@@ -63,6 +63,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly bool _isRetriable = false;
         private DisposeBehavior _disposeBehavior = DisposeBehavior.Default;
         private int _disposed = 0;
+        private int _commited = 0;
 
         // Flag indicating whether the transaction has executed at least one statement.
         // The TransactionTag may no longer be set once the transaction has executed one
@@ -440,6 +441,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
                 var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
+                Interlocked.Exchange(ref _commited, 1);
                 // We dispose of the SpannerTransaction to inmediately release the session to the pool when possible.
                 Dispose();
                 if (response.CommitTimestamp == null)
@@ -510,11 +512,11 @@ namespace Google.Cloud.Spanner.Data
                 return;
             }
 
-            if (_isRetriable)
+            if (_isRetriable && Interlocked.CompareExchange(ref _commited, 0, 0) == 0)
             {
-                // If this transaction is being used by RetriableTransaction, we want to dispose of this instance
-                // but we don't want to do anything with the session, as the RetriableTransaction will attempt to
-                // reuse it with a fresh transaction.
+                // If this transaction is being used by RetriableTransaction and is not yet commited,
+                // we want to dispose of this instance but we don't want to do anything with the session,
+                // as the RetriableTransaction will attempt to reuse it with a fresh transaction.
                 // If acquiring a fresh transaction with the existing session fails, the session will be disposed
                 // and a new one with a fresh transaction will be obtained.
                 // If acquiring a fresh transaction succeeds, then the session will be disposed after the RetriableTransaction
