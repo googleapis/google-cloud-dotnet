@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 SourceParallelstore = new SourceParallelstore(),
                 DestinationGcsBucket = new DestinationGcsBucket(),
                 RequestId = "",
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             // Make the request
             Operation<ExportDataResponse, ExportDataMetadata> response = await parallelstoreClient.ExportDataAsync(request);
