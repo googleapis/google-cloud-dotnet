@@ -35,7 +35,6 @@ namespace Google.Cloud.Spanner.Data
         // do if they need to return an int result type.
         Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds);
 
-        // Note: the timeout here is *not* used for the streaming result set; it's used by VolatileResourceManager to set the commit timeout.
-        Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken, int timeoutSeconds);
+        Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken);
     }
 }

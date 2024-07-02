@@ -155,8 +155,7 @@ namespace Google.Cloud.Spanner.Data
                     Connection.Logger.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.ExecuteSqlRequest.Sql}");
                 }
 
-                // Execute the command. Note that the command timeout here is only used for ambient transactions where we need to set a commit timeout.
-                return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken, CommandTimeout);
+                return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken);
             }
 
             internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(PartitionOptions options, CancellationToken cancellationToken)
