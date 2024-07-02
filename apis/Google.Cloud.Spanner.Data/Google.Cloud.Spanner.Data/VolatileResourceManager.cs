@@ -202,10 +202,10 @@ namespace Google.Cloud.Spanner.Data
             return await transaction.ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        public async Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
         {
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
-            return await transaction.ExecuteReadOrQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await transaction.ExecuteReadOrQueryAsync(request, cancellationToken).ConfigureAwait(false);
         }
 
         public async Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)

@@ -315,8 +315,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(
             ReadOrQueryRequest request,
-            CancellationToken cancellationToken,
-            int timeoutSeconds) // Ignored
+            CancellationToken cancellationToken)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
