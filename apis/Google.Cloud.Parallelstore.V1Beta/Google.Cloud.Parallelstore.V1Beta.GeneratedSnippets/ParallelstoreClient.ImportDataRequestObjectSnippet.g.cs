@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 SourceGcsBucket = new SourceGcsBucket(),
                 DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             // Make the request
             Operation<ImportDataResponse, ImportDataMetadata> response = parallelstoreClient.ImportData(request);
