@@ -28,10 +28,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "aWNlLnByb3RvEh9nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxGhxn",
             "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVu",
             "dC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29v",
-            "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVy",
+            "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxorZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVy",
+            "eWVuZ2luZS92MS9jaHVuay5wcm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVy",
             "eWVuZ2luZS92MS9jb21tb24ucHJvdG8aLmdvb2dsZS9jbG91ZC9kaXNjb3Zl",
             "cnllbmdpbmUvdjEvZG9jdW1lbnQucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
-            "dHJ1Y3QucHJvdG8itBsKDVNlYXJjaFJlcXVlc3QSTAoOc2VydmluZ19jb25m",
+            "dHJ1Y3QucHJvdG8i1CIKDVNlYXJjaFJlcXVlc3QSTAoOc2VydmluZ19jb25m",
             "aWcYASABKAlCNOBBAvpBLgosZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMu",
             "Y29tL1NlcnZpbmdDb25maWcSOgoGYnJhbmNoGAIgASgJQir6QScKJWRpc2Nv",
             "dmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9CcmFuY2gSDQoFcXVlcnkYAyAB",
@@ -42,157 +43,185 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "aXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5EYXRhU3RvcmVTcGVj",
             "Eg4KBmZpbHRlchgHIAEoCRIYChBjYW5vbmljYWxfZmlsdGVyGB0gASgJEhAK",
             "CG9yZGVyX2J5GAggASgJEjwKCXVzZXJfaW5mbxgVIAEoCzIpLmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuVXNlckluZm8STQoLZmFjZXRfc3Bl",
-            "Y3MYCSADKAsyOC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNl",
-            "YXJjaFJlcXVlc3QuRmFjZXRTcGVjEkwKCmJvb3N0X3NwZWMYCiABKAsyOC5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3Qu",
-            "Qm9vc3RTcGVjEkoKBnBhcmFtcxgLIAMoCzI6Lmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5QYXJhbXNFbnRyeRJfChRx",
-            "dWVyeV9leHBhbnNpb25fc3BlYxgNIAEoCzJBLmdvb2dsZS5jbG91ZC5kaXNj",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuVXNlckluZm8SFQoNbGFuZ3VhZ2Vf",
+            "Y29kZRgjIAEoCRJNCgtmYWNldF9zcGVjcxgJIAMoCzI4Lmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5GYWNldFNwZWMS",
+            "TAoKYm9vc3Rfc3BlYxgKIAEoCzI4Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuU2VhcmNoUmVxdWVzdC5Cb29zdFNwZWMSSgoGcGFyYW1zGAsg",
+            "AygLMjouZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hS",
+            "ZXF1ZXN0LlBhcmFtc0VudHJ5El8KFHF1ZXJ5X2V4cGFuc2lvbl9zcGVjGA0g",
+            "ASgLMkEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hS",
+            "ZXF1ZXN0LlF1ZXJ5RXhwYW5zaW9uU3BlYxJhChVzcGVsbF9jb3JyZWN0aW9u",
+            "X3NwZWMYDiABKAsyQi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "LlNlYXJjaFJlcXVlc3QuU3BlbGxDb3JyZWN0aW9uU3BlYxIWCg51c2VyX3Bz",
+            "ZXVkb19pZBgPIAEoCRJdChNjb250ZW50X3NlYXJjaF9zcGVjGBggASgLMkAu",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0",
+            "LkNvbnRlbnRTZWFyY2hTcGVjEhMKC3NhZmVfc2VhcmNoGBQgASgIElMKC3Vz",
+            "ZXJfbGFiZWxzGBYgAygLMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MS5TZWFyY2hSZXF1ZXN0LlVzZXJMYWJlbHNFbnRyeRJjChdzZWFyY2hf",
+            "YXNfeW91X3R5cGVfc3BlYxgfIAEoCzJCLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5TZWFyY2hBc1lvdVR5cGVTcGVj",
+            "EjwKB3Nlc3Npb24YKSABKAlCK/pBKAomZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL1Nlc3Npb24SUAoMc2Vzc2lvbl9zcGVjGCogASgLMjouZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LlNl",
+            "c3Npb25TcGVjGiwKCkltYWdlUXVlcnkSFQoLaW1hZ2VfYnl0ZXMYASABKAlI",
+            "AEIHCgVpbWFnZRpVCg1EYXRhU3RvcmVTcGVjEkQKCmRhdGFfc3RvcmUYASAB",
+            "KAlCMOBBAvpBKgooZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFTdG9yZRr8AgoJRmFjZXRTcGVjElkKCWZhY2V0X2tleRgBIAEoCzJBLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5G",
+            "YWNldFNwZWMuRmFjZXRLZXlCA+BBAhINCgVsaW1pdBgCIAEoBRIcChRleGNs",
+            "dWRlZF9maWx0ZXJfa2V5cxgDIAMoCRIfChdlbmFibGVfZHluYW1pY19wb3Np",
+            "dGlvbhgEIAEoCBrFAQoIRmFjZXRLZXkSEAoDa2V5GAEgASgJQgPgQQISPAoJ",
+            "aW50ZXJ2YWxzGAIgAygLMikuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MS5JbnRlcnZhbBIZChFyZXN0cmljdGVkX3ZhbHVlcxgDIAMoCRIQCghw",
+            "cmVmaXhlcxgEIAMoCRIQCghjb250YWlucxgFIAMoCRIYChBjYXNlX2luc2Vu",
+            "c2l0aXZlGAYgASgIEhAKCG9yZGVyX2J5GAcgASgJGq8BCglCb29zdFNwZWMS",
+            "agoVY29uZGl0aW9uX2Jvb3N0X3NwZWNzGAEgAygLMksuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LkJvb3N0U3BlYy5D",
+            "b25kaXRpb25Cb29zdFNwZWMaNgoSQ29uZGl0aW9uQm9vc3RTcGVjEhEKCWNv",
+            "bmRpdGlvbhgBIAEoCRINCgVib29zdBgCIAEoAhrUAQoSUXVlcnlFeHBhbnNp",
+            "b25TcGVjEl4KCWNvbmRpdGlvbhgBIAEoDjJLLmdvb2dsZS5jbG91ZC5kaXNj",
             "b3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5RdWVyeUV4cGFuc2lvblNw",
-            "ZWMSYQoVc3BlbGxfY29ycmVjdGlvbl9zcGVjGA4gASgLMkIuZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LlNwZWxsQ29y",
-            "cmVjdGlvblNwZWMSFgoOdXNlcl9wc2V1ZG9faWQYDyABKAkSXQoTY29udGVu",
-            "dF9zZWFyY2hfc3BlYxgYIAEoCzJALmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
-            "bmdpbmUudjEuU2VhcmNoUmVxdWVzdC5Db250ZW50U2VhcmNoU3BlYxITCgtz",
-            "YWZlX3NlYXJjaBgUIAEoCBJTCgt1c2VyX2xhYmVscxgWIAMoCzI+Lmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5Vc2Vy",
-            "TGFiZWxzRW50cnkaLAoKSW1hZ2VRdWVyeRIVCgtpbWFnZV9ieXRlcxgBIAEo",
-            "CUgAQgcKBWltYWdlGlUKDURhdGFTdG9yZVNwZWMSRAoKZGF0YV9zdG9yZRgB",
-            "IAEoCUIw4EEC+kEqCihkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YVN0b3JlGvwCCglGYWNldFNwZWMSWQoJZmFjZXRfa2V5GAEgASgLMkEu",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0",
-            "LkZhY2V0U3BlYy5GYWNldEtleUID4EECEg0KBWxpbWl0GAIgASgFEhwKFGV4",
-            "Y2x1ZGVkX2ZpbHRlcl9rZXlzGAMgAygJEh8KF2VuYWJsZV9keW5hbWljX3Bv",
-            "c2l0aW9uGAQgASgIGsUBCghGYWNldEtleRIQCgNrZXkYASABKAlCA+BBAhI8",
-            "CglpbnRlcnZhbHMYAiADKAsyKS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxLkludGVydmFsEhkKEXJlc3RyaWN0ZWRfdmFsdWVzGAMgAygJEhAK",
-            "CHByZWZpeGVzGAQgAygJEhAKCGNvbnRhaW5zGAUgAygJEhgKEGNhc2VfaW5z",
-            "ZW5zaXRpdmUYBiABKAgSEAoIb3JkZXJfYnkYByABKAkarwEKCUJvb3N0U3Bl",
-            "YxJqChVjb25kaXRpb25fYm9vc3Rfc3BlY3MYASADKAsySy5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuQm9vc3RTcGVj",
-            "LkNvbmRpdGlvbkJvb3N0U3BlYxo2ChJDb25kaXRpb25Cb29zdFNwZWMSEQoJ",
-            "Y29uZGl0aW9uGAEgASgJEg0KBWJvb3N0GAIgASgCGtQBChJRdWVyeUV4cGFu",
-            "c2lvblNwZWMSXgoJY29uZGl0aW9uGAEgASgOMksuZ29vZ2xlLmNsb3VkLmRp",
-            "c2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LlF1ZXJ5RXhwYW5zaW9u",
-            "U3BlYy5Db25kaXRpb24SHgoWcGluX3VuZXhwYW5kZWRfcmVzdWx0cxgCIAEo",
-            "CCI+CglDb25kaXRpb24SGQoVQ09ORElUSU9OX1VOU1BFQ0lGSUVEEAASDAoI",
-            "RElTQUJMRUQQARIICgRBVVRPEAIaqQEKE1NwZWxsQ29ycmVjdGlvblNwZWMS",
-            "VQoEbW9kZRgBIAEoDjJHLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djEuU2VhcmNoUmVxdWVzdC5TcGVsbENvcnJlY3Rpb25TcGVjLk1vZGUiOwoE",
-            "TW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAASEwoPU1VHR0VTVElPTl9PTkxZ",
-            "EAESCAoEQVVUTxACGu8IChFDb250ZW50U2VhcmNoU3BlYxJiCgxzbmlwcGV0",
-            "X3NwZWMYASABKAsyTC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
-            "LlNlYXJjaFJlcXVlc3QuQ29udGVudFNlYXJjaFNwZWMuU25pcHBldFNwZWMS",
-            "YgoMc3VtbWFyeV9zcGVjGAIgASgLMkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRTZWFyY2hTcGVjLlN1",
-            "bW1hcnlTcGVjEncKF2V4dHJhY3RpdmVfY29udGVudF9zcGVjGAMgASgLMlYu",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0",
-            "LkNvbnRlbnRTZWFyY2hTcGVjLkV4dHJhY3RpdmVDb250ZW50U3BlYxpgCgtT",
-            "bmlwcGV0U3BlYxIdChFtYXhfc25pcHBldF9jb3VudBgBIAEoBUICGAESGgoO",
-            "cmVmZXJlbmNlX29ubHkYAiABKAhCAhgBEhYKDnJldHVybl9zbmlwcGV0GAMg",
-            "ASgIGu4DCgtTdW1tYXJ5U3BlYxIcChRzdW1tYXJ5X3Jlc3VsdF9jb3VudBgB",
-            "IAEoBRIZChFpbmNsdWRlX2NpdGF0aW9ucxgCIAEoCBIgChhpZ25vcmVfYWR2",
-            "ZXJzYXJpYWxfcXVlcnkYAyABKAgSKAogaWdub3JlX25vbl9zdW1tYXJ5X3Nl",
-            "ZWtpbmdfcXVlcnkYBCABKAgSdwoRbW9kZWxfcHJvbXB0X3NwZWMYBSABKAsy",
-            "XC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVl",
-            "c3QuQ29udGVudFNlYXJjaFNwZWMuU3VtbWFyeVNwZWMuTW9kZWxQcm9tcHRT",
-            "cGVjEhUKDWxhbmd1YWdlX2NvZGUYBiABKAkSagoKbW9kZWxfc3BlYxgHIAEo",
-            "CzJWLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVx",
-            "dWVzdC5Db250ZW50U2VhcmNoU3BlYy5TdW1tYXJ5U3BlYy5Nb2RlbFNwZWMS",
-            "GwoTdXNlX3NlbWFudGljX2NodW5rcxgIIAEoCBojCg9Nb2RlbFByb21wdFNw",
-            "ZWMSEAoIcHJlYW1ibGUYASABKAkaHAoJTW9kZWxTcGVjEg8KB3ZlcnNpb24Y",
-            "ASABKAkaxQEKFUV4dHJhY3RpdmVDb250ZW50U3BlYxIjChttYXhfZXh0cmFj",
-            "dGl2ZV9hbnN3ZXJfY291bnQYASABKAUSJAocbWF4X2V4dHJhY3RpdmVfc2Vn",
-            "bWVudF9jb3VudBgCIAEoBRInCh9yZXR1cm5fZXh0cmFjdGl2ZV9zZWdtZW50",
-            "X3Njb3JlGAMgASgIEh0KFW51bV9wcmV2aW91c19zZWdtZW50cxgEIAEoBRIZ",
-            "ChFudW1fbmV4dF9zZWdtZW50cxgFIAEoBRpFCgtQYXJhbXNFbnRyeRILCgNr",
-            "ZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFs",
-            "dWU6AjgBGjEKD1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIvwRCg5TZWFyY2hSZXNwb25zZRJNCgdyZXN1bHRzGAEg",
-            "AygLMjwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hS",
-            "ZXNwb25zZS5TZWFyY2hSZXN1bHQSRQoGZmFjZXRzGAIgAygLMjUuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5GYWNl",
-            "dBISCgp0b3RhbF9zaXplGAMgASgFEhkKEWF0dHJpYnV0aW9uX3Rva2VuGAQg",
-            "ASgJEhQKDHJlZGlyZWN0X3VyaRgMIAEoCRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "BSABKAkSFwoPY29ycmVjdGVkX3F1ZXJ5GAcgASgJEkgKB3N1bW1hcnkYCSAB",
-            "KAsyNy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJl",
-            "c3BvbnNlLlN1bW1hcnkSYAoUcXVlcnlfZXhwYW5zaW9uX2luZm8YDiABKAsy",
-            "Qi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlc3Bv",
-            "bnNlLlF1ZXJ5RXhwYW5zaW9uSW5mbxpXCgxTZWFyY2hSZXN1bHQSCgoCaWQY",
-            "ASABKAkSOwoIZG9jdW1lbnQYAiABKAsyKS5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxLkRvY3VtZW50GvkBCgVGYWNldBILCgNrZXkYASABKAkS",
-            "UAoGdmFsdWVzGAIgAygLMkAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
-            "ZS52MS5TZWFyY2hSZXNwb25zZS5GYWNldC5GYWNldFZhbHVlEhUKDWR5bmFt",
-            "aWNfZmFjZXQYAyABKAgaegoKRmFjZXRWYWx1ZRIPCgV2YWx1ZRgBIAEoCUgA",
-            "Ej0KCGludGVydmFsGAIgASgLMikuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MS5JbnRlcnZhbEgAEg0KBWNvdW50GAMgASgDQg0KC2ZhY2V0X3Zh",
-            "bHVlGpALCgdTdW1tYXJ5EhQKDHN1bW1hcnlfdGV4dBgBIAEoCRJtChdzdW1t",
-            "YXJ5X3NraXBwZWRfcmVhc29ucxgCIAMoDjJMLmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9uc2UuU3VtbWFyeS5TdW1tYXJ5",
-            "U2tpcHBlZFJlYXNvbhJjChFzYWZldHlfYXR0cmlidXRlcxgDIAEoCzJILmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9uc2Uu",
-            "U3VtbWFyeS5TYWZldHlBdHRyaWJ1dGVzEmoKFXN1bW1hcnlfd2l0aF9tZXRh",
-            "ZGF0YRgEIAEoCzJLLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
-            "U2VhcmNoUmVzcG9uc2UuU3VtbWFyeS5TdW1tYXJ5V2l0aE1ldGFkYXRhGjYK",
-            "EFNhZmV0eUF0dHJpYnV0ZXMSEgoKY2F0ZWdvcmllcxgBIAMoCRIOCgZzY29y",
-            "ZXMYAiADKAIaZwoQQ2l0YXRpb25NZXRhZGF0YRJTCgljaXRhdGlvbnMYASAD",
+            "ZWMuQ29uZGl0aW9uEh4KFnBpbl91bmV4cGFuZGVkX3Jlc3VsdHMYAiABKAgi",
+            "PgoJQ29uZGl0aW9uEhkKFUNPTkRJVElPTl9VTlNQRUNJRklFRBAAEgwKCERJ",
+            "U0FCTEVEEAESCAoEQVVUTxACGqkBChNTcGVsbENvcnJlY3Rpb25TcGVjElUK",
+            "BG1vZGUYASABKA4yRy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "LlNlYXJjaFJlcXVlc3QuU3BlbGxDb3JyZWN0aW9uU3BlYy5Nb2RlIjsKBE1v",
+            "ZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEhMKD1NVR0dFU1RJT05fT05MWRAB",
+            "EggKBEFVVE8QAhrUCwoRQ29udGVudFNlYXJjaFNwZWMSYgoMc25pcHBldF9z",
+            "cGVjGAEgASgLMkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5T",
+            "ZWFyY2hSZXF1ZXN0LkNvbnRlbnRTZWFyY2hTcGVjLlNuaXBwZXRTcGVjEmIK",
+            "DHN1bW1hcnlfc3BlYxgCIAEoCzJMLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuU2VhcmNoUmVxdWVzdC5Db250ZW50U2VhcmNoU3BlYy5TdW1t",
+            "YXJ5U3BlYxJ3ChdleHRyYWN0aXZlX2NvbnRlbnRfc3BlYxgDIAEoCzJWLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5D",
+            "b250ZW50U2VhcmNoU3BlYy5FeHRyYWN0aXZlQ29udGVudFNwZWMSbQoSc2Vh",
+            "cmNoX3Jlc3VsdF9tb2RlGAQgASgOMlEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRTZWFyY2hTcGVjLlNl",
+            "YXJjaFJlc3VsdE1vZGUSXgoKY2h1bmtfc3BlYxgFIAEoCzJKLmdvb2dsZS5j",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5Db250ZW50",
+            "U2VhcmNoU3BlYy5DaHVua1NwZWMaYAoLU25pcHBldFNwZWMSHQoRbWF4X3Nu",
+            "aXBwZXRfY291bnQYASABKAVCAhgBEhoKDnJlZmVyZW5jZV9vbmx5GAIgASgI",
+            "QgIYARIWCg5yZXR1cm5fc25pcHBldBgDIAEoCBruAwoLU3VtbWFyeVNwZWMS",
+            "HAoUc3VtbWFyeV9yZXN1bHRfY291bnQYASABKAUSGQoRaW5jbHVkZV9jaXRh",
+            "dGlvbnMYAiABKAgSIAoYaWdub3JlX2FkdmVyc2FyaWFsX3F1ZXJ5GAMgASgI",
+            "EigKIGlnbm9yZV9ub25fc3VtbWFyeV9zZWVraW5nX3F1ZXJ5GAQgASgIEncK",
+            "EW1vZGVsX3Byb21wdF9zcGVjGAUgASgLMlwuZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRTZWFyY2hTcGVj",
+            "LlN1bW1hcnlTcGVjLk1vZGVsUHJvbXB0U3BlYxIVCg1sYW5ndWFnZV9jb2Rl",
+            "GAYgASgJEmoKCm1vZGVsX3NwZWMYByABKAsyVi5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuQ29udGVudFNlYXJjaFNw",
+            "ZWMuU3VtbWFyeVNwZWMuTW9kZWxTcGVjEhsKE3VzZV9zZW1hbnRpY19jaHVu",
+            "a3MYCCABKAgaIwoPTW9kZWxQcm9tcHRTcGVjEhAKCHByZWFtYmxlGAEgASgJ",
+            "GhwKCU1vZGVsU3BlYxIPCgd2ZXJzaW9uGAEgASgJGsUBChVFeHRyYWN0aXZl",
+            "Q29udGVudFNwZWMSIwobbWF4X2V4dHJhY3RpdmVfYW5zd2VyX2NvdW50GAEg",
+            "ASgFEiQKHG1heF9leHRyYWN0aXZlX3NlZ21lbnRfY291bnQYAiABKAUSJwof",
+            "cmV0dXJuX2V4dHJhY3RpdmVfc2VnbWVudF9zY29yZRgDIAEoCBIdChVudW1f",
+            "cHJldmlvdXNfc2VnbWVudHMYBCABKAUSGQoRbnVtX25leHRfc2VnbWVudHMY",
+            "BSABKAUaQQoJQ2h1bmtTcGVjEhsKE251bV9wcmV2aW91c19jaHVua3MYASAB",
+            "KAUSFwoPbnVtX25leHRfY2h1bmtzGAIgASgFIlEKEFNlYXJjaFJlc3VsdE1v",
+            "ZGUSIgoeU0VBUkNIX1JFU1VMVF9NT0RFX1VOU1BFQ0lGSUVEEAASDQoJRE9D",
+            "VU1FTlRTEAESCgoGQ0hVTktTEAIauQEKE1NlYXJjaEFzWW91VHlwZVNwZWMS",
+            "XwoJY29uZGl0aW9uGAEgASgOMkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5TZWFyY2hSZXF1ZXN0LlNlYXJjaEFzWW91VHlwZVNwZWMuQ29u",
+            "ZGl0aW9uIkEKCUNvbmRpdGlvbhIZChVDT05ESVRJT05fVU5TUEVDSUZJRUQQ",
+            "ABIMCghESVNBQkxFRBABEgsKB0VOQUJMRUQQAhpxCgtTZXNzaW9uU3BlYxIQ",
+            "CghxdWVyeV9pZBgBIAEoCRIsCh9zZWFyY2hfcmVzdWx0X3BlcnNpc3RlbmNl",
+            "X2NvdW50GAIgASgFSACIAQFCIgogX3NlYXJjaF9yZXN1bHRfcGVyc2lzdGVu",
+            "Y2VfY291bnQaRQoLUGFyYW1zRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVl",
+            "GAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ARoxCg9Vc2VyTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASK2EwoO",
+            "U2VhcmNoUmVzcG9uc2USTQoHcmVzdWx0cxgBIAMoCzI8Lmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9uc2UuU2VhcmNoUmVz",
+            "dWx0EkUKBmZhY2V0cxgCIAMoCzI1Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuU2VhcmNoUmVzcG9uc2UuRmFjZXQSEgoKdG90YWxfc2l6ZRgD",
+            "IAEoBRIZChFhdHRyaWJ1dGlvbl90b2tlbhgEIAEoCRIUCgxyZWRpcmVjdF91",
+            "cmkYDCABKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAUgASgJEhcKD2NvcnJlY3Rl",
+            "ZF9xdWVyeRgHIAEoCRJICgdzdW1tYXJ5GAkgASgLMjcuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5TdW1tYXJ5EmAK",
+            "FHF1ZXJ5X2V4cGFuc2lvbl9pbmZvGA4gASgLMkIuZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5RdWVyeUV4cGFuc2lv",
+            "bkluZm8SUQoMc2Vzc2lvbl9pbmZvGBMgASgLMjsuZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5TZXNzaW9uSW5mbxqO",
+            "AQoMU2VhcmNoUmVzdWx0EgoKAmlkGAEgASgJEjsKCGRvY3VtZW50GAIgASgL",
+            "MikuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudBI1",
+            "CgVjaHVuaxgSIAEoCzImLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djEuQ2h1bmsa+QEKBUZhY2V0EgsKA2tleRgBIAEoCRJQCgZ2YWx1ZXMYAiAD",
             "KAsyQC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJl",
-            "c3BvbnNlLlN1bW1hcnkuQ2l0YXRpb24aiwEKCENpdGF0aW9uEhMKC3N0YXJ0",
-            "X2luZGV4GAEgASgDEhEKCWVuZF9pbmRleBgCIAEoAxJXCgdzb3VyY2VzGAMg",
-            "AygLMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hS",
-            "ZXNwb25zZS5TdW1tYXJ5LkNpdGF0aW9uU291cmNlGikKDkNpdGF0aW9uU291",
-            "cmNlEhcKD3JlZmVyZW5jZV9pbmRleBgEIAEoAxqMAgoJUmVmZXJlbmNlEg0K",
-            "BXRpdGxlGAEgASgJEkEKCGRvY3VtZW50GAIgASgJQi/gQQL6QSkKJ2Rpc2Nv",
-            "dmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudBILCgN1cmkYAyAB",
-            "KAkSZgoOY2h1bmtfY29udGVudHMYBCADKAsyTi5nb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlc3BvbnNlLlN1bW1hcnkuUmVmZXJl",
-            "bmNlLkNodW5rQ29udGVudBo4CgxDaHVua0NvbnRlbnQSDwoHY29udGVudBgB",
-            "IAEoCRIXCg9wYWdlX2lkZW50aWZpZXIYAiABKAka4gEKE1N1bW1hcnlXaXRo",
-            "TWV0YWRhdGESDwoHc3VtbWFyeRgBIAEoCRJjChFjaXRhdGlvbl9tZXRhZGF0",
-            "YRgCIAEoCzJILmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2Vh",
-            "cmNoUmVzcG9uc2UuU3VtbWFyeS5DaXRhdGlvbk1ldGFkYXRhElUKCnJlZmVy",
-            "ZW5jZXMYAyADKAsyQS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
-            "LlNlYXJjaFJlc3BvbnNlLlN1bW1hcnkuUmVmZXJlbmNlIuABChRTdW1tYXJ5",
-            "U2tpcHBlZFJlYXNvbhImCiJTVU1NQVJZX1NLSVBQRURfUkVBU09OX1VOU1BF",
-            "Q0lGSUVEEAASHQoZQURWRVJTQVJJQUxfUVVFUllfSUdOT1JFRBABEiUKIU5P",
-            "Tl9TVU1NQVJZX1NFRUtJTkdfUVVFUllfSUdOT1JFRBACEh8KG09VVF9PRl9E",
-            "T01BSU5fUVVFUllfSUdOT1JFRBADEh4KGlBPVEVOVElBTF9QT0xJQ1lfVklP",
-            "TEFUSU9OEAQSGQoVTExNX0FERE9OX05PVF9FTkFCTEVEEAUaSQoSUXVlcnlF",
-            "eHBhbnNpb25JbmZvEhYKDmV4cGFuZGVkX3F1ZXJ5GAEgASgIEhsKE3Bpbm5l",
-            "ZF9yZXN1bHRfY291bnQYAiABKAMy9QMKDVNlYXJjaFNlcnZpY2USjwMKBlNl",
-            "YXJjaBIuLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNo",
-            "UmVxdWVzdBovLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2Vh",
-            "cmNoUmVzcG9uc2UiowKC0+STApwCIlAvdjEve3NlcnZpbmdfY29uZmlnPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qL3NlcnZpbmdDb25m",
-            "aWdzLyp9OnNlYXJjaDoBKlpjIl4vdjEve3NlcnZpbmdfY29uZmlnPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyov",
-            "c2VydmluZ0NvbmZpZ3MvKn06c2VhcmNoOgEqWmAiWy92MS97c2VydmluZ19j",
-            "b25maWc9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2Vu",
-            "Z2luZXMvKi9zZXJ2aW5nQ29uZmlncy8qfTpzZWFyY2g6ASoaUspBHmRpc2Nv",
-            "dmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ChQIKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQhJTZWFyY2hTZXJ2aWNlUHJvdG9Q",
-            "AVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEv",
-            "ZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZF",
-            "UllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIf",
-            "R29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xv",
-            "dWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "c3BvbnNlLkZhY2V0LkZhY2V0VmFsdWUSFQoNZHluYW1pY19mYWNldBgDIAEo",
+            "CBp6CgpGYWNldFZhbHVlEg8KBXZhbHVlGAEgASgJSAASPQoIaW50ZXJ2YWwY",
+            "AiABKAsyKS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkludGVy",
+            "dmFsSAASDQoFY291bnQYAyABKANCDQoLZmFjZXRfdmFsdWUakAsKB1N1bW1h",
+            "cnkSFAoMc3VtbWFyeV90ZXh0GAEgASgJEm0KF3N1bW1hcnlfc2tpcHBlZF9y",
+            "ZWFzb25zGAIgAygOMkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5TZWFyY2hSZXNwb25zZS5TdW1tYXJ5LlN1bW1hcnlTa2lwcGVkUmVhc29u",
+            "EmMKEXNhZmV0eV9hdHRyaWJ1dGVzGAMgASgLMkguZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5TdW1tYXJ5LlNhZmV0",
+            "eUF0dHJpYnV0ZXMSagoVc3VtbWFyeV93aXRoX21ldGFkYXRhGAQgASgLMksu",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25z",
+            "ZS5TdW1tYXJ5LlN1bW1hcnlXaXRoTWV0YWRhdGEaNgoQU2FmZXR5QXR0cmli",
+            "dXRlcxISCgpjYXRlZ29yaWVzGAEgAygJEg4KBnNjb3JlcxgCIAMoAhpnChBD",
+            "aXRhdGlvbk1ldGFkYXRhElMKCWNpdGF0aW9ucxgBIAMoCzJALmdvb2dsZS5j",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9uc2UuU3VtbWFy",
+            "eS5DaXRhdGlvbhqLAQoIQ2l0YXRpb24SEwoLc3RhcnRfaW5kZXgYASABKAMS",
+            "EQoJZW5kX2luZGV4GAIgASgDElcKB3NvdXJjZXMYAyADKAsyRi5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlc3BvbnNlLlN1bW1h",
+            "cnkuQ2l0YXRpb25Tb3VyY2UaKQoOQ2l0YXRpb25Tb3VyY2USFwoPcmVmZXJl",
+            "bmNlX2luZGV4GAQgASgDGowCCglSZWZlcmVuY2USDQoFdGl0bGUYASABKAkS",
+            "QQoIZG9jdW1lbnQYAiABKAlCL+BBAvpBKQonZGlzY292ZXJ5ZW5naW5lLmdv",
+            "b2dsZWFwaXMuY29tL0RvY3VtZW50EgsKA3VyaRgDIAEoCRJmCg5jaHVua19j",
+            "b250ZW50cxgEIAMoCzJOLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djEuU2VhcmNoUmVzcG9uc2UuU3VtbWFyeS5SZWZlcmVuY2UuQ2h1bmtDb250",
+            "ZW50GjgKDENodW5rQ29udGVudBIPCgdjb250ZW50GAEgASgJEhcKD3BhZ2Vf",
+            "aWRlbnRpZmllchgCIAEoCRriAQoTU3VtbWFyeVdpdGhNZXRhZGF0YRIPCgdz",
+            "dW1tYXJ5GAEgASgJEmMKEWNpdGF0aW9uX21ldGFkYXRhGAIgASgLMkguZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5T",
+            "dW1tYXJ5LkNpdGF0aW9uTWV0YWRhdGESVQoKcmVmZXJlbmNlcxgDIAMoCzJB",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9u",
+            "c2UuU3VtbWFyeS5SZWZlcmVuY2Ui4AEKFFN1bW1hcnlTa2lwcGVkUmVhc29u",
+            "EiYKIlNVTU1BUllfU0tJUFBFRF9SRUFTT05fVU5TUEVDSUZJRUQQABIdChlB",
+            "RFZFUlNBUklBTF9RVUVSWV9JR05PUkVEEAESJQohTk9OX1NVTU1BUllfU0VF",
+            "S0lOR19RVUVSWV9JR05PUkVEEAISHwobT1VUX09GX0RPTUFJTl9RVUVSWV9J",
+            "R05PUkVEEAMSHgoaUE9URU5USUFMX1BPTElDWV9WSU9MQVRJT04QBBIZChVM",
+            "TE1fQURET05fTk9UX0VOQUJMRUQQBRpJChJRdWVyeUV4cGFuc2lvbkluZm8S",
+            "FgoOZXhwYW5kZWRfcXVlcnkYASABKAgSGwoTcGlubmVkX3Jlc3VsdF9jb3Vu",
+            "dBgCIAEoAxotCgtTZXNzaW9uSW5mbxIMCgRuYW1lGAEgASgJEhAKCHF1ZXJ5",
+            "X2lkGAIgASgJMvUDCg1TZWFyY2hTZXJ2aWNlEo8DCgZTZWFyY2gSLi5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QaLy5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlc3BvbnNl",
+            "IqMCgtPkkwKcAiJQL3YxL3tzZXJ2aW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9zZXJ2aW5nQ29uZmlncy8qfTpzZWFy",
+            "Y2g6ASpaYyJeL3YxL3tzZXJ2aW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL3NlcnZpbmdDb25m",
+            "aWdzLyp9OnNlYXJjaDoBKlpgIlsvdjEve3NlcnZpbmdfY29uZmlnPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9lbmdpbmVzLyovc2Vy",
+            "dmluZ0NvbmZpZ3MvKn06c2VhcmNoOgEqGlLKQR5kaXNjb3ZlcnllbmdpbmUu",
+            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQoUCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MUISU2VhcmNoU2VydmljZVByb3RvUAFaTWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVu",
+            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIf",
+            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3Zl",
+            "cnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.ChunkReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Parser, new[]{ "ServingConfig", "Branch", "Query", "ImageQuery", "PageSize", "PageToken", "Offset", "DataStoreSpecs", "Filter", "CanonicalFilter", "OrderBy", "UserInfo", "FacetSpecs", "BoostSpec", "Params", "QueryExpansionSpec", "SpellCorrectionSpec", "UserPseudoId", "ContentSearchSpec", "SafeSearch", "UserLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery.Parser, new[]{ "ImageBytes" }, new[]{ "Image" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Parser, new[]{ "ServingConfig", "Branch", "Query", "ImageQuery", "PageSize", "PageToken", "Offset", "DataStoreSpecs", "Filter", "CanonicalFilter", "OrderBy", "UserInfo", "LanguageCode", "FacetSpecs", "BoostSpec", "Params", "QueryExpansionSpec", "SpellCorrectionSpec", "UserPseudoId", "ContentSearchSpec", "SafeSearch", "UserLabels", "SearchAsYouTypeSpec", "Session", "SessionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery.Parser, new[]{ "ImageBytes" }, new[]{ "Image" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec.Parser, new[]{ "DataStore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec.Parser, new[]{ "FacetKey", "Limit", "ExcludedFilterKeys", "EnableDynamicPosition" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec.Types.FacetKey), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec.Types.FacetKey.Parser, new[]{ "Key", "Intervals", "RestrictedValues", "Prefixes", "Contains", "CaseInsensitive", "OrderBy" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Parser, new[]{ "ConditionBoostSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec.Parser, new[]{ "Condition", "Boost" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.QueryExpansionSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.QueryExpansionSpec.Parser, new[]{ "Condition", "PinUnexpandedResults" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.QueryExpansionSpec.Types.Condition) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec.Types.Mode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Parser, new[]{ "SnippetSpec", "SummarySpec", "ExtractiveContentSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec.Parser, new[]{ "MaxSnippetCount", "ReferenceOnly", "ReturnSnippet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Parser, new[]{ "SnippetSpec", "SummarySpec", "ExtractiveContentSpec", "SearchResultMode", "ChunkSpec" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec.Parser, new[]{ "MaxSnippetCount", "ReferenceOnly", "ReturnSnippet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Parser, new[]{ "SummaryResultCount", "IncludeCitations", "IgnoreAdversarialQuery", "IgnoreNonSummarySeekingQuery", "ModelPromptSpec", "LanguageCode", "ModelSpec", "UseSemanticChunks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec.Parser, new[]{ "Preamble" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec.Parser, new[]{ "Version" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec.Parser, new[]{ "MaxExtractiveAnswerCount", "MaxExtractiveSegmentCount", "ReturnExtractiveSegmentScore", "NumPreviousSegments", "NumNextSegments" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec.Parser, new[]{ "MaxExtractiveAnswerCount", "MaxExtractiveSegmentCount", "ReturnExtractiveSegmentScore", "NumPreviousSegments", "NumNextSegments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec.Parser, new[]{ "NumPreviousChunks", "NumNextChunks" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Parser, new[]{ "Condition" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec.Parser, new[]{ "QueryId", "SearchResultPersistenceCount" }, new[]{ "SearchResultPersistenceCount" }, null, null, null),
             null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "AttributionToken", "RedirectUri", "NextPageToken", "CorrectedQuery", "Summary", "QueryExpansionInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SearchResult), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "AttributionToken", "RedirectUri", "NextPageToken", "CorrectedQuery", "Summary", "QueryExpansionInfo", "SessionInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SearchResult), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Document", "Chunk" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet.Parser, new[]{ "Key", "Values", "DynamicFacet" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet.Types.FacetValue), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet.Types.FacetValue.Parser, new[]{ "Value", "Interval", "Count" }, new[]{ "FacetValue" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Parser, new[]{ "SummaryText", "SummarySkippedReasons", "SafetyAttributes", "SummaryWithMetadata" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummarySkippedReason) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes.Parser, new[]{ "Categories", "Scores" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata.Parser, new[]{ "Citations" }, null, null, null, null),
@@ -200,7 +229,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource.Parser, new[]{ "ReferenceIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference.Parser, new[]{ "Title", "Document", "Uri", "ChunkContents" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference.Types.ChunkContent), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference.Types.ChunkContent.Parser, new[]{ "Content", "PageIdentifier" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata.Parser, new[]{ "Summary", "CitationMetadata", "References" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo.Parser, new[]{ "ExpandedQuery", "PinnedResultCount" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo.Parser, new[]{ "ExpandedQuery", "PinnedResultCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo.Parser, new[]{ "Name", "QueryId" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -259,6 +289,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       canonicalFilter_ = other.canonicalFilter_;
       orderBy_ = other.orderBy_;
       userInfo_ = other.userInfo_ != null ? other.userInfo_.Clone() : null;
+      languageCode_ = other.languageCode_;
       facetSpecs_ = other.facetSpecs_.Clone();
       boostSpec_ = other.boostSpec_ != null ? other.boostSpec_.Clone() : null;
       params_ = other.params_.Clone();
@@ -268,6 +299,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       contentSearchSpec_ = other.contentSearchSpec_ != null ? other.contentSearchSpec_.Clone() : null;
       safeSearch_ = other.safeSearch_;
       userLabels_ = other.userLabels_.Clone();
+      searchAsYouTypeSpec_ = other.searchAsYouTypeSpec_ != null ? other.searchAsYouTypeSpec_.Clone() : null;
+      session_ = other.session_;
+      sessionSpec_ = other.sessionSpec_ != null ? other.sessionSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -526,6 +560,25 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 35;
+    private string languageCode_ = "";
+    /// <summary>
+    /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+    /// information, see [Standard
+    /// fields](https://cloud.google.com/apis/design/standard_fields). This field
+    /// helps to better interpret the query. If a value isn't specified, the query
+    /// language code is automatically detected, which may not be accurate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "facet_specs" field.</summary>
     public const int FacetSpecsFieldNumber = 9;
     private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec> _repeated_facetSpecs_codec
@@ -709,6 +762,80 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return userLabels_; }
     }
 
+    /// <summary>Field number for the "search_as_you_type_spec" field.</summary>
+    public const int SearchAsYouTypeSpecFieldNumber = 31;
+    private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec searchAsYouTypeSpec_;
+    /// <summary>
+    /// Search as you type configuration. Only supported for the
+    /// [IndustryVertical.MEDIA][google.cloud.discoveryengine.v1.IndustryVertical.MEDIA]
+    /// vertical.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec SearchAsYouTypeSpec {
+      get { return searchAsYouTypeSpec_; }
+      set {
+        searchAsYouTypeSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "session" field.</summary>
+    public const int SessionFieldNumber = 41;
+    private string session_ = "";
+    /// <summary>
+    /// The session resource name. Optional.
+    ///
+    /// Session allows users to do multi-turn /search API calls or coordination
+    /// between /search API calls and /answer API calls.
+    ///
+    /// Example #1 (multi-turn /search API calls):
+    ///   1. Call /search API with the auto-session mode (see below).
+    ///   2. Call /search API with the session ID generated in the first call.
+    ///      Here, the previous search query gets considered in query
+    ///      standing. I.e., if the first query is "How did Alphabet do in 2022?"
+    ///      and the current query is "How about 2023?", the current query will
+    ///      be interpreted as "How did Alphabet do in 2023?".
+    ///
+    /// Example #2 (coordination between /search API calls and /answer API calls):
+    ///   1. Call /search API with the auto-session mode (see below).
+    ///   2. Call /answer API with the session ID generated in the first call.
+    ///      Here, the answer generation happens in the context of the search
+    ///      results from the first search call.
+    ///
+    /// Auto-session mode: when `projects/.../sessions/-` is used, a new session
+    /// gets automatically created. Otherwise, users can use the create-session API
+    /// to create a session manually.
+    ///
+    /// Multi-turn Search feature is currently at private GA stage. Please use
+    /// v1alpha or v1beta version instead before we launch this feature to public
+    /// GA. Or ask for allowlisting through Google Support team.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Session {
+      get { return session_; }
+      set {
+        session_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "session_spec" field.</summary>
+    public const int SessionSpecFieldNumber = 42;
+    private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec sessionSpec_;
+    /// <summary>
+    /// Session specification.
+    ///
+    /// Can be used only when `session` is set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec SessionSpec {
+      get { return sessionSpec_; }
+      set {
+        sessionSpec_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -736,6 +863,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (CanonicalFilter != other.CanonicalFilter) return false;
       if (OrderBy != other.OrderBy) return false;
       if (!object.Equals(UserInfo, other.UserInfo)) return false;
+      if (LanguageCode != other.LanguageCode) return false;
       if(!facetSpecs_.Equals(other.facetSpecs_)) return false;
       if (!object.Equals(BoostSpec, other.BoostSpec)) return false;
       if (!Params.Equals(other.Params)) return false;
@@ -745,6 +873,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (!object.Equals(ContentSearchSpec, other.ContentSearchSpec)) return false;
       if (SafeSearch != other.SafeSearch) return false;
       if (!UserLabels.Equals(other.UserLabels)) return false;
+      if (!object.Equals(SearchAsYouTypeSpec, other.SearchAsYouTypeSpec)) return false;
+      if (Session != other.Session) return false;
+      if (!object.Equals(SessionSpec, other.SessionSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -764,6 +895,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (CanonicalFilter.Length != 0) hash ^= CanonicalFilter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (userInfo_ != null) hash ^= UserInfo.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       hash ^= facetSpecs_.GetHashCode();
       if (boostSpec_ != null) hash ^= BoostSpec.GetHashCode();
       hash ^= Params.GetHashCode();
@@ -773,6 +905,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (contentSearchSpec_ != null) hash ^= ContentSearchSpec.GetHashCode();
       if (SafeSearch != false) hash ^= SafeSearch.GetHashCode();
       hash ^= UserLabels.GetHashCode();
+      if (searchAsYouTypeSpec_ != null) hash ^= SearchAsYouTypeSpec.GetHashCode();
+      if (Session.Length != 0) hash ^= Session.GetHashCode();
+      if (sessionSpec_ != null) hash ^= SessionSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -862,7 +997,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(234, 1);
         output.WriteString(CanonicalFilter);
       }
+      if (searchAsYouTypeSpec_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(SearchAsYouTypeSpec);
+      }
       dataStoreSpecs_.WriteTo(output, _repeated_dataStoreSpecs_codec);
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(LanguageCode);
+      }
+      if (Session.Length != 0) {
+        output.WriteRawTag(202, 2);
+        output.WriteString(Session);
+      }
+      if (sessionSpec_ != null) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(SessionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -944,7 +1095,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(234, 1);
         output.WriteString(CanonicalFilter);
       }
+      if (searchAsYouTypeSpec_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(SearchAsYouTypeSpec);
+      }
       dataStoreSpecs_.WriteTo(ref output, _repeated_dataStoreSpecs_codec);
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(LanguageCode);
+      }
+      if (Session.Length != 0) {
+        output.WriteRawTag(202, 2);
+        output.WriteString(Session);
+      }
+      if (sessionSpec_ != null) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(SessionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -989,6 +1156,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (userInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(UserInfo);
       }
+      if (LanguageCode.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
       size += facetSpecs_.CalculateSize(_repeated_facetSpecs_codec);
       if (boostSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoostSpec);
@@ -1010,6 +1180,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         size += 2 + 1;
       }
       size += userLabels_.CalculateSize(_map_userLabels_codec);
+      if (searchAsYouTypeSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SearchAsYouTypeSpec);
+      }
+      if (Session.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Session);
+      }
+      if (sessionSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SessionSpec);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1062,6 +1241,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         }
         UserInfo.MergeFrom(other.UserInfo);
       }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
       facetSpecs_.Add(other.facetSpecs_);
       if (other.boostSpec_ != null) {
         if (boostSpec_ == null) {
@@ -1095,6 +1277,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         SafeSearch = other.SafeSearch;
       }
       userLabels_.MergeFrom(other.userLabels_);
+      if (other.searchAsYouTypeSpec_ != null) {
+        if (searchAsYouTypeSpec_ == null) {
+          SearchAsYouTypeSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec();
+        }
+        SearchAsYouTypeSpec.MergeFrom(other.SearchAsYouTypeSpec);
+      }
+      if (other.Session.Length != 0) {
+        Session = other.Session;
+      }
+      if (other.sessionSpec_ != null) {
+        if (sessionSpec_ == null) {
+          SessionSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec();
+        }
+        SessionSpec.MergeFrom(other.SessionSpec);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1208,8 +1405,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             CanonicalFilter = input.ReadString();
             break;
           }
+          case 250: {
+            if (searchAsYouTypeSpec_ == null) {
+              SearchAsYouTypeSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec();
+            }
+            input.ReadMessage(SearchAsYouTypeSpec);
+            break;
+          }
           case 258: {
             dataStoreSpecs_.AddEntriesFrom(input, _repeated_dataStoreSpecs_codec);
+            break;
+          }
+          case 282: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 330: {
+            Session = input.ReadString();
+            break;
+          }
+          case 338: {
+            if (sessionSpec_ == null) {
+              SessionSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec();
+            }
+            input.ReadMessage(SessionSpec);
             break;
           }
         }
@@ -1325,8 +1544,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             CanonicalFilter = input.ReadString();
             break;
           }
+          case 250: {
+            if (searchAsYouTypeSpec_ == null) {
+              SearchAsYouTypeSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec();
+            }
+            input.ReadMessage(SearchAsYouTypeSpec);
+            break;
+          }
           case 258: {
             dataStoreSpecs_.AddEntriesFrom(ref input, _repeated_dataStoreSpecs_codec);
+            break;
+          }
+          case 282: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 330: {
+            Session = input.ReadString();
+            break;
+          }
+          case 338: {
+            if (sessionSpec_ == null) {
+              SessionSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SessionSpec();
+            }
+            input.ReadMessage(SessionSpec);
             break;
           }
         }
@@ -1582,8 +1823,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
 
       /// <summary>
       /// A struct to define data stores to filter on in a search call and
-      /// configurations for those data stores. A maximum of 1 DataStoreSpec per
-      /// data_store is allowed. Otherwise, an `INVALID_ARGUMENT` error is returned.
+      /// configurations for those data stores. Otherwise, an `INVALID_ARGUMENT`
+      /// error is returned.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataStoreSpec : pb::IMessage<DataStoreSpec>
@@ -1853,6 +2094,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// Maximum facet values that are returned for this facet. If
         /// unspecified, defaults to 20. The maximum allowed value is 300. Values
         /// above 300 are coerced to 300.
+        /// For aggregation in healthcare search, when the [FacetKey.key] is
+        /// "healthcare_aggregation_key", the limit will be overridden to
+        /// 10,000 internally, regardless of the value set here.
         ///
         /// If this field is negative, an  `INVALID_ARGUMENT`  is returned.
         /// </summary>
@@ -3585,6 +3829,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           snippetSpec_ = other.snippetSpec_ != null ? other.snippetSpec_.Clone() : null;
           summarySpec_ = other.summarySpec_ != null ? other.summarySpec_.Clone() : null;
           extractiveContentSpec_ = other.extractiveContentSpec_ != null ? other.extractiveContentSpec_.Clone() : null;
+          searchResultMode_ = other.searchResultMode_;
+          chunkSpec_ = other.chunkSpec_ != null ? other.chunkSpec_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3642,6 +3888,45 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
         }
 
+        /// <summary>Field number for the "search_result_mode" field.</summary>
+        public const int SearchResultModeFieldNumber = 4;
+        private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode searchResultMode_ = global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode.Unspecified;
+        /// <summary>
+        /// Specifies the search result mode. If unspecified, the
+        /// search result mode is based on
+        /// [DataStore.DocumentProcessingConfig.chunking_config][]:
+        /// * If [DataStore.DocumentProcessingConfig.chunking_config][] is specified,
+        ///   it defaults to `CHUNKS`.
+        /// * Otherwise, it defaults to `DOCUMENTS`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode SearchResultMode {
+          get { return searchResultMode_; }
+          set {
+            searchResultMode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "chunk_spec" field.</summary>
+        public const int ChunkSpecFieldNumber = 5;
+        private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec chunkSpec_;
+        /// <summary>
+        /// Specifies the chunk spec to be returned from the search response.
+        /// Only available if the
+        /// [SearchRequest.ContentSearchSpec.search_result_mode][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.search_result_mode]
+        /// is set to
+        /// [CHUNKS][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.SearchResultMode.CHUNKS]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec ChunkSpec {
+          get { return chunkSpec_; }
+          set {
+            chunkSpec_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3660,6 +3945,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (!object.Equals(SnippetSpec, other.SnippetSpec)) return false;
           if (!object.Equals(SummarySpec, other.SummarySpec)) return false;
           if (!object.Equals(ExtractiveContentSpec, other.ExtractiveContentSpec)) return false;
+          if (SearchResultMode != other.SearchResultMode) return false;
+          if (!object.Equals(ChunkSpec, other.ChunkSpec)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3670,6 +3957,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (snippetSpec_ != null) hash ^= SnippetSpec.GetHashCode();
           if (summarySpec_ != null) hash ^= SummarySpec.GetHashCode();
           if (extractiveContentSpec_ != null) hash ^= ExtractiveContentSpec.GetHashCode();
+          if (SearchResultMode != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode.Unspecified) hash ^= SearchResultMode.GetHashCode();
+          if (chunkSpec_ != null) hash ^= ChunkSpec.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3700,6 +3989,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(ExtractiveContentSpec);
           }
+          if (SearchResultMode != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) SearchResultMode);
+          }
+          if (chunkSpec_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ChunkSpec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3722,6 +4019,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(ExtractiveContentSpec);
           }
+          if (SearchResultMode != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) SearchResultMode);
+          }
+          if (chunkSpec_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ChunkSpec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3740,6 +4045,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (extractiveContentSpec_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtractiveContentSpec);
+          }
+          if (SearchResultMode != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchResultMode);
+          }
+          if (chunkSpec_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChunkSpec);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3770,6 +4081,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               ExtractiveContentSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec();
             }
             ExtractiveContentSpec.MergeFrom(other.ExtractiveContentSpec);
+          }
+          if (other.SearchResultMode != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode.Unspecified) {
+            SearchResultMode = other.SearchResultMode;
+          }
+          if (other.chunkSpec_ != null) {
+            if (chunkSpec_ == null) {
+              ChunkSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec();
+            }
+            ChunkSpec.MergeFrom(other.ChunkSpec);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3805,6 +4125,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   ExtractiveContentSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec();
                 }
                 input.ReadMessage(ExtractiveContentSpec);
+                break;
+              }
+              case 32: {
+                SearchResultMode = (global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                if (chunkSpec_ == null) {
+                  ChunkSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec();
+                }
+                input.ReadMessage(ChunkSpec);
                 break;
               }
             }
@@ -3843,6 +4174,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 input.ReadMessage(ExtractiveContentSpec);
                 break;
               }
+              case 32: {
+                SearchResultMode = (global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SearchResultMode) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                if (chunkSpec_ == null) {
+                  ChunkSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.ChunkSpec();
+                }
+                input.ReadMessage(ChunkSpec);
+                break;
+              }
             }
           }
         }
@@ -3853,6 +4195,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          /// <summary>
+          /// Specifies the search result mode. If unspecified, the
+          /// search result mode is based on
+          /// [DataStore.DocumentProcessingConfig.chunking_config][]:
+          /// * If [DataStore.DocumentProcessingConfig.chunking_config][] is specified,
+          ///   it defaults to `CHUNKS`.
+          /// * Otherwise, it defaults to `DOCUMENTS`.
+          /// </summary>
+          public enum SearchResultMode {
+            /// <summary>
+            /// Default value.
+            /// </summary>
+            [pbr::OriginalName("SEARCH_RESULT_MODE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Returns documents in the search result.
+            /// </summary>
+            [pbr::OriginalName("DOCUMENTS")] Documents = 1,
+            /// <summary>
+            /// Returns chunks in the search result. Only available if the
+            /// [DataStore.DocumentProcessingConfig.chunking_config][] is specified.
+            /// </summary>
+            [pbr::OriginalName("CHUNKS")] Chunks = 2,
+          }
+
           /// <summary>
           /// A specification for configuring snippets in a search response.
           /// </summary>
@@ -4202,8 +4568,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             ///
             /// At most 10 results for documents mode, or 50 for chunks mode, can be
             /// used to generate a summary. The chunks mode is used when
-            /// [SearchRequest.ContentSearchSpec.search_result_mode][] is set to
-            /// [CHUNKS][SearchRequest.ContentSearchSpec.SearchResultMode.CHUNKS].
+            /// [SearchRequest.ContentSearchSpec.search_result_mode][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.search_result_mode]
+            /// is set to
+            /// [CHUNKS][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.SearchResultMode.CHUNKS].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5486,8 +5853,764 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
 
           }
 
+          /// <summary>
+          /// Specifies the chunk spec to be returned from the search response.
+          /// Only available if the
+          /// [SearchRequest.ContentSearchSpec.search_result_mode][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.search_result_mode]
+          /// is set to
+          /// [CHUNKS][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.SearchResultMode.CHUNKS]
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class ChunkSpec : pb::IMessage<ChunkSpec>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ChunkSpec> _parser = new pb::MessageParser<ChunkSpec>(() => new ChunkSpec());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ChunkSpec> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Descriptor.NestedTypes[3]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ChunkSpec() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ChunkSpec(ChunkSpec other) : this() {
+              numPreviousChunks_ = other.numPreviousChunks_;
+              numNextChunks_ = other.numNextChunks_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ChunkSpec Clone() {
+              return new ChunkSpec(this);
+            }
+
+            /// <summary>Field number for the "num_previous_chunks" field.</summary>
+            public const int NumPreviousChunksFieldNumber = 1;
+            private int numPreviousChunks_;
+            /// <summary>
+            /// The number of previous chunks to be returned of the current chunk. The
+            /// maximum allowed value is 3.
+            /// If not specified, no previous chunks will be returned.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int NumPreviousChunks {
+              get { return numPreviousChunks_; }
+              set {
+                numPreviousChunks_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "num_next_chunks" field.</summary>
+            public const int NumNextChunksFieldNumber = 2;
+            private int numNextChunks_;
+            /// <summary>
+            /// The number of next chunks to be returned of the current chunk. The
+            /// maximum allowed value is 3.
+            /// If not specified, no next chunks will be returned.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int NumNextChunks {
+              get { return numNextChunks_; }
+              set {
+                numNextChunks_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ChunkSpec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ChunkSpec other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (NumPreviousChunks != other.NumPreviousChunks) return false;
+              if (NumNextChunks != other.NumNextChunks) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (NumPreviousChunks != 0) hash ^= NumPreviousChunks.GetHashCode();
+              if (NumNextChunks != 0) hash ^= NumNextChunks.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (NumPreviousChunks != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(NumPreviousChunks);
+              }
+              if (NumNextChunks != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(NumNextChunks);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (NumPreviousChunks != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(NumPreviousChunks);
+              }
+              if (NumNextChunks != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(NumNextChunks);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (NumPreviousChunks != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(NumPreviousChunks);
+              }
+              if (NumNextChunks != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(NumNextChunks);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ChunkSpec other) {
+              if (other == null) {
+                return;
+              }
+              if (other.NumPreviousChunks != 0) {
+                NumPreviousChunks = other.NumPreviousChunks;
+              }
+              if (other.NumNextChunks != 0) {
+                NumNextChunks = other.NumNextChunks;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    NumPreviousChunks = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    NumNextChunks = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    NumPreviousChunks = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    NumNextChunks = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// Specification for search as you type in search requests.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SearchAsYouTypeSpec : pb::IMessage<SearchAsYouTypeSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SearchAsYouTypeSpec> _parser = new pb::MessageParser<SearchAsYouTypeSpec>(() => new SearchAsYouTypeSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SearchAsYouTypeSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchAsYouTypeSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchAsYouTypeSpec(SearchAsYouTypeSpec other) : this() {
+          condition_ = other.condition_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchAsYouTypeSpec Clone() {
+          return new SearchAsYouTypeSpec(this);
+        }
+
+        /// <summary>Field number for the "condition" field.</summary>
+        public const int ConditionFieldNumber = 1;
+        private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition condition_ = global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition.Unspecified;
+        /// <summary>
+        /// The condition under which search as you type should occur.
+        /// Default to
+        /// [Condition.DISABLED][google.cloud.discoveryengine.v1.SearchRequest.SearchAsYouTypeSpec.Condition.DISABLED].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition Condition {
+          get { return condition_; }
+          set {
+            condition_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SearchAsYouTypeSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SearchAsYouTypeSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Condition != other.Condition) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Condition != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition.Unspecified) hash ^= Condition.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Condition != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Condition);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Condition != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Condition);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Condition != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Condition);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SearchAsYouTypeSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Condition != global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition.Unspecified) {
+            Condition = other.Condition;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Condition = (global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Condition = (global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SearchAsYouTypeSpec.Types.Condition) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SearchAsYouTypeSpec message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Enum describing under which condition search as you type should occur.
+          /// </summary>
+          public enum Condition {
+            /// <summary>
+            /// Server behavior defaults to
+            /// [Condition.DISABLED][google.cloud.discoveryengine.v1.SearchRequest.SearchAsYouTypeSpec.Condition.DISABLED].
+            /// </summary>
+            [pbr::OriginalName("CONDITION_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Disables Search As You Type.
+            /// </summary>
+            [pbr::OriginalName("DISABLED")] Disabled = 1,
+            /// <summary>
+            /// Enables Search As You Type.
+            /// </summary>
+            [pbr::OriginalName("ENABLED")] Enabled = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Session specification.
+      ///
+      /// Multi-turn Search feature is currently at private GA stage. Please use
+      /// v1alpha or v1beta version instead before we launch this feature to public
+      /// GA. Or ask for allowlisting through Google Support team.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SessionSpec : pb::IMessage<SessionSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SessionSpec> _parser = new pb::MessageParser<SessionSpec>(() => new SessionSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SessionSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionSpec(SessionSpec other) : this() {
+          _hasBits0 = other._hasBits0;
+          queryId_ = other.queryId_;
+          searchResultPersistenceCount_ = other.searchResultPersistenceCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionSpec Clone() {
+          return new SessionSpec(this);
+        }
+
+        /// <summary>Field number for the "query_id" field.</summary>
+        public const int QueryIdFieldNumber = 1;
+        private string queryId_ = "";
+        /// <summary>
+        /// If set, the search result gets stored to the "turn" specified by this
+        /// query ID.
+        ///
+        /// Example: Let's say the session looks like this:
+        ///   session {
+        ///     name: ".../sessions/xxx"
+        ///     turns {
+        ///       query { text: "What is foo?" query_id: ".../questions/yyy" }
+        ///       answer: "Foo is ..."
+        ///     }
+        ///     turns {
+        ///       query { text: "How about bar then?" query_id: ".../questions/zzz" }
+        ///     }
+        ///   }
+        ///
+        /// The user can call /search API with a request like this:
+        ///
+        ///    session: ".../sessions/xxx"
+        ///    session_spec { query_id: ".../questions/zzz" }
+        ///
+        /// Then, the API stores the search result, associated with the last turn.
+        /// The stored search result can be used by a subsequent /answer API call
+        /// (with the session ID and the query ID specified). Also, it is possible
+        /// to call /search and /answer in parallel with the same session ID &amp; query
+        /// ID.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string QueryId {
+          get { return queryId_; }
+          set {
+            queryId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "search_result_persistence_count" field.</summary>
+        public const int SearchResultPersistenceCountFieldNumber = 2;
+        private readonly static int SearchResultPersistenceCountDefaultValue = 0;
+
+        private int searchResultPersistenceCount_;
+        /// <summary>
+        /// The number of top search results to persist. The persisted search results
+        /// can be used for the subsequent /answer api call.
+        ///
+        /// This field is simliar to the `summary_result_count` field in
+        /// [SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count].
+        ///
+        /// At most 10 results for documents mode, or 50 for chunks mode.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int SearchResultPersistenceCount {
+          get { if ((_hasBits0 & 1) != 0) { return searchResultPersistenceCount_; } else { return SearchResultPersistenceCountDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            searchResultPersistenceCount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "search_result_persistence_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSearchResultPersistenceCount {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "search_result_persistence_count" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSearchResultPersistenceCount() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SessionSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SessionSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (QueryId != other.QueryId) return false;
+          if (SearchResultPersistenceCount != other.SearchResultPersistenceCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (QueryId.Length != 0) hash ^= QueryId.GetHashCode();
+          if (HasSearchResultPersistenceCount) hash ^= SearchResultPersistenceCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (QueryId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(QueryId);
+          }
+          if (HasSearchResultPersistenceCount) {
+            output.WriteRawTag(16);
+            output.WriteInt32(SearchResultPersistenceCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (QueryId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(QueryId);
+          }
+          if (HasSearchResultPersistenceCount) {
+            output.WriteRawTag(16);
+            output.WriteInt32(SearchResultPersistenceCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (QueryId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryId);
+          }
+          if (HasSearchResultPersistenceCount) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(SearchResultPersistenceCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SessionSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.QueryId.Length != 0) {
+            QueryId = other.QueryId;
+          }
+          if (other.HasSearchResultPersistenceCount) {
+            SearchResultPersistenceCount = other.SearchResultPersistenceCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                QueryId = input.ReadString();
+                break;
+              }
+              case 16: {
+                SearchResultPersistenceCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                QueryId = input.ReadString();
+                break;
+              }
+              case 16: {
+                SearchResultPersistenceCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -5545,6 +6668,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       correctedQuery_ = other.correctedQuery_;
       summary_ = other.summary_ != null ? other.summary_.Clone() : null;
       queryExpansionInfo_ = other.queryExpansionInfo_ != null ? other.queryExpansionInfo_.Clone() : null;
+      sessionInfo_ = other.sessionInfo_ != null ? other.sessionInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5707,6 +6831,25 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "session_info" field.</summary>
+    public const int SessionInfoFieldNumber = 19;
+    private global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo sessionInfo_;
+    /// <summary>
+    /// Session information.
+    ///
+    /// Only set if
+    /// [SearchRequest.session][google.cloud.discoveryengine.v1.SearchRequest.session]
+    /// is provided. See its description for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo SessionInfo {
+      get { return sessionInfo_; }
+      set {
+        sessionInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5731,6 +6874,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (CorrectedQuery != other.CorrectedQuery) return false;
       if (!object.Equals(Summary, other.Summary)) return false;
       if (!object.Equals(QueryExpansionInfo, other.QueryExpansionInfo)) return false;
+      if (!object.Equals(SessionInfo, other.SessionInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5747,6 +6891,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (CorrectedQuery.Length != 0) hash ^= CorrectedQuery.GetHashCode();
       if (summary_ != null) hash ^= Summary.GetHashCode();
       if (queryExpansionInfo_ != null) hash ^= QueryExpansionInfo.GetHashCode();
+      if (sessionInfo_ != null) hash ^= SessionInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5795,6 +6940,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(QueryExpansionInfo);
       }
+      if (sessionInfo_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(SessionInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5835,6 +6984,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(QueryExpansionInfo);
       }
+      if (sessionInfo_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(SessionInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5867,6 +7020,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (queryExpansionInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryExpansionInfo);
+      }
+      if (sessionInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SessionInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5908,6 +7064,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           QueryExpansionInfo = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo();
         }
         QueryExpansionInfo.MergeFrom(other.QueryExpansionInfo);
+      }
+      if (other.sessionInfo_ != null) {
+        if (sessionInfo_ == null) {
+          SessionInfo = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo();
+        }
+        SessionInfo.MergeFrom(other.SessionInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5964,6 +7126,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               QueryExpansionInfo = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo();
             }
             input.ReadMessage(QueryExpansionInfo);
+            break;
+          }
+          case 154: {
+            if (sessionInfo_ == null) {
+              SessionInfo = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo();
+            }
+            input.ReadMessage(SessionInfo);
             break;
           }
         }
@@ -6023,6 +7192,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(QueryExpansionInfo);
             break;
           }
+          case 154: {
+            if (sessionInfo_ == null) {
+              SessionInfo = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SessionInfo();
+            }
+            input.ReadMessage(SessionInfo);
+            break;
+          }
         }
       }
     }
@@ -6073,6 +7249,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public SearchResult(SearchResult other) : this() {
           id_ = other.id_;
           document_ = other.document_ != null ? other.document_.Clone() : null;
+          chunk_ = other.chunk_ != null ? other.chunk_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -6114,6 +7291,24 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
         }
 
+        /// <summary>Field number for the "chunk" field.</summary>
+        public const int ChunkFieldNumber = 18;
+        private global::Google.Cloud.DiscoveryEngine.V1.Chunk chunk_;
+        /// <summary>
+        /// The chunk data in the search response if the
+        /// [SearchRequest.ContentSearchSpec.search_result_mode][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.search_result_mode]
+        /// is set to
+        /// [CHUNKS][google.cloud.discoveryengine.v1.SearchRequest.ContentSearchSpec.SearchResultMode.CHUNKS].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.Chunk Chunk {
+          get { return chunk_; }
+          set {
+            chunk_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -6131,6 +7326,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (Id != other.Id) return false;
           if (!object.Equals(Document, other.Document)) return false;
+          if (!object.Equals(Chunk, other.Chunk)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -6140,6 +7336,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           int hash = 1;
           if (Id.Length != 0) hash ^= Id.GetHashCode();
           if (document_ != null) hash ^= Document.GetHashCode();
+          if (chunk_ != null) hash ^= Chunk.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -6166,6 +7363,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(Document);
           }
+          if (chunk_ != null) {
+            output.WriteRawTag(146, 1);
+            output.WriteMessage(Chunk);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6184,6 +7385,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(Document);
           }
+          if (chunk_ != null) {
+            output.WriteRawTag(146, 1);
+            output.WriteMessage(Chunk);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6199,6 +7404,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (document_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+          }
+          if (chunk_ != null) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Chunk);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -6220,6 +7428,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               Document = new global::Google.Cloud.DiscoveryEngine.V1.Document();
             }
             Document.MergeFrom(other.Document);
+          }
+          if (other.chunk_ != null) {
+            if (chunk_ == null) {
+              Chunk = new global::Google.Cloud.DiscoveryEngine.V1.Chunk();
+            }
+            Chunk.MergeFrom(other.Chunk);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -6247,6 +7461,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 input.ReadMessage(Document);
                 break;
               }
+              case 146: {
+                if (chunk_ == null) {
+                  Chunk = new global::Google.Cloud.DiscoveryEngine.V1.Chunk();
+                }
+                input.ReadMessage(Chunk);
+                break;
+              }
             }
           }
         #endif
@@ -6271,6 +7492,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   Document = new global::Google.Cloud.DiscoveryEngine.V1.Document();
                 }
                 input.ReadMessage(Document);
+                break;
+              }
+              case 146: {
+                if (chunk_ == null) {
+                  Chunk = new global::Google.Cloud.DiscoveryEngine.V1.Chunk();
+                }
+                input.ReadMessage(Chunk);
                 break;
               }
             }
@@ -9197,6 +10425,250 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 16: {
                 PinnedResultCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Information about the session.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SessionInfo : pb::IMessage<SessionInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SessionInfo> _parser = new pb::MessageParser<SessionInfo>(() => new SessionInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SessionInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionInfo(SessionInfo other) : this() {
+          name_ = other.name_;
+          queryId_ = other.queryId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionInfo Clone() {
+          return new SessionInfo(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Name of the session.
+        /// If the auto-session mode is used (when
+        /// [SearchRequest.session][google.cloud.discoveryengine.v1.SearchRequest.session]
+        /// ends with "-"), this field holds the newly generated session name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "query_id" field.</summary>
+        public const int QueryIdFieldNumber = 2;
+        private string queryId_ = "";
+        /// <summary>
+        /// Query ID that corresponds to this search API call.
+        /// One session can have multiple turns, each with a unique query ID.
+        ///
+        /// By specifying the session name and this query ID in the Answer API call,
+        /// the answer generation happens in the context of the search results from
+        /// this search call.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string QueryId {
+          get { return queryId_; }
+          set {
+            queryId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SessionInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SessionInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (QueryId != other.QueryId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (QueryId.Length != 0) hash ^= QueryId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (QueryId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(QueryId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (QueryId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(QueryId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (QueryId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SessionInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.QueryId.Length != 0) {
+            QueryId = other.QueryId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                QueryId = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                QueryId = input.ReadString();
                 break;
               }
             }

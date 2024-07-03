@@ -16,10 +16,22 @@
                 "CompleteQueryAsync"
               ]
             },
+            "ImportCompletionSuggestions": {
+              "methods": [
+                "ImportCompletionSuggestions",
+                "ImportCompletionSuggestionsAsync"
+              ]
+            },
             "ImportSuggestionDenyListEntries": {
               "methods": [
                 "ImportSuggestionDenyListEntries",
                 "ImportSuggestionDenyListEntriesAsync"
+              ]
+            },
+            "PurgeCompletionSuggestions": {
+              "methods": [
+                "PurgeCompletionSuggestions",
+                "PurgeCompletionSuggestionsAsync"
               ]
             },
             "PurgeSuggestionDenyListEntries": {

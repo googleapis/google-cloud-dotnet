@@ -43,7 +43,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "QVJDSF9USUVSX1VOU1BFQ0lGSUVEEAASGAoUU0VBUkNIX1RJRVJfU1RBTkRB",
             "UkQQARIaChZTRUFSQ0hfVElFUl9FTlRFUlBSSVNFEAIqQwoLU2VhcmNoQWRk",
             "T24SHQoZU0VBUkNIX0FERF9PTl9VTlNQRUNJRklFRBAAEhUKEVNFQVJDSF9B",
-            "RERfT05fTExNEAFC1Q0KI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "RERfT05fTExNEAFCowsKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
             "aW5lLnYxQgtDb21tb25Qcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rp",
             "c2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zl",
             "cnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5E",
@@ -75,14 +75,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "a2luZ0NvbmZpZ3Mve3JhbmtpbmdfY29uZmlnfepBeQojaGVhbHRoY2FyZS5n",
             "b29nbGVhcGlzLmNvbS9GaGlyU3RvcmUSUnByb2plY3RzL3twcm9qZWN0fS9s",
             "b2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhc2V0cy97ZGF0YXNldH0vZmhpclN0",
-            "b3Jlcy97Zmhpcl9zdG9yZX3qQa4CCiRkaXNjb3ZlcnllbmdpbmUuZ29vZ2xl",
-            "YXBpcy5jb20vQ2h1bmsSdXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9icmFuY2hlcy97",
-            "YnJhbmNofS9kb2N1bWVudHMve2RvY3VtZW50fS9jaHVua3Mve2NodW5rfRKO",
-            "AXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xs",
-            "ZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0v",
-            "YnJhbmNoZXMve2JyYW5jaH0vZG9jdW1lbnRzL3tkb2N1bWVudH0vY2h1bmtz",
-            "L3tjaHVua31iBnByb3RvMw=="));
+            "b3Jlcy97Zmhpcl9zdG9yZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical), typeof(global::Google.Cloud.DiscoveryEngine.V1.SolutionType), typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchUseCase), typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchTier), typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchAddOn), }, null, new pbr::GeneratedClrTypeInfo[] {
