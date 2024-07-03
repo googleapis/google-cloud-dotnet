@@ -9,7 +9,7 @@
     <PackageReference Include="Google.Api.CommonProtos" Version="2.15.0" />
     <PackageReference Include="LibGit2Sharp" Version="0.30.0" />
     <PackageReference Include="NuGet.Protocol" Version="6.10.1" />
-    <PackageReference Include="Octokit" Version="13.0.0" />
+    <PackageReference Include="Octokit" Version="13.0.1" />
     <ProjectReference Include="..\Google.Cloud.Tools.ApiIndex.V1\Google.Cloud.Tools.ApiIndex.V1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
