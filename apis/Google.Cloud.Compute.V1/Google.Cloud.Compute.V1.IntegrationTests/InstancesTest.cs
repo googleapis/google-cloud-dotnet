@@ -20,6 +20,8 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
     [Collection(nameof(ComputeFixture))]
     public sealed class InstancesTest
     {
+        private const string DiskImage = "projects/debian-cloud/global/images/family/debian-12";
+
         private readonly ITestOutputHelper _output;
         private readonly ComputeFixture _fixture;
 
@@ -31,7 +33,6 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         {
             string projectId = _fixture.ProjectId;
             string zone = _fixture.Zone;
-            string diskImage = "projects/debian-cloud/global/images/family/debian-10";
             string machineType =
                 $"https://www.googleapis.com/compute/v1/projects/{projectId}/zones/{zone}/machineTypes/n1-standard-1";
             InstancesClient instancesClient = InstancesClient.Create();
@@ -58,7 +59,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                             AutoDelete = true,
                             Boot = true,
                             Type = ComputeEnumConstants.AttachedDisk.Type.Persistent,
-                            InitializeParams = new AttachedDiskInitializeParams {SourceImage = diskImage}
+                            InitializeParams = new AttachedDiskInitializeParams {SourceImage = DiskImage}
                         }
                     },
                     NetworkInterfaces = {new NetworkInterface {Name = "default"}}
@@ -149,7 +150,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                         Type = ComputeEnumConstants.AttachedDisk.Type.Persistent,
                         InitializeParams = new AttachedDiskInitializeParams
                         {
-                            SourceImage = "projects/debian-cloud/global/images/family/debian-10"
+                            SourceImage = DiskImage
                         }
                     }
                 },
