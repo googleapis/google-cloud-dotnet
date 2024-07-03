@@ -618,6 +618,11 @@ namespace Google.Apps.Chat.V1
         /// <remarks>
         /// The default ChatService scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/chat.admin.delete</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.admin.memberships</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.admin.memberships.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.bot</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.delete</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.import</description></item>
@@ -639,6 +644,11 @@ namespace Google.Apps.Chat.V1
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/chat.admin.delete",
+            "https://www.googleapis.com/auth/chat.admin.memberships",
+            "https://www.googleapis.com/auth/chat.admin.memberships.readonly",
+            "https://www.googleapis.com/auth/chat.admin.spaces",
+            "https://www.googleapis.com/auth/chat.admin.spaces.readonly",
             "https://www.googleapis.com/auth/chat.bot",
             "https://www.googleapis.com/auth/chat.delete",
             "https://www.googleapis.com/auth/chat.import",
@@ -2494,7 +2504,7 @@ namespace Google.Apps.Chat.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
-        /// `spaces/*/messages/*/attachments/*`.
+        /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2516,7 +2526,7 @@ namespace Google.Apps.Chat.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
-        /// `spaces/*/messages/*/attachments/*`.
+        /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2538,7 +2548,7 @@ namespace Google.Apps.Chat.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
-        /// `spaces/*/messages/*/attachments/*`.
+        /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2557,7 +2567,7 @@ namespace Google.Apps.Chat.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
-        /// `spaces/*/messages/*/attachments/*`.
+        /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2579,7 +2589,7 @@ namespace Google.Apps.Chat.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
-        /// `spaces/*/messages/*/attachments/*`.
+        /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2601,7 +2611,7 @@ namespace Google.Apps.Chat.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
-        /// `spaces/*/messages/*/attachments/*`.
+        /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2675,6 +2685,10 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Lists spaces visible to the caller or authenticated user. Group chats
         /// and DMs aren't listed until the first message is sent.
+        /// 
+        /// To list all named spaces by Google Workspace organization, use the
+        /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+        /// method using Workspace administrator privileges instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2698,6 +2712,10 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Lists spaces visible to the caller or authenticated user. Group chats
         /// and DMs aren't listed until the first message is sent.
+        /// 
+        /// To list all named spaces by Google Workspace organization, use the
+        /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+        /// method using Workspace administrator privileges instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2721,6 +2739,10 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Lists spaces visible to the caller or authenticated user. Group chats
         /// and DMs aren't listed until the first message is sent.
+        /// 
+        /// To list all named spaces by Google Workspace organization, use the
+        /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+        /// method using Workspace administrator privileges instead.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2755,6 +2777,10 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Lists spaces visible to the caller or authenticated user. Group chats
         /// and DMs aren't listed until the first message is sent.
+        /// 
+        /// To list all named spaces by Google Workspace organization, use the
+        /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+        /// method using Workspace administrator privileges instead.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2844,7 +2870,7 @@ namespace Google.Apps.Chat.V1
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the space, in the form "spaces/*".
+        /// Required. Resource name of the space, in the form `spaces/{space}`.
         /// 
         /// Format: `spaces/{space}`
         /// </param>
@@ -2870,7 +2896,7 @@ namespace Google.Apps.Chat.V1
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the space, in the form "spaces/*".
+        /// Required. Resource name of the space, in the form `spaces/{space}`.
         /// 
         /// Format: `spaces/{space}`
         /// </param>
@@ -2896,7 +2922,7 @@ namespace Google.Apps.Chat.V1
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the space, in the form "spaces/*".
+        /// Required. Resource name of the space, in the form `spaces/{space}`.
         /// 
         /// Format: `spaces/{space}`
         /// </param>
@@ -2919,7 +2945,7 @@ namespace Google.Apps.Chat.V1
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the space, in the form "spaces/*".
+        /// Required. Resource name of the space, in the form `spaces/{space}`.
         /// 
         /// Format: `spaces/{space}`
         /// </param>
@@ -2945,7 +2971,7 @@ namespace Google.Apps.Chat.V1
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the space, in the form "spaces/*".
+        /// Required. Resource name of the space, in the form `spaces/{space}`.
         /// 
         /// Format: `spaces/{space}`
         /// </param>
@@ -2971,7 +2997,7 @@ namespace Google.Apps.Chat.V1
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the space, in the form "spaces/*".
+        /// Required. Resource name of the space, in the form `spaces/{space}`.
         /// 
         /// Format: `spaces/{space}`
         /// </param>
@@ -3397,6 +3423,7 @@ namespace Google.Apps.Chat.V1
         /// the display name is optional if the existing space already has the `SPACE`
         /// type. Trying to update the space type in other ways results in an invalid
         /// argument error).
+        /// `space_type` is not supported with admin access.
         /// 
         /// - `space_details`
         /// 
@@ -3405,12 +3432,27 @@ namespace Google.Apps.Chat.V1
         /// allows users to change their history
         /// setting](https://support.google.com/a/answer/7664184).
         /// Warning: mutually exclusive with all other field paths.)
+        /// `space_history_state` is not supported with admin access.
         /// 
-        /// - Developer Preview: `access_settings.audience` (Supports changing the
-        /// [access setting](https://support.google.com/chat/answer/11971020) of a
-        /// space. If no audience is specified in the access setting, the space's
-        /// access setting is updated to restricted. Warning: mutually exclusive with
-        /// all other field paths.)
+        /// - `access_settings.audience` (Supports changing the [access
+        /// setting](https://support.google.com/chat/answer/11971020) of who can
+        /// discover the space, join the space, and preview the messages in space. If
+        /// no audience is specified in the access setting, the space's access setting
+        /// is updated to private. Warning: mutually exclusive with all other field
+        /// paths.)
+        /// `access_settings.audience` is not supported with admin access.
+        /// 
+        /// - Developer Preview: Supports changing the [permission
+        /// settings](https://support.google.com/chat/answer/13340792) of a space,
+        /// supported field paths
+        /// include: `permission_settings.manage_members_and_groups`,
+        /// `permission_settings.modify_space_details`,
+        /// `permission_settings.toggle_history`,
+        /// `permission_settings.use_at_mention_all`,
+        /// `permission_settings.manage_apps`, `permission_settings.manage_webhooks`,
+        /// `permission_settings.reply_messages`
+        /// (Warning: mutually exclusive with all other non-permission settings field
+        /// paths). `permission_settings` is not supported with admin access.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3460,6 +3502,7 @@ namespace Google.Apps.Chat.V1
         /// the display name is optional if the existing space already has the `SPACE`
         /// type. Trying to update the space type in other ways results in an invalid
         /// argument error).
+        /// `space_type` is not supported with admin access.
         /// 
         /// - `space_details`
         /// 
@@ -3468,12 +3511,27 @@ namespace Google.Apps.Chat.V1
         /// allows users to change their history
         /// setting](https://support.google.com/a/answer/7664184).
         /// Warning: mutually exclusive with all other field paths.)
+        /// `space_history_state` is not supported with admin access.
         /// 
-        /// - Developer Preview: `access_settings.audience` (Supports changing the
-        /// [access setting](https://support.google.com/chat/answer/11971020) of a
-        /// space. If no audience is specified in the access setting, the space's
-        /// access setting is updated to restricted. Warning: mutually exclusive with
-        /// all other field paths.)
+        /// - `access_settings.audience` (Supports changing the [access
+        /// setting](https://support.google.com/chat/answer/11971020) of who can
+        /// discover the space, join the space, and preview the messages in space. If
+        /// no audience is specified in the access setting, the space's access setting
+        /// is updated to private. Warning: mutually exclusive with all other field
+        /// paths.)
+        /// `access_settings.audience` is not supported with admin access.
+        /// 
+        /// - Developer Preview: Supports changing the [permission
+        /// settings](https://support.google.com/chat/answer/13340792) of a space,
+        /// supported field paths
+        /// include: `permission_settings.manage_members_and_groups`,
+        /// `permission_settings.modify_space_details`,
+        /// `permission_settings.toggle_history`,
+        /// `permission_settings.use_at_mention_all`,
+        /// `permission_settings.manage_apps`, `permission_settings.manage_webhooks`,
+        /// `permission_settings.reply_messages`
+        /// (Warning: mutually exclusive with all other non-permission settings field
+        /// paths). `permission_settings` is not supported with admin access.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3523,6 +3581,7 @@ namespace Google.Apps.Chat.V1
         /// the display name is optional if the existing space already has the `SPACE`
         /// type. Trying to update the space type in other ways results in an invalid
         /// argument error).
+        /// `space_type` is not supported with admin access.
         /// 
         /// - `space_details`
         /// 
@@ -3531,12 +3590,27 @@ namespace Google.Apps.Chat.V1
         /// allows users to change their history
         /// setting](https://support.google.com/a/answer/7664184).
         /// Warning: mutually exclusive with all other field paths.)
+        /// `space_history_state` is not supported with admin access.
         /// 
-        /// - Developer Preview: `access_settings.audience` (Supports changing the
-        /// [access setting](https://support.google.com/chat/answer/11971020) of a
-        /// space. If no audience is specified in the access setting, the space's
-        /// access setting is updated to restricted. Warning: mutually exclusive with
-        /// all other field paths.)
+        /// - `access_settings.audience` (Supports changing the [access
+        /// setting](https://support.google.com/chat/answer/11971020) of who can
+        /// discover the space, join the space, and preview the messages in space. If
+        /// no audience is specified in the access setting, the space's access setting
+        /// is updated to private. Warning: mutually exclusive with all other field
+        /// paths.)
+        /// `access_settings.audience` is not supported with admin access.
+        /// 
+        /// - Developer Preview: Supports changing the [permission
+        /// settings](https://support.google.com/chat/answer/13340792) of a space,
+        /// supported field paths
+        /// include: `permission_settings.manage_members_and_groups`,
+        /// `permission_settings.modify_space_details`,
+        /// `permission_settings.toggle_history`,
+        /// `permission_settings.use_at_mention_all`,
+        /// `permission_settings.manage_apps`, `permission_settings.manage_webhooks`,
+        /// `permission_settings.reply_messages`
+        /// (Warning: mutually exclusive with all other non-permission settings field
+        /// paths). `permission_settings` is not supported with admin access.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6587,6 +6661,10 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Lists spaces visible to the caller or authenticated user. Group chats
         /// and DMs aren't listed until the first message is sent.
+        /// 
+        /// To list all named spaces by Google Workspace organization, use the
+        /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+        /// method using Workspace administrator privileges instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6613,6 +6691,10 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Lists spaces visible to the caller or authenticated user. Group chats
         /// and DMs aren't listed until the first message is sent.
+        /// 
+        /// To list all named spaces by Google Workspace organization, use the
+        /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+        /// method using Workspace administrator privileges instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

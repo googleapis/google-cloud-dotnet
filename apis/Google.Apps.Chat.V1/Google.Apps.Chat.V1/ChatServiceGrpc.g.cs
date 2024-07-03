@@ -584,6 +584,10 @@ namespace Google.Apps.Chat.V1 {
       ///
       /// Lists spaces visible to the caller or authenticated user. Group chats
       /// and DMs aren't listed until the first message is sent.
+      ///
+      /// To list all named spaces by Google Workspace organization, use the
+      /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+      /// method using Workspace administrator privileges instead.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1833,6 +1837,10 @@ namespace Google.Apps.Chat.V1 {
       ///
       /// Lists spaces visible to the caller or authenticated user. Group chats
       /// and DMs aren't listed until the first message is sent.
+      ///
+      /// To list all named spaces by Google Workspace organization, use the
+      /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+      /// method using Workspace administrator privileges instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1860,6 +1868,10 @@ namespace Google.Apps.Chat.V1 {
       ///
       /// Lists spaces visible to the caller or authenticated user. Group chats
       /// and DMs aren't listed until the first message is sent.
+      ///
+      /// To list all named spaces by Google Workspace organization, use the
+      /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+      /// method using Workspace administrator privileges instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1885,6 +1897,10 @@ namespace Google.Apps.Chat.V1 {
       ///
       /// Lists spaces visible to the caller or authenticated user. Group chats
       /// and DMs aren't listed until the first message is sent.
+      ///
+      /// To list all named spaces by Google Workspace organization, use the
+      /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+      /// method using Workspace administrator privileges instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1912,6 +1928,10 @@ namespace Google.Apps.Chat.V1 {
       ///
       /// Lists spaces visible to the caller or authenticated user. Group chats
       /// and DMs aren't listed until the first message is sent.
+      ///
+      /// To list all named spaces by Google Workspace organization, use the
+      /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
+      /// method using Workspace administrator privileges instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
