@@ -42,6 +42,8 @@ namespace GoogleCSharpSnippets
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
                 Instances = { new wkt::Value(), },
+                Model = "",
+                Contents = { new Content(), },
             };
             // Make the request
             ComputeTokensResponse response = await llmUtilityServiceClient.ComputeTokensAsync(request);

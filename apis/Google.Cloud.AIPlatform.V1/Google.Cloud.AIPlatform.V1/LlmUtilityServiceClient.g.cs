@@ -21,6 +21,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
@@ -429,7 +430,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// token ids.
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token computing API call.
+        /// Optional. The instances that are the input to token computing API call.
         /// Schema is identical to the prediction schema of the text model, even for
         /// the non-text models, like chat models, or Codey models.
         /// </param>
@@ -441,7 +442,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -453,7 +454,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// token ids.
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token computing API call.
+        /// Optional. The instances that are the input to token computing API call.
         /// Schema is identical to the prediction schema of the text model, even for
         /// the non-text models, like chat models, or Codey models.
         /// </param>
@@ -465,7 +466,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -477,7 +478,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// token ids.
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token computing API call.
+        /// Optional. The instances that are the input to token computing API call.
         /// Schema is identical to the prediction schema of the text model, even for
         /// the non-text models, like chat models, or Codey models.
         /// </param>
@@ -494,7 +495,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// token ids.
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token computing API call.
+        /// Optional. The instances that are the input to token computing API call.
         /// Schema is identical to the prediction schema of the text model, even for
         /// the non-text models, like chat models, or Codey models.
         /// </param>
@@ -506,7 +507,7 @@ namespace Google.Cloud.AIPlatform.V1
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -518,7 +519,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// token ids.
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token computing API call.
+        /// Optional. The instances that are the input to token computing API call.
         /// Schema is identical to the prediction schema of the text model, even for
         /// the non-text models, like chat models, or Codey models.
         /// </param>
@@ -530,7 +531,7 @@ namespace Google.Cloud.AIPlatform.V1
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -542,7 +543,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// token ids.
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token computing API call.
+        /// Optional. The instances that are the input to token computing API call.
         /// Schema is identical to the prediction schema of the text model, even for
         /// the non-text models, like chat models, or Codey models.
         /// </param>
