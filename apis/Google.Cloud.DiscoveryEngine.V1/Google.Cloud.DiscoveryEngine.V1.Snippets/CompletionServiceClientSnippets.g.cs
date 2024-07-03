@@ -195,5 +195,139 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ImportCompletionSuggestions</summary>
+        public void ImportCompletionSuggestionsRequestObject()
+        {
+            // Snippet: ImportCompletionSuggestions(ImportCompletionSuggestionsRequest, CallSettings)
+            // Create client
+            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            // Initialize request argument(s)
+            ImportCompletionSuggestionsRequest request = new ImportCompletionSuggestionsRequest
+            {
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                InlineSource = new ImportCompletionSuggestionsRequest.Types.InlineSource(),
+                ErrorConfig = new ImportErrorConfig(),
+            };
+            // Make the request
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> response = completionServiceClient.ImportCompletionSuggestions(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportCompletionSuggestionsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> retrievedResponse = completionServiceClient.PollOnceImportCompletionSuggestions(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportCompletionSuggestionsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCompletionSuggestionsAsync</summary>
+        public async Task ImportCompletionSuggestionsRequestObjectAsync()
+        {
+            // Snippet: ImportCompletionSuggestionsAsync(ImportCompletionSuggestionsRequest, CallSettings)
+            // Additional: ImportCompletionSuggestionsAsync(ImportCompletionSuggestionsRequest, CancellationToken)
+            // Create client
+            CompletionServiceClient completionServiceClient = await CompletionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportCompletionSuggestionsRequest request = new ImportCompletionSuggestionsRequest
+            {
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                InlineSource = new ImportCompletionSuggestionsRequest.Types.InlineSource(),
+                ErrorConfig = new ImportErrorConfig(),
+            };
+            // Make the request
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> response = await completionServiceClient.ImportCompletionSuggestionsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportCompletionSuggestionsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> retrievedResponse = await completionServiceClient.PollOnceImportCompletionSuggestionsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportCompletionSuggestionsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeCompletionSuggestions</summary>
+        public void PurgeCompletionSuggestionsRequestObject()
+        {
+            // Snippet: PurgeCompletionSuggestions(PurgeCompletionSuggestionsRequest, CallSettings)
+            // Create client
+            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            // Initialize request argument(s)
+            PurgeCompletionSuggestionsRequest request = new PurgeCompletionSuggestionsRequest
+            {
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+            };
+            // Make the request
+            Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata> response = completionServiceClient.PurgeCompletionSuggestions(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PurgeCompletionSuggestionsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata> retrievedResponse = completionServiceClient.PollOncePurgeCompletionSuggestions(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeCompletionSuggestionsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeCompletionSuggestionsAsync</summary>
+        public async Task PurgeCompletionSuggestionsRequestObjectAsync()
+        {
+            // Snippet: PurgeCompletionSuggestionsAsync(PurgeCompletionSuggestionsRequest, CallSettings)
+            // Additional: PurgeCompletionSuggestionsAsync(PurgeCompletionSuggestionsRequest, CancellationToken)
+            // Create client
+            CompletionServiceClient completionServiceClient = await CompletionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PurgeCompletionSuggestionsRequest request = new PurgeCompletionSuggestionsRequest
+            {
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+            };
+            // Make the request
+            Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata> response = await completionServiceClient.PurgeCompletionSuggestionsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PurgeCompletionSuggestionsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata> retrievedResponse = await completionServiceClient.PollOncePurgeCompletionSuggestionsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeCompletionSuggestionsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

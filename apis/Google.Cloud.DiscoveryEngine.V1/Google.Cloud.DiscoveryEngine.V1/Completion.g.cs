@@ -31,17 +31,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "X29wZXJhdG9yGAIgASgOMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
             "ZS52MS5TdWdnZXN0aW9uRGVueUxpc3RFbnRyeS5NYXRjaE9wZXJhdG9yQgPg",
             "QQIiTgoNTWF0Y2hPcGVyYXRvchIeChpNQVRDSF9PUEVSQVRPUl9VTlNQRUNJ",
-            "RklFRBAAEg8KC0VYQUNUX01BVENIEAESDAoIQ09OVEFJTlMQAkKCAgojY29t",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCD0NvbXBsZXRpb25Q",
-            "cm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9h",
-            "cGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJ",
-            "U0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUu",
-            "VjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xl",
-            "OjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "RklFRBAAEg8KC0VYQUNUX01BVENIEAESDAoIQ09OVEFJTlMQAiLHAQoUQ29t",
+            "cGxldGlvblN1Z2dlc3Rpb24SFgoMZ2xvYmFsX3Njb3JlGAIgASgBSAASEwoJ",
+            "ZnJlcXVlbmN5GAMgASgDSAASFwoKc3VnZ2VzdGlvbhgBIAEoCUID4EECEhUK",
+            "DWxhbmd1YWdlX2NvZGUYBCABKAkSEAoIZ3JvdXBfaWQYBSABKAkSEwoLZ3Jv",
+            "dXBfc2NvcmUYBiABKAESGwoTYWx0ZXJuYXRpdmVfcGhyYXNlcxgHIAMoCUIO",
+            "CgxyYW5raW5nX2luZm9CggIKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxQg9Db21wbGV0aW9uUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7",
+            "ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUu",
+            "Q2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2Nv",
+            "dmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2lu",
+            "ZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SuggestionDenyListEntry), global::Google.Cloud.DiscoveryEngine.V1.SuggestionDenyListEntry.Parser, new[]{ "BlockPhrase", "MatchOperator" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SuggestionDenyListEntry.Types.MatchOperator) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SuggestionDenyListEntry), global::Google.Cloud.DiscoveryEngine.V1.SuggestionDenyListEntry.Parser, new[]{ "BlockPhrase", "MatchOperator" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SuggestionDenyListEntry.Types.MatchOperator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompletionSuggestion), global::Google.Cloud.DiscoveryEngine.V1.CompletionSuggestion.Parser, new[]{ "GlobalScore", "Frequency", "Suggestion", "LanguageCode", "GroupId", "GroupScore", "AlternativePhrases" }, new[]{ "RankingInfo" }, null, null, null)
           }));
     }
     #endregion
@@ -310,6 +316,496 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Autocomplete suggestions that are imported from Customer.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CompletionSuggestion : pb::IMessage<CompletionSuggestion>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CompletionSuggestion> _parser = new pb::MessageParser<CompletionSuggestion>(() => new CompletionSuggestion());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CompletionSuggestion> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1.CompletionReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompletionSuggestion() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompletionSuggestion(CompletionSuggestion other) : this() {
+      suggestion_ = other.suggestion_;
+      languageCode_ = other.languageCode_;
+      groupId_ = other.groupId_;
+      groupScore_ = other.groupScore_;
+      alternativePhrases_ = other.alternativePhrases_.Clone();
+      switch (other.RankingInfoCase) {
+        case RankingInfoOneofCase.GlobalScore:
+          GlobalScore = other.GlobalScore;
+          break;
+        case RankingInfoOneofCase.Frequency:
+          Frequency = other.Frequency;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompletionSuggestion Clone() {
+      return new CompletionSuggestion(this);
+    }
+
+    /// <summary>Field number for the "global_score" field.</summary>
+    public const int GlobalScoreFieldNumber = 2;
+    /// <summary>
+    /// Global score of this suggestion. Control how this suggestion would be
+    /// scored / ranked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double GlobalScore {
+      get { return HasGlobalScore ? (double) rankingInfo_ : 0D; }
+      set {
+        rankingInfo_ = value;
+        rankingInfoCase_ = RankingInfoOneofCase.GlobalScore;
+      }
+    }
+    /// <summary>Gets whether the "global_score" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGlobalScore {
+      get { return rankingInfoCase_ == RankingInfoOneofCase.GlobalScore; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "global_score" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGlobalScore() {
+      if (HasGlobalScore) {
+        ClearRankingInfo();
+      }
+    }
+
+    /// <summary>Field number for the "frequency" field.</summary>
+    public const int FrequencyFieldNumber = 3;
+    /// <summary>
+    /// Frequency of this suggestion. Will be used to rank suggestions when score
+    /// is not available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Frequency {
+      get { return HasFrequency ? (long) rankingInfo_ : 0L; }
+      set {
+        rankingInfo_ = value;
+        rankingInfoCase_ = RankingInfoOneofCase.Frequency;
+      }
+    }
+    /// <summary>Gets whether the "frequency" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFrequency {
+      get { return rankingInfoCase_ == RankingInfoOneofCase.Frequency; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "frequency" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFrequency() {
+      if (HasFrequency) {
+        ClearRankingInfo();
+      }
+    }
+
+    /// <summary>Field number for the "suggestion" field.</summary>
+    public const int SuggestionFieldNumber = 1;
+    private string suggestion_ = "";
+    /// <summary>
+    /// Required. The suggestion text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Suggestion {
+      get { return suggestion_; }
+      set {
+        suggestion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 4;
+    private string languageCode_ = "";
+    /// <summary>
+    /// BCP-47 language code of this suggestion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "group_id" field.</summary>
+    public const int GroupIdFieldNumber = 5;
+    private string groupId_ = "";
+    /// <summary>
+    /// If two suggestions have the same groupId, they will not be
+    /// returned together. Instead the one ranked higher will be returned. This can
+    /// be used to deduplicate semantically identical suggestions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "group_score" field.</summary>
+    public const int GroupScoreFieldNumber = 6;
+    private double groupScore_;
+    /// <summary>
+    /// The score of this suggestion within its group.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double GroupScore {
+      get { return groupScore_; }
+      set {
+        groupScore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "alternative_phrases" field.</summary>
+    public const int AlternativePhrasesFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_alternativePhrases_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> alternativePhrases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Alternative matching phrases for this suggestion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AlternativePhrases {
+      get { return alternativePhrases_; }
+    }
+
+    private object rankingInfo_;
+    /// <summary>Enum of possible cases for the "ranking_info" oneof.</summary>
+    public enum RankingInfoOneofCase {
+      None = 0,
+      GlobalScore = 2,
+      Frequency = 3,
+    }
+    private RankingInfoOneofCase rankingInfoCase_ = RankingInfoOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RankingInfoOneofCase RankingInfoCase {
+      get { return rankingInfoCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRankingInfo() {
+      rankingInfoCase_ = RankingInfoOneofCase.None;
+      rankingInfo_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CompletionSuggestion);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CompletionSuggestion other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(GlobalScore, other.GlobalScore)) return false;
+      if (Frequency != other.Frequency) return false;
+      if (Suggestion != other.Suggestion) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (GroupId != other.GroupId) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(GroupScore, other.GroupScore)) return false;
+      if(!alternativePhrases_.Equals(other.alternativePhrases_)) return false;
+      if (RankingInfoCase != other.RankingInfoCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasGlobalScore) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(GlobalScore);
+      if (HasFrequency) hash ^= Frequency.GetHashCode();
+      if (Suggestion.Length != 0) hash ^= Suggestion.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (GroupId.Length != 0) hash ^= GroupId.GetHashCode();
+      if (GroupScore != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(GroupScore);
+      hash ^= alternativePhrases_.GetHashCode();
+      hash ^= (int) rankingInfoCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Suggestion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Suggestion);
+      }
+      if (HasGlobalScore) {
+        output.WriteRawTag(17);
+        output.WriteDouble(GlobalScore);
+      }
+      if (HasFrequency) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Frequency);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LanguageCode);
+      }
+      if (GroupId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(GroupId);
+      }
+      if (GroupScore != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(GroupScore);
+      }
+      alternativePhrases_.WriteTo(output, _repeated_alternativePhrases_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Suggestion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Suggestion);
+      }
+      if (HasGlobalScore) {
+        output.WriteRawTag(17);
+        output.WriteDouble(GlobalScore);
+      }
+      if (HasFrequency) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Frequency);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LanguageCode);
+      }
+      if (GroupId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(GroupId);
+      }
+      if (GroupScore != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(GroupScore);
+      }
+      alternativePhrases_.WriteTo(ref output, _repeated_alternativePhrases_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasGlobalScore) {
+        size += 1 + 8;
+      }
+      if (HasFrequency) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Frequency);
+      }
+      if (Suggestion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Suggestion);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (GroupId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GroupId);
+      }
+      if (GroupScore != 0D) {
+        size += 1 + 8;
+      }
+      size += alternativePhrases_.CalculateSize(_repeated_alternativePhrases_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CompletionSuggestion other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Suggestion.Length != 0) {
+        Suggestion = other.Suggestion;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.GroupId.Length != 0) {
+        GroupId = other.GroupId;
+      }
+      if (other.GroupScore != 0D) {
+        GroupScore = other.GroupScore;
+      }
+      alternativePhrases_.Add(other.alternativePhrases_);
+      switch (other.RankingInfoCase) {
+        case RankingInfoOneofCase.GlobalScore:
+          GlobalScore = other.GlobalScore;
+          break;
+        case RankingInfoOneofCase.Frequency:
+          Frequency = other.Frequency;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Suggestion = input.ReadString();
+            break;
+          }
+          case 17: {
+            GlobalScore = input.ReadDouble();
+            break;
+          }
+          case 24: {
+            Frequency = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 42: {
+            GroupId = input.ReadString();
+            break;
+          }
+          case 49: {
+            GroupScore = input.ReadDouble();
+            break;
+          }
+          case 58: {
+            alternativePhrases_.AddEntriesFrom(input, _repeated_alternativePhrases_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Suggestion = input.ReadString();
+            break;
+          }
+          case 17: {
+            GlobalScore = input.ReadDouble();
+            break;
+          }
+          case 24: {
+            Frequency = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 42: {
+            GroupId = input.ReadString();
+            break;
+          }
+          case 49: {
+            GroupScore = input.ReadDouble();
+            break;
+          }
+          case 58: {
+            alternativePhrases_.AddEntriesFrom(ref input, _repeated_alternativePhrases_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

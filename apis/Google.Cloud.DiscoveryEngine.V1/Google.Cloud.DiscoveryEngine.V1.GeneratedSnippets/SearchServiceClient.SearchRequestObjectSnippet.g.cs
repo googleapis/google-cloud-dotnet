@@ -60,10 +60,14 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 CanonicalFilter = "",
+                SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
                 {
                     new SearchRequest.Types.DataStoreSpec(),
                 },
+                LanguageCode = "",
+                SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                SessionSpec = new SearchRequest.Types.SessionSpec(),
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
