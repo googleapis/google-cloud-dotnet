@@ -28,40 +28,43 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aWNlLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xl",
             "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJv",
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8aM2dvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
-            "L3ByZWRpY3Rpb25fc2VydmljZS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0",
-            "cnVjdC5wcm90byKEAQoUQ29tcHV0ZVRva2Vuc1JlcXVlc3QSPAoIZW5kcG9p",
-            "bnQYASABKAlCKuBBAvpBJAoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9F",
-            "bmRwb2ludBIuCglpbnN0YW5jZXMYAiADKAsyFi5nb29nbGUucHJvdG9idWYu",
-            "VmFsdWVCA+BBAiIvCgpUb2tlbnNJbmZvEg4KBnRva2VucxgBIAMoDBIRCgl0",
-            "b2tlbl9pZHMYAiADKAMiVAoVQ29tcHV0ZVRva2Vuc1Jlc3BvbnNlEjsKC3Rv",
-            "a2Vuc19pbmZvGAEgAygLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "VG9rZW5zSW5mbzKsBQoRTGxtVXRpbGl0eVNlcnZpY2USnQIKC0NvdW50VG9r",
-            "ZW5zEi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ291bnRUb2tlbnNS",
-            "ZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ291bnRUb2tl",
-            "bnNSZXNwb25zZSKsAdpBEmVuZHBvaW50LGluc3RhbmNlc4LT5JMCkAEiPS92",
-            "MS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMv",
-            "Kn06Y291bnRUb2tlbnM6ASpaTCJHL3YxL3tlbmRwb2ludD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMvKn06Y291bnRUb2tl",
-            "bnM6ASoSpwIKDUNvbXB1dGVUb2tlbnMSMC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5Db21wdXRlVG9rZW5zUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkNvbXB1dGVUb2tlbnNSZXNwb25zZSKwAdpBEmVuZHBv",
-            "aW50LGluc3RhbmNlc4LT5JMClAEiPy92MS97ZW5kcG9pbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06Y29tcHV0ZVRva2VuczoBKlpO",
-            "IkkvdjEve2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcHVibGlz",
-            "aGVycy8qL21vZGVscy8qfTpjb21wdXRlVG9rZW5zOgEqGk3KQRlhaXBsYXRm",
-            "b3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybULUAQoeY29tLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxQhZMbG1VdGlsaXR5U2VydmljZVByb3RvUAFaPmNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7",
-            "YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpH",
-            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
-            "UGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "cGkvcmVzb3VyY2UucHJvdG8aKGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
+            "L2NvbnRlbnQucHJvdG8aM2dvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL3By",
+            "ZWRpY3Rpb25fc2VydmljZS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVj",
+            "dC5wcm90byLUAQoUQ29tcHV0ZVRva2Vuc1JlcXVlc3QSPAoIZW5kcG9pbnQY",
+            "ASABKAlCKuBBAvpBJAoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FbmRw",
+            "b2ludBIuCglpbnN0YW5jZXMYAiADKAsyFi5nb29nbGUucHJvdG9idWYuVmFs",
+            "dWVCA+BBARISCgVtb2RlbBgDIAEoCUID4EEBEjoKCGNvbnRlbnRzGAQgAygL",
+            "MiMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGVudEID4EEBIkIK",
+            "ClRva2Vuc0luZm8SDgoGdG9rZW5zGAEgAygMEhEKCXRva2VuX2lkcxgCIAMo",
+            "AxIRCgRyb2xlGAMgASgJQgPgQQEiVAoVQ29tcHV0ZVRva2Vuc1Jlc3BvbnNl",
+            "EjsKC3Rva2Vuc19pbmZvGAEgAygLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuVG9rZW5zSW5mbzKsBQoRTGxtVXRpbGl0eVNlcnZpY2USnQIKC0Nv",
+            "dW50VG9rZW5zEi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ291bnRU",
+            "b2tlbnNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ291",
+            "bnRUb2tlbnNSZXNwb25zZSKsAdpBEmVuZHBvaW50LGluc3RhbmNlc4LT5JMC",
+            "kAEiPS92MS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRw",
+            "b2ludHMvKn06Y291bnRUb2tlbnM6ASpaTCJHL3YxL3tlbmRwb2ludD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMvKn06Y291",
+            "bnRUb2tlbnM6ASoSpwIKDUNvbXB1dGVUb2tlbnMSMC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5Db21wdXRlVG9rZW5zUmVxdWVzdBoxLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkNvbXB1dGVUb2tlbnNSZXNwb25zZSKwAdpB",
+            "EmVuZHBvaW50LGluc3RhbmNlc4LT5JMClAEiPy92MS97ZW5kcG9pbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06Y29tcHV0ZVRva2Vu",
+            "czoBKlpOIkkvdjEve2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "cHVibGlzaGVycy8qL21vZGVscy8qfTpjb21wdXRlVG9rZW5zOgEqGk3KQRlh",
+            "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULUAQoeY29tLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxQhZMbG1VdGlsaXR5U2VydmljZVByb3RvUAFa",
+            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
+            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
+            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PredictionServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PredictionServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ComputeTokensRequest), global::Google.Cloud.AIPlatform.V1.ComputeTokensRequest.Parser, new[]{ "Endpoint", "Instances" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TokensInfo), global::Google.Cloud.AIPlatform.V1.TokensInfo.Parser, new[]{ "Tokens", "TokenIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ComputeTokensRequest), global::Google.Cloud.AIPlatform.V1.ComputeTokensRequest.Parser, new[]{ "Endpoint", "Instances", "Model", "Contents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TokensInfo), global::Google.Cloud.AIPlatform.V1.TokensInfo.Parser, new[]{ "Tokens", "TokenIds", "Role" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ComputeTokensResponse), global::Google.Cloud.AIPlatform.V1.ComputeTokensResponse.Parser, new[]{ "TokensInfo" }, null, null, null, null)
           }));
     }
@@ -109,6 +112,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public ComputeTokensRequest(ComputeTokensRequest other) : this() {
       endpoint_ = other.endpoint_;
       instances_ = other.instances_.Clone();
+      model_ = other.model_;
+      contents_ = other.contents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -140,7 +145,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value> instances_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
-    /// Required. The instances that are the input to token computing API call.
+    /// Optional. The instances that are the input to token computing API call.
     /// Schema is identical to the prediction schema of the text model, even for
     /// the non-text models, like chat models, or Codey models.
     /// </summary>
@@ -148,6 +153,37 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value> Instances {
       get { return instances_; }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 3;
+    private string model_ = "";
+    /// <summary>
+    /// Optional. The name of the publisher model requested to serve the
+    /// prediction. Format:
+    /// projects/{project}/locations/{location}/publishers/*/models/*
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "contents" field.</summary>
+    public const int ContentsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.Content> _repeated_contents_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AIPlatform.V1.Content.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Content> contents_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Content>();
+    /// <summary>
+    /// Optional. Input content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Content> Contents {
+      get { return contents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,6 +203,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Endpoint != other.Endpoint) return false;
       if(!instances_.Equals(other.instances_)) return false;
+      if (Model != other.Model) return false;
+      if(!contents_.Equals(other.contents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,6 +214,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (Endpoint.Length != 0) hash ^= Endpoint.GetHashCode();
       hash ^= instances_.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      hash ^= contents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,6 +239,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(Endpoint);
       }
       instances_.WriteTo(output, _repeated_instances_codec);
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      contents_.WriteTo(output, _repeated_contents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -214,6 +259,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(Endpoint);
       }
       instances_.WriteTo(ref output, _repeated_instances_codec);
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      contents_.WriteTo(ref output, _repeated_contents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -228,6 +278,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Endpoint);
       }
       size += instances_.CalculateSize(_repeated_instances_codec);
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      size += contents_.CalculateSize(_repeated_contents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -244,6 +298,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         Endpoint = other.Endpoint;
       }
       instances_.Add(other.instances_);
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      contents_.Add(other.contents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -267,6 +325,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             instances_.AddEntriesFrom(input, _repeated_instances_codec);
             break;
           }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 34: {
+            contents_.AddEntriesFrom(input, _repeated_contents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -288,6 +354,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             instances_.AddEntriesFrom(ref input, _repeated_instances_codec);
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 34: {
+            contents_.AddEntriesFrom(ref input, _repeated_contents_codec);
             break;
           }
         }
@@ -337,6 +411,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public TokensInfo(TokensInfo other) : this() {
       tokens_ = other.tokens_.Clone();
       tokenIds_ = other.tokenIds_.Clone();
+      role_ = other.role_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -374,6 +449,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return tokenIds_; }
     }
 
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 3;
+    private string role_ = "";
+    /// <summary>
+    /// Optional. Optional fields for the role from the corresponding Content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Role {
+      get { return role_; }
+      set {
+        role_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -391,6 +481,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if(!tokens_.Equals(other.tokens_)) return false;
       if(!tokenIds_.Equals(other.tokenIds_)) return false;
+      if (Role != other.Role) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -400,6 +491,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       hash ^= tokens_.GetHashCode();
       hash ^= tokenIds_.GetHashCode();
+      if (Role.Length != 0) hash ^= Role.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -420,6 +512,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     #else
       tokens_.WriteTo(output, _repeated_tokens_codec);
       tokenIds_.WriteTo(output, _repeated_tokenIds_codec);
+      if (Role.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Role);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -432,6 +528,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       tokens_.WriteTo(ref output, _repeated_tokens_codec);
       tokenIds_.WriteTo(ref output, _repeated_tokenIds_codec);
+      if (Role.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Role);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -444,6 +544,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       size += tokens_.CalculateSize(_repeated_tokens_codec);
       size += tokenIds_.CalculateSize(_repeated_tokenIds_codec);
+      if (Role.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Role);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -458,6 +561,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       tokens_.Add(other.tokens_);
       tokenIds_.Add(other.tokenIds_);
+      if (other.Role.Length != 0) {
+        Role = other.Role;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -482,6 +588,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             tokenIds_.AddEntriesFrom(input, _repeated_tokenIds_codec);
             break;
           }
+          case 26: {
+            Role = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -504,6 +614,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           case 18:
           case 16: {
             tokenIds_.AddEntriesFrom(ref input, _repeated_tokenIds_codec);
+            break;
+          }
+          case 26: {
+            Role = input.ReadString();
             break;
           }
         }
