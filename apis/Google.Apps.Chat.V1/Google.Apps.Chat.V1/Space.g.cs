@@ -28,7 +28,7 @@ namespace Google.Apps.Chat.V1 {
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aImdvb2dsZS9jaGF0L3YxL2hpc3Rvcnlfc3RhdGUu",
             "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpsHCgVTcGFjZRIMCgRuYW1l",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIroJCgVTcGFjZRIMCgRuYW1l",
             "GAEgASgJEi8KBHR5cGUYAiABKA4yGi5nb29nbGUuY2hhdC52MS5TcGFjZS5U",
             "eXBlQgUYAeBBAxIzCgpzcGFjZV90eXBlGAogASgOMh8uZ29vZ2xlLmNoYXQu",
             "djEuU3BhY2UuU3BhY2VUeXBlEh8KEnNpbmdsZV91c2VyX2JvdF9kbRgEIAEo",
@@ -40,39 +40,47 @@ namespace Google.Apps.Chat.V1 {
             "bHMSOQoTc3BhY2VfaGlzdG9yeV9zdGF0ZRgNIAEoDjIcLmdvb2dsZS5jaGF0",
             "LnYxLkhpc3RvcnlTdGF0ZRIYCgtpbXBvcnRfbW9kZRgQIAEoCEID4EEBEjcK",
             "C2NyZWF0ZV90aW1lGBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEIG4EEF4EEBEhwKD2FkbWluX2luc3RhbGxlZBgTIAEoCEID4EEDGjcKDFNw",
-            "YWNlRGV0YWlscxITCgtkZXNjcmlwdGlvbhgBIAEoCRISCgpndWlkZWxpbmVz",
-            "GAIgASgJIi4KBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEggKBFJPT00Q",
-            "ARIGCgJETRACIlYKCVNwYWNlVHlwZRIaChZTUEFDRV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASCQoFU1BBQ0UQARIOCgpHUk9VUF9DSEFUEAISEgoORElSRUNUX01F",
-            "U1NBR0UQAyKCAQoTU3BhY2VUaHJlYWRpbmdTdGF0ZRIlCiFTUEFDRV9USFJF",
-            "QURJTkdfU1RBVEVfVU5TUEVDSUZJRUQQABIVChFUSFJFQURFRF9NRVNTQUdF",
-            "UxACEhQKEEdST1VQRURfTUVTU0FHRVMQAxIXChNVTlRIUkVBREVEX01FU1NB",
-            "R0VTEAQ6LupBKwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIOc3BhY2Vz",
-            "L3tzcGFjZX0iWAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EikKBXNwYWNlGAEgASgL",
-            "MhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAIg",
-            "ASgJQgPgQQEiWQoRTGlzdFNwYWNlc1JlcXVlc3QSFgoJcGFnZV9zaXplGAEg",
-            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRlchgD",
-            "IAEoCUID4EEBIlQKEkxpc3RTcGFjZXNSZXNwb25zZRIlCgZzcGFjZXMYASAD",
-            "KAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiQgoPR2V0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpB",
-            "GwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZSItChhGaW5kRGlyZWN0TWVz",
-            "c2FnZVJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECInAKElVwZGF0ZVNwYWNl",
-            "UmVxdWVzdBIpCgVzcGFjZRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNl",
-            "QgPgQQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrIkUKEkRlbGV0ZVNwYWNlUmVxdWVzdBIvCgRuYW1lGAEgASgJ",
-            "QiHgQQL6QRsKGWNoYXQuZ29vZ2xlYXBpcy5jb20vU3BhY2UiTQoaQ29tcGxl",
-            "dGVJbXBvcnRTcGFjZVJlcXVlc3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChlj",
-            "aGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlIkMKG0NvbXBsZXRlSW1wb3J0U3Bh",
-            "Y2VSZXNwb25zZRIkCgVzcGFjZRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNw",
-            "YWNlQqMBChJjb20uZ29vZ2xlLmNoYXQudjFCClNwYWNlUHJvdG9QAVosY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtE",
-            "WU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBw",
-            "c1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
+            "cEIG4EEF4EEBEhwKD2FkbWluX2luc3RhbGxlZBgTIAEoCEID4EEDEkIKD2Fj",
+            "Y2Vzc19zZXR0aW5ncxgXIAEoCzIkLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFj",
+            "Y2Vzc1NldHRpbmdzQgPgQQESFgoJc3BhY2VfdXJpGBkgASgJQgPgQQMaNwoM",
+            "U3BhY2VEZXRhaWxzEhMKC2Rlc2NyaXB0aW9uGAEgASgJEhIKCmd1aWRlbGlu",
+            "ZXMYAiABKAkawAEKDkFjY2Vzc1NldHRpbmdzEksKDGFjY2Vzc19zdGF0ZRgB",
+            "IAEoDjIwLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vzc1NldHRpbmdzLkFj",
+            "Y2Vzc1N0YXRlQgPgQQMSFQoIYXVkaWVuY2UYAyABKAlCA+BBASJKCgtBY2Nl",
+            "c3NTdGF0ZRIcChhBQ0NFU1NfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQUklW",
+            "QVRFEAESEAoMRElTQ09WRVJBQkxFEAIiLgoEVHlwZRIUChBUWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCAoEUk9PTRABEgYKAkRNEAIiVgoJU3BhY2VUeXBlEhoKFlNQ",
+            "QUNFX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVTUEFDRRABEg4KCkdST1VQX0NI",
+            "QVQQAhISCg5ESVJFQ1RfTUVTU0FHRRADIoIBChNTcGFjZVRocmVhZGluZ1N0",
+            "YXRlEiUKIVNQQUNFX1RIUkVBRElOR19TVEFURV9VTlNQRUNJRklFRBAAEhUK",
+            "EVRIUkVBREVEX01FU1NBR0VTEAISFAoQR1JPVVBFRF9NRVNTQUdFUxADEhcK",
+            "E1VOVEhSRUFERURfTUVTU0FHRVMQBDou6kErChljaGF0Lmdvb2dsZWFwaXMu",
+            "Y29tL1NwYWNlEg5zcGFjZXMve3NwYWNlfSJYChJDcmVhdGVTcGFjZVJlcXVl",
+            "c3QSKQoFc3BhY2UYASABKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZUID4EEC",
+            "EhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASJZChFMaXN0U3BhY2VzUmVxdWVz",
+            "dBIWCglwYWdlX3NpemUYASABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAIgASgJ",
+            "QgPgQQESEwoGZmlsdGVyGAMgASgJQgPgQQEiVAoSTGlzdFNwYWNlc1Jlc3Bv",
+            "bnNlEiUKBnNwYWNlcxgBIAMoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJCCg9HZXRTcGFjZVJlcXVlc3QSLwoE",
+            "bmFtZRgBIAEoCUIh4EEC+kEbChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNl",
+            "Ii0KGEZpbmREaXJlY3RNZXNzYWdlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPg",
+            "QQIicAoSVXBkYXRlU3BhY2VSZXF1ZXN0EikKBXNwYWNlGAEgASgLMhUuZ29v",
+            "Z2xlLmNoYXQudjEuU3BhY2VCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siRQoSRGVsZXRlU3BhY2VSZXF1",
+            "ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNv",
+            "bS9TcGFjZSJNChpDb21wbGV0ZUltcG9ydFNwYWNlUmVxdWVzdBIvCgRuYW1l",
+            "GAEgASgJQiHgQQL6QRsKGWNoYXQuZ29vZ2xlYXBpcy5jb20vU3BhY2UiQwob",
+            "Q29tcGxldGVJbXBvcnRTcGFjZVJlc3BvbnNlEiQKBXNwYWNlGAEgASgLMhUu",
+            "Z29vZ2xlLmNoYXQudjEuU3BhY2VCowEKEmNvbS5nb29nbGUuY2hhdC52MUIK",
+            "U3BhY2VQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEv",
+            "Y2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29vZ2xlLkFwcHMuQ2hh",
+            "dC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNo",
+            "YXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "AdminInstalled" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "AdminInstalled", "AccessSettings", "SpaceUri" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings), global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Parser, new[]{ "AccessState", "Audience" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateSpaceRequest), global::Google.Apps.Chat.V1.CreateSpaceRequest.Parser, new[]{ "Space", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListSpacesRequest), global::Google.Apps.Chat.V1.ListSpacesRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListSpacesResponse), global::Google.Apps.Chat.V1.ListSpacesResponse.Parser, new[]{ "Spaces", "NextPageToken" }, null, null, null, null),
@@ -140,6 +148,8 @@ namespace Google.Apps.Chat.V1 {
       importMode_ = other.importMode_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       adminInstalled_ = other.adminInstalled_;
+      accessSettings_ = other.accessSettings_ != null ? other.accessSettings_.Clone() : null;
+      spaceUri_ = other.spaceUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -392,6 +402,38 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "access_settings" field.</summary>
+    public const int AccessSettingsFieldNumber = 23;
+    private global::Google.Apps.Chat.V1.Space.Types.AccessSettings accessSettings_;
+    /// <summary>
+    /// Optional. Specifies the [access
+    /// setting](https://support.google.com/chat/answer/11971020) of the space.
+    /// Only populated when the `space_type` is `SPACE`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.Space.Types.AccessSettings AccessSettings {
+      get { return accessSettings_; }
+      set {
+        accessSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "space_uri" field.</summary>
+    public const int SpaceUriFieldNumber = 25;
+    private string spaceUri_ = "";
+    /// <summary>
+    /// Output only. The URI for a user to access the space.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SpaceUri {
+      get { return spaceUri_; }
+      set {
+        spaceUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -420,6 +462,8 @@ namespace Google.Apps.Chat.V1 {
       if (ImportMode != other.ImportMode) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (AdminInstalled != other.AdminInstalled) return false;
+      if (!object.Equals(AccessSettings, other.AccessSettings)) return false;
+      if (SpaceUri != other.SpaceUri) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -440,6 +484,8 @@ namespace Google.Apps.Chat.V1 {
       if (ImportMode != false) hash ^= ImportMode.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (AdminInstalled != false) hash ^= AdminInstalled.GetHashCode();
+      if (accessSettings_ != null) hash ^= AccessSettings.GetHashCode();
+      if (SpaceUri.Length != 0) hash ^= SpaceUri.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -510,6 +556,14 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(152, 1);
         output.WriteBool(AdminInstalled);
       }
+      if (accessSettings_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(AccessSettings);
+      }
+      if (SpaceUri.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(SpaceUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -572,6 +626,14 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(152, 1);
         output.WriteBool(AdminInstalled);
       }
+      if (accessSettings_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(AccessSettings);
+      }
+      if (SpaceUri.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(SpaceUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -620,6 +682,12 @@ namespace Google.Apps.Chat.V1 {
       }
       if (AdminInstalled != false) {
         size += 2 + 1;
+      }
+      if (accessSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AccessSettings);
+      }
+      if (SpaceUri.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(SpaceUri);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -677,6 +745,15 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.AdminInstalled != false) {
         AdminInstalled = other.AdminInstalled;
+      }
+      if (other.accessSettings_ != null) {
+        if (accessSettings_ == null) {
+          AccessSettings = new global::Google.Apps.Chat.V1.Space.Types.AccessSettings();
+        }
+        AccessSettings.MergeFrom(other.AccessSettings);
+      }
+      if (other.SpaceUri.Length != 0) {
+        SpaceUri = other.SpaceUri;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -751,6 +828,17 @@ namespace Google.Apps.Chat.V1 {
             AdminInstalled = input.ReadBool();
             break;
           }
+          case 186: {
+            if (accessSettings_ == null) {
+              AccessSettings = new global::Google.Apps.Chat.V1.Space.Types.AccessSettings();
+            }
+            input.ReadMessage(AccessSettings);
+            break;
+          }
+          case 202: {
+            SpaceUri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -822,6 +910,17 @@ namespace Google.Apps.Chat.V1 {
           }
           case 152: {
             AdminInstalled = input.ReadBool();
+            break;
+          }
+          case 186: {
+            if (accessSettings_ == null) {
+              AccessSettings = new global::Google.Apps.Chat.V1.Space.Types.AccessSettings();
+            }
+            input.ReadMessage(AccessSettings);
+            break;
+          }
+          case 202: {
+            SpaceUri = input.ReadString();
             break;
           }
         }
@@ -1142,6 +1241,280 @@ namespace Google.Apps.Chat.V1 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Represents the [access
+      /// setting](https://support.google.com/chat/answer/11971020) of the space.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AccessSettings : pb::IMessage<AccessSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessSettings> _parser = new pb::MessageParser<AccessSettings>(() => new AccessSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AccessSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessSettings(AccessSettings other) : this() {
+          accessState_ = other.accessState_;
+          audience_ = other.audience_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessSettings Clone() {
+          return new AccessSettings(this);
+        }
+
+        /// <summary>Field number for the "access_state" field.</summary>
+        public const int AccessStateFieldNumber = 1;
+        private global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState accessState_ = global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified;
+        /// <summary>
+        /// Output only. Indicates the access state of the space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState AccessState {
+          get { return accessState_; }
+          set {
+            accessState_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "audience" field.</summary>
+        public const int AudienceFieldNumber = 3;
+        private string audience_ = "";
+        /// <summary>
+        /// Optional. The resource name of the [target
+        /// audience](https://support.google.com/a/answer/9934697) who can discover
+        /// the space, join the space, and preview the messages in the space. For
+        /// details, see [Make a space discoverable to a target
+        /// audience](https://developers.google.com/workspace/chat/space-target-audience).
+        ///
+        /// Format: `audiences/{audience}`
+        ///
+        /// To use the default target audience for the Google Workspace organization,
+        /// set to `audiences/default`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Audience {
+          get { return audience_; }
+          set {
+            audience_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AccessSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AccessSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AccessState != other.AccessState) return false;
+          if (Audience != other.Audience) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AccessState != global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified) hash ^= AccessState.GetHashCode();
+          if (Audience.Length != 0) hash ^= Audience.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AccessState != global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) AccessState);
+          }
+          if (Audience.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Audience);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AccessState != global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) AccessState);
+          }
+          if (Audience.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Audience);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (AccessState != global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AccessState);
+          }
+          if (Audience.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AccessSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AccessState != global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified) {
+            AccessState = other.AccessState;
+          }
+          if (other.Audience.Length != 0) {
+            Audience = other.Audience;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                AccessState = (global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Audience = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                AccessState = (global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Audience = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the AccessSettings message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Represents the access state of the space.
+          /// </summary>
+          public enum AccessState {
+            /// <summary>
+            /// Access state is unknown or not supported in this API.
+            /// </summary>
+            [pbr::OriginalName("ACCESS_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Space is discoverable by added or invited members or groups.
+            /// </summary>
+            [pbr::OriginalName("PRIVATE")] Private = 1,
+            /// <summary>
+            /// Space is discoverable by the selected [target
+            /// audience](https://support.google.com/a/answer/9934697), as well as
+            /// added or invited members or groups.
+            /// </summary>
+            [pbr::OriginalName("DISCOVERABLE")] Discoverable = 2,
+          }
+
+        }
+        #endregion
 
       }
 
@@ -1992,7 +2365,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name of the space, in the form "spaces/*".
+    /// Required. Resource name of the space, in the form `spaces/{space}`.
     ///
     /// Format: `spaces/{space}`
     /// </summary>
@@ -2437,6 +2810,7 @@ namespace Google.Apps.Chat.V1 {
     /// the display name is optional if the existing space already has the `SPACE`
     /// type. Trying to update the space type in other ways results in an invalid
     /// argument error).
+    /// `space_type` is not supported with admin access.
     ///
     /// - `space_details`
     ///
@@ -2445,12 +2819,27 @@ namespace Google.Apps.Chat.V1 {
     /// allows users to change their history
     /// setting](https://support.google.com/a/answer/7664184).
     /// Warning: mutually exclusive with all other field paths.)
+    /// `space_history_state` is not supported with admin access.
     ///
-    /// - Developer Preview: `access_settings.audience` (Supports changing the
-    /// [access setting](https://support.google.com/chat/answer/11971020) of a
-    /// space. If no audience is specified in the access setting, the space's
-    /// access setting is updated to restricted. Warning: mutually exclusive with
-    /// all other field paths.)
+    /// - `access_settings.audience` (Supports changing the [access
+    /// setting](https://support.google.com/chat/answer/11971020) of who can
+    /// discover the space, join the space, and preview the messages in space. If
+    /// no audience is specified in the access setting, the space's access setting
+    /// is updated to private. Warning: mutually exclusive with all other field
+    /// paths.)
+    /// `access_settings.audience` is not supported with admin access.
+    ///
+    /// - Developer Preview: Supports changing the [permission
+    /// settings](https://support.google.com/chat/answer/13340792) of a space,
+    /// supported field paths
+    /// include: `permission_settings.manage_members_and_groups`,
+    /// `permission_settings.modify_space_details`,
+    /// `permission_settings.toggle_history`,
+    /// `permission_settings.use_at_mention_all`,
+    /// `permission_settings.manage_apps`, `permission_settings.manage_webhooks`,
+    /// `permission_settings.reply_messages`
+    ///  (Warning: mutually exclusive with all other non-permission settings field
+    /// paths). `permission_settings` is not supported with admin access.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

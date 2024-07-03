@@ -133,7 +133,7 @@ namespace Google.Apps.Chat.V1 {
     private string name_ = "";
     /// <summary>
     /// Resource name of the attachment, in the form
-    /// `spaces/*/messages/*/attachments/*`.
+    /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1122,7 +1122,7 @@ namespace Google.Apps.Chat.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. Resource name of the attachment, in the form
-    /// `spaces/*/messages/*/attachments/*`.
+    /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
