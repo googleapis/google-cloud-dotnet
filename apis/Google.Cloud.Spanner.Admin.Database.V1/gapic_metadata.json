@@ -22,6 +22,12 @@
                 "CreateBackupAsync"
               ]
             },
+            "CreateBackupSchedule": {
+              "methods": [
+                "CreateBackupSchedule",
+                "CreateBackupScheduleAsync"
+              ]
+            },
             "CreateDatabase": {
               "methods": [
                 "CreateDatabase",
@@ -34,6 +40,12 @@
                 "DeleteBackupAsync"
               ]
             },
+            "DeleteBackupSchedule": {
+              "methods": [
+                "DeleteBackupSchedule",
+                "DeleteBackupScheduleAsync"
+              ]
+            },
             "DropDatabase": {
               "methods": [
                 "DropDatabase",
@@ -44,6 +56,12 @@
               "methods": [
                 "GetBackup",
                 "GetBackupAsync"
+              ]
+            },
+            "GetBackupSchedule": {
+              "methods": [
+                "GetBackupSchedule",
+                "GetBackupScheduleAsync"
               ]
             },
             "GetDatabase": {
@@ -68,6 +86,12 @@
               "methods": [
                 "ListBackupOperations",
                 "ListBackupOperationsAsync"
+              ]
+            },
+            "ListBackupSchedules": {
+              "methods": [
+                "ListBackupSchedules",
+                "ListBackupSchedulesAsync"
               ]
             },
             "ListBackups": {
@@ -116,6 +140,12 @@
               "methods": [
                 "UpdateBackup",
                 "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupSchedule": {
+              "methods": [
+                "UpdateBackupSchedule",
+                "UpdateBackupScheduleAsync"
               ]
             },
             "UpdateDatabase": {

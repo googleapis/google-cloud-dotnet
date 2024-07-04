@@ -75,6 +75,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             ListDatabaseOperationsSettings = existing.ListDatabaseOperationsSettings;
             ListBackupOperationsSettings = existing.ListBackupOperationsSettings;
             ListDatabaseRolesSettings = existing.ListDatabaseRolesSettings;
+            CreateBackupScheduleSettings = existing.CreateBackupScheduleSettings;
+            GetBackupScheduleSettings = existing.GetBackupScheduleSettings;
+            UpdateBackupScheduleSettings = existing.UpdateBackupScheduleSettings;
+            DeleteBackupScheduleSettings = existing.DeleteBackupScheduleSettings;
+            ListBackupSchedulesSettings = existing.ListBackupSchedulesSettings;
             OnCopy(existing);
         }
 
@@ -554,6 +559,111 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDatabaseRolesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.CreateBackupSchedule</c> and <c>DatabaseAdminClient.CreateBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.GetBackupSchedule</c> and <c>DatabaseAdminClient.GetBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.UpdateBackupSchedule</c> and <c>DatabaseAdminClient.UpdateBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.DeleteBackupSchedule</c> and <c>DatabaseAdminClient.DeleteBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.ListBackupSchedules</c> and <c>DatabaseAdminClient.ListBackupSchedulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupSchedulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseAdminSettings"/> object.</returns>
@@ -4628,6 +4738,618 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(string parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupSchedule(new CreateBackupScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(string parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupScheduleAsync(new CreateBackupScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(string parent, BackupSchedule backupSchedule, string backupScheduleId, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(parent, backupSchedule, backupScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(gcscv::DatabaseName parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupSchedule(new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(gcscv::DatabaseName parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupScheduleAsync(new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(gcscv::DatabaseName parent, BackupSchedule backupSchedule, string backupScheduleId, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(parent, backupSchedule, backupScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupSchedule(new GetBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupScheduleAsync(new GetBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupSchedule(new GetBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupScheduleAsync(new GetBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule UpdateBackupSchedule(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update. `backup_schedule.name`, and the
+        /// fields to be updated as specified by `update_mask` are required. Other
+        /// fields are ignored.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields in the BackupSchedule resource
+        /// should be updated. This mask is relative to the BackupSchedule resource,
+        /// not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased
+        /// accidentally.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule UpdateBackupSchedule(BackupSchedule backupSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupSchedule(new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update. `backup_schedule.name`, and the
+        /// fields to be updated as specified by `update_mask` are required. Other
+        /// fields are ignored.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields in the BackupSchedule resource
+        /// should be updated. This mask is relative to the BackupSchedule resource,
+        /// not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased
+        /// accidentally.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(BackupSchedule backupSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupScheduleAsync(new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update. `backup_schedule.name`, and the
+        /// fields to be updated as specified by `update_mask` are required. Other
+        /// fields are ignored.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields in the BackupSchedule resource
+        /// should be updated. This mask is relative to the BackupSchedule resource,
+        /// not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased
+        /// accidentally.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(BackupSchedule backupSchedule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupScheduleAsync(backupSchedule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupSchedule(new DeleteBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupScheduleAsync(new DeleteBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupSchedule(new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupScheduleAsync(new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedules(new ListBackupSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedulesAsync(new ListBackupSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedules(new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedulesAsync(new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>DatabaseAdmin client wrapper implementation, for convenient use.</summary>
@@ -4681,6 +5403,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private readonly gaxgrpc::ApiCall<ListBackupOperationsRequest, ListBackupOperationsResponse> _callListBackupOperations;
 
         private readonly gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> _callListDatabaseRoles;
+
+        private readonly gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> _callCreateBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> _callGetBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> _callUpdateBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> _callDeleteBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> _callListBackupSchedules;
 
         /// <summary>
         /// Constructs a client wrapper for the DatabaseAdmin service, with the specified gRPC client and settings.
@@ -4763,6 +5495,21 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callListDatabaseRoles = clientHelper.BuildApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse>("ListDatabaseRoles", grpcClient.ListDatabaseRolesAsync, grpcClient.ListDatabaseRoles, effectiveSettings.ListDatabaseRolesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabaseRoles);
             Modify_ListDatabaseRolesApiCall(ref _callListDatabaseRoles);
+            _callCreateBackupSchedule = clientHelper.BuildApiCall<CreateBackupScheduleRequest, BackupSchedule>("CreateBackupSchedule", grpcClient.CreateBackupScheduleAsync, grpcClient.CreateBackupSchedule, effectiveSettings.CreateBackupScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackupSchedule);
+            Modify_CreateBackupScheduleApiCall(ref _callCreateBackupSchedule);
+            _callGetBackupSchedule = clientHelper.BuildApiCall<GetBackupScheduleRequest, BackupSchedule>("GetBackupSchedule", grpcClient.GetBackupScheduleAsync, grpcClient.GetBackupSchedule, effectiveSettings.GetBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupSchedule);
+            Modify_GetBackupScheduleApiCall(ref _callGetBackupSchedule);
+            _callUpdateBackupSchedule = clientHelper.BuildApiCall<UpdateBackupScheduleRequest, BackupSchedule>("UpdateBackupSchedule", grpcClient.UpdateBackupScheduleAsync, grpcClient.UpdateBackupSchedule, effectiveSettings.UpdateBackupScheduleSettings).WithGoogleRequestParam("backup_schedule.name", request => request.BackupSchedule?.Name);
+            Modify_ApiCall(ref _callUpdateBackupSchedule);
+            Modify_UpdateBackupScheduleApiCall(ref _callUpdateBackupSchedule);
+            _callDeleteBackupSchedule = clientHelper.BuildApiCall<DeleteBackupScheduleRequest, wkt::Empty>("DeleteBackupSchedule", grpcClient.DeleteBackupScheduleAsync, grpcClient.DeleteBackupSchedule, effectiveSettings.DeleteBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackupSchedule);
+            Modify_DeleteBackupScheduleApiCall(ref _callDeleteBackupSchedule);
+            _callListBackupSchedules = clientHelper.BuildApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse>("ListBackupSchedules", grpcClient.ListBackupSchedulesAsync, grpcClient.ListBackupSchedules, effectiveSettings.ListBackupSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupSchedules);
+            Modify_ListBackupSchedulesApiCall(ref _callListBackupSchedules);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4808,6 +5555,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_ListDatabaseRolesApiCall(ref gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> call);
 
+        partial void Modify_CreateBackupScheduleApiCall(ref gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_GetBackupScheduleApiCall(ref gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_UpdateBackupScheduleApiCall(ref gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_DeleteBackupScheduleApiCall(ref gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> call);
+
+        partial void Modify_ListBackupSchedulesApiCall(ref gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> call);
+
         partial void OnConstruction(DatabaseAdmin.DatabaseAdminClient grpcClient, DatabaseAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseAdmin client</summary>
@@ -4852,6 +5609,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_ListBackupOperationsRequest(ref ListBackupOperationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabaseRolesRequest(ref ListDatabaseRolesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupScheduleRequest(ref CreateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupScheduleRequest(ref GetBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupScheduleRequest(ref UpdateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupScheduleRequest(ref DeleteBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupSchedulesRequest(ref ListBackupSchedulesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -5624,6 +6391,126 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             Modify_ListDatabaseRolesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabaseRolesRequest, ListDatabaseRolesResponse, DatabaseRole>(_callListDatabaseRoles, request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule CreateBackupSchedule(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupScheduleRequest(ref request, ref callSettings);
+            return _callCreateBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupScheduleRequest(ref request, ref callSettings);
+            return _callCreateBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule GetBackupSchedule(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupScheduleRequest(ref request, ref callSettings);
+            return _callGetBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupScheduleRequest(ref request, ref callSettings);
+            return _callGetBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule UpdateBackupSchedule(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupScheduleRequest(ref request, ref callSettings);
+            return _callUpdateBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupScheduleRequest(ref request, ref callSettings);
+            return _callUpdateBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBackupSchedule(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
+            _callDeleteBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
+            return _callDeleteBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupSchedulesRequest, ListBackupSchedulesResponse, BackupSchedule>(_callListBackupSchedules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupSchedulesRequest, ListBackupSchedulesResponse, BackupSchedule>(_callListBackupSchedules, request, callSettings);
+        }
     }
 
     public partial class ListDatabasesRequest : gaxgrpc::IPageRequest
@@ -5643,6 +6530,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
     public partial class ListDatabaseRolesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupSchedulesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5682,6 +6573,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DatabaseRole> GetEnumerator() => DatabaseRoles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupSchedulesResponse : gaxgrpc::IPageResponse<BackupSchedule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupSchedule> GetEnumerator() => BackupSchedules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
