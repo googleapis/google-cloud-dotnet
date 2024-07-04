@@ -133,6 +133,20 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_CreateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Marshaller_google_spanner_admin_database_v1_BackupSchedule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_GetBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_UpdateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_DeleteBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest> __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(
@@ -293,6 +307,46 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         "ListDatabaseRoles",
         __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest,
         __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_CreateBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_CreateBackupScheduleRequest,
+        __Marshaller_google_spanner_admin_database_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_GetBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_GetBackupScheduleRequest,
+        __Marshaller_google_spanner_admin_database_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_UpdateBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_UpdateBackupScheduleRequest,
+        __Marshaller_google_spanner_admin_database_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_DeleteBackupScheduleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> __Method_ListBackupSchedules = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupSchedules",
+        __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesRequest,
+        __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -677,6 +731,66 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> ListDatabaseRoles(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> CreateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> GetBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> UpdateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> ListBackupSchedules(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2218,6 +2332,246 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatabaseRoles, null, options, request);
       }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule CreateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule CreateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> CreateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> CreateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule GetBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule GetBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> GetBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> GetBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule UpdateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule UpdateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> UpdateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> UpdateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse ListBackupSchedules(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupSchedules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse ListBackupSchedules(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupSchedules, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> ListBackupSchedulesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupSchedulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> ListBackupSchedulesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupSchedules, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatabaseAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -2251,7 +2605,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_RestoreDatabase, serviceImpl.RestoreDatabase)
           .AddMethod(__Method_ListDatabaseOperations, serviceImpl.ListDatabaseOperations)
           .AddMethod(__Method_ListBackupOperations, serviceImpl.ListBackupOperations)
-          .AddMethod(__Method_ListDatabaseRoles, serviceImpl.ListDatabaseRoles).Build();
+          .AddMethod(__Method_ListDatabaseRoles, serviceImpl.ListDatabaseRoles)
+          .AddMethod(__Method_CreateBackupSchedule, serviceImpl.CreateBackupSchedule)
+          .AddMethod(__Method_GetBackupSchedule, serviceImpl.GetBackupSchedule)
+          .AddMethod(__Method_UpdateBackupSchedule, serviceImpl.UpdateBackupSchedule)
+          .AddMethod(__Method_DeleteBackupSchedule, serviceImpl.DeleteBackupSchedule)
+          .AddMethod(__Method_ListBackupSchedules, serviceImpl.ListBackupSchedules).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2281,6 +2640,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_ListDatabaseOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse>(serviceImpl.ListDatabaseOperations));
       serviceBinder.AddMethod(__Method_ListBackupOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse>(serviceImpl.ListBackupOperations));
       serviceBinder.AddMethod(__Method_ListDatabaseRoles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse>(serviceImpl.ListDatabaseRoles));
+      serviceBinder.AddMethod(__Method_CreateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.CreateBackupSchedule));
+      serviceBinder.AddMethod(__Method_GetBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.GetBackupSchedule));
+      serviceBinder.AddMethod(__Method_UpdateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.UpdateBackupSchedule));
+      serviceBinder.AddMethod(__Method_DeleteBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackupSchedule));
+      serviceBinder.AddMethod(__Method_ListBackupSchedules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse>(serviceImpl.ListBackupSchedules));
     }
 
   }
