@@ -196,33 +196,33 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public async Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<int> ISpannerTransaction.ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
+        async Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
         {
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteReadOrQueryAsync(request, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<ReliableStreamReader> ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<ReliableStreamReader> ISpannerTransaction.ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteDmlReaderAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);

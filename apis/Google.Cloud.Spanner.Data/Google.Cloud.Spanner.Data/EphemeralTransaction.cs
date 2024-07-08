@@ -41,7 +41,7 @@ namespace Google.Cloud.Spanner.Data
             _singleUseTransactionOptions = singleUseTransactionOptions;
         }
 
-        public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
@@ -66,7 +66,7 @@ namespace Google.Cloud.Spanner.Data
         /// The reader does not return any data if the DML statement does not contain a THEN RETURN clause, but the DML statement is executed.
         /// </summary>
         /// <returns> An instance of <see cref="ReliableStreamReader"/>.</returns>
-        public Task<ReliableStreamReader> ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        Task<ReliableStreamReader> ISpannerTransaction.ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteDmlReaderAsync", _connection.Logger);
@@ -126,7 +126,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteBatchDmlAsync", _connection.Logger);
@@ -156,7 +156,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <param name="timeoutSeconds">The timeout which will apply to the commit part of this method.</param>
         /// <returns>The number of rows modified.</returns>
-        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
+        Task<int> ISpannerTransaction.ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
@@ -179,7 +179,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
+        Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteReadOrQuery", _connection.Logger);
 
