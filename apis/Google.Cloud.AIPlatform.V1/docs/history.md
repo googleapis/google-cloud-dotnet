@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.4.0, released 2024-07-08
+
+### New features
+
+- Add model and contents fields to ComputeTokensRequest v1 ([commit 03a2748](https://github.com/googleapis/google-cloud-dotnet/commit/03a27482e0eb99b6cb57bea3bf4e8ddfb44b2df8))
+- Add role field to TokensInfo v1 ([commit 03a2748](https://github.com/googleapis/google-cloud-dotnet/commit/03a27482e0eb99b6cb57bea3bf4e8ddfb44b2df8))
+
 ## Version 3.3.0, released 2024-07-01
 
 ### New features
