@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2024-07-08
+
+### New features
+
+- Expose data scan execution create time to customers ([commit 1a96f64](https://github.com/googleapis/google-cloud-dotnet/commit/1a96f6401777d115e95c9a7aa45d6f45914fcbe2))
+
 ## Version 3.2.0, released 2024-06-24
 
 ### New features
