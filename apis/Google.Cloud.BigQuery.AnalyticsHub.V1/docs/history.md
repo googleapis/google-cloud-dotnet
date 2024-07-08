@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.7.0, released 2024-07-08
+
+### New features
+
+- Support public directory self service for Listings/Exchanges ([commit b8e1836](https://github.com/googleapis/google-cloud-dotnet/commit/b8e1836f97c7a27540e7e7bd79658c87609ac71a))
+- Support Direct Table Access Toggle (Egress GA) ([commit b8e1836](https://github.com/googleapis/google-cloud-dotnet/commit/b8e1836f97c7a27540e7e7bd79658c87609ac71a))
+
+### Documentation improvements
+
+- A comment for message `Listing` is changed ([commit b8e1836](https://github.com/googleapis/google-cloud-dotnet/commit/b8e1836f97c7a27540e7e7bd79658c87609ac71a))
+- A comment for message `DataExchange` is changed ([commit b8e1836](https://github.com/googleapis/google-cloud-dotnet/commit/b8e1836f97c7a27540e7e7bd79658c87609ac71a))
+
 ## Version 1.6.0, released 2024-06-04
 
 ### New features
