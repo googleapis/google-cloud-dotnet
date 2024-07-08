@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2024-07-08
+
+### New features
+
+- Added cloud provider field to list findings response ([commit 7c4de98](https://github.com/googleapis/google-cloud-dotnet/commit/7c4de983db64fe1cf73a409656566a6c68714bb2))
+- Added http configuration rule to ResourceValueConfig and ValuedResource API methods ([commit 7c4de98](https://github.com/googleapis/google-cloud-dotnet/commit/7c4de983db64fe1cf73a409656566a6c68714bb2))
+- Added toxic combination field to finding ([commit 7c4de98](https://github.com/googleapis/google-cloud-dotnet/commit/7c4de983db64fe1cf73a409656566a6c68714bb2))
+- Add toxic_combination and group_memberships fields to finding ([commit fb4213a](https://github.com/googleapis/google-cloud-dotnet/commit/fb4213aecfa69d90b36d862189785131abe8d1c2))
+
+### Documentation improvements
+
+- Updated comments for ResourceValueConfig ([commit 7c4de98](https://github.com/googleapis/google-cloud-dotnet/commit/7c4de983db64fe1cf73a409656566a6c68714bb2))
+
 ## Version 1.0.0-beta03, released 2024-05-08
 
 ### New features
