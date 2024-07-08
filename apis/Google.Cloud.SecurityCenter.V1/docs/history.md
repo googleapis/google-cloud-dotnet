@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.22.0, released 2024-07-08
+
+### New features
+
+- Add toxic_combination and group_memberships fields to finding ([commit 9480e63](https://github.com/googleapis/google-cloud-dotnet/commit/9480e6393b254e262acc37313028d224213688f7))
+
 ## Version 3.21.0, released 2024-05-14
 
 ### New features
