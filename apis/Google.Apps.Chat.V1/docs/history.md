@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2024-07-08
+
+### New features
+
+- Add doc for Discoverable Space support for GA launch ([commit 53f49ef](https://github.com/googleapis/google-cloud-dotnet/commit/53f49ef7973638ab3f0674d798b5954d2d4cdbec))
+
+### Documentation improvements
+
+- Update resource naming formats ([commit 53f49ef](https://github.com/googleapis/google-cloud-dotnet/commit/53f49ef7973638ab3f0674d798b5954d2d4cdbec))
+- Update doc for `SetUpSpace` in service `ChatService` to support group members ([commit 7adcc7f](https://github.com/googleapis/google-cloud-dotnet/commit/7adcc7f70326dfb264e842517a58dc55d93aaf28))
+- Update doc for `CreateMembership` in service `ChatService` to support group members ([commit 7adcc7f](https://github.com/googleapis/google-cloud-dotnet/commit/7adcc7f70326dfb264e842517a58dc55d93aaf28))
+- Update doc for field `group_member` in message `google.chat.v1.Membership` ([commit 7adcc7f](https://github.com/googleapis/google-cloud-dotnet/commit/7adcc7f70326dfb264e842517a58dc55d93aaf28))
+- Update Chat API comments ([commit 7e918d2](https://github.com/googleapis/google-cloud-dotnet/commit/7e918d2509424db1abedac60741c2d9237587343))
+
 ## Version 1.0.0-beta03, released 2024-05-08
 
 ### New features
