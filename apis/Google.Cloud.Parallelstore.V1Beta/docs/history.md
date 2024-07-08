@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2024-07-08
+
+### New features
+
+- Add iam.googleapis.com/ServiceAccount resource definition ([commit 30a556d](https://github.com/googleapis/google-cloud-dotnet/commit/30a556d14d92f990dde82de69600515cf0ce18d8))
+- Adding Import/Export BYOSA to the export Data request ([commit 30a556d](https://github.com/googleapis/google-cloud-dotnet/commit/30a556d14d92f990dde82de69600515cf0ce18d8))
+- Adding Import/Export BYOSA to the import Data request ([commit 30a556d](https://github.com/googleapis/google-cloud-dotnet/commit/30a556d14d92f990dde82de69600515cf0ce18d8))
+
 ## Version 1.0.0-beta03, released 2024-05-17
 
 ### Bug fixes
