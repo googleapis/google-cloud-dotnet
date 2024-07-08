@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2024-07-08
+
+### New features
+
+- A new field `bonding_type` is added to message `.google.cloud.edgenetwork.v1.Subnet` ([commit 777de51](https://github.com/googleapis/google-cloud-dotnet/commit/777de510a0e91e884eb4e13ede6758d4d7f807e3))
+
 ## Version 1.3.0, released 2024-05-14
 
 ### New features
