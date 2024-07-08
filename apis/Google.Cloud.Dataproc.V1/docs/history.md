@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.12.0, released 2024-07-08
+
+### New features
+
+- Add the cohort and auto tuning configuration to the batch's RuntimeConfig ([commit b5e041d](https://github.com/googleapis/google-cloud-dotnet/commit/b5e041d1f859a5d14601e4f37c1f4b7b8bf0fa15))
+
 ## Version 5.11.0, released 2024-05-13
 
 ### New features
