@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.3.0, released 2024-07-08
+
+### New features
+
+- Add Chunk resource in the search response ([commit f45a47f](https://github.com/googleapis/google-cloud-dotnet/commit/f45a47fdbd58cbff8349ba7f0d9975bee8cf55a2))
+- Add NO_RELEVANT_CONTENT to Answer API ([commit f45a47f](https://github.com/googleapis/google-cloud-dotnet/commit/f45a47fdbd58cbff8349ba7f0d9975bee8cf55a2))
+- Support AlloyDB Connector ([commit f45a47f](https://github.com/googleapis/google-cloud-dotnet/commit/f45a47fdbd58cbff8349ba7f0d9975bee8cf55a2))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit f45a47f](https://github.com/googleapis/google-cloud-dotnet/commit/f45a47fdbd58cbff8349ba7f0d9975bee8cf55a2))
+
 ## Version 1.2.0, released 2024-06-04
 
 ### New features
