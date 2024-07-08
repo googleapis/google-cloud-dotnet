@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.14.0, released 2024-07-08
+
+### New features
+
+- Added SMS Toll Fraud assessment ([commit 89a58fd](https://github.com/googleapis/google-cloud-dotnet/commit/89a58fd74d772317a4e370946c14946a76965e18))
+
 ## Version 2.13.0, released 2024-04-29
 
 ### New features
