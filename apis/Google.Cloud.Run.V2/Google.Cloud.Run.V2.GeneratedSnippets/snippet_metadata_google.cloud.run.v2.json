@@ -5028,12 +5028,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 65,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 61,
+          "start": 36,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -5077,21 +5077,21 @@
       "segments": [
         {
           "start": 22,
-          "end": 66,
+          "end": 68,
           "type": "FULL"
         },
         {
-          "start": 38,
-          "end": 64,
+          "start": 39,
+          "end": 66,
           "type": "SHORT"
         }
       ]
     },
     {
-      "regionTag": "run_v2_generated_Services_UpdateService_sync_flattened",
-      "title": "UpdateService",
+      "regionTag": "run_v2_generated_Services_UpdateService_sync_flattened1",
+      "title": "UpdateService1",
       "description": "Snippet for UpdateService",
-      "file": "ServicesClient.UpdateServiceSnippet.g.cs",
+      "file": "ServicesClient.UpdateService1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "UpdateService",
@@ -5135,10 +5135,10 @@
       ]
     },
     {
-      "regionTag": "run_v2_generated_Services_UpdateService_async_flattened",
-      "title": "UpdateServiceAsync",
+      "regionTag": "run_v2_generated_Services_UpdateService_async_flattened1",
+      "title": "UpdateService1Async",
       "description": "Snippet for UpdateServiceAsync",
-      "file": "ServicesClient.UpdateServiceAsyncSnippet.g.cs",
+      "file": "ServicesClient.UpdateService1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "UpdateServiceAsync",
@@ -5178,6 +5178,109 @@
         {
           "start": 38,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Services_UpdateService_sync_flattened2",
+      "title": "UpdateService2",
+      "description": "Snippet for UpdateService",
+      "file": "ServicesClient.UpdateService2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.run.v2.Services.UpdateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Services_UpdateService_async_flattened2",
+      "title": "UpdateService2Async",
+      "description": "Snippet for UpdateServiceAsync",
+      "file": "ServicesClient.UpdateService2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.UpdateServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.run.v2.Services.UpdateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
           "type": "SHORT"
         }
       ]

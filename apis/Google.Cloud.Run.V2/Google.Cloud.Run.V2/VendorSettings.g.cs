@@ -25,37 +25,39 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvcnVuL3YyL3ZlbmRvcl9zZXR0aW5ncy5wcm90bxIT",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52MhoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "byLoAgoJVnBjQWNjZXNzEjoKCWNvbm5lY3RvchgBIAEoCUIn+kEkCiJ2cGNh",
-            "Y2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdG9yEjgKBmVncmVzcxgCIAEo",
-            "DjIoLmdvb2dsZS5jbG91ZC5ydW4udjIuVnBjQWNjZXNzLlZwY0VncmVzcxJL",
-            "ChJuZXR3b3JrX2ludGVyZmFjZXMYAyADKAsyLy5nb29nbGUuY2xvdWQucnVu",
-            "LnYyLlZwY0FjY2Vzcy5OZXR3b3JrSW50ZXJmYWNlGkUKEE5ldHdvcmtJbnRl",
-            "cmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEgwK",
-            "BHRhZ3MYAyADKAkiUQoJVnBjRWdyZXNzEhoKFlZQQ19FR1JFU1NfVU5TUEVD",
-            "SUZJRUQQABIPCgtBTExfVFJBRkZJQxABEhcKE1BSSVZBVEVfUkFOR0VTX09O",
-            "TFkQAiJhChNCaW5hcnlBdXRob3JpemF0aW9uEhUKC3VzZV9kZWZhdWx0GAEg",
-            "ASgISAASIAoYYnJlYWtnbGFzc19qdXN0aWZpY2F0aW9uGAIgASgJQhEKD2Jp",
-            "bmF1dGh6X21ldGhvZCJJCg9SZXZpc2lvblNjYWxpbmcSGgoSbWluX2luc3Rh",
-            "bmNlX2NvdW50GAEgASgFEhoKEm1heF9pbnN0YW5jZV9jb3VudBgCIAEoBSIs",
-            "Cg5TZXJ2aWNlU2NhbGluZxIaChJtaW5faW5zdGFuY2VfY291bnQYASABKAUq",
-            "mQEKDkluZ3Jlc3NUcmFmZmljEh8KG0lOR1JFU1NfVFJBRkZJQ19VTlNQRUNJ",
-            "RklFRBAAEhcKE0lOR1JFU1NfVFJBRkZJQ19BTEwQARIhCh1JTkdSRVNTX1RS",
-            "QUZGSUNfSU5URVJOQUxfT05MWRACEioKJklOR1JFU1NfVFJBRkZJQ19JTlRF",
-            "Uk5BTF9MT0FEX0JBTEFOQ0VSEAMqfQoURXhlY3V0aW9uRW52aXJvbm1lbnQS",
-            "JQohRVhFQ1VUSU9OX0VOVklST05NRU5UX1VOU1BFQ0lGSUVEEAASHgoaRVhF",
-            "Q1VUSU9OX0VOVklST05NRU5UX0dFTjEQARIeChpFWEVDVVRJT05fRU5WSVJP",
-            "Tk1FTlRfR0VOMhACKnAKHUVuY3J5cHRpb25LZXlSZXZvY2F0aW9uQWN0aW9u",
-            "EjAKLEVOQ1JZUFRJT05fS0VZX1JFVk9DQVRJT05fQUNUSU9OX1VOU1BFQ0lG",
-            "SUVEEAASDwoLUFJFVkVOVF9ORVcQARIMCghTSFVURE9XThACQlsKF2NvbS5n",
-            "b29nbGUuY2xvdWQucnVuLnYyQhNWZW5kb3JTZXR0aW5nc1Byb3RvUAFaKWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90",
-            "bzM="));
+            "Z29vZ2xlLmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
+            "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKBAwoJVnBjQWNj",
+            "ZXNzEjoKCWNvbm5lY3RvchgBIAEoCUIn+kEkCiJ2cGNhY2Nlc3MuZ29vZ2xl",
+            "YXBpcy5jb20vQ29ubmVjdG9yEj0KBmVncmVzcxgCIAEoDjIoLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjIuVnBjQWNjZXNzLlZwY0VncmVzc0ID4EEBElAKEm5ldHdv",
+            "cmtfaW50ZXJmYWNlcxgDIAMoCzIvLmdvb2dsZS5jbG91ZC5ydW4udjIuVnBj",
+            "QWNjZXNzLk5ldHdvcmtJbnRlcmZhY2VCA+BBARpUChBOZXR3b3JrSW50ZXJm",
+            "YWNlEhQKB25ldHdvcmsYASABKAlCA+BBARIXCgpzdWJuZXR3b3JrGAIgASgJ",
+            "QgPgQQESEQoEdGFncxgDIAMoCUID4EEBIlEKCVZwY0VncmVzcxIaChZWUENf",
+            "RUdSRVNTX1VOU1BFQ0lGSUVEEAASDwoLQUxMX1RSQUZGSUMQARIXChNQUklW",
+            "QVRFX1JBTkdFU19PTkxZEAIiggEKE0JpbmFyeUF1dGhvcml6YXRpb24SGgoL",
+            "dXNlX2RlZmF1bHQYASABKAhCA+BBAUgAEhUKBnBvbGljeRgDIAEoCUID4EEB",
+            "SAASJQoYYnJlYWtnbGFzc19qdXN0aWZpY2F0aW9uGAIgASgJQgPgQQFCEQoP",
+            "YmluYXV0aHpfbWV0aG9kIlMKD1JldmlzaW9uU2NhbGluZxIfChJtaW5faW5z",
+            "dGFuY2VfY291bnQYASABKAVCA+BBARIfChJtYXhfaW5zdGFuY2VfY291bnQY",
+            "AiABKAVCA+BBASIxCg5TZXJ2aWNlU2NhbGluZxIfChJtaW5faW5zdGFuY2Vf",
+            "Y291bnQYASABKAVCA+BBASqZAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5HUkVT",
+            "U19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklDX0FM",
+            "TBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgomSU5H",
+            "UkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAyp9ChRFeGVj",
+            "dXRpb25FbnZpcm9ubWVudBIlCiFFWEVDVVRJT05fRU5WSVJPTk1FTlRfVU5T",
+            "UEVDSUZJRUQQABIeChpFWEVDVVRJT05fRU5WSVJPTk1FTlRfR0VOMRABEh4K",
+            "GkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4yEAIqcAodRW5jcnlwdGlvbktl",
+            "eVJldm9jYXRpb25BY3Rpb24SMAosRU5DUllQVElPTl9LRVlfUkVWT0NBVElP",
+            "Tl9BQ1RJT05fVU5TUEVDSUZJRUQQABIPCgtQUkVWRU5UX05FVxABEgwKCFNI",
+            "VVRET1dOEAJCWwoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCE1ZlbmRvclNl",
+            "dHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIv",
+            "cnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress", "NetworkInterfaces" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface), global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "Tags" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "Policy", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount" }, null, null, null, null)
           }));
@@ -199,7 +201,7 @@ namespace Google.Cloud.Run.V2 {
     public const int EgressFieldNumber = 2;
     private global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress egress_ = global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress.Unspecified;
     /// <summary>
-    /// Traffic VPC egress settings. If not provided, it defaults to
+    /// Optional. Traffic VPC egress settings. If not provided, it defaults to
     /// PRIVATE_RANGES_ONLY.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -217,8 +219,8 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface> networkInterfaces_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface>();
     /// <summary>
-    /// Direct VPC egress settings. Currently only single network interface is
-    /// supported.
+    /// Optional. Direct VPC egress settings. Currently only single network
+    /// interface is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -472,11 +474,11 @@ namespace Google.Cloud.Run.V2 {
         public const int NetworkFieldNumber = 1;
         private string network_ = "";
         /// <summary>
-        /// The VPC network that the Cloud Run resource will be able to send traffic
-        /// to. At least one of network or subnetwork must be specified. If both
-        /// network and subnetwork are specified, the given VPC subnetwork must
-        /// belong to the given VPC network. If network is not specified, it will be
-        /// looked up from the subnetwork.
+        /// Optional. The VPC network that the Cloud Run resource will be able to
+        /// send traffic to. At least one of network or subnetwork must be specified.
+        /// If both network and subnetwork are specified, the given VPC subnetwork
+        /// must belong to the given VPC network. If network is not specified, it
+        /// will be looked up from the subnetwork.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -491,8 +493,8 @@ namespace Google.Cloud.Run.V2 {
         public const int SubnetworkFieldNumber = 2;
         private string subnetwork_ = "";
         /// <summary>
-        /// The VPC subnetwork that the Cloud Run resource will get IPs from. At
-        /// least one of network or subnetwork must be specified. If both
+        /// Optional. The VPC subnetwork that the Cloud Run resource will get IPs
+        /// from. At least one of network or subnetwork must be specified. If both
         /// network and subnetwork are specified, the given VPC subnetwork must
         /// belong to the given VPC network. If subnetwork is not specified, the
         /// subnetwork with the same name with the network will be used.
@@ -512,7 +514,7 @@ namespace Google.Cloud.Run.V2 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Network tags applied to this Cloud Run resource.
+        /// Optional. Network tags applied to this Cloud Run resource.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -739,6 +741,9 @@ namespace Google.Cloud.Run.V2 {
         case BinauthzMethodOneofCase.UseDefault:
           UseDefault = other.UseDefault;
           break;
+        case BinauthzMethodOneofCase.Policy:
+          Policy = other.Policy;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -753,8 +758,8 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "use_default" field.</summary>
     public const int UseDefaultFieldNumber = 1;
     /// <summary>
-    /// If True, indicates to use the default project's binary authorization
-    /// policy. If False, binary authorization will be disabled.
+    /// Optional. If True, indicates to use the default project's binary
+    /// authorization policy. If False, binary authorization will be disabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -780,11 +785,41 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "policy" field.</summary>
+    public const int PolicyFieldNumber = 3;
+    /// <summary>
+    /// Optional. The path to a binary authorization policy.
+    /// Format: projects/{project}/platforms/cloudRun/{policy-name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Policy {
+      get { return HasPolicy ? (string) binauthzMethod_ : ""; }
+      set {
+        binauthzMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        binauthzMethodCase_ = BinauthzMethodOneofCase.Policy;
+      }
+    }
+    /// <summary>Gets whether the "policy" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPolicy {
+      get { return binauthzMethodCase_ == BinauthzMethodOneofCase.Policy; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "policy" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPolicy() {
+      if (HasPolicy) {
+        ClearBinauthzMethod();
+      }
+    }
+
     /// <summary>Field number for the "breakglass_justification" field.</summary>
     public const int BreakglassJustificationFieldNumber = 2;
     private string breakglassJustification_ = "";
     /// <summary>
-    /// If present, indicates to use Breakglass using this justification.
+    /// Optional. If present, indicates to use Breakglass using this justification.
     /// If use_default is False, then it must be empty.
     /// For more information on breakglass, see
     /// https://cloud.google.com/binary-authorization/docs/using-breakglass
@@ -803,6 +838,7 @@ namespace Google.Cloud.Run.V2 {
     public enum BinauthzMethodOneofCase {
       None = 0,
       UseDefault = 1,
+      Policy = 3,
     }
     private BinauthzMethodOneofCase binauthzMethodCase_ = BinauthzMethodOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -834,6 +870,7 @@ namespace Google.Cloud.Run.V2 {
         return true;
       }
       if (UseDefault != other.UseDefault) return false;
+      if (Policy != other.Policy) return false;
       if (BreakglassJustification != other.BreakglassJustification) return false;
       if (BinauthzMethodCase != other.BinauthzMethodCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -844,6 +881,7 @@ namespace Google.Cloud.Run.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasUseDefault) hash ^= UseDefault.GetHashCode();
+      if (HasPolicy) hash ^= Policy.GetHashCode();
       if (BreakglassJustification.Length != 0) hash ^= BreakglassJustification.GetHashCode();
       hash ^= (int) binauthzMethodCase_;
       if (_unknownFields != null) {
@@ -872,6 +910,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(18);
         output.WriteString(BreakglassJustification);
       }
+      if (HasPolicy) {
+        output.WriteRawTag(26);
+        output.WriteString(Policy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -890,6 +932,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(18);
         output.WriteString(BreakglassJustification);
       }
+      if (HasPolicy) {
+        output.WriteRawTag(26);
+        output.WriteString(Policy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -902,6 +948,9 @@ namespace Google.Cloud.Run.V2 {
       int size = 0;
       if (HasUseDefault) {
         size += 1 + 1;
+      }
+      if (HasPolicy) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Policy);
       }
       if (BreakglassJustification.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BreakglassJustification);
@@ -924,6 +973,9 @@ namespace Google.Cloud.Run.V2 {
       switch (other.BinauthzMethodCase) {
         case BinauthzMethodOneofCase.UseDefault:
           UseDefault = other.UseDefault;
+          break;
+        case BinauthzMethodOneofCase.Policy:
+          Policy = other.Policy;
           break;
       }
 
@@ -950,6 +1002,10 @@ namespace Google.Cloud.Run.V2 {
             BreakglassJustification = input.ReadString();
             break;
           }
+          case 26: {
+            Policy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -971,6 +1027,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 18: {
             BreakglassJustification = input.ReadString();
+            break;
+          }
+          case 26: {
+            Policy = input.ReadString();
             break;
           }
         }
@@ -1033,7 +1093,8 @@ namespace Google.Cloud.Run.V2 {
     public const int MinInstanceCountFieldNumber = 1;
     private int minInstanceCount_;
     /// <summary>
-    /// Minimum number of serving instances that this resource should have.
+    /// Optional. Minimum number of serving instances that this resource should
+    /// have.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1048,7 +1109,8 @@ namespace Google.Cloud.Run.V2 {
     public const int MaxInstanceCountFieldNumber = 2;
     private int maxInstanceCount_;
     /// <summary>
-    /// Maximum number of serving instances that this resource should have.
+    /// Optional. Maximum number of serving instances that this resource should
+    /// have.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1269,7 +1331,7 @@ namespace Google.Cloud.Run.V2 {
     public const int MinInstanceCountFieldNumber = 1;
     private int minInstanceCount_;
     /// <summary>
-    /// total min instances for the service. This number of instances is
+    /// Optional. total min instances for the service. This number of instances is
     /// divided among all revisions with specified traffic based on the percent
     /// of traffic they are receiving. (BETA)
     /// </summary>

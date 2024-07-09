@@ -25,46 +25,48 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byKdDAoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
-            "JC5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNz",
-            "YWdlGAMgASgJEjgKFGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLlNldmVyaXR5Ej0KBnJlYXNv",
-            "bhgGIAEoDjIrLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLkNvbW1v",
-            "blJlYXNvbkgAEkgKD3JldmlzaW9uX3JlYXNvbhgJIAEoDjItLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuQ29uZGl0aW9uLlJldmlzaW9uUmVhc29uSAASSgoQZXhl",
-            "Y3V0aW9uX3JlYXNvbhgLIAEoDjIuLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29u",
-            "ZGl0aW9uLkV4ZWN1dGlvblJlYXNvbkgAIn8KBVN0YXRlEhUKEVNUQVRFX1VO",
-            "U1BFQ0lGSUVEEAASFQoRQ09ORElUSU9OX1BFTkRJTkcQARIZChVDT05ESVRJ",
-            "T05fUkVDT05DSUxJTkcQAhIUChBDT05ESVRJT05fRkFJTEVEEAMSFwoTQ09O",
-            "RElUSU9OX1NVQ0NFRURFRBAEIkYKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VO",
-            "U1BFQ0lGSUVEEAASCQoFRVJST1IQARILCgdXQVJOSU5HEAISCAoESU5GTxAD",
-            "IrIDCgxDb21tb25SZWFzb24SGwoXQ09NTU9OX1JFQVNPTl9VTkRFRklORUQQ",
-            "ABILCgdVTktOT1dOEAESEwoPUkVWSVNJT05fRkFJTEVEEAMSHgoaUFJPR1JF",
-            "U1NfREVBRExJTkVfRVhDRUVERUQQBBIVChFDT05UQUlORVJfTUlTU0lORxAG",
-            "Eh8KG0NPTlRBSU5FUl9QRVJNSVNTSU9OX0RFTklFRBAHEiAKHENPTlRBSU5F",
-            "Ul9JTUFHRV9VTkFVVEhPUklaRUQQCBIuCipDT05UQUlORVJfSU1BR0VfQVVU",
-            "SE9SSVpBVElPTl9DSEVDS19GQUlMRUQQCRIkCiBFTkNSWVBUSU9OX0tFWV9Q",
-            "RVJNSVNTSU9OX0RFTklFRBAKEh8KG0VOQ1JZUFRJT05fS0VZX0NIRUNLX0ZB",
-            "SUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNTX0NIRUNLX0ZBSUxFRBAMEhkKFVdB",
-            "SVRJTkdfRk9SX09QRVJBVElPThANEhMKD0lNTUVESUFURV9SRVRSWRAOEhMK",
-            "D1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBAiygIKDlJldmlzaW9u",
-            "UmVhc29uEh0KGVJFVklTSU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQRU5E",
-            "SU5HEAESCwoHUkVTRVJWRRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklORxAE",
-            "Eg4KClJFQ1JFQVRJTkcQBRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVSX0VS",
-            "Uk9SEAYSJAogQ1VTVE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIh",
-            "Ch1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9S",
-            "RVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgK",
-            "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJN",
-            "SU5HEAwimwEKD0V4ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09O",
-            "X1VOREVGSU5FRBAAEiQKIEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5HX0VS",
-            "Uk9SEAESFgoSTk9OX1pFUk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVEEAMS",
-            "DgoKQ0FOQ0VMTElORxAEEgsKB0RFTEVURUQQBUIJCgdyZWFzb25zQlYKF2Nv",
-            "bS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWiljbG91",
-            "ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
+            "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKsDAoJQ29uZGl0",
+            "aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4yJC5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNzYWdlGAMgASgJEjgK",
+            "FGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjIuQ29uZGl0aW9uLlNldmVyaXR5EkIKBnJlYXNvbhgGIAEoDjIrLmdv",
+            "b2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLkNvbW1vblJlYXNvbkID4EED",
+            "SAASTQoPcmV2aXNpb25fcmVhc29uGAkgASgOMi0uZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52Mi5Db25kaXRpb24uUmV2aXNpb25SZWFzb25CA+BBA0gAEk8KEGV4ZWN1",
+            "dGlvbl9yZWFzb24YCyABKA4yLi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRp",
+            "dGlvbi5FeGVjdXRpb25SZWFzb25CA+BBA0gAIn8KBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASFQoRQ09ORElUSU9OX1BFTkRJTkcQARIZChVDT05E",
+            "SVRJT05fUkVDT05DSUxJTkcQAhIUChBDT05ESVRJT05fRkFJTEVEEAMSFwoT",
+            "Q09ORElUSU9OX1NVQ0NFRURFRBAEIkYKCFNldmVyaXR5EhgKFFNFVkVSSVRZ",
+            "X1VOU1BFQ0lGSUVEEAASCQoFRVJST1IQARILCgdXQVJOSU5HEAISCAoESU5G",
+            "TxADIrIDCgxDb21tb25SZWFzb24SGwoXQ09NTU9OX1JFQVNPTl9VTkRFRklO",
+            "RUQQABILCgdVTktOT1dOEAESEwoPUkVWSVNJT05fRkFJTEVEEAMSHgoaUFJP",
+            "R1JFU1NfREVBRExJTkVfRVhDRUVERUQQBBIVChFDT05UQUlORVJfTUlTU0lO",
+            "RxAGEh8KG0NPTlRBSU5FUl9QRVJNSVNTSU9OX0RFTklFRBAHEiAKHENPTlRB",
+            "SU5FUl9JTUFHRV9VTkFVVEhPUklaRUQQCBIuCipDT05UQUlORVJfSU1BR0Vf",
+            "QVVUSE9SSVpBVElPTl9DSEVDS19GQUlMRUQQCRIkCiBFTkNSWVBUSU9OX0tF",
+            "WV9QRVJNSVNTSU9OX0RFTklFRBAKEh8KG0VOQ1JZUFRJT05fS0VZX0NIRUNL",
+            "X0ZBSUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNTX0NIRUNLX0ZBSUxFRBAMEhkK",
+            "FVdBSVRJTkdfRk9SX09QRVJBVElPThANEhMKD0lNTUVESUFURV9SRVRSWRAO",
+            "EhMKD1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBAiygIKDlJldmlz",
+            "aW9uUmVhc29uEh0KGVJFVklTSU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQ",
+            "RU5ESU5HEAESCwoHUkVTRVJWRRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklO",
+            "RxAEEg4KClJFQ1JFQVRJTkcQBRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVS",
+            "X0VSUk9SEAYSJAogQ1VTVE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQ",
+            "BxIhCh1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElW",
+            "RV9SRVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAK",
+            "EhgKFEhFQUxUSF9DSEVDS19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19X",
+            "QVJNSU5HEAwimwEKD0V4ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVB",
+            "U09OX1VOREVGSU5FRBAAEiQKIEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5H",
+            "X0VSUk9SEAESFgoSTk9OX1pFUk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVE",
+            "EAMSDgoKQ0FOQ0VMTElORxAEEgsKB0RFTEVURUQQBUIJCgdyZWFzb25zQlYK",
+            "F2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWilj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Condition), global::Google.Cloud.Run.V2.Condition.Parser, new[]{ "Type", "State", "Message", "LastTransitionTime", "Severity", "Reason", "RevisionReason", "ExecutionReason" }, new[]{ "Reasons" }, new[]{ typeof(global::Google.Cloud.Run.V2.Condition.Types.State), typeof(global::Google.Cloud.Run.V2.Condition.Types.Severity), typeof(global::Google.Cloud.Run.V2.Condition.Types.CommonReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.RevisionReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason) }, null, null)
           }));
@@ -219,7 +221,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "reason" field.</summary>
     public const int ReasonFieldNumber = 6;
     /// <summary>
-    /// A common (service-level) reason for this condition.
+    /// Output only. A common (service-level) reason for this condition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -248,7 +250,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "revision_reason" field.</summary>
     public const int RevisionReasonFieldNumber = 9;
     /// <summary>
-    /// A reason for the revision condition.
+    /// Output only. A reason for the revision condition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -277,7 +279,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "execution_reason" field.</summary>
     public const int ExecutionReasonFieldNumber = 11;
     /// <summary>
-    /// A reason for the execution condition.
+    /// Output only. A reason for the execution condition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

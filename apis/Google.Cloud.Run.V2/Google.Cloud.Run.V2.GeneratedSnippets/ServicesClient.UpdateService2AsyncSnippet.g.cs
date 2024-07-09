@@ -18,8 +18,9 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START run_v2_generated_Services_UpdateService_async_flattened]
+    // [START run_v2_generated_Services_UpdateService_async_flattened2]
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
     using gcrv = Google.Cloud.Run.V2;
 
@@ -33,14 +34,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task UpdateServiceAsync()
+        public async Task UpdateService2Async()
         {
             // Create client
             gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             gcrv::Service service = new gcrv::Service();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(service);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(service, updateMask);
 
             // Poll until the returned long-running operation is complete
             Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
@@ -59,5 +61,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END run_v2_generated_Services_UpdateService_async_flattened]
+    // [END run_v2_generated_Services_UpdateService_async_flattened2]
 }

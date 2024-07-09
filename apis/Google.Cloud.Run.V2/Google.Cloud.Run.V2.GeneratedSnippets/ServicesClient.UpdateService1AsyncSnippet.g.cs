@@ -14,15 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
-    // [START run_v2_generated_Services_UpdateService_sync_flattened]
-    using Google.Cloud.Run.V2;
+    // [START run_v2_generated_Services_UpdateService_async_flattened1]
     using Google.LongRunning;
+    using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     public sealed partial class GeneratedServicesClientSnippets
     {
-        /// <summary>Snippet for UpdateService</summary>
+        /// <summary>Snippet for UpdateServiceAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,31 +33,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void UpdateService()
+        public async Task UpdateService1Async()
         {
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             // Make the request
-            Operation<Service, Service> response = servicesClient.UpdateService(service);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(service);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceUpdateService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceUpdateServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END run_v2_generated_Services_UpdateService_sync_flattened]
+    // [END run_v2_generated_Services_UpdateService_async_flattened1]
 }

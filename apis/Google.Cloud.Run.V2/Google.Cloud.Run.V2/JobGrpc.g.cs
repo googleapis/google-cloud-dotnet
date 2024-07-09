@@ -199,7 +199,7 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// Lists Jobs.
+      /// Lists Jobs. Results are sorted by creation time, descending.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -412,7 +412,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetJob, null, options, request);
       }
       /// <summary>
-      /// Lists Jobs.
+      /// Lists Jobs. Results are sorted by creation time, descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Cloud.Run.V2 {
         return ListJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Jobs.
+      /// Lists Jobs. Results are sorted by creation time, descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListJobs, null, options, request);
       }
       /// <summary>
-      /// Lists Jobs.
+      /// Lists Jobs. Results are sorted by creation time, descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Cloud.Run.V2 {
         return ListJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Jobs.
+      /// Lists Jobs. Results are sorted by creation time, descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

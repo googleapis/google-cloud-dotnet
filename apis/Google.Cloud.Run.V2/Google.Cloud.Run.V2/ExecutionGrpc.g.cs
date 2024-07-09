@@ -133,7 +133,8 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// Lists Executions from a Job.
+      /// Lists Executions from a Job. Results are sorted by creation time,
+      /// descending.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -246,7 +247,8 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetExecution, null, options, request);
       }
       /// <summary>
-      /// Lists Executions from a Job.
+      /// Lists Executions from a Job. Results are sorted by creation time,
+      /// descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -259,7 +261,8 @@ namespace Google.Cloud.Run.V2 {
         return ListExecutions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Executions from a Job.
+      /// Lists Executions from a Job. Results are sorted by creation time,
+      /// descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -270,7 +273,8 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListExecutions, null, options, request);
       }
       /// <summary>
-      /// Lists Executions from a Job.
+      /// Lists Executions from a Job. Results are sorted by creation time,
+      /// descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -283,7 +287,8 @@ namespace Google.Cloud.Run.V2 {
         return ListExecutionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Executions from a Job.
+      /// Lists Executions from a Job. Results are sorted by creation time,
+      /// descending.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START run_v2_generated_Services_UpdateService_sync]
     using Google.Cloud.Run.V2;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedServicesClientSnippets
     {
@@ -38,6 +39,7 @@ namespace GoogleCSharpSnippets
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
+                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };

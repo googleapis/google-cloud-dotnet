@@ -29,28 +29,29 @@ namespace Google.Cloud.Run.V2 {
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUv",
             "Y2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2dsZS9jbG91ZC9ydW4v",
             "djIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
-            "YXRpb24ucHJvdG8iwgYKEFJldmlzaW9uVGVtcGxhdGUSMgoIcmV2aXNpb24Y",
-            "ASABKAlCIPpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkEKBmxh",
-            "YmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1w",
-            "bGF0ZS5MYWJlbHNFbnRyeRJLCgthbm5vdGF0aW9ucxgDIAMoCzI2Lmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0Vu",
-            "dHJ5EjUKB3NjYWxpbmcYBCABKAsyJC5nb29nbGUuY2xvdWQucnVuLnYyLlJl",
-            "dmlzaW9uU2NhbGluZxIyCgp2cGNfYWNjZXNzGAYgASgLMh4uZ29vZ2xlLmNs",
-            "b3VkLnJ1bi52Mi5WcGNBY2Nlc3MSKgoHdGltZW91dBgIIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2FjY291bnQYCSABKAkS",
-            "MgoKY29udGFpbmVycxgKIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29u",
-            "dGFpbmVyEiwKB3ZvbHVtZXMYCyADKAsyGy5nb29nbGUuY2xvdWQucnVuLnYy",
-            "LlZvbHVtZRJIChVleGVjdXRpb25fZW52aXJvbm1lbnQYDSABKA4yKS5nb29n",
-            "bGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25tZW50Ej4KDmVuY3J5",
-            "cHRpb25fa2V5GA4gASgJQib6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29t",
-            "L0NyeXB0b0tleRIoCiBtYXhfaW5zdGFuY2VfcmVxdWVzdF9jb25jdXJyZW5j",
-            "eRgPIAEoBRIdChBzZXNzaW9uX2FmZmluaXR5GBMgASgIQgPgQQESIgoVaGVh",
-            "bHRoX2NoZWNrX2Rpc2FibGVkGBQgASgIQgPgQQEaLQoLTGFiZWxzRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9u",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCXQoXY29t",
-            "Lmdvb2dsZS5jbG91ZC5ydW4udjJCFVJldmlzaW9uVGVtcGxhdGVQcm90b1AB",
-            "WiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIG",
-            "cHJvdG8z"));
+            "YXRpb24ucHJvdG8i8gYKEFJldmlzaW9uVGVtcGxhdGUSNQoIcmV2aXNpb24Y",
+            "ASABKAlCI+BBAfpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkYK",
+            "BmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25U",
+            "ZW1wbGF0ZS5MYWJlbHNFbnRyeUID4EEBElAKC2Fubm90YXRpb25zGAMgAygL",
+            "MjYuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5SZXZpc2lvblRlbXBsYXRlLkFubm90",
+            "YXRpb25zRW50cnlCA+BBARI6CgdzY2FsaW5nGAQgASgLMiQuZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5SZXZpc2lvblNjYWxpbmdCA+BBARI3Cgp2cGNfYWNjZXNz",
+            "GAYgASgLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3NCA+BBARIv",
+            "Cgd0aW1lb3V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
+            "QQESHAoPc2VydmljZV9hY2NvdW50GAkgASgJQgPgQQESMgoKY29udGFpbmVy",
+            "cxgKIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29udGFpbmVyEjEKB3Zv",
+            "bHVtZXMYCyADKAsyGy5nb29nbGUuY2xvdWQucnVuLnYyLlZvbHVtZUID4EEB",
+            "Ek0KFWV4ZWN1dGlvbl9lbnZpcm9ubWVudBgNIAEoDjIpLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuRXhlY3V0aW9uRW52aXJvbm1lbnRCA+BBARI+Cg5lbmNyeXB0",
+            "aW9uX2tleRgOIAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9D",
+            "cnlwdG9LZXkSLQogbWF4X2luc3RhbmNlX3JlcXVlc3RfY29uY3VycmVuY3kY",
+            "DyABKAVCA+BBARIdChBzZXNzaW9uX2FmZmluaXR5GBMgASgIQgPgQQESIgoV",
+            "aGVhbHRoX2NoZWNrX2Rpc2FibGVkGBQgASgIQgPgQQEaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0",
+            "aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCXQoX",
+            "Y29tLmdvb2dsZS5jbG91ZC5ydW4udjJCFVJldmlzaW9uVGVtcGxhdGVQcm90",
+            "b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5w",
+            "YmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -127,8 +128,8 @@ namespace Google.Cloud.Run.V2 {
     public const int RevisionFieldNumber = 1;
     private string revision_ = "";
     /// <summary>
-    /// The unique name for the revision. If this field is omitted, it will be
-    /// automatically generated based on the Service name.
+    /// Optional. The unique name for the revision. If this field is omitted, it
+    /// will be automatically generated based on the Service name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,11 +146,10 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Unstructured key value map that can be used to organize and categorize
-    /// objects.
-    /// User-provided labels are shared with Google's billing system, so they can
-    /// be used to filter, or break down billing charges by team, component,
-    /// environment, state, etc. For more information, visit
+    /// Optional. Unstructured key value map that can be used to organize and
+    /// categorize objects. User-provided labels are shared with Google's billing
+    /// system, so they can be used to filter, or break down billing charges by
+    /// team, component, environment, state, etc. For more information, visit
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
     /// https://cloud.google.com/run/docs/configuring/labels.
     ///
@@ -170,9 +170,9 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Unstructured key value map that may be set by external tools to store and
-    /// arbitrary metadata. They are not queryable and should be preserved
-    /// when modifying objects.
+    /// Optional. Unstructured key value map that may be set by external tools to
+    /// store and arbitrary metadata. They are not queryable and should be
+    /// preserved when modifying objects.
     ///
     /// &lt;p>Cloud Run API v2 does not support annotations with `run.googleapis.com`,
     /// `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
@@ -192,7 +192,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ScalingFieldNumber = 4;
     private global::Google.Cloud.Run.V2.RevisionScaling scaling_;
     /// <summary>
-    /// Scaling settings for this Revision.
+    /// Optional. Scaling settings for this Revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -207,8 +207,9 @@ namespace Google.Cloud.Run.V2 {
     public const int VpcAccessFieldNumber = 6;
     private global::Google.Cloud.Run.V2.VpcAccess vpcAccess_;
     /// <summary>
-    /// VPC Access configuration to use for this Revision. For more information,
-    /// visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+    /// Optional. VPC Access configuration to use for this Revision. For more
+    /// information, visit
+    /// https://cloud.google.com/run/docs/configuring/connecting-vpc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -223,7 +224,7 @@ namespace Google.Cloud.Run.V2 {
     public const int TimeoutFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
     /// <summary>
-    /// Max allowed time for an instance to respond to a request.
+    /// Optional. Max allowed time for an instance to respond to a request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -238,9 +239,9 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceAccountFieldNumber = 9;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Email address of the IAM service account associated with the revision of
-    /// the service. The service account represents the identity of the running
-    /// revision, and determines what permissions the revision has. If not
+    /// Optional. Email address of the IAM service account associated with the
+    /// revision of the service. The service account represents the identity of the
+    /// running revision, and determines what permissions the revision has. If not
     /// provided, the revision will use the project's default service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -273,7 +274,7 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Run.V2.Volume.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Volume> volumes_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Volume>();
     /// <summary>
-    /// A list of Volumes to make available to containers.
+    /// Optional. A list of Volumes to make available to containers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -285,7 +286,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ExecutionEnvironmentFieldNumber = 13;
     private global::Google.Cloud.Run.V2.ExecutionEnvironment executionEnvironment_ = global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified;
     /// <summary>
-    /// The sandbox environment to host this Revision.
+    /// Optional. The sandbox environment to host this Revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -317,7 +318,8 @@ namespace Google.Cloud.Run.V2 {
     public const int MaxInstanceRequestConcurrencyFieldNumber = 15;
     private int maxInstanceRequestConcurrency_;
     /// <summary>
-    /// Sets the maximum number of requests that each serving instance can receive.
+    /// Optional. Sets the maximum number of requests that each serving instance
+    /// can receive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
