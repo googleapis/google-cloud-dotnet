@@ -732,6 +732,105 @@ namespace Google.Cloud.Bigtable.V2
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ExecuteQueryRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(string instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for replication. If not specified,
+        /// the `default` application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(string instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for replication. If not specified,
+        /// the `default` application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
     }
 
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
@@ -781,5 +880,8 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(ReadChangeStreamRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ReadChangeStream(request, callSettings);
+
+        /// <inheritdoc/>
+        public override BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ExecuteQuery(request, callSettings);
     }
 }

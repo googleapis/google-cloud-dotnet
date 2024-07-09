@@ -3473,6 +3473,266 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_ExecuteQuery_sync",
+      "title": "ExecuteQueryRequestObject",
+      "description": "Snippet for ExecuteQuery",
+      "file": "BigtableServiceApiClient.ExecuteQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ExecuteQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.ExecuteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ExecuteQueryStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ExecuteQuery",
+          "fullName": "google.bigtable.v2.Bigtable.ExecuteQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_ExecuteQuery_sync_flattened1",
+      "title": "ExecuteQuery1",
+      "description": "Snippet for ExecuteQuery",
+      "file": "BigtableServiceApiClient.ExecuteQuery1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ExecuteQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ExecuteQueryStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ExecuteQuery",
+          "fullName": "google.bigtable.v2.Bigtable.ExecuteQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_ExecuteQuery_sync_flattened1_resourceNames",
+      "title": "ExecuteQuery1ResourceNames",
+      "description": "Snippet for ExecuteQuery",
+      "file": "BigtableServiceApiClient.ExecuteQuery1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ExecuteQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ExecuteQueryStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ExecuteQuery",
+          "fullName": "google.bigtable.v2.Bigtable.ExecuteQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_ExecuteQuery_sync_flattened2",
+      "title": "ExecuteQuery2",
+      "description": "Snippet for ExecuteQuery",
+      "file": "BigtableServiceApiClient.ExecuteQuery2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ExecuteQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ExecuteQueryStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ExecuteQuery",
+          "fullName": "google.bigtable.v2.Bigtable.ExecuteQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_ExecuteQuery_sync_flattened2_resourceNames",
+      "title": "ExecuteQuery2ResourceNames",
+      "description": "Snippet for ExecuteQuery",
+      "file": "BigtableServiceApiClient.ExecuteQuery2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ExecuteQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ExecuteQueryStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ExecuteQuery",
+          "fullName": "google.bigtable.v2.Bigtable.ExecuteQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 56,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
