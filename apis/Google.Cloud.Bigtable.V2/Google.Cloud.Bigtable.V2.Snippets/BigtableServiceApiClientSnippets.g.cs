@@ -14,15 +14,17 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.Common.V2;
-    using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using gcbv = Google.Cloud.Bigtable.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedBigtableServiceApiClientSnippets
@@ -32,28 +34,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadRows(ReadRowsRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            ReadRowsRequest request = new ReadRowsRequest
+            gcbv::ReadRowsRequest request = new gcbv::ReadRowsRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                Rows = new RowSet(),
-                Filter = new RowFilter(),
+                Rows = new gcbv::RowSet(),
+                Filter = new gcbv::RowFilter(),
                 RowsLimit = 0L,
                 AppProfileId = "",
-                RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
+                RequestStatsView = gcbv::ReadRowsRequest.Types.RequestStatsView.Unspecified,
                 Reversed = false,
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
+            using gcbv::BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadRowsResponse responseItem = responseStream.Current;
+                gcbv::ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -65,18 +67,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadRows(string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
+            using gcbv::BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadRowsResponse responseItem = responseStream.Current;
+                gcbv::ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -88,18 +90,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadRows(TableName, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
+            using gcbv::BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadRowsResponse responseItem = responseStream.Current;
+                gcbv::ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -111,19 +113,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadRows(string, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadRowsResponse responseItem = responseStream.Current;
+                gcbv::ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -135,19 +137,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadRows(TableName, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadRowsResponse responseItem = responseStream.Current;
+                gcbv::ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -159,23 +161,23 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SampleRowKeys(SampleRowKeysRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            SampleRowKeysRequest request = new SampleRowKeysRequest
+            gcbv::SampleRowKeysRequest request = new gcbv::SampleRowKeysRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
+            using gcbv::BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::SampleRowKeysResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                SampleRowKeysResponse responseItem = responseStream.Current;
+                gcbv::SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -187,18 +189,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SampleRowKeys(string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
+            using gcbv::BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::SampleRowKeysResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                SampleRowKeysResponse responseItem = responseStream.Current;
+                gcbv::SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -210,18 +212,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SampleRowKeys(TableName, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
+            using gcbv::BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::SampleRowKeysResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                SampleRowKeysResponse responseItem = responseStream.Current;
+                gcbv::SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -233,19 +235,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SampleRowKeys(string, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::SampleRowKeysResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                SampleRowKeysResponse responseItem = responseStream.Current;
+                gcbv::SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -257,19 +259,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SampleRowKeys(TableName, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::SampleRowKeysResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                SampleRowKeysResponse responseItem = responseStream.Current;
+                gcbv::SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -281,18 +283,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRow(MutateRowRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            MutateRowRequest request = new MutateRowRequest
+            gcbv::MutateRowRequest request = new gcbv::MutateRowRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
-                Mutations = { new Mutation(), },
+                Mutations =
+                {
+                    new gcbv::Mutation(),
+                },
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
-            MutateRowResponse response = bigtableServiceApiClient.MutateRow(request);
+            gcbv::MutateRowResponse response = bigtableServiceApiClient.MutateRow(request);
             // End snippet
         }
 
@@ -302,18 +307,21 @@ namespace GoogleCSharpSnippets
             // Snippet: MutateRowAsync(MutateRowRequest, CallSettings)
             // Additional: MutateRowAsync(MutateRowRequest, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            MutateRowRequest request = new MutateRowRequest
+            gcbv::MutateRowRequest request = new gcbv::MutateRowRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
-                Mutations = { new Mutation(), },
+                Mutations =
+                {
+                    new gcbv::Mutation(),
+                },
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
-            MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(request);
+            gcbv::MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(request);
             // End snippet
         }
 
@@ -322,13 +330,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRow(string, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations);
+            gcbv::MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations);
             // End snippet
         }
 
@@ -338,13 +349,16 @@ namespace GoogleCSharpSnippets
             // Snippet: MutateRowAsync(string, ByteString, IEnumerable<Mutation>, CallSettings)
             // Additional: MutateRowAsync(string, ByteString, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations);
+            gcbv::MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations);
             // End snippet
         }
 
@@ -353,13 +367,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRow(TableName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations);
+            gcbv::MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations);
             // End snippet
         }
 
@@ -369,13 +386,16 @@ namespace GoogleCSharpSnippets
             // Snippet: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Additional: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations);
+            gcbv::MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations);
             // End snippet
         }
 
@@ -384,14 +404,17 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRow(string, ByteString, IEnumerable<Mutation>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations, appProfileId);
+            gcbv::MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations, appProfileId);
             // End snippet
         }
 
@@ -401,14 +424,17 @@ namespace GoogleCSharpSnippets
             // Snippet: MutateRowAsync(string, ByteString, IEnumerable<Mutation>, string, CallSettings)
             // Additional: MutateRowAsync(string, ByteString, IEnumerable<Mutation>, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations, appProfileId);
+            gcbv::MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations, appProfileId);
             // End snippet
         }
 
@@ -417,14 +443,17 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRow(TableName, ByteString, IEnumerable<Mutation>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations, appProfileId);
+            gcbv::MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations, appProfileId);
             // End snippet
         }
 
@@ -434,14 +463,17 @@ namespace GoogleCSharpSnippets
             // Snippet: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, string, CallSettings)
             // Additional: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcbv::Mutation> mutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations, appProfileId);
+            gcbv::MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations, appProfileId);
             // End snippet
         }
 
@@ -450,27 +482,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRows(MutateRowsRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            MutateRowsRequest request = new MutateRowsRequest
+            gcbv::MutateRowsRequest request = new gcbv::MutateRowsRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Entries =
                 {
-                    new MutateRowsRequest.Types.Entry(),
+                    new gcbv::MutateRowsRequest.Types.Entry(),
                 },
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);
+            using gcbv::BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::MutateRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                MutateRowsResponse responseItem = responseStream.Current;
+                gcbv::MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -482,22 +514,22 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRows(string, IEnumerable<MutateRowsRequest.Types.Entry>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
-            IEnumerable<MutateRowsRequest.Types.Entry> entries = new MutateRowsRequest.Types.Entry[]
+            IEnumerable<gcbv::MutateRowsRequest.Types.Entry> entries = new gcbv::MutateRowsRequest.Types.Entry[]
             {
-                new MutateRowsRequest.Types.Entry(),
+                new gcbv::MutateRowsRequest.Types.Entry(),
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
+            using gcbv::BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::MutateRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                MutateRowsResponse responseItem = responseStream.Current;
+                gcbv::MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -509,22 +541,22 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRows(TableName, IEnumerable<MutateRowsRequest.Types.Entry>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            IEnumerable<MutateRowsRequest.Types.Entry> entries = new MutateRowsRequest.Types.Entry[]
+            IEnumerable<gcbv::MutateRowsRequest.Types.Entry> entries = new gcbv::MutateRowsRequest.Types.Entry[]
             {
-                new MutateRowsRequest.Types.Entry(),
+                new gcbv::MutateRowsRequest.Types.Entry(),
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
+            using gcbv::BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::MutateRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                MutateRowsResponse responseItem = responseStream.Current;
+                gcbv::MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -536,23 +568,23 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRows(string, IEnumerable<MutateRowsRequest.Types.Entry>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
-            IEnumerable<MutateRowsRequest.Types.Entry> entries = new MutateRowsRequest.Types.Entry[]
+            IEnumerable<gcbv::MutateRowsRequest.Types.Entry> entries = new gcbv::MutateRowsRequest.Types.Entry[]
             {
-                new MutateRowsRequest.Types.Entry(),
+                new gcbv::MutateRowsRequest.Types.Entry(),
             };
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
+            using gcbv::BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::MutateRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                MutateRowsResponse responseItem = responseStream.Current;
+                gcbv::MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -564,23 +596,23 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MutateRows(TableName, IEnumerable<MutateRowsRequest.Types.Entry>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            IEnumerable<MutateRowsRequest.Types.Entry> entries = new MutateRowsRequest.Types.Entry[]
+            IEnumerable<gcbv::MutateRowsRequest.Types.Entry> entries = new gcbv::MutateRowsRequest.Types.Entry[]
             {
-                new MutateRowsRequest.Types.Entry(),
+                new gcbv::MutateRowsRequest.Types.Entry(),
             };
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
+            using gcbv::BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::MutateRowsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                MutateRowsResponse responseItem = responseStream.Current;
+                gcbv::MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -592,20 +624,26 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            gcbv::CheckAndMutateRowRequest request = new gcbv::CheckAndMutateRowRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
-                TrueMutations = { new Mutation(), },
-                FalseMutations = { new Mutation(), },
-                PredicateFilter = new RowFilter(),
+                TrueMutations =
+                {
+                    new gcbv::Mutation(),
+                },
+                FalseMutations =
+                {
+                    new gcbv::Mutation(),
+                },
+                PredicateFilter = new gcbv::RowFilter(),
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
-            CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(request);
+            gcbv::CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(request);
             // End snippet
         }
 
@@ -615,20 +653,26 @@ namespace GoogleCSharpSnippets
             // Snippet: CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)
             // Additional: CheckAndMutateRowAsync(CheckAndMutateRowRequest, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            gcbv::CheckAndMutateRowRequest request = new gcbv::CheckAndMutateRowRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
-                TrueMutations = { new Mutation(), },
-                FalseMutations = { new Mutation(), },
-                PredicateFilter = new RowFilter(),
+                TrueMutations =
+                {
+                    new gcbv::Mutation(),
+                },
+                FalseMutations =
+                {
+                    new gcbv::Mutation(),
+                },
+                PredicateFilter = new gcbv::RowFilter(),
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
-            CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(request);
+            gcbv::CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(request);
             // End snippet
         }
 
@@ -637,15 +681,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CheckAndMutateRow(string, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
+            gcbv::CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
             // End snippet
         }
 
@@ -655,15 +705,21 @@ namespace GoogleCSharpSnippets
             // Snippet: CheckAndMutateRowAsync(string, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CallSettings)
             // Additional: CheckAndMutateRowAsync(string, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
+            gcbv::CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
             // End snippet
         }
 
@@ -672,15 +728,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CheckAndMutateRow(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
+            gcbv::CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
             // End snippet
         }
 
@@ -690,15 +752,21 @@ namespace GoogleCSharpSnippets
             // Snippet: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CallSettings)
             // Additional: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             // Make the request
-            CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
+            gcbv::CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
             // End snippet
         }
 
@@ -707,16 +775,22 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CheckAndMutateRow(string, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            gcbv::CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
             // End snippet
         }
 
@@ -726,16 +800,22 @@ namespace GoogleCSharpSnippets
             // Snippet: CheckAndMutateRowAsync(string, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CallSettings)
             // Additional: CheckAndMutateRowAsync(string, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            gcbv::CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
             // End snippet
         }
 
@@ -744,16 +824,22 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CheckAndMutateRow(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            gcbv::CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
             // End snippet
         }
 
@@ -763,16 +849,22 @@ namespace GoogleCSharpSnippets
             // Snippet: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CallSettings)
             // Additional: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
-            IEnumerable<Mutation> falseMutations = new Mutation[] { new Mutation(), };
+            gcbv::RowFilter predicateFilter = new gcbv::RowFilter();
+            IEnumerable<gcbv::Mutation> trueMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
+            IEnumerable<gcbv::Mutation> falseMutations = new gcbv::Mutation[]
+            {
+                new gcbv::Mutation(),
+            };
             string appProfileId = "";
             // Make the request
-            CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            gcbv::CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
             // End snippet
         }
 
@@ -781,15 +873,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PingAndWarm(PingAndWarmRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            PingAndWarmRequest request = new PingAndWarmRequest
+            gcbv::PingAndWarmRequest request = new gcbv::PingAndWarmRequest
             {
                 InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "",
             };
             // Make the request
-            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(request);
+            gcbv::PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(request);
             // End snippet
         }
 
@@ -799,15 +891,15 @@ namespace GoogleCSharpSnippets
             // Snippet: PingAndWarmAsync(PingAndWarmRequest, CallSettings)
             // Additional: PingAndWarmAsync(PingAndWarmRequest, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            PingAndWarmRequest request = new PingAndWarmRequest
+            gcbv::PingAndWarmRequest request = new gcbv::PingAndWarmRequest
             {
                 InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "",
             };
             // Make the request
-            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(request);
+            gcbv::PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(request);
             // End snippet
         }
 
@@ -816,11 +908,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PingAndWarm(string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
+            gcbv::PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
             // End snippet
         }
 
@@ -830,11 +922,11 @@ namespace GoogleCSharpSnippets
             // Snippet: PingAndWarmAsync(string, CallSettings)
             // Additional: PingAndWarmAsync(string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name);
+            gcbv::PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name);
             // End snippet
         }
 
@@ -843,11 +935,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PingAndWarm(InstanceName, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
-            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
+            gcbv::PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
             // End snippet
         }
 
@@ -857,11 +949,11 @@ namespace GoogleCSharpSnippets
             // Snippet: PingAndWarmAsync(InstanceName, CallSettings)
             // Additional: PingAndWarmAsync(InstanceName, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
-            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name);
+            gcbv::PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name);
             // End snippet
         }
 
@@ -870,12 +962,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PingAndWarm(string, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
             string appProfileId = "";
             // Make the request
-            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
+            gcbv::PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
             // End snippet
         }
 
@@ -885,12 +977,12 @@ namespace GoogleCSharpSnippets
             // Snippet: PingAndWarmAsync(string, string, CallSettings)
             // Additional: PingAndWarmAsync(string, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
             string appProfileId = "";
             // Make the request
-            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
+            gcbv::PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
             // End snippet
         }
 
@@ -899,12 +991,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PingAndWarm(InstanceName, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             string appProfileId = "";
             // Make the request
-            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
+            gcbv::PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
             // End snippet
         }
 
@@ -914,12 +1006,12 @@ namespace GoogleCSharpSnippets
             // Snippet: PingAndWarmAsync(InstanceName, string, CallSettings)
             // Additional: PingAndWarmAsync(InstanceName, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             string appProfileId = "";
             // Make the request
-            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
+            gcbv::PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
             // End snippet
         }
 
@@ -928,21 +1020,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            gcbv::ReadModifyWriteRowRequest request = new gcbv::ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 Rules =
                 {
-                    new ReadModifyWriteRule(),
+                    new gcbv::ReadModifyWriteRule(),
                 },
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
-            ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(request);
+            gcbv::ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(request);
             // End snippet
         }
 
@@ -952,21 +1044,21 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)
             // Additional: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            gcbv::ReadModifyWriteRowRequest request = new gcbv::ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 Rules =
                 {
-                    new ReadModifyWriteRule(),
+                    new gcbv::ReadModifyWriteRule(),
                 },
                 AppProfileId = "",
-                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
-            ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(request);
+            gcbv::ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(request);
             // End snippet
         }
 
@@ -975,16 +1067,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadModifyWriteRow(string, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             // Make the request
-            ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules);
+            gcbv::ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules);
             // End snippet
         }
 
@@ -994,16 +1086,16 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadModifyWriteRowAsync(string, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
             // Additional: ReadModifyWriteRowAsync(string, ByteString, IEnumerable<ReadModifyWriteRule>, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             // Make the request
-            ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
+            gcbv::ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
             // End snippet
         }
 
@@ -1012,16 +1104,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadModifyWriteRow(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             // Make the request
-            ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules);
+            gcbv::ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules);
             // End snippet
         }
 
@@ -1031,16 +1123,16 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
             // Additional: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             // Make the request
-            ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
+            gcbv::ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
             // End snippet
         }
 
@@ -1049,17 +1141,17 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadModifyWriteRow(string, ByteString, IEnumerable<ReadModifyWriteRule>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             string appProfileId = "";
             // Make the request
-            ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules, appProfileId);
+            gcbv::ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules, appProfileId);
             // End snippet
         }
 
@@ -1069,17 +1161,17 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadModifyWriteRowAsync(string, ByteString, IEnumerable<ReadModifyWriteRule>, string, CallSettings)
             // Additional: ReadModifyWriteRowAsync(string, ByteString, IEnumerable<ReadModifyWriteRule>, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             string appProfileId = "";
             // Make the request
-            ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
+            gcbv::ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
             // End snippet
         }
 
@@ -1088,17 +1180,17 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadModifyWriteRow(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             string appProfileId = "";
             // Make the request
-            ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules, appProfileId);
+            gcbv::ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules, appProfileId);
             // End snippet
         }
 
@@ -1108,17 +1200,17 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, string, CallSettings)
             // Additional: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, string, CancellationToken)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
-            IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
+            IEnumerable<gcbv::ReadModifyWriteRule> rules = new gcbv::ReadModifyWriteRule[]
             {
-                new ReadModifyWriteRule(),
+                new gcbv::ReadModifyWriteRule(),
             };
             string appProfileId = "";
             // Make the request
-            ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
+            gcbv::ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
             // End snippet
         }
 
@@ -1127,22 +1219,22 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            GenerateInitialChangeStreamPartitionsRequest request = new GenerateInitialChangeStreamPartitionsRequest
+            gcbv::GenerateInitialChangeStreamPartitionsRequest request = new gcbv::GenerateInitialChangeStreamPartitionsRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 AppProfileId = "",
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(request);
+            using gcbv::BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                gcbv::GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1154,18 +1246,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateInitialChangeStreamPartitions(string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
+            using gcbv::BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                gcbv::GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1177,18 +1269,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateInitialChangeStreamPartitions(TableName, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
+            using gcbv::BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                gcbv::GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1200,19 +1292,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateInitialChangeStreamPartitions(string, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                gcbv::GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1224,19 +1316,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateInitialChangeStreamPartitions(TableName, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                gcbv::GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1248,26 +1340,26 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadChangeStream(ReadChangeStreamRequest, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            ReadChangeStreamRequest request = new ReadChangeStreamRequest
+            gcbv::ReadChangeStreamRequest request = new gcbv::ReadChangeStreamRequest
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 AppProfileId = "",
-                Partition = new StreamPartition(),
+                Partition = new gcbv::StreamPartition(),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
                 HeartbeatDuration = new Duration(),
             };
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
+            using gcbv::BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadChangeStreamResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadChangeStreamResponse responseItem = responseStream.Current;
+                gcbv::ReadChangeStreamResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1279,18 +1371,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadChangeStream(string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
+            using gcbv::BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadChangeStreamResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadChangeStreamResponse responseItem = responseStream.Current;
+                gcbv::ReadChangeStreamResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1302,18 +1394,18 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadChangeStream(TableName, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
+            using gcbv::BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadChangeStreamResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadChangeStreamResponse responseItem = responseStream.Current;
+                gcbv::ReadChangeStreamResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1325,19 +1417,19 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadChangeStream(string, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadChangeStreamResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadChangeStreamResponse responseItem = responseStream.Current;
+                gcbv::ReadChangeStreamResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -1349,19 +1441,154 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadChangeStream(TableName, string, CallSettings)
             // Create client
-            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
+            using gcbv::BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcbv::ReadChangeStreamResponse> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                ReadChangeStreamResponse responseItem = responseStream.Current;
+                gcbv::ReadChangeStreamResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteQuery</summary>
+        public async Task ExecuteQueryRequestObject()
+        {
+            // Snippet: ExecuteQuery(ExecuteQueryRequest, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            gcbv::ExecuteQueryRequest request = new gcbv::ExecuteQueryRequest
+            {
+                InstanceNameAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+                Query = "",
+                ProtoFormat = new gcbv::ProtoFormat(),
+                Params =
+                {
+                    {
+                        "",
+                        new gcbv::Value()
+                    },
+                },
+                ResumeToken = ByteString.Empty,
+            };
+            // Make the request, returning a streaming response
+            using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcbv::ExecuteQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcbv::ExecuteQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteQuery</summary>
+        public async Task ExecuteQuery1()
+        {
+            // Snippet: ExecuteQuery(string, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
+            string query = "";
+            // Make the request, returning a streaming response
+            using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcbv::ExecuteQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcbv::ExecuteQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteQuery</summary>
+        public async Task ExecuteQuery1ResourceNames()
+        {
+            // Snippet: ExecuteQuery(InstanceName, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string query = "";
+            // Make the request, returning a streaming response
+            using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcbv::ExecuteQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcbv::ExecuteQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteQuery</summary>
+        public async Task ExecuteQuery2()
+        {
+            // Snippet: ExecuteQuery(string, string, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
+            string query = "";
+            string appProfileId = "";
+            // Make the request, returning a streaming response
+            using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query, appProfileId);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcbv::ExecuteQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcbv::ExecuteQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteQuery</summary>
+        public async Task ExecuteQuery2ResourceNames()
+        {
+            // Snippet: ExecuteQuery(InstanceName, string, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string query = "";
+            string appProfileId = "";
+            // Make the request, returning a streaming response
+            using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query, appProfileId);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcbv::ExecuteQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcbv::ExecuteQueryResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed

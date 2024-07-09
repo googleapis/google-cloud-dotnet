@@ -55,6 +55,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowSettings = existing.ReadModifyWriteRowSettings;
             GenerateInitialChangeStreamPartitionsSettings = existing.GenerateInitialChangeStreamPartitionsSettings;
             ReadChangeStreamSettings = existing.ReadChangeStreamSettings;
+            ExecuteQuerySettings = existing.ExecuteQuerySettings;
             OnCopy(existing);
         }
 
@@ -179,6 +180,18 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ReadChangeStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(43200000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.ExecuteQuery</c> and <c>BigtableServiceApiClient.ExecuteQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableServiceApiSettings"/> object.</returns>
@@ -2686,6 +2699,112 @@ namespace Google.Cloud.Bigtable.V2
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
+
+        /// <summary>
+        /// Server streaming methods for <see cref="ExecuteQuery(ExecuteQueryRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class ExecuteQueryStream : gaxgrpc::ServerStreamingBase<ExecuteQueryResponse>
+        {
+        }
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ExecuteQueryStream ExecuteQuery(string instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for replication. If not specified,
+        /// the `default` application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ExecuteQueryStream ExecuteQuery(string instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for replication. If not specified,
+        /// the `default` application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
     }
 
     /// <summary>BigtableServiceApi client wrapper implementation, for convenient use.</summary>
@@ -2711,6 +2830,8 @@ namespace Google.Cloud.Bigtable.V2
         private readonly gaxgrpc::ApiServerStreamingCall<GenerateInitialChangeStreamPartitionsRequest, GenerateInitialChangeStreamPartitionsResponse> _callGenerateInitialChangeStreamPartitions;
 
         private readonly gaxgrpc::ApiServerStreamingCall<ReadChangeStreamRequest, ReadChangeStreamResponse> _callReadChangeStream;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<ExecuteQueryRequest, ExecuteQueryResponse> _callExecuteQuery;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableServiceApi service, with the specified gRPC client and settings.
@@ -2754,6 +2875,9 @@ namespace Google.Cloud.Bigtable.V2
             _callReadChangeStream = clientHelper.BuildApiCall<ReadChangeStreamRequest, ReadChangeStreamResponse>("ReadChangeStream", grpcClient.ReadChangeStream, effectiveSettings.ReadChangeStreamSettings).WithGoogleRequestParam("table_name", request => request.TableName);
             Modify_ApiCall(ref _callReadChangeStream);
             Modify_ReadChangeStreamApiCall(ref _callReadChangeStream);
+            _callExecuteQuery = clientHelper.BuildApiCall<ExecuteQueryRequest, ExecuteQueryResponse>("ExecuteQuery", grpcClient.ExecuteQuery, effectiveSettings.ExecuteQuerySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ExecuteQueryRequest>().WithExtractedParameter("name", "^(projects/[^/]+/instances/[^/]+)/?$", request => request.InstanceName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            Modify_ApiCall(ref _callExecuteQuery);
+            Modify_ExecuteQueryApiCall(ref _callExecuteQuery);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2779,6 +2903,8 @@ namespace Google.Cloud.Bigtable.V2
 
         partial void Modify_ReadChangeStreamApiCall(ref gaxgrpc::ApiServerStreamingCall<ReadChangeStreamRequest, ReadChangeStreamResponse> call);
 
+        partial void Modify_ExecuteQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<ExecuteQueryRequest, ExecuteQueryResponse> call);
+
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BigtableServiceApi client</summary>
@@ -2801,6 +2927,8 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_GenerateInitialChangeStreamPartitionsRequest(ref GenerateInitialChangeStreamPartitionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReadChangeStreamRequest(ref ReadChangeStreamRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteQueryRequest(ref ExecuteQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         internal sealed partial class ReadRowsStreamImpl : ReadRowsStream
         {
@@ -3030,6 +3158,27 @@ namespace Google.Cloud.Bigtable.V2
         {
             Modify_ReadChangeStreamRequest(ref request, ref callSettings);
             return new ReadChangeStreamStreamImpl(_callReadChangeStream.Call(request, callSettings));
+        }
+
+        internal sealed partial class ExecuteQueryStreamImpl : ExecuteQueryStream
+        {
+            /// <summary>Construct the server streaming method for <c>ExecuteQuery</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public ExecuteQueryStreamImpl(grpccore::AsyncServerStreamingCall<ExecuteQueryResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<ExecuteQueryResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteQueryRequest(ref request, ref callSettings);
+            return new ExecuteQueryStreamImpl(_callExecuteQuery.Call(request, callSettings));
         }
     }
 }

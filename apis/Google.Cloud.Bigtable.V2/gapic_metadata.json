@@ -16,6 +16,12 @@
                 "CheckAndMutateRowAsync"
               ]
             },
+            "ExecuteQuery": {
+              "methods": [
+                "ExecuteQuery",
+                "ExecuteQueryAsync"
+              ]
+            },
             "GenerateInitialChangeStreamPartitions": {
               "methods": [
                 "GenerateInitialChangeStreamPartitions",

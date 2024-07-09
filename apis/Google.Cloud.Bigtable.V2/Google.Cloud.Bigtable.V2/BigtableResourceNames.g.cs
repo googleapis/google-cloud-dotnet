@@ -462,4 +462,16 @@ namespace Google.Cloud.Bigtable.V2
             set => TableName = value?.ToString() ?? "";
         }
     }
+
+    public partial class ExecuteQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="InstanceName"/> resource name property.
+        /// </summary>
+        public gcbcv::InstanceName InstanceNameAsInstanceName
+        {
+            get => string.IsNullOrEmpty(InstanceName) ? null : gcbcv::InstanceName.Parse(InstanceName, allowUnparsed: true);
+            set => InstanceName = value?.ToString() ?? "";
+        }
+    }
 }
