@@ -654,6 +654,93 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1ResourceNames4()
+        {
+            // Snippet: CreateMuteConfig(OrganizationLocationName, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1ResourceNames4Async()
+        {
+            // Snippet: CreateMuteConfigAsync(OrganizationLocationName, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(OrganizationLocationName, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1ResourceNames5()
+        {
+            // Snippet: CreateMuteConfig(FolderLocationName, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1ResourceNames5Async()
+        {
+            // Snippet: CreateMuteConfigAsync(FolderLocationName, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(FolderLocationName, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1ResourceNames6()
+        {
+            // Snippet: CreateMuteConfig(LocationName, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1ResourceNames6Async()
+        {
+            // Snippet: CreateMuteConfigAsync(LocationName, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(LocationName, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
         public void CreateMuteConfig2()
         {
             // Snippet: CreateMuteConfig(string, MuteConfig, string, CallSettings)
@@ -770,6 +857,99 @@ namespace GoogleCSharpSnippets
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2ResourceNames4()
+        {
+            // Snippet: CreateMuteConfig(OrganizationLocationName, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2ResourceNames4Async()
+        {
+            // Snippet: CreateMuteConfigAsync(OrganizationLocationName, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(OrganizationLocationName, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2ResourceNames5()
+        {
+            // Snippet: CreateMuteConfig(FolderLocationName, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2ResourceNames5Async()
+        {
+            // Snippet: CreateMuteConfigAsync(FolderLocationName, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(FolderLocationName, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2ResourceNames6()
+        {
+            // Snippet: CreateMuteConfig(LocationName, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2ResourceNames6Async()
+        {
+            // Snippet: CreateMuteConfigAsync(LocationName, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(LocationName, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             MuteConfig muteConfig = new MuteConfig();
             string muteConfigId = "";
             // Make the request
@@ -1312,6 +1492,180 @@ namespace GoogleCSharpSnippets
             SecurityHealthAnalyticsCustomModuleName name = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]");
             // Make the request
             await securityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSimulation</summary>
+        public void GetSimulationRequestObject()
+        {
+            // Snippet: GetSimulation(GetSimulationRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetSimulationRequest request = new GetSimulationRequest
+            {
+                SimulationName = SimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]"),
+            };
+            // Make the request
+            Simulation response = securityCenterClient.GetSimulation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSimulationAsync</summary>
+        public async Task GetSimulationRequestObjectAsync()
+        {
+            // Snippet: GetSimulationAsync(GetSimulationRequest, CallSettings)
+            // Additional: GetSimulationAsync(GetSimulationRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSimulationRequest request = new GetSimulationRequest
+            {
+                SimulationName = SimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]"),
+            };
+            // Make the request
+            Simulation response = await securityCenterClient.GetSimulationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSimulation</summary>
+        public void GetSimulation()
+        {
+            // Snippet: GetSimulation(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/simulations/[SIMULATION]";
+            // Make the request
+            Simulation response = securityCenterClient.GetSimulation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSimulationAsync</summary>
+        public async Task GetSimulationAsync()
+        {
+            // Snippet: GetSimulationAsync(string, CallSettings)
+            // Additional: GetSimulationAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/simulations/[SIMULATION]";
+            // Make the request
+            Simulation response = await securityCenterClient.GetSimulationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSimulation</summary>
+        public void GetSimulationResourceNames()
+        {
+            // Snippet: GetSimulation(SimulationName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SimulationName name = SimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]");
+            // Make the request
+            Simulation response = securityCenterClient.GetSimulation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSimulationAsync</summary>
+        public async Task GetSimulationResourceNamesAsync()
+        {
+            // Snippet: GetSimulationAsync(SimulationName, CallSettings)
+            // Additional: GetSimulationAsync(SimulationName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SimulationName name = SimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]");
+            // Make the request
+            Simulation response = await securityCenterClient.GetSimulationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValuedResource</summary>
+        public void GetValuedResourceRequestObject()
+        {
+            // Snippet: GetValuedResource(GetValuedResourceRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetValuedResourceRequest request = new GetValuedResourceRequest
+            {
+                ValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+            };
+            // Make the request
+            ValuedResource response = securityCenterClient.GetValuedResource(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValuedResourceAsync</summary>
+        public async Task GetValuedResourceRequestObjectAsync()
+        {
+            // Snippet: GetValuedResourceAsync(GetValuedResourceRequest, CallSettings)
+            // Additional: GetValuedResourceAsync(GetValuedResourceRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetValuedResourceRequest request = new GetValuedResourceRequest
+            {
+                ValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+            };
+            // Make the request
+            ValuedResource response = await securityCenterClient.GetValuedResourceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValuedResource</summary>
+        public void GetValuedResource()
+        {
+            // Snippet: GetValuedResource(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            // Make the request
+            ValuedResource response = securityCenterClient.GetValuedResource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValuedResourceAsync</summary>
+        public async Task GetValuedResourceAsync()
+        {
+            // Snippet: GetValuedResourceAsync(string, CallSettings)
+            // Additional: GetValuedResourceAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            // Make the request
+            ValuedResource response = await securityCenterClient.GetValuedResourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValuedResource</summary>
+        public void GetValuedResourceResourceNames()
+        {
+            // Snippet: GetValuedResource(ValuedResourceName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ValuedResourceName name = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            // Make the request
+            ValuedResource response = securityCenterClient.GetValuedResource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValuedResourceAsync</summary>
+        public async Task GetValuedResourceResourceNamesAsync()
+        {
+            // Snippet: GetValuedResourceAsync(ValuedResourceName, CallSettings)
+            // Additional: GetValuedResourceAsync(ValuedResourceName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ValuedResourceName name = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            // Make the request
+            ValuedResource response = await securityCenterClient.GetValuedResourceAsync(name);
             // End snippet
         }
 
@@ -3320,6 +3674,276 @@ namespace GoogleCSharpSnippets
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsResourceNames4()
+        {
+            // Snippet: ListMuteConfigs(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsResourceNames4Async()
+        {
+            // Snippet: ListMuteConfigsAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsResourceNames5()
+        {
+            // Snippet: ListMuteConfigs(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsResourceNames5Async()
+        {
+            // Snippet: ListMuteConfigsAsync(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsResourceNames6()
+        {
+            // Snippet: ListMuteConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsResourceNames6Async()
+        {
+            // Snippet: ListMuteConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
 
@@ -6768,6 +7392,2562 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEventThreatDetectionCustomModule</summary>
+        public void CreateEventThreatDetectionCustomModuleRequestObject()
+        {
+            // Snippet: CreateEventThreatDetectionCustomModule(CreateEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            CreateEventThreatDetectionCustomModuleRequest request = new CreateEventThreatDetectionCustomModuleRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+                EventThreatDetectionCustomModule = new EventThreatDetectionCustomModule(),
+            };
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.CreateEventThreatDetectionCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEventThreatDetectionCustomModuleAsync</summary>
+        public async Task CreateEventThreatDetectionCustomModuleRequestObjectAsync()
+        {
+            // Snippet: CreateEventThreatDetectionCustomModuleAsync(CreateEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Additional: CreateEventThreatDetectionCustomModuleAsync(CreateEventThreatDetectionCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateEventThreatDetectionCustomModuleRequest request = new CreateEventThreatDetectionCustomModuleRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+                EventThreatDetectionCustomModule = new EventThreatDetectionCustomModule(),
+            };
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.CreateEventThreatDetectionCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEventThreatDetectionCustomModule</summary>
+        public void CreateEventThreatDetectionCustomModule()
+        {
+            // Snippet: CreateEventThreatDetectionCustomModule(string, EventThreatDetectionCustomModule, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            EventThreatDetectionCustomModule eventThreatDetectionCustomModule = new EventThreatDetectionCustomModule();
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.CreateEventThreatDetectionCustomModule(parent, eventThreatDetectionCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEventThreatDetectionCustomModuleAsync</summary>
+        public async Task CreateEventThreatDetectionCustomModuleAsync()
+        {
+            // Snippet: CreateEventThreatDetectionCustomModuleAsync(string, EventThreatDetectionCustomModule, CallSettings)
+            // Additional: CreateEventThreatDetectionCustomModuleAsync(string, EventThreatDetectionCustomModule, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            EventThreatDetectionCustomModule eventThreatDetectionCustomModule = new EventThreatDetectionCustomModule();
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.CreateEventThreatDetectionCustomModuleAsync(parent, eventThreatDetectionCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEventThreatDetectionCustomModule</summary>
+        public void CreateEventThreatDetectionCustomModuleResourceNames()
+        {
+            // Snippet: CreateEventThreatDetectionCustomModule(EventThreatDetectionSettingsName, EventThreatDetectionCustomModule, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            EventThreatDetectionCustomModule eventThreatDetectionCustomModule = new EventThreatDetectionCustomModule();
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.CreateEventThreatDetectionCustomModule(parent, eventThreatDetectionCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEventThreatDetectionCustomModuleAsync</summary>
+        public async Task CreateEventThreatDetectionCustomModuleResourceNamesAsync()
+        {
+            // Snippet: CreateEventThreatDetectionCustomModuleAsync(EventThreatDetectionSettingsName, EventThreatDetectionCustomModule, CallSettings)
+            // Additional: CreateEventThreatDetectionCustomModuleAsync(EventThreatDetectionSettingsName, EventThreatDetectionCustomModule, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            EventThreatDetectionCustomModule eventThreatDetectionCustomModule = new EventThreatDetectionCustomModule();
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.CreateEventThreatDetectionCustomModuleAsync(parent, eventThreatDetectionCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventThreatDetectionCustomModule</summary>
+        public void DeleteEventThreatDetectionCustomModuleRequestObject()
+        {
+            // Snippet: DeleteEventThreatDetectionCustomModule(DeleteEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            DeleteEventThreatDetectionCustomModuleRequest request = new DeleteEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]"),
+            };
+            // Make the request
+            securityCenterClient.DeleteEventThreatDetectionCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventThreatDetectionCustomModuleAsync</summary>
+        public async Task DeleteEventThreatDetectionCustomModuleRequestObjectAsync()
+        {
+            // Snippet: DeleteEventThreatDetectionCustomModuleAsync(DeleteEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Additional: DeleteEventThreatDetectionCustomModuleAsync(DeleteEventThreatDetectionCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteEventThreatDetectionCustomModuleRequest request = new DeleteEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]"),
+            };
+            // Make the request
+            await securityCenterClient.DeleteEventThreatDetectionCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventThreatDetectionCustomModule</summary>
+        public void DeleteEventThreatDetectionCustomModule()
+        {
+            // Snippet: DeleteEventThreatDetectionCustomModule(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/eventThreatDetectionSettings/customModules/[MODULE]";
+            // Make the request
+            securityCenterClient.DeleteEventThreatDetectionCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventThreatDetectionCustomModuleAsync</summary>
+        public async Task DeleteEventThreatDetectionCustomModuleAsync()
+        {
+            // Snippet: DeleteEventThreatDetectionCustomModuleAsync(string, CallSettings)
+            // Additional: DeleteEventThreatDetectionCustomModuleAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/eventThreatDetectionSettings/customModules/[MODULE]";
+            // Make the request
+            await securityCenterClient.DeleteEventThreatDetectionCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventThreatDetectionCustomModule</summary>
+        public void DeleteEventThreatDetectionCustomModuleResourceNames()
+        {
+            // Snippet: DeleteEventThreatDetectionCustomModule(EventThreatDetectionCustomModuleName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionCustomModuleName name = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]");
+            // Make the request
+            securityCenterClient.DeleteEventThreatDetectionCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventThreatDetectionCustomModuleAsync</summary>
+        public async Task DeleteEventThreatDetectionCustomModuleResourceNamesAsync()
+        {
+            // Snippet: DeleteEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName, CallSettings)
+            // Additional: DeleteEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionCustomModuleName name = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]");
+            // Make the request
+            await securityCenterClient.DeleteEventThreatDetectionCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEventThreatDetectionCustomModule</summary>
+        public void GetEventThreatDetectionCustomModuleRequestObject()
+        {
+            // Snippet: GetEventThreatDetectionCustomModule(GetEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetEventThreatDetectionCustomModuleRequest request = new GetEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]"),
+            };
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.GetEventThreatDetectionCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEventThreatDetectionCustomModuleAsync</summary>
+        public async Task GetEventThreatDetectionCustomModuleRequestObjectAsync()
+        {
+            // Snippet: GetEventThreatDetectionCustomModuleAsync(GetEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Additional: GetEventThreatDetectionCustomModuleAsync(GetEventThreatDetectionCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEventThreatDetectionCustomModuleRequest request = new GetEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]"),
+            };
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.GetEventThreatDetectionCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEventThreatDetectionCustomModule</summary>
+        public void GetEventThreatDetectionCustomModule()
+        {
+            // Snippet: GetEventThreatDetectionCustomModule(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/eventThreatDetectionSettings/customModules/[MODULE]";
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.GetEventThreatDetectionCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEventThreatDetectionCustomModuleAsync</summary>
+        public async Task GetEventThreatDetectionCustomModuleAsync()
+        {
+            // Snippet: GetEventThreatDetectionCustomModuleAsync(string, CallSettings)
+            // Additional: GetEventThreatDetectionCustomModuleAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/eventThreatDetectionSettings/customModules/[MODULE]";
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.GetEventThreatDetectionCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEventThreatDetectionCustomModule</summary>
+        public void GetEventThreatDetectionCustomModuleResourceNames()
+        {
+            // Snippet: GetEventThreatDetectionCustomModule(EventThreatDetectionCustomModuleName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionCustomModuleName name = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]");
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.GetEventThreatDetectionCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEventThreatDetectionCustomModuleAsync</summary>
+        public async Task GetEventThreatDetectionCustomModuleResourceNamesAsync()
+        {
+            // Snippet: GetEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName, CallSettings)
+            // Additional: GetEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionCustomModuleName name = EventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]");
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.GetEventThreatDetectionCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantEventThreatDetectionCustomModules</summary>
+        public void ListDescendantEventThreatDetectionCustomModulesRequestObject()
+        {
+            // Snippet: ListDescendantEventThreatDetectionCustomModules(ListDescendantEventThreatDetectionCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListDescendantEventThreatDetectionCustomModulesRequest request = new ListDescendantEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListDescendantEventThreatDetectionCustomModules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListDescendantEventThreatDetectionCustomModulesRequestObjectAsync()
+        {
+            // Snippet: ListDescendantEventThreatDetectionCustomModulesAsync(ListDescendantEventThreatDetectionCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDescendantEventThreatDetectionCustomModulesRequest request = new ListDescendantEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListDescendantEventThreatDetectionCustomModulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantEventThreatDetectionCustomModules</summary>
+        public void ListDescendantEventThreatDetectionCustomModules()
+        {
+            // Snippet: ListDescendantEventThreatDetectionCustomModules(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            // Make the request
+            PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListDescendantEventThreatDetectionCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListDescendantEventThreatDetectionCustomModulesAsync()
+        {
+            // Snippet: ListDescendantEventThreatDetectionCustomModulesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            // Make the request
+            PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListDescendantEventThreatDetectionCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantEventThreatDetectionCustomModules</summary>
+        public void ListDescendantEventThreatDetectionCustomModulesResourceNames()
+        {
+            // Snippet: ListDescendantEventThreatDetectionCustomModules(EventThreatDetectionSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListDescendantEventThreatDetectionCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListDescendantEventThreatDetectionCustomModulesResourceNamesAsync()
+        {
+            // Snippet: ListDescendantEventThreatDetectionCustomModulesAsync(EventThreatDetectionSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListDescendantEventThreatDetectionCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEventThreatDetectionCustomModules</summary>
+        public void ListEventThreatDetectionCustomModulesRequestObject()
+        {
+            // Snippet: ListEventThreatDetectionCustomModules(ListEventThreatDetectionCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListEventThreatDetectionCustomModulesRequest request = new ListEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListEventThreatDetectionCustomModules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListEventThreatDetectionCustomModulesRequestObjectAsync()
+        {
+            // Snippet: ListEventThreatDetectionCustomModulesAsync(ListEventThreatDetectionCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEventThreatDetectionCustomModulesRequest request = new ListEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListEventThreatDetectionCustomModulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEventThreatDetectionCustomModules</summary>
+        public void ListEventThreatDetectionCustomModules()
+        {
+            // Snippet: ListEventThreatDetectionCustomModules(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            // Make the request
+            PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListEventThreatDetectionCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListEventThreatDetectionCustomModulesAsync()
+        {
+            // Snippet: ListEventThreatDetectionCustomModulesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            // Make the request
+            PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListEventThreatDetectionCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEventThreatDetectionCustomModules</summary>
+        public void ListEventThreatDetectionCustomModulesResourceNames()
+        {
+            // Snippet: ListEventThreatDetectionCustomModules(EventThreatDetectionSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListEventThreatDetectionCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListEventThreatDetectionCustomModulesResourceNamesAsync()
+        {
+            // Snippet: ListEventThreatDetectionCustomModulesAsync(EventThreatDetectionSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterClient.ListEventThreatDetectionCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEventThreatDetectionCustomModule</summary>
+        public void UpdateEventThreatDetectionCustomModuleRequestObject()
+        {
+            // Snippet: UpdateEventThreatDetectionCustomModule(UpdateEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateEventThreatDetectionCustomModuleRequest request = new UpdateEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModule = new EventThreatDetectionCustomModule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.UpdateEventThreatDetectionCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEventThreatDetectionCustomModuleAsync</summary>
+        public async Task UpdateEventThreatDetectionCustomModuleRequestObjectAsync()
+        {
+            // Snippet: UpdateEventThreatDetectionCustomModuleAsync(UpdateEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Additional: UpdateEventThreatDetectionCustomModuleAsync(UpdateEventThreatDetectionCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEventThreatDetectionCustomModuleRequest request = new UpdateEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModule = new EventThreatDetectionCustomModule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.UpdateEventThreatDetectionCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEventThreatDetectionCustomModule</summary>
+        public void UpdateEventThreatDetectionCustomModule()
+        {
+            // Snippet: UpdateEventThreatDetectionCustomModule(EventThreatDetectionCustomModule, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionCustomModule eventThreatDetectionCustomModule = new EventThreatDetectionCustomModule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            EventThreatDetectionCustomModule response = securityCenterClient.UpdateEventThreatDetectionCustomModule(eventThreatDetectionCustomModule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEventThreatDetectionCustomModuleAsync</summary>
+        public async Task UpdateEventThreatDetectionCustomModuleAsync()
+        {
+            // Snippet: UpdateEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModule, FieldMask, CallSettings)
+            // Additional: UpdateEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModule, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionCustomModule eventThreatDetectionCustomModule = new EventThreatDetectionCustomModule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            EventThreatDetectionCustomModule response = await securityCenterClient.UpdateEventThreatDetectionCustomModuleAsync(eventThreatDetectionCustomModule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ValidateEventThreatDetectionCustomModule</summary>
+        public void ValidateEventThreatDetectionCustomModuleRequestObject()
+        {
+            // Snippet: ValidateEventThreatDetectionCustomModule(ValidateEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ValidateEventThreatDetectionCustomModuleRequest request = new ValidateEventThreatDetectionCustomModuleRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+                RawText = "",
+                Type = "",
+            };
+            // Make the request
+            ValidateEventThreatDetectionCustomModuleResponse response = securityCenterClient.ValidateEventThreatDetectionCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ValidateEventThreatDetectionCustomModuleAsync</summary>
+        public async Task ValidateEventThreatDetectionCustomModuleRequestObjectAsync()
+        {
+            // Snippet: ValidateEventThreatDetectionCustomModuleAsync(ValidateEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Additional: ValidateEventThreatDetectionCustomModuleAsync(ValidateEventThreatDetectionCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ValidateEventThreatDetectionCustomModuleRequest request = new ValidateEventThreatDetectionCustomModuleRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+                RawText = "",
+                Type = "",
+            };
+            // Make the request
+            ValidateEventThreatDetectionCustomModuleResponse response = await securityCenterClient.ValidateEventThreatDetectionCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveEventThreatDetectionCustomModule</summary>
+        public void GetEffectiveEventThreatDetectionCustomModuleRequestObject()
+        {
+            // Snippet: GetEffectiveEventThreatDetectionCustomModule(GetEffectiveEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetEffectiveEventThreatDetectionCustomModuleRequest request = new GetEffectiveEventThreatDetectionCustomModuleRequest
+            {
+                EffectiveEventThreatDetectionCustomModuleName = EffectiveEventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]"),
+            };
+            // Make the request
+            EffectiveEventThreatDetectionCustomModule response = securityCenterClient.GetEffectiveEventThreatDetectionCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveEventThreatDetectionCustomModuleAsync</summary>
+        public async Task GetEffectiveEventThreatDetectionCustomModuleRequestObjectAsync()
+        {
+            // Snippet: GetEffectiveEventThreatDetectionCustomModuleAsync(GetEffectiveEventThreatDetectionCustomModuleRequest, CallSettings)
+            // Additional: GetEffectiveEventThreatDetectionCustomModuleAsync(GetEffectiveEventThreatDetectionCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEffectiveEventThreatDetectionCustomModuleRequest request = new GetEffectiveEventThreatDetectionCustomModuleRequest
+            {
+                EffectiveEventThreatDetectionCustomModuleName = EffectiveEventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]"),
+            };
+            // Make the request
+            EffectiveEventThreatDetectionCustomModule response = await securityCenterClient.GetEffectiveEventThreatDetectionCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveEventThreatDetectionCustomModule</summary>
+        public void GetEffectiveEventThreatDetectionCustomModule()
+        {
+            // Snippet: GetEffectiveEventThreatDetectionCustomModule(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/eventThreatDetectionSettings/effectiveCustomModules/[MODULE]";
+            // Make the request
+            EffectiveEventThreatDetectionCustomModule response = securityCenterClient.GetEffectiveEventThreatDetectionCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveEventThreatDetectionCustomModuleAsync</summary>
+        public async Task GetEffectiveEventThreatDetectionCustomModuleAsync()
+        {
+            // Snippet: GetEffectiveEventThreatDetectionCustomModuleAsync(string, CallSettings)
+            // Additional: GetEffectiveEventThreatDetectionCustomModuleAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/eventThreatDetectionSettings/effectiveCustomModules/[MODULE]";
+            // Make the request
+            EffectiveEventThreatDetectionCustomModule response = await securityCenterClient.GetEffectiveEventThreatDetectionCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveEventThreatDetectionCustomModule</summary>
+        public void GetEffectiveEventThreatDetectionCustomModuleResourceNames()
+        {
+            // Snippet: GetEffectiveEventThreatDetectionCustomModule(EffectiveEventThreatDetectionCustomModuleName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EffectiveEventThreatDetectionCustomModuleName name = EffectiveEventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]");
+            // Make the request
+            EffectiveEventThreatDetectionCustomModule response = securityCenterClient.GetEffectiveEventThreatDetectionCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveEventThreatDetectionCustomModuleAsync</summary>
+        public async Task GetEffectiveEventThreatDetectionCustomModuleResourceNamesAsync()
+        {
+            // Snippet: GetEffectiveEventThreatDetectionCustomModuleAsync(EffectiveEventThreatDetectionCustomModuleName, CallSettings)
+            // Additional: GetEffectiveEventThreatDetectionCustomModuleAsync(EffectiveEventThreatDetectionCustomModuleName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EffectiveEventThreatDetectionCustomModuleName name = EffectiveEventThreatDetectionCustomModuleName.FromOrganizationModule("[ORGANIZATION]", "[MODULE]");
+            // Make the request
+            EffectiveEventThreatDetectionCustomModule response = await securityCenterClient.GetEffectiveEventThreatDetectionCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveEventThreatDetectionCustomModules</summary>
+        public void ListEffectiveEventThreatDetectionCustomModulesRequestObject()
+        {
+            // Snippet: ListEffectiveEventThreatDetectionCustomModules(ListEffectiveEventThreatDetectionCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListEffectiveEventThreatDetectionCustomModulesRequest request = new ListEffectiveEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterClient.ListEffectiveEventThreatDetectionCustomModules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveEventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveEventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveEventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveEventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListEffectiveEventThreatDetectionCustomModulesRequestObjectAsync()
+        {
+            // Snippet: ListEffectiveEventThreatDetectionCustomModulesAsync(ListEffectiveEventThreatDetectionCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEffectiveEventThreatDetectionCustomModulesRequest request = new ListEffectiveEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterClient.ListEffectiveEventThreatDetectionCustomModulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveEventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveEventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveEventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveEventThreatDetectionCustomModules</summary>
+        public void ListEffectiveEventThreatDetectionCustomModules()
+        {
+            // Snippet: ListEffectiveEventThreatDetectionCustomModules(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            // Make the request
+            PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterClient.ListEffectiveEventThreatDetectionCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveEventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveEventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveEventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveEventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListEffectiveEventThreatDetectionCustomModulesAsync()
+        {
+            // Snippet: ListEffectiveEventThreatDetectionCustomModulesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/eventThreatDetectionSettings";
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterClient.ListEffectiveEventThreatDetectionCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveEventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveEventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveEventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveEventThreatDetectionCustomModules</summary>
+        public void ListEffectiveEventThreatDetectionCustomModulesResourceNames()
+        {
+            // Snippet: ListEffectiveEventThreatDetectionCustomModules(EventThreatDetectionSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterClient.ListEffectiveEventThreatDetectionCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveEventThreatDetectionCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveEventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveEventThreatDetectionCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveEventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveEventThreatDetectionCustomModulesAsync</summary>
+        public async Task ListEffectiveEventThreatDetectionCustomModulesResourceNamesAsync()
+        {
+            // Snippet: ListEffectiveEventThreatDetectionCustomModulesAsync(EventThreatDetectionSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EventThreatDetectionSettingsName parent = EventThreatDetectionSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterClient.ListEffectiveEventThreatDetectionCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveEventThreatDetectionCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveEventThreatDetectionCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveEventThreatDetectionCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigs</summary>
+        public void BatchCreateResourceValueConfigsRequestObject()
+        {
+            // Snippet: BatchCreateResourceValueConfigs(BatchCreateResourceValueConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            BatchCreateResourceValueConfigsRequest request = new BatchCreateResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                Requests =
+                {
+                    new CreateResourceValueConfigRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = securityCenterClient.BatchCreateResourceValueConfigs(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigsAsync</summary>
+        public async Task BatchCreateResourceValueConfigsRequestObjectAsync()
+        {
+            // Snippet: BatchCreateResourceValueConfigsAsync(BatchCreateResourceValueConfigsRequest, CallSettings)
+            // Additional: BatchCreateResourceValueConfigsAsync(BatchCreateResourceValueConfigsRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateResourceValueConfigsRequest request = new BatchCreateResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                Requests =
+                {
+                    new CreateResourceValueConfigRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = await securityCenterClient.BatchCreateResourceValueConfigsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigs</summary>
+        public void BatchCreateResourceValueConfigs()
+        {
+            // Snippet: BatchCreateResourceValueConfigs(string, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
+            {
+                new CreateResourceValueConfigRequest(),
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = securityCenterClient.BatchCreateResourceValueConfigs(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigsAsync</summary>
+        public async Task BatchCreateResourceValueConfigsAsync()
+        {
+            // Snippet: BatchCreateResourceValueConfigsAsync(string, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
+            // Additional: BatchCreateResourceValueConfigsAsync(string, IEnumerable<CreateResourceValueConfigRequest>, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
+            {
+                new CreateResourceValueConfigRequest(),
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = await securityCenterClient.BatchCreateResourceValueConfigsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigs</summary>
+        public void BatchCreateResourceValueConfigsResourceNames()
+        {
+            // Snippet: BatchCreateResourceValueConfigs(OrganizationName, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
+            {
+                new CreateResourceValueConfigRequest(),
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = securityCenterClient.BatchCreateResourceValueConfigs(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateResourceValueConfigsAsync</summary>
+        public async Task BatchCreateResourceValueConfigsResourceNamesAsync()
+        {
+            // Snippet: BatchCreateResourceValueConfigsAsync(OrganizationName, IEnumerable<CreateResourceValueConfigRequest>, CallSettings)
+            // Additional: BatchCreateResourceValueConfigsAsync(OrganizationName, IEnumerable<CreateResourceValueConfigRequest>, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            IEnumerable<CreateResourceValueConfigRequest> requests = new CreateResourceValueConfigRequest[]
+            {
+                new CreateResourceValueConfigRequest(),
+            };
+            // Make the request
+            BatchCreateResourceValueConfigsResponse response = await securityCenterClient.BatchCreateResourceValueConfigsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceValueConfig</summary>
+        public void DeleteResourceValueConfigRequestObject()
+        {
+            // Snippet: DeleteResourceValueConfig(DeleteResourceValueConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            DeleteResourceValueConfigRequest request = new DeleteResourceValueConfigRequest
+            {
+                ResourceValueConfigName = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]"),
+            };
+            // Make the request
+            securityCenterClient.DeleteResourceValueConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceValueConfigAsync</summary>
+        public async Task DeleteResourceValueConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteResourceValueConfigAsync(DeleteResourceValueConfigRequest, CallSettings)
+            // Additional: DeleteResourceValueConfigAsync(DeleteResourceValueConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteResourceValueConfigRequest request = new DeleteResourceValueConfigRequest
+            {
+                ResourceValueConfigName = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]"),
+            };
+            // Make the request
+            await securityCenterClient.DeleteResourceValueConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceValueConfig</summary>
+        public void DeleteResourceValueConfig()
+        {
+            // Snippet: DeleteResourceValueConfig(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/resourceValueConfigs/[RESOURCE_VALUE_CONFIG]";
+            // Make the request
+            securityCenterClient.DeleteResourceValueConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceValueConfigAsync</summary>
+        public async Task DeleteResourceValueConfigAsync()
+        {
+            // Snippet: DeleteResourceValueConfigAsync(string, CallSettings)
+            // Additional: DeleteResourceValueConfigAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/resourceValueConfigs/[RESOURCE_VALUE_CONFIG]";
+            // Make the request
+            await securityCenterClient.DeleteResourceValueConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceValueConfig</summary>
+        public void DeleteResourceValueConfigResourceNames()
+        {
+            // Snippet: DeleteResourceValueConfig(ResourceValueConfigName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ResourceValueConfigName name = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]");
+            // Make the request
+            securityCenterClient.DeleteResourceValueConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceValueConfigAsync</summary>
+        public async Task DeleteResourceValueConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteResourceValueConfigAsync(ResourceValueConfigName, CallSettings)
+            // Additional: DeleteResourceValueConfigAsync(ResourceValueConfigName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ResourceValueConfigName name = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]");
+            // Make the request
+            await securityCenterClient.DeleteResourceValueConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceValueConfig</summary>
+        public void GetResourceValueConfigRequestObject()
+        {
+            // Snippet: GetResourceValueConfig(GetResourceValueConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetResourceValueConfigRequest request = new GetResourceValueConfigRequest
+            {
+                ResourceValueConfigName = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]"),
+            };
+            // Make the request
+            ResourceValueConfig response = securityCenterClient.GetResourceValueConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceValueConfigAsync</summary>
+        public async Task GetResourceValueConfigRequestObjectAsync()
+        {
+            // Snippet: GetResourceValueConfigAsync(GetResourceValueConfigRequest, CallSettings)
+            // Additional: GetResourceValueConfigAsync(GetResourceValueConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetResourceValueConfigRequest request = new GetResourceValueConfigRequest
+            {
+                ResourceValueConfigName = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]"),
+            };
+            // Make the request
+            ResourceValueConfig response = await securityCenterClient.GetResourceValueConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceValueConfig</summary>
+        public void GetResourceValueConfig()
+        {
+            // Snippet: GetResourceValueConfig(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/resourceValueConfigs/[RESOURCE_VALUE_CONFIG]";
+            // Make the request
+            ResourceValueConfig response = securityCenterClient.GetResourceValueConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceValueConfigAsync</summary>
+        public async Task GetResourceValueConfigAsync()
+        {
+            // Snippet: GetResourceValueConfigAsync(string, CallSettings)
+            // Additional: GetResourceValueConfigAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/resourceValueConfigs/[RESOURCE_VALUE_CONFIG]";
+            // Make the request
+            ResourceValueConfig response = await securityCenterClient.GetResourceValueConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceValueConfig</summary>
+        public void GetResourceValueConfigResourceNames()
+        {
+            // Snippet: GetResourceValueConfig(ResourceValueConfigName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ResourceValueConfigName name = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]");
+            // Make the request
+            ResourceValueConfig response = securityCenterClient.GetResourceValueConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceValueConfigAsync</summary>
+        public async Task GetResourceValueConfigResourceNamesAsync()
+        {
+            // Snippet: GetResourceValueConfigAsync(ResourceValueConfigName, CallSettings)
+            // Additional: GetResourceValueConfigAsync(ResourceValueConfigName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ResourceValueConfigName name = ResourceValueConfigName.FromOrganizationResourceValueConfig("[ORGANIZATION]", "[RESOURCE_VALUE_CONFIG]");
+            // Make the request
+            ResourceValueConfig response = await securityCenterClient.GetResourceValueConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigs</summary>
+        public void ListResourceValueConfigsRequestObject()
+        {
+            // Snippet: ListResourceValueConfigs(ListResourceValueConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceValueConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceValueConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigsAsync</summary>
+        public async Task ListResourceValueConfigsRequestObjectAsync()
+        {
+            // Snippet: ListResourceValueConfigsAsync(ListResourceValueConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceValueConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceValueConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigs</summary>
+        public void ListResourceValueConfigs()
+        {
+            // Snippet: ListResourceValueConfigs(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceValueConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceValueConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigsAsync</summary>
+        public async Task ListResourceValueConfigsAsync()
+        {
+            // Snippet: ListResourceValueConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceValueConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceValueConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigs</summary>
+        public void ListResourceValueConfigsResourceNames()
+        {
+            // Snippet: ListResourceValueConfigs(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceValueConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceValueConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceValueConfigsAsync</summary>
+        public async Task ListResourceValueConfigsResourceNamesAsync()
+        {
+            // Snippet: ListResourceValueConfigsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> response = securityCenterClient.ListResourceValueConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceValueConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceValueConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceValueConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceValueConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceValueConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceValueConfig</summary>
+        public void UpdateResourceValueConfigRequestObject()
+        {
+            // Snippet: UpdateResourceValueConfig(UpdateResourceValueConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateResourceValueConfigRequest request = new UpdateResourceValueConfigRequest
+            {
+                ResourceValueConfig = new ResourceValueConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ResourceValueConfig response = securityCenterClient.UpdateResourceValueConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceValueConfigAsync</summary>
+        public async Task UpdateResourceValueConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateResourceValueConfigAsync(UpdateResourceValueConfigRequest, CallSettings)
+            // Additional: UpdateResourceValueConfigAsync(UpdateResourceValueConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateResourceValueConfigRequest request = new UpdateResourceValueConfigRequest
+            {
+                ResourceValueConfig = new ResourceValueConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ResourceValueConfig response = await securityCenterClient.UpdateResourceValueConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceValueConfig</summary>
+        public void UpdateResourceValueConfig()
+        {
+            // Snippet: UpdateResourceValueConfig(ResourceValueConfig, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ResourceValueConfig resourceValueConfig = new ResourceValueConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ResourceValueConfig response = securityCenterClient.UpdateResourceValueConfig(resourceValueConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceValueConfigAsync</summary>
+        public async Task UpdateResourceValueConfigAsync()
+        {
+            // Snippet: UpdateResourceValueConfigAsync(ResourceValueConfig, FieldMask, CallSettings)
+            // Additional: UpdateResourceValueConfigAsync(ResourceValueConfig, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ResourceValueConfig resourceValueConfig = new ResourceValueConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ResourceValueConfig response = await securityCenterClient.UpdateResourceValueConfigAsync(resourceValueConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResources</summary>
+        public void ListValuedResourcesRequestObject()
+        {
+            // Snippet: ListValuedResources(ListValuedResourcesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListValuedResourcesRequest request = new ListValuedResourcesRequest
+            {
+                ParentAsOrganizationSimulationName = OrganizationSimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ValuedResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListValuedResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResourcesAsync</summary>
+        public async Task ListValuedResourcesRequestObjectAsync()
+        {
+            // Snippet: ListValuedResourcesAsync(ListValuedResourcesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListValuedResourcesRequest request = new ListValuedResourcesRequest
+            {
+                ParentAsOrganizationSimulationName = OrganizationSimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResourcesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ValuedResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListValuedResourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResources</summary>
+        public void ListValuedResources()
+        {
+            // Snippet: ListValuedResources(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]";
+            // Make the request
+            PagedEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ValuedResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListValuedResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResourcesAsync</summary>
+        public async Task ListValuedResourcesAsync()
+        {
+            // Snippet: ListValuedResourcesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ValuedResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListValuedResourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResources</summary>
+        public void ListValuedResourcesResourceNames1()
+        {
+            // Snippet: ListValuedResources(OrganizationSimulationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationSimulationName parent = OrganizationSimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]");
+            // Make the request
+            PagedEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ValuedResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListValuedResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResourcesAsync</summary>
+        public async Task ListValuedResourcesResourceNames1Async()
+        {
+            // Snippet: ListValuedResourcesAsync(OrganizationSimulationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationSimulationName parent = OrganizationSimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ValuedResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListValuedResourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResources</summary>
+        public void ListValuedResourcesResourceNames2()
+        {
+            // Snippet: ListValuedResources(SimulationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SimulationName parent = SimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]");
+            // Make the request
+            PagedEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ValuedResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListValuedResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListValuedResourcesAsync</summary>
+        public async Task ListValuedResourcesResourceNames2Async()
+        {
+            // Snippet: ListValuedResourcesAsync(SimulationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SimulationName parent = SimulationName.FromOrganizationSimulation("[ORGANIZATION]", "[SIMULATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> response = securityCenterClient.ListValuedResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ValuedResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListValuedResourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ValuedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ValuedResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ValuedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPaths</summary>
+        public void ListAttackPathsRequestObject()
+        {
+            // Snippet: ListAttackPaths(ListAttackPathsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListAttackPathsRequest request = new ListAttackPathsRequest
+            {
+                ParentAsValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AttackPath item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAttackPathsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPathsAsync</summary>
+        public async Task ListAttackPathsRequestObjectAsync()
+        {
+            // Snippet: ListAttackPathsAsync(ListAttackPathsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAttackPathsRequest request = new ListAttackPathsRequest
+            {
+                ParentAsValuedResourceName = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AttackPath item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAttackPathsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPaths</summary>
+        public void ListAttackPaths()
+        {
+            // Snippet: ListAttackPaths(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            // Make the request
+            PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AttackPath item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAttackPathsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPathsAsync</summary>
+        public async Task ListAttackPathsAsync()
+        {
+            // Snippet: ListAttackPathsAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/simulations/[SIMULATION]/valuedResources/[VALUED_RESOURCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AttackPath item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAttackPathsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPaths</summary>
+        public void ListAttackPathsResourceNames()
+        {
+            // Snippet: ListAttackPaths(ValuedResourceName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ValuedResourceName parent = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            // Make the request
+            PagedEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPaths(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AttackPath item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAttackPathsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttackPathsAsync</summary>
+        public async Task ListAttackPathsResourceNamesAsync()
+        {
+            // Snippet: ListAttackPathsAsync(ValuedResourceName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ValuedResourceName parent = ValuedResourceName.FromOrganizationSimulationValuedResource("[ORGANIZATION]", "[SIMULATION]", "[VALUED_RESOURCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> response = securityCenterClient.ListAttackPathsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AttackPath item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAttackPathsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AttackPath item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AttackPath> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AttackPath item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

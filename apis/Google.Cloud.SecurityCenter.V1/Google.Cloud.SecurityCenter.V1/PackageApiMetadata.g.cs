@@ -58,6 +58,8 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return AccessReflection.Descriptor;
             yield return ApplicationReflection.Descriptor;
             yield return AssetReflection.Descriptor;
+            yield return AttackExposureReflection.Descriptor;
+            yield return AttackPathReflection.Descriptor;
             yield return BackupDisasterRecoveryReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
             yield return CloudArmorReflection.Descriptor;
@@ -68,7 +70,10 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return ContactDetailsReflection.Descriptor;
             yield return ContainerReflection.Descriptor;
             yield return DatabaseReflection.Descriptor;
+            yield return EffectiveEventThreatDetectionCustomModuleReflection.Descriptor;
             yield return EffectiveSecurityHealthAnalyticsCustomModuleReflection.Descriptor;
+            yield return EventThreatDetectionCustomModuleReflection.Descriptor;
+            yield return EventThreatDetectionCustomModuleValidationErrorsReflection.Descriptor;
             yield return ExfiltrationReflection.Descriptor;
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
@@ -91,14 +96,17 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return OrganizationSettingsReflection.Descriptor;
             yield return ProcessReflection.Descriptor;
             yield return ResourceReflection.Descriptor;
+            yield return ResourceValueConfigReflection.Descriptor;
             yield return RunAssetDiscoveryResponseReflection.Descriptor;
             yield return SecurityHealthAnalyticsCustomConfigReflection.Descriptor;
             yield return SecurityHealthAnalyticsCustomModuleReflection.Descriptor;
             yield return SecurityMarksReflection.Descriptor;
             yield return SecurityPostureReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
+            yield return SimulationReflection.Descriptor;
             yield return SourceReflection.Descriptor;
             yield return ToxicCombinationReflection.Descriptor;
+            yield return ValuedResourceReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

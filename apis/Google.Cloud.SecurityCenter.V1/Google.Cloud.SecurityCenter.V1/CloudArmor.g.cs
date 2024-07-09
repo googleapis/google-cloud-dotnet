@@ -185,8 +185,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string threatVector_ = "";
     /// <summary>
     /// Distinguish between volumetric &amp; protocol DDoS attack and
-    /// application layer attacks. For example, “L3_4” for Layer 3 and Layer 4 DDoS
-    /// attacks, or “L_7” for Layer 7 DDoS attacks.
+    /// application layer attacks. For example, "L3_4" for Layer 3 and Layer 4 DDoS
+    /// attacks, or "L_7" for Layer 7 DDoS attacks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -583,9 +583,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     /// <summary>
-    /// The type of Google Cloud Armor security policy for example, ‘backend
-    /// security policy’, ‘edge security policy’, ‘network edge security policy’,
-    /// or ‘always-on DDoS protection’.
+    /// The type of Google Cloud Armor security policy for example, 'backend
+    /// security policy', 'edge security policy', 'network edge security policy',
+    /// or 'always-on DDoS protection'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1395,7 +1395,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ClassificationFieldNumber = 3;
     private string classification_ = "";
     /// <summary>
-    /// Type of attack, for example, ‘SYN-flood’, ‘NTP-udp’, or ‘CHARGEN-udp’.
+    /// Type of attack, for example, 'SYN-flood', 'NTP-udp', or 'CHARGEN-udp'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

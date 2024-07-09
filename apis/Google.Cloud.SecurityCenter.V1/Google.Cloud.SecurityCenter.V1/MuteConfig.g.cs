@@ -27,22 +27,28 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "CjBnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbXV0ZV9jb25maWcu",
             "cHJvdG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKuAwoK",
+            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKYBQoK",
             "TXV0ZUNvbmZpZxIMCgRuYW1lGAEgASgJEhgKDGRpc3BsYXlfbmFtZRgCIAEo",
             "CUICGAESEwoLZGVzY3JpcHRpb24YAyABKAkSEwoGZmlsdGVyGAQgASgJQgPg",
             "QQISNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
             "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wQgPgQQMSHwoSbW9zdF9yZWNlbnRfZWRpdG9yGAcg",
-            "ASgJQgPgQQM6wAHqQbwBCihzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNv",
+            "ASgJQgPgQQM6qgPqQaYDCihzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNv",
             "bS9NdXRlQ29uZmlnEjZvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L211",
             "dGVDb25maWdzL3ttdXRlX2NvbmZpZ30SKmZvbGRlcnMve2ZvbGRlcn0vbXV0",
             "ZUNvbmZpZ3Mve211dGVfY29uZmlnfRIscHJvamVjdHMve3Byb2plY3R9L211",
-            "dGVDb25maWdzL3ttdXRlX2NvbmZpZ31C6QEKImNvbS5nb29nbGUuY2xvdWQu",
-            "c2VjdXJpdHljZW50ZXIudjFCD011dGVDb25maWdQcm90b1ABWkpjbG91ZC5n",
-            "b29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2Vu",
-            "dGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0",
-            "eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoC",
-            "IUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "dGVDb25maWdzL3ttdXRlX2NvbmZpZ30SS29yZ2FuaXphdGlvbnMve29yZ2Fu",
+            "aXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbXV0ZUNvbmZpZ3Mve211",
+            "dGVfY29uZmlnfRI/Zm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9tdXRlQ29uZmlncy97bXV0ZV9jb25maWd9EkFwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbXV0ZUNvbmZpZ3Mve211dGVf",
+            "Y29uZmlnfSoLbXV0ZUNvbmZpZ3MyCm11dGVDb25maWdC6QEKImNvbS5nb29n",
+            "bGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCD011dGVDb25maWdQcm90b1AB",
+            "WkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3Nl",
+            "Y3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91",
+            "ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNl",
+            "bnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -113,9 +119,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string name_ = "";
     /// <summary>
     /// This field will be ignored if provided on config creation. Format
-    /// "organizations/{organization}/muteConfigs/{mute_config}"
-    /// "folders/{folder}/muteConfigs/{mute_config}"
-    /// "projects/{project}/muteConfigs/{mute_config}"
+    /// `organizations/{organization}/muteConfigs/{mute_config}`
+    /// `folders/{folder}/muteConfigs/{mute_config}`
+    /// `projects/{project}/muteConfigs/{mute_config}`
+    /// `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+    /// `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+    /// `projects/{project}/locations/global/muteConfigs/{mute_config}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
