@@ -96,6 +96,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteSecurityHealthAnalyticsCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest> __Marshaller_google_cloud_securitycenter_v1_GetSimulationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Simulation> __Marshaller_google_cloud_securitycenter_v1_Simulation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.Simulation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest> __Marshaller_google_cloud_securitycenter_v1_GetValuedResourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ValuedResource> __Marshaller_google_cloud_securitycenter_v1_ValuedResource = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ValuedResource.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest> __Marshaller_google_cloud_securitycenter_v1_GetBigQueryExportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Marshaller_google_cloud_securitycenter_v1_BigQueryExport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.BigQueryExport.Parser));
@@ -205,6 +213,60 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest> __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_CreateEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> __Marshaller_google_cloud_securitycenter_v1_EventThreatDetectionCustomModule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_GetEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest> __Marshaller_google_cloud_securitycenter_v1_ListDescendantEventThreatDetectionCustomModulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse> __Marshaller_google_cloud_securitycenter_v1_ListDescendantEventThreatDetectionCustomModulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest> __Marshaller_google_cloud_securitycenter_v1_ListEventThreatDetectionCustomModulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse> __Marshaller_google_cloud_securitycenter_v1_ListEventThreatDetectionCustomModulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_ValidateEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse> __Marshaller_google_cloud_securitycenter_v1_ValidateEventThreatDetectionCustomModuleResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_GetEffectiveEventThreatDetectionCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule> __Marshaller_google_cloud_securitycenter_v1_EffectiveEventThreatDetectionCustomModule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest> __Marshaller_google_cloud_securitycenter_v1_ListEffectiveEventThreatDetectionCustomModulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse> __Marshaller_google_cloud_securitycenter_v1_ListEffectiveEventThreatDetectionCustomModulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest> __Marshaller_google_cloud_securitycenter_v1_BatchCreateResourceValueConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse> __Marshaller_google_cloud_securitycenter_v1_BatchCreateResourceValueConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteResourceValueConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest> __Marshaller_google_cloud_securitycenter_v1_GetResourceValueConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> __Marshaller_google_cloud_securitycenter_v1_ResourceValueConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest> __Marshaller_google_cloud_securitycenter_v1_ListResourceValueConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse> __Marshaller_google_cloud_securitycenter_v1_ListResourceValueConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateResourceValueConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest> __Marshaller_google_cloud_securitycenter_v1_ListValuedResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse> __Marshaller_google_cloud_securitycenter_v1_ListValuedResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest> __Marshaller_google_cloud_securitycenter_v1_ListAttackPathsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse> __Marshaller_google_cloud_securitycenter_v1_ListAttackPathsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation> __Method_BulkMuteFindings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation>(
@@ -277,6 +339,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "DeleteSecurityHealthAnalyticsCustomModule",
         __Marshaller_google_cloud_securitycenter_v1_DeleteSecurityHealthAnalyticsCustomModuleRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest, global::Google.Cloud.SecurityCenter.V1.Simulation> __Method_GetSimulation = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest, global::Google.Cloud.SecurityCenter.V1.Simulation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSimulation",
+        __Marshaller_google_cloud_securitycenter_v1_GetSimulationRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Simulation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest, global::Google.Cloud.SecurityCenter.V1.ValuedResource> __Method_GetValuedResource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest, global::Google.Cloud.SecurityCenter.V1.ValuedResource>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetValuedResource",
+        __Marshaller_google_cloud_securitycenter_v1_GetValuedResourceRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ValuedResource);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Method_GetBigQueryExport = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(
@@ -566,6 +644,134 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsRequest,
         __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> __Method_CreateEventThreatDetectionCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateEventThreatDetectionCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_CreateEventThreatDetectionCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_EventThreatDetectionCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteEventThreatDetectionCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteEventThreatDetectionCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_DeleteEventThreatDetectionCustomModuleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> __Method_GetEventThreatDetectionCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEventThreatDetectionCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_GetEventThreatDetectionCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_EventThreatDetectionCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse> __Method_ListDescendantEventThreatDetectionCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDescendantEventThreatDetectionCustomModules",
+        __Marshaller_google_cloud_securitycenter_v1_ListDescendantEventThreatDetectionCustomModulesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListDescendantEventThreatDetectionCustomModulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse> __Method_ListEventThreatDetectionCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEventThreatDetectionCustomModules",
+        __Marshaller_google_cloud_securitycenter_v1_ListEventThreatDetectionCustomModulesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListEventThreatDetectionCustomModulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> __Method_UpdateEventThreatDetectionCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEventThreatDetectionCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateEventThreatDetectionCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_EventThreatDetectionCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse> __Method_ValidateEventThreatDetectionCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ValidateEventThreatDetectionCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_ValidateEventThreatDetectionCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ValidateEventThreatDetectionCustomModuleResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule> __Method_GetEffectiveEventThreatDetectionCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEffectiveEventThreatDetectionCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_GetEffectiveEventThreatDetectionCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_EffectiveEventThreatDetectionCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse> __Method_ListEffectiveEventThreatDetectionCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEffectiveEventThreatDetectionCustomModules",
+        __Marshaller_google_cloud_securitycenter_v1_ListEffectiveEventThreatDetectionCustomModulesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListEffectiveEventThreatDetectionCustomModulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest, global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse> __Method_BatchCreateResourceValueConfigs = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest, global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateResourceValueConfigs",
+        __Marshaller_google_cloud_securitycenter_v1_BatchCreateResourceValueConfigsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_BatchCreateResourceValueConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteResourceValueConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteResourceValueConfig",
+        __Marshaller_google_cloud_securitycenter_v1_DeleteResourceValueConfigRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> __Method_GetResourceValueConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetResourceValueConfig",
+        __Marshaller_google_cloud_securitycenter_v1_GetResourceValueConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ResourceValueConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse> __Method_ListResourceValueConfigs = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListResourceValueConfigs",
+        __Marshaller_google_cloud_securitycenter_v1_ListResourceValueConfigsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListResourceValueConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> __Method_UpdateResourceValueConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateResourceValueConfig",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateResourceValueConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ResourceValueConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse> __Method_ListValuedResources = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListValuedResources",
+        __Marshaller_google_cloud_securitycenter_v1_ListValuedResourcesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListValuedResourcesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest, global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse> __Method_ListAttackPaths = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest, global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAttackPaths",
+        __Marshaller_google_cloud_securitycenter_v1_ListAttackPathsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListAttackPathsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -688,6 +894,31 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get the simulation by name or the latest simulation for the given
+      /// organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.Simulation> GetSimulation(global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get the valued resource by name
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ValuedResource> GetValuedResource(global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1154,6 +1385,215 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> ListBigQueryExports(global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse> ListDescendantEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse> ListEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Validates the given Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an effective Event Threat Detection custom module at the given level.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all effective Event Threat Detection custom modules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent along with modules inherited from its ancestors.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse> ListEffectiveEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+      /// difference resource values for use by the attack path simulation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigs(global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> GetResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all ResourceValueConfigs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse> ListResourceValueConfigs(global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing ResourceValueConfigs with new rules.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> UpdateResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the valued resources for a set of simulation results and filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse> ListValuedResources(global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the attack paths for a set of simulation results or valued resources
+      /// and filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse> ListAttackPaths(global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1650,6 +2090,106 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Get the simulation by name or the latest simulation for the given
+      /// organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.Simulation GetSimulation(global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSimulation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the simulation by name or the latest simulation for the given
+      /// organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.Simulation GetSimulation(global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSimulation, null, options, request);
+      }
+      /// <summary>
+      /// Get the simulation by name or the latest simulation for the given
+      /// organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.Simulation> GetSimulationAsync(global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSimulationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the simulation by name or the latest simulation for the given
+      /// organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.Simulation> GetSimulationAsync(global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSimulation, null, options, request);
+      }
+      /// <summary>
+      /// Get the valued resource by name
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ValuedResource GetValuedResource(global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetValuedResource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the valued resource by name
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ValuedResource GetValuedResource(global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetValuedResource, null, options, request);
+      }
+      /// <summary>
+      /// Get the valued resource by name
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ValuedResource> GetValuedResourceAsync(global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetValuedResourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the valued resource by name
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ValuedResource> GetValuedResourceAsync(global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetValuedResource, null, options, request);
       }
       /// <summary>
       /// Gets a BigQuery export.
@@ -3515,6 +4055,842 @@ namespace Google.Cloud.SecurityCenter.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBigQueryExports, null, options, request);
       }
+      /// <summary>
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule CreateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule CreateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Gets an Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule GetEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule GetEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Gets an Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse ListDescendantEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDescendantEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse ListDescendantEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDescendantEventThreatDetectionCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse> ListDescendantEventThreatDetectionCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDescendantEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse> ListDescendantEventThreatDetectionCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDescendantEventThreatDetectionCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse ListEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse ListEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEventThreatDetectionCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse> ListEventThreatDetectionCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse> ListEventThreatDetectionCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEventThreatDetectionCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule UpdateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule UpdateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Validates the given Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse ValidateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Validates the given Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse ValidateEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ValidateEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Validates the given Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Validates the given Event Threat Detection custom module.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ValidateEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Gets an effective Event Threat Detection custom module at the given level.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule GetEffectiveEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEffectiveEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an effective Event Threat Detection custom module at the given level.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule GetEffectiveEventThreatDetectionCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEffectiveEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Gets an effective Event Threat Detection custom module at the given level.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEffectiveEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an effective Event Threat Detection custom module at the given level.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEffectiveEventThreatDetectionCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Lists all effective Event Threat Detection custom modules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent along with modules inherited from its ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse ListEffectiveEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEffectiveEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all effective Event Threat Detection custom modules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent along with modules inherited from its ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse ListEffectiveEventThreatDetectionCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEffectiveEventThreatDetectionCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Lists all effective Event Threat Detection custom modules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent along with modules inherited from its ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse> ListEffectiveEventThreatDetectionCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEffectiveEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all effective Event Threat Detection custom modules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent along with modules inherited from its ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse> ListEffectiveEventThreatDetectionCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEffectiveEventThreatDetectionCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+      /// difference resource values for use by the attack path simulation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateResourceValueConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+      /// difference resource values for use by the attack path simulation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateResourceValueConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+      /// difference resource values for use by the attack path simulation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateResourceValueConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+      /// difference resource values for use by the attack path simulation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateResourceValueConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteResourceValueConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteResourceValueConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteResourceValueConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteResourceValueConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteResourceValueConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteResourceValueConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig GetResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceValueConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig GetResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetResourceValueConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> GetResourceValueConfigAsync(global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceValueConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a ResourceValueConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> GetResourceValueConfigAsync(global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetResourceValueConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ResourceValueConfigs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse ListResourceValueConfigs(global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceValueConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ResourceValueConfigs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse ListResourceValueConfigs(global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListResourceValueConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ResourceValueConfigs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse> ListResourceValueConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceValueConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ResourceValueConfigs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse> ListResourceValueConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListResourceValueConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing ResourceValueConfigs with new rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig UpdateResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateResourceValueConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing ResourceValueConfigs with new rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig UpdateResourceValueConfig(global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateResourceValueConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing ResourceValueConfigs with new rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> UpdateResourceValueConfigAsync(global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateResourceValueConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing ResourceValueConfigs with new rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig> UpdateResourceValueConfigAsync(global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateResourceValueConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists the valued resources for a set of simulation results and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse ListValuedResources(global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListValuedResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the valued resources for a set of simulation results and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse ListValuedResources(global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListValuedResources, null, options, request);
+      }
+      /// <summary>
+      /// Lists the valued resources for a set of simulation results and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse> ListValuedResourcesAsync(global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListValuedResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the valued resources for a set of simulation results and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse> ListValuedResourcesAsync(global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListValuedResources, null, options, request);
+      }
+      /// <summary>
+      /// Lists the attack paths for a set of simulation results or valued resources
+      /// and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse ListAttackPaths(global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAttackPaths(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the attack paths for a set of simulation results or valued resources
+      /// and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse ListAttackPaths(global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAttackPaths, null, options, request);
+      }
+      /// <summary>
+      /// Lists the attack paths for a set of simulation results or valued resources
+      /// and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse> ListAttackPathsAsync(global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAttackPathsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the attack paths for a set of simulation results or valued resources
+      /// and filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse> ListAttackPathsAsync(global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAttackPaths, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecurityCenterClient NewInstance(ClientBaseConfiguration configuration)
@@ -3538,6 +4914,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_DeleteMuteConfig, serviceImpl.DeleteMuteConfig)
           .AddMethod(__Method_DeleteNotificationConfig, serviceImpl.DeleteNotificationConfig)
           .AddMethod(__Method_DeleteSecurityHealthAnalyticsCustomModule, serviceImpl.DeleteSecurityHealthAnalyticsCustomModule)
+          .AddMethod(__Method_GetSimulation, serviceImpl.GetSimulation)
+          .AddMethod(__Method_GetValuedResource, serviceImpl.GetValuedResource)
           .AddMethod(__Method_GetBigQueryExport, serviceImpl.GetBigQueryExport)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_GetMuteConfig, serviceImpl.GetMuteConfig)
@@ -3573,7 +4951,23 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_CreateBigQueryExport, serviceImpl.CreateBigQueryExport)
           .AddMethod(__Method_DeleteBigQueryExport, serviceImpl.DeleteBigQueryExport)
           .AddMethod(__Method_UpdateBigQueryExport, serviceImpl.UpdateBigQueryExport)
-          .AddMethod(__Method_ListBigQueryExports, serviceImpl.ListBigQueryExports).Build();
+          .AddMethod(__Method_ListBigQueryExports, serviceImpl.ListBigQueryExports)
+          .AddMethod(__Method_CreateEventThreatDetectionCustomModule, serviceImpl.CreateEventThreatDetectionCustomModule)
+          .AddMethod(__Method_DeleteEventThreatDetectionCustomModule, serviceImpl.DeleteEventThreatDetectionCustomModule)
+          .AddMethod(__Method_GetEventThreatDetectionCustomModule, serviceImpl.GetEventThreatDetectionCustomModule)
+          .AddMethod(__Method_ListDescendantEventThreatDetectionCustomModules, serviceImpl.ListDescendantEventThreatDetectionCustomModules)
+          .AddMethod(__Method_ListEventThreatDetectionCustomModules, serviceImpl.ListEventThreatDetectionCustomModules)
+          .AddMethod(__Method_UpdateEventThreatDetectionCustomModule, serviceImpl.UpdateEventThreatDetectionCustomModule)
+          .AddMethod(__Method_ValidateEventThreatDetectionCustomModule, serviceImpl.ValidateEventThreatDetectionCustomModule)
+          .AddMethod(__Method_GetEffectiveEventThreatDetectionCustomModule, serviceImpl.GetEffectiveEventThreatDetectionCustomModule)
+          .AddMethod(__Method_ListEffectiveEventThreatDetectionCustomModules, serviceImpl.ListEffectiveEventThreatDetectionCustomModules)
+          .AddMethod(__Method_BatchCreateResourceValueConfigs, serviceImpl.BatchCreateResourceValueConfigs)
+          .AddMethod(__Method_DeleteResourceValueConfig, serviceImpl.DeleteResourceValueConfig)
+          .AddMethod(__Method_GetResourceValueConfig, serviceImpl.GetResourceValueConfig)
+          .AddMethod(__Method_ListResourceValueConfigs, serviceImpl.ListResourceValueConfigs)
+          .AddMethod(__Method_UpdateResourceValueConfig, serviceImpl.UpdateResourceValueConfig)
+          .AddMethod(__Method_ListValuedResources, serviceImpl.ListValuedResources)
+          .AddMethod(__Method_ListAttackPaths, serviceImpl.ListAttackPaths).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3592,6 +4986,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_DeleteMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMuteConfig));
       serviceBinder.AddMethod(__Method_DeleteNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNotificationConfig));
       serviceBinder.AddMethod(__Method_DeleteSecurityHealthAnalyticsCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSecurityHealthAnalyticsCustomModule));
+      serviceBinder.AddMethod(__Method_GetSimulation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetSimulationRequest, global::Google.Cloud.SecurityCenter.V1.Simulation>(serviceImpl.GetSimulation));
+      serviceBinder.AddMethod(__Method_GetValuedResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetValuedResourceRequest, global::Google.Cloud.SecurityCenter.V1.ValuedResource>(serviceImpl.GetValuedResource));
       serviceBinder.AddMethod(__Method_GetBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.GetBigQueryExport));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_GetMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.GetMuteConfig));
@@ -3628,6 +5024,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_DeleteBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBigQueryExport));
       serviceBinder.AddMethod(__Method_UpdateBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.UpdateBigQueryExport));
       serviceBinder.AddMethod(__Method_ListBigQueryExports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse>(serviceImpl.ListBigQueryExports));
+      serviceBinder.AddMethod(__Method_CreateEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule>(serviceImpl.CreateEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_DeleteEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteEventThreatDetectionCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_GetEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule>(serviceImpl.GetEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_ListDescendantEventThreatDetectionCustomModules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListDescendantEventThreatDetectionCustomModulesResponse>(serviceImpl.ListDescendantEventThreatDetectionCustomModules));
+      serviceBinder.AddMethod(__Method_ListEventThreatDetectionCustomModules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEventThreatDetectionCustomModulesResponse>(serviceImpl.ListEventThreatDetectionCustomModules));
+      serviceBinder.AddMethod(__Method_UpdateEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EventThreatDetectionCustomModule>(serviceImpl.UpdateEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_ValidateEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.ValidateEventThreatDetectionCustomModuleResponse>(serviceImpl.ValidateEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_GetEffectiveEventThreatDetectionCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetEffectiveEventThreatDetectionCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EffectiveEventThreatDetectionCustomModule>(serviceImpl.GetEffectiveEventThreatDetectionCustomModule));
+      serviceBinder.AddMethod(__Method_ListEffectiveEventThreatDetectionCustomModules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEffectiveEventThreatDetectionCustomModulesResponse>(serviceImpl.ListEffectiveEventThreatDetectionCustomModules));
+      serviceBinder.AddMethod(__Method_BatchCreateResourceValueConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsRequest, global::Google.Cloud.SecurityCenter.V1.BatchCreateResourceValueConfigsResponse>(serviceImpl.BatchCreateResourceValueConfigs));
+      serviceBinder.AddMethod(__Method_DeleteResourceValueConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteResourceValueConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteResourceValueConfig));
+      serviceBinder.AddMethod(__Method_GetResourceValueConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetResourceValueConfigRequest, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig>(serviceImpl.GetResourceValueConfig));
+      serviceBinder.AddMethod(__Method_ListResourceValueConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListResourceValueConfigsResponse>(serviceImpl.ListResourceValueConfigs));
+      serviceBinder.AddMethod(__Method_UpdateResourceValueConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateResourceValueConfigRequest, global::Google.Cloud.SecurityCenter.V1.ResourceValueConfig>(serviceImpl.UpdateResourceValueConfig));
+      serviceBinder.AddMethod(__Method_ListValuedResources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListValuedResourcesResponse>(serviceImpl.ListValuedResources));
+      serviceBinder.AddMethod(__Method_ListAttackPaths, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListAttackPathsRequest, global::Google.Cloud.SecurityCenter.V1.ListAttackPathsResponse>(serviceImpl.ListAttackPaths));
     }
 
   }

@@ -59,6 +59,8 @@ namespace Google.Cloud.SecurityCenter.V1
             DeleteMuteConfigSettings = existing.DeleteMuteConfigSettings;
             DeleteNotificationConfigSettings = existing.DeleteNotificationConfigSettings;
             DeleteSecurityHealthAnalyticsCustomModuleSettings = existing.DeleteSecurityHealthAnalyticsCustomModuleSettings;
+            GetSimulationSettings = existing.GetSimulationSettings;
+            GetValuedResourceSettings = existing.GetValuedResourceSettings;
             GetBigQueryExportSettings = existing.GetBigQueryExportSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             GetMuteConfigSettings = existing.GetMuteConfigSettings;
@@ -96,6 +98,22 @@ namespace Google.Cloud.SecurityCenter.V1
             DeleteBigQueryExportSettings = existing.DeleteBigQueryExportSettings;
             UpdateBigQueryExportSettings = existing.UpdateBigQueryExportSettings;
             ListBigQueryExportsSettings = existing.ListBigQueryExportsSettings;
+            CreateEventThreatDetectionCustomModuleSettings = existing.CreateEventThreatDetectionCustomModuleSettings;
+            DeleteEventThreatDetectionCustomModuleSettings = existing.DeleteEventThreatDetectionCustomModuleSettings;
+            GetEventThreatDetectionCustomModuleSettings = existing.GetEventThreatDetectionCustomModuleSettings;
+            ListDescendantEventThreatDetectionCustomModulesSettings = existing.ListDescendantEventThreatDetectionCustomModulesSettings;
+            ListEventThreatDetectionCustomModulesSettings = existing.ListEventThreatDetectionCustomModulesSettings;
+            UpdateEventThreatDetectionCustomModuleSettings = existing.UpdateEventThreatDetectionCustomModuleSettings;
+            ValidateEventThreatDetectionCustomModuleSettings = existing.ValidateEventThreatDetectionCustomModuleSettings;
+            GetEffectiveEventThreatDetectionCustomModuleSettings = existing.GetEffectiveEventThreatDetectionCustomModuleSettings;
+            ListEffectiveEventThreatDetectionCustomModulesSettings = existing.ListEffectiveEventThreatDetectionCustomModulesSettings;
+            BatchCreateResourceValueConfigsSettings = existing.BatchCreateResourceValueConfigsSettings;
+            DeleteResourceValueConfigSettings = existing.DeleteResourceValueConfigSettings;
+            GetResourceValueConfigSettings = existing.GetResourceValueConfigSettings;
+            ListResourceValueConfigsSettings = existing.ListResourceValueConfigsSettings;
+            UpdateResourceValueConfigSettings = existing.UpdateResourceValueConfigSettings;
+            ListValuedResourcesSettings = existing.ListValuedResourcesSettings;
+            ListAttackPathsSettings = existing.ListAttackPathsSettings;
             OnCopy(existing);
         }
 
@@ -230,6 +248,30 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetSimulation</c> and <c>SecurityCenterClient.GetSimulationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSimulationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetValuedResource</c> and <c>SecurityCenterClient.GetValuedResourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetValuedResourceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -837,6 +879,212 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </remarks>
         public gaxgrpc::CallSettings ListBigQueryExportsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.CreateEventThreatDetectionCustomModule</c> and
+        /// <c>SecurityCenterClient.CreateEventThreatDetectionCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.DeleteEventThreatDetectionCustomModule</c> and
+        /// <c>SecurityCenterClient.DeleteEventThreatDetectionCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetEventThreatDetectionCustomModule</c> and
+        /// <c>SecurityCenterClient.GetEventThreatDetectionCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListDescendantEventThreatDetectionCustomModules</c> and
+        /// <c>SecurityCenterClient.ListDescendantEventThreatDetectionCustomModulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDescendantEventThreatDetectionCustomModulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListEventThreatDetectionCustomModules</c> and
+        /// <c>SecurityCenterClient.ListEventThreatDetectionCustomModulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEventThreatDetectionCustomModulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.UpdateEventThreatDetectionCustomModule</c> and
+        /// <c>SecurityCenterClient.UpdateEventThreatDetectionCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ValidateEventThreatDetectionCustomModule</c> and
+        /// <c>SecurityCenterClient.ValidateEventThreatDetectionCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ValidateEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetEffectiveEventThreatDetectionCustomModule</c> and
+        /// <c>SecurityCenterClient.GetEffectiveEventThreatDetectionCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEffectiveEventThreatDetectionCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListEffectiveEventThreatDetectionCustomModules</c> and
+        /// <c>SecurityCenterClient.ListEffectiveEventThreatDetectionCustomModulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEffectiveEventThreatDetectionCustomModulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.BatchCreateResourceValueConfigs</c> and
+        /// <c>SecurityCenterClient.BatchCreateResourceValueConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateResourceValueConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.DeleteResourceValueConfig</c> and
+        /// <c>SecurityCenterClient.DeleteResourceValueConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteResourceValueConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetResourceValueConfig</c> and <c>SecurityCenterClient.GetResourceValueConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetResourceValueConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListResourceValueConfigs</c> and
+        /// <c>SecurityCenterClient.ListResourceValueConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListResourceValueConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.UpdateResourceValueConfig</c> and
+        /// <c>SecurityCenterClient.UpdateResourceValueConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateResourceValueConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListValuedResources</c> and <c>SecurityCenterClient.ListValuedResourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListValuedResourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListAttackPaths</c> and <c>SecurityCenterClient.ListAttackPathsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAttackPathsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SecurityCenterSettings"/> object.</returns>
         public SecurityCenterSettings Clone() => new SecurityCenterSettings(this);
@@ -1044,8 +1292,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, at which bulk action needs to be applied. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1062,8 +1310,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, at which bulk action needs to be applied. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1080,8 +1328,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, at which bulk action needs to be applied. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1095,8 +1343,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, at which bulk action needs to be applied. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1113,8 +1361,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, at which bulk action needs to be applied. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1131,8 +1379,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, at which bulk action needs to be applied. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1183,9 +1431,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new custom module's parent. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. SecurityHealthAnalytics custom module to create. The provided
@@ -1209,9 +1457,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new custom module's parent. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. SecurityHealthAnalytics custom module to create. The provided
@@ -1235,9 +1483,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new custom module's parent. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. SecurityHealthAnalytics custom module to create. The provided
@@ -1257,9 +1505,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new custom module's parent. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. SecurityHealthAnalytics custom module to create. The provided
@@ -1283,9 +1531,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new custom module's parent. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. SecurityHealthAnalytics custom module to create. The provided
@@ -1309,9 +1557,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new custom module's parent. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
         /// Required. SecurityHealthAnalytics custom module to create. The provided
@@ -1355,7 +1603,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -1375,7 +1623,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -1395,7 +1643,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -1411,7 +1659,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -1431,7 +1679,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -1451,7 +1699,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -1498,7 +1746,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new finding's parent. Its format should be
-        /// "organizations/[organization_id]/sources/[source_id]".
+        /// `organizations/[organization_id]/sources/[source_id]`.
         /// </param>
         /// <param name="findingId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -1525,7 +1773,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new finding's parent. Its format should be
-        /// "organizations/[organization_id]/sources/[source_id]".
+        /// `organizations/[organization_id]/sources/[source_id]`.
         /// </param>
         /// <param name="findingId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -1552,7 +1800,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new finding's parent. Its format should be
-        /// "organizations/[organization_id]/sources/[source_id]".
+        /// `organizations/[organization_id]/sources/[source_id]`.
         /// </param>
         /// <param name="findingId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -1574,7 +1822,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new finding's parent. Its format should be
-        /// "organizations/[organization_id]/sources/[source_id]".
+        /// `organizations/[organization_id]/sources/[source_id]`.
         /// </param>
         /// <param name="findingId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -1601,7 +1849,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new finding's parent. Its format should be
-        /// "organizations/[organization_id]/sources/[source_id]".
+        /// `organizations/[organization_id]/sources/[source_id]`.
         /// </param>
         /// <param name="findingId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -1628,7 +1876,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new finding's parent. Its format should be
-        /// "organizations/[organization_id]/sources/[source_id]".
+        /// `organizations/[organization_id]/sources/[source_id]`.
         /// </param>
         /// <param name="findingId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -1676,8 +1924,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1696,8 +1944,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1716,8 +1964,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1732,8 +1980,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1752,8 +2000,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1772,8 +2020,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1788,8 +2036,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1808,8 +2056,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1828,8 +2076,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1844,8 +2092,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1864,8 +2112,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1884,8 +2132,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1900,8 +2148,176 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MuteConfig CreateMuteConfig(OrganizationLocationName parent, MuteConfig muteConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfig(new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(OrganizationLocationName parent, MuteConfig muteConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfigAsync(new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(OrganizationLocationName parent, MuteConfig muteConfig, st::CancellationToken cancellationToken) =>
+            CreateMuteConfigAsync(parent, muteConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MuteConfig CreateMuteConfig(FolderLocationName parent, MuteConfig muteConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfig(new CreateMuteConfigRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(FolderLocationName parent, MuteConfig muteConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfigAsync(new CreateMuteConfigRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(FolderLocationName parent, MuteConfig muteConfig, st::CancellationToken cancellationToken) =>
+            CreateMuteConfigAsync(parent, muteConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MuteConfig CreateMuteConfig(gagr::LocationName parent, MuteConfig muteConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfig(new CreateMuteConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(gagr::LocationName parent, MuteConfig muteConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfigAsync(new CreateMuteConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(gagr::LocationName parent, MuteConfig muteConfig, st::CancellationToken cancellationToken) =>
+            CreateMuteConfigAsync(parent, muteConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1927,8 +2343,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1954,8 +2370,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1976,8 +2392,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2003,8 +2419,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2030,8 +2446,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2052,8 +2468,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2079,8 +2495,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2106,8 +2522,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2128,8 +2544,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2155,8 +2571,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2182,8 +2598,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2197,6 +2613,234 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(gagr::ProjectName parent, MuteConfig muteConfig, string muteConfigId, st::CancellationToken cancellationToken) =>
+            CreateMuteConfigAsync(parent, muteConfig, muteConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MuteConfig CreateMuteConfig(OrganizationLocationName parent, MuteConfig muteConfig, string muteConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfig(new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+                MuteConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(muteConfigId, nameof(muteConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(OrganizationLocationName parent, MuteConfig muteConfig, string muteConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfigAsync(new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+                MuteConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(muteConfigId, nameof(muteConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(OrganizationLocationName parent, MuteConfig muteConfig, string muteConfigId, st::CancellationToken cancellationToken) =>
+            CreateMuteConfigAsync(parent, muteConfig, muteConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MuteConfig CreateMuteConfig(FolderLocationName parent, MuteConfig muteConfig, string muteConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfig(new CreateMuteConfigRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+                MuteConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(muteConfigId, nameof(muteConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(FolderLocationName parent, MuteConfig muteConfig, string muteConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfigAsync(new CreateMuteConfigRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+                MuteConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(muteConfigId, nameof(muteConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(FolderLocationName parent, MuteConfig muteConfig, string muteConfigId, st::CancellationToken cancellationToken) =>
+            CreateMuteConfigAsync(parent, muteConfig, muteConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MuteConfig CreateMuteConfig(gagr::LocationName parent, MuteConfig muteConfig, string muteConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfig(new CreateMuteConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+                MuteConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(muteConfigId, nameof(muteConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(gagr::LocationName parent, MuteConfig muteConfig, string muteConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMuteConfigAsync(new CreateMuteConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MuteConfig = gax::GaxPreconditions.CheckNotNull(muteConfig, nameof(muteConfig)),
+                MuteConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(muteConfigId, nameof(muteConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a mute config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new mute configs's parent. Its format is
+        /// `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="muteConfig">
+        /// Required. The mute config being created.
+        /// </param>
+        /// <param name="muteConfigId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MuteConfig> CreateMuteConfigAsync(gagr::LocationName parent, MuteConfig muteConfig, string muteConfigId, st::CancellationToken cancellationToken) =>
             CreateMuteConfigAsync(parent, muteConfig, muteConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2231,8 +2875,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2260,8 +2904,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2289,8 +2933,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2313,8 +2957,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2342,8 +2986,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2371,8 +3015,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2395,8 +3039,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2424,8 +3068,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2453,8 +3097,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2477,8 +3121,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2506,8 +3150,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2535,8 +3179,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2559,8 +3203,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2581,8 +3225,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2603,8 +3247,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2621,8 +3265,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2643,8 +3287,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2665,8 +3309,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2683,8 +3327,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2705,8 +3349,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2727,8 +3371,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2745,8 +3389,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2767,8 +3411,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2789,8 +3433,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2834,9 +3478,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to delete. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2851,9 +3498,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to delete. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2868,9 +3518,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to delete. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2882,9 +3535,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to delete. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2899,9 +3555,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to delete. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2916,9 +3575,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to delete. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2957,9 +3619,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2974,9 +3636,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2991,9 +3653,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3005,9 +3667,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3022,9 +3684,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3039,9 +3701,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3088,10 +3750,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to delete. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3108,10 +3770,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to delete. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3128,10 +3790,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to delete. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3145,10 +3807,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to delete. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3165,10 +3827,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to delete. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3185,15 +3847,276 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to delete. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName name, st::CancellationToken cancellationToken) =>
             DeleteSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Simulation GetSimulation(GetSimulationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Simulation> GetSimulationAsync(GetSimulationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Simulation> GetSimulationAsync(GetSimulationRequest request, st::CancellationToken cancellationToken) =>
+            GetSimulationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The organization name or simulation name of this simulation
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Simulation GetSimulation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSimulation(new GetSimulationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The organization name or simulation name of this simulation
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Simulation> GetSimulationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSimulationAsync(new GetSimulationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The organization name or simulation name of this simulation
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Simulation> GetSimulationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSimulationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The organization name or simulation name of this simulation
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Simulation GetSimulation(SimulationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSimulation(new GetSimulationRequest
+            {
+                SimulationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The organization name or simulation name of this simulation
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Simulation> GetSimulationAsync(SimulationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSimulationAsync(new GetSimulationRequest
+            {
+                SimulationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The organization name or simulation name of this simulation
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Simulation> GetSimulationAsync(SimulationName name, st::CancellationToken cancellationToken) =>
+            GetSimulationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ValuedResource GetValuedResource(GetValuedResourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValuedResource> GetValuedResourceAsync(GetValuedResourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValuedResource> GetValuedResourceAsync(GetValuedResourceRequest request, st::CancellationToken cancellationToken) =>
+            GetValuedResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of this valued resource
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ValuedResource GetValuedResource(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetValuedResource(new GetValuedResourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of this valued resource
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValuedResource> GetValuedResourceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetValuedResourceAsync(new GetValuedResourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of this valued resource
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValuedResource> GetValuedResourceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetValuedResourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of this valued resource
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ValuedResource GetValuedResource(ValuedResourceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetValuedResource(new GetValuedResourceRequest
+            {
+                ValuedResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of this valued resource
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValuedResource> GetValuedResourceAsync(ValuedResourceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetValuedResourceAsync(new GetValuedResourceRequest
+            {
+                ValuedResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of this valued resource
+        /// 
+        /// Valid format:
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValuedResource> GetValuedResourceAsync(ValuedResourceName name, st::CancellationToken cancellationToken) =>
+            GetValuedResourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a BigQuery export.
@@ -3227,9 +4150,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the BigQuery export to retrieve. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3244,9 +4167,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the BigQuery export to retrieve. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3261,9 +4184,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the BigQuery export to retrieve. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3275,9 +4198,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the BigQuery export to retrieve. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3292,9 +4215,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the BigQuery export to retrieve. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3309,9 +4232,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the BigQuery export to retrieve. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3461,9 +4384,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to retrieve. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3478,9 +4404,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to retrieve. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3495,9 +4424,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to retrieve. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3509,9 +4441,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to retrieve. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3526,9 +4461,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to retrieve. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3543,9 +4481,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the mute config to retrieve. Its format is
-        /// organizations/{organization}/muteConfigs/{config_id},
-        /// folders/{folder}/muteConfigs/{config_id}, or
-        /// projects/{project}/muteConfigs/{config_id}
+        /// `organizations/{organization}/muteConfigs/{config_id}`,
+        /// `folders/{folder}/muteConfigs/{config_id}`,
+        /// `projects/{project}/muteConfigs/{config_id}`,
+        /// `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+        /// `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+        /// `projects/{project}/locations/global/muteConfigs/{config_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3584,9 +4525,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3601,9 +4542,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3618,9 +4559,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3632,9 +4573,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3649,9 +4590,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3666,9 +4607,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
-        /// "folders/[folder_id]/notificationConfigs/[config_id]",
-        /// or "projects/[project_id]/notificationConfigs/[config_id]".
+        /// `organizations/[organization_id]/notificationConfigs/[config_id]`,
+        /// `folders/[folder_id]/notificationConfigs/[config_id]`,
+        /// or `projects/[project_id]/notificationConfigs/[config_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3707,7 +4648,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the organization to get organization settings for. Its
-        /// format is "organizations/[organization_id]/organizationSettings".
+        /// format is `organizations/[organization_id]/organizationSettings`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3722,7 +4663,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the organization to get organization settings for. Its
-        /// format is "organizations/[organization_id]/organizationSettings".
+        /// format is `organizations/[organization_id]/organizationSettings`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3737,7 +4678,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the organization to get organization settings for. Its
-        /// format is "organizations/[organization_id]/organizationSettings".
+        /// format is `organizations/[organization_id]/organizationSettings`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3749,7 +4690,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the organization to get organization settings for. Its
-        /// format is "organizations/[organization_id]/organizationSettings".
+        /// format is `organizations/[organization_id]/organizationSettings`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3764,7 +4705,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the organization to get organization settings for. Its
-        /// format is "organizations/[organization_id]/organizationSettings".
+        /// format is `organizations/[organization_id]/organizationSettings`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3779,7 +4720,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the organization to get organization settings for. Its
-        /// format is "organizations/[organization_id]/organizationSettings".
+        /// format is `organizations/[organization_id]/organizationSettings`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3818,10 +4759,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the effective custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3836,10 +4777,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the effective custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3854,10 +4795,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the effective custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3869,10 +4810,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the effective custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3887,10 +4828,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the effective custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3905,10 +4846,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the effective custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3947,10 +4888,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3965,10 +4906,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3983,10 +4924,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3998,10 +4939,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4016,10 +4957,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4034,10 +4975,10 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the custom module to get. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`,
         /// or
-        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4076,7 +5017,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4091,7 +5032,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4106,7 +5047,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4118,7 +5059,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4133,7 +5074,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4148,7 +5089,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4218,25 +5159,17 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]",
-        /// folders/[folder_id]/sources/[source_id], or
-        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// `organizations/[organization_id]/sources/[source_id]`,
+        /// `folders/[folder_id]/sources/[source_id]`, or
+        /// `projects/[project_id]/sources/[source_id]`. To groupBy across all sources
         /// provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
-        /// or projects/{project_id}/sources/-
+        /// `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`,
+        /// or `projects/{project_id}/sources/-`
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping
         /// (including `state_change`). The string value should follow SQL syntax:
         /// comma separated list of fields. For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -4272,25 +5205,17 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]",
-        /// folders/[folder_id]/sources/[source_id], or
-        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// `organizations/[organization_id]/sources/[source_id]`,
+        /// `folders/[folder_id]/sources/[source_id]`, or
+        /// `projects/[project_id]/sources/[source_id]`. To groupBy across all sources
         /// provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
-        /// or projects/{project_id}/sources/-
+        /// `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`,
+        /// or `projects/{project_id}/sources/-`
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping
         /// (including `state_change`). The string value should follow SQL syntax:
         /// comma separated list of fields. For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -4326,25 +5251,17 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]",
-        /// folders/[folder_id]/sources/[source_id], or
-        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// `organizations/[organization_id]/sources/[source_id]`,
+        /// `folders/[folder_id]/sources/[source_id]`, or
+        /// `projects/[project_id]/sources/[source_id]`. To groupBy across all sources
         /// provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
-        /// or projects/{project_id}/sources/-
+        /// `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`,
+        /// or `projects/{project_id}/sources/-`
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping
         /// (including `state_change`). The string value should follow SQL syntax:
         /// comma separated list of fields. For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -4380,25 +5297,17 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]",
-        /// folders/[folder_id]/sources/[source_id], or
-        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// `organizations/[organization_id]/sources/[source_id]`,
+        /// `folders/[folder_id]/sources/[source_id]`, or
+        /// `projects/[project_id]/sources/[source_id]`. To groupBy across all sources
         /// provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
-        /// or projects/{project_id}/sources/-
+        /// `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`,
+        /// or `projects/{project_id}/sources/-`
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping
         /// (including `state_change`). The string value should follow SQL syntax:
         /// comma separated list of fields. For example: "parent,resource_name".
-        /// 
-        /// The following fields are supported:
-        /// 
-        /// * resource_name
-        /// * category
-        /// * state
-        /// * parent
-        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -4473,9 +5382,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list descendant custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4501,9 +5410,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list descendant custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4531,9 +5440,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list descendant custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4559,9 +5468,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list descendant custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4634,8 +5543,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4660,8 +5569,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4686,8 +5595,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4712,8 +5621,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4738,8 +5647,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4764,8 +5673,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4790,8 +5699,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4816,8 +5725,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4833,6 +5742,162 @@ namespace Google.Cloud.SecurityCenter.V1
             ListMuteConfigsAsync(new ListMuteConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists mute configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMuteConfigs(new ListMuteConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists mute configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMuteConfigsAsync(new ListMuteConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists mute configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMuteConfigs(new ListMuteConfigsRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists mute configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMuteConfigsAsync(new ListMuteConfigsRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists mute configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMuteConfigs(new ListMuteConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists mute configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMuteConfigsAsync(new ListMuteConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -5096,9 +6161,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5127,9 +6192,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5158,9 +6223,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5189,9 +6254,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list effective custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5244,9 +6309,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5273,9 +6338,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5304,9 +6369,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5333,9 +6398,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
-        /// "organizations/{organization}/securityHealthAnalyticsSettings",
-        /// "folders/{folder}/securityHealthAnalyticsSettings", or
-        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// `organizations/{organization}/securityHealthAnalyticsSettings`,
+        /// `folders/{folder}/securityHealthAnalyticsSettings`, or
+        /// `projects/{project}/securityHealthAnalyticsSettings`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5380,8 +6445,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5406,8 +6471,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5432,8 +6497,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5458,8 +6523,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5484,8 +6549,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5510,8 +6575,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5536,8 +6601,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5562,8 +6627,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5667,7 +6732,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the organization to run asset discovery for. Its format
-        /// is "organizations/[organization_id]".
+        /// is `organizations/[organization_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5688,7 +6753,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the organization to run asset discovery for. Its format
-        /// is "organizations/[organization_id]".
+        /// is `organizations/[organization_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5709,7 +6774,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the organization to run asset discovery for. Its format
-        /// is "organizations/[organization_id]".
+        /// is `organizations/[organization_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5727,7 +6792,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the organization to run asset discovery for. Its format
-        /// is "organizations/[organization_id]".
+        /// is `organizations/[organization_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5748,7 +6813,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the organization to run asset discovery for. Its format
-        /// is "organizations/[organization_id]".
+        /// is `organizations/[organization_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5769,7 +6834,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the organization to run asset discovery for. Its format
-        /// is "organizations/[organization_id]".
+        /// is `organizations/[organization_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5811,9 +6876,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -5838,9 +6903,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -5865,9 +6930,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -5887,9 +6952,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -5914,9 +6979,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -5941,9 +7006,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -5990,9 +7055,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -6013,9 +7078,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -6036,9 +7101,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -6055,9 +7120,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -6078,9 +7143,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -6101,9 +7166,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The [relative resource
         /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
         /// of the finding. Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+        /// `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+        /// `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -7024,7 +8089,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The SecurityHealthAnalytics custom module to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update.
+        /// The list of fields to be updated. The only fields that can be updated are
+        /// `enablement_state` and `custom_config`. If empty or set to the wildcard
+        /// value `*`, both `enablement_state` and `custom_config` are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7046,7 +8113,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The SecurityHealthAnalytics custom module to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update.
+        /// The list of fields to be updated. The only fields that can be updated are
+        /// `enablement_state` and `custom_config`. If empty or set to the wildcard
+        /// value `*`, both `enablement_state` and `custom_config` are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7068,7 +8137,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The SecurityHealthAnalytics custom module to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update.
+        /// The list of fields to be updated. The only fields that can be updated are
+        /// `enablement_state` and `custom_config`. If empty or set to the wildcard
+        /// value `*`, both `enablement_state` and `custom_config` are updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7239,8 +8310,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7266,8 +8337,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7293,8 +8364,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7315,8 +8386,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7342,8 +8413,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7369,8 +8440,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7391,8 +8462,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7418,8 +8489,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7445,8 +8516,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7467,8 +8538,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7494,8 +8565,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7521,8 +8592,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -7570,9 +8641,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the BigQuery export to delete. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7587,9 +8658,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the BigQuery export to delete. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7604,9 +8675,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the BigQuery export to delete. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7618,9 +8689,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the BigQuery export to delete. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7635,9 +8706,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the BigQuery export to delete. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7652,9 +8723,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the BigQuery export to delete. Its format is
-        /// organizations/{organization}/bigQueryExports/{export_id},
-        /// folders/{folder}/bigQueryExports/{export_id}, or
-        /// projects/{project}/bigQueryExports/{export_id}
+        /// `organizations/{organization}/bigQueryExports/{export_id}`,
+        /// `folders/{folder}/bigQueryExports/{export_id}`, or
+        /// `projects/{project}/bigQueryExports/{export_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7776,8 +8847,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7806,8 +8877,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7836,8 +8907,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7866,8 +8937,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7896,8 +8967,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7926,8 +8997,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7956,8 +9027,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7986,8 +9057,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]".
+        /// format is `organizations/[organization_id]`, `folders/[folder_id]`,
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -8003,6 +9074,2168 @@ namespace Google.Cloud.SecurityCenter.V1
             ListBigQueryExportsAsync(new ListBigQueryExportsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule CreateEventThreatDetectionCustomModule(CreateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(CreateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(CreateEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The new custom module's parent.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module to create. The
+        /// event_threat_detection_custom_module.name will be ignored and server
+        /// generated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule CreateEventThreatDetectionCustomModule(string parent, EventThreatDetectionCustomModule eventThreatDetectionCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventThreatDetectionCustomModule(new CreateEventThreatDetectionCustomModuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EventThreatDetectionCustomModule = gax::GaxPreconditions.CheckNotNull(eventThreatDetectionCustomModule, nameof(eventThreatDetectionCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The new custom module's parent.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module to create. The
+        /// event_threat_detection_custom_module.name will be ignored and server
+        /// generated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(string parent, EventThreatDetectionCustomModule eventThreatDetectionCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventThreatDetectionCustomModuleAsync(new CreateEventThreatDetectionCustomModuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EventThreatDetectionCustomModule = gax::GaxPreconditions.CheckNotNull(eventThreatDetectionCustomModule, nameof(eventThreatDetectionCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The new custom module's parent.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module to create. The
+        /// event_threat_detection_custom_module.name will be ignored and server
+        /// generated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(string parent, EventThreatDetectionCustomModule eventThreatDetectionCustomModule, st::CancellationToken cancellationToken) =>
+            CreateEventThreatDetectionCustomModuleAsync(parent, eventThreatDetectionCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The new custom module's parent.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module to create. The
+        /// event_threat_detection_custom_module.name will be ignored and server
+        /// generated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule CreateEventThreatDetectionCustomModule(EventThreatDetectionSettingsName parent, EventThreatDetectionCustomModule eventThreatDetectionCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventThreatDetectionCustomModule(new CreateEventThreatDetectionCustomModuleRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EventThreatDetectionCustomModule = gax::GaxPreconditions.CheckNotNull(eventThreatDetectionCustomModule, nameof(eventThreatDetectionCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The new custom module's parent.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module to create. The
+        /// event_threat_detection_custom_module.name will be ignored and server
+        /// generated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(EventThreatDetectionSettingsName parent, EventThreatDetectionCustomModule eventThreatDetectionCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventThreatDetectionCustomModuleAsync(new CreateEventThreatDetectionCustomModuleRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EventThreatDetectionCustomModule = gax::GaxPreconditions.CheckNotNull(eventThreatDetectionCustomModule, nameof(eventThreatDetectionCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The new custom module's parent.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module to create. The
+        /// event_threat_detection_custom_module.name will be ignored and server
+        /// generated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(EventThreatDetectionSettingsName parent, EventThreatDetectionCustomModule eventThreatDetectionCustomModule, st::CancellationToken cancellationToken) =>
+            CreateEventThreatDetectionCustomModuleAsync(parent, eventThreatDetectionCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEventThreatDetectionCustomModule(DeleteEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventThreatDetectionCustomModuleAsync(DeleteEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventThreatDetectionCustomModuleAsync(DeleteEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete.
+        /// 
+        /// Its format is:
+        /// 
+        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEventThreatDetectionCustomModule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventThreatDetectionCustomModule(new DeleteEventThreatDetectionCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete.
+        /// 
+        /// Its format is:
+        /// 
+        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventThreatDetectionCustomModuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventThreatDetectionCustomModuleAsync(new DeleteEventThreatDetectionCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete.
+        /// 
+        /// Its format is:
+        /// 
+        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventThreatDetectionCustomModuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete.
+        /// 
+        /// Its format is:
+        /// 
+        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEventThreatDetectionCustomModule(EventThreatDetectionCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventThreatDetectionCustomModule(new DeleteEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete.
+        /// 
+        /// Its format is:
+        /// 
+        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventThreatDetectionCustomModuleAsync(new DeleteEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete.
+        /// 
+        /// Its format is:
+        /// 
+        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
+        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName name, st::CancellationToken cancellationToken) =>
+            DeleteEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule GetEventThreatDetectionCustomModule(GetEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(GetEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(GetEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            GetEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule GetEventThreatDetectionCustomModule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventThreatDetectionCustomModule(new GetEventThreatDetectionCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventThreatDetectionCustomModuleAsync(new GetEventThreatDetectionCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule GetEventThreatDetectionCustomModule(EventThreatDetectionCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventThreatDetectionCustomModule(new GetEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventThreatDetectionCustomModuleAsync(new GetEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModuleName name, st::CancellationToken cancellationToken) =>
+            GetEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModules(ListDescendantEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModulesAsync(ListDescendantEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantEventThreatDetectionCustomModules(new ListDescendantEventThreatDetectionCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantEventThreatDetectionCustomModulesAsync(new ListDescendantEventThreatDetectionCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModules(EventThreatDetectionSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantEventThreatDetectionCustomModules(new ListDescendantEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModulesAsync(EventThreatDetectionSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantEventThreatDetectionCustomModulesAsync(new ListDescendantEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModules(ListEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModulesAsync(ListEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEventThreatDetectionCustomModules(new ListEventThreatDetectionCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEventThreatDetectionCustomModulesAsync(new ListEventThreatDetectionCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModules(EventThreatDetectionSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEventThreatDetectionCustomModules(new ListEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules under.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModulesAsync(EventThreatDetectionSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEventThreatDetectionCustomModulesAsync(new ListEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule UpdateEventThreatDetectionCustomModule(UpdateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(UpdateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(UpdateEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventThreatDetectionCustomModule UpdateEventThreatDetectionCustomModule(EventThreatDetectionCustomModule eventThreatDetectionCustomModule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEventThreatDetectionCustomModule(new UpdateEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModule = gax::GaxPreconditions.CheckNotNull(eventThreatDetectionCustomModule, nameof(eventThreatDetectionCustomModule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModule eventThreatDetectionCustomModule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEventThreatDetectionCustomModuleAsync(new UpdateEventThreatDetectionCustomModuleRequest
+            {
+                EventThreatDetectionCustomModule = gax::GaxPreconditions.CheckNotNull(eventThreatDetectionCustomModule, nameof(eventThreatDetectionCustomModule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="eventThreatDetectionCustomModule">
+        /// Required. The module being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(EventThreatDetectionCustomModule eventThreatDetectionCustomModule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateEventThreatDetectionCustomModuleAsync(eventThreatDetectionCustomModule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Validates the given Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ValidateEventThreatDetectionCustomModuleResponse ValidateEventThreatDetectionCustomModule(ValidateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Validates the given Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModuleAsync(ValidateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Validates the given Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModuleAsync(ValidateEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            ValidateEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EffectiveEventThreatDetectionCustomModule GetEffectiveEventThreatDetectionCustomModule(GetEffectiveEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(GetEffectiveEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(GetEffectiveEventThreatDetectionCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            GetEffectiveEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the effective Event Threat Detection custom
+        /// module.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EffectiveEventThreatDetectionCustomModule GetEffectiveEventThreatDetectionCustomModule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveEventThreatDetectionCustomModule(new GetEffectiveEventThreatDetectionCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the effective Event Threat Detection custom
+        /// module.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveEventThreatDetectionCustomModuleAsync(new GetEffectiveEventThreatDetectionCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the effective Event Threat Detection custom
+        /// module.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEffectiveEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the effective Event Threat Detection custom
+        /// module.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EffectiveEventThreatDetectionCustomModule GetEffectiveEventThreatDetectionCustomModule(EffectiveEventThreatDetectionCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveEventThreatDetectionCustomModule(new GetEffectiveEventThreatDetectionCustomModuleRequest
+            {
+                EffectiveEventThreatDetectionCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the effective Event Threat Detection custom
+        /// module.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(EffectiveEventThreatDetectionCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveEventThreatDetectionCustomModuleAsync(new GetEffectiveEventThreatDetectionCustomModuleRequest
+            {
+                EffectiveEventThreatDetectionCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the effective Event Threat Detection custom
+        /// module.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(EffectiveEventThreatDetectionCustomModuleName name, st::CancellationToken cancellationToken) =>
+            GetEffectiveEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModules(ListEffectiveEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModulesAsync(ListEffectiveEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules for.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveEventThreatDetectionCustomModules(new ListEffectiveEventThreatDetectionCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules for.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveEventThreatDetectionCustomModulesAsync(new ListEffectiveEventThreatDetectionCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules for.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModules(EventThreatDetectionSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveEventThreatDetectionCustomModules(new ListEffectiveEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent to list custom modules for.
+        /// 
+        /// Its format is:
+        /// 
+        /// * `organizations/{organization}/eventThreatDetectionSettings`.
+        /// * `folders/{folder}/eventThreatDetectionSettings`.
+        /// * `projects/{project}/eventThreatDetectionSettings`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModulesAsync(EventThreatDetectionSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveEventThreatDetectionCustomModulesAsync(new ListEffectiveEventThreatDetectionCustomModulesRequest
+            {
+                ParentAsEventThreatDetectionSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(BatchCreateResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(BatchCreateResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(BatchCreateResourceValueConfigsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateResourceValueConfigsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(string parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateResourceValueConfigs(new BatchCreateResourceValueConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(string parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateResourceValueConfigsAsync(new BatchCreateResourceValueConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(string parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateResourceValueConfigsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(gagr::OrganizationName parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateResourceValueConfigs(new BatchCreateResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(gagr::OrganizationName parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateResourceValueConfigsAsync(new BatchCreateResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new ResourceValueConfig's parent.
+        /// The parent field in the CreateResourceValueConfigRequest
+        /// messages must either be empty or match this field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The resource value configs to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(gagr::OrganizationName parent, scg::IEnumerable<CreateResourceValueConfigRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateResourceValueConfigsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteResourceValueConfig(DeleteResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteResourceValueConfigAsync(DeleteResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteResourceValueConfigAsync(DeleteResourceValueConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteResourceValueConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the ResourceValueConfig to delete
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteResourceValueConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteResourceValueConfig(new DeleteResourceValueConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the ResourceValueConfig to delete
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteResourceValueConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteResourceValueConfigAsync(new DeleteResourceValueConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the ResourceValueConfig to delete
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteResourceValueConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteResourceValueConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the ResourceValueConfig to delete
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteResourceValueConfig(ResourceValueConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteResourceValueConfig(new DeleteResourceValueConfigRequest
+            {
+                ResourceValueConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the ResourceValueConfig to delete
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteResourceValueConfigAsync(ResourceValueConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteResourceValueConfigAsync(new DeleteResourceValueConfigRequest
+            {
+                ResourceValueConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the ResourceValueConfig to delete
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteResourceValueConfigAsync(ResourceValueConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteResourceValueConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceValueConfig GetResourceValueConfig(GetResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(GetResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(GetResourceValueConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetResourceValueConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource value config to retrieve. Its format is
+        /// `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceValueConfig GetResourceValueConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceValueConfig(new GetResourceValueConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource value config to retrieve. Its format is
+        /// `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceValueConfigAsync(new GetResourceValueConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource value config to retrieve. Its format is
+        /// `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetResourceValueConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource value config to retrieve. Its format is
+        /// `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceValueConfig GetResourceValueConfig(ResourceValueConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceValueConfig(new GetResourceValueConfigRequest
+            {
+                ResourceValueConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource value config to retrieve. Its format is
+        /// `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(ResourceValueConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceValueConfigAsync(new GetResourceValueConfigRequest
+            {
+                ResourceValueConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource value config to retrieve. Its format is
+        /// `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(ResourceValueConfigName name, st::CancellationToken cancellationToken) =>
+            GetResourceValueConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(ListResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(ListResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of resource value configs.
+        /// Its format is
+        /// `organizations/[organization_id]`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListResourceValueConfigs(new ListResourceValueConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of resource value configs.
+        /// Its format is
+        /// `organizations/[organization_id]`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of resource value configs.
+        /// Its format is
+        /// `organizations/[organization_id]`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListResourceValueConfigs(new ListResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of resource value configs.
+        /// Its format is
+        /// `organizations/[organization_id]`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceValueConfig UpdateResourceValueConfig(UpdateResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> UpdateResourceValueConfigAsync(UpdateResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> UpdateResourceValueConfigAsync(UpdateResourceValueConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateResourceValueConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="resourceValueConfig">
+        /// Required. The resource value config being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceValueConfig UpdateResourceValueConfig(ResourceValueConfig resourceValueConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateResourceValueConfig(new UpdateResourceValueConfigRequest
+            {
+                ResourceValueConfig = gax::GaxPreconditions.CheckNotNull(resourceValueConfig, nameof(resourceValueConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="resourceValueConfig">
+        /// Required. The resource value config being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> UpdateResourceValueConfigAsync(ResourceValueConfig resourceValueConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateResourceValueConfigAsync(new UpdateResourceValueConfigRequest
+            {
+                ResourceValueConfig = gax::GaxPreconditions.CheckNotNull(resourceValueConfig, nameof(resourceValueConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="resourceValueConfig">
+        /// Required. The resource value config being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceValueConfig> UpdateResourceValueConfigAsync(ResourceValueConfig resourceValueConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateResourceValueConfigAsync(resourceValueConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(ListValuedResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(ListValuedResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list valued resources.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListValuedResources(new ListValuedResourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list valued resources.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListValuedResourcesAsync(new ListValuedResourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list valued resources.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(OrganizationSimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListValuedResources(new ListValuedResourcesRequest
+            {
+                ParentAsOrganizationSimulationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list valued resources.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(OrganizationSimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListValuedResourcesAsync(new ListValuedResourcesRequest
+            {
+                ParentAsOrganizationSimulationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list valued resources.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(SimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListValuedResources(new ListValuedResourcesRequest
+            {
+                ParentAsSimulationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list valued resources.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(SimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListValuedResourcesAsync(new ListValuedResourcesRequest
+            {
+                ParentAsSimulationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(ListAttackPathsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(ListAttackPathsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list attack paths.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAttackPaths(new ListAttackPathsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list attack paths.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAttackPathsAsync(new ListAttackPathsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list attack paths.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(ValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAttackPaths(new ListAttackPathsRequest
+            {
+                ParentAsValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list attack paths.
+        /// 
+        /// Valid formats:
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(ValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAttackPathsAsync(new ListAttackPathsRequest
+            {
+                ParentAsValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -8031,6 +11264,10 @@ namespace Google.Cloud.SecurityCenter.V1
         private readonly gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> _callDeleteNotificationConfig;
 
         private readonly gaxgrpc::ApiCall<DeleteSecurityHealthAnalyticsCustomModuleRequest, wkt::Empty> _callDeleteSecurityHealthAnalyticsCustomModule;
+
+        private readonly gaxgrpc::ApiCall<GetSimulationRequest, Simulation> _callGetSimulation;
+
+        private readonly gaxgrpc::ApiCall<GetValuedResourceRequest, ValuedResource> _callGetValuedResource;
 
         private readonly gaxgrpc::ApiCall<GetBigQueryExportRequest, BigQueryExport> _callGetBigQueryExport;
 
@@ -8104,6 +11341,38 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<ListBigQueryExportsRequest, ListBigQueryExportsResponse> _callListBigQueryExports;
 
+        private readonly gaxgrpc::ApiCall<CreateEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule> _callCreateEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<DeleteEventThreatDetectionCustomModuleRequest, wkt::Empty> _callDeleteEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<GetEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule> _callGetEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<ListDescendantEventThreatDetectionCustomModulesRequest, ListDescendantEventThreatDetectionCustomModulesResponse> _callListDescendantEventThreatDetectionCustomModules;
+
+        private readonly gaxgrpc::ApiCall<ListEventThreatDetectionCustomModulesRequest, ListEventThreatDetectionCustomModulesResponse> _callListEventThreatDetectionCustomModules;
+
+        private readonly gaxgrpc::ApiCall<UpdateEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule> _callUpdateEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<ValidateEventThreatDetectionCustomModuleRequest, ValidateEventThreatDetectionCustomModuleResponse> _callValidateEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<GetEffectiveEventThreatDetectionCustomModuleRequest, EffectiveEventThreatDetectionCustomModule> _callGetEffectiveEventThreatDetectionCustomModule;
+
+        private readonly gaxgrpc::ApiCall<ListEffectiveEventThreatDetectionCustomModulesRequest, ListEffectiveEventThreatDetectionCustomModulesResponse> _callListEffectiveEventThreatDetectionCustomModules;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateResourceValueConfigsRequest, BatchCreateResourceValueConfigsResponse> _callBatchCreateResourceValueConfigs;
+
+        private readonly gaxgrpc::ApiCall<DeleteResourceValueConfigRequest, wkt::Empty> _callDeleteResourceValueConfig;
+
+        private readonly gaxgrpc::ApiCall<GetResourceValueConfigRequest, ResourceValueConfig> _callGetResourceValueConfig;
+
+        private readonly gaxgrpc::ApiCall<ListResourceValueConfigsRequest, ListResourceValueConfigsResponse> _callListResourceValueConfigs;
+
+        private readonly gaxgrpc::ApiCall<UpdateResourceValueConfigRequest, ResourceValueConfig> _callUpdateResourceValueConfig;
+
+        private readonly gaxgrpc::ApiCall<ListValuedResourcesRequest, ListValuedResourcesResponse> _callListValuedResources;
+
+        private readonly gaxgrpc::ApiCall<ListAttackPathsRequest, ListAttackPathsResponse> _callListAttackPaths;
+
         /// <summary>
         /// Constructs a client wrapper for the SecurityCenter service, with the specified gRPC client and settings.
         /// </summary>
@@ -8148,6 +11417,12 @@ namespace Google.Cloud.SecurityCenter.V1
             _callDeleteSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<DeleteSecurityHealthAnalyticsCustomModuleRequest, wkt::Empty>("DeleteSecurityHealthAnalyticsCustomModule", grpcClient.DeleteSecurityHealthAnalyticsCustomModuleAsync, grpcClient.DeleteSecurityHealthAnalyticsCustomModule, effectiveSettings.DeleteSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSecurityHealthAnalyticsCustomModule);
             Modify_DeleteSecurityHealthAnalyticsCustomModuleApiCall(ref _callDeleteSecurityHealthAnalyticsCustomModule);
+            _callGetSimulation = clientHelper.BuildApiCall<GetSimulationRequest, Simulation>("GetSimulation", grpcClient.GetSimulationAsync, grpcClient.GetSimulation, effectiveSettings.GetSimulationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSimulation);
+            Modify_GetSimulationApiCall(ref _callGetSimulation);
+            _callGetValuedResource = clientHelper.BuildApiCall<GetValuedResourceRequest, ValuedResource>("GetValuedResource", grpcClient.GetValuedResourceAsync, grpcClient.GetValuedResource, effectiveSettings.GetValuedResourceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetValuedResource);
+            Modify_GetValuedResourceApiCall(ref _callGetValuedResource);
             _callGetBigQueryExport = clientHelper.BuildApiCall<GetBigQueryExportRequest, BigQueryExport>("GetBigQueryExport", grpcClient.GetBigQueryExportAsync, grpcClient.GetBigQueryExport, effectiveSettings.GetBigQueryExportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBigQueryExport);
             Modify_GetBigQueryExportApiCall(ref _callGetBigQueryExport);
@@ -8262,6 +11537,54 @@ namespace Google.Cloud.SecurityCenter.V1
             _callListBigQueryExports = clientHelper.BuildApiCall<ListBigQueryExportsRequest, ListBigQueryExportsResponse>("ListBigQueryExports", grpcClient.ListBigQueryExportsAsync, grpcClient.ListBigQueryExports, effectiveSettings.ListBigQueryExportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBigQueryExports);
             Modify_ListBigQueryExportsApiCall(ref _callListBigQueryExports);
+            _callCreateEventThreatDetectionCustomModule = clientHelper.BuildApiCall<CreateEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule>("CreateEventThreatDetectionCustomModule", grpcClient.CreateEventThreatDetectionCustomModuleAsync, grpcClient.CreateEventThreatDetectionCustomModule, effectiveSettings.CreateEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateEventThreatDetectionCustomModule);
+            Modify_CreateEventThreatDetectionCustomModuleApiCall(ref _callCreateEventThreatDetectionCustomModule);
+            _callDeleteEventThreatDetectionCustomModule = clientHelper.BuildApiCall<DeleteEventThreatDetectionCustomModuleRequest, wkt::Empty>("DeleteEventThreatDetectionCustomModule", grpcClient.DeleteEventThreatDetectionCustomModuleAsync, grpcClient.DeleteEventThreatDetectionCustomModule, effectiveSettings.DeleteEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteEventThreatDetectionCustomModule);
+            Modify_DeleteEventThreatDetectionCustomModuleApiCall(ref _callDeleteEventThreatDetectionCustomModule);
+            _callGetEventThreatDetectionCustomModule = clientHelper.BuildApiCall<GetEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule>("GetEventThreatDetectionCustomModule", grpcClient.GetEventThreatDetectionCustomModuleAsync, grpcClient.GetEventThreatDetectionCustomModule, effectiveSettings.GetEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEventThreatDetectionCustomModule);
+            Modify_GetEventThreatDetectionCustomModuleApiCall(ref _callGetEventThreatDetectionCustomModule);
+            _callListDescendantEventThreatDetectionCustomModules = clientHelper.BuildApiCall<ListDescendantEventThreatDetectionCustomModulesRequest, ListDescendantEventThreatDetectionCustomModulesResponse>("ListDescendantEventThreatDetectionCustomModules", grpcClient.ListDescendantEventThreatDetectionCustomModulesAsync, grpcClient.ListDescendantEventThreatDetectionCustomModules, effectiveSettings.ListDescendantEventThreatDetectionCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDescendantEventThreatDetectionCustomModules);
+            Modify_ListDescendantEventThreatDetectionCustomModulesApiCall(ref _callListDescendantEventThreatDetectionCustomModules);
+            _callListEventThreatDetectionCustomModules = clientHelper.BuildApiCall<ListEventThreatDetectionCustomModulesRequest, ListEventThreatDetectionCustomModulesResponse>("ListEventThreatDetectionCustomModules", grpcClient.ListEventThreatDetectionCustomModulesAsync, grpcClient.ListEventThreatDetectionCustomModules, effectiveSettings.ListEventThreatDetectionCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEventThreatDetectionCustomModules);
+            Modify_ListEventThreatDetectionCustomModulesApiCall(ref _callListEventThreatDetectionCustomModules);
+            _callUpdateEventThreatDetectionCustomModule = clientHelper.BuildApiCall<UpdateEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule>("UpdateEventThreatDetectionCustomModule", grpcClient.UpdateEventThreatDetectionCustomModuleAsync, grpcClient.UpdateEventThreatDetectionCustomModule, effectiveSettings.UpdateEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("event_threat_detection_custom_module.name", request => request.EventThreatDetectionCustomModule?.Name);
+            Modify_ApiCall(ref _callUpdateEventThreatDetectionCustomModule);
+            Modify_UpdateEventThreatDetectionCustomModuleApiCall(ref _callUpdateEventThreatDetectionCustomModule);
+            _callValidateEventThreatDetectionCustomModule = clientHelper.BuildApiCall<ValidateEventThreatDetectionCustomModuleRequest, ValidateEventThreatDetectionCustomModuleResponse>("ValidateEventThreatDetectionCustomModule", grpcClient.ValidateEventThreatDetectionCustomModuleAsync, grpcClient.ValidateEventThreatDetectionCustomModule, effectiveSettings.ValidateEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callValidateEventThreatDetectionCustomModule);
+            Modify_ValidateEventThreatDetectionCustomModuleApiCall(ref _callValidateEventThreatDetectionCustomModule);
+            _callGetEffectiveEventThreatDetectionCustomModule = clientHelper.BuildApiCall<GetEffectiveEventThreatDetectionCustomModuleRequest, EffectiveEventThreatDetectionCustomModule>("GetEffectiveEventThreatDetectionCustomModule", grpcClient.GetEffectiveEventThreatDetectionCustomModuleAsync, grpcClient.GetEffectiveEventThreatDetectionCustomModule, effectiveSettings.GetEffectiveEventThreatDetectionCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEffectiveEventThreatDetectionCustomModule);
+            Modify_GetEffectiveEventThreatDetectionCustomModuleApiCall(ref _callGetEffectiveEventThreatDetectionCustomModule);
+            _callListEffectiveEventThreatDetectionCustomModules = clientHelper.BuildApiCall<ListEffectiveEventThreatDetectionCustomModulesRequest, ListEffectiveEventThreatDetectionCustomModulesResponse>("ListEffectiveEventThreatDetectionCustomModules", grpcClient.ListEffectiveEventThreatDetectionCustomModulesAsync, grpcClient.ListEffectiveEventThreatDetectionCustomModules, effectiveSettings.ListEffectiveEventThreatDetectionCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEffectiveEventThreatDetectionCustomModules);
+            Modify_ListEffectiveEventThreatDetectionCustomModulesApiCall(ref _callListEffectiveEventThreatDetectionCustomModules);
+            _callBatchCreateResourceValueConfigs = clientHelper.BuildApiCall<BatchCreateResourceValueConfigsRequest, BatchCreateResourceValueConfigsResponse>("BatchCreateResourceValueConfigs", grpcClient.BatchCreateResourceValueConfigsAsync, grpcClient.BatchCreateResourceValueConfigs, effectiveSettings.BatchCreateResourceValueConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateResourceValueConfigs);
+            Modify_BatchCreateResourceValueConfigsApiCall(ref _callBatchCreateResourceValueConfigs);
+            _callDeleteResourceValueConfig = clientHelper.BuildApiCall<DeleteResourceValueConfigRequest, wkt::Empty>("DeleteResourceValueConfig", grpcClient.DeleteResourceValueConfigAsync, grpcClient.DeleteResourceValueConfig, effectiveSettings.DeleteResourceValueConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteResourceValueConfig);
+            Modify_DeleteResourceValueConfigApiCall(ref _callDeleteResourceValueConfig);
+            _callGetResourceValueConfig = clientHelper.BuildApiCall<GetResourceValueConfigRequest, ResourceValueConfig>("GetResourceValueConfig", grpcClient.GetResourceValueConfigAsync, grpcClient.GetResourceValueConfig, effectiveSettings.GetResourceValueConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetResourceValueConfig);
+            Modify_GetResourceValueConfigApiCall(ref _callGetResourceValueConfig);
+            _callListResourceValueConfigs = clientHelper.BuildApiCall<ListResourceValueConfigsRequest, ListResourceValueConfigsResponse>("ListResourceValueConfigs", grpcClient.ListResourceValueConfigsAsync, grpcClient.ListResourceValueConfigs, effectiveSettings.ListResourceValueConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListResourceValueConfigs);
+            Modify_ListResourceValueConfigsApiCall(ref _callListResourceValueConfigs);
+            _callUpdateResourceValueConfig = clientHelper.BuildApiCall<UpdateResourceValueConfigRequest, ResourceValueConfig>("UpdateResourceValueConfig", grpcClient.UpdateResourceValueConfigAsync, grpcClient.UpdateResourceValueConfig, effectiveSettings.UpdateResourceValueConfigSettings).WithGoogleRequestParam("resource_value_config.name", request => request.ResourceValueConfig?.Name);
+            Modify_ApiCall(ref _callUpdateResourceValueConfig);
+            Modify_UpdateResourceValueConfigApiCall(ref _callUpdateResourceValueConfig);
+            _callListValuedResources = clientHelper.BuildApiCall<ListValuedResourcesRequest, ListValuedResourcesResponse>("ListValuedResources", grpcClient.ListValuedResourcesAsync, grpcClient.ListValuedResources, effectiveSettings.ListValuedResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListValuedResources);
+            Modify_ListValuedResourcesApiCall(ref _callListValuedResources);
+            _callListAttackPaths = clientHelper.BuildApiCall<ListAttackPathsRequest, ListAttackPathsResponse>("ListAttackPaths", grpcClient.ListAttackPathsAsync, grpcClient.ListAttackPaths, effectiveSettings.ListAttackPathsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAttackPaths);
+            Modify_ListAttackPathsApiCall(ref _callListAttackPaths);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -8284,6 +11607,10 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_DeleteNotificationConfigApiCall(ref gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> call);
 
         partial void Modify_DeleteSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<DeleteSecurityHealthAnalyticsCustomModuleRequest, wkt::Empty> call);
+
+        partial void Modify_GetSimulationApiCall(ref gaxgrpc::ApiCall<GetSimulationRequest, Simulation> call);
+
+        partial void Modify_GetValuedResourceApiCall(ref gaxgrpc::ApiCall<GetValuedResourceRequest, ValuedResource> call);
 
         partial void Modify_GetBigQueryExportApiCall(ref gaxgrpc::ApiCall<GetBigQueryExportRequest, BigQueryExport> call);
 
@@ -8357,6 +11684,38 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_ListBigQueryExportsApiCall(ref gaxgrpc::ApiCall<ListBigQueryExportsRequest, ListBigQueryExportsResponse> call);
 
+        partial void Modify_CreateEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<CreateEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule> call);
+
+        partial void Modify_DeleteEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<DeleteEventThreatDetectionCustomModuleRequest, wkt::Empty> call);
+
+        partial void Modify_GetEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<GetEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule> call);
+
+        partial void Modify_ListDescendantEventThreatDetectionCustomModulesApiCall(ref gaxgrpc::ApiCall<ListDescendantEventThreatDetectionCustomModulesRequest, ListDescendantEventThreatDetectionCustomModulesResponse> call);
+
+        partial void Modify_ListEventThreatDetectionCustomModulesApiCall(ref gaxgrpc::ApiCall<ListEventThreatDetectionCustomModulesRequest, ListEventThreatDetectionCustomModulesResponse> call);
+
+        partial void Modify_UpdateEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<UpdateEventThreatDetectionCustomModuleRequest, EventThreatDetectionCustomModule> call);
+
+        partial void Modify_ValidateEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<ValidateEventThreatDetectionCustomModuleRequest, ValidateEventThreatDetectionCustomModuleResponse> call);
+
+        partial void Modify_GetEffectiveEventThreatDetectionCustomModuleApiCall(ref gaxgrpc::ApiCall<GetEffectiveEventThreatDetectionCustomModuleRequest, EffectiveEventThreatDetectionCustomModule> call);
+
+        partial void Modify_ListEffectiveEventThreatDetectionCustomModulesApiCall(ref gaxgrpc::ApiCall<ListEffectiveEventThreatDetectionCustomModulesRequest, ListEffectiveEventThreatDetectionCustomModulesResponse> call);
+
+        partial void Modify_BatchCreateResourceValueConfigsApiCall(ref gaxgrpc::ApiCall<BatchCreateResourceValueConfigsRequest, BatchCreateResourceValueConfigsResponse> call);
+
+        partial void Modify_DeleteResourceValueConfigApiCall(ref gaxgrpc::ApiCall<DeleteResourceValueConfigRequest, wkt::Empty> call);
+
+        partial void Modify_GetResourceValueConfigApiCall(ref gaxgrpc::ApiCall<GetResourceValueConfigRequest, ResourceValueConfig> call);
+
+        partial void Modify_ListResourceValueConfigsApiCall(ref gaxgrpc::ApiCall<ListResourceValueConfigsRequest, ListResourceValueConfigsResponse> call);
+
+        partial void Modify_UpdateResourceValueConfigApiCall(ref gaxgrpc::ApiCall<UpdateResourceValueConfigRequest, ResourceValueConfig> call);
+
+        partial void Modify_ListValuedResourcesApiCall(ref gaxgrpc::ApiCall<ListValuedResourcesRequest, ListValuedResourcesResponse> call);
+
+        partial void Modify_ListAttackPathsApiCall(ref gaxgrpc::ApiCall<ListAttackPathsRequest, ListAttackPathsResponse> call);
+
         partial void OnConstruction(SecurityCenter.SecurityCenterClient grpcClient, SecurityCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC SecurityCenter client</summary>
@@ -8379,6 +11738,10 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_DeleteNotificationConfigRequest(ref DeleteNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSecurityHealthAnalyticsCustomModuleRequest(ref DeleteSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSimulationRequest(ref GetSimulationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetValuedResourceRequest(ref GetValuedResourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBigQueryExportRequest(ref GetBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8451,6 +11814,38 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_UpdateBigQueryExportRequest(ref UpdateBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBigQueryExportsRequest(ref ListBigQueryExportsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateEventThreatDetectionCustomModuleRequest(ref CreateEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteEventThreatDetectionCustomModuleRequest(ref DeleteEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEventThreatDetectionCustomModuleRequest(ref GetEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDescendantEventThreatDetectionCustomModulesRequest(ref ListDescendantEventThreatDetectionCustomModulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEventThreatDetectionCustomModulesRequest(ref ListEventThreatDetectionCustomModulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEventThreatDetectionCustomModuleRequest(ref UpdateEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ValidateEventThreatDetectionCustomModuleRequest(ref ValidateEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEffectiveEventThreatDetectionCustomModuleRequest(ref GetEffectiveEventThreatDetectionCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEffectiveEventThreatDetectionCustomModulesRequest(ref ListEffectiveEventThreatDetectionCustomModulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateResourceValueConfigsRequest(ref BatchCreateResourceValueConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteResourceValueConfigRequest(ref DeleteResourceValueConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetResourceValueConfigRequest(ref GetResourceValueConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListResourceValueConfigsRequest(ref ListResourceValueConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateResourceValueConfigRequest(ref UpdateResourceValueConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListValuedResourcesRequest(ref ListValuedResourcesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAttackPathsRequest(ref ListAttackPathsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>BulkMuteFindings</c>.</summary>
         public override lro::OperationsClient BulkMuteFindingsOperationsClient { get; }
@@ -8685,6 +12080,56 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_DeleteSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
             return _callDeleteSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Simulation GetSimulation(GetSimulationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSimulationRequest(ref request, ref callSettings);
+            return _callGetSimulation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the simulation by name or the latest simulation for the given
+        /// organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Simulation> GetSimulationAsync(GetSimulationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSimulationRequest(ref request, ref callSettings);
+            return _callGetSimulation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ValuedResource GetValuedResource(GetValuedResourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetValuedResourceRequest(ref request, ref callSettings);
+            return _callGetValuedResource.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the valued resource by name
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ValuedResource> GetValuedResourceAsync(GetValuedResourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetValuedResourceRequest(ref request, ref callSettings);
+            return _callGetValuedResource.Async(request, callSettings);
         }
 
         /// <summary>
@@ -9633,6 +13078,430 @@ namespace Google.Cloud.SecurityCenter.V1
             Modify_ListBigQueryExportsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBigQueryExportsRequest, ListBigQueryExportsResponse, BigQueryExport>(_callListBigQueryExports, request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EventThreatDetectionCustomModule CreateEventThreatDetectionCustomModule(CreateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callCreateEventThreatDetectionCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a resident Event Threat Detection custom module at the scope of the
+        /// given Resource Manager parent, and also creates inherited custom modules
+        /// for all descendants of the given parent. These modules are enabled by
+        /// default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EventThreatDetectionCustomModule> CreateEventThreatDetectionCustomModuleAsync(CreateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callCreateEventThreatDetectionCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteEventThreatDetectionCustomModule(DeleteEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            _callDeleteEventThreatDetectionCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified Event Threat Detection custom module and all of its
+        /// descendants in the Resource Manager hierarchy. This method is only
+        /// supported for resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteEventThreatDetectionCustomModuleAsync(DeleteEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callDeleteEventThreatDetectionCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EventThreatDetectionCustomModule GetEventThreatDetectionCustomModule(GetEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callGetEventThreatDetectionCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EventThreatDetectionCustomModule> GetEventThreatDetectionCustomModuleAsync(GetEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callGetEventThreatDetectionCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModules(ListDescendantEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDescendantEventThreatDetectionCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDescendantEventThreatDetectionCustomModulesRequest, ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule>(_callListDescendantEventThreatDetectionCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all resident Event Threat Detection custom modules under the
+        /// given Resource Manager parent and its descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListDescendantEventThreatDetectionCustomModulesAsync(ListDescendantEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDescendantEventThreatDetectionCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesRequest, ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule>(_callListDescendantEventThreatDetectionCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventThreatDetectionCustomModule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModules(ListEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEventThreatDetectionCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEventThreatDetectionCustomModulesRequest, ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule>(_callListEventThreatDetectionCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all Event Threat Detection custom modules for the given
+        /// Resource Manager parent. This includes resident modules defined at the
+        /// scope of the parent along with modules inherited from ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> ListEventThreatDetectionCustomModulesAsync(ListEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEventThreatDetectionCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEventThreatDetectionCustomModulesRequest, ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule>(_callListEventThreatDetectionCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EventThreatDetectionCustomModule UpdateEventThreatDetectionCustomModule(UpdateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callUpdateEventThreatDetectionCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Event Threat Detection custom module with the given name based
+        /// on the given update mask. Updating the enablement state is supported for
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of "inherited"). Updating the display name or
+        /// configuration of a module is supported for resident modules only. The type
+        /// of a module cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EventThreatDetectionCustomModule> UpdateEventThreatDetectionCustomModuleAsync(UpdateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callUpdateEventThreatDetectionCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Validates the given Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ValidateEventThreatDetectionCustomModuleResponse ValidateEventThreatDetectionCustomModule(ValidateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callValidateEventThreatDetectionCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Validates the given Event Threat Detection custom module.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ValidateEventThreatDetectionCustomModuleResponse> ValidateEventThreatDetectionCustomModuleAsync(ValidateEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callValidateEventThreatDetectionCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EffectiveEventThreatDetectionCustomModule GetEffectiveEventThreatDetectionCustomModule(GetEffectiveEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callGetEffectiveEventThreatDetectionCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an effective Event Threat Detection custom module at the given level.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EffectiveEventThreatDetectionCustomModule> GetEffectiveEventThreatDetectionCustomModuleAsync(GetEffectiveEventThreatDetectionCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveEventThreatDetectionCustomModuleRequest(ref request, ref callSettings);
+            return _callGetEffectiveEventThreatDetectionCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModules(ListEffectiveEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEffectiveEventThreatDetectionCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEffectiveEventThreatDetectionCustomModulesRequest, ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule>(_callListEffectiveEventThreatDetectionCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all effective Event Threat Detection custom modules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent along with modules inherited from its ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveEventThreatDetectionCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> ListEffectiveEventThreatDetectionCustomModulesAsync(ListEffectiveEventThreatDetectionCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEffectiveEventThreatDetectionCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesRequest, ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule>(_callListEffectiveEventThreatDetectionCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateResourceValueConfigsResponse BatchCreateResourceValueConfigs(BatchCreateResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateResourceValueConfigsRequest(ref request, ref callSettings);
+            return _callBatchCreateResourceValueConfigs.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ResourceValueConfig for an organization. Maps user's tags to
+        /// difference resource values for use by the attack path simulation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateResourceValueConfigsResponse> BatchCreateResourceValueConfigsAsync(BatchCreateResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateResourceValueConfigsRequest(ref request, ref callSettings);
+            return _callBatchCreateResourceValueConfigs.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteResourceValueConfig(DeleteResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteResourceValueConfigRequest(ref request, ref callSettings);
+            _callDeleteResourceValueConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteResourceValueConfigAsync(DeleteResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteResourceValueConfigRequest(ref request, ref callSettings);
+            return _callDeleteResourceValueConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ResourceValueConfig GetResourceValueConfig(GetResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetResourceValueConfigRequest(ref request, ref callSettings);
+            return _callGetResourceValueConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a ResourceValueConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ResourceValueConfig> GetResourceValueConfigAsync(GetResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetResourceValueConfigRequest(ref request, ref callSettings);
+            return _callGetResourceValueConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(ListResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListResourceValueConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListResourceValueConfigsRequest, ListResourceValueConfigsResponse, ResourceValueConfig>(_callListResourceValueConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ResourceValueConfigs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(ListResourceValueConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListResourceValueConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListResourceValueConfigsRequest, ListResourceValueConfigsResponse, ResourceValueConfig>(_callListResourceValueConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ResourceValueConfig UpdateResourceValueConfig(UpdateResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateResourceValueConfigRequest(ref request, ref callSettings);
+            return _callUpdateResourceValueConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing ResourceValueConfigs with new rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ResourceValueConfig> UpdateResourceValueConfigAsync(UpdateResourceValueConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateResourceValueConfigRequest(ref request, ref callSettings);
+            return _callUpdateResourceValueConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
+        public override gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(ListValuedResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListValuedResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListValuedResourcesRequest, ListValuedResourcesResponse, ValuedResource>(_callListValuedResources, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the valued resources for a set of simulation results and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(ListValuedResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListValuedResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListValuedResourcesRequest, ListValuedResourcesResponse, ValuedResource>(_callListValuedResources, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(ListAttackPathsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAttackPathsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAttackPathsRequest, ListAttackPathsResponse, AttackPath>(_callListAttackPaths, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the attack paths for a set of simulation results or valued resources
+        /// and filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(ListAttackPathsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAttackPathsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAttackPathsRequest, ListAttackPathsResponse, AttackPath>(_callListAttackPaths, request, callSettings);
+        }
     }
 
     public partial class GroupAssetsRequest : gaxgrpc::IPageRequest
@@ -9676,6 +13545,30 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
     public partial class ListBigQueryExportsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDescendantEventThreatDetectionCustomModulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEventThreatDetectionCustomModulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEffectiveEventThreatDetectionCustomModulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListResourceValueConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListValuedResourcesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAttackPathsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -9766,6 +13659,57 @@ namespace Google.Cloud.SecurityCenter.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BigQueryExport> GetEnumerator() => BigQueryExports.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDescendantEventThreatDetectionCustomModulesResponse : gaxgrpc::IPageResponse<EventThreatDetectionCustomModule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EventThreatDetectionCustomModule> GetEnumerator() =>
+            EventThreatDetectionCustomModules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEventThreatDetectionCustomModulesResponse : gaxgrpc::IPageResponse<EventThreatDetectionCustomModule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EventThreatDetectionCustomModule> GetEnumerator() =>
+            EventThreatDetectionCustomModules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEffectiveEventThreatDetectionCustomModulesResponse : gaxgrpc::IPageResponse<EffectiveEventThreatDetectionCustomModule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EffectiveEventThreatDetectionCustomModule> GetEnumerator() =>
+            EffectiveEventThreatDetectionCustomModules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListResourceValueConfigsResponse : gaxgrpc::IPageResponse<ResourceValueConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ResourceValueConfig> GetEnumerator() => ResourceValueConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListValuedResourcesResponse : gaxgrpc::IPageResponse<ValuedResource>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ValuedResource> GetEnumerator() => ValuedResources.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAttackPathsResponse : gaxgrpc::IPageResponse<AttackPath>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AttackPath> GetEnumerator() => AttackPaths.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
