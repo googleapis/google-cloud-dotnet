@@ -25,23 +25,24 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvcnVuL3YyL3Rhc2tfdGVtcGxhdGUucHJvdG8SE2dv",
-            "b2dsZS5jbG91ZC5ydW4udjIaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "IWdvb2dsZS9jbG91ZC9ydW4vdjIvazhzLm1pbi5wcm90bxopZ29vZ2xlL2Ns",
-            "b3VkL3J1bi92Mi92ZW5kb3Jfc2V0dGluZ3MucHJvdG8aHmdvb2dsZS9wcm90",
-            "b2J1Zi9kdXJhdGlvbi5wcm90byKVAwoMVGFza1RlbXBsYXRlEjIKCmNvbnRh",
-            "aW5lcnMYASADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRhaW5lchIs",
-            "Cgd2b2x1bWVzGAIgAygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Wb2x1bWUS",
-            "FQoLbWF4X3JldHJpZXMYAyABKAVIABIqCgd0aW1lb3V0GAQgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEhcKD3NlcnZpY2VfYWNjb3VudBgFIAEo",
-            "CRJIChVleGVjdXRpb25fZW52aXJvbm1lbnQYBiABKA4yKS5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25tZW50Ej4KDmVuY3J5cHRpb25f",
-            "a2V5GAcgASgJQib6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
-            "b0tleRIyCgp2cGNfYWNjZXNzGAggASgLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5WcGNBY2Nlc3NCCQoHcmV0cmllc0JZChdjb20uZ29vZ2xlLmNsb3VkLnJ1",
-            "bi52MkIRVGFza1RlbXBsYXRlUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "b2dsZS5jbG91ZC5ydW4udjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIWdvb2dsZS9jbG91",
+            "ZC9ydW4vdjIvazhzLm1pbi5wcm90bxopZ29vZ2xlL2Nsb3VkL3J1bi92Mi92",
+            "ZW5kb3Jfc2V0dGluZ3MucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlv",
+            "bi5wcm90byKuAwoMVGFza1RlbXBsYXRlEjIKCmNvbnRhaW5lcnMYASADKAsy",
+            "Hi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRhaW5lchIxCgd2b2x1bWVzGAIg",
+            "AygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Wb2x1bWVCA+BBARIVCgttYXhf",
+            "cmV0cmllcxgDIAEoBUgAEi8KB3RpbWVvdXQYBCABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBARIcCg9zZXJ2aWNlX2FjY291bnQYBSABKAlC",
+            "A+BBARJNChVleGVjdXRpb25fZW52aXJvbm1lbnQYBiABKA4yKS5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25tZW50QgPgQQESPgoOZW5j",
+            "cnlwdGlvbl9rZXkYByABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5j",
+            "b20vQ3J5cHRvS2V5EjcKCnZwY19hY2Nlc3MYCCABKAsyHi5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLlZwY0FjY2Vzc0ID4EEBQgkKB3JldHJpZXNCWQoXY29tLmdv",
+            "b2dsZS5jbG91ZC5ydW4udjJCEVRhc2tUZW1wbGF0ZVByb3RvUAFaKWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskTemplate), global::Google.Cloud.Run.V2.TaskTemplate.Parser, new[]{ "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "EncryptionKey", "VpcAccess" }, new[]{ "Retries" }, null, null, null)
           }));
@@ -132,7 +133,7 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Run.V2.Volume.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Volume> volumes_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Volume>();
     /// <summary>
-    /// A list of Volumes to make available to containers.
+    /// Optional. A list of Volumes to make available to containers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -174,10 +175,10 @@ namespace Google.Cloud.Run.V2 {
     public const int TimeoutFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
     /// <summary>
-    /// Max allowed time duration the Task may be active before the system will
-    /// actively try to mark it failed and kill associated containers. This applies
-    /// per attempt of a task, meaning each retry can run for the full timeout.
-    /// Defaults to 600 seconds.
+    /// Optional. Max allowed time duration the Task may be active before the
+    /// system will actively try to mark it failed and kill associated containers.
+    /// This applies per attempt of a task, meaning each retry can run for the full
+    /// timeout. Defaults to 600 seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -192,10 +193,10 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceAccountFieldNumber = 5;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Email address of the IAM service account associated with the Task of a
-    /// Job. The service account represents the identity of the
-    /// running task, and determines what permissions the task has. If
-    /// not provided, the task will use the project's default service account.
+    /// Optional. Email address of the IAM service account associated with the Task
+    /// of a Job. The service account represents the identity of the running task,
+    /// and determines what permissions the task has. If not provided, the task
+    /// will use the project's default service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -210,7 +211,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ExecutionEnvironmentFieldNumber = 6;
     private global::Google.Cloud.Run.V2.ExecutionEnvironment executionEnvironment_ = global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified;
     /// <summary>
-    /// The execution environment being used to host this Task.
+    /// Optional. The execution environment being used to host this Task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -242,8 +243,9 @@ namespace Google.Cloud.Run.V2 {
     public const int VpcAccessFieldNumber = 8;
     private global::Google.Cloud.Run.V2.VpcAccess vpcAccess_;
     /// <summary>
-    /// VPC Access configuration to use for this Task. For more information,
-    /// visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+    /// Optional. VPC Access configuration to use for this Task. For more
+    /// information, visit
+    /// https://cloud.google.com/run/docs/configuring/connecting-vpc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

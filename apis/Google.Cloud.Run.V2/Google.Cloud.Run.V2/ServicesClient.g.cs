@@ -31,6 +31,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Run.V2
 {
@@ -692,7 +693,7 @@ namespace Google.Cloud.Run.V2
             GetServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -701,7 +702,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -710,7 +711,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -737,7 +738,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -764,7 +765,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -791,7 +792,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -908,6 +909,56 @@ namespace Google.Cloud.Run.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, st::CancellationToken cancellationToken) =>
             UpdateServiceAsync(service, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Service.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The Service to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Service, Service> UpdateService(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateService(new UpdateServiceRequest
+            {
+                UpdateMask = updateMask,
+                Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Service.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The Service to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateServiceAsync(new UpdateServiceRequest
+            {
+                UpdateMask = updateMask,
+                Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Service.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The Service to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateServiceAsync(service, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a Service.
@@ -1326,7 +1377,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1338,7 +1389,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

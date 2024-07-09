@@ -603,6 +603,7 @@ namespace GoogleCSharpSnippets
             gcrv::UpdateServiceRequest request = new gcrv::UpdateServiceRequest
             {
                 Service = new gcrv::Service(),
+                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
@@ -638,6 +639,7 @@ namespace GoogleCSharpSnippets
             gcrv::UpdateServiceRequest request = new gcrv::UpdateServiceRequest
             {
                 Service = new gcrv::Service(),
+                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
@@ -663,7 +665,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for UpdateService</summary>
-        public void UpdateService()
+        public void UpdateService1()
         {
             // Snippet: UpdateService(Service, CallSettings)
             // Create client
@@ -692,7 +694,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for UpdateServiceAsync</summary>
-        public async Task UpdateServiceAsync()
+        public async Task UpdateService1Async()
         {
             // Snippet: UpdateServiceAsync(Service, CallSettings)
             // Additional: UpdateServiceAsync(Service, CancellationToken)
@@ -702,6 +704,67 @@ namespace GoogleCSharpSnippets
             gcrv::Service service = new gcrv::Service();
             // Make the request
             Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(service);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcrv::Service result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceUpdateServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Service retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateService</summary>
+        public void UpdateService2()
+        {
+            // Snippet: UpdateService(Service, FieldMask, CallSettings)
+            // Create client
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
+            // Initialize request argument(s)
+            gcrv::Service service = new gcrv::Service();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.UpdateService(service, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcrv::Service result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceUpdateService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Service retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceAsync</summary>
+        public async Task UpdateService2Async()
+        {
+            // Snippet: UpdateServiceAsync(Service, FieldMask, CallSettings)
+            // Additional: UpdateServiceAsync(Service, FieldMask, CancellationToken)
+            // Create client
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            gcrv::Service service = new gcrv::Service();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(service, updateMask);
 
             // Poll until the returned long-running operation is complete
             Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();

@@ -69,30 +69,31 @@ namespace Google.Cloud.Run.V2 {
             "SVVNX1VOU1BFQ0lGSUVEEAASCgoGTUVNT1JZEAEiQgoPTkZTVm9sdW1lU291",
             "cmNlEg4KBnNlcnZlchgBIAEoCRIMCgRwYXRoGAIgASgJEhEKCXJlYWRfb25s",
             "eRgDIAEoCCI0Cg9HQ1NWb2x1bWVTb3VyY2USDgoGYnVja2V0GAEgASgJEhEK",
-            "CXJlYWRfb25seRgCIAEoCCKlAgoFUHJvYmUSHQoVaW5pdGlhbF9kZWxheV9z",
-            "ZWNvbmRzGAEgASgFEhcKD3RpbWVvdXRfc2Vjb25kcxgCIAEoBRIWCg5wZXJp",
-            "b2Rfc2Vjb25kcxgDIAEoBRIZChFmYWlsdXJlX3RocmVzaG9sZBgEIAEoBRI2",
-            "CghodHRwX2dldBgFIAEoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuSFRUUEdl",
-            "dEFjdGlvbkgAEjoKCnRjcF9zb2NrZXQYBiABKAsyJC5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyLlRDUFNvY2tldEFjdGlvbkgAEi8KBGdycGMYByABKAsyHy5nb29n",
-            "bGUuY2xvdWQucnVuLnYyLkdSUENBY3Rpb25IAEIMCgpwcm9iZV90eXBlImIK",
-            "DUhUVFBHZXRBY3Rpb24SDAoEcGF0aBgBIAEoCRI1CgxodHRwX2hlYWRlcnMY",
-            "BCADKAsyHy5nb29nbGUuY2xvdWQucnVuLnYyLkhUVFBIZWFkZXISDAoEcG9y",
-            "dBgFIAEoBSIuCgpIVFRQSGVhZGVyEhEKBG5hbWUYASABKAlCA+BBAhINCgV2",
-            "YWx1ZRgCIAEoCSIfCg9UQ1BTb2NrZXRBY3Rpb24SDAoEcG9ydBgBIAEoBSIr",
-            "CgpHUlBDQWN0aW9uEgwKBHBvcnQYASABKAUSDwoHc2VydmljZRgCIAEoCULp",
-            "AwoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFaKWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBi6kF4CiFj",
-            "bG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jp",
-            "bmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl96kFKCiNzZWNyZXRtYW5hZ2Vy",
-            "Lmdvb2dsZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3Nl",
-            "Y3JldHMve3NlY3JldH3qQWQKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vU2VjcmV0VmVyc2lvbhI2cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMv",
-            "e3NlY3JldH0vdmVyc2lvbnMve3ZlcnNpb2596kFkCiJ2cGNhY2Nlc3MuZ29v",
-            "Z2xlYXBpcy5jb20vQ29ubmVjdG9yEj5wcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vY29ubmVjdG9ycy97Y29ubmVjdG9yfWIGcHJv",
-            "dG8z"));
+            "CXJlYWRfb25seRgCIAEoCCLIAgoFUHJvYmUSIgoVaW5pdGlhbF9kZWxheV9z",
+            "ZWNvbmRzGAEgASgFQgPgQQESHAoPdGltZW91dF9zZWNvbmRzGAIgASgFQgPg",
+            "QQESGwoOcGVyaW9kX3NlY29uZHMYAyABKAVCA+BBARIeChFmYWlsdXJlX3Ro",
+            "cmVzaG9sZBgEIAEoBUID4EEBEjsKCGh0dHBfZ2V0GAUgASgLMiIuZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5IVFRQR2V0QWN0aW9uQgPgQQFIABI/Cgp0Y3Bfc29j",
+            "a2V0GAYgASgLMiQuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UQ1BTb2NrZXRBY3Rp",
+            "b25CA+BBAUgAEjQKBGdycGMYByABKAsyHy5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LkdSUENBY3Rpb25CA+BBAUgAQgwKCnByb2JlX3R5cGUicQoNSFRUUEdldEFj",
+            "dGlvbhIRCgRwYXRoGAEgASgJQgPgQQESOgoMaHR0cF9oZWFkZXJzGAQgAygL",
+            "Mh8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQSGVhZGVyQgPgQQESEQoEcG9y",
+            "dBgFIAEoBUID4EEBIjMKCkhUVFBIZWFkZXISEQoEbmFtZRgBIAEoCUID4EEC",
+            "EhIKBXZhbHVlGAIgASgJQgPgQQEiJAoPVENQU29ja2V0QWN0aW9uEhEKBHBv",
+            "cnQYASABKAVCA+BBASI1CgpHUlBDQWN0aW9uEhEKBHBvcnQYASABKAVCA+BB",
+            "ARIUCgdzZXJ2aWNlGAIgASgJQgPgQQFC6QMKF2NvbS5nb29nbGUuY2xvdWQu",
+            "cnVuLnYyQgtLOHNNaW5Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1",
+            "bi9hcGl2Mi9ydW5wYjtydW5wYupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5j",
+            "b20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlw",
+            "dG9fa2V5fepBSgojc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNy",
+            "ZXQSI3Byb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR96kFkCipz",
+            "ZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24SNnBy",
+            "b2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR9L3ZlcnNpb25zL3t2",
+            "ZXJzaW9ufepBZAoidnBjYWNjZXNzLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rv",
+            "chI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nv",
+            "bm5lY3RvcnMve2Nvbm5lY3Rvcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3917,7 +3918,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ReadOnlyFieldNumber = 3;
     private bool readOnly_;
     /// <summary>
-    /// If true, mount the NFS volume as read only
+    /// If true, the volume will be mounted as read only for all mounts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4110,7 +4111,8 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
-  /// Represents a GCS Bucket mounted as a volume.
+  /// Represents a volume backed by a Cloud Storage bucket using Cloud Storage
+  /// FUSE.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GCSVolumeSource : pb::IMessage<GCSVolumeSource>
@@ -4162,7 +4164,7 @@ namespace Google.Cloud.Run.V2 {
     public const int BucketFieldNumber = 1;
     private string bucket_ = "";
     /// <summary>
-    /// GCS Bucket name
+    /// Cloud Storage Bucket name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4177,7 +4179,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ReadOnlyFieldNumber = 2;
     private bool readOnly_;
     /// <summary>
-    /// If true, mount the GCS bucket as read-only
+    /// If true, the volume will be mounted as read only for all mounts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4413,10 +4415,9 @@ namespace Google.Cloud.Run.V2 {
     public const int InitialDelaySecondsFieldNumber = 1;
     private int initialDelaySeconds_;
     /// <summary>
-    /// Number of seconds after the container has started before the probe is
-    /// initiated.
-    /// Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
-    /// is 3600. Maximum value for startup probe is 240.
+    /// Optional. Number of seconds after the container has started before the
+    /// probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum
+    /// value for liveness probe is 3600. Maximum value for startup probe is 240.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4431,7 +4432,7 @@ namespace Google.Cloud.Run.V2 {
     public const int TimeoutSecondsFieldNumber = 2;
     private int timeoutSeconds_;
     /// <summary>
-    /// Number of seconds after which the probe times out.
+    /// Optional. Number of seconds after which the probe times out.
     /// Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
     /// Must be smaller than period_seconds.
     /// </summary>
@@ -4448,7 +4449,7 @@ namespace Google.Cloud.Run.V2 {
     public const int PeriodSecondsFieldNumber = 3;
     private int periodSeconds_;
     /// <summary>
-    /// How often (in seconds) to perform the probe.
+    /// Optional. How often (in seconds) to perform the probe.
     /// Default to 10 seconds. Minimum value is 1. Maximum value for liveness probe
     /// is 3600. Maximum value for startup probe is 240.
     /// Must be greater or equal than timeout_seconds.
@@ -4466,8 +4467,8 @@ namespace Google.Cloud.Run.V2 {
     public const int FailureThresholdFieldNumber = 4;
     private int failureThreshold_;
     /// <summary>
-    /// Minimum consecutive failures for the probe to be considered failed after
-    /// having succeeded. Defaults to 3. Minimum value is 1.
+    /// Optional. Minimum consecutive failures for the probe to be considered
+    /// failed after having succeeded. Defaults to 3. Minimum value is 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4481,7 +4482,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "http_get" field.</summary>
     public const int HttpGetFieldNumber = 5;
     /// <summary>
-    /// HTTPGet specifies the http request to perform.
+    /// Optional. HTTPGet specifies the http request to perform.
     /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4497,7 +4498,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "tcp_socket" field.</summary>
     public const int TcpSocketFieldNumber = 6;
     /// <summary>
-    /// TCPSocket specifies an action involving a TCP port.
+    /// Optional. TCPSocket specifies an action involving a TCP port.
     /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4513,7 +4514,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "grpc" field.</summary>
     public const int GrpcFieldNumber = 7;
     /// <summary>
-    /// GRPC specifies an action involving a gRPC port.
+    /// Optional. GRPC specifies an action involving a gRPC port.
     /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4923,7 +4924,7 @@ namespace Google.Cloud.Run.V2 {
     public const int PathFieldNumber = 1;
     private string path_ = "";
     /// <summary>
-    /// Path to access on the HTTP server. Defaults to '/'.
+    /// Optional. Path to access on the HTTP server. Defaults to '/'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4940,7 +4941,8 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Run.V2.HTTPHeader.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.HTTPHeader> httpHeaders_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.HTTPHeader>();
     /// <summary>
-    /// Custom headers to set in the request. HTTP allows repeated headers.
+    /// Optional. Custom headers to set in the request. HTTP allows repeated
+    /// headers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4952,9 +4954,9 @@ namespace Google.Cloud.Run.V2 {
     public const int PortFieldNumber = 5;
     private int port_;
     /// <summary>
-    /// Port number to access on the container. Must be in the range 1 to 65535.
-    /// If not specified, defaults to the exposed port of the container, which is
-    /// the value of container.ports[0].containerPort.
+    /// Optional. Port number to access on the container. Must be in the range 1 to
+    /// 65535. If not specified, defaults to the exposed port of the container,
+    /// which is the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5204,7 +5206,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ValueFieldNumber = 2;
     private string value_ = "";
     /// <summary>
-    /// The header field value
+    /// Optional. The header field value
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5424,9 +5426,9 @@ namespace Google.Cloud.Run.V2 {
     public const int PortFieldNumber = 1;
     private int port_;
     /// <summary>
-    /// Port number to access on the container. Must be in the range 1 to 65535.
-    /// If not specified, defaults to the exposed port of the container, which is
-    /// the value of container.ports[0].containerPort.
+    /// Optional. Port number to access on the container. Must be in the range 1 to
+    /// 65535. If not specified, defaults to the exposed port of the container,
+    /// which is the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5623,9 +5625,9 @@ namespace Google.Cloud.Run.V2 {
     public const int PortFieldNumber = 1;
     private int port_;
     /// <summary>
-    /// Port number of the gRPC service. Number must be in the range 1 to 65535.
-    /// If not specified, defaults to the exposed port of the container, which is
-    /// the value of container.ports[0].containerPort.
+    /// Optional. Port number of the gRPC service. Number must be in the range 1 to
+    /// 65535. If not specified, defaults to the exposed port of the container,
+    /// which is the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5640,9 +5642,10 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceFieldNumber = 2;
     private string service_ = "";
     /// <summary>
-    /// Service is the name of the service to place in the gRPC HealthCheckRequest
-    /// (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If
-    /// this is not specified, the default behavior is defined by gRPC.
+    /// Optional. Service is the name of the service to place in the gRPC
+    /// HealthCheckRequest (see
+    /// https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this
+    /// is not specified, the default behavior is defined by gRPC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

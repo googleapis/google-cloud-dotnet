@@ -376,7 +376,8 @@ namespace Google.Cloud.Run.V2
             GetRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -385,7 +386,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -394,7 +396,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -421,7 +424,8 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -448,7 +452,8 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -475,7 +480,8 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -733,7 +739,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -745,7 +752,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -414,7 +414,8 @@ namespace Google.Cloud.Run.V2
             GetExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -423,7 +424,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -432,7 +434,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
@@ -459,7 +462,8 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
@@ -486,7 +490,8 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
@@ -513,7 +518,8 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
@@ -936,7 +942,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -948,7 +955,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
