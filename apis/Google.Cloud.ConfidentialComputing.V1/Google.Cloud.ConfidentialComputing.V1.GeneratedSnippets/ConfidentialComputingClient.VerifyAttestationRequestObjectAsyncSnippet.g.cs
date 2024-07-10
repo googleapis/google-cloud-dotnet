@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 TpmAttestation = new TpmAttestation(),
                 ConfidentialSpaceInfo = new ConfidentialSpaceInfo(),
                 TokenOptions = new TokenOptions(),
+                TdCcel = new TdxCcelAttestation(),
             };
             // Make the request
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);
