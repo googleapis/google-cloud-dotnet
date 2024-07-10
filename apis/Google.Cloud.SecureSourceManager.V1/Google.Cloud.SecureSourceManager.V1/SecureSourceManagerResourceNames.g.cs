@@ -1307,6 +1307,41 @@ namespace Google.Cloud.SecureSourceManager.V1
             get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
             set => KmsKey = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class PrivateConfig
+            {
+                /// <summary>
+                /// <see cref="CaPoolName"/>-typed view over the <see cref="CaPool"/> resource name property.
+                /// </summary>
+                public CaPoolName CaPoolAsCaPoolName
+                {
+                    get => string.IsNullOrEmpty(CaPool) ? null : CaPoolName.Parse(CaPool, allowUnparsed: true);
+                    set => CaPool = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="ServiceAttachmentName"/>-typed view over the <see cref="HttpServiceAttachment"/> resource
+                /// name property.
+                /// </summary>
+                public ServiceAttachmentName HttpServiceAttachmentAsServiceAttachmentName
+                {
+                    get => string.IsNullOrEmpty(HttpServiceAttachment) ? null : ServiceAttachmentName.Parse(HttpServiceAttachment, allowUnparsed: true);
+                    set => HttpServiceAttachment = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="ServiceAttachmentName"/>-typed view over the <see cref="SshServiceAttachment"/> resource
+                /// name property.
+                /// </summary>
+                public ServiceAttachmentName SshServiceAttachmentAsServiceAttachmentName
+                {
+                    get => string.IsNullOrEmpty(SshServiceAttachment) ? null : ServiceAttachmentName.Parse(SshServiceAttachment, allowUnparsed: true);
+                    set => SshServiceAttachment = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class Repository
