@@ -115,15 +115,17 @@ namespace Google.Cloud.Bigtable.V2 {
             "b1NjaGVtYRIzCgdjb2x1bW5zGAEgAygLMiIuZ29vZ2xlLmJpZ3RhYmxlLnYy",
             "LkNvbHVtbk1ldGFkYXRhIlYKEVJlc3VsdFNldE1ldGFkYXRhEjcKDHByb3Rv",
             "X3NjaGVtYRgBIAEoCzIfLmdvb2dsZS5iaWd0YWJsZS52Mi5Qcm90b1NjaGVt",
-            "YUgAQggKBnNjaGVtYSIkCg5Qcm90b1Jvd3NCYXRjaBISCgpiYXRjaF9kYXRh",
-            "GAEgASgMIpYBChBQYXJ0aWFsUmVzdWx0U2V0Ej4KEHByb3RvX3Jvd3NfYmF0",
-            "Y2gYAyABKAsyIi5nb29nbGUuYmlndGFibGUudjIuUHJvdG9Sb3dzQmF0Y2hI",
-            "ABIUCgxyZXN1bWVfdG9rZW4YBSABKAwSHAoUZXN0aW1hdGVkX2JhdGNoX3Np",
-            "emUYBCABKAVCDgoMcGFydGlhbF9yb3dzQrUBChZjb20uZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyQglEYXRhUHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS92MjtiaWd0YWJsZaoCGEdvb2dsZS5D",
-            "bG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxWMuoC",
-            "G0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
+            "YUgAQggKBnNjaGVtYSI2CglQcm90b1Jvd3MSKQoGdmFsdWVzGAIgAygLMhku",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlIiQKDlByb3RvUm93c0JhdGNoEhIK",
+            "CmJhdGNoX2RhdGEYASABKAwilgEKEFBhcnRpYWxSZXN1bHRTZXQSPgoQcHJv",
+            "dG9fcm93c19iYXRjaBgDIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5Qcm90",
+            "b1Jvd3NCYXRjaEgAEhQKDHJlc3VtZV90b2tlbhgFIAEoDBIcChRlc3RpbWF0",
+            "ZWRfYmF0Y2hfc2l6ZRgEIAEoBUIOCgxwYXJ0aWFsX3Jvd3NCtQEKFmNvbS5n",
+            "b29nbGUuYmlndGFibGUudjJCCURhdGFQcm90b1ABWjpnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxl",
+            "qgIYR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJp",
+            "Z3RhYmxlXFYy6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Bigtable.V2.TypesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,6 +156,7 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ColumnMetadata), global::Google.Cloud.Bigtable.V2.ColumnMetadata.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ProtoSchema), global::Google.Cloud.Bigtable.V2.ProtoSchema.Parser, new[]{ "Columns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ResultSetMetadata), global::Google.Cloud.Bigtable.V2.ResultSetMetadata.Parser, new[]{ "ProtoSchema" }, new[]{ "Schema" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ProtoRows), global::Google.Cloud.Bigtable.V2.ProtoRows.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ProtoRowsBatch), global::Google.Cloud.Bigtable.V2.ProtoRowsBatch.Parser, new[]{ "BatchData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PartialResultSet), global::Google.Cloud.Bigtable.V2.PartialResultSet.Parser, new[]{ "ProtoRowsBatch", "ResumeToken", "EstimatedBatchSize" }, new[]{ "PartialRows" }, null, null, null)
           }));
@@ -9687,6 +9690,197 @@ namespace Google.Cloud.Bigtable.V2 {
   }
 
   /// <summary>
+  /// Rows represented in proto format.
+  ///
+  /// This should be constructed by concatenating the `batch_data` from each
+  /// of the relevant `ProtoRowsBatch` messages and parsing the result as a
+  /// `ProtoRows` message.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProtoRows : pb::IMessage<ProtoRows>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoRows> _parser = new pb::MessageParser<ProtoRows>(() => new ProtoRows());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProtoRows> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProtoRows() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProtoRows(ProtoRows other) : this() {
+      values_ = other.values_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProtoRows Clone() {
+      return new ProtoRows(this);
+    }
+
+    /// <summary>Field number for the "values" field.</summary>
+    public const int ValuesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.Value> _repeated_values_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.Value.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Value> values_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Value>();
+    /// <summary>
+    /// A proto rows message consists of a list of values. Every N complete values
+    /// defines a row, where N is equal to the  number of entries in the
+    /// `metadata.proto_schema.columns` value received in the first response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Value> Values {
+      get { return values_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoRows);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProtoRows other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!values_.Equals(other.values_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= values_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      values_.WriteTo(output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      values_.WriteTo(ref output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += values_.CalculateSize(_repeated_values_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProtoRows other) {
+      if (other == null) {
+        return;
+      }
+      values_.Add(other.values_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            values_.AddEntriesFrom(input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            values_.AddEntriesFrom(ref input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Batch of serialized ProtoRows.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -9704,7 +9898,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9903,7 +10097,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
