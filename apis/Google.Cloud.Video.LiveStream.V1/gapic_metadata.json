@@ -22,6 +22,12 @@
                 "CreateChannelAsync"
               ]
             },
+            "CreateClip": {
+              "methods": [
+                "CreateClip",
+                "CreateClipAsync"
+              ]
+            },
             "CreateEvent": {
               "methods": [
                 "CreateEvent",
@@ -46,6 +52,12 @@
                 "DeleteChannelAsync"
               ]
             },
+            "DeleteClip": {
+              "methods": [
+                "DeleteClip",
+                "DeleteClipAsync"
+              ]
+            },
             "DeleteEvent": {
               "methods": [
                 "DeleteEvent",
@@ -68,6 +80,12 @@
               "methods": [
                 "GetChannel",
                 "GetChannelAsync"
+              ]
+            },
+            "GetClip": {
+              "methods": [
+                "GetClip",
+                "GetClipAsync"
               ]
             },
             "GetEvent": {
@@ -98,6 +116,12 @@
               "methods": [
                 "ListChannels",
                 "ListChannelsAsync"
+              ]
+            },
+            "ListClips": {
+              "methods": [
+                "ListClips",
+                "ListClipsAsync"
               ]
             },
             "ListEvents": {

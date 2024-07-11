@@ -73,6 +73,12 @@ namespace Google.Cloud.Video.LiveStream.V1
             ListEventsSettings = existing.ListEventsSettings;
             GetEventSettings = existing.GetEventSettings;
             DeleteEventSettings = existing.DeleteEventSettings;
+            ListClipsSettings = existing.ListClipsSettings;
+            GetClipSettings = existing.GetClipSettings;
+            CreateClipSettings = existing.CreateClipSettings;
+            CreateClipOperationsSettings = existing.CreateClipOperationsSettings.Clone();
+            DeleteClipSettings = existing.DeleteClipSettings;
+            DeleteClipOperationsSettings = existing.DeleteClipOperationsSettings.Clone();
             CreateAssetSettings = existing.CreateAssetSettings;
             CreateAssetOperationsSettings = existing.CreateAssetOperationsSettings.Clone();
             DeleteAssetSettings = existing.DeleteAssetSettings;
@@ -459,6 +465,90 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteEventSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.ListClips</c> and <c>LivestreamServiceClient.ListClipsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListClipsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.GetClip</c> and <c>LivestreamServiceClient.GetClipAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.CreateClip</c> and <c>LivestreamServiceClient.CreateClipAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.CreateClip</c> and
+        /// <c>LivestreamServiceClient.CreateClipAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateClipOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.DeleteClip</c> and <c>LivestreamServiceClient.DeleteClipAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.DeleteClip</c> and
+        /// <c>LivestreamServiceClient.DeleteClipAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteClipOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2962,6 +3052,576 @@ namespace Google.Cloud.Video.LiveStream.V1
             DeleteEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Clip"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(ListClipsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Clip"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(ListClipsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListClipsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Clip"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListClips(new ListClipsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListClipsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Clip"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListClipsAsync(new ListClipsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListClipsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Clip"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListClips(new ListClipsRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListClipsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Clip"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListClipsAsync(new ListClipsRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Clip GetClip(GetClipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Clip> GetClipAsync(GetClipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Clip> GetClipAsync(GetClipRequest request, st::CancellationToken cancellationToken) =>
+            GetClipAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}/clips/{clip}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Clip GetClip(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetClip(new GetClipRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}/clips/{clip}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Clip> GetClipAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetClipAsync(new GetClipRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}/clips/{clip}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Clip> GetClipAsync(string name, st::CancellationToken cancellationToken) =>
+            GetClipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}/clips/{clip}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Clip GetClip(ClipName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetClip(new GetClipRequest
+            {
+                ClipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}/clips/{clip}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Clip> GetClipAsync(ClipName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetClipAsync(new GetClipRequest
+            {
+                ClipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}/clips/{clip}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Clip> GetClipAsync(ClipName name, st::CancellationToken cancellationToken) =>
+            GetClipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Clip, OperationMetadata> CreateClip(CreateClipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(CreateClipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(CreateClipRequest request, st::CancellationToken cancellationToken) =>
+            CreateClipAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateClip</c>.</summary>
+        public virtual lro::OperationsClient CreateClipOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateClip</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Clip, OperationMetadata> PollOnceCreateClip(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Clip, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateClipOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateClip</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> PollOnceCreateClipAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Clip, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateClipOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}`.
+        /// </param>
+        /// <param name="clip">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="clipId">
+        /// Required. Id of the requesting object in the following form:
+        /// 
+        /// 1. 1 character minimum, 63 characters maximum
+        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Clip, OperationMetadata> CreateClip(string parent, Clip clip, string clipId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateClip(new CreateClipRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ClipId = gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)),
+                Clip = gax::GaxPreconditions.CheckNotNull(clip, nameof(clip)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}`.
+        /// </param>
+        /// <param name="clip">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="clipId">
+        /// Required. Id of the requesting object in the following form:
+        /// 
+        /// 1. 1 character minimum, 63 characters maximum
+        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(string parent, Clip clip, string clipId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateClipAsync(new CreateClipRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ClipId = gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)),
+                Clip = gax::GaxPreconditions.CheckNotNull(clip, nameof(clip)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}`.
+        /// </param>
+        /// <param name="clip">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="clipId">
+        /// Required. Id of the requesting object in the following form:
+        /// 
+        /// 1. 1 character minimum, 63 characters maximum
+        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(string parent, Clip clip, string clipId, st::CancellationToken cancellationToken) =>
+            CreateClipAsync(parent, clip, clipId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}`.
+        /// </param>
+        /// <param name="clip">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="clipId">
+        /// Required. Id of the requesting object in the following form:
+        /// 
+        /// 1. 1 character minimum, 63 characters maximum
+        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Clip, OperationMetadata> CreateClip(ChannelName parent, Clip clip, string clipId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateClip(new CreateClipRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ClipId = gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)),
+                Clip = gax::GaxPreconditions.CheckNotNull(clip, nameof(clip)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}`.
+        /// </param>
+        /// <param name="clip">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="clipId">
+        /// Required. Id of the requesting object in the following form:
+        /// 
+        /// 1. 1 character minimum, 63 characters maximum
+        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(ChannelName parent, Clip clip, string clipId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateClipAsync(new CreateClipRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ClipId = gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)),
+                Clip = gax::GaxPreconditions.CheckNotNull(clip, nameof(clip)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channel}`.
+        /// </param>
+        /// <param name="clip">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="clipId">
+        /// Required. Id of the requesting object in the following form:
+        /// 
+        /// 1. 1 character minimum, 63 characters maximum
+        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(ChannelName parent, Clip clip, string clipId, st::CancellationToken cancellationToken) =>
+            CreateClipAsync(parent, clip, clipId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteClip(DeleteClipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(DeleteClipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(DeleteClipRequest request, st::CancellationToken cancellationToken) =>
+            DeleteClipAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteClip</c>.</summary>
+        public virtual lro::OperationsClient DeleteClipOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteClip</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteClip(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteClipOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteClip</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteClipAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteClipOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the clip resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/clips/{clipId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteClip(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteClip(new DeleteClipRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the clip resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/clips/{clipId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteClipAsync(new DeleteClipRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the clip resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/clips/{clipId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteClipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the clip resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/clips/{clipId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteClip(ClipName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteClip(new DeleteClipRequest
+            {
+                ClipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the clip resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/clips/{clipId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(ClipName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteClipAsync(new DeleteClipRequest
+            {
+                ClipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the clip resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/clips/{clipId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(ClipName name, st::CancellationToken cancellationToken) =>
+            DeleteClipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a Asset with the provided unique ID in the specified
         /// region.
         /// </summary>
@@ -3804,6 +4464,14 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         private readonly gaxgrpc::ApiCall<DeleteEventRequest, wkt::Empty> _callDeleteEvent;
 
+        private readonly gaxgrpc::ApiCall<ListClipsRequest, ListClipsResponse> _callListClips;
+
+        private readonly gaxgrpc::ApiCall<GetClipRequest, Clip> _callGetClip;
+
+        private readonly gaxgrpc::ApiCall<CreateClipRequest, lro::Operation> _callCreateClip;
+
+        private readonly gaxgrpc::ApiCall<DeleteClipRequest, lro::Operation> _callDeleteClip;
+
         private readonly gaxgrpc::ApiCall<CreateAssetRequest, lro::Operation> _callCreateAsset;
 
         private readonly gaxgrpc::ApiCall<DeleteAssetRequest, lro::Operation> _callDeleteAsset;
@@ -3839,6 +4507,8 @@ namespace Google.Cloud.Video.LiveStream.V1
             CreateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInputOperationsSettings, logger);
             DeleteInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInputOperationsSettings, logger);
             UpdateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInputOperationsSettings, logger);
+            CreateClipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClipOperationsSettings, logger);
+            DeleteClipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClipOperationsSettings, logger);
             CreateAssetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAssetOperationsSettings, logger);
             DeleteAssetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAssetOperationsSettings, logger);
             UpdatePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePoolOperationsSettings, logger);
@@ -3891,6 +4561,18 @@ namespace Google.Cloud.Video.LiveStream.V1
             _callDeleteEvent = clientHelper.BuildApiCall<DeleteEventRequest, wkt::Empty>("DeleteEvent", grpcClient.DeleteEventAsync, grpcClient.DeleteEvent, effectiveSettings.DeleteEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEvent);
             Modify_DeleteEventApiCall(ref _callDeleteEvent);
+            _callListClips = clientHelper.BuildApiCall<ListClipsRequest, ListClipsResponse>("ListClips", grpcClient.ListClipsAsync, grpcClient.ListClips, effectiveSettings.ListClipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListClips);
+            Modify_ListClipsApiCall(ref _callListClips);
+            _callGetClip = clientHelper.BuildApiCall<GetClipRequest, Clip>("GetClip", grpcClient.GetClipAsync, grpcClient.GetClip, effectiveSettings.GetClipSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetClip);
+            Modify_GetClipApiCall(ref _callGetClip);
+            _callCreateClip = clientHelper.BuildApiCall<CreateClipRequest, lro::Operation>("CreateClip", grpcClient.CreateClipAsync, grpcClient.CreateClip, effectiveSettings.CreateClipSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateClip);
+            Modify_CreateClipApiCall(ref _callCreateClip);
+            _callDeleteClip = clientHelper.BuildApiCall<DeleteClipRequest, lro::Operation>("DeleteClip", grpcClient.DeleteClipAsync, grpcClient.DeleteClip, effectiveSettings.DeleteClipSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteClip);
+            Modify_DeleteClipApiCall(ref _callDeleteClip);
             _callCreateAsset = clientHelper.BuildApiCall<CreateAssetRequest, lro::Operation>("CreateAsset", grpcClient.CreateAssetAsync, grpcClient.CreateAsset, effectiveSettings.CreateAssetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAsset);
             Modify_CreateAssetApiCall(ref _callCreateAsset);
@@ -3946,6 +4628,14 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         partial void Modify_DeleteEventApiCall(ref gaxgrpc::ApiCall<DeleteEventRequest, wkt::Empty> call);
 
+        partial void Modify_ListClipsApiCall(ref gaxgrpc::ApiCall<ListClipsRequest, ListClipsResponse> call);
+
+        partial void Modify_GetClipApiCall(ref gaxgrpc::ApiCall<GetClipRequest, Clip> call);
+
+        partial void Modify_CreateClipApiCall(ref gaxgrpc::ApiCall<CreateClipRequest, lro::Operation> call);
+
+        partial void Modify_DeleteClipApiCall(ref gaxgrpc::ApiCall<DeleteClipRequest, lro::Operation> call);
+
         partial void Modify_CreateAssetApiCall(ref gaxgrpc::ApiCall<CreateAssetRequest, lro::Operation> call);
 
         partial void Modify_DeleteAssetApiCall(ref gaxgrpc::ApiCall<DeleteAssetRequest, lro::Operation> call);
@@ -3997,6 +4687,14 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_GetEventRequest(ref GetEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteEventRequest(ref DeleteEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListClipsRequest(ref ListClipsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetClipRequest(ref GetClipRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateClipRequest(ref CreateClipRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteClipRequest(ref DeleteClipRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAssetRequest(ref CreateAssetRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4424,6 +5122,110 @@ namespace Google.Cloud.Video.LiveStream.V1
             return _callDeleteEvent.Async(request, callSettings);
         }
 
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Clip"/> resources.</returns>
+        public override gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(ListClipsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListClipsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListClipsRequest, ListClipsResponse, Clip>(_callListClips, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all clips in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Clip"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(ListClipsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListClipsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListClipsRequest, ListClipsResponse, Clip>(_callListClips, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Clip GetClip(GetClipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetClipRequest(ref request, ref callSettings);
+            return _callGetClip.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified clip.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Clip> GetClipAsync(GetClipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetClipRequest(ref request, ref callSettings);
+            return _callGetClip.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateClip</c>.</summary>
+        public override lro::OperationsClient CreateClipOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Clip, OperationMetadata> CreateClip(CreateClipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateClipRequest(ref request, ref callSettings);
+            return new lro::Operation<Clip, OperationMetadata>(_callCreateClip.Sync(request, callSettings), CreateClipOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a clip with the provided clip ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Clip, OperationMetadata>> CreateClipAsync(CreateClipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateClipRequest(ref request, ref callSettings);
+            return new lro::Operation<Clip, OperationMetadata>(await _callCreateClip.Async(request, callSettings).ConfigureAwait(false), CreateClipOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteClip</c>.</summary>
+        public override lro::OperationsClient DeleteClipOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteClip(DeleteClipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteClipRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteClip.Sync(request, callSettings), DeleteClipOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified clip job resource. This method only deletes the clip
+        /// job and does not delete the VOD clip stored in the GCS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(DeleteClipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteClipRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteClip.Async(request, callSettings).ConfigureAwait(false), DeleteClipOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>CreateAsset</c>.</summary>
         public override lro::OperationsClient CreateAssetOperationsClient { get; }
 
@@ -4592,6 +5394,10 @@ namespace Google.Cloud.Video.LiveStream.V1
     {
     }
 
+    public partial class ListClipsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAssetsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -4616,6 +5422,14 @@ namespace Google.Cloud.Video.LiveStream.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Event> GetEnumerator() => Events.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListClipsResponse : gaxgrpc::IPageResponse<Clip>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Clip> GetEnumerator() => Clips.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
