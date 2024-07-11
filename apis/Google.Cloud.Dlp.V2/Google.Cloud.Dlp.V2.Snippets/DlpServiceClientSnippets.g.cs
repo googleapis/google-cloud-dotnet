@@ -6826,6 +6826,550 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListFileStoreDataProfiles</summary>
+        public void ListFileStoreDataProfilesRequestObject()
+        {
+            // Snippet: ListFileStoreDataProfiles(ListFileStoreDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FileStoreDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfilesAsync</summary>
+        public async Task ListFileStoreDataProfilesRequestObjectAsync()
+        {
+            // Snippet: ListFileStoreDataProfilesAsync(ListFileStoreDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FileStoreDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfiles</summary>
+        public void ListFileStoreDataProfiles()
+        {
+            // Snippet: ListFileStoreDataProfiles(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FileStoreDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfilesAsync</summary>
+        public async Task ListFileStoreDataProfilesAsync()
+        {
+            // Snippet: ListFileStoreDataProfilesAsync(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FileStoreDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfiles</summary>
+        public void ListFileStoreDataProfilesResourceNames1()
+        {
+            // Snippet: ListFileStoreDataProfiles(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FileStoreDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfilesAsync</summary>
+        public async Task ListFileStoreDataProfilesResourceNames1Async()
+        {
+            // Snippet: ListFileStoreDataProfilesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FileStoreDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfiles</summary>
+        public void ListFileStoreDataProfilesResourceNames2()
+        {
+            // Snippet: ListFileStoreDataProfiles(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FileStoreDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFileStoreDataProfilesAsync</summary>
+        public async Task ListFileStoreDataProfilesResourceNames2Async()
+        {
+            // Snippet: ListFileStoreDataProfilesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FileStoreDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FileStoreDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FileStoreDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FileStoreDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileStoreDataProfile</summary>
+        public void GetFileStoreDataProfileRequestObject()
+        {
+            // Snippet: GetFileStoreDataProfile(GetFileStoreDataProfileRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetFileStoreDataProfileRequest request = new GetFileStoreDataProfileRequest
+            {
+                ProjectDataProfileName = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]"),
+            };
+            // Make the request
+            FileStoreDataProfile response = dlpServiceClient.GetFileStoreDataProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileStoreDataProfileAsync</summary>
+        public async Task GetFileStoreDataProfileRequestObjectAsync()
+        {
+            // Snippet: GetFileStoreDataProfileAsync(GetFileStoreDataProfileRequest, CallSettings)
+            // Additional: GetFileStoreDataProfileAsync(GetFileStoreDataProfileRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFileStoreDataProfileRequest request = new GetFileStoreDataProfileRequest
+            {
+                ProjectDataProfileName = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]"),
+            };
+            // Make the request
+            FileStoreDataProfile response = await dlpServiceClient.GetFileStoreDataProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileStoreDataProfile</summary>
+        public void GetFileStoreDataProfile()
+        {
+            // Snippet: GetFileStoreDataProfile(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/projectDataProfiles/[PROJECT_DATA_PROFILE]";
+            // Make the request
+            FileStoreDataProfile response = dlpServiceClient.GetFileStoreDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileStoreDataProfileAsync</summary>
+        public async Task GetFileStoreDataProfileAsync()
+        {
+            // Snippet: GetFileStoreDataProfileAsync(string, CallSettings)
+            // Additional: GetFileStoreDataProfileAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/projectDataProfiles/[PROJECT_DATA_PROFILE]";
+            // Make the request
+            FileStoreDataProfile response = await dlpServiceClient.GetFileStoreDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileStoreDataProfile</summary>
+        public void GetFileStoreDataProfileResourceNames()
+        {
+            // Snippet: GetFileStoreDataProfile(ProjectDataProfileName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectDataProfileName name = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]");
+            // Make the request
+            FileStoreDataProfile response = dlpServiceClient.GetFileStoreDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileStoreDataProfileAsync</summary>
+        public async Task GetFileStoreDataProfileResourceNamesAsync()
+        {
+            // Snippet: GetFileStoreDataProfileAsync(ProjectDataProfileName, CallSettings)
+            // Additional: GetFileStoreDataProfileAsync(ProjectDataProfileName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectDataProfileName name = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]");
+            // Make the request
+            FileStoreDataProfile response = await dlpServiceClient.GetFileStoreDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileStoreDataProfile</summary>
+        public void DeleteFileStoreDataProfileRequestObject()
+        {
+            // Snippet: DeleteFileStoreDataProfile(DeleteFileStoreDataProfileRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteFileStoreDataProfileRequest request = new DeleteFileStoreDataProfileRequest
+            {
+                FileStoreDataProfileName = FileStoreDataProfileName.FromOrganizationLocationFileStoreDataProfile("[ORGANIZATION]", "[LOCATION]", "[FILE_STORE_DATA_PROFILE]"),
+            };
+            // Make the request
+            dlpServiceClient.DeleteFileStoreDataProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileStoreDataProfileAsync</summary>
+        public async Task DeleteFileStoreDataProfileRequestObjectAsync()
+        {
+            // Snippet: DeleteFileStoreDataProfileAsync(DeleteFileStoreDataProfileRequest, CallSettings)
+            // Additional: DeleteFileStoreDataProfileAsync(DeleteFileStoreDataProfileRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFileStoreDataProfileRequest request = new DeleteFileStoreDataProfileRequest
+            {
+                FileStoreDataProfileName = FileStoreDataProfileName.FromOrganizationLocationFileStoreDataProfile("[ORGANIZATION]", "[LOCATION]", "[FILE_STORE_DATA_PROFILE]"),
+            };
+            // Make the request
+            await dlpServiceClient.DeleteFileStoreDataProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileStoreDataProfile</summary>
+        public void DeleteFileStoreDataProfile()
+        {
+            // Snippet: DeleteFileStoreDataProfile(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/fileStoreDataProfiles/[FILE_STORE_DATA_PROFILE]";
+            // Make the request
+            dlpServiceClient.DeleteFileStoreDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileStoreDataProfileAsync</summary>
+        public async Task DeleteFileStoreDataProfileAsync()
+        {
+            // Snippet: DeleteFileStoreDataProfileAsync(string, CallSettings)
+            // Additional: DeleteFileStoreDataProfileAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/fileStoreDataProfiles/[FILE_STORE_DATA_PROFILE]";
+            // Make the request
+            await dlpServiceClient.DeleteFileStoreDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileStoreDataProfile</summary>
+        public void DeleteFileStoreDataProfileResourceNames()
+        {
+            // Snippet: DeleteFileStoreDataProfile(FileStoreDataProfileName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            FileStoreDataProfileName name = FileStoreDataProfileName.FromOrganizationLocationFileStoreDataProfile("[ORGANIZATION]", "[LOCATION]", "[FILE_STORE_DATA_PROFILE]");
+            // Make the request
+            dlpServiceClient.DeleteFileStoreDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileStoreDataProfileAsync</summary>
+        public async Task DeleteFileStoreDataProfileResourceNamesAsync()
+        {
+            // Snippet: DeleteFileStoreDataProfileAsync(FileStoreDataProfileName, CallSettings)
+            // Additional: DeleteFileStoreDataProfileAsync(FileStoreDataProfileName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FileStoreDataProfileName name = FileStoreDataProfileName.FromOrganizationLocationFileStoreDataProfile("[ORGANIZATION]", "[LOCATION]", "[FILE_STORE_DATA_PROFILE]");
+            // Make the request
+            await dlpServiceClient.DeleteFileStoreDataProfileAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetTableDataProfile</summary>
         public void GetTableDataProfileRequestObject()
         {
