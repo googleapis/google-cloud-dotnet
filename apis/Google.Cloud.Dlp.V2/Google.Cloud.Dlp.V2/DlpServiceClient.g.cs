@@ -89,6 +89,9 @@ namespace Google.Cloud.Dlp.V2
             ListTableDataProfilesSettings = existing.ListTableDataProfilesSettings;
             ListColumnDataProfilesSettings = existing.ListColumnDataProfilesSettings;
             GetProjectDataProfileSettings = existing.GetProjectDataProfileSettings;
+            ListFileStoreDataProfilesSettings = existing.ListFileStoreDataProfilesSettings;
+            GetFileStoreDataProfileSettings = existing.GetFileStoreDataProfileSettings;
+            DeleteFileStoreDataProfileSettings = existing.DeleteFileStoreDataProfileSettings;
             GetTableDataProfileSettings = existing.GetTableDataProfileSettings;
             GetColumnDataProfileSettings = existing.GetColumnDataProfileSettings;
             DeleteTableDataProfileSettings = existing.DeleteTableDataProfileSettings;
@@ -843,6 +846,44 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.ListFileStoreDataProfiles</c> and <c>DlpServiceClient.ListFileStoreDataProfilesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFileStoreDataProfilesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.GetFileStoreDataProfile</c> and <c>DlpServiceClient.GetFileStoreDataProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFileStoreDataProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteFileStoreDataProfile</c> and <c>DlpServiceClient.DeleteFileStoreDataProfileAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFileStoreDataProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.GetTableDataProfile</c> and <c>DlpServiceClient.GetTableDataProfileAsync</c>.
         /// </summary>
         /// <remarks>
@@ -1484,13 +1525,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1525,13 +1566,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1566,13 +1607,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1603,13 +1644,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1644,13 +1685,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1685,13 +1726,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1722,13 +1763,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1763,13 +1804,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1804,13 +1845,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1841,13 +1882,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1882,13 +1923,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1923,13 +1964,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -1960,13 +2001,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2001,13 +2042,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2042,13 +2083,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2434,13 +2475,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2480,13 +2521,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2526,13 +2567,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2572,13 +2613,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2618,13 +2659,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2664,13 +2705,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2710,13 +2751,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2756,13 +2797,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2802,13 +2843,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -2848,13 +2889,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3078,13 +3119,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3119,13 +3160,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3160,13 +3201,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3197,13 +3238,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3238,13 +3279,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3279,13 +3320,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3316,13 +3357,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3357,13 +3398,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3398,13 +3439,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3435,13 +3476,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3476,13 +3517,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3517,13 +3558,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3554,13 +3595,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3595,13 +3636,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -3636,13 +3677,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4034,13 +4075,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4080,13 +4121,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4126,13 +4167,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4172,13 +4213,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4218,13 +4259,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4264,13 +4305,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4310,13 +4351,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4356,13 +4397,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4402,13 +4443,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4448,13 +4489,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4684,9 +4725,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4721,9 +4762,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4758,9 +4799,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4791,9 +4832,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4828,9 +4869,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4865,9 +4906,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4898,9 +4939,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4935,9 +4976,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -4972,9 +5013,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5477,9 +5518,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5519,9 +5560,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5561,9 +5602,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5603,9 +5644,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5645,9 +5686,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5687,9 +5728,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -5917,8 +5958,13 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="parent">
         /// Required. Parent resource name.
         /// 
-        /// The format of this value is as follows:
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// + Organizations scope:
+        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5944,8 +5990,13 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="parent">
         /// Required. Parent resource name.
         /// 
-        /// The format of this value is as follows:
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// + Organizations scope:
+        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5971,8 +6022,13 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="parent">
         /// Required. Parent resource name.
         /// 
-        /// The format of this value is as follows:
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// + Organizations scope:
+        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5994,8 +6050,13 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="parent">
         /// Required. Parent resource name.
         /// 
-        /// The format of this value is as follows:
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// + Organizations scope:
+        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6021,8 +6082,13 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="parent">
         /// Required. Parent resource name.
         /// 
-        /// The format of this value is as follows:
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// + Organizations scope:
+        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6048,8 +6114,13 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="parent">
         /// Required. Parent resource name.
         /// 
-        /// The format of this value is as follows:
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// + Organizations scope:
+        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6665,9 +6736,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6707,9 +6778,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6749,9 +6820,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6787,9 +6858,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6829,9 +6900,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6871,9 +6942,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6909,9 +6980,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6951,9 +7022,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -6993,9 +7064,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7031,9 +7102,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7074,9 +7145,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7117,9 +7188,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7156,9 +7227,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7199,9 +7270,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7242,9 +7313,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7281,9 +7352,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7324,9 +7395,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7367,9 +7438,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7430,9 +7501,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7474,9 +7545,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7518,9 +7589,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7562,9 +7633,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7606,9 +7677,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -7650,9 +7721,9 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8094,13 +8165,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8134,13 +8205,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8174,13 +8245,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8210,13 +8281,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8250,13 +8321,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8290,13 +8361,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8326,13 +8397,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8366,13 +8437,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8406,13 +8477,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8442,13 +8513,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8482,13 +8553,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8522,13 +8593,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8558,13 +8629,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8598,13 +8669,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -8638,13 +8709,13 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
+        /// + Organizations scope, location specified:
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Organizations scope, no location specified (defaults to global):
         /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9051,9 +9122,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9093,9 +9164,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9135,9 +9206,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9177,9 +9248,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9219,9 +9290,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9261,9 +9332,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9303,9 +9374,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9345,9 +9416,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9387,9 +9458,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -9429,9 +9500,9 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
+        /// + Projects scope, location specified:
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
+        /// + Projects scope, no location specified (defaults to global):
         /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
@@ -10222,6 +10293,405 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ProjectDataProfile> GetProjectDataProfileAsync(ProjectDataProfileName name, st::CancellationToken cancellationToken) =>
             GetProjectDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(ListFileStoreDataProfilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(ListFileStoreDataProfilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFileStoreDataProfiles(new ListFileStoreDataProfilesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFileStoreDataProfilesAsync(new ListFileStoreDataProfilesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFileStoreDataProfiles(new ListFileStoreDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFileStoreDataProfilesAsync(new ListFileStoreDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFileStoreDataProfiles(new ListFileStoreDataProfilesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFileStoreDataProfilesAsync(new ListFileStoreDataProfilesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FileStoreDataProfile GetFileStoreDataProfile(GetFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(GetFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(GetFileStoreDataProfileRequest request, st::CancellationToken cancellationToken) =>
+            GetFileStoreDataProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name, for example
+        /// `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FileStoreDataProfile GetFileStoreDataProfile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFileStoreDataProfile(new GetFileStoreDataProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name, for example
+        /// `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFileStoreDataProfileAsync(new GetFileStoreDataProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name, for example
+        /// `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFileStoreDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name, for example
+        /// `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FileStoreDataProfile GetFileStoreDataProfile(ProjectDataProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFileStoreDataProfile(new GetFileStoreDataProfileRequest
+            {
+                ProjectDataProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name, for example
+        /// `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(ProjectDataProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFileStoreDataProfileAsync(new GetFileStoreDataProfileRequest
+            {
+                ProjectDataProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name, for example
+        /// `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(ProjectDataProfileName name, st::CancellationToken cancellationToken) =>
+            GetFileStoreDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFileStoreDataProfile(DeleteFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFileStoreDataProfileAsync(DeleteFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFileStoreDataProfileAsync(DeleteFileStoreDataProfileRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFileStoreDataProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the file store data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFileStoreDataProfile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFileStoreDataProfile(new DeleteFileStoreDataProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the file store data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFileStoreDataProfileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFileStoreDataProfileAsync(new DeleteFileStoreDataProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the file store data profile.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFileStoreDataProfileAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFileStoreDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the file store data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFileStoreDataProfile(FileStoreDataProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFileStoreDataProfile(new DeleteFileStoreDataProfileRequest
+            {
+                FileStoreDataProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the file store data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFileStoreDataProfileAsync(FileStoreDataProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFileStoreDataProfileAsync(new DeleteFileStoreDataProfileRequest
+            {
+                FileStoreDataProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the file store data profile.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFileStoreDataProfileAsync(FileStoreDataProfileName name, st::CancellationToken cancellationToken) =>
+            DeleteFileStoreDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a table data profile.
@@ -11517,6 +11987,12 @@ namespace Google.Cloud.Dlp.V2
 
         private readonly gaxgrpc::ApiCall<GetProjectDataProfileRequest, ProjectDataProfile> _callGetProjectDataProfile;
 
+        private readonly gaxgrpc::ApiCall<ListFileStoreDataProfilesRequest, ListFileStoreDataProfilesResponse> _callListFileStoreDataProfiles;
+
+        private readonly gaxgrpc::ApiCall<GetFileStoreDataProfileRequest, FileStoreDataProfile> _callGetFileStoreDataProfile;
+
+        private readonly gaxgrpc::ApiCall<DeleteFileStoreDataProfileRequest, wkt::Empty> _callDeleteFileStoreDataProfile;
+
         private readonly gaxgrpc::ApiCall<GetTableDataProfileRequest, TableDataProfile> _callGetTableDataProfile;
 
         private readonly gaxgrpc::ApiCall<GetColumnDataProfileRequest, ColumnDataProfile> _callGetColumnDataProfile;
@@ -11678,6 +12154,15 @@ namespace Google.Cloud.Dlp.V2
             _callGetProjectDataProfile = clientHelper.BuildApiCall<GetProjectDataProfileRequest, ProjectDataProfile>("GetProjectDataProfile", grpcClient.GetProjectDataProfileAsync, grpcClient.GetProjectDataProfile, effectiveSettings.GetProjectDataProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProjectDataProfile);
             Modify_GetProjectDataProfileApiCall(ref _callGetProjectDataProfile);
+            _callListFileStoreDataProfiles = clientHelper.BuildApiCall<ListFileStoreDataProfilesRequest, ListFileStoreDataProfilesResponse>("ListFileStoreDataProfiles", grpcClient.ListFileStoreDataProfilesAsync, grpcClient.ListFileStoreDataProfiles, effectiveSettings.ListFileStoreDataProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListFileStoreDataProfiles);
+            Modify_ListFileStoreDataProfilesApiCall(ref _callListFileStoreDataProfiles);
+            _callGetFileStoreDataProfile = clientHelper.BuildApiCall<GetFileStoreDataProfileRequest, FileStoreDataProfile>("GetFileStoreDataProfile", grpcClient.GetFileStoreDataProfileAsync, grpcClient.GetFileStoreDataProfile, effectiveSettings.GetFileStoreDataProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFileStoreDataProfile);
+            Modify_GetFileStoreDataProfileApiCall(ref _callGetFileStoreDataProfile);
+            _callDeleteFileStoreDataProfile = clientHelper.BuildApiCall<DeleteFileStoreDataProfileRequest, wkt::Empty>("DeleteFileStoreDataProfile", grpcClient.DeleteFileStoreDataProfileAsync, grpcClient.DeleteFileStoreDataProfile, effectiveSettings.DeleteFileStoreDataProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFileStoreDataProfile);
+            Modify_DeleteFileStoreDataProfileApiCall(ref _callDeleteFileStoreDataProfile);
             _callGetTableDataProfile = clientHelper.BuildApiCall<GetTableDataProfileRequest, TableDataProfile>("GetTableDataProfile", grpcClient.GetTableDataProfileAsync, grpcClient.GetTableDataProfile, effectiveSettings.GetTableDataProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTableDataProfile);
             Modify_GetTableDataProfileApiCall(ref _callGetTableDataProfile);
@@ -11798,6 +12283,12 @@ namespace Google.Cloud.Dlp.V2
 
         partial void Modify_GetProjectDataProfileApiCall(ref gaxgrpc::ApiCall<GetProjectDataProfileRequest, ProjectDataProfile> call);
 
+        partial void Modify_ListFileStoreDataProfilesApiCall(ref gaxgrpc::ApiCall<ListFileStoreDataProfilesRequest, ListFileStoreDataProfilesResponse> call);
+
+        partial void Modify_GetFileStoreDataProfileApiCall(ref gaxgrpc::ApiCall<GetFileStoreDataProfileRequest, FileStoreDataProfile> call);
+
+        partial void Modify_DeleteFileStoreDataProfileApiCall(ref gaxgrpc::ApiCall<DeleteFileStoreDataProfileRequest, wkt::Empty> call);
+
         partial void Modify_GetTableDataProfileApiCall(ref gaxgrpc::ApiCall<GetTableDataProfileRequest, TableDataProfile> call);
 
         partial void Modify_GetColumnDataProfileApiCall(ref gaxgrpc::ApiCall<GetColumnDataProfileRequest, ColumnDataProfile> call);
@@ -11909,6 +12400,12 @@ namespace Google.Cloud.Dlp.V2
         partial void Modify_ListColumnDataProfilesRequest(ref ListColumnDataProfilesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetProjectDataProfileRequest(ref GetProjectDataProfileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListFileStoreDataProfilesRequest(ref ListFileStoreDataProfilesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFileStoreDataProfileRequest(ref GetFileStoreDataProfileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFileStoreDataProfileRequest(ref DeleteFileStoreDataProfileRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTableDataProfileRequest(ref GetTableDataProfileRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -13181,6 +13678,80 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(ListFileStoreDataProfilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFileStoreDataProfilesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFileStoreDataProfilesRequest, ListFileStoreDataProfilesResponse, FileStoreDataProfile>(_callListFileStoreDataProfiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists file store data profiles for an organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(ListFileStoreDataProfilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFileStoreDataProfilesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFileStoreDataProfilesRequest, ListFileStoreDataProfilesResponse, FileStoreDataProfile>(_callListFileStoreDataProfiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FileStoreDataProfile GetFileStoreDataProfile(GetFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFileStoreDataProfileRequest(ref request, ref callSettings);
+            return _callGetFileStoreDataProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a file store data profile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FileStoreDataProfile> GetFileStoreDataProfileAsync(GetFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFileStoreDataProfileRequest(ref request, ref callSettings);
+            return _callGetFileStoreDataProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteFileStoreDataProfile(DeleteFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFileStoreDataProfileRequest(ref request, ref callSettings);
+            _callDeleteFileStoreDataProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+        /// regenerated if the resource is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteFileStoreDataProfileAsync(DeleteFileStoreDataProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFileStoreDataProfileRequest(ref request, ref callSettings);
+            return _callDeleteFileStoreDataProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets a table data profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13489,6 +14060,10 @@ namespace Google.Cloud.Dlp.V2
     {
     }
 
+    public partial class ListFileStoreDataProfilesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListConnectionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -13565,6 +14140,14 @@ namespace Google.Cloud.Dlp.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ColumnDataProfile> GetEnumerator() => ColumnDataProfiles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFileStoreDataProfilesResponse : gaxgrpc::IPageResponse<FileStoreDataProfile>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FileStoreDataProfile> GetEnumerator() => FileStoreDataProfiles.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

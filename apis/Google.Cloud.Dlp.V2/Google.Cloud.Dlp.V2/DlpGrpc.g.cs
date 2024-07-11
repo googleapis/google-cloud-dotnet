@@ -200,6 +200,16 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ProjectDataProfile> __Marshaller_google_privacy_dlp_v2_ProjectDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ProjectDataProfile.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest> __Marshaller_google_privacy_dlp_v2_ListFileStoreDataProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse> __Marshaller_google_privacy_dlp_v2_ListFileStoreDataProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest> __Marshaller_google_privacy_dlp_v2_GetFileStoreDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.FileStoreDataProfile> __Marshaller_google_privacy_dlp_v2_FileStoreDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.FileStoreDataProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest> __Marshaller_google_privacy_dlp_v2_DeleteFileStoreDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest> __Marshaller_google_privacy_dlp_v2_GetTableDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.TableDataProfile> __Marshaller_google_privacy_dlp_v2_TableDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.TableDataProfile.Parser));
@@ -559,6 +569,30 @@ namespace Google.Cloud.Dlp.V2 {
         "GetProjectDataProfile",
         __Marshaller_google_privacy_dlp_v2_GetProjectDataProfileRequest,
         __Marshaller_google_privacy_dlp_v2_ProjectDataProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse> __Method_ListFileStoreDataProfiles = new grpc::Method<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFileStoreDataProfiles",
+        __Marshaller_google_privacy_dlp_v2_ListFileStoreDataProfilesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListFileStoreDataProfilesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest, global::Google.Cloud.Dlp.V2.FileStoreDataProfile> __Method_GetFileStoreDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest, global::Google.Cloud.Dlp.V2.FileStoreDataProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFileStoreDataProfile",
+        __Marshaller_google_privacy_dlp_v2_GetFileStoreDataProfileRequest,
+        __Marshaller_google_privacy_dlp_v2_FileStoreDataProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteFileStoreDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFileStoreDataProfile",
+        __Marshaller_google_privacy_dlp_v2_DeleteFileStoreDataProfileRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile> __Method_GetTableDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile>(
@@ -1278,6 +1312,43 @@ namespace Google.Cloud.Dlp.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ProjectDataProfile> GetProjectDataProfile(global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists file store data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse> ListFileStoreDataProfiles(global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a file store data profile.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.FileStoreDataProfile> GetFileStoreDataProfile(global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+      /// regenerated if the resource is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFileStoreDataProfile(global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3944,6 +4015,154 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetProjectDataProfile, null, options, request);
       }
       /// <summary>
+      /// Lists file store data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse ListFileStoreDataProfiles(global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFileStoreDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists file store data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse ListFileStoreDataProfiles(global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFileStoreDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists file store data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse> ListFileStoreDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFileStoreDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists file store data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse> ListFileStoreDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFileStoreDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Gets a file store data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.FileStoreDataProfile GetFileStoreDataProfile(global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFileStoreDataProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a file store data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.FileStoreDataProfile GetFileStoreDataProfile(global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFileStoreDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets a file store data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.FileStoreDataProfile> GetFileStoreDataProfileAsync(global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFileStoreDataProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a file store data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.FileStoreDataProfile> GetFileStoreDataProfileAsync(global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFileStoreDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+      /// regenerated if the resource is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFileStoreDataProfile(global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFileStoreDataProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+      /// regenerated if the resource is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFileStoreDataProfile(global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFileStoreDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+      /// regenerated if the resource is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFileStoreDataProfileAsync(global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFileStoreDataProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a FileStoreDataProfile. Will not prevent the profile from being
+      /// regenerated if the resource is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFileStoreDataProfileAsync(global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFileStoreDataProfile, null, options, request);
+      }
+      /// <summary>
       /// Gets a table data profile.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4542,6 +4761,9 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_ListTableDataProfiles, serviceImpl.ListTableDataProfiles)
           .AddMethod(__Method_ListColumnDataProfiles, serviceImpl.ListColumnDataProfiles)
           .AddMethod(__Method_GetProjectDataProfile, serviceImpl.GetProjectDataProfile)
+          .AddMethod(__Method_ListFileStoreDataProfiles, serviceImpl.ListFileStoreDataProfiles)
+          .AddMethod(__Method_GetFileStoreDataProfile, serviceImpl.GetFileStoreDataProfile)
+          .AddMethod(__Method_DeleteFileStoreDataProfile, serviceImpl.DeleteFileStoreDataProfile)
           .AddMethod(__Method_GetTableDataProfile, serviceImpl.GetTableDataProfile)
           .AddMethod(__Method_GetColumnDataProfile, serviceImpl.GetColumnDataProfile)
           .AddMethod(__Method_DeleteTableDataProfile, serviceImpl.DeleteTableDataProfile)
@@ -4603,6 +4825,9 @@ namespace Google.Cloud.Dlp.V2 {
       serviceBinder.AddMethod(__Method_ListTableDataProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse>(serviceImpl.ListTableDataProfiles));
       serviceBinder.AddMethod(__Method_ListColumnDataProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse>(serviceImpl.ListColumnDataProfiles));
       serviceBinder.AddMethod(__Method_GetProjectDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest, global::Google.Cloud.Dlp.V2.ProjectDataProfile>(serviceImpl.GetProjectDataProfile));
+      serviceBinder.AddMethod(__Method_ListFileStoreDataProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListFileStoreDataProfilesResponse>(serviceImpl.ListFileStoreDataProfiles));
+      serviceBinder.AddMethod(__Method_GetFileStoreDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetFileStoreDataProfileRequest, global::Google.Cloud.Dlp.V2.FileStoreDataProfile>(serviceImpl.GetFileStoreDataProfile));
+      serviceBinder.AddMethod(__Method_DeleteFileStoreDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteFileStoreDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFileStoreDataProfile));
       serviceBinder.AddMethod(__Method_GetTableDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile>(serviceImpl.GetTableDataProfile));
       serviceBinder.AddMethod(__Method_GetColumnDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest, global::Google.Cloud.Dlp.V2.ColumnDataProfile>(serviceImpl.GetColumnDataProfile));
       serviceBinder.AddMethod(__Method_DeleteTableDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTableDataProfile));

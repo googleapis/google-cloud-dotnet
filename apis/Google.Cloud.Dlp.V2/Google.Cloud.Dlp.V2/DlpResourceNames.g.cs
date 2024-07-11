@@ -3352,6 +3352,355 @@ namespace Google.Cloud.Dlp.V2
         public static bool operator !=(ColumnDataProfileName a, ColumnDataProfileName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>FileStoreDataProfile</c> resource.</summary>
+    public sealed partial class FileStoreDataProfileName : gax::IResourceName, sys::IEquatable<FileStoreDataProfileName>
+    {
+        /// <summary>The possible contents of <see cref="FileStoreDataProfileName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+            /// .
+            /// </summary>
+            OrganizationLocationFileStoreDataProfile = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+            /// </summary>
+            ProjectLocationFileStoreDataProfile = 2,
+        }
+
+        private static gax::PathTemplate s_organizationLocationFileStoreDataProfile = new gax::PathTemplate("organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}");
+
+        private static gax::PathTemplate s_projectLocationFileStoreDataProfile = new gax::PathTemplate("projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}");
+
+        /// <summary>Creates a <see cref="FileStoreDataProfileName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="FileStoreDataProfileName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static FileStoreDataProfileName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new FileStoreDataProfileName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="FileStoreDataProfileName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fileStoreDataProfileId">
+        /// The <c>FileStoreDataProfile</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="FileStoreDataProfileName"/> constructed from the provided ids.
+        /// </returns>
+        public static FileStoreDataProfileName FromOrganizationLocationFileStoreDataProfile(string organizationId, string locationId, string fileStoreDataProfileId) =>
+            new FileStoreDataProfileName(ResourceNameType.OrganizationLocationFileStoreDataProfile, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), fileStoreDataProfileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileStoreDataProfileId, nameof(fileStoreDataProfileId)));
+
+        /// <summary>
+        /// Creates a <see cref="FileStoreDataProfileName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fileStoreDataProfileId">
+        /// The <c>FileStoreDataProfile</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="FileStoreDataProfileName"/> constructed from the provided ids.
+        /// </returns>
+        public static FileStoreDataProfileName FromProjectLocationFileStoreDataProfile(string projectId, string locationId, string fileStoreDataProfileId) =>
+            new FileStoreDataProfileName(ResourceNameType.ProjectLocationFileStoreDataProfile, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), fileStoreDataProfileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileStoreDataProfileId, nameof(fileStoreDataProfileId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FileStoreDataProfileName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fileStoreDataProfileId">
+        /// The <c>FileStoreDataProfile</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="FileStoreDataProfileName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </returns>
+        public static string Format(string organizationId, string locationId, string fileStoreDataProfileId) =>
+            FormatOrganizationLocationFileStoreDataProfile(organizationId, locationId, fileStoreDataProfileId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FileStoreDataProfileName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fileStoreDataProfileId">
+        /// The <c>FileStoreDataProfile</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="FileStoreDataProfileName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationFileStoreDataProfile(string organizationId, string locationId, string fileStoreDataProfileId) =>
+            s_organizationLocationFileStoreDataProfile.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(fileStoreDataProfileId, nameof(fileStoreDataProfileId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FileStoreDataProfileName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fileStoreDataProfileId">
+        /// The <c>FileStoreDataProfile</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="FileStoreDataProfileName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>.
+        /// </returns>
+        public static string FormatProjectLocationFileStoreDataProfile(string projectId, string locationId, string fileStoreDataProfileId) =>
+            s_projectLocationFileStoreDataProfile.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(fileStoreDataProfileId, nameof(fileStoreDataProfileId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FileStoreDataProfileName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="fileStoreDataProfileName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FileStoreDataProfileName"/> if successful.</returns>
+        public static FileStoreDataProfileName Parse(string fileStoreDataProfileName) =>
+            Parse(fileStoreDataProfileName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FileStoreDataProfileName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="fileStoreDataProfileName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="FileStoreDataProfileName"/> if successful.</returns>
+        public static FileStoreDataProfileName Parse(string fileStoreDataProfileName, bool allowUnparsed) =>
+            TryParse(fileStoreDataProfileName, allowUnparsed, out FileStoreDataProfileName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FileStoreDataProfileName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="fileStoreDataProfileName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FileStoreDataProfileName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string fileStoreDataProfileName, out FileStoreDataProfileName result) =>
+            TryParse(fileStoreDataProfileName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FileStoreDataProfileName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="fileStoreDataProfileName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FileStoreDataProfileName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string fileStoreDataProfileName, bool allowUnparsed, out FileStoreDataProfileName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(fileStoreDataProfileName, nameof(fileStoreDataProfileName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationLocationFileStoreDataProfile.TryParseName(fileStoreDataProfileName, out resourceName))
+            {
+                result = FromOrganizationLocationFileStoreDataProfile(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_projectLocationFileStoreDataProfile.TryParseName(fileStoreDataProfileName, out resourceName))
+            {
+                result = FromProjectLocationFileStoreDataProfile(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(fileStoreDataProfileName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private FileStoreDataProfileName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string fileStoreDataProfileId = null, string locationId = null, string organizationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FileStoreDataProfileId = fileStoreDataProfileId;
+            LocationId = locationId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="FileStoreDataProfileName"/> class from the component parts of
+        /// pattern <c>organizations/{organization}/locations/{location}/fileStoreDataProfiles/{file_store_data_profile}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fileStoreDataProfileId">
+        /// The <c>FileStoreDataProfile</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public FileStoreDataProfileName(string organizationId, string locationId, string fileStoreDataProfileId) : this(ResourceNameType.OrganizationLocationFileStoreDataProfile, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), fileStoreDataProfileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileStoreDataProfileId, nameof(fileStoreDataProfileId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>FileStoreDataProfile</c> ID. May be <c>null</c>, depending on which resource name is contained by
+        /// this instance.
+        /// </summary>
+        public string FileStoreDataProfileId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationLocationFileStoreDataProfile: return s_organizationLocationFileStoreDataProfile.Expand(OrganizationId, LocationId, FileStoreDataProfileId);
+                case ResourceNameType.ProjectLocationFileStoreDataProfile: return s_projectLocationFileStoreDataProfile.Expand(ProjectId, LocationId, FileStoreDataProfileId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as FileStoreDataProfileName);
+
+        /// <inheritdoc/>
+        public bool Equals(FileStoreDataProfileName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(FileStoreDataProfileName a, FileStoreDataProfileName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(FileStoreDataProfileName a, FileStoreDataProfileName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Connection</c> resource.</summary>
     public sealed partial class ConnectionName : gax::IResourceName, sys::IEquatable<ConnectionName>
     {
@@ -5465,6 +5814,18 @@ namespace Google.Cloud.Dlp.V2
         }
     }
 
+    public partial class FileStoreDataProfile
+    {
+        /// <summary>
+        /// <see cref="gcdv::FileStoreDataProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::FileStoreDataProfileName FileStoreDataProfileName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FileStoreDataProfileName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetProjectDataProfileRequest
     {
         /// <summary>
@@ -5473,6 +5834,75 @@ namespace Google.Cloud.Dlp.V2
         public gcdv::ProjectDataProfileName ProjectDataProfileName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ProjectDataProfileName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFileStoreDataProfileRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProjectDataProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProjectDataProfileName ProjectDataProfileName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProjectDataProfileName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListFileStoreDataProfilesRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteFileStoreDataProfileRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::FileStoreDataProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::FileStoreDataProfileName FileStoreDataProfileName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FileStoreDataProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

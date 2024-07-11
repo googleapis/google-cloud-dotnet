@@ -94,6 +94,12 @@
                 "DeleteDlpJobAsync"
               ]
             },
+            "DeleteFileStoreDataProfile": {
+              "methods": [
+                "DeleteFileStoreDataProfile",
+                "DeleteFileStoreDataProfileAsync"
+              ]
+            },
             "DeleteInspectTemplate": {
               "methods": [
                 "DeleteInspectTemplate",
@@ -152,6 +158,12 @@
               "methods": [
                 "GetDlpJob",
                 "GetDlpJobAsync"
+              ]
+            },
+            "GetFileStoreDataProfile": {
+              "methods": [
+                "GetFileStoreDataProfile",
+                "GetFileStoreDataProfileAsync"
               ]
             },
             "GetInspectTemplate": {
@@ -230,6 +242,12 @@
               "methods": [
                 "ListDlpJobs",
                 "ListDlpJobsAsync"
+              ]
+            },
+            "ListFileStoreDataProfiles": {
+              "methods": [
+                "ListFileStoreDataProfiles",
+                "ListFileStoreDataProfilesAsync"
               ]
             },
             "ListInfoTypes": {
