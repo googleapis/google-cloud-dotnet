@@ -710,6 +710,54 @@ namespace Google.Cloud.Video.LiveStream.V1
         }
     }
 
+    public partial class ListClipsRequest
+    {
+        /// <summary>
+        /// <see cref="ChannelName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ChannelName ParentAsChannelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ChannelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetClipRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::ClipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::ClipName ClipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::ClipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateClipRequest
+    {
+        /// <summary>
+        /// <see cref="ChannelName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ChannelName ParentAsChannelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ChannelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteClipRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::ClipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::ClipName ClipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::ClipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetPoolRequest
     {
         /// <summary>

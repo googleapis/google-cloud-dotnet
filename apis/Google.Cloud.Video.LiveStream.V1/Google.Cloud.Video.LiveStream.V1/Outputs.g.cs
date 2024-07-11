@@ -37,70 +37,70 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "dHJlYW0SCwoDa2V5GAEgASgJEhEKCWNvbnRhaW5lchgDIAEoCRIaChJlbGVt",
             "ZW50YXJ5X3N0cmVhbXMYBCADKAkSSwoQc2VnbWVudF9zZXR0aW5ncxgFIAEo",
             "CzIxLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlNlZ21lbnRT",
-            "ZXR0aW5ncxIVCg1lbmNyeXB0aW9uX2lkGAYgASgJIrwCCghNYW5pZmVzdBIR",
+            "ZXR0aW5ncxIVCg1lbmNyeXB0aW9uX2lkGAYgASgJIs4CCghNYW5pZmVzdBIR",
             "CglmaWxlX25hbWUYASABKAkSSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91",
             "ZC52aWRlby5saXZlc3RyZWFtLnYxLk1hbmlmZXN0Lk1hbmlmZXN0VHlwZUID",
             "4EECEhgKC211eF9zdHJlYW1zGAMgAygJQgPgQQISGQoRbWF4X3NlZ21lbnRf",
             "Y291bnQYBCABKAUSOAoVc2VnbWVudF9rZWVwX2R1cmF0aW9uGAUgASgLMhku",
             "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiAKGHVzZV90aW1lY29kZV9hc190",
-            "aW1lbGluZRgGIAEoCCJACgxNYW5pZmVzdFR5cGUSHQoZTUFOSUZFU1RfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgcKA0hMUxABEggKBERBU0gQAiLjAQoLU3ByaXRl",
-            "U2hlZXQSDgoGZm9ybWF0GAEgASgJEhgKC2ZpbGVfcHJlZml4GAIgASgJQgPg",
-            "QQISIAoTc3ByaXRlX3dpZHRoX3BpeGVscxgDIAEoBUID4EECEiEKFHNwcml0",
-            "ZV9oZWlnaHRfcGl4ZWxzGAQgASgFQgPgQQISFAoMY29sdW1uX2NvdW50GAUg",
-            "ASgFEhEKCXJvd19jb3VudBgGIAEoBRIrCghpbnRlcnZhbBgHIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIPCgdxdWFsaXR5GAggASgFIsUDChNQ",
-            "cmVwcm9jZXNzaW5nQ29uZmlnEkoKBWF1ZGlvGAEgASgLMjsuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5B",
-            "dWRpbxJICgRjcm9wGAIgASgLMjouZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
-            "dHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5Dcm9wEkYKA3BhZBgDIAEo",
-            "CzI5Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlByZXByb2Nl",
-            "c3NpbmdDb25maWcuUGFkGhUKBUF1ZGlvEgwKBGx1ZnMYASABKAEaXAoEQ3Jv",
-            "cBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUS",
-            "EwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFGlsK",
-            "A1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiAB",
-            "KAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgF",
-            "Iv8DCgtWaWRlb1N0cmVhbRJPCgRoMjY0GBQgASgLMj8uZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLmxpdmVzdHJlYW0udjEuVmlkZW9TdHJlYW0uSDI2NENvZGVjU2V0",
-            "dGluZ3NIABqMAwoRSDI2NENvZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxz",
-            "GAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgD",
-            "IAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQgASgFQgPgQQISFgoOYWxsb3df",
-            "b3Blbl9nb3AYBiABKAgSGQoPZ29wX2ZyYW1lX2NvdW50GAcgASgFSAASMQoM",
-            "Z29wX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "SAASFQoNdmJ2X3NpemVfYml0cxgJIAEoBRIZChF2YnZfZnVsbG5lc3NfYml0",
-            "cxgKIAEoBRIVCg1lbnRyb3B5X2NvZGVyGAsgASgJEhEKCWJfcHlyYW1pZBgM",
-            "IAEoCBIVCg1iX2ZyYW1lX2NvdW50GA0gASgFEhMKC2FxX3N0cmVuZ3RoGA4g",
-            "ASgBEg8KB3Byb2ZpbGUYDyABKAkSDAoEdHVuZRgQIAEoCUIKCghnb3BfbW9k",
-            "ZUIQCg5jb2RlY19zZXR0aW5ncyLsAgoLQXVkaW9TdHJlYW0SEAoIdHJhbnNt",
-            "dXgYCCABKAgSDQoFY29kZWMYASABKAkSGAoLYml0cmF0ZV9icHMYAiABKAVC",
-            "A+BBAhIVCg1jaGFubmVsX2NvdW50GAMgASgFEhYKDmNoYW5uZWxfbGF5b3V0",
-            "GAQgAygJEksKB21hcHBpbmcYBSADKAsyOi5nb29nbGUuY2xvdWQudmlkZW8u",
-            "bGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbS5BdWRpb01hcHBpbmcSGQoRc2Ft",
-            "cGxlX3JhdGVfaGVydHoYBiABKAUaigEKDEF1ZGlvTWFwcGluZxIWCglpbnB1",
-            "dF9rZXkYBiABKAlCA+BBAhIYCgtpbnB1dF90cmFjaxgCIAEoBUID4EECEhoK",
-            "DWlucHV0X2NoYW5uZWwYAyABKAVCA+BBAhIbCg5vdXRwdXRfY2hhbm5lbBgE",
-            "IAEoBUID4EECEg8KB2dhaW5fZGIYBSABKAEiIAoKVGV4dFN0cmVhbRISCgVj",
-            "b2RlYxgBIAEoCUID4EECIkYKD1NlZ21lbnRTZXR0aW5ncxIzChBzZWdtZW50",
-            "X2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIqwC",
-            "Cg5UaW1lY29kZUNvbmZpZxJPCgZzb3VyY2UYASABKA4yPy5nb29nbGUuY2xv",
-            "dWQudmlkZW8ubGl2ZXN0cmVhbS52MS5UaW1lY29kZUNvbmZpZy5UaW1lY29k",
-            "ZVNvdXJjZRIvCgp1dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uSAASKgoJdGltZV96b25lGAMgASgLMhUuZ29vZ2xlLnR5cGUu",
-            "VGltZVpvbmVIACJdCg5UaW1lY29kZVNvdXJjZRIfChtUSU1FQ09ERV9TT1VS",
-            "Q0VfVU5TUEVDSUZJRUQQABITCg9NRURJQV9USU1FU1RBTVAQARIVChFFTUJF",
-            "RERFRF9USU1FQ09ERRACQg0KC3RpbWVfb2Zmc2V0QukBCiRjb20uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjFCDE91dHB1dHNQcm90b1ABWkRj",
-            "bG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL2xpdmVzdHJlYW0vYXBpdjEvbGl2",
-            "ZXN0cmVhbXBiO2xpdmVzdHJlYW1wYqoCIEdvb2dsZS5DbG91ZC5WaWRlby5M",
-            "aXZlU3RyZWFtLlYxygIgR29vZ2xlXENsb3VkXFZpZGVvXExpdmVTdHJlYW1c",
-            "VjHqAiRHb29nbGU6OkNsb3VkOjpWaWRlbzo6TGl2ZVN0cmVhbTo6VjFiBnBy",
-            "b3RvMw=="));
+            "aW1lbGluZRgGIAEoCBIQCgNrZXkYByABKAlCA+BBASJACgxNYW5pZmVzdFR5",
+            "cGUSHQoZTUFOSUZFU1RfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0hMUxABEggK",
+            "BERBU0gQAiLjAQoLU3ByaXRlU2hlZXQSDgoGZm9ybWF0GAEgASgJEhgKC2Zp",
+            "bGVfcHJlZml4GAIgASgJQgPgQQISIAoTc3ByaXRlX3dpZHRoX3BpeGVscxgD",
+            "IAEoBUID4EECEiEKFHNwcml0ZV9oZWlnaHRfcGl4ZWxzGAQgASgFQgPgQQIS",
+            "FAoMY29sdW1uX2NvdW50GAUgASgFEhEKCXJvd19jb3VudBgGIAEoBRIrCghp",
+            "bnRlcnZhbBgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIPCgdx",
+            "dWFsaXR5GAggASgFIsUDChNQcmVwcm9jZXNzaW5nQ29uZmlnEkoKBWF1ZGlv",
+            "GAEgASgLMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUHJl",
+            "cHJvY2Vzc2luZ0NvbmZpZy5BdWRpbxJICgRjcm9wGAIgASgLMjouZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZp",
+            "Zy5Dcm9wEkYKA3BhZBgDIAEoCzI5Lmdvb2dsZS5jbG91ZC52aWRlby5saXZl",
+            "c3RyZWFtLnYxLlByZXByb2Nlc3NpbmdDb25maWcuUGFkGhUKBUF1ZGlvEgwK",
+            "BGx1ZnMYASABKAEaXAoEQ3JvcBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJv",
+            "dHRvbV9waXhlbHMYAiABKAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmln",
+            "aHRfcGl4ZWxzGAQgASgFGlsKA1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUK",
+            "DWJvdHRvbV9waXhlbHMYAiABKAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoM",
+            "cmlnaHRfcGl4ZWxzGAQgASgFIv8DCgtWaWRlb1N0cmVhbRJPCgRoMjY0GBQg",
+            "ASgLMj8uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuVmlkZW9T",
+            "dHJlYW0uSDI2NENvZGVjU2V0dGluZ3NIABqMAwoRSDI2NENvZGVjU2V0dGlu",
+            "Z3MSFAoMd2lkdGhfcGl4ZWxzGAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiAB",
+            "KAUSFwoKZnJhbWVfcmF0ZRgDIAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQg",
+            "ASgFQgPgQQISFgoOYWxsb3dfb3Blbl9nb3AYBiABKAgSGQoPZ29wX2ZyYW1l",
+            "X2NvdW50GAcgASgFSAASMQoMZ29wX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uSAASFQoNdmJ2X3NpemVfYml0cxgJIAEoBRIZ",
+            "ChF2YnZfZnVsbG5lc3NfYml0cxgKIAEoBRIVCg1lbnRyb3B5X2NvZGVyGAsg",
+            "ASgJEhEKCWJfcHlyYW1pZBgMIAEoCBIVCg1iX2ZyYW1lX2NvdW50GA0gASgF",
+            "EhMKC2FxX3N0cmVuZ3RoGA4gASgBEg8KB3Byb2ZpbGUYDyABKAkSDAoEdHVu",
+            "ZRgQIAEoCUIKCghnb3BfbW9kZUIQCg5jb2RlY19zZXR0aW5ncyLsAgoLQXVk",
+            "aW9TdHJlYW0SEAoIdHJhbnNtdXgYCCABKAgSDQoFY29kZWMYASABKAkSGAoL",
+            "Yml0cmF0ZV9icHMYAiABKAVCA+BBAhIVCg1jaGFubmVsX2NvdW50GAMgASgF",
+            "EhYKDmNoYW5uZWxfbGF5b3V0GAQgAygJEksKB21hcHBpbmcYBSADKAsyOi5n",
+            "b29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbS5B",
+            "dWRpb01hcHBpbmcSGQoRc2FtcGxlX3JhdGVfaGVydHoYBiABKAUaigEKDEF1",
+            "ZGlvTWFwcGluZxIWCglpbnB1dF9rZXkYBiABKAlCA+BBAhIYCgtpbnB1dF90",
+            "cmFjaxgCIAEoBUID4EECEhoKDWlucHV0X2NoYW5uZWwYAyABKAVCA+BBAhIb",
+            "Cg5vdXRwdXRfY2hhbm5lbBgEIAEoBUID4EECEg8KB2dhaW5fZGIYBSABKAEi",
+            "IAoKVGV4dFN0cmVhbRISCgVjb2RlYxgBIAEoCUID4EECIkYKD1NlZ21lbnRT",
+            "ZXR0aW5ncxIzChBzZWdtZW50X2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uIqwCCg5UaW1lY29kZUNvbmZpZxJPCgZzb3VyY2UY",
+            "ASABKA4yPy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5UaW1l",
+            "Y29kZUNvbmZpZy5UaW1lY29kZVNvdXJjZRIvCgp1dGNfb2Zmc2V0GAIgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASKgoJdGltZV96b25lGAMg",
+            "ASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpvbmVIACJdCg5UaW1lY29kZVNvdXJj",
+            "ZRIfChtUSU1FQ09ERV9TT1VSQ0VfVU5TUEVDSUZJRUQQABITCg9NRURJQV9U",
+            "SU1FU1RBTVAQARIVChFFTUJFRERFRF9USU1FQ09ERRACQg0KC3RpbWVfb2Zm",
+            "c2V0QukBCiRjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjFC",
+            "DE91dHB1dHNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL2xp",
+            "dmVzdHJlYW0vYXBpdjEvbGl2ZXN0cmVhbXBiO2xpdmVzdHJlYW1wYqoCIEdv",
+            "b2dsZS5DbG91ZC5WaWRlby5MaXZlU3RyZWFtLlYxygIgR29vZ2xlXENsb3Vk",
+            "XFZpZGVvXExpdmVTdHJlYW1cVjHqAiRHb29nbGU6OkNsb3VkOjpWaWRlbzo6",
+            "TGl2ZVN0cmVhbTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.ElementaryStream), global::Google.Cloud.Video.LiveStream.V1.ElementaryStream.Parser, new[]{ "Key", "VideoStream", "AudioStream", "TextStream" }, new[]{ "ElementaryStream" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.MuxStream), global::Google.Cloud.Video.LiveStream.V1.MuxStream.Parser, new[]{ "Key", "Container", "ElementaryStreams", "SegmentSettings", "EncryptionId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest), global::Google.Cloud.Video.LiveStream.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams", "MaxSegmentCount", "SegmentKeepDuration", "UseTimecodeAsTimeline" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest.Types.ManifestType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest), global::Google.Cloud.Video.LiveStream.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams", "MaxSegmentCount", "SegmentKeepDuration", "UseTimecodeAsTimeline", "Key" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest.Types.ManifestType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SpriteSheet), global::Google.Cloud.Video.LiveStream.V1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "Interval", "Quality" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Parser, new[]{ "Audio", "Crop", "Pad" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio.Parser, new[]{ "Lufs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
@@ -182,7 +182,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     public const int KeyFieldNumber = 4;
     private string key_ = "";
     /// <summary>
-    /// A unique key for this elementary stream.
+    /// A unique key for this elementary stream. The key must be 1-63
+    /// characters in length. The key must begin and end with a letter (regardless
+    /// of case) or a number, but can contain dashes or underscores in between.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -565,7 +567,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     public const int KeyFieldNumber = 1;
     private string key_ = "";
     /// <summary>
-    /// A unique key for this multiplexed stream.
+    /// A unique key for this multiplexed stream. The key must be 1-63
+    /// characters in length. The key must begin and end with a letter (regardless
+    /// of case) or a number, but can contain dashes or underscores in between.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -919,6 +923,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       maxSegmentCount_ = other.maxSegmentCount_;
       segmentKeepDuration_ = other.segmentKeepDuration_ != null ? other.segmentKeepDuration_.Clone() : null;
       useTimecodeAsTimeline_ = other.useTimecodeAsTimeline_;
+      key_ = other.key_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1009,6 +1014,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     /// errors while accessing segments which are listed in the manifest that the
     /// player has, but were already deleted from the output Google Cloud Storage
     /// bucket. Default value is `60s`.
+    ///
+    /// If both segment_keep_duration and
+    /// [RetentionConfig.retention_window_duration][google.cloud.video.livestream.v1.RetentionConfig.retention_window_duration]
+    /// are set,
+    /// [RetentionConfig.retention_window_duration][google.cloud.video.livestream.v1.RetentionConfig.retention_window_duration]
+    /// is used and segment_keep_duration is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1040,6 +1051,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
     }
 
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 7;
+    private string key_ = "";
+    /// <summary>
+    /// Optional. A unique key for this manifest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1061,6 +1087,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (MaxSegmentCount != other.MaxSegmentCount) return false;
       if (!object.Equals(SegmentKeepDuration, other.SegmentKeepDuration)) return false;
       if (UseTimecodeAsTimeline != other.UseTimecodeAsTimeline) return false;
+      if (Key != other.Key) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1074,6 +1101,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (MaxSegmentCount != 0) hash ^= MaxSegmentCount.GetHashCode();
       if (segmentKeepDuration_ != null) hash ^= SegmentKeepDuration.GetHashCode();
       if (UseTimecodeAsTimeline != false) hash ^= UseTimecodeAsTimeline.GetHashCode();
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1113,6 +1141,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(48);
         output.WriteBool(UseTimecodeAsTimeline);
       }
+      if (Key.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Key);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1144,6 +1176,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(48);
         output.WriteBool(UseTimecodeAsTimeline);
       }
+      if (Key.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Key);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1169,6 +1205,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       if (UseTimecodeAsTimeline != false) {
         size += 1 + 1;
+      }
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1200,6 +1239,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       if (other.UseTimecodeAsTimeline != false) {
         UseTimecodeAsTimeline = other.UseTimecodeAsTimeline;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1243,6 +1285,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             UseTimecodeAsTimeline = input.ReadBool();
             break;
           }
+          case 58: {
+            Key = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1283,6 +1329,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           }
           case 48: {
             UseTimecodeAsTimeline = input.ReadBool();
+            break;
+          }
+          case 58: {
+            Key = input.ReadString();
             break;
           }
         }

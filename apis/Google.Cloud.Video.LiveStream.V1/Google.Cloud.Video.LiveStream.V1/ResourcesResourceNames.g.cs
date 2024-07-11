@@ -763,6 +763,264 @@ namespace Google.Cloud.Video.LiveStream.V1
         public static bool operator !=(EventName a, EventName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Clip</c> resource.</summary>
+    public sealed partial class ClipName : gax::IResourceName, sys::IEquatable<ClipName>
+    {
+        /// <summary>The possible contents of <see cref="ClipName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>
+            /// .
+            /// </summary>
+            ProjectLocationChannelClip = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationChannelClip = new gax::PathTemplate("projects/{project}/locations/{location}/channels/{channel}/clips/{clip}");
+
+        /// <summary>Creates a <see cref="ClipName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ClipName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ClipName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ClipName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ClipName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="channelId">The <c>Channel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clipId">The <c>Clip</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ClipName"/> constructed from the provided ids.</returns>
+        public static ClipName FromProjectLocationChannelClip(string projectId, string locationId, string channelId, string clipId) =>
+            new ClipName(ResourceNameType.ProjectLocationChannelClip, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), channelId: gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)), clipId: gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ClipName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="channelId">The <c>Channel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clipId">The <c>Clip</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ClipName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string channelId, string clipId) =>
+            FormatProjectLocationChannelClip(projectId, locationId, channelId, clipId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ClipName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="channelId">The <c>Channel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clipId">The <c>Clip</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ClipName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>.
+        /// </returns>
+        public static string FormatProjectLocationChannelClip(string projectId, string locationId, string channelId, string clipId) =>
+            s_projectLocationChannelClip.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)), gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="ClipName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="clipName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ClipName"/> if successful.</returns>
+        public static ClipName Parse(string clipName) => Parse(clipName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ClipName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="clipName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ClipName"/> if successful.</returns>
+        public static ClipName Parse(string clipName, bool allowUnparsed) =>
+            TryParse(clipName, allowUnparsed, out ClipName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>Tries to parse the given resource name string into a new <see cref="ClipName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="clipName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ClipName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string clipName, out ClipName result) => TryParse(clipName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ClipName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="clipName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ClipName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string clipName, bool allowUnparsed, out ClipName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(clipName, nameof(clipName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationChannelClip.TryParseName(clipName, out resourceName))
+            {
+                result = FromProjectLocationChannelClip(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(clipName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ClipName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string channelId = null, string clipId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ChannelId = channelId;
+            ClipId = clipId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ClipName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/channels/{channel}/clips/{clip}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="channelId">The <c>Channel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clipId">The <c>Clip</c> ID. Must not be <c>null</c> or empty.</param>
+        public ClipName(string projectId, string locationId, string channelId, string clipId) : this(ResourceNameType.ProjectLocationChannelClip, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), channelId: gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)), clipId: gax::GaxPreconditions.CheckNotNullOrEmpty(clipId, nameof(clipId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Channel</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ChannelId { get; }
+
+        /// <summary>
+        /// The <c>Clip</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ClipId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationChannelClip: return s_projectLocationChannelClip.Expand(ProjectId, LocationId, ChannelId, ClipId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ClipName);
+
+        /// <inheritdoc/>
+        public bool Equals(ClipName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(ClipName a, ClipName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(ClipName a, ClipName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Asset</c> resource.</summary>
     public sealed partial class AssetName : gax::IResourceName, sys::IEquatable<AssetName>
     {
@@ -1267,6 +1525,16 @@ namespace Google.Cloud.Video.LiveStream.V1
         }
     }
 
+    public partial class StaticOverlay
+    {
+        /// <summary><see cref="AssetName"/>-typed view over the <see cref="Asset"/> resource name property.</summary>
+        public AssetName AssetAsAssetName
+        {
+            get => string.IsNullOrEmpty(Asset) ? null : AssetName.Parse(Asset, allowUnparsed: true);
+            set => Asset = value?.ToString() ?? "";
+        }
+    }
+
     public partial class InputAttachment
     {
         /// <summary><see cref="InputName"/>-typed view over the <see cref="Input"/> resource name property.</summary>
@@ -1301,6 +1569,18 @@ namespace Google.Cloud.Video.LiveStream.V1
                     set => Asset = value?.ToString() ?? "";
                 }
             }
+        }
+    }
+
+    public partial class Clip
+    {
+        /// <summary>
+        /// <see cref="gcvlv::ClipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::ClipName ClipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::ClipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
