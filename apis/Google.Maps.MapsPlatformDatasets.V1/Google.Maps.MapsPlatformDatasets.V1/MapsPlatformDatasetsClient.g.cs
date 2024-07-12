@@ -18,6 +18,7 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gr = Google.Rpc;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -50,6 +51,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             CreateDatasetSettings = existing.CreateDatasetSettings;
             UpdateDatasetMetadataSettings = existing.UpdateDatasetMetadataSettings;
             GetDatasetSettings = existing.GetDatasetSettings;
+            FetchDatasetErrorsSettings = existing.FetchDatasetErrorsSettings;
             ListDatasetsSettings = existing.ListDatasetsSettings;
             DeleteDatasetSettings = existing.DeleteDatasetSettings;
             OnCopy(existing);
@@ -99,6 +101,25 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDatasetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MapsPlatformDatasetsClient.FetchDatasetErrors</c> and
+        /// <c>MapsPlatformDatasetsClient.FetchDatasetErrorsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchDatasetErrorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -647,6 +668,124 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             GetDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="gr::Status"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(FetchDatasetErrorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="gr::Status"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(FetchDatasetErrorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The name of the dataset to list all the errors for.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="gr::Status"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            FetchDatasetErrors(new FetchDatasetErrorsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The name of the dataset to list all the errors for.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="gr::Status"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            FetchDatasetErrorsAsync(new FetchDatasetErrorsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The name of the dataset to list all the errors for.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="gr::Status"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            FetchDatasetErrors(new FetchDatasetErrorsRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The name of the dataset to list all the errors for.
+        /// Format: projects/{project}/datasets/{dataset_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="gr::Status"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            FetchDatasetErrorsAsync(new FetchDatasetErrorsRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -888,6 +1027,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1
 
         private readonly gaxgrpc::ApiCall<GetDatasetRequest, Dataset> _callGetDataset;
 
+        private readonly gaxgrpc::ApiCall<FetchDatasetErrorsRequest, FetchDatasetErrorsResponse> _callFetchDatasetErrors;
+
         private readonly gaxgrpc::ApiCall<ListDatasetsRequest, ListDatasetsResponse> _callListDatasets;
 
         private readonly gaxgrpc::ApiCall<DeleteDatasetRequest, wkt::Empty> _callDeleteDataset;
@@ -917,6 +1058,9 @@ namespace Google.Maps.MapsPlatformDatasets.V1
             _callGetDataset = clientHelper.BuildApiCall<GetDatasetRequest, Dataset>("GetDataset", grpcClient.GetDatasetAsync, grpcClient.GetDataset, effectiveSettings.GetDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataset);
             Modify_GetDatasetApiCall(ref _callGetDataset);
+            _callFetchDatasetErrors = clientHelper.BuildApiCall<FetchDatasetErrorsRequest, FetchDatasetErrorsResponse>("FetchDatasetErrors", grpcClient.FetchDatasetErrorsAsync, grpcClient.FetchDatasetErrors, effectiveSettings.FetchDatasetErrorsSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
+            Modify_ApiCall(ref _callFetchDatasetErrors);
+            Modify_FetchDatasetErrorsApiCall(ref _callFetchDatasetErrors);
             _callListDatasets = clientHelper.BuildApiCall<ListDatasetsRequest, ListDatasetsResponse>("ListDatasets", grpcClient.ListDatasetsAsync, grpcClient.ListDatasets, effectiveSettings.ListDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatasets);
             Modify_ListDatasetsApiCall(ref _callListDatasets);
@@ -934,6 +1078,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1
 
         partial void Modify_GetDatasetApiCall(ref gaxgrpc::ApiCall<GetDatasetRequest, Dataset> call);
 
+        partial void Modify_FetchDatasetErrorsApiCall(ref gaxgrpc::ApiCall<FetchDatasetErrorsRequest, FetchDatasetErrorsResponse> call);
+
         partial void Modify_ListDatasetsApiCall(ref gaxgrpc::ApiCall<ListDatasetsRequest, ListDatasetsResponse> call);
 
         partial void Modify_DeleteDatasetApiCall(ref gaxgrpc::ApiCall<DeleteDatasetRequest, wkt::Empty> call);
@@ -948,6 +1094,8 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         partial void Modify_UpdateDatasetMetadataRequest(ref UpdateDatasetMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDatasetRequest(ref GetDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchDatasetErrorsRequest(ref FetchDatasetErrorsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatasetsRequest(ref ListDatasetsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1026,6 +1174,30 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
 
         /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="gr::Status"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(FetchDatasetErrorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchDatasetErrorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchDatasetErrorsRequest, FetchDatasetErrorsResponse, gr::Status>(_callFetchDatasetErrors, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets all the errors of a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="gr::Status"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(FetchDatasetErrorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchDatasetErrorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchDatasetErrorsRequest, FetchDatasetErrorsResponse, gr::Status>(_callFetchDatasetErrors, request, callSettings);
+        }
+
+        /// <summary>
         /// Lists all the datasets for the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1074,8 +1246,20 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         }
     }
 
+    public partial class FetchDatasetErrorsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDatasetsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class FetchDatasetErrorsResponse : gaxgrpc::IPageResponse<gr::Status>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<gr::Status> GetEnumerator() => Errors.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListDatasetsResponse : gaxgrpc::IPageResponse<Dataset>

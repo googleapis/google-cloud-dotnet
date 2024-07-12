@@ -72,6 +72,10 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest> __Marshaller_google_maps_mapsplatformdatasets_v1_GetDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest> __Marshaller_google_maps_mapsplatformdatasets_v1_FetchDatasetErrorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse> __Marshaller_google_maps_mapsplatformdatasets_v1_FetchDatasetErrorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest> __Marshaller_google_maps_mapsplatformdatasets_v1_ListDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse> __Marshaller_google_maps_mapsplatformdatasets_v1_ListDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse.Parser));
@@ -103,6 +107,14 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         "GetDataset",
         __Marshaller_google_maps_mapsplatformdatasets_v1_GetDatasetRequest,
         __Marshaller_google_maps_mapsplatformdatasets_v1_Dataset);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest, global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse> __Method_FetchDatasetErrors = new grpc::Method<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest, global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchDatasetErrors",
+        __Marshaller_google_maps_mapsplatformdatasets_v1_FetchDatasetErrorsRequest,
+        __Marshaller_google_maps_mapsplatformdatasets_v1_FetchDatasetErrorsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest, global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse> __Method_ListDatasets = new grpc::Method<global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest, global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse>(
@@ -162,6 +174,18 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.MapsPlatformDatasets.V1.Dataset> GetDataset(global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets all the errors of a dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse> FetchDatasetErrors(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -364,6 +388,54 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataset, null, options, request);
       }
       /// <summary>
+      /// Gets all the errors of a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse FetchDatasetErrors(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchDatasetErrors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets all the errors of a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse FetchDatasetErrors(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchDatasetErrors, null, options, request);
+      }
+      /// <summary>
+      /// Gets all the errors of a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse> FetchDatasetErrorsAsync(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchDatasetErrorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets all the errors of a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse> FetchDatasetErrorsAsync(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchDatasetErrors, null, options, request);
+      }
+      /// <summary>
       /// Lists all the datasets for the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -476,6 +548,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
           .AddMethod(__Method_CreateDataset, serviceImpl.CreateDataset)
           .AddMethod(__Method_UpdateDatasetMetadata, serviceImpl.UpdateDatasetMetadata)
           .AddMethod(__Method_GetDataset, serviceImpl.GetDataset)
+          .AddMethod(__Method_FetchDatasetErrors, serviceImpl.FetchDatasetErrors)
           .AddMethod(__Method_ListDatasets, serviceImpl.ListDatasets)
           .AddMethod(__Method_DeleteDataset, serviceImpl.DeleteDataset).Build();
     }
@@ -490,6 +563,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
       serviceBinder.AddMethod(__Method_CreateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.MapsPlatformDatasets.V1.CreateDatasetRequest, global::Google.Maps.MapsPlatformDatasets.V1.Dataset>(serviceImpl.CreateDataset));
       serviceBinder.AddMethod(__Method_UpdateDatasetMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.MapsPlatformDatasets.V1.UpdateDatasetMetadataRequest, global::Google.Maps.MapsPlatformDatasets.V1.Dataset>(serviceImpl.UpdateDatasetMetadata));
       serviceBinder.AddMethod(__Method_GetDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest, global::Google.Maps.MapsPlatformDatasets.V1.Dataset>(serviceImpl.GetDataset));
+      serviceBinder.AddMethod(__Method_FetchDatasetErrors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest, global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse>(serviceImpl.FetchDatasetErrors));
       serviceBinder.AddMethod(__Method_ListDatasets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest, global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse>(serviceImpl.ListDatasets));
       serviceBinder.AddMethod(__Method_DeleteDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.MapsPlatformDatasets.V1.DeleteDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDataset));
     }

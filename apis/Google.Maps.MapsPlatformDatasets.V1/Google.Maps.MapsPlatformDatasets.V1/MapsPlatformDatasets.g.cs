@@ -29,37 +29,45 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
             "cm1kYXRhc2V0cy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoxZ29vZ2xlL21hcHMvbWFw",
             "c3BsYXRmb3JtZGF0YXNldHMvdjEvZGF0YXNldC5wcm90bxogZ29vZ2xlL3By",
-            "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8inwEKFENyZWF0ZURhdGFzZXRSZXF1",
-            "ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EkIKB2RhdGFzZXQYAiABKAsy",
-            "LC5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MS5EYXRhc2V0",
-            "QgPgQQIikwEKHFVwZGF0ZURhdGFzZXRNZXRhZGF0YVJlcXVlc3QSQgoHZGF0",
-            "YXNldBgBIAEoCzIsLmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRz",
-            "LnYxLkRhdGFzZXRCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5GaWVsZE1hc2siVgoRR2V0RGF0YXNldFJlcXVlc3QSQQoE",
-            "bmFtZRgBIAEoCUIz4EEC+kEtCittYXBzcGxhdGZvcm1kYXRhc2V0cy5nb29n",
-            "bGVhcGlzLmNvbS9EYXRhc2V0Io4BChNMaXN0RGF0YXNldHNSZXF1ZXN0EkMK",
-            "BnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9Qcm9qZWN0EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAMgASgJEgsKA3RhZxgEIAEoCSJvChRMaXN0RGF0YXNldHNS",
-            "ZXNwb25zZRI+CghkYXRhc2V0cxgBIAMoCzIsLmdvb2dsZS5tYXBzLm1hcHNw",
-            "bGF0Zm9ybWRhdGFzZXRzLnYxLkRhdGFzZXQSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJIlkKFERlbGV0ZURhdGFzZXRSZXF1ZXN0EkEKBG5hbWUYASABKAlC",
-            "M+BBAvpBLQorbWFwc3BsYXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YXNldEL8AQonY29tLmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFz",
-            "ZXRzLnYxQhlNYXBzUGxhdGZvcm1EYXRhc2V0c1Byb3RvUAFaYWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vbWFwcy9tYXBzcGxhdGZvcm1kYXRhc2V0cy9hcGl2MS9t",
-            "YXBzcGxhdGZvcm1kYXRhc2V0c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKi",
-            "AgRNRFYxqgIjR29vZ2xlLk1hcHMuTWFwc1BsYXRmb3JtRGF0YXNldHMuVjHK",
-            "AiNHb29nbGVcTWFwc1xNYXBzUGxhdGZvcm1EYXRhc2V0c1xWMWIGcHJvdG8z"));
+            "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnBy",
+            "b3RvIp8BChRDcmVhdGVEYXRhc2V0UmVxdWVzdBJDCgZwYXJlbnQYASABKAlC",
+            "M+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "UHJvamVjdBJCCgdkYXRhc2V0GAIgASgLMiwuZ29vZ2xlLm1hcHMubWFwc3Bs",
+            "YXRmb3JtZGF0YXNldHMudjEuRGF0YXNldEID4EECIpMBChxVcGRhdGVEYXRh",
+            "c2V0TWV0YWRhdGFSZXF1ZXN0EkIKB2RhdGFzZXQYASABKAsyLC5nb29nbGUu",
+            "bWFwcy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MS5EYXRhc2V0QgPgQQISLwoL",
+            "dXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
+            "IlYKEUdldERhdGFzZXRSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQor",
+            "bWFwc3BsYXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0YXNldCKO",
+            "AQoTTGlzdERhdGFzZXRzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpB",
+            "LQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVj",
+            "dBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRILCgN0",
+            "YWcYBCABKAkibwoUTGlzdERhdGFzZXRzUmVzcG9uc2USPgoIZGF0YXNldHMY",
+            "ASADKAsyLC5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MS5E",
+            "YXRhc2V0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKIAQoZRmV0Y2hEYXRh",
+            "c2V0RXJyb3JzUmVxdWVzdBJECgdkYXRhc2V0GAEgASgJQjPgQQL6QS0KK21h",
+            "cHNwbGF0Zm9ybWRhdGFzZXRzLmdvb2dsZWFwaXMuY29tL0RhdGFzZXQSEQoJ",
+            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiWQoaRmV0Y2hE",
+            "YXRhc2V0RXJyb3JzUmVzcG9uc2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
+            "EiIKBmVycm9ycxgDIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzIlkKFERlbGV0",
+            "ZURhdGFzZXRSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQorbWFwc3Bs",
+            "YXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0YXNldEL8AQonY29t",
+            "Lmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRzLnYxQhlNYXBzUGxh",
+            "dGZvcm1EYXRhc2V0c1Byb3RvUAFaYWNsb3VkLmdvb2dsZS5jb20vZ28vbWFw",
+            "cy9tYXBzcGxhdGZvcm1kYXRhc2V0cy9hcGl2MS9tYXBzcGxhdGZvcm1kYXRh",
+            "c2V0c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKiAgRNRFYxqgIjR29vZ2xl",
+            "Lk1hcHMuTWFwc1BsYXRmb3JtRGF0YXNldHMuVjHKAiNHb29nbGVcTWFwc1xN",
+            "YXBzUGxhdGZvcm1EYXRhc2V0c1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.CreateDatasetRequest), global::Google.Maps.MapsPlatformDatasets.V1.CreateDatasetRequest.Parser, new[]{ "Parent", "Dataset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.UpdateDatasetMetadataRequest), global::Google.Maps.MapsPlatformDatasets.V1.UpdateDatasetMetadataRequest.Parser, new[]{ "Dataset", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest), global::Google.Maps.MapsPlatformDatasets.V1.GetDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest), global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Tag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse), global::Google.Maps.MapsPlatformDatasets.V1.ListDatasetsResponse.Parser, new[]{ "Datasets", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest), global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsRequest.Parser, new[]{ "Dataset", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse), global::Google.Maps.MapsPlatformDatasets.V1.FetchDatasetErrorsResponse.Parser, new[]{ "NextPageToken", "Errors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.MapsPlatformDatasets.V1.DeleteDatasetRequest), global::Google.Maps.MapsPlatformDatasets.V1.DeleteDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
@@ -1329,6 +1337,515 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
   }
 
   /// <summary>
+  /// Request to list detailed errors belonging to a dataset.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FetchDatasetErrorsRequest : pb::IMessage<FetchDatasetErrorsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FetchDatasetErrorsRequest> _parser = new pb::MessageParser<FetchDatasetErrorsRequest>(() => new FetchDatasetErrorsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FetchDatasetErrorsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.MapsPlatformDatasets.V1.MapsPlatformDatasetsReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchDatasetErrorsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchDatasetErrorsRequest(FetchDatasetErrorsRequest other) : this() {
+      dataset_ = other.dataset_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchDatasetErrorsRequest Clone() {
+      return new FetchDatasetErrorsRequest(this);
+    }
+
+    /// <summary>Field number for the "dataset" field.</summary>
+    public const int DatasetFieldNumber = 1;
+    private string dataset_ = "";
+    /// <summary>
+    /// Required. The name of the dataset to list all the errors for.
+    /// Format: projects/{project}/datasets/{dataset_id}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Dataset {
+      get { return dataset_; }
+      set {
+        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of errors to return per page.
+    ///
+    /// The maximum value is 500; values above 500 will be capped to 500.
+    ///
+    /// If unspecified, at most 50 errors will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The page token, received from a previous ListDatasetErrors call.
+    /// Provide this to retrieve the subsequent page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FetchDatasetErrorsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FetchDatasetErrorsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Dataset != other.Dataset) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Dataset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Dataset);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Dataset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Dataset);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Dataset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FetchDatasetErrorsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Dataset.Length != 0) {
+        Dataset = other.Dataset;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Dataset = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Dataset = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object of FetchDatasetErrors.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FetchDatasetErrorsResponse : pb::IMessage<FetchDatasetErrorsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FetchDatasetErrorsResponse> _parser = new pb::MessageParser<FetchDatasetErrorsResponse>(() => new FetchDatasetErrorsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FetchDatasetErrorsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.MapsPlatformDatasets.V1.MapsPlatformDatasetsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchDatasetErrorsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchDatasetErrorsResponse(FetchDatasetErrorsResponse other) : this() {
+      nextPageToken_ = other.nextPageToken_;
+      errors_ = other.errors_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchDatasetErrorsResponse Clone() {
+      return new FetchDatasetErrorsResponse(this);
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token that can be sent as `page_token` to retrieve the next page.
+    ///
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "errors" field.</summary>
+    public const int ErrorsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Rpc.Status> _repeated_errors_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Rpc.Status.Parser);
+    private readonly pbc::RepeatedField<global::Google.Rpc.Status> errors_ = new pbc::RepeatedField<global::Google.Rpc.Status>();
+    /// <summary>
+    /// The errors associated with a dataset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Rpc.Status> Errors {
+      get { return errors_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FetchDatasetErrorsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FetchDatasetErrorsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!errors_.Equals(other.errors_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= errors_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      errors_.WriteTo(output, _repeated_errors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      errors_.WriteTo(ref output, _repeated_errors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += errors_.CalculateSize(_repeated_errors_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FetchDatasetErrorsResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      errors_.Add(other.errors_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            errors_.AddEntriesFrom(input, _repeated_errors_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request to delete a dataset.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1346,7 +1863,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.MapsPlatformDatasets.V1.MapsPlatformDatasetsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Maps.MapsPlatformDatasets.V1.MapsPlatformDatasetsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

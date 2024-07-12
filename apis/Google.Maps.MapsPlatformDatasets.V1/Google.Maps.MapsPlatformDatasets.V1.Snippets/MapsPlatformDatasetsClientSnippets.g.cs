@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
@@ -23,6 +25,7 @@ namespace GoogleCSharpSnippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gr = Google.Rpc;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedMapsPlatformDatasetsClientSnippets
@@ -268,6 +271,282 @@ namespace GoogleCSharpSnippets
             DatasetName name = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]");
             // Make the request
             Dataset response = await mapsPlatformDatasetsClient.GetDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatasetErrors</summary>
+        public void FetchDatasetErrorsRequestObject()
+        {
+            // Snippet: FetchDatasetErrors(FetchDatasetErrorsRequest, CallSettings)
+            // Create client
+            MapsPlatformDatasetsClient mapsPlatformDatasetsClient = MapsPlatformDatasetsClient.Create();
+            // Initialize request argument(s)
+            FetchDatasetErrorsRequest request = new FetchDatasetErrorsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+            };
+            // Make the request
+            PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> response = mapsPlatformDatasetsClient.FetchDatasetErrors(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gr::Status item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchDatasetErrorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gr::Status item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gr::Status> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gr::Status item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatasetErrorsAsync</summary>
+        public async Task FetchDatasetErrorsRequestObjectAsync()
+        {
+            // Snippet: FetchDatasetErrorsAsync(FetchDatasetErrorsRequest, CallSettings)
+            // Create client
+            MapsPlatformDatasetsClient mapsPlatformDatasetsClient = await MapsPlatformDatasetsClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchDatasetErrorsRequest request = new FetchDatasetErrorsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> response = mapsPlatformDatasetsClient.FetchDatasetErrorsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gr::Status item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchDatasetErrorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gr::Status item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gr::Status> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gr::Status item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatasetErrors</summary>
+        public void FetchDatasetErrors()
+        {
+            // Snippet: FetchDatasetErrors(string, string, int?, CallSettings)
+            // Create client
+            MapsPlatformDatasetsClient mapsPlatformDatasetsClient = MapsPlatformDatasetsClient.Create();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/datasets/[DATASET]";
+            // Make the request
+            PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> response = mapsPlatformDatasetsClient.FetchDatasetErrors(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gr::Status item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchDatasetErrorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gr::Status item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gr::Status> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gr::Status item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatasetErrorsAsync</summary>
+        public async Task FetchDatasetErrorsAsync()
+        {
+            // Snippet: FetchDatasetErrorsAsync(string, string, int?, CallSettings)
+            // Create client
+            MapsPlatformDatasetsClient mapsPlatformDatasetsClient = await MapsPlatformDatasetsClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/datasets/[DATASET]";
+            // Make the request
+            PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> response = mapsPlatformDatasetsClient.FetchDatasetErrorsAsync(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gr::Status item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchDatasetErrorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gr::Status item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gr::Status> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gr::Status item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatasetErrors</summary>
+        public void FetchDatasetErrorsResourceNames()
+        {
+            // Snippet: FetchDatasetErrors(DatasetName, string, int?, CallSettings)
+            // Create client
+            MapsPlatformDatasetsClient mapsPlatformDatasetsClient = MapsPlatformDatasetsClient.Create();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]");
+            // Make the request
+            PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> response = mapsPlatformDatasetsClient.FetchDatasetErrors(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gr::Status item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchDatasetErrorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gr::Status item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gr::Status> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gr::Status item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatasetErrorsAsync</summary>
+        public async Task FetchDatasetErrorsResourceNamesAsync()
+        {
+            // Snippet: FetchDatasetErrorsAsync(DatasetName, string, int?, CallSettings)
+            // Create client
+            MapsPlatformDatasetsClient mapsPlatformDatasetsClient = await MapsPlatformDatasetsClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]");
+            // Make the request
+            PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> response = mapsPlatformDatasetsClient.FetchDatasetErrorsAsync(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gr::Status item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchDatasetErrorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gr::Status item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gr::Status> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gr::Status item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
