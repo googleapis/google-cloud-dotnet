@@ -144,6 +144,14 @@ namespace Google.Apps.Chat.V1 {
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetThreadReadStateRequest> __Marshaller_google_chat_v1_GetThreadReadStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetThreadReadStateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ThreadReadState> __Marshaller_google_chat_v1_ThreadReadState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ThreadReadState.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetSpaceEventRequest> __Marshaller_google_chat_v1_GetSpaceEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetSpaceEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SpaceEvent> __Marshaller_google_chat_v1_SpaceEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SpaceEvent.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListSpaceEventsRequest> __Marshaller_google_chat_v1_ListSpaceEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListSpaceEventsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListSpaceEventsResponse> __Marshaller_google_chat_v1_ListSpaceEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListSpaceEventsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.CreateMessageRequest, global::Google.Apps.Chat.V1.Message> __Method_CreateMessage = new grpc::Method<global::Google.Apps.Chat.V1.CreateMessageRequest, global::Google.Apps.Chat.V1.Message>(
@@ -352,6 +360,22 @@ namespace Google.Apps.Chat.V1 {
         "GetThreadReadState",
         __Marshaller_google_chat_v1_GetThreadReadStateRequest,
         __Marshaller_google_chat_v1_ThreadReadState);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent> __Method_GetSpaceEvent = new grpc::Method<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSpaceEvent",
+        __Marshaller_google_chat_v1_GetSpaceEventRequest,
+        __Marshaller_google_chat_v1_SpaceEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.ListSpaceEventsRequest, global::Google.Apps.Chat.V1.ListSpaceEventsResponse> __Method_ListSpaceEvents = new grpc::Method<global::Google.Apps.Chat.V1.ListSpaceEventsRequest, global::Google.Apps.Chat.V1.ListSpaceEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSpaceEvents",
+        __Marshaller_google_chat_v1_ListSpaceEventsRequest,
+        __Marshaller_google_chat_v1_ListSpaceEventsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -968,6 +992,56 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ThreadReadState> GetThreadReadState(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns an event from a Google Chat space. The [event
+      /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the resource that changed. For example,
+      /// if you request an event about a new message but the message was later
+      /// updated, the server returns the updated `Message` resource in the event
+      /// payload.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To get an event, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [Get details about an
+      /// event from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/get-space-event).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SpaceEvent> GetSpaceEvent(global::Google.Apps.Chat.V1.GetSpaceEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists events from a Google Chat space. For each event, the
+      /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the Chat resource. For example, if you
+      /// list events about new space members, the server returns `Membership`
+      /// resources that contain the latest membership details. If new members were
+      /// removed during the requested period, the event payload contains an empty
+      /// `Membership` resource.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To list events, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [List events from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/list-space-events).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ListSpaceEventsResponse> ListSpaceEvents(global::Google.Apps.Chat.V1.ListSpaceEventsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3437,6 +3511,206 @@ namespace Google.Apps.Chat.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetThreadReadState, null, options, request);
       }
+      /// <summary>
+      /// Returns an event from a Google Chat space. The [event
+      /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the resource that changed. For example,
+      /// if you request an event about a new message but the message was later
+      /// updated, the server returns the updated `Message` resource in the event
+      /// payload.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To get an event, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [Get details about an
+      /// event from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/get-space-event).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceEvent GetSpaceEvent(global::Google.Apps.Chat.V1.GetSpaceEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpaceEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns an event from a Google Chat space. The [event
+      /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the resource that changed. For example,
+      /// if you request an event about a new message but the message was later
+      /// updated, the server returns the updated `Message` resource in the event
+      /// payload.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To get an event, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [Get details about an
+      /// event from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/get-space-event).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceEvent GetSpaceEvent(global::Google.Apps.Chat.V1.GetSpaceEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSpaceEvent, null, options, request);
+      }
+      /// <summary>
+      /// Returns an event from a Google Chat space. The [event
+      /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the resource that changed. For example,
+      /// if you request an event about a new message but the message was later
+      /// updated, the server returns the updated `Message` resource in the event
+      /// payload.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To get an event, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [Get details about an
+      /// event from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/get-space-event).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceEvent> GetSpaceEventAsync(global::Google.Apps.Chat.V1.GetSpaceEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpaceEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns an event from a Google Chat space. The [event
+      /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the resource that changed. For example,
+      /// if you request an event about a new message but the message was later
+      /// updated, the server returns the updated `Message` resource in the event
+      /// payload.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To get an event, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [Get details about an
+      /// event from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/get-space-event).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceEvent> GetSpaceEventAsync(global::Google.Apps.Chat.V1.GetSpaceEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSpaceEvent, null, options, request);
+      }
+      /// <summary>
+      /// Lists events from a Google Chat space. For each event, the
+      /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the Chat resource. For example, if you
+      /// list events about new space members, the server returns `Membership`
+      /// resources that contain the latest membership details. If new members were
+      /// removed during the requested period, the event payload contains an empty
+      /// `Membership` resource.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To list events, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [List events from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/list-space-events).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.ListSpaceEventsResponse ListSpaceEvents(global::Google.Apps.Chat.V1.ListSpaceEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSpaceEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists events from a Google Chat space. For each event, the
+      /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the Chat resource. For example, if you
+      /// list events about new space members, the server returns `Membership`
+      /// resources that contain the latest membership details. If new members were
+      /// removed during the requested period, the event payload contains an empty
+      /// `Membership` resource.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To list events, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [List events from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/list-space-events).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.ListSpaceEventsResponse ListSpaceEvents(global::Google.Apps.Chat.V1.ListSpaceEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSpaceEvents, null, options, request);
+      }
+      /// <summary>
+      /// Lists events from a Google Chat space. For each event, the
+      /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the Chat resource. For example, if you
+      /// list events about new space members, the server returns `Membership`
+      /// resources that contain the latest membership details. If new members were
+      /// removed during the requested period, the event payload contains an empty
+      /// `Membership` resource.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To list events, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [List events from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/list-space-events).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ListSpaceEventsResponse> ListSpaceEventsAsync(global::Google.Apps.Chat.V1.ListSpaceEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSpaceEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists events from a Google Chat space. For each event, the
+      /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+      /// contains the most recent version of the Chat resource. For example, if you
+      /// list events about new space members, the server returns `Membership`
+      /// resources that contain the latest membership details. If new members were
+      /// removed during the requested period, the event payload contains an empty
+      /// `Membership` resource.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// To list events, the authenticated user must be a member of the space.
+      ///
+      /// For an example, see [List events from a Google Chat
+      /// space](https://developers.google.com/workspace/chat/list-space-events).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ListSpaceEventsResponse> ListSpaceEventsAsync(global::Google.Apps.Chat.V1.ListSpaceEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSpaceEvents, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ChatServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -3476,7 +3750,9 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_DeleteReaction, serviceImpl.DeleteReaction)
           .AddMethod(__Method_GetSpaceReadState, serviceImpl.GetSpaceReadState)
           .AddMethod(__Method_UpdateSpaceReadState, serviceImpl.UpdateSpaceReadState)
-          .AddMethod(__Method_GetThreadReadState, serviceImpl.GetThreadReadState).Build();
+          .AddMethod(__Method_GetThreadReadState, serviceImpl.GetThreadReadState)
+          .AddMethod(__Method_GetSpaceEvent, serviceImpl.GetSpaceEvent)
+          .AddMethod(__Method_ListSpaceEvents, serviceImpl.ListSpaceEvents).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3512,6 +3788,8 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_GetSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.GetSpaceReadState));
       serviceBinder.AddMethod(__Method_UpdateSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.UpdateSpaceReadState));
       serviceBinder.AddMethod(__Method_GetThreadReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState>(serviceImpl.GetThreadReadState));
+      serviceBinder.AddMethod(__Method_GetSpaceEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent>(serviceImpl.GetSpaceEvent));
+      serviceBinder.AddMethod(__Method_ListSpaceEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListSpaceEventsRequest, global::Google.Apps.Chat.V1.ListSpaceEventsResponse>(serviceImpl.ListSpaceEvents));
     }
 
   }

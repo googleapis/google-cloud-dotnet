@@ -72,6 +72,8 @@ namespace Google.Apps.Chat.V1
             GetSpaceReadStateSettings = existing.GetSpaceReadStateSettings;
             UpdateSpaceReadStateSettings = existing.UpdateSpaceReadStateSettings;
             GetThreadReadStateSettings = existing.GetThreadReadStateSettings;
+            GetSpaceEventSettings = existing.GetSpaceEventSettings;
+            ListSpaceEventsSettings = existing.ListSpaceEventsSettings;
             OnCopy(existing);
         }
 
@@ -544,6 +546,42 @@ namespace Google.Apps.Chat.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetThreadReadStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetSpaceEvent</c> and <c>ChatServiceClient.GetSpaceEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSpaceEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.ListSpaceEvents</c> and <c>ChatServiceClient.ListSpaceEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSpaceEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ChatServiceSettings"/> object.</returns>
@@ -5967,6 +6005,668 @@ namespace Google.Apps.Chat.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(ThreadReadStateName name, st::CancellationToken cancellationToken) =>
             GetThreadReadStateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceEvent GetSpaceEvent(GetSpaceEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceEvent> GetSpaceEventAsync(GetSpaceEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceEvent> GetSpaceEventAsync(GetSpaceEventRequest request, st::CancellationToken cancellationToken) =>
+            GetSpaceEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the space event.
+        /// 
+        /// Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceEvent GetSpaceEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceEvent(new GetSpaceEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the space event.
+        /// 
+        /// Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceEvent> GetSpaceEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceEventAsync(new GetSpaceEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the space event.
+        /// 
+        /// Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceEvent> GetSpaceEventAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSpaceEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the space event.
+        /// 
+        /// Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceEvent GetSpaceEvent(SpaceEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceEvent(new GetSpaceEventRequest
+            {
+                SpaceEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the space event.
+        /// 
+        /// Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceEvent> GetSpaceEventAsync(SpaceEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceEventAsync(new GetSpaceEventRequest
+            {
+                SpaceEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the space event.
+        /// 
+        /// Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceEvent> GetSpaceEventAsync(SpaceEventName name, st::CancellationToken cancellationToken) =>
+            GetSpaceEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(ListSpaceEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(ListSpaceEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the [Google Chat
+        /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces)
+        /// where the events occurred.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A query filter.
+        /// 
+        /// You must specify at least one event type (`event_type`)
+        /// using the has `:` operator. To filter by multiple event types, use the `OR`
+        /// operator. Omit batch event types in your filter. The request automatically
+        /// returns any related batch events. For example, if you filter by new
+        /// reactions
+        /// (`google.workspace.chat.reaction.v1.created`), the server also returns
+        /// batch new reactions events
+        /// (`google.workspace.chat.reaction.v1.batchCreated`). For a list of supported
+        /// event types, see the [`SpaceEvents` reference
+        /// documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.event_type).
+        /// 
+        /// Optionally, you can also filter by start time (`start_time`) and
+        /// end time (`end_time`):
+        /// 
+        /// * `start_time`: Exclusive timestamp from which to start listing space
+        /// events.
+        /// You can list events that occurred up to 28 days ago. If unspecified, lists
+        /// space events from the past 28 days.
+        /// * `end_time`: Inclusive timestamp until which space events are listed.
+        /// If unspecified, lists events up to the time of the request.
+        /// 
+        /// To specify a start or end time, use the equals `=` operator and format in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339). To filter by both
+        /// `start_time` and `end_time`, use the `AND` operator.
+        /// 
+        /// For example, the following queries are valid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// (event_types:"google.workspace.chat.space.v1.updated" OR
+        /// event_types:"google.workspace.chat.message.v1.created")
+        /// ```
+        /// 
+        /// The following queries are invalid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" OR
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// event_types:"google.workspace.chat.space.v1.updated" AND
+        /// event_types:"google.workspace.chat.message.v1.created"
+        /// ```
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSpaceEvents(new ListSpaceEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the [Google Chat
+        /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces)
+        /// where the events occurred.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A query filter.
+        /// 
+        /// You must specify at least one event type (`event_type`)
+        /// using the has `:` operator. To filter by multiple event types, use the `OR`
+        /// operator. Omit batch event types in your filter. The request automatically
+        /// returns any related batch events. For example, if you filter by new
+        /// reactions
+        /// (`google.workspace.chat.reaction.v1.created`), the server also returns
+        /// batch new reactions events
+        /// (`google.workspace.chat.reaction.v1.batchCreated`). For a list of supported
+        /// event types, see the [`SpaceEvents` reference
+        /// documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.event_type).
+        /// 
+        /// Optionally, you can also filter by start time (`start_time`) and
+        /// end time (`end_time`):
+        /// 
+        /// * `start_time`: Exclusive timestamp from which to start listing space
+        /// events.
+        /// You can list events that occurred up to 28 days ago. If unspecified, lists
+        /// space events from the past 28 days.
+        /// * `end_time`: Inclusive timestamp until which space events are listed.
+        /// If unspecified, lists events up to the time of the request.
+        /// 
+        /// To specify a start or end time, use the equals `=` operator and format in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339). To filter by both
+        /// `start_time` and `end_time`, use the `AND` operator.
+        /// 
+        /// For example, the following queries are valid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// (event_types:"google.workspace.chat.space.v1.updated" OR
+        /// event_types:"google.workspace.chat.message.v1.created")
+        /// ```
+        /// 
+        /// The following queries are invalid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" OR
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// event_types:"google.workspace.chat.space.v1.updated" AND
+        /// event_types:"google.workspace.chat.message.v1.created"
+        /// ```
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSpaceEventsAsync(new ListSpaceEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the [Google Chat
+        /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces)
+        /// where the events occurred.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A query filter.
+        /// 
+        /// You must specify at least one event type (`event_type`)
+        /// using the has `:` operator. To filter by multiple event types, use the `OR`
+        /// operator. Omit batch event types in your filter. The request automatically
+        /// returns any related batch events. For example, if you filter by new
+        /// reactions
+        /// (`google.workspace.chat.reaction.v1.created`), the server also returns
+        /// batch new reactions events
+        /// (`google.workspace.chat.reaction.v1.batchCreated`). For a list of supported
+        /// event types, see the [`SpaceEvents` reference
+        /// documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.event_type).
+        /// 
+        /// Optionally, you can also filter by start time (`start_time`) and
+        /// end time (`end_time`):
+        /// 
+        /// * `start_time`: Exclusive timestamp from which to start listing space
+        /// events.
+        /// You can list events that occurred up to 28 days ago. If unspecified, lists
+        /// space events from the past 28 days.
+        /// * `end_time`: Inclusive timestamp until which space events are listed.
+        /// If unspecified, lists events up to the time of the request.
+        /// 
+        /// To specify a start or end time, use the equals `=` operator and format in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339). To filter by both
+        /// `start_time` and `end_time`, use the `AND` operator.
+        /// 
+        /// For example, the following queries are valid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// (event_types:"google.workspace.chat.space.v1.updated" OR
+        /// event_types:"google.workspace.chat.message.v1.created")
+        /// ```
+        /// 
+        /// The following queries are invalid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" OR
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// event_types:"google.workspace.chat.space.v1.updated" AND
+        /// event_types:"google.workspace.chat.message.v1.created"
+        /// ```
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSpaceEvents(new ListSpaceEventsRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the [Google Chat
+        /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces)
+        /// where the events occurred.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A query filter.
+        /// 
+        /// You must specify at least one event type (`event_type`)
+        /// using the has `:` operator. To filter by multiple event types, use the `OR`
+        /// operator. Omit batch event types in your filter. The request automatically
+        /// returns any related batch events. For example, if you filter by new
+        /// reactions
+        /// (`google.workspace.chat.reaction.v1.created`), the server also returns
+        /// batch new reactions events
+        /// (`google.workspace.chat.reaction.v1.batchCreated`). For a list of supported
+        /// event types, see the [`SpaceEvents` reference
+        /// documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.event_type).
+        /// 
+        /// Optionally, you can also filter by start time (`start_time`) and
+        /// end time (`end_time`):
+        /// 
+        /// * `start_time`: Exclusive timestamp from which to start listing space
+        /// events.
+        /// You can list events that occurred up to 28 days ago. If unspecified, lists
+        /// space events from the past 28 days.
+        /// * `end_time`: Inclusive timestamp until which space events are listed.
+        /// If unspecified, lists events up to the time of the request.
+        /// 
+        /// To specify a start or end time, use the equals `=` operator and format in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339). To filter by both
+        /// `start_time` and `end_time`, use the `AND` operator.
+        /// 
+        /// For example, the following queries are valid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" AND
+        /// (event_types:"google.workspace.chat.space.v1.updated" OR
+        /// event_types:"google.workspace.chat.message.v1.created")
+        /// ```
+        /// 
+        /// The following queries are invalid:
+        /// 
+        /// ```
+        /// start_time="2023-08-23T19:20:33+00:00" OR
+        /// end_time="2023-08-23T19:21:54+00:00"
+        /// ```
+        /// ```
+        /// event_types:"google.workspace.chat.space.v1.updated" AND
+        /// event_types:"google.workspace.chat.message.v1.created"
+        /// ```
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSpaceEventsAsync(new ListSpaceEventsRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>ChatService client wrapper implementation, for convenient use.</summary>
@@ -6027,6 +6727,10 @@ namespace Google.Apps.Chat.V1
         private readonly gaxgrpc::ApiCall<UpdateSpaceReadStateRequest, SpaceReadState> _callUpdateSpaceReadState;
 
         private readonly gaxgrpc::ApiCall<GetThreadReadStateRequest, ThreadReadState> _callGetThreadReadState;
+
+        private readonly gaxgrpc::ApiCall<GetSpaceEventRequest, SpaceEvent> _callGetSpaceEvent;
+
+        private readonly gaxgrpc::ApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse> _callListSpaceEvents;
 
         /// <summary>
         /// Constructs a client wrapper for the ChatService service, with the specified gRPC client and settings.
@@ -6121,6 +6825,12 @@ namespace Google.Apps.Chat.V1
             _callGetThreadReadState = clientHelper.BuildApiCall<GetThreadReadStateRequest, ThreadReadState>("GetThreadReadState", grpcClient.GetThreadReadStateAsync, grpcClient.GetThreadReadState, effectiveSettings.GetThreadReadStateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetThreadReadState);
             Modify_GetThreadReadStateApiCall(ref _callGetThreadReadState);
+            _callGetSpaceEvent = clientHelper.BuildApiCall<GetSpaceEventRequest, SpaceEvent>("GetSpaceEvent", grpcClient.GetSpaceEventAsync, grpcClient.GetSpaceEvent, effectiveSettings.GetSpaceEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSpaceEvent);
+            Modify_GetSpaceEventApiCall(ref _callGetSpaceEvent);
+            _callListSpaceEvents = clientHelper.BuildApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse>("ListSpaceEvents", grpcClient.ListSpaceEventsAsync, grpcClient.ListSpaceEvents, effectiveSettings.ListSpaceEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSpaceEvents);
+            Modify_ListSpaceEventsApiCall(ref _callListSpaceEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6178,6 +6888,10 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_GetThreadReadStateApiCall(ref gaxgrpc::ApiCall<GetThreadReadStateRequest, ThreadReadState> call);
 
+        partial void Modify_GetSpaceEventApiCall(ref gaxgrpc::ApiCall<GetSpaceEventRequest, SpaceEvent> call);
+
+        partial void Modify_ListSpaceEventsApiCall(ref gaxgrpc::ApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse> call);
+
         partial void OnConstruction(ChatService.ChatServiceClient grpcClient, ChatServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ChatService client</summary>
@@ -6234,6 +6948,10 @@ namespace Google.Apps.Chat.V1
         partial void Modify_UpdateSpaceReadStateRequest(ref UpdateSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetThreadReadStateRequest(ref GetThreadReadStateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSpaceEventRequest(ref GetSpaceEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSpaceEventsRequest(ref ListSpaceEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a message in a Google Chat space. The maximum message size,
@@ -7452,6 +8170,106 @@ namespace Google.Apps.Chat.V1
             Modify_GetThreadReadStateRequest(ref request, ref callSettings);
             return _callGetThreadReadState.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SpaceEvent GetSpaceEvent(GetSpaceEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSpaceEventRequest(ref request, ref callSettings);
+            return _callGetSpaceEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns an event from a Google Chat space. The [event
+        /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the resource that changed. For example,
+        /// if you request an event about a new message but the message was later
+        /// updated, the server returns the updated `Message` resource in the event
+        /// payload.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To get an event, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [Get details about an
+        /// event from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/get-space-event).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SpaceEvent> GetSpaceEventAsync(GetSpaceEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSpaceEventRequest(ref request, ref callSettings);
+            return _callGetSpaceEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(ListSpaceEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSpaceEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSpaceEventsRequest, ListSpaceEventsResponse, SpaceEvent>(_callListSpaceEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists events from a Google Chat space. For each event, the
+        /// [payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
+        /// contains the most recent version of the Chat resource. For example, if you
+        /// list events about new space members, the server returns `Membership`
+        /// resources that contain the latest membership details. If new members were
+        /// removed during the requested period, the event payload contains an empty
+        /// `Membership` resource.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// To list events, the authenticated user must be a member of the space.
+        /// 
+        /// For an example, see [List events from a Google Chat
+        /// space](https://developers.google.com/workspace/chat/list-space-events).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SpaceEvent"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(ListSpaceEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSpaceEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSpaceEventsRequest, ListSpaceEventsResponse, SpaceEvent>(_callListSpaceEvents, request, callSettings);
+        }
     }
 
     public partial class ListMessagesRequest : gaxgrpc::IPageRequest
@@ -7467,6 +8285,10 @@ namespace Google.Apps.Chat.V1
     }
 
     public partial class ListReactionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSpaceEventsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7498,6 +8320,14 @@ namespace Google.Apps.Chat.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Reaction> GetEnumerator() => Reactions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSpaceEventsResponse : gaxgrpc::IPageResponse<SpaceEvent>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SpaceEvent> GetEnumerator() => SpaceEvents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

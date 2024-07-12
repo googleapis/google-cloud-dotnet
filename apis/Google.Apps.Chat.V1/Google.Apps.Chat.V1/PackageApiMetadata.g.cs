@@ -36,6 +36,7 @@ namespace Google.Apps.Chat.V1
             yield return ChatServiceReflection.Descriptor;
             yield return ContextualAddonReflection.Descriptor;
             yield return DeletionMetadataReflection.Descriptor;
+            yield return EventPayloadReflection.Descriptor;
             yield return GroupReflection.Descriptor;
             yield return HistoryStateReflection.Descriptor;
             yield return MatchedUrlReflection.Descriptor;
@@ -44,6 +45,7 @@ namespace Google.Apps.Chat.V1
             yield return ReactionReflection.Descriptor;
             yield return SlashCommandReflection.Descriptor;
             yield return SpaceReflection.Descriptor;
+            yield return SpaceEventReflection.Descriptor;
             yield return SpaceReadStateReflection.Descriptor;
             yield return SpaceSetupReflection.Descriptor;
             yield return ThreadReadStateReflection.Descriptor;
