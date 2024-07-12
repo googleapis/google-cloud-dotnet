@@ -22,6 +22,12 @@
                 "DeleteDatasetAsync"
               ]
             },
+            "FetchDatasetErrors": {
+              "methods": [
+                "FetchDatasetErrors",
+                "FetchDatasetErrorsAsync"
+              ]
+            },
             "GetDataset": {
               "methods": [
                 "GetDataset",
