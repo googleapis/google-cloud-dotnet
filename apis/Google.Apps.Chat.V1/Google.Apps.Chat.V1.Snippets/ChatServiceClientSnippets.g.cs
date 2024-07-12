@@ -2656,5 +2656,374 @@ namespace GoogleCSharpSnippets
             ThreadReadState response = await chatServiceClient.GetThreadReadStateAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetSpaceEvent</summary>
+        public void GetSpaceEventRequestObject()
+        {
+            // Snippet: GetSpaceEvent(GetSpaceEventRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            GetSpaceEventRequest request = new GetSpaceEventRequest
+            {
+                SpaceEventName = SpaceEventName.FromSpaceSpaceEvent("[SPACE]", "[SPACE_EVENT]"),
+            };
+            // Make the request
+            SpaceEvent response = chatServiceClient.GetSpaceEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceEventAsync</summary>
+        public async Task GetSpaceEventRequestObjectAsync()
+        {
+            // Snippet: GetSpaceEventAsync(GetSpaceEventRequest, CallSettings)
+            // Additional: GetSpaceEventAsync(GetSpaceEventRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSpaceEventRequest request = new GetSpaceEventRequest
+            {
+                SpaceEventName = SpaceEventName.FromSpaceSpaceEvent("[SPACE]", "[SPACE_EVENT]"),
+            };
+            // Make the request
+            SpaceEvent response = await chatServiceClient.GetSpaceEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceEvent</summary>
+        public void GetSpaceEvent()
+        {
+            // Snippet: GetSpaceEvent(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "spaces/[SPACE]/spaceEvents/[SPACE_EVENT]";
+            // Make the request
+            SpaceEvent response = chatServiceClient.GetSpaceEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceEventAsync</summary>
+        public async Task GetSpaceEventAsync()
+        {
+            // Snippet: GetSpaceEventAsync(string, CallSettings)
+            // Additional: GetSpaceEventAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "spaces/[SPACE]/spaceEvents/[SPACE_EVENT]";
+            // Make the request
+            SpaceEvent response = await chatServiceClient.GetSpaceEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceEvent</summary>
+        public void GetSpaceEventResourceNames()
+        {
+            // Snippet: GetSpaceEvent(SpaceEventName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceEventName name = SpaceEventName.FromSpaceSpaceEvent("[SPACE]", "[SPACE_EVENT]");
+            // Make the request
+            SpaceEvent response = chatServiceClient.GetSpaceEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceEventAsync</summary>
+        public async Task GetSpaceEventResourceNamesAsync()
+        {
+            // Snippet: GetSpaceEventAsync(SpaceEventName, CallSettings)
+            // Additional: GetSpaceEventAsync(SpaceEventName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceEventName name = SpaceEventName.FromSpaceSpaceEvent("[SPACE]", "[SPACE_EVENT]");
+            // Make the request
+            SpaceEvent response = await chatServiceClient.GetSpaceEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSpaceEvents</summary>
+        public void ListSpaceEventsRequestObject()
+        {
+            // Snippet: ListSpaceEvents(ListSpaceEventsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            ListSpaceEventsRequest request = new ListSpaceEventsRequest
+            {
+                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> response = chatServiceClient.ListSpaceEvents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SpaceEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSpaceEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SpaceEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SpaceEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SpaceEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSpaceEventsAsync</summary>
+        public async Task ListSpaceEventsRequestObjectAsync()
+        {
+            // Snippet: ListSpaceEventsAsync(ListSpaceEventsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSpaceEventsRequest request = new ListSpaceEventsRequest
+            {
+                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> response = chatServiceClient.ListSpaceEventsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SpaceEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSpaceEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SpaceEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SpaceEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SpaceEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSpaceEvents</summary>
+        public void ListSpaceEvents()
+        {
+            // Snippet: ListSpaceEvents(string, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "spaces/[SPACE]";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> response = chatServiceClient.ListSpaceEvents(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SpaceEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSpaceEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SpaceEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SpaceEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SpaceEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSpaceEventsAsync</summary>
+        public async Task ListSpaceEventsAsync()
+        {
+            // Snippet: ListSpaceEventsAsync(string, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "spaces/[SPACE]";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> response = chatServiceClient.ListSpaceEventsAsync(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SpaceEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSpaceEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SpaceEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SpaceEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SpaceEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSpaceEvents</summary>
+        public void ListSpaceEventsResourceNames()
+        {
+            // Snippet: ListSpaceEvents(SpaceName, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceName parent = SpaceName.FromSpace("[SPACE]");
+            string filter = "";
+            // Make the request
+            PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> response = chatServiceClient.ListSpaceEvents(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SpaceEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSpaceEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SpaceEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SpaceEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SpaceEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSpaceEventsAsync</summary>
+        public async Task ListSpaceEventsResourceNamesAsync()
+        {
+            // Snippet: ListSpaceEventsAsync(SpaceName, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceName parent = SpaceName.FromSpace("[SPACE]");
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> response = chatServiceClient.ListSpaceEventsAsync(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SpaceEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSpaceEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SpaceEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SpaceEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SpaceEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

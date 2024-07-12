@@ -94,6 +94,12 @@
                 "GetSpaceAsync"
               ]
             },
+            "GetSpaceEvent": {
+              "methods": [
+                "GetSpaceEvent",
+                "GetSpaceEventAsync"
+              ]
+            },
             "GetSpaceReadState": {
               "methods": [
                 "GetSpaceReadState",
@@ -122,6 +128,12 @@
               "methods": [
                 "ListReactions",
                 "ListReactionsAsync"
+              ]
+            },
+            "ListSpaceEvents": {
+              "methods": [
+                "ListSpaceEvents",
+                "ListSpaceEventsAsync"
               ]
             },
             "ListSpaces": {

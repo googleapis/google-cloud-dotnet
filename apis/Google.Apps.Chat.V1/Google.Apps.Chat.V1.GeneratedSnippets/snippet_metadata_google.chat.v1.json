@@ -6332,6 +6332,628 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_sync",
+      "title": "GetSpaceEventRequestObject",
+      "description": "Snippet for GetSpaceEvent",
+      "file": "ChatServiceClient.GetSpaceEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceEvent",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceEvent",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetSpaceEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceEvent",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceEvent",
+          "fullName": "google.chat.v1.ChatService.GetSpaceEvent",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_async",
+      "title": "GetSpaceEventRequestObjectAsync",
+      "description": "Snippet for GetSpaceEventAsync",
+      "file": "ChatServiceClient.GetSpaceEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceEventAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetSpaceEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceEvent",
+          "fullName": "google.chat.v1.ChatService.GetSpaceEvent",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_sync_flattened",
+      "title": "GetSpaceEvent",
+      "description": "Snippet for GetSpaceEvent",
+      "file": "ChatServiceClient.GetSpaceEventSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceEvent",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceEvent",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceEvent",
+          "fullName": "google.chat.v1.ChatService.GetSpaceEvent",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_async_flattened",
+      "title": "GetSpaceEventAsync",
+      "description": "Snippet for GetSpaceEventAsync",
+      "file": "ChatServiceClient.GetSpaceEventAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceEventAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceEvent",
+          "fullName": "google.chat.v1.ChatService.GetSpaceEvent",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_sync_flattened_resourceNames",
+      "title": "GetSpaceEventResourceNames",
+      "description": "Snippet for GetSpaceEvent",
+      "file": "ChatServiceClient.GetSpaceEventResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceEvent",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceEvent",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceEvent",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceEvent",
+          "fullName": "google.chat.v1.ChatService.GetSpaceEvent",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_async_flattened_resourceNames",
+      "title": "GetSpaceEventResourceNamesAsync",
+      "description": "Snippet for GetSpaceEventAsync",
+      "file": "ChatServiceClient.GetSpaceEventResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceEventAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceEvent",
+          "fullName": "google.chat.v1.ChatService.GetSpaceEvent",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSpaceEvents_sync",
+      "title": "ListSpaceEventsRequestObject",
+      "description": "Snippet for ListSpaceEvents",
+      "file": "ChatServiceClient.ListSpaceEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSpaceEvents",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSpaceEvents",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListSpaceEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSpaceEventsResponse, Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSpaceEvents",
+          "fullName": "google.chat.v1.ChatService.ListSpaceEvents",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSpaceEvents_async",
+      "title": "ListSpaceEventsRequestObjectAsync",
+      "description": "Snippet for ListSpaceEventsAsync",
+      "file": "ChatServiceClient.ListSpaceEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSpaceEventsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSpaceEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListSpaceEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSpaceEventsResponse, Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSpaceEvents",
+          "fullName": "google.chat.v1.ChatService.ListSpaceEvents",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSpaceEvents_sync_flattened",
+      "title": "ListSpaceEvents",
+      "description": "Snippet for ListSpaceEvents",
+      "file": "ChatServiceClient.ListSpaceEventsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSpaceEvents",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSpaceEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSpaceEventsResponse, Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSpaceEvents",
+          "fullName": "google.chat.v1.ChatService.ListSpaceEvents",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSpaceEvents_async_flattened",
+      "title": "ListSpaceEventsAsync",
+      "description": "Snippet for ListSpaceEventsAsync",
+      "file": "ChatServiceClient.ListSpaceEventsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSpaceEventsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSpaceEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSpaceEventsResponse, Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSpaceEvents",
+          "fullName": "google.chat.v1.ChatService.ListSpaceEvents",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSpaceEvents_sync_flattened_resourceNames",
+      "title": "ListSpaceEventsResourceNames",
+      "description": "Snippet for ListSpaceEvents",
+      "file": "ChatServiceClient.ListSpaceEventsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSpaceEvents",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSpaceEvents",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSpaceEventsResponse, Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSpaceEvents",
+          "fullName": "google.chat.v1.ChatService.ListSpaceEvents",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSpaceEvents_async_flattened_resourceNames",
+      "title": "ListSpaceEventsResourceNamesAsync",
+      "description": "Snippet for ListSpaceEventsAsync",
+      "file": "ChatServiceClient.ListSpaceEventsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSpaceEventsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSpaceEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSpaceEventsResponse, Google.Apps.Chat.V1.SpaceEvent>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSpaceEvents",
+          "fullName": "google.chat.v1.ChatService.ListSpaceEvents",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
