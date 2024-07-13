@@ -31,62 +31,83 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "L21pZ3JhdGlvbi92Mi9taWdyYXRpb25fZXJyb3JfZGV0YWlscy5wcm90bxo6",
             "Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlvbi92Mi9taWdyYXRpb25f",
             "bWV0cmljcy5wcm90bxo7Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlv",
-            "bi92Mi90cmFuc2xhdGlvbl9jb25maWcucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9ycGMvZXJyb3JfZGV0YWlscy5w",
-            "cm90byLzBAoRTWlncmF0aW9uV29ya2Zsb3cSFAoEbmFtZRgBIAEoCUIG4EED",
-            "4EEFEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRJPCgV0YXNrcxgCIAMoCzJALmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29y",
-            "a2Zsb3cuVGFza3NFbnRyeRJPCgVzdGF0ZRgDIAEoDjI7Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3cuU3Rh",
-            "dGVCA+BBAxIvCgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASNAoQbGFzdF91cGRhdGVfdGltZRgFIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAaXwoKVGFza3NFbnRyeRILCgNrZXkYASAB",
-            "KAkSQAoFdmFsdWUYAiABKAsyMS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWln",
-            "cmF0aW9uLnYyLk1pZ3JhdGlvblRhc2s6AjgBIlEKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCQoFRFJBRlQQARILCgdSVU5OSU5HEAISCgoGUEFV",
-            "U0VEEAMSDQoJQ09NUExFVEVEEAQ6depBcgoyYmlncXVlcnltaWdyYXRpb24u",
-            "Z29vZ2xlYXBpcy5jb20vTWlncmF0aW9uV29ya2Zsb3cSPHByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3JrZmxvd3Mve3dvcmtm",
-            "bG93fSKDBAoNTWlncmF0aW9uVGFzaxJiChp0cmFuc2xhdGlvbl9jb25maWdf",
-            "ZGV0YWlscxgOIAEoCzI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRp",
-            "b24udjIuVHJhbnNsYXRpb25Db25maWdEZXRhaWxzSAASEgoCaWQYASABKAlC",
-            "BuBBA+BBBRIMCgR0eXBlGAIgASgJEksKBXN0YXRlGAQgASgOMjcuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5NaWdyYXRpb25UYXNrLlN0",
-            "YXRlQgPgQQMSNAoQcHJvY2Vzc2luZ19lcnJvchgFIAEoCzIVLmdvb2dsZS5y",
-            "cGMuRXJyb3JJbmZvQgPgQQMSLwoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEjQKEGxhc3RfdXBkYXRlX3RpbWUYByAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wInIKBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEhEKDU9SQ0hFU1RSQVRJ",
-            "TkcQAhILCgdSVU5OSU5HEAMSCgoGUEFVU0VEEAQSDQoJU1VDQ0VFREVEEAUS",
-            "CgoGRkFJTEVEEAZCDgoMdGFza19kZXRhaWxzIvQFChBNaWdyYXRpb25TdWJ0",
-            "YXNrEhQKBG5hbWUYASABKAlCBuBBA+BBBRIPCgd0YXNrX2lkGAIgASgJEgwK",
-            "BHR5cGUYAyABKAkSTgoFc3RhdGUYBSABKA4yOi5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkubWlncmF0aW9uLnYyLk1pZ3JhdGlvblN1YnRhc2suU3RhdGVCA+BB",
-            "AxI0ChBwcm9jZXNzaW5nX2Vycm9yGAYgASgLMhUuZ29vZ2xlLnJwYy5FcnJv",
-            "ckluZm9CA+BBAxJcChZyZXNvdXJjZV9lcnJvcl9kZXRhaWxzGAwgAygLMjcu",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5SZXNvdXJjZUVy",
-            "cm9yRGV0YWlsQgPgQQMSHAoUcmVzb3VyY2VfZXJyb3JfY291bnQYDSABKAUS",
-            "LwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEjQKEGxhc3RfdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEj8KB21ldHJpY3MYCyADKAsyLi5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkubWlncmF0aW9uLnYyLlRpbWVTZXJpZXMidgoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARILCgdSVU5OSU5HEAIS",
-            "DQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQSCgoGUEFVU0VEEAUSFgoSUEVO",
-            "RElOR19ERVBFTkRFTkNZEAY6iAHqQYQBCjFiaWdxdWVyeW1pZ3JhdGlvbi5n",
-            "b29nbGVhcGlzLmNvbS9NaWdyYXRpb25TdWJ0YXNrEk9wcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dzL3t3b3JrZmxv",
-            "d30vc3VidGFza3Mve3N1YnRhc2t9QtIBCiZjb20uZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52MkIWTWlncmF0aW9uRW50aXRpZXNQcm90b1AB",
-            "WkRjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L21pZ3JhdGlvbi9hcGl2",
-            "Mi9taWdyYXRpb25wYjttaWdyYXRpb25wYqoCIkdvb2dsZS5DbG91ZC5CaWdR",
-            "dWVyeS5NaWdyYXRpb24uVjLKAiJHb29nbGVcQ2xvdWRcQmlnUXVlcnlcTWln",
-            "cmF0aW9uXFYyYgZwcm90bzM="));
+            "bi92Mi90cmFuc2xhdGlvbl9jb25maWcucHJvdG8aPGdvb2dsZS9jbG91ZC9i",
+            "aWdxdWVyeS9taWdyYXRpb24vdjIvdHJhbnNsYXRpb25fZGV0YWlscy5wcm90",
+            "bxo+Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlvbi92Mi90cmFuc2xh",
+            "dGlvbl91c2FiaWxpdHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8aHmdvb2dsZS9ycGMvZXJyb3JfZGV0YWlscy5wcm90byL2BAoR",
+            "TWlncmF0aW9uV29ya2Zsb3cSFwoEbmFtZRgBIAEoCUIJ4EED4EEF4EEIEhQK",
+            "DGRpc3BsYXlfbmFtZRgGIAEoCRJPCgV0YXNrcxgCIAMoCzJALmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3cu",
+            "VGFza3NFbnRyeRJPCgVzdGF0ZRgDIAEoDjI7Lmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3cuU3RhdGVCA+BB",
+            "AxIvCgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASNAoQbGFzdF91cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXAaXwoKVGFza3NFbnRyeRILCgNrZXkYASABKAkSQAoF",
+            "dmFsdWUYAiABKAsyMS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
+            "LnYyLk1pZ3JhdGlvblRhc2s6AjgBIlEKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASCQoFRFJBRlQQARILCgdSVU5OSU5HEAISCgoGUEFVU0VEEAMS",
+            "DQoJQ09NUExFVEVEEAQ6depBcgoyYmlncXVlcnltaWdyYXRpb24uZ29vZ2xl",
+            "YXBpcy5jb20vTWlncmF0aW9uV29ya2Zsb3cSPHByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3JrZmxvd3Mve3dvcmtmbG93fSK0",
+            "BwoNTWlncmF0aW9uVGFzaxJiChp0cmFuc2xhdGlvbl9jb25maWdfZGV0YWls",
+            "cxgOIAEoCzI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIu",
+            "VHJhbnNsYXRpb25Db25maWdEZXRhaWxzSAASVQoTdHJhbnNsYXRpb25fZGV0",
+            "YWlscxgQIAEoCzI2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24u",
+            "djIuVHJhbnNsYXRpb25EZXRhaWxzSAASEgoCaWQYASABKAlCBuBBA+BBBRIM",
+            "CgR0eXBlGAIgASgJEksKBXN0YXRlGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5NaWdyYXRpb25UYXNrLlN0YXRlQgPgQQMS",
+            "NAoQcHJvY2Vzc2luZ19lcnJvchgFIAEoCzIVLmdvb2dsZS5ycGMuRXJyb3JJ",
+            "bmZvQgPgQQMSLwoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEjQKEGxhc3RfdXBkYXRlX3RpbWUYByABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wElwKFnJlc291cmNlX2Vycm9yX2RldGFp",
+            "bHMYESADKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYy",
+            "LlJlc291cmNlRXJyb3JEZXRhaWxCA+BBAxIcChRyZXNvdXJjZV9lcnJvcl9j",
+            "b3VudBgSIAEoBRI/CgdtZXRyaWNzGBMgAygLMi4uZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UaW1lU2VyaWVzElEKC3Rhc2tfcmVzdWx0",
+            "GBQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5N",
+            "aWdyYXRpb25UYXNrUmVzdWx0QgPgQQMSJAocdG90YWxfcHJvY2Vzc2luZ19l",
+            "cnJvcl9jb3VudBgVIAEoBRIiChp0b3RhbF9yZXNvdXJjZV9lcnJvcl9jb3Vu",
+            "dBgWIAEoBSJyCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BF",
+            "TkRJTkcQARIRCg1PUkNIRVNUUkFUSU5HEAISCwoHUlVOTklORxADEgoKBlBB",
+            "VVNFRBAEEg0KCVNVQ0NFRURFRBAFEgoKBkZBSUxFRBAGQg4KDHRhc2tfZGV0",
+            "YWlscyL0BQoQTWlncmF0aW9uU3VidGFzaxIUCgRuYW1lGAEgASgJQgbgQQPg",
+            "QQUSDwoHdGFza19pZBgCIAEoCRIMCgR0eXBlGAMgASgJEk4KBXN0YXRlGAUg",
+            "ASgOMjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5NaWdy",
+            "YXRpb25TdWJ0YXNrLlN0YXRlQgPgQQMSNAoQcHJvY2Vzc2luZ19lcnJvchgG",
+            "IAEoCzIVLmdvb2dsZS5ycGMuRXJyb3JJbmZvQgPgQQMSXAoWcmVzb3VyY2Vf",
+            "ZXJyb3JfZGV0YWlscxgMIAMoCzI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5t",
+            "aWdyYXRpb24udjIuUmVzb3VyY2VFcnJvckRldGFpbEID4EEDEhwKFHJlc291",
+            "cmNlX2Vycm9yX2NvdW50GA0gASgFEi8KC2NyZWF0ZV90aW1lGAcgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV90aW1l",
+            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI/CgdtZXRyaWNz",
+            "GAsgAygLMi4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5U",
+            "aW1lU2VyaWVzInYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "QUNUSVZFEAESCwoHUlVOTklORxACEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxF",
+            "RBAEEgoKBlBBVVNFRBAFEhYKElBFTkRJTkdfREVQRU5ERU5DWRAGOogB6kGE",
+            "AQoxYmlncXVlcnltaWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vTWlncmF0aW9u",
+            "U3VidGFzaxJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3dvcmtmbG93cy97d29ya2Zsb3d9L3N1YnRhc2tzL3tzdWJ0YXNrfSJ+",
+            "ChNNaWdyYXRpb25UYXNrUmVzdWx0ElwKF3RyYW5zbGF0aW9uX3Rhc2tfcmVz",
+            "dWx0GAIgASgLMjkuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52",
+            "Mi5UcmFuc2xhdGlvblRhc2tSZXN1bHRIAEIJCgdkZXRhaWxzIrcBChVUcmFu",
+            "c2xhdGlvblRhc2tSZXN1bHQSSAoTdHJhbnNsYXRlZF9saXRlcmFscxgBIAMo",
+            "CzIrLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTGl0ZXJh",
+            "bBJUChNyZXBvcnRfbG9nX21lc3NhZ2VzGAIgAygLMjcuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5HY3NSZXBvcnRMb2dNZXNzYWdlQtIB",
+            "CiZjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52MkIWTWln",
+            "cmF0aW9uRW50aXRpZXNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29tL2dvL2Jp",
+            "Z3F1ZXJ5L21pZ3JhdGlvbi9hcGl2Mi9taWdyYXRpb25wYjttaWdyYXRpb25w",
+            "YqoCIkdvb2dsZS5DbG91ZC5CaWdRdWVyeS5NaWdyYXRpb24uVjLKAiJHb29n",
+            "bGVcQ2xvdWRcQmlnUXVlcnlcTWlncmF0aW9uXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationErrorDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationMetricsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationErrorDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationMetricsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationUsabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow), global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Parser, new[]{ "Name", "DisplayName", "Tasks", "State", "CreateTime", "LastUpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask), global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Parser, new[]{ "TranslationConfigDetails", "Id", "Type", "State", "ProcessingError", "CreateTime", "LastUpdateTime" }, new[]{ "TaskDetails" }, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask), global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Parser, new[]{ "Name", "TaskId", "Type", "State", "ProcessingError", "ResourceErrorDetails", "ResourceErrorCount", "CreateTime", "LastUpdateTime", "Metrics" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask), global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Parser, new[]{ "TranslationConfigDetails", "TranslationDetails", "Id", "Type", "State", "ProcessingError", "CreateTime", "LastUpdateTime", "ResourceErrorDetails", "ResourceErrorCount", "Metrics", "TaskResult", "TotalProcessingErrorCount", "TotalResourceErrorCount" }, new[]{ "TaskDetails" }, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask), global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Parser, new[]{ "Name", "TaskId", "Type", "State", "ProcessingError", "ResourceErrorDetails", "ResourceErrorCount", "CreateTime", "LastUpdateTime", "Metrics" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult.Parser, new[]{ "TranslationTaskResult" }, new[]{ "Details" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult.Parser, new[]{ "TranslatedLiterals", "ReportLogMessages" }, null, null, null, null)
           }));
     }
     #endregion
@@ -151,8 +172,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Immutable. The unique identifier for the migration workflow.
-    /// The ID is server-generated.
+    /// Output only. Immutable. Identifier. The unique identifier for the migration
+    /// workflow. The ID is server-generated.
     ///
     /// Example: `projects/123/locations/us/workflows/345`
     /// </summary>
@@ -586,9 +607,18 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       processingError_ = other.processingError_ != null ? other.processingError_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
+      resourceErrorDetails_ = other.resourceErrorDetails_.Clone();
+      resourceErrorCount_ = other.resourceErrorCount_;
+      metrics_ = other.metrics_.Clone();
+      taskResult_ = other.taskResult_ != null ? other.taskResult_.Clone() : null;
+      totalProcessingErrorCount_ = other.totalProcessingErrorCount_;
+      totalResourceErrorCount_ = other.totalResourceErrorCount_;
       switch (other.TaskDetailsCase) {
         case TaskDetailsOneofCase.TranslationConfigDetails:
           TranslationConfigDetails = other.TranslationConfigDetails.Clone();
+          break;
+        case TaskDetailsOneofCase.TranslationDetails:
+          TranslationDetails = other.TranslationDetails.Clone();
           break;
       }
 
@@ -604,7 +634,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     /// <summary>Field number for the "translation_config_details" field.</summary>
     public const int TranslationConfigDetailsFieldNumber = 14;
     /// <summary>
-    /// Task configuration for Batch SQL Translation.
+    /// Task configuration for CW Batch/Offline SQL Translation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -613,6 +643,21 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       set {
         taskDetails_ = value;
         taskDetailsCase_ = value == null ? TaskDetailsOneofCase.None : TaskDetailsOneofCase.TranslationConfigDetails;
+      }
+    }
+
+    /// <summary>Field number for the "translation_details" field.</summary>
+    public const int TranslationDetailsFieldNumber = 16;
+    /// <summary>
+    /// Task details for unified SQL Translation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails TranslationDetails {
+      get { return taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails ? (global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails) taskDetails_ : null; }
+      set {
+        taskDetails_ = value;
+        taskDetailsCase_ = value == null ? TaskDetailsOneofCase.None : TaskDetailsOneofCase.TranslationDetails;
       }
     }
 
@@ -642,7 +687,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     /// Translation_Snowflake2BQ, Translation_Netezza2BQ,
     /// Translation_AzureSynapse2BQ, Translation_Vertica2BQ,
     /// Translation_SQLServer2BQ, Translation_Presto2BQ, Translation_MySQL2BQ,
-    /// Translation_Postgresql2BQ.
+    /// Translation_Postgresql2BQ, Translation_SQLite2BQ, Translation_Greenplum2BQ.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -714,11 +759,105 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
     }
 
+    /// <summary>Field number for the "resource_error_details" field.</summary>
+    public const int ResourceErrorDetailsFieldNumber = 17;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.ResourceErrorDetail> _repeated_resourceErrorDetails_codec
+        = pb::FieldCodec.ForMessage(138, global::Google.Cloud.BigQuery.Migration.V2.ResourceErrorDetail.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.ResourceErrorDetail> resourceErrorDetails_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.ResourceErrorDetail>();
+    /// <summary>
+    /// Output only. Provides details to errors and issues encountered while
+    /// processing the task. Presence of error details does not mean that the task
+    /// failed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.ResourceErrorDetail> ResourceErrorDetails {
+      get { return resourceErrorDetails_; }
+    }
+
+    /// <summary>Field number for the "resource_error_count" field.</summary>
+    public const int ResourceErrorCountFieldNumber = 18;
+    private int resourceErrorCount_;
+    /// <summary>
+    /// The number or resources with errors. Note: This is not the total
+    /// number of errors as each resource can have more than one error.
+    /// This is used to indicate truncation by having a `resource_error_count`
+    /// that is higher than the size of `resource_error_details`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ResourceErrorCount {
+      get { return resourceErrorCount_; }
+      set {
+        resourceErrorCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(154, global::Google.Cloud.BigQuery.Migration.V2.TimeSeries.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries> metrics_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries>();
+    /// <summary>
+    /// The metrics for the task.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries> Metrics {
+      get { return metrics_; }
+    }
+
+    /// <summary>Field number for the "task_result" field.</summary>
+    public const int TaskResultFieldNumber = 20;
+    private global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult taskResult_;
+    /// <summary>
+    /// Output only. The result of the task.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult TaskResult {
+      get { return taskResult_; }
+      set {
+        taskResult_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_processing_error_count" field.</summary>
+    public const int TotalProcessingErrorCountFieldNumber = 21;
+    private int totalProcessingErrorCount_;
+    /// <summary>
+    /// Count of all the processing errors in this task and its subtasks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalProcessingErrorCount {
+      get { return totalProcessingErrorCount_; }
+      set {
+        totalProcessingErrorCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_resource_error_count" field.</summary>
+    public const int TotalResourceErrorCountFieldNumber = 22;
+    private int totalResourceErrorCount_;
+    /// <summary>
+    /// Count of all the resource errors in this task and its subtasks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalResourceErrorCount {
+      get { return totalResourceErrorCount_; }
+      set {
+        totalResourceErrorCount_ = value;
+      }
+    }
+
     private object taskDetails_;
     /// <summary>Enum of possible cases for the "task_details" oneof.</summary>
     public enum TaskDetailsOneofCase {
       None = 0,
       TranslationConfigDetails = 14,
+      TranslationDetails = 16,
     }
     private TaskDetailsOneofCase taskDetailsCase_ = TaskDetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -750,12 +889,19 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         return true;
       }
       if (!object.Equals(TranslationConfigDetails, other.TranslationConfigDetails)) return false;
+      if (!object.Equals(TranslationDetails, other.TranslationDetails)) return false;
       if (Id != other.Id) return false;
       if (Type != other.Type) return false;
       if (State != other.State) return false;
       if (!object.Equals(ProcessingError, other.ProcessingError)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
+      if(!resourceErrorDetails_.Equals(other.resourceErrorDetails_)) return false;
+      if (ResourceErrorCount != other.ResourceErrorCount) return false;
+      if(!metrics_.Equals(other.metrics_)) return false;
+      if (!object.Equals(TaskResult, other.TaskResult)) return false;
+      if (TotalProcessingErrorCount != other.TotalProcessingErrorCount) return false;
+      if (TotalResourceErrorCount != other.TotalResourceErrorCount) return false;
       if (TaskDetailsCase != other.TaskDetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -765,12 +911,19 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) hash ^= TranslationConfigDetails.GetHashCode();
+      if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) hash ^= TranslationDetails.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (State != global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (processingError_ != null) hash ^= ProcessingError.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
+      hash ^= resourceErrorDetails_.GetHashCode();
+      if (ResourceErrorCount != 0) hash ^= ResourceErrorCount.GetHashCode();
+      hash ^= metrics_.GetHashCode();
+      if (taskResult_ != null) hash ^= TaskResult.GetHashCode();
+      if (TotalProcessingErrorCount != 0) hash ^= TotalProcessingErrorCount.GetHashCode();
+      if (TotalResourceErrorCount != 0) hash ^= TotalResourceErrorCount.GetHashCode();
       hash ^= (int) taskDetailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -818,6 +971,28 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(114);
         output.WriteMessage(TranslationConfigDetails);
       }
+      if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(TranslationDetails);
+      }
+      resourceErrorDetails_.WriteTo(output, _repeated_resourceErrorDetails_codec);
+      if (ResourceErrorCount != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(ResourceErrorCount);
+      }
+      metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (taskResult_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(TaskResult);
+      }
+      if (TotalProcessingErrorCount != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt32(TotalProcessingErrorCount);
+      }
+      if (TotalResourceErrorCount != 0) {
+        output.WriteRawTag(176, 1);
+        output.WriteInt32(TotalResourceErrorCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -856,6 +1031,28 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(114);
         output.WriteMessage(TranslationConfigDetails);
       }
+      if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(TranslationDetails);
+      }
+      resourceErrorDetails_.WriteTo(ref output, _repeated_resourceErrorDetails_codec);
+      if (ResourceErrorCount != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(ResourceErrorCount);
+      }
+      metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (taskResult_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(TaskResult);
+      }
+      if (TotalProcessingErrorCount != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt32(TotalProcessingErrorCount);
+      }
+      if (TotalResourceErrorCount != 0) {
+        output.WriteRawTag(176, 1);
+        output.WriteInt32(TotalResourceErrorCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -868,6 +1065,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       int size = 0;
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TranslationConfigDetails);
+      }
+      if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TranslationDetails);
       }
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
@@ -886,6 +1086,20 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       if (lastUpdateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
+      }
+      size += resourceErrorDetails_.CalculateSize(_repeated_resourceErrorDetails_codec);
+      if (ResourceErrorCount != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(ResourceErrorCount);
+      }
+      size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (taskResult_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TaskResult);
+      }
+      if (TotalProcessingErrorCount != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TotalProcessingErrorCount);
+      }
+      if (TotalResourceErrorCount != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TotalResourceErrorCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -926,12 +1140,35 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         }
         LastUpdateTime.MergeFrom(other.LastUpdateTime);
       }
+      resourceErrorDetails_.Add(other.resourceErrorDetails_);
+      if (other.ResourceErrorCount != 0) {
+        ResourceErrorCount = other.ResourceErrorCount;
+      }
+      metrics_.Add(other.metrics_);
+      if (other.taskResult_ != null) {
+        if (taskResult_ == null) {
+          TaskResult = new global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult();
+        }
+        TaskResult.MergeFrom(other.TaskResult);
+      }
+      if (other.TotalProcessingErrorCount != 0) {
+        TotalProcessingErrorCount = other.TotalProcessingErrorCount;
+      }
+      if (other.TotalResourceErrorCount != 0) {
+        TotalResourceErrorCount = other.TotalResourceErrorCount;
+      }
       switch (other.TaskDetailsCase) {
         case TaskDetailsOneofCase.TranslationConfigDetails:
           if (TranslationConfigDetails == null) {
             TranslationConfigDetails = new global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigDetails();
           }
           TranslationConfigDetails.MergeFrom(other.TranslationConfigDetails);
+          break;
+        case TaskDetailsOneofCase.TranslationDetails:
+          if (TranslationDetails == null) {
+            TranslationDetails = new global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails();
+          }
+          TranslationDetails.MergeFrom(other.TranslationDetails);
           break;
       }
 
@@ -992,6 +1229,42 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             TranslationConfigDetails = subBuilder;
             break;
           }
+          case 130: {
+            global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails();
+            if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) {
+              subBuilder.MergeFrom(TranslationDetails);
+            }
+            input.ReadMessage(subBuilder);
+            TranslationDetails = subBuilder;
+            break;
+          }
+          case 138: {
+            resourceErrorDetails_.AddEntriesFrom(input, _repeated_resourceErrorDetails_codec);
+            break;
+          }
+          case 144: {
+            ResourceErrorCount = input.ReadInt32();
+            break;
+          }
+          case 154: {
+            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 162: {
+            if (taskResult_ == null) {
+              TaskResult = new global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult();
+            }
+            input.ReadMessage(TaskResult);
+            break;
+          }
+          case 168: {
+            TotalProcessingErrorCount = input.ReadInt32();
+            break;
+          }
+          case 176: {
+            TotalResourceErrorCount = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1047,6 +1320,42 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             }
             input.ReadMessage(subBuilder);
             TranslationConfigDetails = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails();
+            if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) {
+              subBuilder.MergeFrom(TranslationDetails);
+            }
+            input.ReadMessage(subBuilder);
+            TranslationDetails = subBuilder;
+            break;
+          }
+          case 138: {
+            resourceErrorDetails_.AddEntriesFrom(ref input, _repeated_resourceErrorDetails_codec);
+            break;
+          }
+          case 144: {
+            ResourceErrorCount = input.ReadInt32();
+            break;
+          }
+          case 154: {
+            metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
+            break;
+          }
+          case 162: {
+            if (taskResult_ == null) {
+              TaskResult = new global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult();
+            }
+            input.ReadMessage(TaskResult);
+            break;
+          }
+          case 168: {
+            TotalProcessingErrorCount = input.ReadInt32();
+            break;
+          }
+          case 176: {
+            TotalResourceErrorCount = input.ReadInt32();
             break;
           }
         }
@@ -1715,6 +2024,459 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// The migration task result.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MigrationTaskResult : pb::IMessage<MigrationTaskResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MigrationTaskResult> _parser = new pb::MessageParser<MigrationTaskResult>(() => new MigrationTaskResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MigrationTaskResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.MigrationEntitiesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MigrationTaskResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MigrationTaskResult(MigrationTaskResult other) : this() {
+      switch (other.DetailsCase) {
+        case DetailsOneofCase.TranslationTaskResult:
+          TranslationTaskResult = other.TranslationTaskResult.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MigrationTaskResult Clone() {
+      return new MigrationTaskResult(this);
+    }
+
+    /// <summary>Field number for the "translation_task_result" field.</summary>
+    public const int TranslationTaskResultFieldNumber = 2;
+    /// <summary>
+    /// Details specific to translation task types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult TranslationTaskResult {
+      get { return detailsCase_ == DetailsOneofCase.TranslationTaskResult ? (global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.TranslationTaskResult;
+      }
+    }
+
+    private object details_;
+    /// <summary>Enum of possible cases for the "details" oneof.</summary>
+    public enum DetailsOneofCase {
+      None = 0,
+      TranslationTaskResult = 2,
+    }
+    private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DetailsOneofCase DetailsCase {
+      get { return detailsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDetails() {
+      detailsCase_ = DetailsOneofCase.None;
+      details_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MigrationTaskResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MigrationTaskResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TranslationTaskResult, other.TranslationTaskResult)) return false;
+      if (DetailsCase != other.DetailsCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) hash ^= TranslationTaskResult.GetHashCode();
+      hash ^= (int) detailsCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TranslationTaskResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TranslationTaskResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TranslationTaskResult);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MigrationTaskResult other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DetailsCase) {
+        case DetailsOneofCase.TranslationTaskResult:
+          if (TranslationTaskResult == null) {
+            TranslationTaskResult = new global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult();
+          }
+          TranslationTaskResult.MergeFrom(other.TranslationTaskResult);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult();
+            if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) {
+              subBuilder.MergeFrom(TranslationTaskResult);
+            }
+            input.ReadMessage(subBuilder);
+            TranslationTaskResult = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult();
+            if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) {
+              subBuilder.MergeFrom(TranslationTaskResult);
+            }
+            input.ReadMessage(subBuilder);
+            TranslationTaskResult = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Translation specific result details from the migration task.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TranslationTaskResult : pb::IMessage<TranslationTaskResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TranslationTaskResult> _parser = new pb::MessageParser<TranslationTaskResult>(() => new TranslationTaskResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TranslationTaskResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.MigrationEntitiesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TranslationTaskResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TranslationTaskResult(TranslationTaskResult other) : this() {
+      translatedLiterals_ = other.translatedLiterals_.Clone();
+      reportLogMessages_ = other.reportLogMessages_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TranslationTaskResult Clone() {
+      return new TranslationTaskResult(this);
+    }
+
+    /// <summary>Field number for the "translated_literals" field.</summary>
+    public const int TranslatedLiteralsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.Literal> _repeated_translatedLiterals_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BigQuery.Migration.V2.Literal.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.Literal> translatedLiterals_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.Literal>();
+    /// <summary>
+    /// The list of the translated literals.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.Literal> TranslatedLiterals {
+      get { return translatedLiterals_; }
+    }
+
+    /// <summary>Field number for the "report_log_messages" field.</summary>
+    public const int ReportLogMessagesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.GcsReportLogMessage> _repeated_reportLogMessages_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.BigQuery.Migration.V2.GcsReportLogMessage.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.GcsReportLogMessage> reportLogMessages_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.GcsReportLogMessage>();
+    /// <summary>
+    /// The records from the aggregate CSV report for a migration workflow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.GcsReportLogMessage> ReportLogMessages {
+      get { return reportLogMessages_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TranslationTaskResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TranslationTaskResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!translatedLiterals_.Equals(other.translatedLiterals_)) return false;
+      if(!reportLogMessages_.Equals(other.reportLogMessages_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= translatedLiterals_.GetHashCode();
+      hash ^= reportLogMessages_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      translatedLiterals_.WriteTo(output, _repeated_translatedLiterals_codec);
+      reportLogMessages_.WriteTo(output, _repeated_reportLogMessages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      translatedLiterals_.WriteTo(ref output, _repeated_translatedLiterals_codec);
+      reportLogMessages_.WriteTo(ref output, _repeated_reportLogMessages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += translatedLiterals_.CalculateSize(_repeated_translatedLiterals_codec);
+      size += reportLogMessages_.CalculateSize(_repeated_reportLogMessages_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TranslationTaskResult other) {
+      if (other == null) {
+        return;
+      }
+      translatedLiterals_.Add(other.translatedLiterals_);
+      reportLogMessages_.Add(other.reportLogMessages_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            translatedLiterals_.AddEntriesFrom(input, _repeated_translatedLiterals_codec);
+            break;
+          }
+          case 18: {
+            reportLogMessages_.AddEntriesFrom(input, _repeated_reportLogMessages_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            translatedLiterals_.AddEntriesFrom(ref input, _repeated_translatedLiterals_codec);
+            break;
+          }
+          case 18: {
+            reportLogMessages_.AddEntriesFrom(ref input, _repeated_reportLogMessages_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
