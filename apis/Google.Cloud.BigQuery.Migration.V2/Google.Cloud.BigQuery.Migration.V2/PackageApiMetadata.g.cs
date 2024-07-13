@@ -34,6 +34,9 @@ namespace Google.Cloud.BigQuery.Migration.V2
             yield return MigrationMetricsReflection.Descriptor;
             yield return MigrationServiceReflection.Descriptor;
             yield return TranslationConfigReflection.Descriptor;
+            yield return TranslationDetailsReflection.Descriptor;
+            yield return TranslationSuggestionReflection.Descriptor;
+            yield return TranslationUsabilityReflection.Descriptor;
         }
     }
 }
