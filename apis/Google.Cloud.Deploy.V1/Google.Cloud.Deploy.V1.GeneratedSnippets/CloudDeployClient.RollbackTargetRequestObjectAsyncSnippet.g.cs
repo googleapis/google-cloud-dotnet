@@ -44,6 +44,10 @@ namespace GoogleCSharpSnippets
                 RolloutToRollBack = "",
                 RollbackConfig = new RollbackTargetConfig(),
                 ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             RollbackTargetResponse response = await cloudDeployClient.RollbackTargetAsync(request);

@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_sync]
+    // [START clouddeploy_v1_generated_CloudDeploy_GetDeployPolicy_sync_flattened]
     using Google.Cloud.Deploy.V1;
 
     public sealed partial class GeneratedCloudDeployClientSnippets
     {
-        /// <summary>Snippet for TerminateJobRun</summary>
+        /// <summary>Snippet for GetDeployPolicy</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,22 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void TerminateJobRunRequestObject()
+        public void GetDeployPolicy()
         {
             // Create client
             CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
             // Initialize request argument(s)
-            TerminateJobRunRequest request = new TerminateJobRunRequest
-            {
-                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deployPolicies/[DEPLOY_POLICY]";
             // Make the request
-            TerminateJobRunResponse response = cloudDeployClient.TerminateJobRun(request);
+            DeployPolicy response = cloudDeployClient.GetDeployPolicy(name);
         }
     }
-    // [END clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_sync]
+    // [END clouddeploy_v1_generated_CloudDeploy_GetDeployPolicy_sync_flattened]
 }
