@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ namespace Google.Cloud.Bigtable.V2
     {
         private readonly object _lock = new object();
         // State is guarded by _lock.
-        private RowAsyncEnumerator _enumerator;
+        private bool _enumerated;
 
         private readonly BigtableClientImpl _client;
         private readonly ReadRowsRequest _originalRequest;
@@ -51,12 +51,12 @@ namespace Google.Cloud.Bigtable.V2
         {
             lock (_lock)
             {
-                if (_enumerator != null)
+                if (_enumerated)
                 {
                     throw new InvalidOperationException($"The {nameof(ReadRowsStream)} can only be iterated once");
                 }
-                _enumerator = new RowAsyncEnumerator(_client, _originalRequest, _callSettings, _retrySettings, cancellationToken);
-                return _enumerator;
+                _enumerated = true;
+                return new RowAsyncEnumerator(_client, _originalRequest, _callSettings, _retrySettings, cancellationToken);
             }
         }
     }
