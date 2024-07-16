@@ -92,30 +92,34 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "TlRfRVFVQUxfQVRfRU5EEAIqfQoPRXJyb3JHcm91cE9yZGVyEhsKF0dST1VQ",
             "X09SREVSX1VOU1BFQ0lGSUVEEAASDgoKQ09VTlRfREVTQxABEhIKDkxBU1Rf",
             "U0VFTl9ERVNDEAISEAoMQ1JFQVRFRF9ERVNDEAMSFwoTQUZGRUNURURfVVNF",
-            "UlNfREVTQxAEMosGChFFcnJvclN0YXRzU2VydmljZRLqAQoOTGlzdEdyb3Vw",
+            "UlNfREVTQxAEMrwHChFFcnJvclN0YXRzU2VydmljZRKoAgoOTGlzdEdyb3Vw",
             "U3RhdHMSQi5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52",
             "MWJldGExLkxpc3RHcm91cFN0YXRzUmVxdWVzdBpDLmdvb2dsZS5kZXZ0b29s",
             "cy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuTGlzdEdyb3VwU3RhdHNS",
-            "ZXNwb25zZSJP2kEXcHJvamVjdF9uYW1lLHRpbWVfcmFuZ2WC0+STAi8SLS92",
-            "MWJldGExL3twcm9qZWN0X25hbWU9cHJvamVjdHMvKn0vZ3JvdXBTdGF0cxLY",
-            "AQoKTGlzdEV2ZW50cxI+Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVw",
-            "b3J0aW5nLnYxYmV0YTEuTGlzdEV2ZW50c1JlcXVlc3QaPy5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkxpc3RFdmVudHNS",
-            "ZXNwb25zZSJJ2kEVcHJvamVjdF9uYW1lLGdyb3VwX2lkgtPkkwIrEikvdjFi",
-            "ZXRhMS97cHJvamVjdF9uYW1lPXByb2plY3RzLyp9L2V2ZW50cxLVAQoMRGVs",
-            "ZXRlRXZlbnRzEkAuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRp",
-            "bmcudjFiZXRhMS5EZWxldGVFdmVudHNSZXF1ZXN0GkEuZ29vZ2xlLmRldnRv",
-            "b2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5EZWxldGVFdmVudHNS",
-            "ZXNwb25zZSJA2kEMcHJvamVjdF9uYW1lgtPkkwIrKikvdjFiZXRhMS97cHJv",
-            "amVjdF9uYW1lPXByb2plY3RzLyp9L2V2ZW50cxpWykEiY2xvdWRlcnJvcnJl",
-            "cG9ydGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClAIKL2NvbS5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExQhZFcnJvclN0YXRz",
-            "U2VydmljZVByb3RvUAFaT2Nsb3VkLmdvb2dsZS5jb20vZ28vZXJyb3JyZXBv",
-            "cnRpbmcvYXBpdjFiZXRhMS9lcnJvcnJlcG9ydGluZ3BiO2Vycm9ycmVwb3J0",
-            "aW5ncGL4AQGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRh",
-            "McoCI0dvb2dsZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGEx6gImR29v",
-            "Z2xlOjpDbG91ZDo6RXJyb3JSZXBvcnRpbmc6OlYxYmV0YTFiBnByb3RvMw=="));
+            "ZXNwb25zZSKMAdpBF3Byb2plY3RfbmFtZSx0aW1lX3JhbmdlgtPkkwJsEi0v",
+            "djFiZXRhMS97cHJvamVjdF9uYW1lPXByb2plY3RzLyp9L2dyb3VwU3RhdHNa",
+            "OxI5L3YxYmV0YTEve3Byb2plY3RfbmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9ncm91cFN0YXRzEpICCgpMaXN0RXZlbnRzEj4uZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0RXZlbnRzUmVx",
+            "dWVzdBo/Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYx",
+            "YmV0YTEuTGlzdEV2ZW50c1Jlc3BvbnNlIoIB2kEVcHJvamVjdF9uYW1lLGdy",
+            "b3VwX2lkgtPkkwJkEikvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2plY3Rz",
+            "Lyp9L2V2ZW50c1o3EjUvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9L2V2ZW50cxKOAgoMRGVsZXRlRXZlbnRzEkAuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5EZWxl",
+            "dGVFdmVudHNSZXF1ZXN0GkEuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
+            "ZXBvcnRpbmcudjFiZXRhMS5EZWxldGVFdmVudHNSZXNwb25zZSJ52kEMcHJv",
+            "amVjdF9uYW1lgtPkkwJkKikvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2pl",
+            "Y3RzLyp9L2V2ZW50c1o3KjUvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L2V2ZW50cxpWykEiY2xvdWRlcnJvcnJlcG9y",
+            "dGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClAIKL2NvbS5nb29nbGUuZGV2dG9v",
+            "bHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExQhZFcnJvclN0YXRzU2Vy",
+            "dmljZVByb3RvUAFaT2Nsb3VkLmdvb2dsZS5jb20vZ28vZXJyb3JyZXBvcnRp",
+            "bmcvYXBpdjFiZXRhMS9lcnJvcnJlcG9ydGluZ3BiO2Vycm9ycmVwb3J0aW5n",
+            "cGL4AQGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoC",
+            "I0dvb2dsZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGEx6gImR29vZ2xl",
+            "OjpDbG91ZDo6RXJyb3JSZXBvcnRpbmc6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment), typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,13 +149,18 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     [pbr::OriginalName("ERROR_COUNT_ALIGNMENT_UNSPECIFIED")] ErrorCountAlignmentUnspecified = 0,
     /// <summary>
     /// The time periods shall be consecutive, have width equal to the
-    /// requested duration, and be aligned at the `alignment_time` provided in
-    /// the request.
-    /// The `alignment_time` does not have to be inside the query period but
-    /// even if it is outside, only time periods are returned which overlap
-    /// with the query period.
-    /// A rounded alignment will typically result in a
-    /// different size of the first or the last time period.
+    /// requested duration, and be aligned at the
+    /// [alignment_time]
+    /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest.alignment_time]
+    /// provided in the request.
+    ///
+    /// The [alignment_time]
+    /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest.alignment_time]
+    /// does not have to be inside the query period but even if it is outside, only
+    /// time periods are returned which overlap with the query period.
+    ///
+    /// A rounded alignment will typically result in a different size of the first
+    /// or the last time period.
     /// </summary>
     [pbr::OriginalName("ALIGNMENT_EQUAL_ROUNDED")] AlignmentEqualRounded = 1,
     /// <summary>
@@ -255,11 +264,21 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}`
-    /// and `{projectNumber}` can be found in the
-    /// [Google Cloud Console](https://support.google.com/cloud/answer/6158840).
+    /// as `projects/{projectID}` or `projects/{projectNumber}`, where
+    /// `{projectID}` and `{projectNumber}` can be found in the
+    /// [Google Cloud console](https://support.google.com/cloud/answer/6158840).
+    /// It may also include a location, such as
+    /// `projects/{projectID}/locations/{location}` where `{location}` is a cloud
+    /// region.
     ///
-    /// Examples: `projects/my-project-123`, `projects/5551234`.
+    /// Examples: `projects/my-project-123`, `projects/5551234`,
+    /// `projects/my-project-123/locations/us-central1`,
+    /// `projects/5551234/locations/us-central1`.
+    ///
+    /// For a list of supported locations, see [Supported
+    /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+    /// the default when unspecified. Use `-` as a wildcard to request group stats
+    /// from all regions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -276,7 +295,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> groupId_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. List all &lt;code>ErrorGroupStats&lt;/code> with these IDs.
+    /// Optional. List all [ErrorGroupStats]
+    /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] with these
+    /// IDs. The `group_id` is a unique identifier for a particular error group.
+    /// The identifier is derived from key parts of the error-log content and is
+    /// treated as Service Data. For information about how Service Data
+    /// is handled, see [Google Cloud Privacy Notice]
+    /// (https://cloud.google.com/terms/cloud-privacy-notice).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -288,9 +313,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFilterFieldNumber = 3;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter serviceFilter_;
     /// <summary>
-    /// Optional. List only &lt;code>ErrorGroupStats&lt;/code> which belong to a service
-    /// context that matches the filter.
-    /// Data for all service contexts is returned if this field is not specified.
+    /// Optional. List only [ErrorGroupStats]
+    /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] which belong
+    /// to a service context that matches the filter. Data for all service contexts
+    /// is returned if this field is not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -307,12 +333,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     /// Optional. List data for the given time range.
     /// If not set, a default time range is used. The field
-    /// &lt;code>time_range_begin&lt;/code> in the response will specify the beginning
-    /// of this time range.
-    /// Only &lt;code>ErrorGroupStats&lt;/code> with a non-zero count in the given time
-    /// range are returned, unless the request contains an explicit
-    /// &lt;code>group_id&lt;/code> list. If a &lt;code>group_id&lt;/code> list is given, also
-    /// &lt;code>ErrorGroupStats&lt;/code> with zero occurrences are returned.
+    /// [time_range_begin]
+    /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse.time_range_begin]
+    /// in the response will specify the beginning of this time range. Only
+    /// [ErrorGroupStats]
+    /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] with a
+    /// non-zero count in the given time range are returned, unless the request
+    /// contains an explicit [group_id]
+    /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest.group_id]
+    /// list. If a [group_id]
+    /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest.group_id]
+    /// list is given, also [ErrorGroupStats]
+    /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] with zero
+    /// occurrences are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -327,8 +360,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimedCountDurationFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Duration timedCountDuration_;
     /// <summary>
-    /// Optional. The preferred duration for a single returned `TimedCount`.
-    /// If not set, no timed counts are returned.
+    /// Optional. The preferred duration for a single returned [TimedCount]
+    /// [google.devtools.clouderrorreporting.v1beta1.TimedCount]. If not set, no
+    /// timed counts are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -407,9 +441,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageTokenFieldNumber = 12;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A `next_page_token` provided by a previous response. To view
-    /// additional results, pass this token along with the identical query
-    /// parameters as the first request.
+    /// Optional. A [next_page_token]
+    /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse.next_page_token]
+    /// provided by a previous response. To view additional results, pass this
+    /// token along with the identical query parameters as the first request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1168,7 +1203,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     /// Approximate number of affected users in the given group that
     /// match the filter criteria.
-    /// Users are distinguished by data in the `ErrorContext` of the
+    /// Users are distinguished by data in the [ErrorContext]
+    /// [google.devtools.clouderrorreporting.v1beta1.ErrorContext] of the
     /// individual error events, such as their login name or their remote
     /// IP address in case of HTTP requests.
     /// The number of affected users can be zero even if the number of
@@ -1987,11 +2023,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as `projects/{projectID}`, where `{projectID}` is the
-    /// [Google Cloud Platform project
-    /// ID](https://support.google.com/cloud/answer/6158840).
+    /// as `projects/{projectID}` or `projects/{projectID}/locations/{location}`,
+    /// where `{projectID}` is the [Google Cloud Platform project
+    /// ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+    /// a Cloud region.
     ///
-    /// Example: `projects/my-project-123`.
+    /// Examples: `projects/my-project-123`,
+    /// `projects/my-project-123/locations/global`.
+    ///
+    /// For a list of supported locations, see [Supported
+    /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+    /// the default when unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2007,6 +2049,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string groupId_ = "";
     /// <summary>
     /// Required. The group for which events shall be returned.
+    /// The `group_id` is a unique identifier for a particular error group. The
+    /// identifier is derived from key parts of the error-log content and is
+    /// treated as Service Data. For information about how Service Data
+    /// is handled, see [Google Cloud Privacy
+    /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2629,6 +2676,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
+  /// A time range for which error group data shall be displayed.
+  /// Query time ranges end at 'now'.
+  /// When longer time ranges are selected, the resolution of the data decreases.
+  /// The description of each time range below indicates the suggested minimum
+  /// timed count duration for that range.
+  ///
   /// Requests might be rejected or the resulting timed count durations might be
   /// adjusted for lower durations.
   /// </summary>
@@ -3203,11 +3256,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as `projects/{projectID}`, where `{projectID}` is the
-    /// [Google Cloud Platform project
-    /// ID](https://support.google.com/cloud/answer/6158840).
+    /// as `projects/{projectID}` or `projects/{projectID}/locations/{location}`,
+    /// where `{projectID}` is the [Google Cloud Platform project
+    /// ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+    /// a Cloud region.
     ///
-    /// Example: `projects/my-project-123`.
+    /// Examples: `projects/my-project-123`,
+    /// `projects/my-project-123/locations/global`.
+    ///
+    /// For a list of supported locations, see [Supported
+    /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+    /// the default when unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
