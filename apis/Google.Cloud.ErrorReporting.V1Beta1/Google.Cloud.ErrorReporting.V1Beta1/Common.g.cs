@@ -165,7 +165,21 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// The group resource name.
-    /// Example: &lt;code>projects/my-project-123/groups/CNSgkpnppqKCUw&lt;/code>
+    /// Written as `projects/{projectID}/groups/{group_id}` or
+    /// `projects/{projectID}/locations/{location}/groups/{group_id}`
+    ///
+    /// Examples: `projects/my-project-123/groups/my-group`,
+    /// `projects/my-project-123/locations/us-central1/groups/my-group`
+    ///
+    /// In the group resource name, the `group_id` is a unique identifier for a
+    /// particular error group. The identifier is derived from key parts of the
+    /// error-log content and is treated as Service Data. For information about
+    /// how Service Data is handled, see [Google Cloud Privacy
+    /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+    ///
+    /// For a list of supported locations, see [Supported
+    /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+    /// the default when unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -180,8 +194,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupIdFieldNumber = 2;
     private string groupId_ = "";
     /// <summary>
-    /// Group IDs are unique for a given project. If the same kind of error
-    /// occurs in different service contexts, it will receive the same group ID.
+    /// An opaque identifier of the group. This field is assigned by the Error
+    /// Reporting system and always populated.
+    ///
+    /// In the group resource name, the `group_id` is a unique identifier for a
+    /// particular error group. The identifier is derived from key parts of the
+    /// error-log content and is treated as Service Data. For information about
+    /// how Service Data is handled, see [Google Cloud Privacy
+    /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -211,6 +231,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private global::Google.Cloud.ErrorReporting.V1Beta1.ResolutionStatus resolutionStatus_ = global::Google.Cloud.ErrorReporting.V1Beta1.ResolutionStatus.Unspecified;
     /// <summary>
     /// Error group's resolution status.
+    ///
     /// An unspecified resolution status will be interpreted as OPEN
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -34,25 +34,28 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "dXBfbmFtZRgBIAEoCUI14EEC+kEvCi1jbG91ZGVycm9ycmVwb3J0aW5nLmdv",
             "b2dsZWFwaXMuY29tL0Vycm9yR3JvdXAiYQoSVXBkYXRlR3JvdXBSZXF1ZXN0",
             "EksKBWdyb3VwGAEgASgLMjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
-            "ZXBvcnRpbmcudjFiZXRhMS5FcnJvckdyb3VwQgPgQQIy+wMKEUVycm9yR3Jv",
-            "dXBTZXJ2aWNlEsEBCghHZXRHcm91cBI8Lmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZXBvcnRpbmcudjFiZXRhMS5FcnJvckdyb3VwQgPgQQIy9QQKEUVycm9yR3Jv",
+            "dXBTZXJ2aWNlEvoBCghHZXRHcm91cBI8Lmdvb2dsZS5kZXZ0b29scy5jbG91",
             "ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuR2V0R3JvdXBSZXF1ZXN0GjcuZ29v",
             "Z2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJv",
-            "ckdyb3VwIj7aQQpncm91cF9uYW1lgtPkkwIrEikvdjFiZXRhMS97Z3JvdXBf",
-            "bmFtZT1wcm9qZWN0cy8qL2dyb3Vwcy8qfRLJAQoLVXBkYXRlR3JvdXASPy5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlVw",
-            "ZGF0ZUdyb3VwUmVxdWVzdBo3Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
-            "cmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JHcm91cCJA2kEFZ3JvdXCC0+STAjIa",
-            "KS92MWJldGExL3tncm91cC5uYW1lPXByb2plY3RzLyovZ3JvdXBzLyp9OgVn",
-            "cm91cBpWykEiY2xvdWRlcnJvcnJlcG9ydGluZy5nb29nbGVhcGlzLmNvbdJB",
-            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1ClAIKL2NvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGlu",
-            "Zy52MWJldGExQhZFcnJvckdyb3VwU2VydmljZVByb3RvUAFaT2Nsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZXJyb3JyZXBvcnRpbmcvYXBpdjFiZXRhMS9lcnJvcnJl",
-            "cG9ydGluZ3BiO2Vycm9ycmVwb3J0aW5ncGL4AQGqAiNHb29nbGUuQ2xvdWQu",
-            "RXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJvclJl",
-            "cG9ydGluZ1xWMWJldGEx6gImR29vZ2xlOjpDbG91ZDo6RXJyb3JSZXBvcnRp",
-            "bmc6OlYxYmV0YTFiBnByb3RvMw=="));
+            "ckdyb3VwInfaQQpncm91cF9uYW1lgtPkkwJkEikvdjFiZXRhMS97Z3JvdXBf",
+            "bmFtZT1wcm9qZWN0cy8qL2dyb3Vwcy8qfVo3EjUvdjFiZXRhMS97Z3JvdXBf",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2dyb3Vwcy8qfRKKAgoLVXBk",
+            "YXRlR3JvdXASPy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGlu",
+            "Zy52MWJldGExLlVwZGF0ZUdyb3VwUmVxdWVzdBo3Lmdvb2dsZS5kZXZ0b29s",
+            "cy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JHcm91cCKAAdpB",
+            "BWdyb3VwgtPkkwJyGikvdjFiZXRhMS97Z3JvdXAubmFtZT1wcm9qZWN0cy8q",
+            "L2dyb3Vwcy8qfToFZ3JvdXBaPho1L3YxYmV0YTEve2dyb3VwLm5hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9ncm91cHMvKn06BWdyb3VwGlbKQSJjbG91",
+            "ZGVycm9ycmVwb3J0aW5nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKUAgovY29tLmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTFCFkVy",
+            "cm9yR3JvdXBTZXJ2aWNlUHJvdG9QAVpPY2xvdWQuZ29vZ2xlLmNvbS9nby9l",
+            "cnJvcnJlcG9ydGluZy9hcGl2MWJldGExL2Vycm9ycmVwb3J0aW5ncGI7ZXJy",
+            "b3JyZXBvcnRpbmdwYvgBAaoCI0dvb2dsZS5DbG91ZC5FcnJvclJlcG9ydGlu",
+            "Zy5WMUJldGExygIjR29vZ2xlXENsb3VkXEVycm9yUmVwb3J0aW5nXFYxYmV0",
+            "YTHqAiZHb29nbGU6OkNsb3VkOjpFcnJvclJlcG9ydGluZzo6VjFiZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,12 +119,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupNameFieldNumber = 1;
     private string groupName_ = "";
     /// <summary>
-    /// Required. The group resource name. Written as
-    /// `projects/{projectID}/groups/{group_name}`. Call
-    /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+    /// Required. The group resource name. Written as either
+    /// `projects/{projectID}/groups/{group_id}` or
+    /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+    /// [groupStats.list]
+    /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
     /// to return a list of groups belonging to this project.
     ///
-    /// Example: `projects/my-project-123/groups/my-group`
+    /// Examples: `projects/my-project-123/groups/my-group`,
+    /// `projects/my-project-123/locations/global/groups/my-group`
+    ///
+    /// In the group resource name, the `group_id` is a unique identifier for a
+    /// particular error group. The identifier is derived from key parts of the
+    /// error-log content and is treated as Service Data. For information about
+    /// how Service Data is handled, see [Google Cloud Privacy
+    /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+    ///
+    /// For a list of supported locations, see [Supported
+    /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+    /// the default when unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
