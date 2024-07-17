@@ -38,7 +38,9 @@ namespace GoogleCSharpSnippets
             ConversionEvent conversionEvent = new ConversionEvent();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.UpdateConversionEvent(conversionEvent, updateMask);
+#pragma warning restore CS0612
         }
     }
     // [END analyticsadmin_v1beta_generated_AnalyticsAdminService_UpdateConversionEvent_sync_flattened]

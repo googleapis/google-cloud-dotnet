@@ -2713,7 +2713,9 @@ namespace GoogleCSharpSnippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.CreateConversionEvent(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2731,7 +2733,9 @@ namespace GoogleCSharpSnippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.CreateConversionEventAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2745,7 +2749,9 @@ namespace GoogleCSharpSnippets
             string parent = "properties/[PROPERTY]";
             ConversionEvent conversionEvent = new ConversionEvent();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.CreateConversionEvent(parent, conversionEvent);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2760,7 +2766,9 @@ namespace GoogleCSharpSnippets
             string parent = "properties/[PROPERTY]";
             ConversionEvent conversionEvent = new ConversionEvent();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.CreateConversionEventAsync(parent, conversionEvent);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2774,7 +2782,9 @@ namespace GoogleCSharpSnippets
             PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
             ConversionEvent conversionEvent = new ConversionEvent();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.CreateConversionEvent(parent, conversionEvent);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2789,7 +2799,9 @@ namespace GoogleCSharpSnippets
             PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
             ConversionEvent conversionEvent = new ConversionEvent();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.CreateConversionEventAsync(parent, conversionEvent);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2806,7 +2818,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.UpdateConversionEvent(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2824,7 +2838,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.UpdateConversionEventAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2838,7 +2854,9 @@ namespace GoogleCSharpSnippets
             ConversionEvent conversionEvent = new ConversionEvent();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.UpdateConversionEvent(conversionEvent, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2853,7 +2871,9 @@ namespace GoogleCSharpSnippets
             ConversionEvent conversionEvent = new ConversionEvent();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.UpdateConversionEventAsync(conversionEvent, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2869,7 +2889,9 @@ namespace GoogleCSharpSnippets
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.GetConversionEvent(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2886,7 +2908,9 @@ namespace GoogleCSharpSnippets
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.GetConversionEventAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2899,7 +2923,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "properties/[PROPERTY]/conversionEvents/[CONVERSION_EVENT]";
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.GetConversionEvent(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2913,7 +2939,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "properties/[PROPERTY]/conversionEvents/[CONVERSION_EVENT]";
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.GetConversionEventAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2926,7 +2954,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ConversionEventName name = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]");
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.GetConversionEvent(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2940,7 +2970,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ConversionEventName name = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]");
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = await analyticsAdminServiceClient.GetConversionEventAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2956,7 +2988,9 @@ namespace GoogleCSharpSnippets
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
             };
             // Make the request
+#pragma warning disable CS0612
             analyticsAdminServiceClient.DeleteConversionEvent(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2973,7 +3007,9 @@ namespace GoogleCSharpSnippets
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
             };
             // Make the request
+#pragma warning disable CS0612
             await analyticsAdminServiceClient.DeleteConversionEventAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2986,7 +3022,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "properties/[PROPERTY]/conversionEvents/[CONVERSION_EVENT]";
             // Make the request
+#pragma warning disable CS0612
             analyticsAdminServiceClient.DeleteConversionEvent(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3000,7 +3038,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "properties/[PROPERTY]/conversionEvents/[CONVERSION_EVENT]";
             // Make the request
+#pragma warning disable CS0612
             await analyticsAdminServiceClient.DeleteConversionEventAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3013,7 +3053,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ConversionEventName name = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]");
             // Make the request
+#pragma warning disable CS0612
             analyticsAdminServiceClient.DeleteConversionEvent(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3027,7 +3069,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ConversionEventName name = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]");
             // Make the request
+#pragma warning disable CS0612
             await analyticsAdminServiceClient.DeleteConversionEventAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3043,7 +3087,9 @@ namespace GoogleCSharpSnippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEvents(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ConversionEvent item in response)
@@ -3091,7 +3137,9 @@ namespace GoogleCSharpSnippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEventsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ConversionEvent item) =>
@@ -3136,7 +3184,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "properties/[PROPERTY]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEvents(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ConversionEvent item in response)
@@ -3181,7 +3231,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "properties/[PROPERTY]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEventsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ConversionEvent item) =>
@@ -3226,7 +3278,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEvents(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ConversionEvent item in response)
@@ -3271,7 +3325,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEventsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ConversionEvent item) =>
@@ -3298,6 +3354,613 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ConversionEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyEvent</summary>
+        public void CreateKeyEventRequestObject()
+        {
+            // Snippet: CreateKeyEvent(CreateKeyEventRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateKeyEventRequest request = new CreateKeyEventRequest
+            {
+                KeyEvent = new KeyEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.CreateKeyEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyEventAsync</summary>
+        public async Task CreateKeyEventRequestObjectAsync()
+        {
+            // Snippet: CreateKeyEventAsync(CreateKeyEventRequest, CallSettings)
+            // Additional: CreateKeyEventAsync(CreateKeyEventRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateKeyEventRequest request = new CreateKeyEventRequest
+            {
+                KeyEvent = new KeyEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.CreateKeyEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyEvent</summary>
+        public void CreateKeyEvent()
+        {
+            // Snippet: CreateKeyEvent(string, KeyEvent, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            KeyEvent keyEvent = new KeyEvent();
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.CreateKeyEvent(parent, keyEvent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyEventAsync</summary>
+        public async Task CreateKeyEventAsync()
+        {
+            // Snippet: CreateKeyEventAsync(string, KeyEvent, CallSettings)
+            // Additional: CreateKeyEventAsync(string, KeyEvent, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            KeyEvent keyEvent = new KeyEvent();
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.CreateKeyEventAsync(parent, keyEvent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyEvent</summary>
+        public void CreateKeyEventResourceNames()
+        {
+            // Snippet: CreateKeyEvent(PropertyName, KeyEvent, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            KeyEvent keyEvent = new KeyEvent();
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.CreateKeyEvent(parent, keyEvent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyEventAsync</summary>
+        public async Task CreateKeyEventResourceNamesAsync()
+        {
+            // Snippet: CreateKeyEventAsync(PropertyName, KeyEvent, CallSettings)
+            // Additional: CreateKeyEventAsync(PropertyName, KeyEvent, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            KeyEvent keyEvent = new KeyEvent();
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.CreateKeyEventAsync(parent, keyEvent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKeyEvent</summary>
+        public void UpdateKeyEventRequestObject()
+        {
+            // Snippet: UpdateKeyEvent(UpdateKeyEventRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateKeyEventRequest request = new UpdateKeyEventRequest
+            {
+                KeyEvent = new KeyEvent(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.UpdateKeyEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKeyEventAsync</summary>
+        public async Task UpdateKeyEventRequestObjectAsync()
+        {
+            // Snippet: UpdateKeyEventAsync(UpdateKeyEventRequest, CallSettings)
+            // Additional: UpdateKeyEventAsync(UpdateKeyEventRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateKeyEventRequest request = new UpdateKeyEventRequest
+            {
+                KeyEvent = new KeyEvent(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.UpdateKeyEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKeyEvent</summary>
+        public void UpdateKeyEvent()
+        {
+            // Snippet: UpdateKeyEvent(KeyEvent, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            KeyEvent keyEvent = new KeyEvent();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.UpdateKeyEvent(keyEvent, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKeyEventAsync</summary>
+        public async Task UpdateKeyEventAsync()
+        {
+            // Snippet: UpdateKeyEventAsync(KeyEvent, FieldMask, CallSettings)
+            // Additional: UpdateKeyEventAsync(KeyEvent, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyEvent keyEvent = new KeyEvent();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.UpdateKeyEventAsync(keyEvent, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyEvent</summary>
+        public void GetKeyEventRequestObject()
+        {
+            // Snippet: GetKeyEvent(GetKeyEventRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetKeyEventRequest request = new GetKeyEventRequest
+            {
+                KeyEventName = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]"),
+            };
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.GetKeyEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyEventAsync</summary>
+        public async Task GetKeyEventRequestObjectAsync()
+        {
+            // Snippet: GetKeyEventAsync(GetKeyEventRequest, CallSettings)
+            // Additional: GetKeyEventAsync(GetKeyEventRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetKeyEventRequest request = new GetKeyEventRequest
+            {
+                KeyEventName = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]"),
+            };
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.GetKeyEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyEvent</summary>
+        public void GetKeyEvent()
+        {
+            // Snippet: GetKeyEvent(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/keyEvents/[KEY_EVENT]";
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.GetKeyEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyEventAsync</summary>
+        public async Task GetKeyEventAsync()
+        {
+            // Snippet: GetKeyEventAsync(string, CallSettings)
+            // Additional: GetKeyEventAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/keyEvents/[KEY_EVENT]";
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.GetKeyEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyEvent</summary>
+        public void GetKeyEventResourceNames()
+        {
+            // Snippet: GetKeyEvent(KeyEventName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            KeyEventName name = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]");
+            // Make the request
+            KeyEvent response = analyticsAdminServiceClient.GetKeyEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyEventAsync</summary>
+        public async Task GetKeyEventResourceNamesAsync()
+        {
+            // Snippet: GetKeyEventAsync(KeyEventName, CallSettings)
+            // Additional: GetKeyEventAsync(KeyEventName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyEventName name = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]");
+            // Make the request
+            KeyEvent response = await analyticsAdminServiceClient.GetKeyEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyEvent</summary>
+        public void DeleteKeyEventRequestObject()
+        {
+            // Snippet: DeleteKeyEvent(DeleteKeyEventRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteKeyEventRequest request = new DeleteKeyEventRequest
+            {
+                KeyEventName = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteKeyEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyEventAsync</summary>
+        public async Task DeleteKeyEventRequestObjectAsync()
+        {
+            // Snippet: DeleteKeyEventAsync(DeleteKeyEventRequest, CallSettings)
+            // Additional: DeleteKeyEventAsync(DeleteKeyEventRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteKeyEventRequest request = new DeleteKeyEventRequest
+            {
+                KeyEventName = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteKeyEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyEvent</summary>
+        public void DeleteKeyEvent()
+        {
+            // Snippet: DeleteKeyEvent(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/keyEvents/[KEY_EVENT]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteKeyEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyEventAsync</summary>
+        public async Task DeleteKeyEventAsync()
+        {
+            // Snippet: DeleteKeyEventAsync(string, CallSettings)
+            // Additional: DeleteKeyEventAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/keyEvents/[KEY_EVENT]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteKeyEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyEvent</summary>
+        public void DeleteKeyEventResourceNames()
+        {
+            // Snippet: DeleteKeyEvent(KeyEventName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            KeyEventName name = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteKeyEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyEventAsync</summary>
+        public async Task DeleteKeyEventResourceNamesAsync()
+        {
+            // Snippet: DeleteKeyEventAsync(KeyEventName, CallSettings)
+            // Additional: DeleteKeyEventAsync(KeyEventName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyEventName name = KeyEventName.FromPropertyKeyEvent("[PROPERTY]", "[KEY_EVENT]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteKeyEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeyEvents</summary>
+        public void ListKeyEventsRequestObject()
+        {
+            // Snippet: ListKeyEvents(ListKeyEventsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListKeyEventsRequest request = new ListKeyEventsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListKeyEventsResponse, KeyEvent> response = analyticsAdminServiceClient.ListKeyEvents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeyEventsAsync</summary>
+        public async Task ListKeyEventsRequestObjectAsync()
+        {
+            // Snippet: ListKeyEventsAsync(ListKeyEventsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListKeyEventsRequest request = new ListKeyEventsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> response = analyticsAdminServiceClient.ListKeyEventsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeyEvents</summary>
+        public void ListKeyEvents()
+        {
+            // Snippet: ListKeyEvents(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListKeyEventsResponse, KeyEvent> response = analyticsAdminServiceClient.ListKeyEvents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeyEventsAsync</summary>
+        public async Task ListKeyEventsAsync()
+        {
+            // Snippet: ListKeyEventsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> response = analyticsAdminServiceClient.ListKeyEventsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeyEvents</summary>
+        public void ListKeyEventsResourceNames()
+        {
+            // Snippet: ListKeyEvents(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListKeyEventsResponse, KeyEvent> response = analyticsAdminServiceClient.ListKeyEvents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeyEventsAsync</summary>
+        public async Task ListKeyEventsResourceNamesAsync()
+        {
+            // Snippet: ListKeyEventsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> response = analyticsAdminServiceClient.ListKeyEventsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyEvent item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -5308,6 +5971,8 @@ namespace GoogleCSharpSnippets
                     new AccessOrderBy(),
                 },
                 ReturnEntityQuota = false,
+                IncludeAllUsers = false,
+                ExpandGroups = false,
             };
             // Make the request
             RunAccessReportResponse response = analyticsAdminServiceClient.RunAccessReport(request);
@@ -5344,6 +6009,8 @@ namespace GoogleCSharpSnippets
                     new AccessOrderBy(),
                 },
                 ReturnEntityQuota = false,
+                IncludeAllUsers = false,
+                ExpandGroups = false,
             };
             // Make the request
             RunAccessReportResponse response = await analyticsAdminServiceClient.RunAccessReportAsync(request);

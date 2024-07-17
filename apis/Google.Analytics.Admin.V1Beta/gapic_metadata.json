@@ -64,6 +64,12 @@
                 "CreateGoogleAdsLinkAsync"
               ]
             },
+            "CreateKeyEvent": {
+              "methods": [
+                "CreateKeyEvent",
+                "CreateKeyEventAsync"
+              ]
+            },
             "CreateMeasurementProtocolSecret": {
               "methods": [
                 "CreateMeasurementProtocolSecret",
@@ -104,6 +110,12 @@
               "methods": [
                 "DeleteGoogleAdsLink",
                 "DeleteGoogleAdsLinkAsync"
+              ]
+            },
+            "DeleteKeyEvent": {
+              "methods": [
+                "DeleteKeyEvent",
+                "DeleteKeyEventAsync"
               ]
             },
             "DeleteMeasurementProtocolSecret": {
@@ -158,6 +170,12 @@
               "methods": [
                 "GetDataStream",
                 "GetDataStreamAsync"
+              ]
+            },
+            "GetKeyEvent": {
+              "methods": [
+                "GetKeyEvent",
+                "GetKeyEventAsync"
               ]
             },
             "GetMeasurementProtocolSecret": {
@@ -218,6 +236,12 @@
               "methods": [
                 "ListGoogleAdsLinks",
                 "ListGoogleAdsLinksAsync"
+              ]
+            },
+            "ListKeyEvents": {
+              "methods": [
+                "ListKeyEvents",
+                "ListKeyEventsAsync"
               ]
             },
             "ListMeasurementProtocolSecrets": {
@@ -290,6 +314,12 @@
               "methods": [
                 "UpdateGoogleAdsLink",
                 "UpdateGoogleAdsLinkAsync"
+              ]
+            },
+            "UpdateKeyEvent": {
+              "methods": [
+                "UpdateKeyEvent",
+                "UpdateKeyEventAsync"
               ]
             },
             "UpdateMeasurementProtocolSecret": {
