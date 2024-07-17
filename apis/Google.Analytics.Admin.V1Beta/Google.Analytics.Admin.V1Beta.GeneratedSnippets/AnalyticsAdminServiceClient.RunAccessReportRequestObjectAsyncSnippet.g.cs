@@ -57,6 +57,8 @@ namespace GoogleCSharpSnippets
                     new AccessOrderBy(),
                 },
                 ReturnEntityQuota = false,
+                IncludeAllUsers = false,
+                ExpandGroups = false,
             };
             // Make the request
             RunAccessReportResponse response = await analyticsAdminServiceClient.RunAccessReportAsync(request);

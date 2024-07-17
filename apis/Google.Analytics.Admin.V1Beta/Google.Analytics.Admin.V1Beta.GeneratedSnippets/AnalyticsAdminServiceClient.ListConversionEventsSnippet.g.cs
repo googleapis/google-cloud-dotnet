@@ -38,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "properties/[PROPERTY]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEvents(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ConversionEvent item in response)

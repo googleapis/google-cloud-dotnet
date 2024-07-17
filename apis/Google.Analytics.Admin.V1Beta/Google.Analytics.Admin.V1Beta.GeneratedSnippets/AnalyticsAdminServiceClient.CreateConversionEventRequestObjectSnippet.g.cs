@@ -40,7 +40,9 @@ namespace GoogleCSharpSnippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.CreateConversionEvent(request);
+#pragma warning restore CS0612
         }
     }
     // [END analyticsadmin_v1beta_generated_AnalyticsAdminService_CreateConversionEvent_sync]

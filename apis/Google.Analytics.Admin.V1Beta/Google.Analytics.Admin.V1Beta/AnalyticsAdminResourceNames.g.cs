@@ -282,6 +282,54 @@ namespace Google.Analytics.Admin.V1Beta
         }
     }
 
+    public partial class CreateKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListKeyEventsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateCustomDimensionRequest
     {
         /// <summary>

@@ -79,6 +79,11 @@ namespace Google.Analytics.Admin.V1Beta
             GetConversionEventSettings = existing.GetConversionEventSettings;
             DeleteConversionEventSettings = existing.DeleteConversionEventSettings;
             ListConversionEventsSettings = existing.ListConversionEventsSettings;
+            CreateKeyEventSettings = existing.CreateKeyEventSettings;
+            UpdateKeyEventSettings = existing.UpdateKeyEventSettings;
+            GetKeyEventSettings = existing.GetKeyEventSettings;
+            DeleteKeyEventSettings = existing.DeleteKeyEventSettings;
+            ListKeyEventsSettings = existing.ListKeyEventsSettings;
             CreateCustomDimensionSettings = existing.CreateCustomDimensionSettings;
             UpdateCustomDimensionSettings = existing.UpdateCustomDimensionSettings;
             ListCustomDimensionsSettings = existing.ListCustomDimensionsSettings;
@@ -781,6 +786,114 @@ namespace Google.Analytics.Admin.V1Beta
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateKeyEvent</c> and <c>AnalyticsAdminServiceClient.CreateKeyEventAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateKeyEvent</c> and <c>AnalyticsAdminServiceClient.UpdateKeyEventAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetKeyEvent</c> and <c>AnalyticsAdminServiceClient.GetKeyEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteKeyEvent</c> and <c>AnalyticsAdminServiceClient.DeleteKeyEventAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListKeyEvents</c> and <c>AnalyticsAdminServiceClient.ListKeyEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListKeyEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.CreateCustomDimension</c> and
         /// <c>AnalyticsAdminServiceClient.CreateCustomDimensionAsync</c>.
         /// </summary>
@@ -1471,7 +1584,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1490,7 +1603,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1509,7 +1622,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1528,7 +1641,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1554,7 +1667,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1580,7 +1693,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1603,7 +1716,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1629,7 +1742,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -1655,7 +1768,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -2025,7 +2138,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2044,7 +2157,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2063,7 +2176,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2082,7 +2195,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2108,7 +2221,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2134,7 +2247,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2157,7 +2270,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2183,7 +2296,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2209,7 +2322,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -2357,7 +2470,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -2378,7 +2492,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -2399,7 +2514,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -2416,7 +2532,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -2437,7 +2554,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -2458,7 +2576,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -2500,7 +2619,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2515,7 +2635,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2530,7 +2651,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2542,7 +2664,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2557,7 +2680,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2572,7 +2696,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2605,7 +2730,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2631,7 +2757,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2657,7 +2784,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2683,7 +2811,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3172,7 +3301,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3189,7 +3319,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3206,7 +3337,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3220,7 +3352,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3237,7 +3370,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3254,7 +3388,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3896,33 +4031,40 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent CreateConversionEvent(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(CreateConversionEventRequest request, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -3934,6 +4076,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent CreateConversionEvent(string parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEvent(new CreateConversionEventRequest
             {
@@ -3942,6 +4085,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -3953,6 +4097,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(string parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEventAsync(new CreateConversionEventRequest
             {
@@ -3961,6 +4106,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -3972,10 +4118,12 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(string parent, ConversionEvent conversionEvent, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(parent, conversionEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -3987,6 +4135,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent CreateConversionEvent(PropertyName parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEvent(new CreateConversionEventRequest
             {
@@ -3995,6 +4144,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -4006,6 +4156,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(PropertyName parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEventAsync(new CreateConversionEventRequest
             {
@@ -4014,6 +4165,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -4025,37 +4177,45 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(PropertyName parent, ConversionEvent conversionEvent, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(parent, conversionEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent UpdateConversionEvent(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, st::CancellationToken cancellationToken) =>
             UpdateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="conversionEvent">
@@ -4070,6 +4230,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent UpdateConversionEvent(ConversionEvent conversionEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateConversionEvent(new UpdateConversionEventRequest
             {
@@ -4078,6 +4239,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="conversionEvent">
@@ -4092,6 +4254,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(ConversionEvent conversionEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateConversionEventAsync(new UpdateConversionEventRequest
             {
@@ -4100,6 +4263,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="conversionEvent">
@@ -4114,37 +4278,45 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(ConversionEvent conversionEvent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateConversionEventAsync(conversionEvent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent GetConversionEvent(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(GetConversionEventRequest request, st::CancellationToken cancellationToken) =>
             GetConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -4154,6 +4326,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent GetConversionEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEvent(new GetConversionEventRequest
             {
@@ -4161,6 +4334,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -4170,6 +4344,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEventAsync(new GetConversionEventRequest
             {
@@ -4177,6 +4352,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -4186,10 +4362,12 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(string name, st::CancellationToken cancellationToken) =>
             GetConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -4199,6 +4377,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent GetConversionEvent(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEvent(new GetConversionEventRequest
             {
@@ -4206,6 +4385,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -4215,6 +4395,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEventAsync(new GetConversionEventRequest
             {
@@ -4222,6 +4403,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -4231,37 +4413,45 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(ConversionEventName name, st::CancellationToken cancellationToken) =>
             GetConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteConversionEvent(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(DeleteConversionEventRequest request, st::CancellationToken cancellationToken) =>
             DeleteConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -4271,6 +4461,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteConversionEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEvent(new DeleteConversionEventRequest
             {
@@ -4278,6 +4469,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -4287,6 +4479,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEventAsync(new DeleteConversionEventRequest
             {
@@ -4294,6 +4487,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -4303,10 +4497,12 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -4316,6 +4512,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteConversionEvent(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEvent(new DeleteConversionEventRequest
             {
@@ -4323,6 +4520,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -4332,6 +4530,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEventAsync(new DeleteConversionEventRequest
             {
@@ -4339,6 +4538,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -4348,10 +4548,12 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(ConversionEventName name, st::CancellationToken cancellationToken) =>
             DeleteConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -4359,10 +4561,12 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -4370,10 +4574,12 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -4392,6 +4598,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListConversionEvents(new ListConversionEventsRequest
             {
@@ -4401,6 +4608,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -4419,6 +4627,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListConversionEventsAsync(new ListConversionEventsRequest
             {
@@ -4428,6 +4637,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -4446,6 +4656,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListConversionEvents(new ListConversionEventsRequest
             {
@@ -4455,6 +4666,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -4473,8 +4685,589 @@ namespace Google.Analytics.Admin.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListConversionEventsAsync(new ListConversionEventsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent CreateKeyEvent(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(CreateKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            CreateKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent CreateKeyEvent(string parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEvent(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(string parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEventAsync(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(string parent, KeyEvent keyEvent, st::CancellationToken cancellationToken) =>
+            CreateKeyEventAsync(parent, keyEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent CreateKeyEvent(PropertyName parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEvent(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(PropertyName parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEventAsync(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(PropertyName parent, KeyEvent keyEvent, st::CancellationToken cancellationToken) =>
+            CreateKeyEventAsync(parent, keyEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent UpdateKeyEvent(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(UpdateKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            UpdateKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent UpdateKeyEvent(KeyEvent keyEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKeyEvent(new UpdateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(KeyEvent keyEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKeyEventAsync(new UpdateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(KeyEvent keyEvent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateKeyEventAsync(keyEvent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent GetKeyEvent(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(GetKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            GetKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent GetKeyEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEvent(new GetKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEventAsync(new GetKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(string name, st::CancellationToken cancellationToken) =>
+            GetKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent GetKeyEvent(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEvent(new GetKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEventAsync(new GetKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(KeyEventName name, st::CancellationToken cancellationToken) =>
+            GetKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKeyEvent(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(DeleteKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            DeleteKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKeyEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEvent(new DeleteKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEventAsync(new DeleteKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKeyEvent(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEvent(new DeleteKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEventAsync(new DeleteKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(KeyEventName name, st::CancellationToken cancellationToken) =>
+            DeleteKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeyEvents(new ListKeyEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeyEventsAsync(new ListKeyEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeyEvents(new ListKeyEventsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeyEventsAsync(new ListKeyEventsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -6336,8 +7129,10 @@ namespace Google.Analytics.Admin.V1Beta
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -6357,8 +7152,10 @@ namespace Google.Analytics.Admin.V1Beta
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -6378,8 +7175,10 @@ namespace Google.Analytics.Admin.V1Beta
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -6462,6 +7261,16 @@ namespace Google.Analytics.Admin.V1Beta
         private readonly gaxgrpc::ApiCall<DeleteConversionEventRequest, wkt::Empty> _callDeleteConversionEvent;
 
         private readonly gaxgrpc::ApiCall<ListConversionEventsRequest, ListConversionEventsResponse> _callListConversionEvents;
+
+        private readonly gaxgrpc::ApiCall<CreateKeyEventRequest, KeyEvent> _callCreateKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<UpdateKeyEventRequest, KeyEvent> _callUpdateKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<GetKeyEventRequest, KeyEvent> _callGetKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<DeleteKeyEventRequest, wkt::Empty> _callDeleteKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<ListKeyEventsRequest, ListKeyEventsResponse> _callListKeyEvents;
 
         private readonly gaxgrpc::ApiCall<CreateCustomDimensionRequest, CustomDimension> _callCreateCustomDimension;
 
@@ -6593,21 +7402,46 @@ namespace Google.Analytics.Admin.V1Beta
             _callSearchChangeHistoryEvents = clientHelper.BuildApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse>("SearchChangeHistoryEvents", grpcClient.SearchChangeHistoryEventsAsync, grpcClient.SearchChangeHistoryEvents, effectiveSettings.SearchChangeHistoryEventsSettings).WithGoogleRequestParam("account", request => request.Account);
             Modify_ApiCall(ref _callSearchChangeHistoryEvents);
             Modify_SearchChangeHistoryEventsApiCall(ref _callSearchChangeHistoryEvents);
+#pragma warning disable CS0612
             _callCreateConversionEvent = clientHelper.BuildApiCall<CreateConversionEventRequest, ConversionEvent>("CreateConversionEvent", grpcClient.CreateConversionEventAsync, grpcClient.CreateConversionEvent, effectiveSettings.CreateConversionEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateConversionEvent);
             Modify_CreateConversionEventApiCall(ref _callCreateConversionEvent);
+#pragma warning disable CS0612
             _callUpdateConversionEvent = clientHelper.BuildApiCall<UpdateConversionEventRequest, ConversionEvent>("UpdateConversionEvent", grpcClient.UpdateConversionEventAsync, grpcClient.UpdateConversionEvent, effectiveSettings.UpdateConversionEventSettings).WithGoogleRequestParam("conversion_event.name", request => request.ConversionEvent?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateConversionEvent);
             Modify_UpdateConversionEventApiCall(ref _callUpdateConversionEvent);
+#pragma warning disable CS0612
             _callGetConversionEvent = clientHelper.BuildApiCall<GetConversionEventRequest, ConversionEvent>("GetConversionEvent", grpcClient.GetConversionEventAsync, grpcClient.GetConversionEvent, effectiveSettings.GetConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetConversionEvent);
             Modify_GetConversionEventApiCall(ref _callGetConversionEvent);
+#pragma warning disable CS0612
             _callDeleteConversionEvent = clientHelper.BuildApiCall<DeleteConversionEventRequest, wkt::Empty>("DeleteConversionEvent", grpcClient.DeleteConversionEventAsync, grpcClient.DeleteConversionEvent, effectiveSettings.DeleteConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteConversionEvent);
             Modify_DeleteConversionEventApiCall(ref _callDeleteConversionEvent);
+#pragma warning disable CS0612
             _callListConversionEvents = clientHelper.BuildApiCall<ListConversionEventsRequest, ListConversionEventsResponse>("ListConversionEvents", grpcClient.ListConversionEventsAsync, grpcClient.ListConversionEvents, effectiveSettings.ListConversionEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListConversionEvents);
             Modify_ListConversionEventsApiCall(ref _callListConversionEvents);
+            _callCreateKeyEvent = clientHelper.BuildApiCall<CreateKeyEventRequest, KeyEvent>("CreateKeyEvent", grpcClient.CreateKeyEventAsync, grpcClient.CreateKeyEvent, effectiveSettings.CreateKeyEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateKeyEvent);
+            Modify_CreateKeyEventApiCall(ref _callCreateKeyEvent);
+            _callUpdateKeyEvent = clientHelper.BuildApiCall<UpdateKeyEventRequest, KeyEvent>("UpdateKeyEvent", grpcClient.UpdateKeyEventAsync, grpcClient.UpdateKeyEvent, effectiveSettings.UpdateKeyEventSettings).WithGoogleRequestParam("key_event.name", request => request.KeyEvent?.Name);
+            Modify_ApiCall(ref _callUpdateKeyEvent);
+            Modify_UpdateKeyEventApiCall(ref _callUpdateKeyEvent);
+            _callGetKeyEvent = clientHelper.BuildApiCall<GetKeyEventRequest, KeyEvent>("GetKeyEvent", grpcClient.GetKeyEventAsync, grpcClient.GetKeyEvent, effectiveSettings.GetKeyEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetKeyEvent);
+            Modify_GetKeyEventApiCall(ref _callGetKeyEvent);
+            _callDeleteKeyEvent = clientHelper.BuildApiCall<DeleteKeyEventRequest, wkt::Empty>("DeleteKeyEvent", grpcClient.DeleteKeyEventAsync, grpcClient.DeleteKeyEvent, effectiveSettings.DeleteKeyEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteKeyEvent);
+            Modify_DeleteKeyEventApiCall(ref _callDeleteKeyEvent);
+            _callListKeyEvents = clientHelper.BuildApiCall<ListKeyEventsRequest, ListKeyEventsResponse>("ListKeyEvents", grpcClient.ListKeyEventsAsync, grpcClient.ListKeyEvents, effectiveSettings.ListKeyEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListKeyEvents);
+            Modify_ListKeyEventsApiCall(ref _callListKeyEvents);
             _callCreateCustomDimension = clientHelper.BuildApiCall<CreateCustomDimensionRequest, CustomDimension>("CreateCustomDimension", grpcClient.CreateCustomDimensionAsync, grpcClient.CreateCustomDimension, effectiveSettings.CreateCustomDimensionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCustomDimension);
             Modify_CreateCustomDimensionApiCall(ref _callCreateCustomDimension);
@@ -6729,6 +7563,16 @@ namespace Google.Analytics.Admin.V1Beta
 
         partial void Modify_ListConversionEventsApiCall(ref gaxgrpc::ApiCall<ListConversionEventsRequest, ListConversionEventsResponse> call);
 
+        partial void Modify_CreateKeyEventApiCall(ref gaxgrpc::ApiCall<CreateKeyEventRequest, KeyEvent> call);
+
+        partial void Modify_UpdateKeyEventApiCall(ref gaxgrpc::ApiCall<UpdateKeyEventRequest, KeyEvent> call);
+
+        partial void Modify_GetKeyEventApiCall(ref gaxgrpc::ApiCall<GetKeyEventRequest, KeyEvent> call);
+
+        partial void Modify_DeleteKeyEventApiCall(ref gaxgrpc::ApiCall<DeleteKeyEventRequest, wkt::Empty> call);
+
+        partial void Modify_ListKeyEventsApiCall(ref gaxgrpc::ApiCall<ListKeyEventsRequest, ListKeyEventsResponse> call);
+
         partial void Modify_CreateCustomDimensionApiCall(ref gaxgrpc::ApiCall<CreateCustomDimensionRequest, CustomDimension> call);
 
         partial void Modify_UpdateCustomDimensionApiCall(ref gaxgrpc::ApiCall<UpdateCustomDimensionRequest, CustomDimension> call);
@@ -6832,6 +7676,16 @@ namespace Google.Analytics.Admin.V1Beta
 
         partial void Modify_ListConversionEventsRequest(ref ListConversionEventsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateKeyEventRequest(ref CreateKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateKeyEventRequest(ref UpdateKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetKeyEventRequest(ref GetKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteKeyEventRequest(ref DeleteKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListKeyEventsRequest(ref ListKeyEventsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateCustomDimensionRequest(ref CreateCustomDimensionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateCustomDimensionRequest(ref UpdateCustomDimensionRequest request, ref gaxgrpc::CallSettings settings);
@@ -6932,7 +7786,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -6954,7 +7808,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// 
         /// If the accounts are not restored before the expiration time, the account
         /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-        /// UserLinks) will be permanently purged.
+        /// AccessBindings) will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
         /// Returns an error if the target is not found.
@@ -7129,7 +7983,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -7151,7 +8005,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// However, they can be restored using the Trash Can UI.
         /// 
         /// If the properties are not restored before the expiration time, the Property
-        /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+        /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
@@ -7571,11 +8425,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ConversionEvent CreateConversionEvent(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateConversionEventRequest(ref request, ref callSettings);
@@ -7583,11 +8439,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ConversionEvent> CreateConversionEventAsync(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateConversionEventRequest(ref request, ref callSettings);
@@ -7595,11 +8453,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ConversionEvent UpdateConversionEvent(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateConversionEventRequest(ref request, ref callSettings);
@@ -7607,11 +8467,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateConversionEventRequest(ref request, ref callSettings);
@@ -7619,11 +8481,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ConversionEvent GetConversionEvent(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetConversionEventRequest(ref request, ref callSettings);
@@ -7631,11 +8495,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ConversionEvent> GetConversionEventAsync(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetConversionEventRequest(ref request, ref callSettings);
@@ -7643,11 +8509,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteConversionEvent(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteConversionEventRequest(ref request, ref callSettings);
@@ -7655,11 +8523,13 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteConversionEventAsync(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteConversionEventRequest(ref request, ref callSettings);
@@ -7667,6 +8537,7 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7674,6 +8545,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListConversionEventsRequest(ref request, ref callSettings);
@@ -7681,6 +8553,7 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7688,10 +8561,133 @@ namespace Google.Analytics.Admin.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListConversionEventsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListConversionEventsRequest, ListConversionEventsResponse, ConversionEvent>(_callListConversionEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override KeyEvent CreateKeyEvent(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateKeyEventRequest(ref request, ref callSettings);
+            return _callCreateKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<KeyEvent> CreateKeyEventAsync(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateKeyEventRequest(ref request, ref callSettings);
+            return _callCreateKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override KeyEvent UpdateKeyEvent(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateKeyEventRequest(ref request, ref callSettings);
+            return _callUpdateKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<KeyEvent> UpdateKeyEventAsync(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateKeyEventRequest(ref request, ref callSettings);
+            return _callUpdateKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override KeyEvent GetKeyEvent(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetKeyEventRequest(ref request, ref callSettings);
+            return _callGetKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<KeyEvent> GetKeyEventAsync(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetKeyEventRequest(ref request, ref callSettings);
+            return _callGetKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteKeyEvent(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteKeyEventRequest(ref request, ref callSettings);
+            _callDeleteKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteKeyEventAsync(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteKeyEventRequest(ref request, ref callSettings);
+            return _callDeleteKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public override gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListKeyEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListKeyEventsRequest, ListKeyEventsResponse, KeyEvent>(_callListKeyEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListKeyEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListKeyEventsRequest, ListKeyEventsResponse, KeyEvent>(_callListKeyEvents, request, callSettings);
         }
 
         /// <summary>
@@ -8107,8 +9103,10 @@ namespace Google.Analytics.Admin.V1Beta
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -8131,8 +9129,10 @@ namespace Google.Analytics.Admin.V1Beta
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -8180,6 +9180,10 @@ namespace Google.Analytics.Admin.V1Beta
     }
 
     public partial class ListConversionEventsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListKeyEventsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -8255,6 +9259,14 @@ namespace Google.Analytics.Admin.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ConversionEvent> GetEnumerator() => ConversionEvents.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListKeyEventsResponse : gaxgrpc::IPageResponse<KeyEvent>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<KeyEvent> GetEnumerator() => KeyEvents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

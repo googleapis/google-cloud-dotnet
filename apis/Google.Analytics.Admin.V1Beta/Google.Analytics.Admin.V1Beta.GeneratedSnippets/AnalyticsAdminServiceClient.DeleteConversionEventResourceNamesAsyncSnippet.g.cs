@@ -37,7 +37,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ConversionEventName name = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]");
             // Make the request
+#pragma warning disable CS0612
             await analyticsAdminServiceClient.DeleteConversionEventAsync(name);
+#pragma warning restore CS0612
         }
     }
     // [END analyticsadmin_v1beta_generated_AnalyticsAdminService_DeleteConversionEvent_async_flattened_resourceNames]

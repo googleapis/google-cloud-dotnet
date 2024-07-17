@@ -2114,6 +2114,234 @@ namespace Google.Analytics.Admin.V1Beta
         public static bool operator !=(ConversionEventName a, ConversionEventName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>KeyEvent</c> resource.</summary>
+    public sealed partial class KeyEventName : gax::IResourceName, sys::IEquatable<KeyEventName>
+    {
+        /// <summary>The possible contents of <see cref="KeyEventName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>properties/{property}/keyEvents/{key_event}</c>.</summary>
+            PropertyKeyEvent = 1,
+        }
+
+        private static gax::PathTemplate s_propertyKeyEvent = new gax::PathTemplate("properties/{property}/keyEvents/{key_event}");
+
+        /// <summary>Creates a <see cref="KeyEventName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="KeyEventName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// .
+        /// </returns>
+        public static KeyEventName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new KeyEventName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="KeyEventName"/> with the pattern <c>properties/{property}/keyEvents/{key_event}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyEventId">The <c>KeyEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="KeyEventName"/> constructed from the provided ids.</returns>
+        public static KeyEventName FromPropertyKeyEvent(string propertyId, string keyEventId) =>
+            new KeyEventName(ResourceNameType.PropertyKeyEvent, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), keyEventId: gax::GaxPreconditions.CheckNotNullOrEmpty(keyEventId, nameof(keyEventId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="KeyEventName"/> with pattern
+        /// <c>properties/{property}/keyEvents/{key_event}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyEventId">The <c>KeyEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="KeyEventName"/> with pattern
+        /// <c>properties/{property}/keyEvents/{key_event}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string keyEventId) => FormatPropertyKeyEvent(propertyId, keyEventId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="KeyEventName"/> with pattern
+        /// <c>properties/{property}/keyEvents/{key_event}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyEventId">The <c>KeyEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="KeyEventName"/> with pattern
+        /// <c>properties/{property}/keyEvents/{key_event}</c>.
+        /// </returns>
+        public static string FormatPropertyKeyEvent(string propertyId, string keyEventId) =>
+            s_propertyKeyEvent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(keyEventId, nameof(keyEventId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="KeyEventName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/keyEvents/{key_event}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="keyEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="KeyEventName"/> if successful.</returns>
+        public static KeyEventName Parse(string keyEventName) => Parse(keyEventName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="KeyEventName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/keyEvents/{key_event}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="keyEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="KeyEventName"/> if successful.</returns>
+        public static KeyEventName Parse(string keyEventName, bool allowUnparsed) =>
+            TryParse(keyEventName, allowUnparsed, out KeyEventName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="KeyEventName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/keyEvents/{key_event}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="keyEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="KeyEventName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string keyEventName, out KeyEventName result) => TryParse(keyEventName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="KeyEventName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/keyEvents/{key_event}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="keyEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="KeyEventName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string keyEventName, bool allowUnparsed, out KeyEventName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(keyEventName, nameof(keyEventName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyKeyEvent.TryParseName(keyEventName, out resourceName))
+            {
+                result = FromPropertyKeyEvent(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(keyEventName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private KeyEventName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string keyEventId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            KeyEventId = keyEventId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="KeyEventName"/> class from the component parts of pattern
+        /// <c>properties/{property}/keyEvents/{key_event}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyEventId">The <c>KeyEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        public KeyEventName(string propertyId, string keyEventId) : this(ResourceNameType.PropertyKeyEvent, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), keyEventId: gax::GaxPreconditions.CheckNotNullOrEmpty(keyEventId, nameof(keyEventId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>KeyEvent</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string KeyEventId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyKeyEvent: return s_propertyKeyEvent.Expand(PropertyId, KeyEventId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as KeyEventName);
+
+        /// <inheritdoc/>
+        public bool Equals(KeyEventName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(KeyEventName a, KeyEventName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(KeyEventName a, KeyEventName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CustomDimension</c> resource.</summary>
     public sealed partial class CustomDimensionName : gax::IResourceName, sys::IEquatable<CustomDimensionName>
     {
@@ -2811,6 +3039,218 @@ namespace Google.Analytics.Admin.V1Beta
         public static bool operator !=(DataRetentionSettingsName a, DataRetentionSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Organization</c> resource.</summary>
+    public sealed partial class OrganizationName : gax::IResourceName, sys::IEquatable<OrganizationName>
+    {
+        /// <summary>The possible contents of <see cref="OrganizationName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>organizations/{organization}</c>.</summary>
+            Organization = 1,
+        }
+
+        private static gax::PathTemplate s_organization = new gax::PathTemplate("organizations/{organization}");
+
+        /// <summary>Creates a <see cref="OrganizationName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="OrganizationName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static OrganizationName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new OrganizationName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="OrganizationName"/> with the pattern <c>organizations/{organization}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="OrganizationName"/> constructed from the provided ids.</returns>
+        public static OrganizationName FromOrganization(string organizationId) =>
+            new OrganizationName(ResourceNameType.Organization, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="OrganizationName"/> with pattern
+        /// <c>organizations/{organization}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="OrganizationName"/> with pattern
+        /// <c>organizations/{organization}</c>.
+        /// </returns>
+        public static string Format(string organizationId) => FormatOrganization(organizationId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="OrganizationName"/> with pattern
+        /// <c>organizations/{organization}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="OrganizationName"/> with pattern
+        /// <c>organizations/{organization}</c>.
+        /// </returns>
+        public static string FormatOrganization(string organizationId) =>
+            s_organization.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="OrganizationName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>organizations/{organization}</c></description></item></list>
+        /// </remarks>
+        /// <param name="organizationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
+        public static OrganizationName Parse(string organizationName) => Parse(organizationName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="OrganizationName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>organizations/{organization}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="organizationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
+        public static OrganizationName Parse(string organizationName, bool allowUnparsed) =>
+            TryParse(organizationName, allowUnparsed, out OrganizationName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="OrganizationName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>organizations/{organization}</c></description></item></list>
+        /// </remarks>
+        /// <param name="organizationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="OrganizationName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationName, out OrganizationName result) =>
+            TryParse(organizationName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="OrganizationName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>organizations/{organization}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="organizationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="OrganizationName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationName, bool allowUnparsed, out OrganizationName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organization.TryParseName(organizationName, out resourceName))
+            {
+                result = FromOrganization(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(organizationName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private OrganizationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string organizationId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            OrganizationId = organizationId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="OrganizationName"/> class from the component parts of pattern
+        /// <c>organizations/{organization}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        public OrganizationName(string organizationId) : this(ResourceNameType.Organization, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Organization: return s_organization.Expand(OrganizationId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as OrganizationName);
+
+        /// <inheritdoc/>
+        public bool Equals(OrganizationName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(OrganizationName a, OrganizationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(OrganizationName a, OrganizationName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -2820,6 +3260,15 @@ namespace Google.Analytics.Admin.V1Beta
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::AccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OrganizationName"/>-typed view over the <see cref="GmpOrganization"/> resource name property.
+        /// </summary>
+        public OrganizationName GmpOrganizationAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(GmpOrganization) ? null : OrganizationName.Parse(GmpOrganization, allowUnparsed: true);
+            set => GmpOrganization = value?.ToString() ?? "";
         }
     }
 
@@ -2946,6 +3395,18 @@ namespace Google.Analytics.Admin.V1Beta
         public gaav::ConversionEventName ConversionEventName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::ConversionEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class KeyEvent
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
