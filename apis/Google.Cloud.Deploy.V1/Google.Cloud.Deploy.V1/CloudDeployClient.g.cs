@@ -1523,9 +1523,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeliveryPipeline` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1547,9 +1546,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeliveryPipeline` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1571,9 +1569,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeliveryPipeline` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1590,9 +1587,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeliveryPipeline` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1614,9 +1610,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeliveryPipeline` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1638,9 +1633,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeliveryPipeline` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1714,11 +1708,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `DeliveryPipeline` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `DeliveryPipeline` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `DeliveryPipeline` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1736,11 +1730,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `DeliveryPipeline` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `DeliveryPipeline` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `DeliveryPipeline` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1758,11 +1752,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `DeliveryPipeline` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `DeliveryPipeline` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `DeliveryPipeline` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1827,7 +1821,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeliveryPipeline.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeliveryPipeline` to delete. Format should be
+        /// Required. The name of the `DeliveryPipeline` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1842,7 +1836,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeliveryPipeline.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeliveryPipeline` to delete. Format should be
+        /// Required. The name of the `DeliveryPipeline` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1857,7 +1851,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeliveryPipeline.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeliveryPipeline` to delete. Format should be
+        /// Required. The name of the `DeliveryPipeline` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1869,7 +1863,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeliveryPipeline.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeliveryPipeline` to delete. Format should be
+        /// Required. The name of the `DeliveryPipeline` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1884,7 +1878,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeliveryPipeline.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeliveryPipeline` to delete. Format should be
+        /// Required. The name of the `DeliveryPipeline` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1899,7 +1893,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeliveryPipeline.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeliveryPipeline` to delete. Format should be
+        /// Required. The name of the `DeliveryPipeline` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2056,8 +2050,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a `Rollout` to roll back the specified target.
         /// </summary>
         /// <param name="name">
-        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
-        /// created. Format should be
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` must be
+        /// created. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="targetId">
@@ -2080,8 +2074,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a `Rollout` to roll back the specified target.
         /// </summary>
         /// <param name="name">
-        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
-        /// created. Format should be
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` must be
+        /// created. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="targetId">
@@ -2104,8 +2098,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a `Rollout` to roll back the specified target.
         /// </summary>
         /// <param name="name">
-        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
-        /// created. Format should be
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` must be
+        /// created. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="targetId">
@@ -2123,8 +2117,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a `Rollout` to roll back the specified target.
         /// </summary>
         /// <param name="name">
-        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
-        /// created. Format should be
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` must be
+        /// created. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="targetId">
@@ -2147,8 +2141,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a `Rollout` to roll back the specified target.
         /// </summary>
         /// <param name="name">
-        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
-        /// created. Format should be
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` must be
+        /// created. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="targetId">
@@ -2171,8 +2165,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a `Rollout` to roll back the specified target.
         /// </summary>
         /// <param name="name">
-        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
-        /// created. Format should be
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` must be
+        /// created. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="targetId">
@@ -2354,8 +2348,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Target in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Target` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
@@ -2378,8 +2372,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Target in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Target` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
@@ -2402,8 +2396,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Target in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Target` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
@@ -2421,8 +2415,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Target in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Target` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
@@ -2445,8 +2439,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Target in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Target` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
@@ -2469,8 +2463,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Target in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Target` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
@@ -2544,11 +2538,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `Target` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// Target resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `Target` resource. The fields specified in the update_mask
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it's in the mask. If the user doesn't provide a mask then
+        /// all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2566,11 +2560,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `Target` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// Target resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `Target` resource. The fields specified in the update_mask
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it's in the mask. If the user doesn't provide a mask then
+        /// all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2588,11 +2582,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `Target` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// Target resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `Target` resource. The fields specified in the update_mask
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it's in the mask. If the user doesn't provide a mask then
+        /// all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2656,7 +2650,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Target.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Target` to delete. Format should be
+        /// Required. The name of the `Target` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2671,7 +2665,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Target.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Target` to delete. Format should be
+        /// Required. The name of the `Target` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2686,7 +2680,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Target.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Target` to delete. Format should be
+        /// Required. The name of the `Target` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2698,7 +2692,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Target.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Target` to delete. Format should be
+        /// Required. The name of the `Target` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2713,7 +2707,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Target.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Target` to delete. Format should be
+        /// Required. The name of the `Target` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2728,7 +2722,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Target.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Target` to delete. Format should be
+        /// Required. The name of the `Target` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3023,9 +3017,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new CustomTargetType in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `CustomTargetType` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
         /// Required. The `CustomTargetType` to create.
@@ -3047,9 +3040,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new CustomTargetType in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `CustomTargetType` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
         /// Required. The `CustomTargetType` to create.
@@ -3071,9 +3063,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new CustomTargetType in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `CustomTargetType` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
         /// Required. The `CustomTargetType` to create.
@@ -3090,9 +3081,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new CustomTargetType in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `CustomTargetType` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
         /// Required. The `CustomTargetType` to create.
@@ -3114,9 +3104,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new CustomTargetType in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `CustomTargetType` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
         /// Required. The `CustomTargetType` to create.
@@ -3138,9 +3127,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new CustomTargetType in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `CustomTargetType` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
         /// Required. The `CustomTargetType` to create.
@@ -3214,11 +3202,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `CustomTargetType` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `CustomTargetType` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `CustomTargetType` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3236,11 +3224,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `CustomTargetType` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `CustomTargetType` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `CustomTargetType` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3258,11 +3246,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `CustomTargetType` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `CustomTargetType` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `CustomTargetType` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3693,8 +3681,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Release in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Release` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Release` is created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
@@ -3717,8 +3705,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Release in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Release` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Release` is created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
@@ -3741,8 +3729,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Release in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Release` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Release` is created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
@@ -3760,8 +3748,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Release in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Release` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Release` is created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
@@ -3784,8 +3772,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Release in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Release` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Release` is created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
@@ -3808,8 +3796,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Release in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Release` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Release` is created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
@@ -3992,9 +3980,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeployPolicy in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeployPolicy` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeployPolicy` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deployPolicy">
         /// Required. The `DeployPolicy` to create.
@@ -4016,9 +4003,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeployPolicy in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeployPolicy` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeployPolicy` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deployPolicy">
         /// Required. The `DeployPolicy` to create.
@@ -4040,9 +4026,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeployPolicy in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeployPolicy` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeployPolicy` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deployPolicy">
         /// Required. The `DeployPolicy` to create.
@@ -4059,9 +4044,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeployPolicy in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeployPolicy` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeployPolicy` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deployPolicy">
         /// Required. The `DeployPolicy` to create.
@@ -4083,9 +4067,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeployPolicy in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeployPolicy` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeployPolicy` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deployPolicy">
         /// Required. The `DeployPolicy` to create.
@@ -4107,9 +4090,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeployPolicy in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeployPolicy` should be
-        /// created. Format should be
-        /// `projects/{project_id}/locations/{location_name}`.
+        /// Required. The parent collection in which the `DeployPolicy` must be
+        /// created. The format is `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deployPolicy">
         /// Required. The `DeployPolicy` to create.
@@ -4183,11 +4165,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `DeployPolicy` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `DeployPolicy` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `DeployPolicy` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4205,11 +4187,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `DeployPolicy` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `DeployPolicy` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `DeployPolicy` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4227,11 +4209,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `DeployPolicy` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `DeployPolicy` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `DeployPolicy` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4296,7 +4278,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeployPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeployPolicy` to delete. Format should be
+        /// Required. The name of the `DeployPolicy` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deployPolicies/{deploy_policy_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4311,7 +4293,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeployPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeployPolicy` to delete. Format should be
+        /// Required. The name of the `DeployPolicy` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deployPolicies/{deploy_policy_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4326,7 +4308,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeployPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeployPolicy` to delete. Format should be
+        /// Required. The name of the `DeployPolicy` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deployPolicies/{deploy_policy_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4338,7 +4320,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeployPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeployPolicy` to delete. Format should be
+        /// Required. The name of the `DeployPolicy` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deployPolicies/{deploy_policy_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4353,7 +4335,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeployPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeployPolicy` to delete. Format should be
+        /// Required. The name of the `DeployPolicy` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deployPolicies/{deploy_policy_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4368,7 +4350,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single DeployPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `DeployPolicy` to delete. Format should be
+        /// Required. The name of the `DeployPolicy` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deployPolicies/{deploy_policy_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5242,8 +5224,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Rollout in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Rollout` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Rollout` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
@@ -5266,8 +5248,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Rollout in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Rollout` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Rollout` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
@@ -5290,8 +5272,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Rollout in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Rollout` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Rollout` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
@@ -5309,8 +5291,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Rollout in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Rollout` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Rollout` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
@@ -5333,8 +5315,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Rollout in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Rollout` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Rollout` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
@@ -5357,8 +5339,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Rollout in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Rollout` should be created.
-        /// Format should be
+        /// Required. The parent collection in which the `Rollout` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
@@ -6180,8 +6162,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Automation in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Automation` should be
-        /// created. Format should be
+        /// Required. The parent collection in which the `Automation` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="automation">
@@ -6204,8 +6186,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Automation in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Automation` should be
-        /// created. Format should be
+        /// Required. The parent collection in which the `Automation` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="automation">
@@ -6228,8 +6210,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Automation in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Automation` should be
-        /// created. Format should be
+        /// Required. The parent collection in which the `Automation` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="automation">
@@ -6247,8 +6229,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Automation in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Automation` should be
-        /// created. Format should be
+        /// Required. The parent collection in which the `Automation` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="automation">
@@ -6271,8 +6253,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Automation in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Automation` should be
-        /// created. Format should be
+        /// Required. The parent collection in which the `Automation` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="automation">
@@ -6295,8 +6277,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new Automation in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `Automation` should be
-        /// created. Format should be
+        /// Required. The parent collection in which the `Automation` must be created.
+        /// The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="automation">
@@ -6370,11 +6352,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `Automation` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `Automation` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `Automation` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6392,11 +6374,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `Automation` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `Automation` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `Automation` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6414,11 +6396,11 @@ namespace Google.Cloud.Deploy.V1
         /// Required. The `Automation` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// `Automation` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it's in the mask. If the
-        /// user doesn't provide a mask then all fields are overwritten.
+        /// Required. Field mask is used to specify the fields to be overwritten by the
+        /// update in the `Automation` resource. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field
+        /// will be overwritten if it's in the mask. If the user doesn't provide a mask
+        /// then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6482,7 +6464,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Automation resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Automation` to delete. Format should be
+        /// Required. The name of the `Automation` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6497,7 +6479,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Automation resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Automation` to delete. Format should be
+        /// Required. The name of the `Automation` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6512,7 +6494,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Automation resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Automation` to delete. Format should be
+        /// Required. The name of the `Automation` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6524,7 +6506,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Automation resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Automation` to delete. Format should be
+        /// Required. The name of the `Automation` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6539,7 +6521,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Automation resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Automation` to delete. Format should be
+        /// Required. The name of the `Automation` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6554,7 +6536,7 @@ namespace Google.Cloud.Deploy.V1
         /// Deletes a single Automation resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the `Automation` to delete. Format should be
+        /// Required. The name of the `Automation` to delete. The format is
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
