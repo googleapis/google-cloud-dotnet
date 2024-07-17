@@ -305,6 +305,39 @@
         }
       }
     },
+    "EvaluationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EvaluationServiceClient",
+          "rpcs": {
+            "CreateEvaluation": {
+              "methods": [
+                "CreateEvaluation",
+                "CreateEvaluationAsync"
+              ]
+            },
+            "GetEvaluation": {
+              "methods": [
+                "GetEvaluation",
+                "GetEvaluationAsync"
+              ]
+            },
+            "ListEvaluationResults": {
+              "methods": [
+                "ListEvaluationResults",
+                "ListEvaluationResultsAsync"
+              ]
+            },
+            "ListEvaluations": {
+              "methods": [
+                "ListEvaluations",
+                "ListEvaluationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "GroundedGenerationService": {
       "clients": {
         "grpc": {
@@ -359,6 +392,90 @@
               "methods": [
                 "Recommend",
                 "RecommendAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SampleQueryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SampleQueryServiceClient",
+          "rpcs": {
+            "CreateSampleQuery": {
+              "methods": [
+                "CreateSampleQuery",
+                "CreateSampleQueryAsync"
+              ]
+            },
+            "DeleteSampleQuery": {
+              "methods": [
+                "DeleteSampleQuery",
+                "DeleteSampleQueryAsync"
+              ]
+            },
+            "GetSampleQuery": {
+              "methods": [
+                "GetSampleQuery",
+                "GetSampleQueryAsync"
+              ]
+            },
+            "ImportSampleQueries": {
+              "methods": [
+                "ImportSampleQueries",
+                "ImportSampleQueriesAsync"
+              ]
+            },
+            "ListSampleQueries": {
+              "methods": [
+                "ListSampleQueries",
+                "ListSampleQueriesAsync"
+              ]
+            },
+            "UpdateSampleQuery": {
+              "methods": [
+                "UpdateSampleQuery",
+                "UpdateSampleQueryAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SampleQuerySetService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SampleQuerySetServiceClient",
+          "rpcs": {
+            "CreateSampleQuerySet": {
+              "methods": [
+                "CreateSampleQuerySet",
+                "CreateSampleQuerySetAsync"
+              ]
+            },
+            "DeleteSampleQuerySet": {
+              "methods": [
+                "DeleteSampleQuerySet",
+                "DeleteSampleQuerySetAsync"
+              ]
+            },
+            "GetSampleQuerySet": {
+              "methods": [
+                "GetSampleQuerySet",
+                "GetSampleQuerySetAsync"
+              ]
+            },
+            "ListSampleQuerySets": {
+              "methods": [
+                "ListSampleQuerySets",
+                "ListSampleQuerySetsAsync"
+              ]
+            },
+            "UpdateSampleQuerySet": {
+              "methods": [
+                "UpdateSampleQuerySet",
+                "UpdateSampleQuerySetAsync"
               ]
             }
           }

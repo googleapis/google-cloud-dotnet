@@ -63,4 +63,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class ImportSampleQueriesRequest
+    {
+        /// <summary>
+        /// <see cref="SampleQuerySetName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SampleQuerySetName ParentAsSampleQuerySetName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SampleQuerySetName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

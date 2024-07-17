@@ -10694,6 +10694,1234 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_GetEvaluation_sync",
+      "title": "GetEvaluationRequestObject",
+      "description": "Snippet for GetEvaluation",
+      "file": "EvaluationServiceClient.GetEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluation",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.GetEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_GetEvaluation_async",
+      "title": "GetEvaluationRequestObjectAsync",
+      "description": "Snippet for GetEvaluationAsync",
+      "file": "EvaluationServiceClient.GetEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluationAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.GetEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.GetEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_GetEvaluation_sync_flattened",
+      "title": "GetEvaluation",
+      "description": "Snippet for GetEvaluation",
+      "file": "EvaluationServiceClient.GetEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluation",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.GetEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_GetEvaluation_async_flattened",
+      "title": "GetEvaluationAsync",
+      "description": "Snippet for GetEvaluationAsync",
+      "file": "EvaluationServiceClient.GetEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluationAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.GetEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.GetEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_GetEvaluation_sync_flattened_resourceNames",
+      "title": "GetEvaluationResourceNames",
+      "description": "Snippet for GetEvaluation",
+      "file": "EvaluationServiceClient.GetEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluation",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.GetEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_GetEvaluation_async_flattened_resourceNames",
+      "title": "GetEvaluationResourceNamesAsync",
+      "description": "Snippet for GetEvaluationAsync",
+      "file": "EvaluationServiceClient.GetEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluationAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.GetEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.GetEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluations_sync",
+      "title": "ListEvaluationsRequestObject",
+      "description": "Snippet for ListEvaluations",
+      "file": "EvaluationServiceClient.ListEvaluationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluations",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluations_async",
+      "title": "ListEvaluationsRequestObjectAsync",
+      "description": "Snippet for ListEvaluationsAsync",
+      "file": "EvaluationServiceClient.ListEvaluationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluations_sync_flattened",
+      "title": "ListEvaluations",
+      "description": "Snippet for ListEvaluations",
+      "file": "EvaluationServiceClient.ListEvaluationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluations",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluations_async_flattened",
+      "title": "ListEvaluationsAsync",
+      "description": "Snippet for ListEvaluationsAsync",
+      "file": "EvaluationServiceClient.ListEvaluationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluations_sync_flattened_resourceNames",
+      "title": "ListEvaluationsResourceNames",
+      "description": "Snippet for ListEvaluations",
+      "file": "EvaluationServiceClient.ListEvaluationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluations",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluations_async_flattened_resourceNames",
+      "title": "ListEvaluationsResourceNamesAsync",
+      "description": "Snippet for ListEvaluationsAsync",
+      "file": "EvaluationServiceClient.ListEvaluationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Evaluation>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_CreateEvaluation_sync",
+      "title": "CreateEvaluationRequestObject",
+      "description": "Snippet for CreateEvaluation",
+      "file": "EvaluationServiceClient.CreateEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluation",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.CreateEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation, Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.CreateEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_CreateEvaluation_async",
+      "title": "CreateEvaluationRequestObjectAsync",
+      "description": "Snippet for CreateEvaluationAsync",
+      "file": "EvaluationServiceClient.CreateEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluationAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.CreateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation, Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.CreateEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_CreateEvaluation_sync_flattened",
+      "title": "CreateEvaluation",
+      "description": "Snippet for CreateEvaluation",
+      "file": "EvaluationServiceClient.CreateEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluation",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.CreateEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation, Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.CreateEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_CreateEvaluation_async_flattened",
+      "title": "CreateEvaluationAsync",
+      "description": "Snippet for CreateEvaluationAsync",
+      "file": "EvaluationServiceClient.CreateEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluationAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.CreateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation, Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.CreateEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_CreateEvaluation_sync_flattened_resourceNames",
+      "title": "CreateEvaluationResourceNames",
+      "description": "Snippet for CreateEvaluation",
+      "file": "EvaluationServiceClient.CreateEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluation",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.CreateEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation, Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.CreateEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_CreateEvaluation_async_flattened_resourceNames",
+      "title": "CreateEvaluationResourceNamesAsync",
+      "description": "Snippet for CreateEvaluationAsync",
+      "file": "EvaluationServiceClient.CreateEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluationAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.CreateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Evaluation, Google.Cloud.DiscoveryEngine.V1Beta.CreateEvaluationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.CreateEvaluation",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluationResults_sync",
+      "title": "ListEvaluationResultsRequestObject",
+      "description": "Snippet for ListEvaluationResults",
+      "file": "EvaluationServiceClient.ListEvaluationResultsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationResults",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse+Types+EvaluationResult>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluationResults",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluationResults_async",
+      "title": "ListEvaluationResultsRequestObjectAsync",
+      "description": "Snippet for ListEvaluationResultsAsync",
+      "file": "EvaluationServiceClient.ListEvaluationResultsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationResultsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse+Types+EvaluationResult>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluationResults",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluationResults_sync_flattened",
+      "title": "ListEvaluationResults",
+      "description": "Snippet for ListEvaluationResults",
+      "file": "EvaluationServiceClient.ListEvaluationResultsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationResults",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationResults",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse+Types+EvaluationResult>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluationResults",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluationResults_async_flattened",
+      "title": "ListEvaluationResultsAsync",
+      "description": "Snippet for ListEvaluationResultsAsync",
+      "file": "EvaluationServiceClient.ListEvaluationResultsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationResultsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse+Types+EvaluationResult>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluationResults",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluationResults_sync_flattened_resourceNames",
+      "title": "ListEvaluationResultsResourceNames",
+      "description": "Snippet for ListEvaluationResults",
+      "file": "EvaluationServiceClient.ListEvaluationResultsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationResults",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationName",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse+Types+EvaluationResult>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluationResults",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_EvaluationService_ListEvaluationResults_async_flattened_resourceNames",
+      "title": "ListEvaluationResultsResourceNamesAsync",
+      "description": "Snippet for ListEvaluationResultsAsync",
+      "file": "EvaluationServiceClient.ListEvaluationResultsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationResultsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient.ListEvaluationResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationName",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse+Types+EvaluationResult>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvaluationResults",
+          "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1beta_generated_GroundedGenerationService_CheckGrounding_sync",
       "title": "CheckGroundingRequestObject",
       "description": "Snippet for CheckGrounding",
@@ -11267,6 +12495,2921 @@
         {
           "start": 36,
           "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_GetSampleQuery_sync",
+      "title": "GetSampleQueryRequestObject",
+      "description": "Snippet for GetSampleQuery",
+      "file": "SampleQueryServiceClient.GetSampleQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.GetSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.GetSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_GetSampleQuery_async",
+      "title": "GetSampleQueryRequestObjectAsync",
+      "description": "Snippet for GetSampleQueryAsync",
+      "file": "SampleQueryServiceClient.GetSampleQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.GetSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.GetSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_GetSampleQuery_sync_flattened",
+      "title": "GetSampleQuery",
+      "description": "Snippet for GetSampleQuery",
+      "file": "SampleQueryServiceClient.GetSampleQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.GetSampleQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.GetSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_GetSampleQuery_async_flattened",
+      "title": "GetSampleQueryAsync",
+      "description": "Snippet for GetSampleQueryAsync",
+      "file": "SampleQueryServiceClient.GetSampleQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.GetSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.GetSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_GetSampleQuery_sync_flattened_resourceNames",
+      "title": "GetSampleQueryResourceNames",
+      "description": "Snippet for GetSampleQuery",
+      "file": "SampleQueryServiceClient.GetSampleQueryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.GetSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.GetSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_GetSampleQuery_async_flattened_resourceNames",
+      "title": "GetSampleQueryResourceNamesAsync",
+      "description": "Snippet for GetSampleQueryAsync",
+      "file": "SampleQueryServiceClient.GetSampleQueryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.GetSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.GetSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ListSampleQueries_sync",
+      "title": "ListSampleQueriesRequestObject",
+      "description": "Snippet for ListSampleQueries",
+      "file": "SampleQueryServiceClient.ListSampleQueriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQueries",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ListSampleQueries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ListSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ListSampleQueries_async",
+      "title": "ListSampleQueriesRequestObjectAsync",
+      "description": "Snippet for ListSampleQueriesAsync",
+      "file": "SampleQueryServiceClient.ListSampleQueriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQueriesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ListSampleQueriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ListSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ListSampleQueries_sync_flattened",
+      "title": "ListSampleQueries",
+      "description": "Snippet for ListSampleQueries",
+      "file": "SampleQueryServiceClient.ListSampleQueriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQueries",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ListSampleQueries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ListSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ListSampleQueries_async_flattened",
+      "title": "ListSampleQueriesAsync",
+      "description": "Snippet for ListSampleQueriesAsync",
+      "file": "SampleQueryServiceClient.ListSampleQueriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQueriesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ListSampleQueriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ListSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ListSampleQueries_sync_flattened_resourceNames",
+      "title": "ListSampleQueriesResourceNames",
+      "description": "Snippet for ListSampleQueries",
+      "file": "SampleQueryServiceClient.ListSampleQueriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQueries",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ListSampleQueries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ListSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ListSampleQueries_async_flattened_resourceNames",
+      "title": "ListSampleQueriesResourceNamesAsync",
+      "description": "Snippet for ListSampleQueriesAsync",
+      "file": "SampleQueryServiceClient.ListSampleQueriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQueriesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ListSampleQueriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ListSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_CreateSampleQuery_sync",
+      "title": "CreateSampleQueryRequestObject",
+      "description": "Snippet for CreateSampleQuery",
+      "file": "SampleQueryServiceClient.CreateSampleQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.CreateSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.CreateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_CreateSampleQuery_async",
+      "title": "CreateSampleQueryRequestObjectAsync",
+      "description": "Snippet for CreateSampleQueryAsync",
+      "file": "SampleQueryServiceClient.CreateSampleQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.CreateSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.CreateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_CreateSampleQuery_sync_flattened",
+      "title": "CreateSampleQuery",
+      "description": "Snippet for CreateSampleQuery",
+      "file": "SampleQueryServiceClient.CreateSampleQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.CreateSampleQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+            "name": "sampleQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.CreateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_CreateSampleQuery_async_flattened",
+      "title": "CreateSampleQueryAsync",
+      "description": "Snippet for CreateSampleQueryAsync",
+      "file": "SampleQueryServiceClient.CreateSampleQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.CreateSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+            "name": "sampleQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.CreateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_CreateSampleQuery_sync_flattened_resourceNames",
+      "title": "CreateSampleQueryResourceNames",
+      "description": "Snippet for CreateSampleQuery",
+      "file": "SampleQueryServiceClient.CreateSampleQueryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.CreateSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+            "name": "sampleQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.CreateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_CreateSampleQuery_async_flattened_resourceNames",
+      "title": "CreateSampleQueryResourceNamesAsync",
+      "description": "Snippet for CreateSampleQueryAsync",
+      "file": "SampleQueryServiceClient.CreateSampleQueryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.CreateSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+            "name": "sampleQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.CreateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_UpdateSampleQuery_sync",
+      "title": "UpdateSampleQueryRequestObject",
+      "description": "Snippet for UpdateSampleQuery",
+      "file": "SampleQueryServiceClient.UpdateSampleQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.UpdateSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.UpdateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_UpdateSampleQuery_async",
+      "title": "UpdateSampleQueryRequestObjectAsync",
+      "description": "Snippet for UpdateSampleQueryAsync",
+      "file": "SampleQueryServiceClient.UpdateSampleQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.UpdateSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.UpdateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_UpdateSampleQuery_sync_flattened",
+      "title": "UpdateSampleQuery",
+      "description": "Snippet for UpdateSampleQuery",
+      "file": "SampleQueryServiceClient.UpdateSampleQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.UpdateSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+            "name": "sampleQuery"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.UpdateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_UpdateSampleQuery_async_flattened",
+      "title": "UpdateSampleQueryAsync",
+      "description": "Snippet for UpdateSampleQueryAsync",
+      "file": "SampleQueryServiceClient.UpdateSampleQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.UpdateSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery",
+            "name": "sampleQuery"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuery>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.UpdateSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_DeleteSampleQuery_sync",
+      "title": "DeleteSampleQueryRequestObject",
+      "description": "Snippet for DeleteSampleQuery",
+      "file": "SampleQueryServiceClient.DeleteSampleQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.DeleteSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.DeleteSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_DeleteSampleQuery_async",
+      "title": "DeleteSampleQueryRequestObjectAsync",
+      "description": "Snippet for DeleteSampleQueryAsync",
+      "file": "SampleQueryServiceClient.DeleteSampleQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.DeleteSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSampleQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.DeleteSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_DeleteSampleQuery_sync_flattened",
+      "title": "DeleteSampleQuery",
+      "description": "Snippet for DeleteSampleQuery",
+      "file": "SampleQueryServiceClient.DeleteSampleQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.DeleteSampleQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.DeleteSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_DeleteSampleQuery_async_flattened",
+      "title": "DeleteSampleQueryAsync",
+      "description": "Snippet for DeleteSampleQueryAsync",
+      "file": "SampleQueryServiceClient.DeleteSampleQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.DeleteSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.DeleteSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_DeleteSampleQuery_sync_flattened_resourceNames",
+      "title": "DeleteSampleQueryResourceNames",
+      "description": "Snippet for DeleteSampleQuery",
+      "file": "SampleQueryServiceClient.DeleteSampleQueryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.DeleteSampleQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.DeleteSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_DeleteSampleQuery_async_flattened_resourceNames",
+      "title": "DeleteSampleQueryResourceNamesAsync",
+      "description": "Snippet for DeleteSampleQueryAsync",
+      "file": "SampleQueryServiceClient.DeleteSampleQueryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.DeleteSampleQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.DeleteSampleQuery",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ImportSampleQueries_sync",
+      "title": "ImportSampleQueriesRequestObject",
+      "description": "Snippet for ImportSampleQueries",
+      "file": "SampleQueryServiceClient.ImportSampleQueriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportSampleQueries",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ImportSampleQueries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportSampleQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportSampleQueriesMetadata>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ImportSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ImportSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQueryService_ImportSampleQueries_async",
+      "title": "ImportSampleQueriesRequestObjectAsync",
+      "description": "Snippet for ImportSampleQueriesAsync",
+      "file": "SampleQueryServiceClient.ImportSampleQueriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportSampleQueriesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient.ImportSampleQueriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportSampleQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportSampleQueriesResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportSampleQueriesMetadata>>",
+        "client": {
+          "shortName": "SampleQueryServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryServiceClient"
+        },
+        "method": {
+          "shortName": "ImportSampleQueries",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService.ImportSampleQueries",
+          "service": {
+            "shortName": "SampleQueryService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQueryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_GetSampleQuerySet_sync",
+      "title": "GetSampleQuerySetRequestObject",
+      "description": "Snippet for GetSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.GetSampleQuerySetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.GetSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.GetSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_GetSampleQuerySet_async",
+      "title": "GetSampleQuerySetRequestObjectAsync",
+      "description": "Snippet for GetSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.GetSampleQuerySetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.GetSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.GetSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_GetSampleQuerySet_sync_flattened",
+      "title": "GetSampleQuerySet",
+      "description": "Snippet for GetSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.GetSampleQuerySetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.GetSampleQuerySet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.GetSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_GetSampleQuerySet_async_flattened",
+      "title": "GetSampleQuerySetAsync",
+      "description": "Snippet for GetSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.GetSampleQuerySetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.GetSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.GetSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_GetSampleQuerySet_sync_flattened_resourceNames",
+      "title": "GetSampleQuerySetResourceNames",
+      "description": "Snippet for GetSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.GetSampleQuerySetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.GetSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.GetSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_GetSampleQuerySet_async_flattened_resourceNames",
+      "title": "GetSampleQuerySetResourceNamesAsync",
+      "description": "Snippet for GetSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.GetSampleQuerySetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.GetSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.GetSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_ListSampleQuerySets_sync",
+      "title": "ListSampleQuerySetsRequestObject",
+      "description": "Snippet for ListSampleQuerySets",
+      "file": "SampleQuerySetServiceClient.ListSampleQuerySetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQuerySets",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.ListSampleQuerySets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQuerySets",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.ListSampleQuerySets",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_ListSampleQuerySets_async",
+      "title": "ListSampleQuerySetsRequestObjectAsync",
+      "description": "Snippet for ListSampleQuerySetsAsync",
+      "file": "SampleQuerySetServiceClient.ListSampleQuerySetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQuerySetsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.ListSampleQuerySetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQuerySets",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.ListSampleQuerySets",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_ListSampleQuerySets_sync_flattened",
+      "title": "ListSampleQuerySets",
+      "description": "Snippet for ListSampleQuerySets",
+      "file": "SampleQuerySetServiceClient.ListSampleQuerySetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQuerySets",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.ListSampleQuerySets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQuerySets",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.ListSampleQuerySets",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_ListSampleQuerySets_async_flattened",
+      "title": "ListSampleQuerySetsAsync",
+      "description": "Snippet for ListSampleQuerySetsAsync",
+      "file": "SampleQuerySetServiceClient.ListSampleQuerySetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQuerySetsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.ListSampleQuerySetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQuerySets",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.ListSampleQuerySets",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_ListSampleQuerySets_sync_flattened_resourceNames",
+      "title": "ListSampleQuerySetsResourceNames",
+      "description": "Snippet for ListSampleQuerySets",
+      "file": "SampleQuerySetServiceClient.ListSampleQuerySetsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQuerySets",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.ListSampleQuerySets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQuerySets",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.ListSampleQuerySets",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_ListSampleQuerySets_async_flattened_resourceNames",
+      "title": "ListSampleQuerySetsResourceNamesAsync",
+      "description": "Snippet for ListSampleQuerySetsAsync",
+      "file": "SampleQuerySetServiceClient.ListSampleQuerySetsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSampleQuerySetsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.ListSampleQuerySetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSampleQuerySetsResponse, Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSampleQuerySets",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.ListSampleQuerySets",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_CreateSampleQuerySet_sync",
+      "title": "CreateSampleQuerySetRequestObject",
+      "description": "Snippet for CreateSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.CreateSampleQuerySetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.CreateSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.CreateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_CreateSampleQuerySet_async",
+      "title": "CreateSampleQuerySetRequestObjectAsync",
+      "description": "Snippet for CreateSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.CreateSampleQuerySetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.CreateSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.CreateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_CreateSampleQuerySet_sync_flattened",
+      "title": "CreateSampleQuerySet",
+      "description": "Snippet for CreateSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.CreateSampleQuerySetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.CreateSampleQuerySet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+            "name": "sampleQuerySet"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQuerySetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.CreateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_CreateSampleQuerySet_async_flattened",
+      "title": "CreateSampleQuerySetAsync",
+      "description": "Snippet for CreateSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.CreateSampleQuerySetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.CreateSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+            "name": "sampleQuerySet"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQuerySetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.CreateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_CreateSampleQuerySet_sync_flattened_resourceNames",
+      "title": "CreateSampleQuerySetResourceNames",
+      "description": "Snippet for CreateSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.CreateSampleQuerySetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.CreateSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+            "name": "sampleQuerySet"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQuerySetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.CreateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_CreateSampleQuerySet_async_flattened_resourceNames",
+      "title": "CreateSampleQuerySetResourceNamesAsync",
+      "description": "Snippet for CreateSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.CreateSampleQuerySetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.CreateSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+            "name": "sampleQuerySet"
+          },
+          {
+            "type": "System.String",
+            "name": "sampleQuerySetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.CreateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_UpdateSampleQuerySet_sync",
+      "title": "UpdateSampleQuerySetRequestObject",
+      "description": "Snippet for UpdateSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.UpdateSampleQuerySetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.UpdateSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.UpdateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_UpdateSampleQuerySet_async",
+      "title": "UpdateSampleQuerySetRequestObjectAsync",
+      "description": "Snippet for UpdateSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.UpdateSampleQuerySetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.UpdateSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.UpdateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_UpdateSampleQuerySet_sync_flattened",
+      "title": "UpdateSampleQuerySet",
+      "description": "Snippet for UpdateSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.UpdateSampleQuerySetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.UpdateSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+            "name": "sampleQuerySet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.UpdateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_UpdateSampleQuerySet_async_flattened",
+      "title": "UpdateSampleQuerySetAsync",
+      "description": "Snippet for UpdateSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.UpdateSampleQuerySetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.UpdateSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet",
+            "name": "sampleQuerySet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySet>",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.UpdateSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_DeleteSampleQuerySet_sync",
+      "title": "DeleteSampleQuerySetRequestObject",
+      "description": "Snippet for DeleteSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.DeleteSampleQuerySetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.DeleteSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.DeleteSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_DeleteSampleQuerySet_async",
+      "title": "DeleteSampleQuerySetRequestObjectAsync",
+      "description": "Snippet for DeleteSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.DeleteSampleQuerySetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.DeleteSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSampleQuerySetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.DeleteSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_DeleteSampleQuerySet_sync_flattened",
+      "title": "DeleteSampleQuerySet",
+      "description": "Snippet for DeleteSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.DeleteSampleQuerySetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.DeleteSampleQuerySet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.DeleteSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_DeleteSampleQuerySet_async_flattened",
+      "title": "DeleteSampleQuerySetAsync",
+      "description": "Snippet for DeleteSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.DeleteSampleQuerySetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.DeleteSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.DeleteSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_DeleteSampleQuerySet_sync_flattened_resourceNames",
+      "title": "DeleteSampleQuerySetResourceNames",
+      "description": "Snippet for DeleteSampleQuerySet",
+      "file": "SampleQuerySetServiceClient.DeleteSampleQuerySetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuerySet",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.DeleteSampleQuerySet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.DeleteSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SampleQuerySetService_DeleteSampleQuerySet_async_flattened_resourceNames",
+      "title": "DeleteSampleQuerySetResourceNamesAsync",
+      "description": "Snippet for DeleteSampleQuerySetAsync",
+      "file": "SampleQuerySetServiceClient.DeleteSampleQuerySetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSampleQuerySetAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient.DeleteSampleQuerySetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SampleQuerySetServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SampleQuerySetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSampleQuerySet",
+          "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService.DeleteSampleQuerySet",
+          "service": {
+            "shortName": "SampleQuerySetService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SampleQuerySetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
