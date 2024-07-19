@@ -82,49 +82,55 @@ namespace Google.Cloud.Bigtable.V2 {
             "aXRpb24SNwoQcHJlZGljYXRlX2ZpbHRlchgBIAEoCzIdLmdvb2dsZS5iaWd0",
             "YWJsZS52Mi5Sb3dGaWx0ZXISMgoLdHJ1ZV9maWx0ZXIYAiABKAsyHS5nb29n",
             "bGUuYmlndGFibGUudjIuUm93RmlsdGVyEjMKDGZhbHNlX2ZpbHRlchgDIAEo",
-            "CzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXJCCAoGZmlsdGVyIrgG",
+            "CzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXJCCAoGZmlsdGVyIq0I",
             "CghNdXRhdGlvbhI4CghzZXRfY2VsbBgBIAEoCzIkLmdvb2dsZS5iaWd0YWJs",
             "ZS52Mi5NdXRhdGlvbi5TZXRDZWxsSAASPQoLYWRkX3RvX2NlbGwYBSABKAsy",
-            "Ji5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24uQWRkVG9DZWxsSAASSwoS",
-            "ZGVsZXRlX2Zyb21fY29sdW1uGAIgASgLMi0uZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "Lk11dGF0aW9uLkRlbGV0ZUZyb21Db2x1bW5IABJLChJkZWxldGVfZnJvbV9m",
-            "YW1pbHkYAyABKAsyLS5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24uRGVs",
-            "ZXRlRnJvbUZhbWlseUgAEkUKD2RlbGV0ZV9mcm9tX3JvdxgEIAEoCzIqLmdv",
-            "b2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbi5EZWxldGVGcm9tUm93SAAaYQoH",
-            "U2V0Q2VsbBITCgtmYW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5fcXVhbGlm",
-            "aWVyGAIgASgMEhgKEHRpbWVzdGFtcF9taWNyb3MYAyABKAMSDQoFdmFsdWUY",
-            "BCABKAwarQEKCUFkZFRvQ2VsbBITCgtmYW1pbHlfbmFtZRgBIAEoCRIzChBj",
-            "b2x1bW5fcXVhbGlmaWVyGAIgASgLMhkuZ29vZ2xlLmJpZ3RhYmxlLnYyLlZh",
-            "bHVlEiwKCXRpbWVzdGFtcBgDIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5W",
-            "YWx1ZRIoCgVpbnB1dBgEIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1",
-            "ZRp5ChBEZWxldGVGcm9tQ29sdW1uEhMKC2ZhbWlseV9uYW1lGAEgASgJEhgK",
-            "EGNvbHVtbl9xdWFsaWZpZXIYAiABKAwSNgoKdGltZV9yYW5nZRgDIAEoCzIi",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5UaW1lc3RhbXBSYW5nZRonChBEZWxldGVG",
-            "cm9tRmFtaWx5EhMKC2ZhbWlseV9uYW1lGAEgASgJGg8KDURlbGV0ZUZyb21S",
-            "b3dCCgoIbXV0YXRpb24igAEKE1JlYWRNb2RpZnlXcml0ZVJ1bGUSEwoLZmFt",
-            "aWx5X25hbWUYASABKAkSGAoQY29sdW1uX3F1YWxpZmllchgCIAEoDBIWCgxh",
-            "cHBlbmRfdmFsdWUYAyABKAxIABIaChBpbmNyZW1lbnRfYW1vdW50GAQgASgD",
-            "SABCBgoEcnVsZSJCCg9TdHJlYW1QYXJ0aXRpb24SLwoJcm93X3JhbmdlGAEg",
-            "ASgLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd1JhbmdlIlcKGFN0cmVhbUNv",
-            "bnRpbnVhdGlvblRva2VucxI7CgZ0b2tlbnMYASADKAsyKy5nb29nbGUuYmln",
-            "dGFibGUudjIuU3RyZWFtQ29udGludWF0aW9uVG9rZW4iYAoXU3RyZWFtQ29u",
-            "dGludWF0aW9uVG9rZW4SNgoJcGFydGl0aW9uGAEgASgLMiMuZ29vZ2xlLmJp",
-            "Z3RhYmxlLnYyLlN0cmVhbVBhcnRpdGlvbhINCgV0b2tlbhgCIAEoCSINCgtQ",
-            "cm90b0Zvcm1hdCJGCg5Db2x1bW5NZXRhZGF0YRIMCgRuYW1lGAEgASgJEiYK",
-            "BHR5cGUYAiABKAsyGC5nb29nbGUuYmlndGFibGUudjIuVHlwZSJCCgtQcm90",
-            "b1NjaGVtYRIzCgdjb2x1bW5zGAEgAygLMiIuZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "LkNvbHVtbk1ldGFkYXRhIlYKEVJlc3VsdFNldE1ldGFkYXRhEjcKDHByb3Rv",
-            "X3NjaGVtYRgBIAEoCzIfLmdvb2dsZS5iaWd0YWJsZS52Mi5Qcm90b1NjaGVt",
-            "YUgAQggKBnNjaGVtYSI2CglQcm90b1Jvd3MSKQoGdmFsdWVzGAIgAygLMhku",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlIiQKDlByb3RvUm93c0JhdGNoEhIK",
-            "CmJhdGNoX2RhdGEYASABKAwilgEKEFBhcnRpYWxSZXN1bHRTZXQSPgoQcHJv",
-            "dG9fcm93c19iYXRjaBgDIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5Qcm90",
-            "b1Jvd3NCYXRjaEgAEhQKDHJlc3VtZV90b2tlbhgFIAEoDBIcChRlc3RpbWF0",
-            "ZWRfYmF0Y2hfc2l6ZRgEIAEoBUIOCgxwYXJ0aWFsX3Jvd3NCswEKFmNvbS5n",
-            "b29nbGUuYmlndGFibGUudjJCCURhdGFQcm90b1ABWjhjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2JpZ3RhYmxlL2FwaXYyL2JpZ3RhYmxlcGI7YmlndGFibGVwYqoC",
-            "GEdvb2dsZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0",
-            "YWJsZVxWMuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
+            "Ji5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24uQWRkVG9DZWxsSAASQQoN",
+            "bWVyZ2VfdG9fY2VsbBgGIAEoCzIoLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRh",
+            "dGlvbi5NZXJnZVRvQ2VsbEgAEksKEmRlbGV0ZV9mcm9tX2NvbHVtbhgCIAEo",
+            "CzItLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbi5EZWxldGVGcm9tQ29s",
+            "dW1uSAASSwoSZGVsZXRlX2Zyb21fZmFtaWx5GAMgASgLMi0uZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLk11dGF0aW9uLkRlbGV0ZUZyb21GYW1pbHlIABJFCg9kZWxl",
+            "dGVfZnJvbV9yb3cYBCABKAsyKi5nb29nbGUuYmlndGFibGUudjIuTXV0YXRp",
+            "b24uRGVsZXRlRnJvbVJvd0gAGmEKB1NldENlbGwSEwoLZmFtaWx5X25hbWUY",
+            "ASABKAkSGAoQY29sdW1uX3F1YWxpZmllchgCIAEoDBIYChB0aW1lc3RhbXBf",
+            "bWljcm9zGAMgASgDEg0KBXZhbHVlGAQgASgMGq0BCglBZGRUb0NlbGwSEwoL",
+            "ZmFtaWx5X25hbWUYASABKAkSMwoQY29sdW1uX3F1YWxpZmllchgCIAEoCzIZ",
+            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIsCgl0aW1lc3RhbXAYAyABKAsy",
+            "GS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUSKAoFaW5wdXQYBCABKAsyGS5n",
+            "b29nbGUuYmlndGFibGUudjIuVmFsdWUarwEKC01lcmdlVG9DZWxsEhMKC2Zh",
+            "bWlseV9uYW1lGAEgASgJEjMKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAsyGS5n",
+            "b29nbGUuYmlndGFibGUudjIuVmFsdWUSLAoJdGltZXN0YW1wGAMgASgLMhku",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlEigKBWlucHV0GAQgASgLMhkuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlZhbHVlGnkKEERlbGV0ZUZyb21Db2x1bW4SEwoL",
+            "ZmFtaWx5X25hbWUYASABKAkSGAoQY29sdW1uX3F1YWxpZmllchgCIAEoDBI2",
+            "Cgp0aW1lX3JhbmdlGAMgASgLMiIuZ29vZ2xlLmJpZ3RhYmxlLnYyLlRpbWVz",
+            "dGFtcFJhbmdlGicKEERlbGV0ZUZyb21GYW1pbHkSEwoLZmFtaWx5X25hbWUY",
+            "ASABKAkaDwoNRGVsZXRlRnJvbVJvd0IKCghtdXRhdGlvbiKAAQoTUmVhZE1v",
+            "ZGlmeVdyaXRlUnVsZRITCgtmYW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5f",
+            "cXVhbGlmaWVyGAIgASgMEhYKDGFwcGVuZF92YWx1ZRgDIAEoDEgAEhoKEGlu",
+            "Y3JlbWVudF9hbW91bnQYBCABKANIAEIGCgRydWxlIkIKD1N0cmVhbVBhcnRp",
+            "dGlvbhIvCglyb3dfcmFuZ2UYASABKAsyHC5nb29nbGUuYmlndGFibGUudjIu",
+            "Um93UmFuZ2UiVwoYU3RyZWFtQ29udGludWF0aW9uVG9rZW5zEjsKBnRva2Vu",
+            "cxgBIAMoCzIrLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJlYW1Db250aW51YXRp",
+            "b25Ub2tlbiJgChdTdHJlYW1Db250aW51YXRpb25Ub2tlbhI2CglwYXJ0aXRp",
+            "b24YASABKAsyIy5nb29nbGUuYmlndGFibGUudjIuU3RyZWFtUGFydGl0aW9u",
+            "Eg0KBXRva2VuGAIgASgJIg0KC1Byb3RvRm9ybWF0IkYKDkNvbHVtbk1ldGFk",
+            "YXRhEgwKBG5hbWUYASABKAkSJgoEdHlwZRgCIAEoCzIYLmdvb2dsZS5iaWd0",
+            "YWJsZS52Mi5UeXBlIkIKC1Byb3RvU2NoZW1hEjMKB2NvbHVtbnMYASADKAsy",
+            "Ii5nb29nbGUuYmlndGFibGUudjIuQ29sdW1uTWV0YWRhdGEiVgoRUmVzdWx0",
+            "U2V0TWV0YWRhdGESNwoMcHJvdG9fc2NoZW1hGAEgASgLMh8uZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLlByb3RvU2NoZW1hSABCCAoGc2NoZW1hIjYKCVByb3RvUm93",
+            "cxIpCgZ2YWx1ZXMYAiADKAsyGS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUi",
+            "JAoOUHJvdG9Sb3dzQmF0Y2gSEgoKYmF0Y2hfZGF0YRgBIAEoDCKWAQoQUGFy",
+            "dGlhbFJlc3VsdFNldBI+ChBwcm90b19yb3dzX2JhdGNoGAMgASgLMiIuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlByb3RvUm93c0JhdGNoSAASFAoMcmVzdW1lX3Rv",
+            "a2VuGAUgASgMEhwKFGVzdGltYXRlZF9iYXRjaF9zaXplGAQgASgFQg4KDHBh",
+            "cnRpYWxfcm93c0KzAQoWY29tLmdvb2dsZS5iaWd0YWJsZS52MkIJRGF0YVBy",
+            "b3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYXBpdjIvYmln",
+            "dGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLlYy",
+            "ygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpDbG91ZDo6",
+            "QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Bigtable.V2.TypesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -142,8 +148,9 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter), global::Google.Cloud.Bigtable.V2.RowFilter.Parser, new[]{ "Chain", "Interleave", "Condition", "Sink", "PassAllFilter", "BlockAllFilter", "RowKeyRegexFilter", "RowSampleFilter", "FamilyNameRegexFilter", "ColumnQualifierRegexFilter", "ColumnRangeFilter", "TimestampRangeFilter", "ValueRegexFilter", "ValueRangeFilter", "CellsPerRowOffsetFilter", "CellsPerRowLimitFilter", "CellsPerColumnLimitFilter", "StripValueTransformer", "ApplyLabelTransformer" }, new[]{ "Filter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain.Parser, new[]{ "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave.Parser, new[]{ "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition.Parser, new[]{ "PredicateFilter", "TrueFilter", "FalseFilter" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation), global::Google.Cloud.Bigtable.V2.Mutation.Parser, new[]{ "SetCell", "AddToCell", "DeleteFromColumn", "DeleteFromFamily", "DeleteFromRow" }, new[]{ "Mutation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimestampMicros", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation), global::Google.Cloud.Bigtable.V2.Mutation.Parser, new[]{ "SetCell", "AddToCell", "MergeToCell", "DeleteFromColumn", "DeleteFromFamily", "DeleteFromRow" }, new[]{ "Mutation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimestampMicros", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.AddToCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.AddToCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "Timestamp", "Input" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "Timestamp", "Input" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn), global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimeRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromFamily), global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromFamily.Parser, new[]{ "FamilyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromRow), global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromRow.Parser, null, null, null, null, null)}),
@@ -6098,6 +6105,9 @@ namespace Google.Cloud.Bigtable.V2 {
         case MutationOneofCase.AddToCell:
           AddToCell = other.AddToCell.Clone();
           break;
+        case MutationOneofCase.MergeToCell:
+          MergeToCell = other.MergeToCell.Clone();
+          break;
         case MutationOneofCase.DeleteFromColumn:
           DeleteFromColumn = other.DeleteFromColumn.Clone();
           break;
@@ -6145,6 +6155,21 @@ namespace Google.Cloud.Bigtable.V2 {
       set {
         mutation_ = value;
         mutationCase_ = value == null ? MutationOneofCase.None : MutationOneofCase.AddToCell;
+      }
+    }
+
+    /// <summary>Field number for the "merge_to_cell" field.</summary>
+    public const int MergeToCellFieldNumber = 6;
+    /// <summary>
+    /// Merges accumulated state to an `Aggregate` cell.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell MergeToCell {
+      get { return mutationCase_ == MutationOneofCase.MergeToCell ? (global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell) mutation_ : null; }
+      set {
+        mutation_ = value;
+        mutationCase_ = value == null ? MutationOneofCase.None : MutationOneofCase.MergeToCell;
       }
     }
 
@@ -6199,6 +6224,7 @@ namespace Google.Cloud.Bigtable.V2 {
       None = 0,
       SetCell = 1,
       AddToCell = 5,
+      MergeToCell = 6,
       DeleteFromColumn = 2,
       DeleteFromFamily = 3,
       DeleteFromRow = 4,
@@ -6234,6 +6260,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (!object.Equals(SetCell, other.SetCell)) return false;
       if (!object.Equals(AddToCell, other.AddToCell)) return false;
+      if (!object.Equals(MergeToCell, other.MergeToCell)) return false;
       if (!object.Equals(DeleteFromColumn, other.DeleteFromColumn)) return false;
       if (!object.Equals(DeleteFromFamily, other.DeleteFromFamily)) return false;
       if (!object.Equals(DeleteFromRow, other.DeleteFromRow)) return false;
@@ -6247,6 +6274,7 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (mutationCase_ == MutationOneofCase.SetCell) hash ^= SetCell.GetHashCode();
       if (mutationCase_ == MutationOneofCase.AddToCell) hash ^= AddToCell.GetHashCode();
+      if (mutationCase_ == MutationOneofCase.MergeToCell) hash ^= MergeToCell.GetHashCode();
       if (mutationCase_ == MutationOneofCase.DeleteFromColumn) hash ^= DeleteFromColumn.GetHashCode();
       if (mutationCase_ == MutationOneofCase.DeleteFromFamily) hash ^= DeleteFromFamily.GetHashCode();
       if (mutationCase_ == MutationOneofCase.DeleteFromRow) hash ^= DeleteFromRow.GetHashCode();
@@ -6289,6 +6317,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(AddToCell);
       }
+      if (mutationCase_ == MutationOneofCase.MergeToCell) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MergeToCell);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6319,6 +6351,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(AddToCell);
       }
+      if (mutationCase_ == MutationOneofCase.MergeToCell) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MergeToCell);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6334,6 +6370,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (mutationCase_ == MutationOneofCase.AddToCell) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddToCell);
+      }
+      if (mutationCase_ == MutationOneofCase.MergeToCell) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MergeToCell);
       }
       if (mutationCase_ == MutationOneofCase.DeleteFromColumn) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteFromColumn);
@@ -6368,6 +6407,12 @@ namespace Google.Cloud.Bigtable.V2 {
             AddToCell = new global::Google.Cloud.Bigtable.V2.Mutation.Types.AddToCell();
           }
           AddToCell.MergeFrom(other.AddToCell);
+          break;
+        case MutationOneofCase.MergeToCell:
+          if (MergeToCell == null) {
+            MergeToCell = new global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell();
+          }
+          MergeToCell.MergeFrom(other.MergeToCell);
           break;
         case MutationOneofCase.DeleteFromColumn:
           if (DeleteFromColumn == null) {
@@ -6449,6 +6494,15 @@ namespace Google.Cloud.Bigtable.V2 {
             AddToCell = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell subBuilder = new global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell();
+            if (mutationCase_ == MutationOneofCase.MergeToCell) {
+              subBuilder.MergeFrom(MergeToCell);
+            }
+            input.ReadMessage(subBuilder);
+            MergeToCell = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -6507,6 +6561,15 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             AddToCell = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell subBuilder = new global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell();
+            if (mutationCase_ == MutationOneofCase.MergeToCell) {
+              subBuilder.MergeFrom(MergeToCell);
+            }
+            input.ReadMessage(subBuilder);
+            MergeToCell = subBuilder;
             break;
           }
         }
@@ -7190,6 +7253,356 @@ namespace Google.Cloud.Bigtable.V2 {
       }
 
       /// <summary>
+      /// A Mutation which merges accumulated state into a cell in an `Aggregate`
+      /// family.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MergeToCell : pb::IMessage<MergeToCell>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MergeToCell> _parser = new pb::MessageParser<MergeToCell>(() => new MergeToCell());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MergeToCell> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MergeToCell() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MergeToCell(MergeToCell other) : this() {
+          familyName_ = other.familyName_;
+          columnQualifier_ = other.columnQualifier_ != null ? other.columnQualifier_.Clone() : null;
+          timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+          input_ = other.input_ != null ? other.input_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MergeToCell Clone() {
+          return new MergeToCell(this);
+        }
+
+        /// <summary>Field number for the "family_name" field.</summary>
+        public const int FamilyNameFieldNumber = 1;
+        private string familyName_ = "";
+        /// <summary>
+        /// The name of the `Aggregate` family into which new data should be added.
+        /// This must be a family with a `value_type` of `Aggregate`.
+        /// Format: `[-_.a-zA-Z0-9]+`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FamilyName {
+          get { return familyName_; }
+          set {
+            familyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "column_qualifier" field.</summary>
+        public const int ColumnQualifierFieldNumber = 2;
+        private global::Google.Cloud.Bigtable.V2.Value columnQualifier_;
+        /// <summary>
+        /// The qualifier of the column into which new data should be added. This
+        /// must be a `raw_value`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Value ColumnQualifier {
+          get { return columnQualifier_; }
+          set {
+            columnQualifier_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "timestamp" field.</summary>
+        public const int TimestampFieldNumber = 3;
+        private global::Google.Cloud.Bigtable.V2.Value timestamp_;
+        /// <summary>
+        /// The timestamp of the cell to which new data should be added. This must
+        /// be a `raw_timestamp_micros` that matches the table's `granularity`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Value Timestamp {
+          get { return timestamp_; }
+          set {
+            timestamp_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "input" field.</summary>
+        public const int InputFieldNumber = 4;
+        private global::Google.Cloud.Bigtable.V2.Value input_;
+        /// <summary>
+        /// The input value to be merged into the specified cell. This must be
+        /// compatible with the family's `value_type.state_type`. Merging `NULL` is
+        /// allowed, but has no effect.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Value Input {
+          get { return input_; }
+          set {
+            input_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MergeToCell);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MergeToCell other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FamilyName != other.FamilyName) return false;
+          if (!object.Equals(ColumnQualifier, other.ColumnQualifier)) return false;
+          if (!object.Equals(Timestamp, other.Timestamp)) return false;
+          if (!object.Equals(Input, other.Input)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
+          if (columnQualifier_ != null) hash ^= ColumnQualifier.GetHashCode();
+          if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+          if (input_ != null) hash ^= Input.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (FamilyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FamilyName);
+          }
+          if (columnQualifier_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ColumnQualifier);
+          }
+          if (timestamp_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Timestamp);
+          }
+          if (input_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Input);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FamilyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FamilyName);
+          }
+          if (columnQualifier_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ColumnQualifier);
+          }
+          if (timestamp_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Timestamp);
+          }
+          if (input_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Input);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (FamilyName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FamilyName);
+          }
+          if (columnQualifier_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ColumnQualifier);
+          }
+          if (timestamp_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+          }
+          if (input_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MergeToCell other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FamilyName.Length != 0) {
+            FamilyName = other.FamilyName;
+          }
+          if (other.columnQualifier_ != null) {
+            if (columnQualifier_ == null) {
+              ColumnQualifier = new global::Google.Cloud.Bigtable.V2.Value();
+            }
+            ColumnQualifier.MergeFrom(other.ColumnQualifier);
+          }
+          if (other.timestamp_ != null) {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Cloud.Bigtable.V2.Value();
+            }
+            Timestamp.MergeFrom(other.Timestamp);
+          }
+          if (other.input_ != null) {
+            if (input_ == null) {
+              Input = new global::Google.Cloud.Bigtable.V2.Value();
+            }
+            Input.MergeFrom(other.Input);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                FamilyName = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (columnQualifier_ == null) {
+                  ColumnQualifier = new global::Google.Cloud.Bigtable.V2.Value();
+                }
+                input.ReadMessage(ColumnQualifier);
+                break;
+              }
+              case 26: {
+                if (timestamp_ == null) {
+                  Timestamp = new global::Google.Cloud.Bigtable.V2.Value();
+                }
+                input.ReadMessage(Timestamp);
+                break;
+              }
+              case 34: {
+                if (input_ == null) {
+                  Input = new global::Google.Cloud.Bigtable.V2.Value();
+                }
+                input.ReadMessage(Input);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FamilyName = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (columnQualifier_ == null) {
+                  ColumnQualifier = new global::Google.Cloud.Bigtable.V2.Value();
+                }
+                input.ReadMessage(ColumnQualifier);
+                break;
+              }
+              case 26: {
+                if (timestamp_ == null) {
+                  Timestamp = new global::Google.Cloud.Bigtable.V2.Value();
+                }
+                input.ReadMessage(Timestamp);
+                break;
+              }
+              case 34: {
+                if (input_ == null) {
+                  Input = new global::Google.Cloud.Bigtable.V2.Value();
+                }
+                input.ReadMessage(Input);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// A Mutation which deletes cells from the specified column, optionally
       /// restricting the deletions to a given timestamp range.
       /// </summary>
@@ -7208,7 +7621,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7495,7 +7908,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7692,7 +8105,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
