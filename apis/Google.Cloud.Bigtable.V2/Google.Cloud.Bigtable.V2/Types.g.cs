@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5nb29nbGUvYmlndGFibGUvdjIvdHlwZXMucHJvdG8SEmdvb2dsZS5iaWd0",
-            "YWJsZS52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byKGEAoE",
+            "YWJsZS52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byLgEAoE",
             "VHlwZRI0CgpieXRlc190eXBlGAEgASgLMh4uZ29vZ2xlLmJpZ3RhYmxlLnYy",
             "LlR5cGUuQnl0ZXNIABI2CgtzdHJpbmdfdHlwZRgCIAEoCzIfLmdvb2dsZS5i",
             "aWd0YWJsZS52Mi5UeXBlLlN0cmluZ0gAEjQKCmludDY0X3R5cGUYBSABKAsy",
@@ -44,10 +44,12 @@ namespace Google.Cloud.Bigtable.V2 {
             "CgVCeXRlcxI5CghlbmNvZGluZxgBIAEoCzInLmdvb2dsZS5iaWd0YWJsZS52",
             "Mi5UeXBlLkJ5dGVzLkVuY29kaW5nGlkKCEVuY29kaW5nEjoKA3JhdxgBIAEo",
             "CzIrLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLkJ5dGVzLkVuY29kaW5nLlJh",
-            "d0gAGgUKA1Jhd0IKCghlbmNvZGluZxqzAQoGU3RyaW5nEjoKCGVuY29kaW5n",
+            "d0gAGgUKA1Jhd0IKCghlbmNvZGluZxqNAgoGU3RyaW5nEjoKCGVuY29kaW5n",
             "GAEgASgLMiguZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuU3RyaW5nLkVuY29k",
-            "aW5nGm0KCEVuY29kaW5nEkgKCnV0ZjhfYnl0ZXMYAiABKAsyMi5nb29nbGUu",
-            "YmlndGFibGUudjIuVHlwZS5TdHJpbmcuRW5jb2RpbmcuVXRmOEJ5dGVzSAAa",
+            "aW5nGsYBCghFbmNvZGluZxJICgh1dGY4X3JhdxgBIAEoCzIwLmdvb2dsZS5i",
+            "aWd0YWJsZS52Mi5UeXBlLlN0cmluZy5FbmNvZGluZy5VdGY4UmF3QgIYAUgA",
+            "EkgKCnV0ZjhfYnl0ZXMYAiABKAsyMi5nb29nbGUuYmlndGFibGUudjIuVHlw",
+            "ZS5TdHJpbmcuRW5jb2RpbmcuVXRmOEJ5dGVzSAAaDQoHVXRmOFJhdzoCGAEa",
             "CwoJVXRmOEJ5dGVzQgoKCGVuY29kaW5nGvUBCgVJbnQ2NBI5CghlbmNvZGlu",
             "ZxgBIAEoCzInLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLkludDY0LkVuY29k",
             "aW5nGrABCghFbmNvZGluZxJSChBiaWdfZW5kaWFuX2J5dGVzGAEgASgLMjYu",
@@ -80,7 +82,8 @@ namespace Google.Cloud.Bigtable.V2 {
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type), global::Google.Cloud.Bigtable.V2.Type.Parser, new[]{ "BytesType", "StringType", "Int64Type", "Float32Type", "Float64Type", "BoolType", "TimestampType", "DateType", "AggregateType", "StructType", "ArrayType", "MapType" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Parser, new[]{ "Raw" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Types.Raw), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Types.Raw.Parser, null, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String), global::Google.Cloud.Bigtable.V2.Type.Types.String.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Parser, new[]{ "Utf8Bytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes.Parser, null, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String), global::Google.Cloud.Bigtable.V2.Type.Types.String.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Parser, new[]{ "Utf8Raw", "Utf8Bytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes.Parser, null, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Parser, new[]{ "BigEndianBytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes.Parser, new[]{ "BytesType" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bool), global::Google.Cloud.Bigtable.V2.Type.Types.Bool.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Float32), global::Google.Cloud.Bigtable.V2.Type.Types.Float32.Parser, null, null, null, null, null),
@@ -1849,6 +1852,9 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Encoding(Encoding other) : this() {
               switch (other.EncodingCase) {
+                case EncodingOneofCase.Utf8Raw:
+                  Utf8Raw = other.Utf8Raw.Clone();
+                  break;
                 case EncodingOneofCase.Utf8Bytes:
                   Utf8Bytes = other.Utf8Bytes.Clone();
                   break;
@@ -1861,6 +1867,22 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Encoding Clone() {
               return new Encoding(this);
+            }
+
+            /// <summary>Field number for the "utf8_raw" field.</summary>
+            public const int Utf8RawFieldNumber = 1;
+            /// <summary>
+            /// Deprecated: if set, converts to an empty `utf8_bytes`.
+            /// </summary>
+            [global::System.ObsoleteAttribute]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw Utf8Raw {
+              get { return encodingCase_ == EncodingOneofCase.Utf8Raw ? (global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw) encoding_ : null; }
+              set {
+                encoding_ = value;
+                encodingCase_ = value == null ? EncodingOneofCase.None : EncodingOneofCase.Utf8Raw;
+              }
             }
 
             /// <summary>Field number for the "utf8_bytes" field.</summary>
@@ -1882,6 +1904,7 @@ namespace Google.Cloud.Bigtable.V2 {
             /// <summary>Enum of possible cases for the "encoding" oneof.</summary>
             public enum EncodingOneofCase {
               None = 0,
+              Utf8Raw = 1,
               Utf8Bytes = 2,
             }
             private EncodingOneofCase encodingCase_ = EncodingOneofCase.None;
@@ -1913,6 +1936,7 @@ namespace Google.Cloud.Bigtable.V2 {
               if (ReferenceEquals(other, this)) {
                 return true;
               }
+              if (!object.Equals(Utf8Raw, other.Utf8Raw)) return false;
               if (!object.Equals(Utf8Bytes, other.Utf8Bytes)) return false;
               if (EncodingCase != other.EncodingCase) return false;
               return Equals(_unknownFields, other._unknownFields);
@@ -1922,6 +1946,7 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
+              if (encodingCase_ == EncodingOneofCase.Utf8Raw) hash ^= Utf8Raw.GetHashCode();
               if (encodingCase_ == EncodingOneofCase.Utf8Bytes) hash ^= Utf8Bytes.GetHashCode();
               hash ^= (int) encodingCase_;
               if (_unknownFields != null) {
@@ -1942,6 +1967,10 @@ namespace Google.Cloud.Bigtable.V2 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
+              if (encodingCase_ == EncodingOneofCase.Utf8Raw) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Utf8Raw);
+              }
               if (encodingCase_ == EncodingOneofCase.Utf8Bytes) {
                 output.WriteRawTag(18);
                 output.WriteMessage(Utf8Bytes);
@@ -1956,6 +1985,10 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (encodingCase_ == EncodingOneofCase.Utf8Raw) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Utf8Raw);
+              }
               if (encodingCase_ == EncodingOneofCase.Utf8Bytes) {
                 output.WriteRawTag(18);
                 output.WriteMessage(Utf8Bytes);
@@ -1970,6 +2003,9 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
+              if (encodingCase_ == EncodingOneofCase.Utf8Raw) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Utf8Raw);
+              }
               if (encodingCase_ == EncodingOneofCase.Utf8Bytes) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Utf8Bytes);
               }
@@ -1986,6 +2022,12 @@ namespace Google.Cloud.Bigtable.V2 {
                 return;
               }
               switch (other.EncodingCase) {
+                case EncodingOneofCase.Utf8Raw:
+                  if (Utf8Raw == null) {
+                    Utf8Raw = new global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw();
+                  }
+                  Utf8Raw.MergeFrom(other.Utf8Raw);
+                  break;
                 case EncodingOneofCase.Utf8Bytes:
                   if (Utf8Bytes == null) {
                     Utf8Bytes = new global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes();
@@ -2009,6 +2051,15 @@ namespace Google.Cloud.Bigtable.V2 {
                   default:
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
+                  case 10: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw();
+                    if (encodingCase_ == EncodingOneofCase.Utf8Raw) {
+                      subBuilder.MergeFrom(Utf8Raw);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Utf8Raw = subBuilder;
+                    break;
+                  }
                   case 18: {
                     global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes();
                     if (encodingCase_ == EncodingOneofCase.Utf8Bytes) {
@@ -2033,6 +2084,15 @@ namespace Google.Cloud.Bigtable.V2 {
                   default:
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                     break;
+                  case 10: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw();
+                    if (encodingCase_ == EncodingOneofCase.Utf8Raw) {
+                      subBuilder.MergeFrom(Utf8Raw);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Utf8Raw = subBuilder;
+                    break;
+                  }
                   case 18: {
                     global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes();
                     if (encodingCase_ == EncodingOneofCase.Utf8Bytes) {
@@ -2052,6 +2112,163 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
+              /// <summary>
+              /// Deprecated: prefer the equivalent `Utf8Bytes`.
+              /// </summary>
+              [global::System.ObsoleteAttribute]
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Utf8Raw : pb::IMessage<Utf8Raw>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Utf8Raw> _parser = new pb::MessageParser<Utf8Raw>(() => new Utf8Raw());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Utf8Raw> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Utf8Raw() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Utf8Raw(Utf8Raw other) : this() {
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Utf8Raw Clone() {
+                  return new Utf8Raw(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Utf8Raw);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Utf8Raw other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Utf8Raw other) {
+                  if (other == null) {
+                    return;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    }
+                  }
+                }
+                #endif
+
+              }
+
               /// <summary>
               /// UTF-8 encoding
               /// * Order-preserving? Yes (code point order)
@@ -2076,7 +2293,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
-                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Descriptor.NestedTypes[0]; }
+                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Descriptor.NestedTypes[1]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
