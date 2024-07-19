@@ -2544,7 +2544,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2596,7 +2596,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2648,7 +2648,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2691,7 +2691,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2743,7 +2743,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2795,7 +2795,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

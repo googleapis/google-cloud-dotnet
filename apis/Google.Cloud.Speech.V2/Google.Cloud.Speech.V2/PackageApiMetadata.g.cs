@@ -68,6 +68,7 @@ namespace Google.Cloud.Speech.V2
         {
             yield return gcl::LocationsReflection.Descriptor;
             yield return CloudSpeechReflection.Descriptor;
+            yield return LocationsMetadataReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
