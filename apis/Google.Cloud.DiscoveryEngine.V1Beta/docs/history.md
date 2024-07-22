@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2024-07-22
+
+### New features
+
+- Add sample query set APIs ([commit cc1366d](https://github.com/googleapis/google-cloud-dotnet/commit/cc1366d18c93295219e9c8627f3ac8ab5507a6c4))
+- Add sample query APIs ([commit cc1366d](https://github.com/googleapis/google-cloud-dotnet/commit/cc1366d18c93295219e9c8627f3ac8ab5507a6c4))
+- Add evaluation APIs ([commit cc1366d](https://github.com/googleapis/google-cloud-dotnet/commit/cc1366d18c93295219e9c8627f3ac8ab5507a6c4))
+- Add Chunk resource in the search response ([commit 3fad51f](https://github.com/googleapis/google-cloud-dotnet/commit/3fad51f0ed5f3dd7467ac503008a37f50fe2032b))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 3fad51f](https://github.com/googleapis/google-cloud-dotnet/commit/3fad51f0ed5f3dd7467ac503008a37f50fe2032b))
+
 ## Version 1.0.0-beta14, released 2024-06-04
 
 ### New features
