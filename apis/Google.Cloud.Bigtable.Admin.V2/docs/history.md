@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.18.0, released 2024-07-22
+
+### New features
+
+- Add min, max, hll aggregators and more types ([commit 7874fc6](https://github.com/googleapis/google-cloud-dotnet/commit/7874fc6abca3df5a590a33bf4d2a7ce40cb35537))
+- Update Go Datastore import path ([commit 83fa86a](https://github.com/googleapis/google-cloud-dotnet/commit/83fa86a145d211f5670a14e875d30b4fa2207b74))
+- Update Go Bigtable import path ([commit 83fa86a](https://github.com/googleapis/google-cloud-dotnet/commit/83fa86a145d211f5670a14e875d30b4fa2207b74))
+
+### Documentation improvements
+
+- Corrected various type documentation ([commit 7874fc6](https://github.com/googleapis/google-cloud-dotnet/commit/7874fc6abca3df5a590a33bf4d2a7ce40cb35537))
+
 ## Version 3.17.0, released 2024-06-04
 
 ### New features
