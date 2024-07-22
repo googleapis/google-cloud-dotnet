@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.30.0, released 2024-07-22
+
+### Bug fixes
+
+- Deprecate "EXPERIMENTAL" option for Gateway API (this value has never been supported) ([commit 5b1d67c](https://github.com/googleapis/google-cloud-dotnet/commit/5b1d67c6816af885dbfe25073209c070e1667db1))
+
+### New features
+
+- Support for Ray Clusters ([commit 6f0ee61](https://github.com/googleapis/google-cloud-dotnet/commit/6f0ee612c091c819c8313fc1b7ac2724fd416885))
+- Add DCGM enum in monitoring config ([commit 5b1d67c](https://github.com/googleapis/google-cloud-dotnet/commit/5b1d67c6816af885dbfe25073209c070e1667db1))
+
+### Documentation improvements
+
+- Trivial updates ([commit 6f0ee61](https://github.com/googleapis/google-cloud-dotnet/commit/6f0ee612c091c819c8313fc1b7ac2724fd416885))
+
 ## Version 3.29.0, released 2024-06-24
 
 ### New features
