@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.23.0, released 2024-07-22
+
+### New features
+
+- Added cloud provider field to list findings response ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added ResourceValueConfig protos and API methods ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added etd custom module protos and API methods ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added toxic combination field to finding ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added attack path API methods ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+
+### Documentation improvements
+
+- Update toxic combinations comments ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Update examples in comments to use backticks ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+
 ## Version 3.22.0, released 2024-07-08
 
 ### New features
