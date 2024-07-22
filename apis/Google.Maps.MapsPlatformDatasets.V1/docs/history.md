@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2024-07-22
+
+### New features
+
+- Added a new API FetchDatasetErrors ([commit edc58db](https://github.com/googleapis/google-cloud-dotnet/commit/edc58dbd29e45a0f4e6fa53d4043dff8418d90df))
+
 ## Version 1.0.0-beta05, released 2024-06-04
 
 ### New features
