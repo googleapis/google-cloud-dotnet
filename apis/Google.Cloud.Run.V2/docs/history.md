@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.9.0, released 2024-07-22
+
+### New features
+
+- Support update_mask in Cloud Run UpdateService ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+- Add Job start_execution_token and run_execution_token to execute jobs immediately on creation ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+- Add Job ExecutionReference.completion_status to show status of the most recent execution ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+
+### Documentation improvements
+
+- Clarify optional fields in Cloud Run requests ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+
 ## Version 2.8.0, released 2024-05-14
 
 ### New features
