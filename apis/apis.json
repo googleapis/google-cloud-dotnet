@@ -1447,7 +1447,7 @@
     },
     {
       "id": "Google.Cloud.ConfidentialComputing.V1",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "type": "grpc",
       "productName": "Confidential Computing",
       "productUrl": "https://cloud.google.com/confidential-computing",
@@ -1459,7 +1459,7 @@
         "privacy"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0"
+        "Google.Cloud.Location": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/confidentialcomputing/v1",

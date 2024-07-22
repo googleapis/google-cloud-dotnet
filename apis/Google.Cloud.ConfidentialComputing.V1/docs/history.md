@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.6.0, released 2024-07-22
+
+### New features
+
+- Add a new field `tee_attestation` to `VerifyAttestationRequest` message proto for SEV SNP and TDX attestations ([commit b087c55](https://github.com/googleapis/google-cloud-dotnet/commit/b087c557e634a648a2ecfdf9340309334697f8de))
+
 ## Version 1.5.0, released 2024-05-13
 
 ### New features
