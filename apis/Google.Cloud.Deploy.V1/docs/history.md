@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.19.0, released 2024-07-22
+
+### New features
+
+- Added support for new custom target type and deploy policy platform logs ([commit 50b0fe6](https://github.com/googleapis/google-cloud-dotnet/commit/50b0fe6c19d49962cea3f0bea359ee40d4575281))
+- Added support for deploy policies ([commit dd03c4a](https://github.com/googleapis/google-cloud-dotnet/commit/dd03c4ae63b9339d53b7815707e25731a0dce83f))
+- Added support for configuring a proxy_url to a Kubernetes server ([commit dd03c4a](https://github.com/googleapis/google-cloud-dotnet/commit/dd03c4ae63b9339d53b7815707e25731a0dce83f))
+
+### Documentation improvements
+
+- Small Cloud Deploy API documentation updates ([commit 50b0fe6](https://github.com/googleapis/google-cloud-dotnet/commit/50b0fe6c19d49962cea3f0bea359ee40d4575281))
+- Small corrections to Cloud Deploy API documentation ([commit dd03c4a](https://github.com/googleapis/google-cloud-dotnet/commit/dd03c4ae63b9339d53b7815707e25731a0dce83f))
+
 ## Version 2.18.0, released 2024-06-04
 
 ### New features
