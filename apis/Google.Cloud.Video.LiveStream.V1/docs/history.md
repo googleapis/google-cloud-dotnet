@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.8.0, released 2024-07-22
+
+### New features
+
+- Added RetentionConfig for enabling retention of output media segments ([commit 3f438f2](https://github.com/googleapis/google-cloud-dotnet/commit/3f438f2fd6076c94464ac874e17f88e891887487))
+- Added Clip resource for performing clip cutting jobs ([commit 3f438f2](https://github.com/googleapis/google-cloud-dotnet/commit/3f438f2fd6076c94464ac874e17f88e891887487))
+- Added StaticOverlay for embedding images the whole duration of the live stream ([commit 3f438f2](https://github.com/googleapis/google-cloud-dotnet/commit/3f438f2fd6076c94464ac874e17f88e891887487))
+
+### Documentation improvements
+
+- Clarify the format of key/id fields ([commit 3f438f2](https://github.com/googleapis/google-cloud-dotnet/commit/3f438f2fd6076c94464ac874e17f88e891887487))
+
 ## Version 1.7.0, released 2024-06-04
 
 ### New features
