@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.3.0, released 2024-07-22
+
+### New features
+
+- Add locations metadata proto file ([commit 2f474bb](https://github.com/googleapis/google-cloud-dotnet/commit/2f474bb22f35ab4383898bdb75e435ce5afafc27))
+
+### Documentation improvements
+
+- Update the list of automatically detected encodings ([commit 2f474bb](https://github.com/googleapis/google-cloud-dotnet/commit/2f474bb22f35ab4383898bdb75e435ce5afafc27))
+- Update the maximum number of files that may be included in a BatchRecognizeRequest ([commit 2f474bb](https://github.com/googleapis/google-cloud-dotnet/commit/2f474bb22f35ab4383898bdb75e435ce5afafc27))
+
 ## Version 1.2.0, released 2024-06-04
 
 ### New features
