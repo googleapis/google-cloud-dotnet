@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.5.0, released 2024-07-22
+
+### New features
+
+- Update MS API stubs with Unified API ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.bigquery.migration.v2.MigrationWorkflow` is changed to include 'Identifier' ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+- A comment for field `translation_config_details` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is changed ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+- A comment for field `type` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is changed to include new supported types ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+
 ## Version 1.4.0, released 2024-05-13
 
 ### New features
