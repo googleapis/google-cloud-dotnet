@@ -970,7 +970,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Migration.V2",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "type": "grpc",
       "productName": "BigQuery Migration",
       "productUrl": "https://cloud.google.com/bigquery/docs/migration-intro",
