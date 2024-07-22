@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.10.0, released 2024-07-22
+
+### New features
+
+- Add Cloud Storage discovery support ([commit e42223b](https://github.com/googleapis/google-cloud-dotnet/commit/e42223be9b17224ce05e282f5f03e7afacf58466))
+
+### Documentation improvements
+
+- Updated method documentation ([commit e42223b](https://github.com/googleapis/google-cloud-dotnet/commit/e42223be9b17224ce05e282f5f03e7afacf58466))
+
 ## Version 4.9.0, released 2024-06-03
 
 ### New features
