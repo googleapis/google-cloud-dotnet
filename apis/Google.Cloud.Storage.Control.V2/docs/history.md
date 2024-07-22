@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.1.0, released 2024-07-22
+
+### Documentation improvements
+
+- Remove allowlist note from Folders RPCs ([commit a2afefb](https://github.com/googleapis/google-cloud-dotnet/commit/a2afefb2bb16c0b0d5382cd6e2eae4ff81867ee7))
 ## Version 1.0.1, released 2024-06-20
 
 No API surface changes; this release is purely to publish
