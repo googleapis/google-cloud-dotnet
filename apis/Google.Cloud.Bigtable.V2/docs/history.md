@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.14.0, released 2024-07-22
+
+### New features
+
+- Add MergeToCell to Mutation APIs ([commit df73f37](https://github.com/googleapis/google-cloud-dotnet/commit/df73f3746e5e6f88b8d27dfea7218c76420ae0fe))
+- Update Go Datastore import path ([commit 7f6db1c](https://github.com/googleapis/google-cloud-dotnet/commit/7f6db1c7b5315efdb47d6c76cec97c096e47d45c))
+- Update Go Bigtable import path ([commit 7f6db1c](https://github.com/googleapis/google-cloud-dotnet/commit/7f6db1c7b5315efdb47d6c76cec97c096e47d45c))
+- Publish ProtoRows Message ([commit 2a57721](https://github.com/googleapis/google-cloud-dotnet/commit/2a57721fa79603917f627877bded42820a015d05))
+- Publish the Cloud Bigtable ExecuteQuery API ([commit 92257e9](https://github.com/googleapis/google-cloud-dotnet/commit/92257e9e856a0266eac59f9174c89ccbcf92b229))
 ## Version 3.13.0, released 2024-05-13
 
 ### New features
