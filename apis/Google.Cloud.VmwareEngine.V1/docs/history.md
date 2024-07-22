@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.6.0, released 2024-07-22
+
+### New features
+
+- Adding autoscaling settings ([commit 7384b74](https://github.com/googleapis/google-cloud-dotnet/commit/7384b7494aed8c08d34a03aa7cb85a88a6230f9f))
+
 ## Version 1.5.0, released 2024-06-04
 
 ### New features
