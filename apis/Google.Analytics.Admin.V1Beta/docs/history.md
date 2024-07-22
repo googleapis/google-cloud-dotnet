@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2024-07-22
+
+### New features
+
+- Add `GetKeyEvent`, `CreateKeyEvent`, `ListKeyEvents`, `UpdateKeyEvent`, `DeleteKeyEvent` methods to the Admin API v1beta ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+- Mark `GetConversionEvent`, `CreateConversionEvent`, `ListConversionEvents`, `UpdateConversionEvent`, `DeleteConversionEvent` methods as deprecated in the Admin API v1beta ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+- Add the `default_conversion_value` field to the `ConversionEvent` resource in the Admin API v1beta ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+- Add the `include_all_users` and `expand_groups` fields to the `RunAccessReportRequest` resource in the Admin API v1beta ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+- Add the `gmp_organization` field to the `Account` resource in the Admin API v1beta ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+
+### Documentation improvements
+
+- Change comment for methods `DeleteAccount`, `DeleteProperty`, and `RunAccessReport` in service `AnalyticsAdminService` ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+- Change comment in fields `account` and `property` in message `SearchChangeHistoryEventsRequest` ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+- Change comment for field `property_type` in message `Property` ([commit 64af82f](https://github.com/googleapis/google-cloud-dotnet/commit/64af82fa4eb39e9f5149c06ee20b2a9694c3a8a4))
+
 ## Version 1.0.0-beta07, released 2024-05-08
 
 ### New features
