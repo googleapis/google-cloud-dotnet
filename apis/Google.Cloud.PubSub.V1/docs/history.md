@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.16.0, released 2024-07-22
+
+### New features
+
+- Add max messages batching for Cloud Storage subscriptions ([commit 953eefe](https://github.com/googleapis/google-cloud-dotnet/commit/953eefe3499b9a380264d936678f2a073102aac2))
+
 ## Version 3.15.0, released 2024-06-24
 
 ### New features
