@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-07-22
+
+### New features
+
+- Add GetSpaceEvent and ListSpaceEvents APIs ([commit 37667db](https://github.com/googleapis/google-cloud-dotnet/commit/37667db3e7134f0078b46e111d7e77b2f30ad9ed))
+
 ## Version 1.0.0-beta04, released 2024-07-08
 
 ### New features
