@@ -45,8 +45,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "RBAAEhcKE01PREVMX1RZUEVfU1RBTkRBUkQQARIXChNNT0RFTF9UWVBFX0FE",
             "VkFOQ0VEEAMiewoRTW9kZWxUcmFpbmluZ01vZGUSIwofTU9ERUxfVFJBSU5J",
             "TkdfTU9ERV9VTlNQRUNJRklFRBAAEiEKHU1PREVMX1RSQUlOSU5HX01PREVf",
-            "QVVUT01BVElDEAESHgoaTU9ERUxfVFJBSU5JTkdfTU9ERV9NQU5VQUwQAiKI",
-            "BQoERmxvdxIMCgRuYW1lGAEgASgJEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID",
+            "QVVUT01BVElDEAESHgoaTU9ERUxfVFJBSU5JTkdfTU9ERV9NQU5VQUwQAiLw",
+            "BgoERmxvdxIMCgRuYW1lGAEgASgJEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID",
             "4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEkkKEXRyYW5zaXRpb25fcm91dGVz",
             "GAQgAygLMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVHJhbnNp",
             "dGlvblJvdXRlEkMKDmV2ZW50X2hhbmRsZXJzGAogAygLMisuZ29vZ2xlLmNs",
@@ -58,111 +58,116 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "dWQuZGlhbG9nZmxvdy5jeC52My5BZHZhbmNlZFNldHRpbmdzEmQKHGtub3ds",
             "ZWRnZV9jb25uZWN0b3Jfc2V0dGluZ3MYEiABKAsyOS5nb29nbGUuY2xvdWQu",
             "ZGlhbG9nZmxvdy5jeC52My5Lbm93bGVkZ2VDb25uZWN0b3JTZXR0aW5nc0ID",
-            "4EEBOmjqQWUKHmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRmxvdxJDcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FnZW50cy97",
-            "YWdlbnR9L2Zsb3dzL3tmbG93fSKaAQoRQ3JlYXRlRmxvd1JlcXVlc3QSNgoG",
-            "cGFyZW50GAEgASgJQibgQQL6QSASHmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
-            "b20vRmxvdxI2CgRmbG93GAIgASgLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjMuRmxvd0ID4EECEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkiWAoR",
-            "RGVsZXRlRmxvd1JlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5kaWFs",
-            "b2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3cSDQoFZm9yY2UYAiABKAgiiAEK",
-            "EExpc3RGbG93c1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSASHmRp",
-            "YWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRmxvdxIRCglwYWdlX3NpemUYAiAB",
-            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCRIVCg1sYW5ndWFnZV9jb2RlGAQgASgJ",
-            "ImAKEUxpc3RGbG93c1Jlc3BvbnNlEjIKBWZsb3dzGAEgAygLMiMuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvdxIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkiXQoOR2V0Rmxvd1JlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC",
-            "+kEgCh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3cSFQoNbGFuZ3Vh",
-            "Z2VfY29kZRgCIAEoCSKTAQoRVXBkYXRlRmxvd1JlcXVlc3QSNgoEZmxvdxgB",
-            "IAEoCzIjLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZsb3dCA+BB",
-            "AhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
-            "ZE1hc2sSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCSJIChBUcmFpbkZsb3dSZXF1",
+            "4EEBEl8KF211bHRpX2xhbmd1YWdlX3NldHRpbmdzGBwgASgLMjkuZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvdy5NdWx0aUxhbmd1YWdlU2V0",
+            "dGluZ3NCA+BBARIOCgZsb2NrZWQYHiABKAgadQoVTXVsdGlMYW5ndWFnZVNl",
+            "dHRpbmdzEiwKH2VuYWJsZV9tdWx0aV9sYW5ndWFnZV9kZXRlY3Rpb24YASAB",
+            "KAhCA+BBARIuCiFzdXBwb3J0ZWRfcmVzcG9uc2VfbGFuZ3VhZ2VfY29kZXMY",
+            "AiADKAlCA+BBATpo6kFlCh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zs",
+            "b3cSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9h",
+            "Z2VudHMve2FnZW50fS9mbG93cy97Zmxvd30imgEKEUNyZWF0ZUZsb3dSZXF1",
+            "ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgEh5kaWFsb2dmbG93Lmdvb2ds",
+            "ZWFwaXMuY29tL0Zsb3cSNgoEZmxvdxgCIAEoCzIjLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLkZsb3dCA+BBAhIVCg1sYW5ndWFnZV9jb2RlGAMg",
+            "ASgJIlgKEURlbGV0ZUZsb3dSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpB",
+            "IAoeZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9GbG93Eg0KBWZvcmNlGAIg",
+            "ASgIIogBChBMaXN0Rmxvd3NSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC",
+            "+kEgEh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3cSEQoJcGFnZV9z",
+            "aXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSFQoNbGFuZ3VhZ2VfY29k",
+            "ZRgEIAEoCSJgChFMaXN0Rmxvd3NSZXNwb25zZRIyCgVmbG93cxgBIAMoCzIj",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZsb3cSFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJIl0KDkdldEZsb3dSZXF1ZXN0EjQKBG5hbWUYASAB",
+            "KAlCJuBBAvpBIAoeZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9GbG93EhUK",
+            "DWxhbmd1YWdlX2NvZGUYAiABKAkikwEKEVVwZGF0ZUZsb3dSZXF1ZXN0EjYK",
+            "BGZsb3cYASABKAsyIy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5G",
+            "bG93QgPgQQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkiSAoQVHJhaW5G",
+            "bG93UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmRpYWxvZ2Zsb3cu",
+            "Z29vZ2xlYXBpcy5jb20vRmxvdyJiChNWYWxpZGF0ZUZsb3dSZXF1ZXN0EjQK",
+            "BG5hbWUYASABKAlCJuBBAvpBIAoeZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
+            "bS9GbG93EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkifQoeR2V0Rmxvd1ZhbGlk",
+            "YXRpb25SZXN1bHRSZXF1ZXN0EkQKBG5hbWUYASABKAlCNuBBAvpBMAouZGlh",
+            "bG9nZmxvdy5nb29nbGVhcGlzLmNvbS9GbG93VmFsaWRhdGlvblJlc3VsdBIV",
+            "Cg1sYW5ndWFnZV9jb2RlGAIgASgJIrECChRGbG93VmFsaWRhdGlvblJlc3Vs",
+            "dBIMCgRuYW1lGAEgASgJEk0KE3ZhbGlkYXRpb25fbWVzc2FnZXMYAiADKAsy",
+            "MC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5WYWxpZGF0aW9uTWVz",
+            "c2FnZRIvCgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXA6igHqQYYBCi5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zs",
+            "b3dWYWxpZGF0aW9uUmVzdWx0ElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vYWdlbnRzL3thZ2VudH0vZmxvd3Mve2Zsb3d9L3Zh",
+            "bGlkYXRpb25SZXN1bHQi8gIKEUltcG9ydEZsb3dSZXF1ZXN0EjYKBnBhcmVu",
+            "dBgBIAEoCUIm4EEC+kEgEh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zs",
+            "b3cSEgoIZmxvd191cmkYAiABKAlIABIWCgxmbG93X2NvbnRlbnQYAyABKAxI",
+            "ABJUCg1pbXBvcnRfb3B0aW9uGAQgASgOMj0uZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cuY3gudjMuSW1wb3J0Rmxvd1JlcXVlc3QuSW1wb3J0T3B0aW9uElQK",
+            "FGZsb3dfaW1wb3J0X3N0cmF0ZWd5GAUgASgLMjEuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cuY3gudjMuRmxvd0ltcG9ydFN0cmF0ZWd5QgPgQQEiRQoMSW1w",
+            "b3J0T3B0aW9uEh0KGUlNUE9SVF9PUFRJT05fVU5TUEVDSUZJRUQQABIICgRL",
+            "RUVQEAESDAoIRkFMTEJBQ0sQAkIGCgRmbG93ImgKEkZsb3dJbXBvcnRTdHJh",
+            "dGVneRJSChZnbG9iYWxfaW1wb3J0X3N0cmF0ZWd5GAEgASgOMi0uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuSW1wb3J0U3RyYXRlZ3lCA+BBASJH",
+            "ChJJbXBvcnRGbG93UmVzcG9uc2USMQoEZmxvdxgBIAEoCUIj+kEgCh5kaWFs",
+            "b2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3cihwEKEUV4cG9ydEZsb3dSZXF1",
             "ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeZGlhbG9nZmxvdy5nb29nbGVh",
-            "cGlzLmNvbS9GbG93ImIKE1ZhbGlkYXRlRmxvd1JlcXVlc3QSNAoEbmFtZRgB",
-            "IAEoCUIm4EEC+kEgCh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3cS",
-            "FQoNbGFuZ3VhZ2VfY29kZRgCIAEoCSJ9Ch5HZXRGbG93VmFsaWRhdGlvblJl",
-            "c3VsdFJlcXVlc3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi5kaWFsb2dmbG93",
-            "Lmdvb2dsZWFwaXMuY29tL0Zsb3dWYWxpZGF0aW9uUmVzdWx0EhUKDWxhbmd1",
-            "YWdlX2NvZGUYAiABKAkisQIKFEZsb3dWYWxpZGF0aW9uUmVzdWx0EgwKBG5h",
-            "bWUYASABKAkSTQoTdmFsaWRhdGlvbl9tZXNzYWdlcxgCIAMoCzIwLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlZhbGlkYXRpb25NZXNzYWdlEi8K",
-            "C3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cDqKAepBhgEKLmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRmxvd1ZhbGlk",
-            "YXRpb25SZXN1bHQSVHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9hZ2VudHMve2FnZW50fS9mbG93cy97Zmxvd30vdmFsaWRhdGlv",
-            "blJlc3VsdCLyAgoRSW1wb3J0Rmxvd1JlcXVlc3QSNgoGcGFyZW50GAEgASgJ",
-            "QibgQQL6QSASHmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRmxvdxISCghm",
-            "bG93X3VyaRgCIAEoCUgAEhYKDGZsb3dfY29udGVudBgDIAEoDEgAElQKDWlt",
-            "cG9ydF9vcHRpb24YBCABKA4yPS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52My5JbXBvcnRGbG93UmVxdWVzdC5JbXBvcnRPcHRpb24SVAoUZmxvd19p",
-            "bXBvcnRfc3RyYXRlZ3kYBSABKAsyMS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy5jeC52My5GbG93SW1wb3J0U3RyYXRlZ3lCA+BBASJFCgxJbXBvcnRPcHRp",
-            "b24SHQoZSU1QT1JUX09QVElPTl9VTlNQRUNJRklFRBAAEggKBEtFRVAQARIM",
-            "CghGQUxMQkFDSxACQgYKBGZsb3ciaAoSRmxvd0ltcG9ydFN0cmF0ZWd5ElIK",
-            "Fmdsb2JhbF9pbXBvcnRfc3RyYXRlZ3kYASABKA4yLS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52My5JbXBvcnRTdHJhdGVneUID4EEBIkcKEkltcG9y",
-            "dEZsb3dSZXNwb25zZRIxCgRmbG93GAEgASgJQiP6QSAKHmRpYWxvZ2Zsb3cu",
-            "Z29vZ2xlYXBpcy5jb20vRmxvdyKHAQoRRXhwb3J0Rmxvd1JlcXVlc3QSNAoE",
-            "bmFtZRgBIAEoCUIm4EEC+kEgCh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t",
-            "L0Zsb3cSFQoIZmxvd191cmkYAiABKAlCA+BBARIlChhpbmNsdWRlX3JlZmVy",
-            "ZW5jZWRfZmxvd3MYBCABKAhCA+BBASJIChJFeHBvcnRGbG93UmVzcG9uc2US",
-            "EgoIZmxvd191cmkYASABKAlIABIWCgxmbG93X2NvbnRlbnQYAiABKAxIAEIG",
-            "CgRmbG93MpgQCgVGbG93cxKzAQoKQ3JlYXRlRmxvdxIwLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LmN4LnYzLkNyZWF0ZUZsb3dSZXF1ZXN0GiMuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvdyJO2kELcGFyZW50LGZsb3eC",
-            "0+STAjoiMi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdl",
-            "bnRzLyp9L2Zsb3dzOgRmbG93EpkBCgpEZWxldGVGbG93EjAuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRGVsZXRlRmxvd1JlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiQdpBBG5hbWWC0+STAjQqMi92My97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9ErMBCglM",
-            "aXN0Rmxvd3MSLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0",
-            "Rmxvd3NSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
-            "TGlzdEZsb3dzUmVzcG9uc2UiQ9pBBnBhcmVudILT5JMCNBIyL3YzL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKn0vZmxvd3MSoAEK",
-            "B0dldEZsb3cSLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5HZXRG",
-            "bG93UmVxdWVzdBojLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZs",
-            "b3ciQdpBBG5hbWWC0+STAjQSMi92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9Er0BCgpVcGRhdGVGbG93EjAuZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVXBkYXRlRmxvd1JlcXVlc3Qa",
-            "Iy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93IljaQRBmbG93",
-            "LHVwZGF0ZV9tYXNrgtPkkwI/MjcvdjMve2Zsb3cubmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9OgRmbG93EtkBCglUcmFp",
-            "bkZsb3cSLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5UcmFpbkZs",
-            "b3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ8ykEv",
-            "ChVnb29nbGUucHJvdG9idWYuRW1wdHkSFmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
-            "Y3TaQQRuYW1lgtPkkwI9IjgvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9hZ2VudHMvKi9mbG93cy8qfTp0cmFpbjoBKhK/AQoMVmFsaWRhdGVG",
-            "bG93EjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVmFsaWRhdGVG",
-            "bG93UmVxdWVzdBozLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZs",
-            "b3dWYWxpZGF0aW9uUmVzdWx0IkaC0+STAkAiOy92My97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9OnZhbGlkYXRlOgEq",
-            "EuEBChdHZXRGbG93VmFsaWRhdGlvblJlc3VsdBI9Lmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LmN4LnYzLkdldEZsb3dWYWxpZGF0aW9uUmVzdWx0UmVxdWVz",
-            "dBozLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZsb3dWYWxpZGF0",
-            "aW9uUmVzdWx0IlLaQQRuYW1lgtPkkwJFEkMvdjMve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qL3ZhbGlkYXRpb25SZXN1",
-            "bHR9EtIBCgpJbXBvcnRGbG93EjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "Y3gudjMuSW1wb3J0Rmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uInPKQSwKEkltcG9ydEZsb3dSZXNwb25zZRIWZ29vZ2xlLnBy",
-            "b3RvYnVmLlN0cnVjdILT5JMCPiI5L3YzL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9hZ2VudHMvKn0vZmxvd3M6aW1wb3J0OgEqEtIBCgpFeHBv",
-            "cnRGbG93EjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhwb3J0",
-            "Rmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInPK",
-            "QSwKEkV4cG9ydEZsb3dSZXNwb25zZRIWZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
-            "dILT5JMCPiI5L3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdl",
-            "bnRzLyovZmxvd3MvKn06ZXhwb3J0OgEqGnjKQRlkaWFsb2dmbG93Lmdvb2ds",
-            "ZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2RpYWxvZ2Zsb3dCrwEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52M0IJRmxvd1Byb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9n",
-            "Zmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91",
-            "ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxv",
-            "dzo6Q1g6OlYzYgZwcm90bzM="));
+            "cGlzLmNvbS9GbG93EhUKCGZsb3dfdXJpGAIgASgJQgPgQQESJQoYaW5jbHVk",
+            "ZV9yZWZlcmVuY2VkX2Zsb3dzGAQgASgIQgPgQQEiSAoSRXhwb3J0Rmxvd1Jl",
+            "c3BvbnNlEhIKCGZsb3dfdXJpGAEgASgJSAASFgoMZmxvd19jb250ZW50GAIg",
+            "ASgMSABCBgoEZmxvdzKYEAoFRmxvd3MSswEKCkNyZWF0ZUZsb3cSMC5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5DcmVhdGVGbG93UmVxdWVzdBoj",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZsb3ciTtpBC3BhcmVu",
+            "dCxmbG93gtPkkwI6IjIvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FnZW50cy8qfS9mbG93czoEZmxvdxKZAQoKRGVsZXRlRmxvdxIwLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRlbGV0ZUZsb3dSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkHaQQRuYW1lgtPkkwI0KjIvdjMv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8q",
+            "fRKzAQoJTGlzdEZsb3dzEi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
+            "djMuTGlzdEZsb3dzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LmN4LnYzLkxpc3RGbG93c1Jlc3BvbnNlIkPaQQZwYXJlbnSC0+STAjQSMi92",
+            "My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyp9L2Zs",
+            "b3dzEqABCgdHZXRGbG93Ei0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
+            "djMuR2V0Rmxvd1JlcXVlc3QaIy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52My5GbG93IkHaQQRuYW1lgtPkkwI0EjIvdjMve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qfRK9AQoKVXBkYXRlRmxv",
+            "dxIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlVwZGF0ZUZsb3dS",
+            "ZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvdyJY",
+            "2kEQZmxvdyx1cGRhdGVfbWFza4LT5JMCPzI3L3YzL3tmbG93Lm5hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qfToEZmxvdxLZ",
+            "AQoJVHJhaW5GbG93Ei8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
+            "VHJhaW5GbG93UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ifMpBLwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9i",
+            "dWYuU3RydWN02kEEbmFtZYLT5JMCPSI4L3YzL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKn06dHJhaW46ASoSvwEKDFZh",
+            "bGlkYXRlRmxvdxIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlZh",
+            "bGlkYXRlRmxvd1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52My5GbG93VmFsaWRhdGlvblJlc3VsdCJGgtPkkwJAIjsvdjMve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qfTp2YWxp",
+            "ZGF0ZToBKhLhAQoXR2V0Rmxvd1ZhbGlkYXRpb25SZXN1bHQSPS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5HZXRGbG93VmFsaWRhdGlvblJlc3Vs",
+            "dFJlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93",
+            "VmFsaWRhdGlvblJlc3VsdCJS2kEEbmFtZYLT5JMCRRJDL3YzL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKi92YWxpZGF0",
+            "aW9uUmVzdWx0fRLSAQoKSW1wb3J0RmxvdxIwLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LmN4LnYzLkltcG9ydEZsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiJzykEsChJJbXBvcnRGbG93UmVzcG9uc2USFmdv",
+            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3SC0+STAj4iOS92My97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyp9L2Zsb3dzOmltcG9ydDoBKhLS",
+            "AQoKRXhwb3J0RmxvdxIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LkV4cG9ydEZsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiJzykEsChJFeHBvcnRGbG93UmVzcG9uc2USFmdvb2dsZS5wcm90b2J1",
+            "Zi5TdHJ1Y3SC0+STAj4iOS92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FnZW50cy8qL2Zsb3dzLyp9OmV4cG9ydDoBKhp4ykEZZGlhbG9nZmxv",
+            "dy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9kaWFsb2dmbG93Qq8BCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cuY3gudjNCCUZsb3dQcm90b1ABWjFjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1Hb29n",
+            "bGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRp",
+            "YWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ImportStrategyReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessageReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.NluSettings), global::Google.Cloud.Dialogflow.Cx.V3.NluSettings.Parser, new[]{ "ModelType", "ClassificationThreshold", "ModelTrainingMode" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.NluSettings.Types.ModelType), typeof(global::Google.Cloud.Dialogflow.Cx.V3.NluSettings.Types.ModelTrainingMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Flow), global::Google.Cloud.Dialogflow.Cx.V3.Flow.Parser, new[]{ "Name", "DisplayName", "Description", "TransitionRoutes", "EventHandlers", "TransitionRouteGroups", "NluSettings", "AdvancedSettings", "KnowledgeConnectorSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Flow), global::Google.Cloud.Dialogflow.Cx.V3.Flow.Parser, new[]{ "Name", "DisplayName", "Description", "TransitionRoutes", "EventHandlers", "TransitionRouteGroups", "NluSettings", "AdvancedSettings", "KnowledgeConnectorSettings", "MultiLanguageSettings", "Locked" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings), global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings.Parser, new[]{ "EnableMultiLanguageDetection", "SupportedResponseLanguageCodes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest), global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest.Parser, new[]{ "Parent", "Flow", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DeleteFlowRequest), global::Google.Cloud.Dialogflow.Cx.V3.DeleteFlowRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsRequest), global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "LanguageCode" }, null, null, null, null),
@@ -571,6 +576,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       nluSettings_ = other.nluSettings_ != null ? other.nluSettings_.Clone() : null;
       advancedSettings_ = other.advancedSettings_ != null ? other.advancedSettings_.Clone() : null;
       knowledgeConnectorSettings_ = other.knowledgeConnectorSettings_ != null ? other.knowledgeConnectorSettings_.Clone() : null;
+      multiLanguageSettings_ = other.multiLanguageSettings_ != null ? other.multiLanguageSettings_.Clone() : null;
+      locked_ = other.locked_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -755,6 +762,37 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "multi_language_settings" field.</summary>
+    public const int MultiLanguageSettingsFieldNumber = 28;
+    private global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings multiLanguageSettings_;
+    /// <summary>
+    /// Optional. Multi-lingual agent settings for this flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings MultiLanguageSettings {
+      get { return multiLanguageSettings_; }
+      set {
+        multiLanguageSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "locked" field.</summary>
+    public const int LockedFieldNumber = 30;
+    private bool locked_;
+    /// <summary>
+    /// Indicates whether the flow is locked for changes. If the flow is locked,
+    /// modifications to the flow will be rejected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Locked {
+      get { return locked_; }
+      set {
+        locked_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -779,6 +817,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(NluSettings, other.NluSettings)) return false;
       if (!object.Equals(AdvancedSettings, other.AdvancedSettings)) return false;
       if (!object.Equals(KnowledgeConnectorSettings, other.KnowledgeConnectorSettings)) return false;
+      if (!object.Equals(MultiLanguageSettings, other.MultiLanguageSettings)) return false;
+      if (Locked != other.Locked) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -795,6 +835,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (nluSettings_ != null) hash ^= NluSettings.GetHashCode();
       if (advancedSettings_ != null) hash ^= AdvancedSettings.GetHashCode();
       if (knowledgeConnectorSettings_ != null) hash ^= KnowledgeConnectorSettings.GetHashCode();
+      if (multiLanguageSettings_ != null) hash ^= MultiLanguageSettings.GetHashCode();
+      if (Locked != false) hash ^= Locked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -840,6 +882,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(KnowledgeConnectorSettings);
       }
+      if (multiLanguageSettings_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(MultiLanguageSettings);
+      }
+      if (Locked != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(Locked);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -877,6 +927,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(KnowledgeConnectorSettings);
       }
+      if (multiLanguageSettings_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(MultiLanguageSettings);
+      }
+      if (Locked != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(Locked);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -907,6 +965,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (knowledgeConnectorSettings_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(KnowledgeConnectorSettings);
+      }
+      if (multiLanguageSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MultiLanguageSettings);
+      }
+      if (Locked != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -949,6 +1013,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           KnowledgeConnectorSettings = new global::Google.Cloud.Dialogflow.Cx.V3.KnowledgeConnectorSettings();
         }
         KnowledgeConnectorSettings.MergeFrom(other.KnowledgeConnectorSettings);
+      }
+      if (other.multiLanguageSettings_ != null) {
+        if (multiLanguageSettings_ == null) {
+          MultiLanguageSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings();
+        }
+        MultiLanguageSettings.MergeFrom(other.MultiLanguageSettings);
+      }
+      if (other.Locked != false) {
+        Locked = other.Locked;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1008,6 +1081,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               KnowledgeConnectorSettings = new global::Google.Cloud.Dialogflow.Cx.V3.KnowledgeConnectorSettings();
             }
             input.ReadMessage(KnowledgeConnectorSettings);
+            break;
+          }
+          case 226: {
+            if (multiLanguageSettings_ == null) {
+              MultiLanguageSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings();
+            }
+            input.ReadMessage(MultiLanguageSettings);
+            break;
+          }
+          case 240: {
+            Locked = input.ReadBool();
             break;
           }
         }
@@ -1070,10 +1154,263 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             input.ReadMessage(KnowledgeConnectorSettings);
             break;
           }
+          case 226: {
+            if (multiLanguageSettings_ == null) {
+              MultiLanguageSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Flow.Types.MultiLanguageSettings();
+            }
+            input.ReadMessage(MultiLanguageSettings);
+            break;
+          }
+          case 240: {
+            Locked = input.ReadBool();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Flow message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Settings for multi-lingual agents.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MultiLanguageSettings : pb::IMessage<MultiLanguageSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MultiLanguageSettings> _parser = new pb::MessageParser<MultiLanguageSettings>(() => new MultiLanguageSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MultiLanguageSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.Flow.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MultiLanguageSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MultiLanguageSettings(MultiLanguageSettings other) : this() {
+          enableMultiLanguageDetection_ = other.enableMultiLanguageDetection_;
+          supportedResponseLanguageCodes_ = other.supportedResponseLanguageCodes_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MultiLanguageSettings Clone() {
+          return new MultiLanguageSettings(this);
+        }
+
+        /// <summary>Field number for the "enable_multi_language_detection" field.</summary>
+        public const int EnableMultiLanguageDetectionFieldNumber = 1;
+        private bool enableMultiLanguageDetection_;
+        /// <summary>
+        /// Optional. Enable multi-language detection for this flow. This can be set
+        /// only if [agent level multi language
+        /// setting][Agent.enable_multi_language_training] is enabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableMultiLanguageDetection {
+          get { return enableMultiLanguageDetection_; }
+          set {
+            enableMultiLanguageDetection_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "supported_response_language_codes" field.</summary>
+        public const int SupportedResponseLanguageCodesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_supportedResponseLanguageCodes_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> supportedResponseLanguageCodes_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. Agent will respond in the detected language if the detected
+        /// language code is in the supported resolved languages for this flow. This
+        /// will be used only if multi-language training is enabled in the
+        /// [agent][google.cloud.dialogflow.cx.v3.Agent.enable_multi_language_training]
+        /// and multi-language detection is enabled in the
+        /// [flow][google.cloud.dialogflow.cx.v3.Flow.MultiLanguageSettings.enable_multi_language_detection].
+        /// The supported languages must be a subset of the languages supported by
+        /// the agent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> SupportedResponseLanguageCodes {
+          get { return supportedResponseLanguageCodes_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MultiLanguageSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MultiLanguageSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnableMultiLanguageDetection != other.EnableMultiLanguageDetection) return false;
+          if(!supportedResponseLanguageCodes_.Equals(other.supportedResponseLanguageCodes_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnableMultiLanguageDetection != false) hash ^= EnableMultiLanguageDetection.GetHashCode();
+          hash ^= supportedResponseLanguageCodes_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnableMultiLanguageDetection != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableMultiLanguageDetection);
+          }
+          supportedResponseLanguageCodes_.WriteTo(output, _repeated_supportedResponseLanguageCodes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnableMultiLanguageDetection != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableMultiLanguageDetection);
+          }
+          supportedResponseLanguageCodes_.WriteTo(ref output, _repeated_supportedResponseLanguageCodes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnableMultiLanguageDetection != false) {
+            size += 1 + 1;
+          }
+          size += supportedResponseLanguageCodes_.CalculateSize(_repeated_supportedResponseLanguageCodes_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MultiLanguageSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnableMultiLanguageDetection != false) {
+            EnableMultiLanguageDetection = other.EnableMultiLanguageDetection;
+          }
+          supportedResponseLanguageCodes_.Add(other.supportedResponseLanguageCodes_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnableMultiLanguageDetection = input.ReadBool();
+                break;
+              }
+              case 18: {
+                supportedResponseLanguageCodes_.AddEntriesFrom(input, _repeated_supportedResponseLanguageCodes_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnableMultiLanguageDetection = input.ReadBool();
+                break;
+              }
+              case 18: {
+                supportedResponseLanguageCodes_.AddEntriesFrom(ref input, _repeated_supportedResponseLanguageCodes_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
