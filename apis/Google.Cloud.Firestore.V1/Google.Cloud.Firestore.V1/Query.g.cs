@@ -388,7 +388,7 @@ namespace Google.Cloud.Firestore.V1 {
     public const int FindNearestFieldNumber = 9;
     private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest findNearest_;
     /// <summary>
-    /// Optional. A potential Nearest Neighbors Search.
+    /// Optional. A potential nearest neighbors search.
     ///
     /// Applies after all other filters and ordering.
     ///
@@ -2978,7 +2978,10 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
-      /// Nearest Neighbors search config.
+      /// Nearest Neighbors search config. The ordering provided by FindNearest
+      /// supersedes the order_by stage. If multiple documents have the same vector
+      /// distance, the returned document order is not guaranteed to be stable
+      /// between queries.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FindNearest : pb::IMessage<FindNearest>
@@ -3065,7 +3068,7 @@ namespace Google.Cloud.Firestore.V1 {
         public const int DistanceMeasureFieldNumber = 3;
         private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure distanceMeasure_ = global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified;
         /// <summary>
-        /// Required. The Distance Measure to use, required.
+        /// Required. The distance measure to use, required.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3337,22 +3340,25 @@ namespace Google.Cloud.Firestore.V1 {
             /// <summary>
             /// Measures the EUCLIDEAN distance between the vectors. See
             /// [Euclidean](https://en.wikipedia.org/wiki/Euclidean_distance) to learn
-            /// more
+            /// more. The resulting distance decreases the more similar two vectors
+            /// are.
             /// </summary>
             [pbr::OriginalName("EUCLIDEAN")] Euclidean = 1,
             /// <summary>
-            /// Compares vectors based on the angle between them, which allows you to
-            /// measure similarity that isn't based on the vectors magnitude.
-            /// We recommend using DOT_PRODUCT with unit normalized vectors instead of
-            /// COSINE distance, which is mathematically equivalent with better
-            /// performance. See [Cosine
+            /// COSINE distance compares vectors based on the angle between them, which
+            /// allows you to measure similarity that isn't based on the vectors
+            /// magnitude. We recommend using DOT_PRODUCT with unit normalized vectors
+            /// instead of COSINE distance, which is mathematically equivalent with
+            /// better performance. See [Cosine
             /// Similarity](https://en.wikipedia.org/wiki/Cosine_similarity) to learn
-            /// more.
+            /// more about COSINE similarity and COSINE distance. The resulting
+            /// COSINE distance decreases the more similar two vectors are.
             /// </summary>
             [pbr::OriginalName("COSINE")] Cosine = 2,
             /// <summary>
             /// Similar to cosine but is affected by the magnitude of the vectors. See
             /// [Dot Product](https://en.wikipedia.org/wiki/Dot_product) to learn more.
+            /// The resulting distance increases the more similar two vectors are.
             /// </summary>
             [pbr::OriginalName("DOT_PRODUCT")] DotProduct = 3,
           }
