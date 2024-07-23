@@ -36,6 +36,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             set => Branch = value?.ToString() ?? "";
         }
 
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
+            set => Session = value?.ToString() ?? "";
+        }
+
         public partial class Types
         {
             public partial class DataStoreSpec

@@ -763,6 +763,7 @@ namespace GoogleCSharpSnippets
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
                 AsynchronousMode = false,
                 UserPseudoId = "",
+                UserLabels = { { "", "" }, },
             };
             // Make the request
             AnswerQueryResponse response = conversationalSearchServiceClient.AnswerQuery(request);
@@ -789,6 +790,7 @@ namespace GoogleCSharpSnippets
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
                 AsynchronousMode = false,
                 UserPseudoId = "",
+                UserLabels = { { "", "" }, },
             };
             // Make the request
             AnswerQueryResponse response = await conversationalSearchServiceClient.AnswerQueryAsync(request);

@@ -31,7 +31,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ZS92MWJldGEvY29tbW9uLnByb3RvGkRnb29nbGUvY2xvdWQvZGlzY292ZXJ5",
             "ZW5naW5lL3YxYmV0YS9kb2N1bWVudF9wcm9jZXNzaW5nX2NvbmZpZy5wcm90",
             "bxowZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MWJldGEvc2NoZW1h",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuwGCglE",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrYHCglE",
             "YXRhU3RvcmUSEQoEbmFtZRgBIAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EECElUKEWluZHVzdHJ5X3ZlcnRpY2FsGAMgASgOMjUuZ29vZ2xl",
             "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW5kdXN0cnlWZXJ0aWNh",
@@ -40,28 +40,34 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "bHRfc2NoZW1hX2lkGAcgASgJQgPgQQMSWQoOY29udGVudF9jb25maWcYBiAB",
             "KA4yPC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5EYXRh",
             "U3RvcmUuQ29udGVudENvbmZpZ0ID4EEFEjQKC2NyZWF0ZV90aW1lGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEmEKGmRvY3VtZW50",
-            "X3Byb2Nlc3NpbmdfY29uZmlnGBsgASgLMj0uZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MWJldGEuRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnEkQK",
-            "D3N0YXJ0aW5nX3NjaGVtYRgcIAEoCzIrLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjFiZXRhLlNjaGVtYSJpCg1Db250ZW50Q29uZmlnEh4KGkNP",
-            "TlRFTlRfQ09ORklHX1VOU1BFQ0lGSUVEEAASDgoKTk9fQ09OVEVOVBABEhQK",
-            "EENPTlRFTlRfUkVRVUlSRUQQAhISCg5QVUJMSUNfV0VCU0lURRADOskB6kHF",
-            "AQooZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRI/",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFT",
-            "dG9yZXMve2RhdGFfc3RvcmV9Elhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFT",
-            "dG9yZXMve2RhdGFfc3RvcmV9QpUCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MWJldGFCDkRhdGFTdG9yZVByb3RvUAFaUWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zl",
-            "cnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lO",
-            "RaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29v",
-            "Z2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNs",
-            "b3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKDWxhbmd1YWdl",
+            "X2luZm8YDiABKAsyMS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "YmV0YS5MYW5ndWFnZUluZm8SYQoaZG9jdW1lbnRfcHJvY2Vzc2luZ19jb25m",
+            "aWcYGyABKAsyPS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
+            "YS5Eb2N1bWVudFByb2Nlc3NpbmdDb25maWcSRAoPc3RhcnRpbmdfc2NoZW1h",
+            "GBwgASgLMisuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
+            "U2NoZW1hImkKDUNvbnRlbnRDb25maWcSHgoaQ09OVEVOVF9DT05GSUdfVU5T",
+            "UEVDSUZJRUQQABIOCgpOT19DT05URU5UEAESFAoQQ09OVEVOVF9SRVFVSVJF",
+            "RBACEhIKDlBVQkxJQ19XRUJTSVRFEAM6yQHqQcUBCihkaXNjb3Zlcnllbmdp",
+            "bmUuZ29vZ2xlYXBpcy5jb20vRGF0YVN0b3JlEj9wcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9y",
+            "ZX0SWHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
+            "b2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9y",
+            "ZX0ieAoMTGFuZ3VhZ2VJbmZvEhUKDWxhbmd1YWdlX2NvZGUYASABKAkSJQoY",
+            "bm9ybWFsaXplZF9sYW5ndWFnZV9jb2RlGAIgASgJQgPgQQMSFQoIbGFuZ3Vh",
+            "Z2UYAyABKAlCA+BBAxITCgZyZWdpb24YBCABKAlCA+BBA0KVAgonY29tLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQg5EYXRhU3RvcmVQ",
+            "cm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9h",
+            "cGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKi",
+            "Ag9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5n",
+            "aW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFi",
+            "ZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore), global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "DocumentProcessingConfig", "StartingSchema" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Types.ContentConfig) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore), global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "LanguageInfo", "DocumentProcessingConfig", "StartingSchema" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Types.ContentConfig) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo.Parser, new[]{ "LanguageCode", "NormalizedLanguageCode", "Language", "Region" }, null, null, null, null)
           }));
     }
     #endregion
@@ -113,6 +119,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       defaultSchemaId_ = other.defaultSchemaId_;
       contentConfig_ = other.contentConfig_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      languageInfo_ = other.languageInfo_ != null ? other.languageInfo_.Clone() : null;
       documentProcessingConfig_ = other.documentProcessingConfig_ != null ? other.documentProcessingConfig_.Clone() : null;
       startingSchema_ = other.startingSchema_ != null ? other.startingSchema_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -246,6 +253,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "language_info" field.</summary>
+    public const int LanguageInfoFieldNumber = 14;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo languageInfo_;
+    /// <summary>
+    /// Language info for DataStore.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo LanguageInfo {
+      get { return languageInfo_; }
+      set {
+        languageInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "document_processing_config" field.</summary>
     public const int DocumentProcessingConfigFieldNumber = 27;
     private global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig documentProcessingConfig_;
@@ -312,6 +334,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (DefaultSchemaId != other.DefaultSchemaId) return false;
       if (ContentConfig != other.ContentConfig) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(LanguageInfo, other.LanguageInfo)) return false;
       if (!object.Equals(DocumentProcessingConfig, other.DocumentProcessingConfig)) return false;
       if (!object.Equals(StartingSchema, other.StartingSchema)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -328,6 +351,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (DefaultSchemaId.Length != 0) hash ^= DefaultSchemaId.GetHashCode();
       if (ContentConfig != global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Types.ContentConfig.Unspecified) hash ^= ContentConfig.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (languageInfo_ != null) hash ^= LanguageInfo.GetHashCode();
       if (documentProcessingConfig_ != null) hash ^= DocumentProcessingConfig.GetHashCode();
       if (startingSchema_ != null) hash ^= StartingSchema.GetHashCode();
       if (_unknownFields != null) {
@@ -373,6 +397,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(58);
         output.WriteString(DefaultSchemaId);
       }
+      if (languageInfo_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(LanguageInfo);
+      }
       if (documentProcessingConfig_ != null) {
         output.WriteRawTag(218, 1);
         output.WriteMessage(DocumentProcessingConfig);
@@ -416,6 +444,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(58);
         output.WriteString(DefaultSchemaId);
       }
+      if (languageInfo_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(LanguageInfo);
+      }
       if (documentProcessingConfig_ != null) {
         output.WriteRawTag(218, 1);
         output.WriteMessage(DocumentProcessingConfig);
@@ -452,6 +484,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (languageInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LanguageInfo);
       }
       if (documentProcessingConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DocumentProcessingConfig);
@@ -492,6 +527,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.languageInfo_ != null) {
+        if (languageInfo_ == null) {
+          LanguageInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo();
+        }
+        LanguageInfo.MergeFrom(other.LanguageInfo);
       }
       if (other.documentProcessingConfig_ != null) {
         if (documentProcessingConfig_ == null) {
@@ -550,6 +591,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 58: {
             DefaultSchemaId = input.ReadString();
+            break;
+          }
+          case 114: {
+            if (languageInfo_ == null) {
+              LanguageInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo();
+            }
+            input.ReadMessage(LanguageInfo);
             break;
           }
           case 218: {
@@ -613,6 +661,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             DefaultSchemaId = input.ReadString();
             break;
           }
+          case 114: {
+            if (languageInfo_ == null) {
+              LanguageInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.LanguageInfo();
+            }
+            input.ReadMessage(LanguageInfo);
+            break;
+          }
           case 218: {
             if (documentProcessingConfig_ == null) {
               DocumentProcessingConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig();
@@ -663,6 +718,326 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Language info for DataStore.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LanguageInfo : pb::IMessage<LanguageInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LanguageInfo> _parser = new pb::MessageParser<LanguageInfo>(() => new LanguageInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LanguageInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.DataStoreReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LanguageInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LanguageInfo(LanguageInfo other) : this() {
+      languageCode_ = other.languageCode_;
+      normalizedLanguageCode_ = other.normalizedLanguageCode_;
+      language_ = other.language_;
+      region_ = other.region_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LanguageInfo Clone() {
+      return new LanguageInfo(this);
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 1;
+    private string languageCode_ = "";
+    /// <summary>
+    /// The language code for the DataStore.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "normalized_language_code" field.</summary>
+    public const int NormalizedLanguageCodeFieldNumber = 2;
+    private string normalizedLanguageCode_ = "";
+    /// <summary>
+    /// Output only. This is the normalized form of language_code.
+    /// E.g.: language_code of `en-GB`, `en_GB`, `en-UK` or `en-gb`
+    /// will have normalized_language_code of `en-GB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NormalizedLanguageCode {
+      get { return normalizedLanguageCode_; }
+      set {
+        normalizedLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "language" field.</summary>
+    public const int LanguageFieldNumber = 3;
+    private string language_ = "";
+    /// <summary>
+    /// Output only. Language part of normalized_language_code.
+    /// E.g.: `en-US` -> `en`, `zh-Hans-HK` -> `zh`, `en` -> `en`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Language {
+      get { return language_; }
+      set {
+        language_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "region" field.</summary>
+    public const int RegionFieldNumber = 4;
+    private string region_ = "";
+    /// <summary>
+    /// Output only. Region part of normalized_language_code, if present.
+    /// E.g.: `en-US` -> `US`, `zh-Hans-HK` -> `HK`, `en` -> ``.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Region {
+      get { return region_; }
+      set {
+        region_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LanguageInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LanguageInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LanguageCode != other.LanguageCode) return false;
+      if (NormalizedLanguageCode != other.NormalizedLanguageCode) return false;
+      if (Language != other.Language) return false;
+      if (Region != other.Region) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (NormalizedLanguageCode.Length != 0) hash ^= NormalizedLanguageCode.GetHashCode();
+      if (Language.Length != 0) hash ^= Language.GetHashCode();
+      if (Region.Length != 0) hash ^= Region.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LanguageCode);
+      }
+      if (NormalizedLanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NormalizedLanguageCode);
+      }
+      if (Language.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Language);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Region);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LanguageCode);
+      }
+      if (NormalizedLanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NormalizedLanguageCode);
+      }
+      if (Language.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Language);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Region);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (NormalizedLanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NormalizedLanguageCode);
+      }
+      if (Language.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Language);
+      }
+      if (Region.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Region);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LanguageInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.NormalizedLanguageCode.Length != 0) {
+        NormalizedLanguageCode = other.NormalizedLanguageCode;
+      }
+      if (other.Language.Length != 0) {
+        Language = other.Language;
+      }
+      if (other.Region.Length != 0) {
+        Region = other.Region;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            NormalizedLanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            Language = input.ReadString();
+            break;
+          }
+          case 34: {
+            Region = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            NormalizedLanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            Language = input.ReadString();
+            break;
+          }
+          case 34: {
+            Region = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

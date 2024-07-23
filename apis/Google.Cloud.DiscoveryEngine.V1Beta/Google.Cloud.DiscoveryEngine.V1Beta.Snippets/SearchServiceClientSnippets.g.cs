@@ -57,11 +57,17 @@ namespace GoogleCSharpSnippets
                 EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
                 CanonicalFilter = "",
+                SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
                 {
                     new SearchRequest.Types.DataStoreSpec(),
                 },
+                LanguageCode = "",
+                RegionCode = "",
+                SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                SessionSpec = new SearchRequest.Types.SessionSpec(),
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -131,11 +137,17 @@ namespace GoogleCSharpSnippets
                 EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
                 CanonicalFilter = "",
+                SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
                 {
                     new SearchRequest.Types.DataStoreSpec(),
                 },
+                LanguageCode = "",
+                RegionCode = "",
+                SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                SessionSpec = new SearchRequest.Types.SessionSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
