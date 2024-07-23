@@ -25,35 +25,36 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3RvEhNnb29nbGUu",
-            "ZmlyZXN0b3JlLnYxGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9s",
-            "YXRsbmcucHJvdG8igAIKCERvY3VtZW50EgwKBG5hbWUYASABKAkSOQoGZmll",
-            "bGRzGAIgAygLMikuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudC5GaWVs",
-            "ZHNFbnRyeRIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wGkkKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIp",
-            "CgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgB",
-            "Iq4DCgVWYWx1ZRIwCgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLk51bGxWYWx1ZUgAEhcKDWJvb2xlYW5fdmFsdWUYASABKAhIABIXCg1p",
-            "bnRlZ2VyX3ZhbHVlGAIgASgDSAASFgoMZG91YmxlX3ZhbHVlGAMgASgBSAAS",
-            "NQoPdGltZXN0YW1wX3ZhbHVlGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEgAEhYKDHN0cmluZ192YWx1ZRgRIAEoCUgAEhUKC2J5dGVzX3Zh",
-            "bHVlGBIgASgMSAASGQoPcmVmZXJlbmNlX3ZhbHVlGAUgASgJSAASLgoPZ2Vv",
-            "X3BvaW50X3ZhbHVlGAggASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSAASNgoL",
-            "YXJyYXlfdmFsdWUYCSABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5",
-            "VmFsdWVIABIyCgltYXBfdmFsdWUYBiABKAsyHS5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLk1hcFZhbHVlSABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioK",
-            "BnZhbHVlcxgBIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEK",
-            "CE1hcFZhbHVlEjkKBmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuTWFwVmFsdWUuRmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5",
-            "GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5W",
-            "YWx1ZToCOAFCxQEKF2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg1Eb2N1bWVu",
-            "dFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYx",
-            "L2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBiogIER0NGU6oCGUdvb2dsZS5DbG91",
-            "ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIc",
-            "R29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
+            "ZmlyZXN0b3JlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Ghxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8i",
+            "gAIKCERvY3VtZW50EgwKBG5hbWUYASABKAkSOQoGZmllbGRzGAIgAygLMiku",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudC5GaWVsZHNFbnRyeRIvCgtj",
+            "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wGkkKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIpCgV2YWx1ZRgCIAEo",
+            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgBIq4DCgVWYWx1ZRIw",
+            "CgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1",
+            "ZUgAEhcKDWJvb2xlYW5fdmFsdWUYASABKAhIABIXCg1pbnRlZ2VyX3ZhbHVl",
+            "GAIgASgDSAASFgoMZG91YmxlX3ZhbHVlGAMgASgBSAASNQoPdGltZXN0YW1w",
+            "X3ZhbHVlGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEhYK",
+            "DHN0cmluZ192YWx1ZRgRIAEoCUgAEhUKC2J5dGVzX3ZhbHVlGBIgASgMSAAS",
+            "GQoPcmVmZXJlbmNlX3ZhbHVlGAUgASgJSAASLgoPZ2VvX3BvaW50X3ZhbHVl",
+            "GAggASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSAASNgoLYXJyYXlfdmFsdWUY",
+            "CSABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5VmFsdWVIABIyCglt",
+            "YXBfdmFsdWUYBiABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLk1hcFZhbHVl",
+            "SABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioKBnZhbHVlcxgBIAMo",
+            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEKCE1hcFZhbHVlEjkK",
+            "BmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUudjEuTWFwVmFsdWUu",
+            "RmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5GAEgASgJEikKBXZh",
+            "bHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZToCOAFCxQEK",
+            "F2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg1Eb2N1bWVudFByb3RvUAFaO2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBi",
+            "O2ZpcmVzdG9yZXBiogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUu",
+            "VjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91",
+            "ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue" }, new[]{ "ValueType" }, null, null, null),
@@ -754,7 +755,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// An array value.
     ///
-    /// Cannot directly contain another array value, though can contain an
+    /// Cannot directly contain another array value, though can contain a
     /// map which contains another array.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
