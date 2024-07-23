@@ -19,6 +19,18 @@ using gax = Google.Api.Gax;
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
 {
+    public partial class PurgeUserEventsRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class PurgeDocumentsRequest
     {
         /// <summary><see cref="BranchName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
@@ -41,6 +53,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
     }
 
     public partial class PurgeSuggestionDenyListEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PurgeCompletionSuggestionsRequest
     {
         /// <summary>
         /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.

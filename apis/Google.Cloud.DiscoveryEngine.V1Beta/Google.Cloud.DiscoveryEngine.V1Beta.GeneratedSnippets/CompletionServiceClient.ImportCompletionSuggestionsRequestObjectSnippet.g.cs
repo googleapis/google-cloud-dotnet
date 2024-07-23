@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_DataStoreService_CreateDataStore_async]
+    // [START discoveryengine_v1beta_generated_CompletionService_ImportCompletionSuggestions_sync]
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedDataStoreServiceClientSnippets
+    public sealed partial class GeneratedCompletionServiceClientSnippets
     {
-        /// <summary>Snippet for CreateDataStoreAsync</summary>
+        /// <summary>Snippet for ImportCompletionSuggestions</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,38 +30,36 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateDataStoreRequestObjectAsync()
+        public void ImportCompletionSuggestionsRequestObject()
         {
             // Create client
-            DataStoreServiceClient dataStoreServiceClient = await DataStoreServiceClient.CreateAsync();
+            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
             // Initialize request argument(s)
-            CreateDataStoreRequest request = new CreateDataStoreRequest
+            ImportCompletionSuggestionsRequest request = new ImportCompletionSuggestionsRequest
             {
-                ParentAsCollectionName = CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
-                DataStore = new DataStore(),
-                DataStoreId = "",
-                CreateAdvancedSiteSearch = false,
-                SkipDefaultSchemaCreation = false,
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                InlineSource = new ImportCompletionSuggestionsRequest.Types.InlineSource(),
+                ErrorConfig = new ImportErrorConfig(),
             };
             // Make the request
-            Operation<DataStore, CreateDataStoreMetadata> response = await dataStoreServiceClient.CreateDataStoreAsync(request);
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> response = completionServiceClient.ImportCompletionSuggestions(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataStore, CreateDataStoreMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            DataStore result = completedResponse.Result;
+            ImportCompletionSuggestionsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataStore, CreateDataStoreMetadata> retrievedResponse = await dataStoreServiceClient.PollOnceCreateDataStoreAsync(operationName);
+            Operation<ImportCompletionSuggestionsResponse, ImportCompletionSuggestionsMetadata> retrievedResponse = completionServiceClient.PollOnceImportCompletionSuggestions(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataStore retrievedResult = retrievedResponse.Result;
+                ImportCompletionSuggestionsResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END discoveryengine_v1beta_generated_DataStoreService_CreateDataStore_async]
+    // [END discoveryengine_v1beta_generated_CompletionService_ImportCompletionSuggestions_sync]
 }

@@ -302,6 +302,200 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1beta_generated_CompletionService_ImportCompletionSuggestions_sync",
+      "title": "ImportCompletionSuggestionsRequestObject",
+      "description": "Snippet for ImportCompletionSuggestions",
+      "file": "CompletionServiceClient.ImportCompletionSuggestionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportCompletionSuggestions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient.ImportCompletionSuggestions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportCompletionSuggestionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportCompletionSuggestionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportCompletionSuggestionsMetadata>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "ImportCompletionSuggestions",
+          "fullName": "google.cloud.discoveryengine.v1beta.CompletionService.ImportCompletionSuggestions",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_CompletionService_ImportCompletionSuggestions_async",
+      "title": "ImportCompletionSuggestionsRequestObjectAsync",
+      "description": "Snippet for ImportCompletionSuggestionsAsync",
+      "file": "CompletionServiceClient.ImportCompletionSuggestionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportCompletionSuggestionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient.ImportCompletionSuggestionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportCompletionSuggestionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportCompletionSuggestionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportCompletionSuggestionsMetadata>>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "ImportCompletionSuggestions",
+          "fullName": "google.cloud.discoveryengine.v1beta.CompletionService.ImportCompletionSuggestions",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_CompletionService_PurgeCompletionSuggestions_sync",
+      "title": "PurgeCompletionSuggestionsRequestObject",
+      "description": "Snippet for PurgeCompletionSuggestions",
+      "file": "CompletionServiceClient.PurgeCompletionSuggestionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeCompletionSuggestions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient.PurgeCompletionSuggestions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.PurgeCompletionSuggestionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.PurgeCompletionSuggestionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.PurgeCompletionSuggestionsMetadata>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeCompletionSuggestions",
+          "fullName": "google.cloud.discoveryengine.v1beta.CompletionService.PurgeCompletionSuggestions",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_CompletionService_PurgeCompletionSuggestions_async",
+      "title": "PurgeCompletionSuggestionsRequestObjectAsync",
+      "description": "Snippet for PurgeCompletionSuggestionsAsync",
+      "file": "CompletionServiceClient.PurgeCompletionSuggestionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeCompletionSuggestionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient.PurgeCompletionSuggestionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.PurgeCompletionSuggestionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.PurgeCompletionSuggestionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.PurgeCompletionSuggestionsMetadata>>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeCompletionSuggestions",
+          "fullName": "google.cloud.discoveryengine.v1beta.CompletionService.PurgeCompletionSuggestions",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1beta_generated_ControlService_CreateControl_sync",
       "title": "CreateControlRequestObject",
       "description": "Snippet for CreateControl",
@@ -3666,12 +3860,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 54,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 51,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -3715,12 +3909,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 54,
+          "end": 55,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 52,
+          "end": 53,
           "type": "SHORT"
         }
       ]
@@ -5443,12 +5637,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -5492,12 +5686,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -16761,12 +16955,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 105,
+          "end": 111,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 103,
+          "end": 109,
           "type": "SHORT"
         }
       ]
@@ -16810,12 +17004,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 107,
+          "end": 113,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 105,
+          "end": 111,
           "type": "SHORT"
         }
       ]
@@ -20378,6 +20572,103 @@
         {
           "start": 36,
           "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_PurgeUserEvents_sync",
+      "title": "PurgeUserEventsRequestObject",
+      "description": "Snippet for PurgeUserEvents",
+      "file": "UserEventServiceClient.PurgeUserEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeUserEvents",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.PurgeUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.PurgeUserEventsResponse, Google.Cloud.DiscoveryEngine.V1Beta.PurgeUserEventsMetadata>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeUserEvents",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.PurgeUserEvents",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_PurgeUserEvents_async",
+      "title": "PurgeUserEventsRequestObjectAsync",
+      "description": "Snippet for PurgeUserEventsAsync",
+      "file": "UserEventServiceClient.PurgeUserEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeUserEventsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.PurgeUserEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.PurgeUserEventsResponse, Google.Cloud.DiscoveryEngine.V1Beta.PurgeUserEventsMetadata>>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeUserEvents",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.PurgeUserEvents",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
           "type": "SHORT"
         }
       ]

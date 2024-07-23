@@ -64,6 +64,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         }
     }
 
+    public partial class ImportCompletionSuggestionsRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ImportSampleQueriesRequest
     {
         /// <summary>
