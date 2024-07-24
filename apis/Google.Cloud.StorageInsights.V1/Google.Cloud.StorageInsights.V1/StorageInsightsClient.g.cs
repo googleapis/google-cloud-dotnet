@@ -352,13 +352,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigs(new ListReportConfigsRequest
+        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -376,13 +385,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigsAsync(new ListReportConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -400,13 +418,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigs(new ListReportConfigsRequest
+        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -424,13 +451,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigsAsync(new ListReportConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ReportConfig.
@@ -892,13 +928,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportDetails(new ListReportDetailsRequest
+        public virtual gax::PagedEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportDetailsRequest request = new ListReportDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportDetails in a given project and location.
@@ -916,13 +961,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportDetailsAsync(new ListReportDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportDetailsRequest request = new ListReportDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportDetails in a given project and location.
@@ -940,13 +994,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetails(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportDetails(new ListReportDetailsRequest
+        public virtual gax::PagedEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetails(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportDetailsRequest request = new ListReportDetailsRequest
             {
                 ParentAsReportConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportDetails in a given project and location.
@@ -964,13 +1027,22 @@ namespace Google.Cloud.StorageInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetailsAsync(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportDetailsAsync(new ListReportDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportDetailsResponse, ReportDetail> ListReportDetailsAsync(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportDetailsRequest request = new ListReportDetailsRequest
             {
                 ParentAsReportConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ReportDetail.

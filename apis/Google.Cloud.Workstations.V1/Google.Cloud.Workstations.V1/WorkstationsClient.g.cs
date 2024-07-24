@@ -883,13 +883,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkstationCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationClusters(new ListWorkstationClustersRequest
+        public virtual gax::PagedEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation clusters in the specified location.
@@ -907,13 +916,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkstationCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationClustersAsync(new ListWorkstationClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation clusters in the specified location.
@@ -931,13 +949,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkstationCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationClusters(new ListWorkstationClustersRequest
+        public virtual gax::PagedEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation clusters in the specified location.
@@ -955,13 +982,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkstationCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationClustersAsync(new ListWorkstationClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkstationClustersResponse, WorkstationCluster> ListWorkstationClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new workstation cluster.
@@ -1517,13 +1553,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationConfigs(new ListWorkstationConfigsRequest
+        public virtual gax::PagedEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster.
@@ -1541,13 +1586,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationConfigsAsync(new ListWorkstationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster.
@@ -1565,13 +1619,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigs(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationConfigs(new ListWorkstationConfigsRequest
+        public virtual gax::PagedEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigs(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster.
@@ -1589,13 +1652,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigsAsync(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationConfigsAsync(new ListWorkstationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> ListWorkstationConfigsAsync(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster on which
@@ -1634,13 +1706,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstationConfigs(new ListUsableWorkstationConfigsRequest
+        public virtual gax::PagedEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationConfigsRequest request = new ListUsableWorkstationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster on which
@@ -1659,13 +1740,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstationConfigsAsync(new ListUsableWorkstationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationConfigsRequest request = new ListUsableWorkstationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster on which
@@ -1684,13 +1774,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigs(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstationConfigs(new ListUsableWorkstationConfigsRequest
+        public virtual gax::PagedEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigs(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationConfigsRequest request = new ListUsableWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstation configurations in the specified cluster on which
@@ -1709,13 +1808,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkstationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigsAsync(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstationConfigsAsync(new ListUsableWorkstationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationConfigsResponse, WorkstationConfig> ListUsableWorkstationConfigsAsync(WorkstationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationConfigsRequest request = new ListUsableWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new workstation configuration.
@@ -2271,13 +2379,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkstationsResponse, Workstation> ListWorkstations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstations(new ListWorkstationsRequest
+        public virtual gax::PagedEnumerable<ListWorkstationsResponse, Workstation> ListWorkstations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationsRequest request = new ListWorkstationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all Workstations using the specified workstation configuration.
@@ -2295,13 +2412,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkstationsResponse, Workstation> ListWorkstationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationsAsync(new ListWorkstationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkstationsResponse, Workstation> ListWorkstationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationsRequest request = new ListWorkstationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all Workstations using the specified workstation configuration.
@@ -2319,13 +2445,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkstationsResponse, Workstation> ListWorkstations(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstations(new ListWorkstationsRequest
+        public virtual gax::PagedEnumerable<ListWorkstationsResponse, Workstation> ListWorkstations(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationsRequest request = new ListWorkstationsRequest
             {
                 ParentAsWorkstationConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all Workstations using the specified workstation configuration.
@@ -2343,13 +2478,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkstationsResponse, Workstation> ListWorkstationsAsync(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkstationsAsync(new ListWorkstationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkstationsResponse, Workstation> ListWorkstationsAsync(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkstationsRequest request = new ListWorkstationsRequest
             {
                 ParentAsWorkstationConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkstationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstations using the specified workstation configuration
@@ -2388,13 +2532,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstations(new ListUsableWorkstationsRequest
+        public virtual gax::PagedEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationsRequest request = new ListUsableWorkstationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstations using the specified workstation configuration
@@ -2413,13 +2566,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstationsAsync(new ListUsableWorkstationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationsRequest request = new ListUsableWorkstationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstations using the specified workstation configuration
@@ -2438,13 +2600,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstations(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstations(new ListUsableWorkstationsRequest
+        public virtual gax::PagedEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstations(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationsRequest request = new ListUsableWorkstationsRequest
             {
                 ParentAsWorkstationConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns all workstations using the specified workstation configuration
@@ -2463,13 +2634,22 @@ namespace Google.Cloud.Workstations.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workstation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstationsAsync(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUsableWorkstationsAsync(new ListUsableWorkstationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUsableWorkstationsResponse, Workstation> ListUsableWorkstationsAsync(WorkstationConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableWorkstationsRequest request = new ListUsableWorkstationsRequest
             {
                 ParentAsWorkstationConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableWorkstationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new workstation.

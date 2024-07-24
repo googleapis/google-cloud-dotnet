@@ -353,13 +353,22 @@ namespace Google.Cloud.BackupDR.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagementServer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementServers(new ListManagementServersRequest
+        public virtual gax::PagedEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementServersRequest request = new ListManagementServersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementServers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ManagementServers in a given project and location.
@@ -381,13 +390,22 @@ namespace Google.Cloud.BackupDR.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagementServer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementServersAsync(new ListManagementServersRequest
+        public virtual gax::PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementServersRequest request = new ListManagementServersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementServersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ManagementServers in a given project and location.
@@ -409,13 +427,22 @@ namespace Google.Cloud.BackupDR.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagementServer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementServers(new ListManagementServersRequest
+        public virtual gax::PagedEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementServersRequest request = new ListManagementServersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementServers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ManagementServers in a given project and location.
@@ -437,13 +464,22 @@ namespace Google.Cloud.BackupDR.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagementServer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementServersAsync(new ListManagementServersRequest
+        public virtual gax::PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> ListManagementServersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementServersRequest request = new ListManagementServersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementServersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ManagementServer.

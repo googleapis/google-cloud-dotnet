@@ -1393,13 +1393,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClusters(new ListAttachedClustersRequest
+        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
@@ -1424,13 +1433,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClustersAsync(new ListAttachedClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
@@ -1455,13 +1473,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClusters(new ListAttachedClustersRequest
+        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
@@ -1486,13 +1513,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClustersAsync(new ListAttachedClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a specific

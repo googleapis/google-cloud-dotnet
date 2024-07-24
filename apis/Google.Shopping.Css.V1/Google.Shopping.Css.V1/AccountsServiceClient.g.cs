@@ -278,13 +278,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChildAccountsResponse, Account> ListChildAccounts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChildAccounts(new ListChildAccountsRequest
+        public virtual gax::PagedEnumerable<ListChildAccountsResponse, Account> ListChildAccounts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChildAccountsRequest request = new ListChildAccountsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChildAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the accounts under the specified CSS account ID, and
@@ -304,13 +313,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChildAccountsResponse, Account> ListChildAccountsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChildAccountsAsync(new ListChildAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChildAccountsResponse, Account> ListChildAccountsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChildAccountsRequest request = new ListChildAccountsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChildAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the accounts under the specified CSS account ID, and
@@ -330,13 +348,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChildAccountsResponse, Account> ListChildAccounts(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChildAccounts(new ListChildAccountsRequest
+        public virtual gax::PagedEnumerable<ListChildAccountsResponse, Account> ListChildAccounts(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChildAccountsRequest request = new ListChildAccountsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChildAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the accounts under the specified CSS account ID, and
@@ -356,13 +383,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChildAccountsResponse, Account> ListChildAccountsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChildAccountsAsync(new ListChildAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChildAccountsResponse, Account> ListChildAccountsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChildAccountsRequest request = new ListChildAccountsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChildAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a single CSS/MC account by ID.

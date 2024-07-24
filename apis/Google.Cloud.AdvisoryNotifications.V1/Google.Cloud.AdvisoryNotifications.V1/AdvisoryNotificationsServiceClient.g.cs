@@ -300,13 +300,22 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Notification"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationsResponse, Notification> ListNotifications(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotifications(new ListNotificationsRequest
+        public virtual gax::PagedEnumerable<ListNotificationsResponse, Notification> ListNotifications(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationsRequest request = new ListNotificationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotifications(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notifications under a given parent.
@@ -326,13 +335,22 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Notification"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationsResponse, Notification> ListNotificationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationsAsync(new ListNotificationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationsResponse, Notification> ListNotificationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationsRequest request = new ListNotificationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notifications under a given parent.
@@ -352,13 +370,22 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Notification"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationsResponse, Notification> ListNotifications(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotifications(new ListNotificationsRequest
+        public virtual gax::PagedEnumerable<ListNotificationsResponse, Notification> ListNotifications(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationsRequest request = new ListNotificationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotifications(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notifications under a given parent.
@@ -378,13 +405,22 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Notification"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationsResponse, Notification> ListNotificationsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationsAsync(new ListNotificationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationsResponse, Notification> ListNotificationsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationsRequest request = new ListNotificationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a notification.

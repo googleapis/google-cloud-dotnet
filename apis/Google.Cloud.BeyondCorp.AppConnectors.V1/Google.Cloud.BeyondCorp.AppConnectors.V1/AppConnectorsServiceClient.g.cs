@@ -424,13 +424,22 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnectors(new ListAppConnectorsRequest
+        public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectorsRequest request = new ListAppConnectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnectors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppConnectors in a given project and location.
@@ -449,13 +458,22 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnectorsAsync(new ListAppConnectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectorsRequest request = new ListAppConnectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppConnectors in a given project and location.
@@ -474,13 +492,22 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnectors(new ListAppConnectorsRequest
+        public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectorsRequest request = new ListAppConnectorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnectors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppConnectors in a given project and location.
@@ -499,13 +526,22 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnectorsAsync(new ListAppConnectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectorsRequest request = new ListAppConnectorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single AppConnector.

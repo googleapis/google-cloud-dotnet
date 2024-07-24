@@ -946,13 +946,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Assured Workloads under a CRM Node.
@@ -971,13 +980,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Assured Workloads under a CRM Node.
@@ -996,13 +1014,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Assured Workloads under a CRM Node.
@@ -1021,13 +1048,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Violations in the AssuredWorkload Environment.
@@ -1076,13 +1112,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolations(new ListViolationsRequest
+        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Violations in the AssuredWorkload Environment.
@@ -1105,13 +1150,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolationsAsync(new ListViolationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Violations in the AssuredWorkload Environment.
@@ -1134,13 +1188,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolations(new ListViolationsRequest
+        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 ParentAsWorkloadName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Violations in the AssuredWorkload Environment.
@@ -1163,13 +1226,22 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolationsAsync(new ListViolationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 ParentAsWorkloadName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves Assured Workload Violation based on ID.

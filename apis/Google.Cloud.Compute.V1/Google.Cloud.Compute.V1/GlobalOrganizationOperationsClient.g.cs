@@ -418,12 +418,19 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<OperationList, Operation> List(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListGlobalOrganizationOperationsRequest
+        public virtual gax::PagedEnumerable<OperationList, Operation> List(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGlobalOrganizationOperationsRequest request = new ListGlobalOrganizationOperationsRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of Operation resources contained within the specified organization.
@@ -438,12 +445,19 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListGlobalOrganizationOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGlobalOrganizationOperationsRequest request = new ListGlobalOrganizationOperationsRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
     }
 
     /// <summary>GlobalOrganizationOperations client wrapper implementation, for convenient use.</summary>

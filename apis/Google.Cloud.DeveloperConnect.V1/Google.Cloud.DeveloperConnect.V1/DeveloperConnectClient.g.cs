@@ -594,13 +594,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -618,13 +627,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -642,13 +660,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -666,13 +693,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Connection.
@@ -1608,13 +1644,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GitRepositoryLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGitRepositoryLinks(new ListGitRepositoryLinksRequest
+        public virtual gax::PagedEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGitRepositoryLinksRequest request = new ListGitRepositoryLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGitRepositoryLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GitRepositoryLinks in a given project, location, and connection.
@@ -1632,13 +1677,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GitRepositoryLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGitRepositoryLinksAsync(new ListGitRepositoryLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGitRepositoryLinksRequest request = new ListGitRepositoryLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGitRepositoryLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GitRepositoryLinks in a given project, location, and connection.
@@ -1656,13 +1710,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GitRepositoryLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinks(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGitRepositoryLinks(new ListGitRepositoryLinksRequest
+        public virtual gax::PagedEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinks(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGitRepositoryLinksRequest request = new ListGitRepositoryLinksRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGitRepositoryLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GitRepositoryLinks in a given project, location, and connection.
@@ -1680,13 +1743,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GitRepositoryLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinksAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGitRepositoryLinksAsync(new ListGitRepositoryLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> ListGitRepositoryLinksAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGitRepositoryLinksRequest request = new ListGitRepositoryLinksRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGitRepositoryLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single GitRepositoryLink.
@@ -2053,13 +2125,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LinkableGitRepository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositories(string connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchLinkableGitRepositories(new FetchLinkableGitRepositoriesRequest
+        public virtual gax::PagedEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositories(string connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchLinkableGitRepositoriesRequest request = new FetchLinkableGitRepositoriesRequest
             {
                 Connection = gax::GaxPreconditions.CheckNotNullOrEmpty(connection, nameof(connection)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchLinkableGitRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
@@ -2079,13 +2160,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LinkableGitRepository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositoriesAsync(string connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchLinkableGitRepositoriesAsync(new FetchLinkableGitRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositoriesAsync(string connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchLinkableGitRepositoriesRequest request = new FetchLinkableGitRepositoriesRequest
             {
                 Connection = gax::GaxPreconditions.CheckNotNullOrEmpty(connection, nameof(connection)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchLinkableGitRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
@@ -2105,13 +2195,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LinkableGitRepository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositories(ConnectionName connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchLinkableGitRepositories(new FetchLinkableGitRepositoriesRequest
+        public virtual gax::PagedEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositories(ConnectionName connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchLinkableGitRepositoriesRequest request = new FetchLinkableGitRepositoriesRequest
             {
                 ConnectionAsConnectionName = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchLinkableGitRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
@@ -2131,13 +2230,22 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LinkableGitRepository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositoriesAsync(ConnectionName connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchLinkableGitRepositoriesAsync(new FetchLinkableGitRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> FetchLinkableGitRepositoriesAsync(ConnectionName connection, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchLinkableGitRepositoriesRequest request = new FetchLinkableGitRepositoriesRequest
             {
                 ConnectionAsConnectionName = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchLinkableGitRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// FetchGitHubInstallations returns the list of GitHub Installations that
@@ -2315,14 +2423,23 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchGitRefsResponse, string> FetchGitRefs(string gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchGitRefs(new FetchGitRefsRequest
+        public virtual gax::PagedEnumerable<FetchGitRefsResponse, string> FetchGitRefs(string gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRefsRequest request = new FetchGitRefsRequest
             {
                 GitRepositoryLink = gax::GaxPreconditions.CheckNotNullOrEmpty(gitRepositoryLink, nameof(gitRepositoryLink)),
                 RefType = refType,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRefs(request, callSettings);
+        }
 
         /// <summary>
         /// Fetch the list of branches or tags for a given repository.
@@ -2344,14 +2461,23 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchGitRefsResponse, string> FetchGitRefsAsync(string gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchGitRefsAsync(new FetchGitRefsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchGitRefsResponse, string> FetchGitRefsAsync(string gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRefsRequest request = new FetchGitRefsRequest
             {
                 GitRepositoryLink = gax::GaxPreconditions.CheckNotNullOrEmpty(gitRepositoryLink, nameof(gitRepositoryLink)),
                 RefType = refType,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRefsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetch the list of branches or tags for a given repository.
@@ -2373,14 +2499,23 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchGitRefsResponse, string> FetchGitRefs(GitRepositoryLinkName gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchGitRefs(new FetchGitRefsRequest
+        public virtual gax::PagedEnumerable<FetchGitRefsResponse, string> FetchGitRefs(GitRepositoryLinkName gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRefsRequest request = new FetchGitRefsRequest
             {
                 GitRepositoryLinkAsGitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(gitRepositoryLink, nameof(gitRepositoryLink)),
                 RefType = refType,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRefs(request, callSettings);
+        }
 
         /// <summary>
         /// Fetch the list of branches or tags for a given repository.
@@ -2402,14 +2537,23 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchGitRefsResponse, string> FetchGitRefsAsync(GitRepositoryLinkName gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchGitRefsAsync(new FetchGitRefsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchGitRefsResponse, string> FetchGitRefsAsync(GitRepositoryLinkName gitRepositoryLink, FetchGitRefsRequest.Types.RefType refType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRefsRequest request = new FetchGitRefsRequest
             {
                 GitRepositoryLinkAsGitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(gitRepositoryLink, nameof(gitRepositoryLink)),
                 RefType = refType,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRefsAsync(request, callSettings);
+        }
     }
 
     /// <summary>DeveloperConnect client wrapper implementation, for convenient use.</summary>

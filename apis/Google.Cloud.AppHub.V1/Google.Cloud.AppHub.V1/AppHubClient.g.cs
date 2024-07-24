@@ -1029,13 +1029,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceProjectAttachment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceProjectAttachments(new ListServiceProjectAttachmentsRequest
+        public virtual gax::PagedEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceProjectAttachmentsRequest request = new ListServiceProjectAttachmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceProjectAttachments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists service projects attached to the host project.
@@ -1055,13 +1064,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceProjectAttachment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceProjectAttachmentsAsync(new ListServiceProjectAttachmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceProjectAttachmentsRequest request = new ListServiceProjectAttachmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceProjectAttachmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists service projects attached to the host project.
@@ -1081,13 +1099,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceProjectAttachment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceProjectAttachments(new ListServiceProjectAttachmentsRequest
+        public virtual gax::PagedEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceProjectAttachmentsRequest request = new ListServiceProjectAttachmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceProjectAttachments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists service projects attached to the host project.
@@ -1107,13 +1134,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceProjectAttachment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceProjectAttachmentsAsync(new ListServiceProjectAttachmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceProjectAttachmentsResponse, ServiceProjectAttachment> ListServiceProjectAttachmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceProjectAttachmentsRequest request = new ListServiceProjectAttachmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceProjectAttachmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Attaches a service project to the host project.
@@ -1749,13 +1785,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DiscoveredService"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredServices(new ListDiscoveredServicesRequest
+        public virtual gax::PagedEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredServicesRequest request = new ListDiscoveredServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Discovered Services that can be added to an Application in a host
@@ -1775,13 +1820,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DiscoveredService"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredServicesAsync(new ListDiscoveredServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredServicesRequest request = new ListDiscoveredServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Discovered Services that can be added to an Application in a host
@@ -1801,13 +1855,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DiscoveredService"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredServices(new ListDiscoveredServicesRequest
+        public virtual gax::PagedEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredServicesRequest request = new ListDiscoveredServicesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Discovered Services that can be added to an Application in a host
@@ -1827,13 +1890,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DiscoveredService"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredServicesAsync(new ListDiscoveredServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveredServicesResponse, DiscoveredService> ListDiscoveredServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredServicesRequest request = new ListDiscoveredServicesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a Discovered Service in a host project and location.
@@ -2142,13 +2214,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Services in an Application.
@@ -2168,13 +2249,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Services in an Application.
@@ -2194,13 +2284,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsApplicationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Services in an Application.
@@ -2220,13 +2319,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsApplicationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a Service in an Application.
@@ -2858,13 +2966,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DiscoveredWorkload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredWorkloads(new ListDiscoveredWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredWorkloadsRequest request = new ListDiscoveredWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Discovered Workloads that can be added to an Application in a host
@@ -2884,13 +3001,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DiscoveredWorkload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredWorkloadsAsync(new ListDiscoveredWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredWorkloadsRequest request = new ListDiscoveredWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Discovered Workloads that can be added to an Application in a host
@@ -2910,13 +3036,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DiscoveredWorkload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloads(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredWorkloads(new ListDiscoveredWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloads(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredWorkloadsRequest request = new ListDiscoveredWorkloadsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Discovered Workloads that can be added to an Application in a host
@@ -2936,13 +3071,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DiscoveredWorkload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloadsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveredWorkloadsAsync(new ListDiscoveredWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveredWorkloadsResponse, DiscoveredWorkload> ListDiscoveredWorkloadsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveredWorkloadsRequest request = new ListDiscoveredWorkloadsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveredWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a Discovered Workload in a host project and location.
@@ -3251,13 +3395,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workloads in an Application.
@@ -3277,13 +3430,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workloads in an Application.
@@ -3303,13 +3465,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsApplicationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workloads in an Application.
@@ -3329,13 +3500,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(ApplicationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsApplicationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a Workload in an Application.
@@ -3964,13 +4144,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Application"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApplicationsResponse, Application> ListApplications(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApplications(new ListApplicationsRequest
+        public virtual gax::PagedEnumerable<ListApplicationsResponse, Application> ListApplications(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApplicationsRequest request = new ListApplicationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApplications(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Applications in a host project and location.
@@ -3989,13 +4178,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Application"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApplicationsResponse, Application> ListApplicationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApplicationsAsync(new ListApplicationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApplicationsResponse, Application> ListApplicationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApplicationsRequest request = new ListApplicationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApplicationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Applications in a host project and location.
@@ -4014,13 +4212,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Application"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApplicationsResponse, Application> ListApplications(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApplications(new ListApplicationsRequest
+        public virtual gax::PagedEnumerable<ListApplicationsResponse, Application> ListApplications(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApplicationsRequest request = new ListApplicationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApplications(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Applications in a host project and location.
@@ -4039,13 +4246,22 @@ namespace Google.Cloud.AppHub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Application"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApplicationsResponse, Application> ListApplicationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApplicationsAsync(new ListApplicationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApplicationsResponse, Application> ListApplicationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApplicationsRequest request = new ListApplicationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApplicationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates an Application in a host project and location.

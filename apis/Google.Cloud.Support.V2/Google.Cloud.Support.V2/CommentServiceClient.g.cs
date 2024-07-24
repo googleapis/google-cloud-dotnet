@@ -258,13 +258,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComments(new ListCommentsRequest
+        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComments(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all Comments associated with the Case object.
@@ -283,13 +292,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCommentsAsync(new ListCommentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCommentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all Comments associated with the Case object.
@@ -308,13 +326,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComments(new ListCommentsRequest
+        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 ParentAsCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComments(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all Comments associated with the Case object.
@@ -333,13 +360,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCommentsAsync(new ListCommentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 ParentAsCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCommentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Add a new comment to the specified Case.

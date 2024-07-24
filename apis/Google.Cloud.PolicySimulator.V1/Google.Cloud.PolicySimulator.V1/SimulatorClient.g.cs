@@ -601,13 +601,22 @@ namespace Google.Cloud.PolicySimulator.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReplayResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplayResults(new ListReplayResultsRequest
+        public virtual gax::PagedEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplayResultsRequest request = new ListReplayResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplayResults(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the results of running a
@@ -632,13 +641,22 @@ namespace Google.Cloud.PolicySimulator.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReplayResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplayResultsAsync(new ListReplayResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplayResultsRequest request = new ListReplayResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplayResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the results of running a
@@ -663,13 +681,22 @@ namespace Google.Cloud.PolicySimulator.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReplayResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResults(ReplayName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplayResults(new ListReplayResultsRequest
+        public virtual gax::PagedEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResults(ReplayName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplayResultsRequest request = new ListReplayResultsRequest
             {
                 ParentAsReplayName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplayResults(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the results of running a
@@ -694,13 +721,22 @@ namespace Google.Cloud.PolicySimulator.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReplayResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResultsAsync(ReplayName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplayResultsAsync(new ListReplayResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReplayResultsResponse, ReplayResult> ListReplayResultsAsync(ReplayName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplayResultsRequest request = new ListReplayResultsRequest
             {
                 ParentAsReplayName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplayResultsAsync(request, callSettings);
+        }
     }
 
     /// <summary>Simulator client wrapper implementation, for convenient use.</summary>

@@ -854,13 +854,22 @@ namespace Google.Shopping.Merchant.Conversions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionSource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionSources(new ListConversionSourcesRequest
+        public virtual gax::PagedEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionSourcesRequest request = new ListConversionSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionSources(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of conversion sources the caller has access to.
@@ -879,13 +888,22 @@ namespace Google.Shopping.Merchant.Conversions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionSource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionSourcesAsync(new ListConversionSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionSourcesRequest request = new ListConversionSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of conversion sources the caller has access to.
@@ -904,13 +922,22 @@ namespace Google.Shopping.Merchant.Conversions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionSource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSources(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionSources(new ListConversionSourcesRequest
+        public virtual gax::PagedEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSources(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionSourcesRequest request = new ListConversionSourcesRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionSources(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of conversion sources the caller has access to.
@@ -929,13 +956,22 @@ namespace Google.Shopping.Merchant.Conversions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionSource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSourcesAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionSourcesAsync(new ListConversionSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversionSourcesResponse, ConversionSource> ListConversionSourcesAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionSourcesRequest request = new ListConversionSourcesRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionSourcesAsync(request, callSettings);
+        }
     }
 
     /// <summary>ConversionSourcesService client wrapper implementation, for convenient use.</summary>

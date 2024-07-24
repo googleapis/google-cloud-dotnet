@@ -661,13 +661,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFolders(new ListFoldersRequest
+        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the folders that are direct descendants of supplied parent resource.
@@ -699,13 +708,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFoldersAsync(new ListFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFoldersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the folders that are direct descendants of supplied parent resource.
@@ -737,13 +755,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFolders(new ListFoldersRequest
+        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the folders that are direct descendants of supplied parent resource.
@@ -775,13 +802,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFoldersAsync(new ListFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFoldersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Search for folders that match specific filter criteria.
@@ -862,13 +898,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchFoldersResponse, Folder> SearchFolders(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFolders(new SearchFoldersRequest
+        public virtual gax::PagedEnumerable<SearchFoldersResponse, Folder> SearchFolders(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFoldersRequest request = new SearchFoldersRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Search for folders that match specific filter criteria.
@@ -921,13 +963,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchFoldersResponse, Folder> SearchFoldersAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFoldersAsync(new SearchFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<SearchFoldersResponse, Folder> SearchFoldersAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFoldersRequest request = new SearchFoldersRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFoldersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a folder in the resource hierarchy.

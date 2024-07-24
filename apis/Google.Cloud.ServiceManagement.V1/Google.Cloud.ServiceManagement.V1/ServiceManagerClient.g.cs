@@ -529,14 +529,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagedService"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<ListServicesResponse, ManagedService> ListServices(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, ManagedService> ListServices(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ProducerProjectId = producerProjectId ?? "",
                 ConsumerId = consumerId ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists managed services.
@@ -566,14 +575,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagedService"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, ManagedService> ListServicesAsync(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, ManagedService> ListServicesAsync(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ProducerProjectId = producerProjectId ?? "",
                 ConsumerId = consumerId ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a managed service. Authentication is required unless the service is
@@ -1109,13 +1127,22 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigs(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceConfigs(new ListServiceConfigsRequest
+        public virtual gax::PagedEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigs(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceConfigsRequest request = new ListServiceConfigsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the history of the service configuration for a managed service,
@@ -1136,13 +1163,22 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigsAsync(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceConfigsAsync(new ListServiceConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigsAsync(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceConfigsRequest request = new ListServiceConfigsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a service configuration (version) for a managed service.
@@ -1631,14 +1667,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Rollout"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRollouts(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceRollouts(new ListServiceRolloutsRequest
+        public virtual gax::PagedEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRollouts(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceRolloutsRequest request = new ListServiceRolloutsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceRollouts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the history of the service configuration rollouts for a managed
@@ -1671,14 +1716,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Rollout"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRolloutsAsync(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceRolloutsAsync(new ListServiceRolloutsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRolloutsAsync(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceRolloutsRequest request = new ListServiceRolloutsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceRolloutsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a service configuration

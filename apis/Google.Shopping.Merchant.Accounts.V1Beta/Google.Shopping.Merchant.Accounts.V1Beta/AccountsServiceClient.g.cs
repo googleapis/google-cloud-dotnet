@@ -749,13 +749,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubAccountsResponse, Account> ListSubAccounts(string provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubAccounts(new ListSubAccountsRequest
+        public virtual gax::PagedEnumerable<ListSubAccountsResponse, Account> ListSubAccounts(string provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubAccountsRequest request = new ListSubAccountsRequest
             {
                 Provider = gax::GaxPreconditions.CheckNotNullOrEmpty(provider, nameof(provider)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// List all sub-accounts for a given multi client account. This is a
@@ -778,13 +787,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubAccountsResponse, Account> ListSubAccountsAsync(string provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubAccountsAsync(new ListSubAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubAccountsResponse, Account> ListSubAccountsAsync(string provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubAccountsRequest request = new ListSubAccountsRequest
             {
                 Provider = gax::GaxPreconditions.CheckNotNullOrEmpty(provider, nameof(provider)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all sub-accounts for a given multi client account. This is a
@@ -807,13 +825,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubAccountsResponse, Account> ListSubAccounts(AccountName provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubAccounts(new ListSubAccountsRequest
+        public virtual gax::PagedEnumerable<ListSubAccountsResponse, Account> ListSubAccounts(AccountName provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubAccountsRequest request = new ListSubAccountsRequest
             {
                 ProviderAsAccountName = gax::GaxPreconditions.CheckNotNull(provider, nameof(provider)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// List all sub-accounts for a given multi client account. This is a
@@ -836,13 +863,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Account"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubAccountsResponse, Account> ListSubAccountsAsync(AccountName provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubAccountsAsync(new ListSubAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubAccountsResponse, Account> ListSubAccountsAsync(AccountName provider, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubAccountsRequest request = new ListSubAccountsRequest
             {
                 ProviderAsAccountName = gax::GaxPreconditions.CheckNotNull(provider, nameof(provider)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubAccountsAsync(request, callSettings);
+        }
     }
 
     /// <summary>AccountsService client wrapper implementation, for convenient use.</summary>

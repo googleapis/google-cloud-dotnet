@@ -352,13 +352,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="QuotaInfo"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfos(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaInfos(new ListQuotaInfosRequest
+        public virtual gax::PagedEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfos(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaInfosRequest request = new ListQuotaInfosRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaInfos(request, callSettings);
+        }
 
         /// <summary>
         /// Lists QuotaInfos of all quotas for a given project, folder or organization.
@@ -383,13 +392,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="QuotaInfo"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfosAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaInfosAsync(new ListQuotaInfosRequest
+        public virtual gax::PagedAsyncEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfosAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaInfosRequest request = new ListQuotaInfosRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaInfosAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists QuotaInfos of all quotas for a given project, folder or organization.
@@ -414,13 +432,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="QuotaInfo"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfos(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaInfos(new ListQuotaInfosRequest
+        public virtual gax::PagedEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfos(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaInfosRequest request = new ListQuotaInfosRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaInfos(request, callSettings);
+        }
 
         /// <summary>
         /// Lists QuotaInfos of all quotas for a given project, folder or organization.
@@ -445,13 +472,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="QuotaInfo"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfosAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaInfosAsync(new ListQuotaInfosRequest
+        public virtual gax::PagedAsyncEnumerable<ListQuotaInfosResponse, QuotaInfo> ListQuotaInfosAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaInfosRequest request = new ListQuotaInfosRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaInfosAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve the QuotaInfo of a quota for a project, folder or organization.
@@ -619,13 +655,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="QuotaPreference"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaPreferences(new ListQuotaPreferencesRequest
+        public virtual gax::PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaPreferencesRequest request = new ListQuotaPreferencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaPreferences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists QuotaPreferences in a given project, folder or organization.
@@ -652,13 +697,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="QuotaPreference"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaPreferencesAsync(new ListQuotaPreferencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaPreferencesRequest request = new ListQuotaPreferencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaPreferencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists QuotaPreferences in a given project, folder or organization.
@@ -685,13 +739,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="QuotaPreference"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferences(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaPreferences(new ListQuotaPreferencesRequest
+        public virtual gax::PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferences(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaPreferencesRequest request = new ListQuotaPreferencesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaPreferences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists QuotaPreferences in a given project, folder or organization.
@@ -718,13 +781,22 @@ namespace Google.Cloud.CloudQuotas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="QuotaPreference"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferencesAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaPreferencesAsync(new ListQuotaPreferencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListQuotaPreferencesResponse, QuotaPreference> ListQuotaPreferencesAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaPreferencesRequest request = new ListQuotaPreferencesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaPreferencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single QuotaPreference.

@@ -304,13 +304,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResources(new SearchMigratableResourcesRequest
+        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResources(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all of the resources in automl.googleapis.com,
@@ -333,13 +342,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResourcesAsync(new SearchMigratableResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all of the resources in automl.googleapis.com,
@@ -362,13 +380,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResources(new SearchMigratableResourcesRequest
+        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResources(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all of the resources in automl.googleapis.com,
@@ -391,13 +418,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResourcesAsync(new SearchMigratableResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Batch migrates resources from ml.googleapis.com, automl.googleapis.com,

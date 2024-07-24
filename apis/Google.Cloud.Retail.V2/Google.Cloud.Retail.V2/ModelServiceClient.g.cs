@@ -1051,13 +1051,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModels(new ListModelsRequest
+        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the models linked to this event store.
@@ -1077,13 +1086,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelsAsync(new ListModelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the models linked to this event store.
@@ -1103,13 +1121,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModels(new ListModelsRequest
+        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 ParentAsCatalogName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the models linked to this event store.
@@ -1129,13 +1156,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelsAsync(new ListModelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 ParentAsCatalogName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update of model metadata. Only fields that

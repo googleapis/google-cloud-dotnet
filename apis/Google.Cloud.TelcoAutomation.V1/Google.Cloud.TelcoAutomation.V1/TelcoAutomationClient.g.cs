@@ -802,13 +802,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OrchestrationCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrchestrationClusters(new ListOrchestrationClustersRequest
+        public virtual gax::PagedEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrchestrationClustersRequest request = new ListOrchestrationClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrchestrationClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists OrchestrationClusters in a given project and location.
@@ -826,13 +835,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OrchestrationCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrchestrationClustersAsync(new ListOrchestrationClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrchestrationClustersRequest request = new ListOrchestrationClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrchestrationClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists OrchestrationClusters in a given project and location.
@@ -850,13 +868,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OrchestrationCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrchestrationClusters(new ListOrchestrationClustersRequest
+        public virtual gax::PagedEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrchestrationClustersRequest request = new ListOrchestrationClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrchestrationClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists OrchestrationClusters in a given project and location.
@@ -874,13 +901,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OrchestrationCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrchestrationClustersAsync(new ListOrchestrationClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrchestrationClustersResponse, OrchestrationCluster> ListOrchestrationClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrchestrationClustersRequest request = new ListOrchestrationClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrchestrationClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single OrchestrationCluster.
@@ -1341,13 +1377,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EdgeSlm"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlms(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEdgeSlms(new ListEdgeSlmsRequest
+        public virtual gax::PagedEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlms(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEdgeSlmsRequest request = new ListEdgeSlmsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEdgeSlms(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EdgeSlms in a given project and location.
@@ -1365,13 +1410,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EdgeSlm"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlmsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEdgeSlmsAsync(new ListEdgeSlmsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlmsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEdgeSlmsRequest request = new ListEdgeSlmsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEdgeSlmsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EdgeSlms in a given project and location.
@@ -1389,13 +1443,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EdgeSlm"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlms(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEdgeSlms(new ListEdgeSlmsRequest
+        public virtual gax::PagedEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlms(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEdgeSlmsRequest request = new ListEdgeSlmsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEdgeSlms(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EdgeSlms in a given project and location.
@@ -1413,13 +1476,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EdgeSlm"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlmsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEdgeSlmsAsync(new ListEdgeSlmsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEdgeSlmsResponse, EdgeSlm> ListEdgeSlmsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEdgeSlmsRequest request = new ListEdgeSlmsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEdgeSlmsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single EdgeSlm.
@@ -2373,13 +2445,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprints(new ListBlueprintsRequest
+        public virtual gax::PagedEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintsRequest request = new ListBlueprintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprints(request, callSettings);
+        }
 
         /// <summary>
         /// List all blueprints.
@@ -2399,13 +2480,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprintsAsync(new ListBlueprintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintsRequest request = new ListBlueprintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all blueprints.
@@ -2425,13 +2515,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprints(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprints(new ListBlueprintsRequest
+        public virtual gax::PagedEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprints(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintsRequest request = new ListBlueprintsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprints(request, callSettings);
+        }
 
         /// <summary>
         /// List all blueprints.
@@ -2451,13 +2550,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprintsAsync(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprintsAsync(new ListBlueprintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBlueprintsResponse, Blueprint> ListBlueprintsAsync(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintsRequest request = new ListBlueprintsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Approves a blueprint and commits a new revision.
@@ -2814,13 +2922,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprintRevisions(new ListBlueprintRevisionsRequest
+        public virtual gax::PagedEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintRevisionsRequest request = new ListBlueprintRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprintRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// List blueprint revisions of a given blueprint.
@@ -2838,13 +2955,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprintRevisionsAsync(new ListBlueprintRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintRevisionsRequest request = new ListBlueprintRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprintRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List blueprint revisions of a given blueprint.
@@ -2862,13 +2988,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisions(BlueprintName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprintRevisions(new ListBlueprintRevisionsRequest
+        public virtual gax::PagedEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisions(BlueprintName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintRevisionsRequest request = new ListBlueprintRevisionsRequest
             {
                 BlueprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprintRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// List blueprint revisions of a given blueprint.
@@ -2886,13 +3021,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisionsAsync(BlueprintName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBlueprintRevisionsAsync(new ListBlueprintRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBlueprintRevisionsResponse, Blueprint> ListBlueprintRevisionsAsync(BlueprintName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBlueprintRevisionsRequest request = new ListBlueprintRevisionsRequest
             {
                 BlueprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBlueprintRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across blueprint revisions.
@@ -2939,14 +3083,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisions(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchBlueprintRevisions(new SearchBlueprintRevisionsRequest
+        public virtual gax::PagedEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisions(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchBlueprintRevisionsRequest request = new SearchBlueprintRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchBlueprintRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across blueprint revisions.
@@ -2975,14 +3128,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisionsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchBlueprintRevisionsAsync(new SearchBlueprintRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisionsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchBlueprintRevisionsRequest request = new SearchBlueprintRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchBlueprintRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across blueprint revisions.
@@ -3011,14 +3173,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisions(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchBlueprintRevisions(new SearchBlueprintRevisionsRequest
+        public virtual gax::PagedEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisions(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchBlueprintRevisionsRequest request = new SearchBlueprintRevisionsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchBlueprintRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across blueprint revisions.
@@ -3047,14 +3218,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Blueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisionsAsync(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchBlueprintRevisionsAsync(new SearchBlueprintRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchBlueprintRevisionsResponse, Blueprint> SearchBlueprintRevisionsAsync(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchBlueprintRevisionsRequest request = new SearchBlueprintRevisionsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchBlueprintRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across deployment revisions.
@@ -3102,14 +3282,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisions(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchDeploymentRevisions(new SearchDeploymentRevisionsRequest
+        public virtual gax::PagedEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisions(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchDeploymentRevisionsRequest request = new SearchDeploymentRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchDeploymentRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across deployment revisions.
@@ -3139,14 +3328,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisionsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchDeploymentRevisionsAsync(new SearchDeploymentRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisionsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchDeploymentRevisionsRequest request = new SearchDeploymentRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchDeploymentRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across deployment revisions.
@@ -3176,14 +3374,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisions(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchDeploymentRevisions(new SearchDeploymentRevisionsRequest
+        public virtual gax::PagedEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisions(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchDeploymentRevisionsRequest request = new SearchDeploymentRevisionsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchDeploymentRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Searches across deployment revisions.
@@ -3213,14 +3420,23 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisionsAsync(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchDeploymentRevisionsAsync(new SearchDeploymentRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchDeploymentRevisionsResponse, Deployment> SearchDeploymentRevisionsAsync(OrchestrationClusterName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchDeploymentRevisionsRequest request = new SearchDeploymentRevisionsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchDeploymentRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Discards the changes in a blueprint and reverts the blueprint to the last
@@ -3384,13 +3600,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PublicBlueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPublicBlueprints(new ListPublicBlueprintsRequest
+        public virtual gax::PagedEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPublicBlueprintsRequest request = new ListPublicBlueprintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPublicBlueprints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the blueprints in TNA's public catalog. Default page size = 20,
@@ -3411,13 +3636,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PublicBlueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPublicBlueprintsAsync(new ListPublicBlueprintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPublicBlueprintsRequest request = new ListPublicBlueprintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPublicBlueprintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the blueprints in TNA's public catalog. Default page size = 20,
@@ -3438,13 +3672,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PublicBlueprint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprints(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPublicBlueprints(new ListPublicBlueprintsRequest
+        public virtual gax::PagedEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprints(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPublicBlueprintsRequest request = new ListPublicBlueprintsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPublicBlueprints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the blueprints in TNA's public catalog. Default page size = 20,
@@ -3465,13 +3708,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PublicBlueprint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprintsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPublicBlueprintsAsync(new ListPublicBlueprintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPublicBlueprintsResponse, PublicBlueprint> ListPublicBlueprintsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPublicBlueprintsRequest request = new ListPublicBlueprintsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPublicBlueprintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested public blueprint.
@@ -4104,13 +4356,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeployments(new ListDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// List all deployments.
@@ -4130,13 +4391,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentsAsync(new ListDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all deployments.
@@ -4156,13 +4426,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeployments(new ListDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// List all deployments.
@@ -4182,13 +4461,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentsAsync(new ListDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(OrchestrationClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 ParentAsOrchestrationClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List deployment revisions of a given deployment.
@@ -4224,13 +4512,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentRevisions(new ListDeploymentRevisionsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentRevisionsRequest request = new ListDeploymentRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// List deployment revisions of a given deployment.
@@ -4248,13 +4545,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentRevisionsAsync(new ListDeploymentRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentRevisionsRequest request = new ListDeploymentRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List deployment revisions of a given deployment.
@@ -4272,13 +4578,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisions(DeploymentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentRevisions(new ListDeploymentRevisionsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisions(DeploymentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentRevisionsRequest request = new ListDeploymentRevisionsRequest
             {
                 DeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// List deployment revisions of a given deployment.
@@ -4296,13 +4611,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisionsAsync(DeploymentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentRevisionsAsync(new ListDeploymentRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentRevisionsResponse, Deployment> ListDeploymentRevisionsAsync(DeploymentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentRevisionsRequest request = new ListDeploymentRevisionsRequest
             {
                 DeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Discards the changes in a deployment and reverts the deployment to the last
@@ -4912,13 +5236,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HydratedDeployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHydratedDeployments(new ListHydratedDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHydratedDeploymentsRequest request = new ListHydratedDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHydratedDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// List all hydrated deployments present under a deployment.
@@ -4936,13 +5269,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HydratedDeployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHydratedDeploymentsAsync(new ListHydratedDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHydratedDeploymentsRequest request = new ListHydratedDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHydratedDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all hydrated deployments present under a deployment.
@@ -4960,13 +5302,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HydratedDeployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeployments(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHydratedDeployments(new ListHydratedDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeployments(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHydratedDeploymentsRequest request = new ListHydratedDeploymentsRequest
             {
                 ParentAsDeploymentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHydratedDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// List all hydrated deployments present under a deployment.
@@ -4984,13 +5335,22 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HydratedDeployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeploymentsAsync(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHydratedDeploymentsAsync(new ListHydratedDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHydratedDeploymentsResponse, HydratedDeployment> ListHydratedDeploymentsAsync(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHydratedDeploymentsRequest request = new ListHydratedDeploymentsRequest
             {
                 ParentAsDeploymentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHydratedDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a hydrated deployment.

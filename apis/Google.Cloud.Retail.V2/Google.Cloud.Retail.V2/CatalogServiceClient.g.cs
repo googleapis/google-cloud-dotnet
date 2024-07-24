@@ -491,13 +491,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Catalog"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCatalogsResponse, Catalog> ListCatalogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCatalogs(new ListCatalogsRequest
+        public virtual gax::PagedEnumerable<ListCatalogsResponse, Catalog> ListCatalogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCatalogsRequest request = new ListCatalogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCatalogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [Catalog][google.cloud.retail.v2.Catalog]s associated with
@@ -521,13 +530,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Catalog"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCatalogsResponse, Catalog> ListCatalogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCatalogsAsync(new ListCatalogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCatalogsResponse, Catalog> ListCatalogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCatalogsRequest request = new ListCatalogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCatalogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [Catalog][google.cloud.retail.v2.Catalog]s associated with
@@ -551,13 +569,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Catalog"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCatalogsResponse, Catalog> ListCatalogs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCatalogs(new ListCatalogsRequest
+        public virtual gax::PagedEnumerable<ListCatalogsResponse, Catalog> ListCatalogs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCatalogsRequest request = new ListCatalogsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCatalogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [Catalog][google.cloud.retail.v2.Catalog]s associated with
@@ -581,13 +608,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Catalog"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCatalogsResponse, Catalog> ListCatalogsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCatalogsAsync(new ListCatalogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCatalogsResponse, Catalog> ListCatalogsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCatalogsRequest request = new ListCatalogsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCatalogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the [Catalog][google.cloud.retail.v2.Catalog]s.

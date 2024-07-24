@@ -537,13 +537,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SampleQuerySet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSampleQuerySets(new ListSampleQuerySetsRequest
+        public virtual gax::PagedEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSampleQuerySetsRequest request = new ListSampleQuerySetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSampleQuerySets(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -568,13 +577,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SampleQuerySet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSampleQuerySetsAsync(new ListSampleQuerySetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSampleQuerySetsRequest request = new ListSampleQuerySetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSampleQuerySetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -599,13 +617,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SampleQuerySet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySets(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSampleQuerySets(new ListSampleQuerySetsRequest
+        public virtual gax::PagedEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySets(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSampleQuerySetsRequest request = new ListSampleQuerySetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSampleQuerySets(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -630,13 +657,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SampleQuerySet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySetsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSampleQuerySetsAsync(new ListSampleQuerySetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSampleQuerySetsResponse, SampleQuerySet> ListSampleQuerySetsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSampleQuerySetsRequest request = new ListSampleQuerySetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSampleQuerySetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a

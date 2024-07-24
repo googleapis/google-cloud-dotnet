@@ -1172,13 +1172,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MetadataStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataStores(new ListMetadataStoresRequest
+        public virtual gax::PagedEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataStoresRequest request = new ListMetadataStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists MetadataStores for a Location.
@@ -1198,13 +1207,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MetadataStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataStoresAsync(new ListMetadataStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataStoresRequest request = new ListMetadataStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists MetadataStores for a Location.
@@ -1224,13 +1242,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MetadataStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStores(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataStores(new ListMetadataStoresRequest
+        public virtual gax::PagedEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStores(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataStoresRequest request = new ListMetadataStoresRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists MetadataStores for a Location.
@@ -1250,13 +1277,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MetadataStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStoresAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataStoresAsync(new ListMetadataStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetadataStoresResponse, MetadataStore> ListMetadataStoresAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataStoresRequest request = new ListMetadataStoresRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a single MetadataStore and all its child resources (Artifacts,
@@ -1767,13 +1803,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Artifacts in the MetadataStore.
@@ -1793,13 +1838,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Artifacts in the MetadataStore.
@@ -1819,13 +1873,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Artifacts in the MetadataStore.
@@ -1845,13 +1908,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a stored Artifact.
@@ -2575,13 +2647,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContexts(new ListContextsRequest
+        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContexts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Contexts on the MetadataStore.
@@ -2601,13 +2682,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContextsAsync(new ListContextsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContextsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Contexts on the MetadataStore.
@@ -2627,13 +2717,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContexts(new ListContextsRequest
+        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContexts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Contexts on the MetadataStore.
@@ -2653,13 +2752,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContextsAsync(new ListContextsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContextsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a stored Context.
@@ -4164,13 +4272,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutions(new ListExecutionsRequest
+        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Executions in the MetadataStore.
@@ -4190,13 +4307,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutionsAsync(new ListExecutionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Executions in the MetadataStore.
@@ -4216,13 +4342,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutions(new ListExecutionsRequest
+        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Executions in the MetadataStore.
@@ -4242,13 +4377,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutionsAsync(new ListExecutionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a stored Execution.
@@ -5297,13 +5441,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MetadataSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataSchemas(new ListMetadataSchemasRequest
+        public virtual gax::PagedEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataSchemasRequest request = new ListMetadataSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists MetadataSchemas.
@@ -5323,13 +5476,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MetadataSchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataSchemasAsync(new ListMetadataSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataSchemasRequest request = new ListMetadataSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists MetadataSchemas.
@@ -5349,13 +5511,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MetadataSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemas(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataSchemas(new ListMetadataSchemasRequest
+        public virtual gax::PagedEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemas(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataSchemasRequest request = new ListMetadataSchemasRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists MetadataSchemas.
@@ -5375,13 +5546,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MetadataSchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemasAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataSchemasAsync(new ListMetadataSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetadataSchemasResponse, MetadataSchema> ListMetadataSchemasAsync(MetadataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataSchemasRequest request = new ListMetadataSchemasRequest
             {
                 ParentAsMetadataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves lineage of an Artifact represented through Artifacts and

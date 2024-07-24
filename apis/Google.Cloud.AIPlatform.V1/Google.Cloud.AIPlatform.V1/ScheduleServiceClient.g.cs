@@ -753,13 +753,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schedule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchedulesResponse, Schedule> ListSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchedules(new ListSchedulesRequest
+        public virtual gax::PagedEnumerable<ListSchedulesResponse, Schedule> ListSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchedulesRequest request = new ListSchedulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchedules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Schedules in a Location.
@@ -778,13 +787,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schedule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchedulesResponse, Schedule> ListSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchedulesAsync(new ListSchedulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchedulesResponse, Schedule> ListSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchedulesRequest request = new ListSchedulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchedulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Schedules in a Location.
@@ -803,13 +821,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schedule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchedulesResponse, Schedule> ListSchedules(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchedules(new ListSchedulesRequest
+        public virtual gax::PagedEnumerable<ListSchedulesResponse, Schedule> ListSchedules(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchedulesRequest request = new ListSchedulesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchedules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Schedules in a Location.
@@ -828,13 +855,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schedule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchedulesResponse, Schedule> ListSchedulesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchedulesAsync(new ListSchedulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchedulesResponse, Schedule> ListSchedulesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchedulesRequest request = new ListSchedulesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchedulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Pauses a Schedule. Will mark

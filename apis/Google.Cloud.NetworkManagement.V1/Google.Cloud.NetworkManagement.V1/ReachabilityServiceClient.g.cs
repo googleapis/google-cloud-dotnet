@@ -418,13 +418,22 @@ namespace Google.Cloud.NetworkManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectivityTest"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectivityTestsResponse, ConnectivityTest> ListConnectivityTests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectivityTests(new ListConnectivityTestsRequest
+        public virtual gax::PagedEnumerable<ListConnectivityTestsResponse, ConnectivityTest> ListConnectivityTests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectivityTests(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Connectivity Tests owned by a project.
@@ -443,13 +452,22 @@ namespace Google.Cloud.NetworkManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectivityTest"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectivityTestsResponse, ConnectivityTest> ListConnectivityTestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectivityTestsAsync(new ListConnectivityTestsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectivityTestsResponse, ConnectivityTest> ListConnectivityTestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectivityTestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a specific Connectivity Test.

@@ -344,14 +344,23 @@ namespace Google.LongRunning
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOperations(new ListOperationsRequest
+        public virtual gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOperationsRequest request = new ListOperationsRequest
             {
                 Name = name ?? "",
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
@@ -381,14 +390,23 @@ namespace Google.LongRunning
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOperationsAsync(new ListOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOperationsRequest request = new ListOperationsRequest
             {
                 Name = name ?? "",
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this

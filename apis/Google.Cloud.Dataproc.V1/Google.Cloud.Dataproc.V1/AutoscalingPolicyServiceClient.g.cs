@@ -850,13 +850,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAutoscalingPolicies(new ListAutoscalingPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoscalingPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists autoscaling policies in the project.
@@ -883,13 +892,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAutoscalingPoliciesAsync(new ListAutoscalingPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoscalingPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists autoscaling policies in the project.
@@ -916,13 +934,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAutoscalingPolicies(new ListAutoscalingPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoscalingPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists autoscaling policies in the project.
@@ -949,13 +976,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAutoscalingPoliciesAsync(new ListAutoscalingPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoscalingPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists autoscaling policies in the project.
@@ -982,13 +1018,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAutoscalingPolicies(new ListAutoscalingPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
                 ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoscalingPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists autoscaling policies in the project.
@@ -1015,13 +1060,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAutoscalingPoliciesAsync(new ListAutoscalingPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
                 ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoscalingPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an autoscaling policy. It is an error to delete an autoscaling

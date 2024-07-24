@@ -366,13 +366,22 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflows(new ListWorkflowsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflows(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows in a given project and location.
@@ -392,13 +401,22 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowsAsync(new ListWorkflowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows in a given project and location.
@@ -418,13 +436,22 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflows(new ListWorkflowsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflows(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows in a given project and location.
@@ -444,13 +471,22 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowsAsync(new ListWorkflowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single workflow.

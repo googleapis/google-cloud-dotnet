@@ -647,13 +647,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjects(new ListProjectsRequest
+        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjects(request, callSettings);
+        }
 
         /// <summary>
         /// Lists projects that are direct children of the specified folder or
@@ -681,13 +690,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectsAsync(new ListProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists projects that are direct children of the specified folder or
@@ -715,13 +733,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjects(new ListProjectsRequest
+        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjects(request, callSettings);
+        }
 
         /// <summary>
         /// Lists projects that are direct children of the specified folder or
@@ -749,13 +776,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectsAsync(new ListProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Search for projects that the caller has both `resourcemanager.projects.get`
@@ -850,13 +886,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchProjectsResponse, Project> SearchProjects(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProjects(new SearchProjectsRequest
+        public virtual gax::PagedEnumerable<SearchProjectsResponse, Project> SearchProjects(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProjectsRequest request = new SearchProjectsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProjects(request, callSettings);
+        }
 
         /// <summary>
         /// Search for projects that the caller has both `resourcemanager.projects.get`
@@ -915,13 +957,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchProjectsResponse, Project> SearchProjectsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProjectsAsync(new SearchProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchProjectsResponse, Project> SearchProjectsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProjectsRequest request = new SearchProjectsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Request that a new project be created. The result is an `Operation` which

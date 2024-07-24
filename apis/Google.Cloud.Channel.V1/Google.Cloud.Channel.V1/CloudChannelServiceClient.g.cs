@@ -4363,13 +4363,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomerRepricingConfigs(new ListCustomerRepricingConfigsRequest
+        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomerRepricingConfigsRequest request = new ListCustomerRepricingConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomerRepricingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about how a Reseller modifies their bill before sending
@@ -4414,13 +4423,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomerRepricingConfigsAsync(new ListCustomerRepricingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomerRepricingConfigsRequest request = new ListCustomerRepricingConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomerRepricingConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about how a Reseller modifies their bill before sending
@@ -4465,13 +4483,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomerRepricingConfigs(new ListCustomerRepricingConfigsRequest
+        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomerRepricingConfigsRequest request = new ListCustomerRepricingConfigsRequest
             {
                 ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomerRepricingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about how a Reseller modifies their bill before sending
@@ -4516,13 +4543,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomerRepricingConfigsAsync(new ListCustomerRepricingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomerRepricingConfigsRequest request = new ListCustomerRepricingConfigsRequest
             {
                 ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomerRepricingConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a CustomerRepricingConfig. Call this method to set modifications
@@ -5916,13 +5952,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelPartnerRepricingConfigs(new ListChannelPartnerRepricingConfigsRequest
+        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelPartnerRepricingConfigsRequest request = new ListChannelPartnerRepricingConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelPartnerRepricingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about how a Reseller modifies their bill before sending
@@ -5970,13 +6015,22 @@ namespace Google.Cloud.Channel.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelPartnerRepricingConfigsAsync(new ListChannelPartnerRepricingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelPartnerRepricingConfigsRequest request = new ListChannelPartnerRepricingConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelPartnerRepricingConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about how a Reseller modifies their bill before sending
@@ -6022,13 +6076,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(ChannelPartnerLinkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelPartnerRepricingConfigs(new ListChannelPartnerRepricingConfigsRequest
+        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(ChannelPartnerLinkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelPartnerRepricingConfigsRequest request = new ListChannelPartnerRepricingConfigsRequest
             {
                 ParentAsChannelPartnerLinkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelPartnerRepricingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about how a Reseller modifies their bill before sending
@@ -6076,13 +6139,22 @@ namespace Google.Cloud.Channel.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(ChannelPartnerLinkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelPartnerRepricingConfigsAsync(new ListChannelPartnerRepricingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(ChannelPartnerLinkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelPartnerRepricingConfigsRequest request = new ListChannelPartnerRepricingConfigsRequest
             {
                 ParentAsChannelPartnerLinkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelPartnerRepricingConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a ChannelPartnerRepricingConfig. Call this method to set
@@ -7197,13 +7269,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SkuGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkuGroups(new ListSkuGroupsRequest
+        public virtual gax::PagedEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkuGroupsRequest request = new ListSkuGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkuGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Rebilling supported SKU groups the account is authorized to
@@ -7240,13 +7321,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SkuGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkuGroupsAsync(new ListSkuGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkuGroupsRequest request = new ListSkuGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkuGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Billable SKUs in a given SKU group.
@@ -7337,13 +7427,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BillableSku"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkuGroupBillableSkus(new ListSkuGroupBillableSkusRequest
+        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkuGroupBillableSkusRequest request = new ListSkuGroupBillableSkusRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkuGroupBillableSkus(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Billable SKUs in a given SKU group.
@@ -7380,13 +7479,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BillableSku"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkuGroupBillableSkusAsync(new ListSkuGroupBillableSkusRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkuGroupBillableSkusRequest request = new ListSkuGroupBillableSkusRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkuGroupBillableSkusAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Billable SKUs in a given SKU group.
@@ -7423,13 +7531,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BillableSku"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(SkuGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkuGroupBillableSkus(new ListSkuGroupBillableSkusRequest
+        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(SkuGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkuGroupBillableSkusRequest request = new ListSkuGroupBillableSkusRequest
             {
                 ParentAsSkuGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkuGroupBillableSkus(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Billable SKUs in a given SKU group.
@@ -7466,13 +7583,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BillableSku"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(SkuGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkuGroupBillableSkusAsync(new ListSkuGroupBillableSkusRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(SkuGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkuGroupBillableSkusRequest request = new ListSkuGroupBillableSkusRequest
             {
                 ParentAsSkuGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkuGroupBillableSkusAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
@@ -8039,13 +8165,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntitlementChange"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementChanges(new ListEntitlementChangesRequest
+        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementChanges(request, callSettings);
+        }
 
         /// <summary>
         /// List entitlement history.
@@ -8083,13 +8218,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntitlementChange"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementChangesAsync(new ListEntitlementChangesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementChangesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List entitlement history.
@@ -8127,13 +8271,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntitlementChange"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementChanges(new ListEntitlementChangesRequest
+        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
             {
                 ParentAsEntitlementName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementChanges(request, callSettings);
+        }
 
         /// <summary>
         /// List entitlement history.
@@ -8171,13 +8324,22 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntitlementChange"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementChangesAsync(new ListEntitlementChangesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
             {
                 ParentAsEntitlementName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementChangesAsync(request, callSettings);
+        }
     }
 
     /// <summary>CloudChannelService client wrapper implementation, for convenient use.</summary>

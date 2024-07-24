@@ -737,13 +737,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PersistentResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPersistentResources(new ListPersistentResourcesRequest
+        public virtual gax::PagedEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPersistentResourcesRequest request = new ListPersistentResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPersistentResources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PersistentResources in a Location.
@@ -762,13 +771,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PersistentResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPersistentResourcesAsync(new ListPersistentResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPersistentResourcesRequest request = new ListPersistentResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPersistentResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PersistentResources in a Location.
@@ -787,13 +805,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PersistentResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPersistentResources(new ListPersistentResourcesRequest
+        public virtual gax::PagedEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPersistentResourcesRequest request = new ListPersistentResourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPersistentResources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PersistentResources in a Location.
@@ -812,13 +839,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PersistentResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPersistentResourcesAsync(new ListPersistentResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPersistentResourcesResponse, PersistentResource> ListPersistentResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPersistentResourcesRequest request = new ListPersistentResourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPersistentResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a PersistentResource.

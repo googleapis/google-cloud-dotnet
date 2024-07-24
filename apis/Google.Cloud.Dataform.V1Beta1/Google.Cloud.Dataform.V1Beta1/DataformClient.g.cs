@@ -915,13 +915,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -940,13 +949,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -965,13 +983,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -990,13 +1017,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single Repository.
@@ -1638,13 +1674,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspaces(new ListWorkspacesRequest
+        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workspaces in a given Repository.
@@ -1663,13 +1708,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspacesAsync(new ListWorkspacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workspaces in a given Repository.
@@ -1688,13 +1742,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspaces(new ListWorkspacesRequest
+        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workspaces in a given Repository.
@@ -1713,13 +1776,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspacesAsync(new ListWorkspacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single Workspace.
@@ -2553,13 +2625,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReleaseConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReleaseConfigs(new ListReleaseConfigsRequest
+        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReleaseConfigs in a given Repository.
@@ -2578,13 +2659,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReleaseConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReleaseConfigsAsync(new ListReleaseConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReleaseConfigs in a given Repository.
@@ -2603,13 +2693,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReleaseConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReleaseConfigs(new ListReleaseConfigsRequest
+        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReleaseConfigs in a given Repository.
@@ -2628,13 +2727,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReleaseConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReleaseConfigsAsync(new ListReleaseConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single ReleaseConfig.
@@ -3122,13 +3230,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResults(new ListCompilationResultsRequest
+        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResults(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CompilationResults in a given Repository.
@@ -3147,13 +3264,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResultsAsync(new ListCompilationResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CompilationResults in a given Repository.
@@ -3172,13 +3298,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResults(new ListCompilationResultsRequest
+        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResults(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CompilationResults in a given Repository.
@@ -3197,13 +3332,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResultsAsync(new ListCompilationResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single CompilationResult.
@@ -3496,13 +3640,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowConfigs(new ListWorkflowConfigsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowConfigs in a given Repository.
@@ -3521,13 +3674,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowConfigsAsync(new ListWorkflowConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowConfigs in a given Repository.
@@ -3546,13 +3708,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowConfigs(new ListWorkflowConfigsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowConfigs in a given Repository.
@@ -3571,13 +3742,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowConfigsAsync(new ListWorkflowConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single WorkflowConfig.
@@ -4065,13 +4245,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocations(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
@@ -4090,13 +4279,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocationsAsync(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
@@ -4115,13 +4313,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocations(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
@@ -4140,13 +4347,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocationsAsync(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single WorkflowInvocation.

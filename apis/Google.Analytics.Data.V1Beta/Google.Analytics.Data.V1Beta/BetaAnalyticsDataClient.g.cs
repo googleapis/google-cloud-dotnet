@@ -1724,13 +1724,22 @@ namespace Google.Analytics.Data.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AudienceExport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudienceExports(new ListAudienceExportsRequest
+        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudienceExportsRequest request = new ListAudienceExportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudienceExports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all audience exports for a property. This method can be used for you
@@ -1763,13 +1772,22 @@ namespace Google.Analytics.Data.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AudienceExport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudienceExportsAsync(new ListAudienceExportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudienceExportsRequest request = new ListAudienceExportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudienceExportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all audience exports for a property. This method can be used for you
@@ -1802,13 +1820,22 @@ namespace Google.Analytics.Data.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AudienceExport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudienceExports(new ListAudienceExportsRequest
+        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudienceExportsRequest request = new ListAudienceExportsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudienceExports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all audience exports for a property. This method can be used for you
@@ -1841,13 +1868,22 @@ namespace Google.Analytics.Data.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AudienceExport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudienceExportsAsync(new ListAudienceExportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudienceExportsRequest request = new ListAudienceExportsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudienceExportsAsync(request, callSettings);
+        }
     }
 
     /// <summary>BetaAnalyticsData client wrapper implementation, for convenient use.</summary>

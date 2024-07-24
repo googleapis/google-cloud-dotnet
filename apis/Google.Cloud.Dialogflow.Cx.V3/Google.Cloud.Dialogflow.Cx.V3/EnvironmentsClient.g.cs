@@ -493,13 +493,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all environments in the specified
@@ -520,13 +529,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all environments in the specified
@@ -547,13 +565,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all environments in the specified
@@ -574,13 +601,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified
@@ -1290,13 +1326,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistory(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistory(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up the history of the specified
@@ -1317,13 +1362,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistoryAsync(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistoryAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up the history of the specified
@@ -1344,13 +1398,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistory(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistory(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up the history of the specified
@@ -1371,13 +1434,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistoryAsync(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistoryAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Kicks off a continuous test under the specified
@@ -1499,13 +1571,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResults(new ListContinuousTestResultsRequest
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResults(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of continuous test results for a given environment.
@@ -1525,13 +1606,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResultsAsync(new ListContinuousTestResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of continuous test results for a given environment.
@@ -1551,13 +1641,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResults(new ListContinuousTestResultsRequest
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResults(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of continuous test results for a given environment.
@@ -1577,13 +1676,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResultsAsync(new ListContinuousTestResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deploys a flow to the specified

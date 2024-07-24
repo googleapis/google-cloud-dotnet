@@ -2684,13 +2684,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfiles(new ListAppProfilesRequest
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about app profiles in an instance.
@@ -2712,13 +2721,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfilesAsync(new ListAppProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about app profiles in an instance.
@@ -2740,13 +2758,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfiles(new ListAppProfilesRequest
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about app profiles in an instance.
@@ -2768,13 +2795,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfilesAsync(new ListAppProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates an app profile within an instance.
@@ -3481,13 +3517,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTablets(new ListHotTabletsRequest
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTablets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hot tablets in a cluster, within the time range provided. Hot
@@ -3508,13 +3553,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTabletsAsync(new ListHotTabletsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTabletsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hot tablets in a cluster, within the time range provided. Hot
@@ -3535,13 +3589,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTablets(new ListHotTabletsRequest
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTablets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hot tablets in a cluster, within the time range provided. Hot
@@ -3562,13 +3625,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTabletsAsync(new ListHotTabletsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTabletsAsync(request, callSettings);
+        }
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper implementation, for convenient use.</summary>

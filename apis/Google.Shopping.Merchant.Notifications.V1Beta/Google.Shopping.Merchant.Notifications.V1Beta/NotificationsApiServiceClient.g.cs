@@ -852,13 +852,22 @@ namespace Google.Shopping.Merchant.Notifications.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationSubscription"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationSubscriptions(new ListNotificationSubscriptionsRequest
+        public virtual gax::PagedEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationSubscriptionsRequest request = new ListNotificationSubscriptionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationSubscriptions(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all the notification subscriptions for a merchant.
@@ -877,13 +886,22 @@ namespace Google.Shopping.Merchant.Notifications.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationSubscription"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationSubscriptionsAsync(new ListNotificationSubscriptionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationSubscriptionsRequest request = new ListNotificationSubscriptionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationSubscriptionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all the notification subscriptions for a merchant.
@@ -902,13 +920,22 @@ namespace Google.Shopping.Merchant.Notifications.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationSubscription"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptions(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationSubscriptions(new ListNotificationSubscriptionsRequest
+        public virtual gax::PagedEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptions(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationSubscriptionsRequest request = new ListNotificationSubscriptionsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationSubscriptions(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all the notification subscriptions for a merchant.
@@ -927,13 +954,22 @@ namespace Google.Shopping.Merchant.Notifications.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationSubscription"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptionsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationSubscriptionsAsync(new ListNotificationSubscriptionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationSubscriptionsResponse, NotificationSubscription> ListNotificationSubscriptionsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationSubscriptionsRequest request = new ListNotificationSubscriptionsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationSubscriptionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>NotificationsApiService client wrapper implementation, for convenient use.</summary>

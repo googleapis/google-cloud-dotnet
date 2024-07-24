@@ -1066,13 +1066,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannels(new ListChannelsRequest
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all channels in the specified region.
@@ -1091,13 +1100,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelsAsync(new ListChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all channels in the specified region.
@@ -1116,13 +1134,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannels(new ListChannelsRequest
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all channels in the specified region.
@@ -1141,13 +1168,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelsAsync(new ListChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified channel.
@@ -2077,13 +2113,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Input"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInputsResponse, Input> ListInputs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInputs(new ListInputsRequest
+        public virtual gax::PagedEnumerable<ListInputsResponse, Input> ListInputs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInputsRequest request = new ListInputsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInputs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all inputs in the specified region.
@@ -2102,13 +2147,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Input"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInputsResponse, Input> ListInputsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInputsAsync(new ListInputsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInputsResponse, Input> ListInputsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInputsRequest request = new ListInputsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInputsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all inputs in the specified region.
@@ -2127,13 +2181,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Input"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInputsResponse, Input> ListInputs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInputs(new ListInputsRequest
+        public virtual gax::PagedEnumerable<ListInputsResponse, Input> ListInputs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInputsRequest request = new ListInputsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInputs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all inputs in the specified region.
@@ -2152,13 +2215,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Input"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInputsResponse, Input> ListInputsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInputsAsync(new ListInputsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInputsResponse, Input> ListInputsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInputsRequest request = new ListInputsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInputsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified input.
@@ -2746,13 +2818,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvents(new ListEventsRequest
+        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all events in the specified channel.
@@ -2771,13 +2852,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventsAsync(new ListEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all events in the specified channel.
@@ -2796,13 +2886,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvents(new ListEventsRequest
+        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all events in the specified channel.
@@ -2821,13 +2920,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventsAsync(new ListEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified event.
@@ -3085,13 +3193,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Clip"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClips(new ListClipsRequest
+        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClipsRequest request = new ListClipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClips(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all clips in the specified channel.
@@ -3109,13 +3226,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Clip"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClipsAsync(new ListClipsRequest
+        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClipsRequest request = new ListClipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all clips in the specified channel.
@@ -3133,13 +3259,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Clip"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClips(new ListClipsRequest
+        public virtual gax::PagedEnumerable<ListClipsResponse, Clip> ListClips(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClipsRequest request = new ListClipsRequest
             {
                 ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClips(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all clips in the specified channel.
@@ -3157,13 +3292,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Clip"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClipsAsync(new ListClipsRequest
+        public virtual gax::PagedAsyncEnumerable<ListClipsResponse, Clip> ListClipsAsync(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClipsRequest request = new ListClipsRequest
             {
                 ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified clip.
@@ -4106,13 +4250,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all assets in the specified region.
@@ -4131,13 +4284,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all assets in the specified region.
@@ -4156,13 +4318,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of all assets in the specified region.
@@ -4181,13 +4352,22 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified pool.

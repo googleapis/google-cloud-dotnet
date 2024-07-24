@@ -500,13 +500,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RouterAggregatedList, scg::KeyValuePair<string, RoutersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListRoutersRequest
+        public virtual gax::PagedEnumerable<RouterAggregatedList, scg::KeyValuePair<string, RoutersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListRoutersRequest request = new AggregatedListRoutersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
@@ -526,13 +535,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<RouterAggregatedList, scg::KeyValuePair<string, RoutersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListRoutersRequest
+        public virtual gax::PagedAsyncEnumerable<RouterAggregatedList, scg::KeyValuePair<string, RoutersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListRoutersRequest request = new AggregatedListRoutersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified Router resource.
@@ -864,15 +882,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VmEndpointNatMappings"/> resources.</returns>
-        public virtual gax::PagedEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> GetNatMappingInfo(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GetNatMappingInfo(new GetNatMappingInfoRoutersRequest
+        public virtual gax::PagedEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> GetNatMappingInfo(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GetNatMappingInfoRoutersRequest request = new GetNatMappingInfoRoutersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GetNatMappingInfo(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves runtime Nat mapping information of VM endpoints.
@@ -896,15 +923,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VmEndpointNatMappings"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> GetNatMappingInfoAsync(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GetNatMappingInfoAsync(new GetNatMappingInfoRoutersRequest
+        public virtual gax::PagedAsyncEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> GetNatMappingInfoAsync(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GetNatMappingInfoRoutersRequest request = new GetNatMappingInfoRoutersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GetNatMappingInfoAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves runtime information of the specified router.
@@ -1145,14 +1181,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Router"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RouterList, Router> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListRoutersRequest
+        public virtual gax::PagedEnumerable<RouterList, Router> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutersRequest request = new ListRoutersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of Router resources available to the specified project.
@@ -1173,14 +1218,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Router"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RouterList, Router> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListRoutersRequest
+        public virtual gax::PagedAsyncEnumerable<RouterList, Router> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutersRequest request = new ListRoutersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.

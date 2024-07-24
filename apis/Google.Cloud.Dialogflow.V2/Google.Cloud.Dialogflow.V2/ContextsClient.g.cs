@@ -356,13 +356,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContexts(new ListContextsRequest
+        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContexts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all contexts in the specified session.
@@ -385,13 +394,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContextsAsync(new ListContextsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContextsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all contexts in the specified session.
@@ -414,13 +432,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContexts(new ListContextsRequest
+        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContexts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all contexts in the specified session.
@@ -443,13 +470,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContextsAsync(new ListContextsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContextsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified context.

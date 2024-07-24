@@ -1150,13 +1150,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="XpnResourceId"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GetXpnResources(new GetXpnResourcesProjectsRequest
+        public virtual gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GetXpnResourcesProjectsRequest request = new GetXpnResourcesProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GetXpnResources(request, callSettings);
+        }
 
         /// <summary>
         /// Gets service resources (a.k.a service project) associated with this host project.
@@ -1174,13 +1183,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="XpnResourceId"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GetXpnResourcesAsync(new GetXpnResourcesProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GetXpnResourcesProjectsRequest request = new GetXpnResourcesProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GetXpnResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all shared VPC host projects visible to the user in an organization.
@@ -1219,14 +1237,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListXpnHosts(new ListXpnHostsProjectsRequest
+        public virtual gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListXpnHostsProjectsRequest request = new ListXpnHostsProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 ProjectsListXpnHostsRequestResource = gax::GaxPreconditions.CheckNotNull(projectsListXpnHostsRequestResource, nameof(projectsListXpnHostsRequestResource)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListXpnHosts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all shared VPC host projects visible to the user in an organization.
@@ -1247,14 +1274,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListXpnHostsAsync(new ListXpnHostsProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListXpnHostsProjectsRequest request = new ListXpnHostsProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 ProjectsListXpnHostsRequestResource = gax::GaxPreconditions.CheckNotNull(projectsListXpnHostsRequestResource, nameof(projectsListXpnHostsRequestResource)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListXpnHostsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Moves a persistent disk from one zone to another.

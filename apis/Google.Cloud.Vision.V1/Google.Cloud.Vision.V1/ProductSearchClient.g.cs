@@ -920,13 +920,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSets(new ListProductSetsRequest
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ProductSets in an unspecified order.
@@ -951,13 +960,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSetsAsync(new ListProductSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ProductSets in an unspecified order.
@@ -982,13 +1000,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSets(new ListProductSetsRequest
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ProductSets in an unspecified order.
@@ -1013,13 +1040,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSetsAsync(new ListProductSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information associated with a ProductSet.
@@ -1755,13 +1791,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProducts(new ListProductsRequest
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists products in an unspecified order.
@@ -1786,13 +1831,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsAsync(new ListProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists products in an unspecified order.
@@ -1817,13 +1871,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProducts(new ListProductsRequest
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists products in an unspecified order.
@@ -1848,13 +1911,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsAsync(new ListProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information associated with a Product.
@@ -2941,13 +3013,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImages(new ListReferenceImagesRequest
+        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reference images.
@@ -2974,13 +3055,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImagesAsync(new ListReferenceImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reference images.
@@ -3007,13 +3097,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImages(new ListReferenceImagesRequest
+        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reference images.
@@ -3040,13 +3139,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImagesAsync(new ListReferenceImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information associated with a ReferenceImage.
@@ -3657,13 +3765,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSet(new ListProductsInProductSetRequest
+        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSet(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Products in a ProductSet, in an unspecified order. If the
@@ -3690,13 +3807,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSetAsync(new ListProductsInProductSetRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSetAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Products in a ProductSet, in an unspecified order. If the
@@ -3723,13 +3849,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSet(new ListProductsInProductSetRequest
+        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSet(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Products in a ProductSet, in an unspecified order. If the
@@ -3756,13 +3891,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSetAsync(new ListProductsInProductSetRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSetAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Asynchronous API that imports a list of reference images to specified

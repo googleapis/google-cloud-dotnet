@@ -820,13 +820,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// List environments.
@@ -845,13 +851,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update an environment.
@@ -1564,13 +1576,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// <returns>
         /// A pageable sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workloads in a Cloud Composer environment. Workload is a unit that
@@ -1595,13 +1616,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workloads in a Cloud Composer environment. Workload is a unit that
@@ -1626,13 +1656,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// <returns>
         /// A pageable sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workloads in a Cloud Composer environment. Workload is a unit that
@@ -1657,13 +1696,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a user workloads Secret.
@@ -2016,13 +2064,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsSecrets(new ListUserWorkloadsSecretsRequest
+        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsSecretsRequest request = new ListUserWorkloadsSecretsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsSecrets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists user workloads Secrets.
@@ -2044,13 +2101,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsSecretsAsync(new ListUserWorkloadsSecretsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsSecretsRequest request = new ListUserWorkloadsSecretsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsSecretsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists user workloads Secrets.
@@ -2072,13 +2138,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsSecrets(new ListUserWorkloadsSecretsRequest
+        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsSecretsRequest request = new ListUserWorkloadsSecretsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsSecrets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists user workloads Secrets.
@@ -2100,13 +2175,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsSecretsAsync(new ListUserWorkloadsSecretsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsSecretsRequest request = new ListUserWorkloadsSecretsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsSecretsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a user workloads Secret.
@@ -2672,13 +2756,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsConfigMaps(new ListUserWorkloadsConfigMapsRequest
+        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsConfigMapsRequest request = new ListUserWorkloadsConfigMapsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsConfigMaps(request, callSettings);
+        }
 
         /// <summary>
         /// Lists user workloads ConfigMaps.
@@ -2700,13 +2793,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsConfigMapsAsync(new ListUserWorkloadsConfigMapsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsConfigMapsRequest request = new ListUserWorkloadsConfigMapsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsConfigMapsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists user workloads ConfigMaps.
@@ -2728,13 +2830,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsConfigMaps(new ListUserWorkloadsConfigMapsRequest
+        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsConfigMapsRequest request = new ListUserWorkloadsConfigMapsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsConfigMaps(request, callSettings);
+        }
 
         /// <summary>
         /// Lists user workloads ConfigMaps.
@@ -2756,13 +2867,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserWorkloadsConfigMapsAsync(new ListUserWorkloadsConfigMapsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserWorkloadsConfigMapsRequest request = new ListUserWorkloadsConfigMapsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserWorkloadsConfigMapsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a user workloads ConfigMap.

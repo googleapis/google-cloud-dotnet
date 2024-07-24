@@ -748,13 +748,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TrainingPipeline"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelines(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrainingPipelines(new ListTrainingPipelinesRequest
+        public virtual gax::PagedEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelines(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrainingPipelinesRequest request = new ListTrainingPipelinesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrainingPipelines(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TrainingPipelines in a Location.
@@ -773,13 +782,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TrainingPipeline"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelinesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrainingPipelinesAsync(new ListTrainingPipelinesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelinesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrainingPipelinesRequest request = new ListTrainingPipelinesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrainingPipelinesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TrainingPipelines in a Location.
@@ -798,13 +816,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TrainingPipeline"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelines(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrainingPipelines(new ListTrainingPipelinesRequest
+        public virtual gax::PagedEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelines(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrainingPipelinesRequest request = new ListTrainingPipelinesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrainingPipelines(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TrainingPipelines in a Location.
@@ -823,13 +850,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TrainingPipeline"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelinesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrainingPipelinesAsync(new ListTrainingPipelinesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTrainingPipelinesResponse, TrainingPipeline> ListTrainingPipelinesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrainingPipelinesRequest request = new ListTrainingPipelinesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrainingPipelinesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a TrainingPipeline.
@@ -1546,13 +1582,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PipelineJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPipelineJobs(new ListPipelineJobsRequest
+        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelineJobsRequest request = new ListPipelineJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelineJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PipelineJobs in a Location.
@@ -1571,13 +1616,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PipelineJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPipelineJobsAsync(new ListPipelineJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelineJobsRequest request = new ListPipelineJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelineJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PipelineJobs in a Location.
@@ -1596,13 +1650,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PipelineJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPipelineJobs(new ListPipelineJobsRequest
+        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelineJobsRequest request = new ListPipelineJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelineJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PipelineJobs in a Location.
@@ -1621,13 +1684,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PipelineJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPipelineJobsAsync(new ListPipelineJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelineJobsRequest request = new ListPipelineJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelineJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a PipelineJob.

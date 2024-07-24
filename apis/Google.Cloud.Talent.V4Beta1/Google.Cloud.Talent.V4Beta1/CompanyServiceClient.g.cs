@@ -912,13 +912,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompanies(new ListCompaniesRequest
+        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompaniesRequest request = new ListCompaniesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompanies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all companies associated with the project.
@@ -942,13 +951,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompaniesAsync(new ListCompaniesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompaniesRequest request = new ListCompaniesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompaniesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all companies associated with the project.
@@ -972,13 +990,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompanies(new ListCompaniesRequest
+        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompaniesRequest request = new ListCompaniesRequest
             {
                 ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompanies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all companies associated with the project.
@@ -1002,13 +1029,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompaniesAsync(new ListCompaniesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompaniesRequest request = new ListCompaniesRequest
             {
                 ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompaniesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all companies associated with the project.
@@ -1032,13 +1068,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompanies(new ListCompaniesRequest
+        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompaniesRequest request = new ListCompaniesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompanies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all companies associated with the project.
@@ -1062,13 +1107,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompaniesAsync(new ListCompaniesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompaniesRequest request = new ListCompaniesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompaniesAsync(request, callSettings);
+        }
     }
 
     /// <summary>CompanyService client wrapper implementation, for convenient use.</summary>

@@ -2179,13 +2179,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateClouds(new ListPrivateCloudsRequest
+        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateClouds(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -2207,13 +2216,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateCloudsAsync(new ListPrivateCloudsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateCloudsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -2235,13 +2253,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateClouds(new ListPrivateCloudsRequest
+        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateClouds(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -2263,13 +2290,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateCloudsAsync(new ListPrivateCloudsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateCloudsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a `PrivateCloud` resource by its resource name.
@@ -3375,13 +3411,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClusters(new ListClustersRequest
+        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `Cluster` resources in a given private cloud.
@@ -3403,13 +3448,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClustersAsync(new ListClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `Cluster` resources in a given private cloud.
@@ -3431,13 +3485,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClusters(new ListClustersRequest
+        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `Cluster` resources in a given private cloud.
@@ -3459,13 +3522,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClustersAsync(new ListClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a `Cluster` resource by its resource name.
@@ -4253,13 +4325,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodes(new ListNodesRequest
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists nodes in a given cluster.
@@ -4281,13 +4362,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodesAsync(new ListNodesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists nodes in a given cluster.
@@ -4309,13 +4399,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodes(new ListNodesRequest
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists nodes in a given cluster.
@@ -4337,13 +4436,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodesAsync(new ListNodesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single node.
@@ -4504,13 +4612,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAddresses(new ListExternalAddressesRequest
+        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddresses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs in a given
@@ -4534,13 +4651,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAddressesAsync(new ListExternalAddressesRequest
+        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddressesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs in a given
@@ -4564,13 +4690,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAddresses(new ListExternalAddressesRequest
+        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddresses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs in a given
@@ -4594,13 +4729,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAddressesAsync(new ListExternalAddressesRequest
+        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddressesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs within the
@@ -4643,13 +4787,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(string networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchNetworkPolicyExternalAddresses(new FetchNetworkPolicyExternalAddressesRequest
+        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(string networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
             {
                 NetworkPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPolicy, nameof(networkPolicy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddresses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs within the
@@ -4672,13 +4825,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(string networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchNetworkPolicyExternalAddressesAsync(new FetchNetworkPolicyExternalAddressesRequest
+        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(string networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
             {
                 NetworkPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPolicy, nameof(networkPolicy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddressesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs within the
@@ -4701,13 +4863,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(NetworkPolicyName networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchNetworkPolicyExternalAddresses(new FetchNetworkPolicyExternalAddressesRequest
+        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(NetworkPolicyName networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
             {
                 NetworkPolicyAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddresses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists external IP addresses assigned to VMware workload VMs within the
@@ -4730,13 +4901,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(NetworkPolicyName networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchNetworkPolicyExternalAddressesAsync(new FetchNetworkPolicyExternalAddressesRequest
+        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(NetworkPolicyName networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
             {
                 NetworkPolicyAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddressesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single external IP address.
@@ -5516,13 +5696,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnets(new ListSubnetsRequest
+        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists subnets in a given private cloud.
@@ -5545,13 +5734,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnetsAsync(new ListSubnetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists subnets in a given private cloud.
@@ -5574,13 +5772,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnets(new ListSubnetsRequest
+        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists subnets in a given private cloud.
@@ -5603,13 +5810,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnetsAsync(new ListSubnetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single subnet.
@@ -5923,13 +6139,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExternalAccessRule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAccessRules(new ListExternalAccessRulesRequest
+        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `ExternalAccessRule` resources in the specified network policy.
@@ -5951,13 +6176,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExternalAccessRule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAccessRulesAsync(new ListExternalAccessRulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `ExternalAccessRule` resources in the specified network policy.
@@ -5979,13 +6213,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExternalAccessRule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(NetworkPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAccessRules(new ListExternalAccessRulesRequest
+        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(NetworkPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
             {
                 ParentAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `ExternalAccessRule` resources in the specified network policy.
@@ -6007,13 +6250,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExternalAccessRule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(NetworkPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExternalAccessRulesAsync(new ListExternalAccessRulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(NetworkPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
             {
                 ParentAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single external access rule.
@@ -6730,13 +6982,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LoggingServer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLoggingServers(new ListLoggingServersRequest
+        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists logging servers configured for a given private
@@ -6760,13 +7021,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LoggingServer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLoggingServersAsync(new ListLoggingServersRequest
+        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists logging servers configured for a given private
@@ -6790,13 +7060,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LoggingServer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLoggingServers(new ListLoggingServersRequest
+        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists logging servers configured for a given private
@@ -6820,13 +7099,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LoggingServer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLoggingServersAsync(new ListLoggingServersRequest
+        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a logging server.
@@ -7539,13 +7827,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypes(new ListNodeTypesRequest
+        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists node types
@@ -7567,13 +7864,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypesAsync(new ListNodeTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists node types
@@ -7595,13 +7901,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypes(new ListNodeTypesRequest
+        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists node types
@@ -7623,13 +7938,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypesAsync(new ListNodeTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single `NodeType`.
@@ -8801,13 +9125,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkPeering"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPeerings(new ListNetworkPeeringsRequest
+        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeerings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
@@ -8829,13 +9162,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkPeering"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPeeringsAsync(new ListNetworkPeeringsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeeringsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
@@ -8857,13 +9199,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkPeering"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPeerings(new ListNetworkPeeringsRequest
+        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeerings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
@@ -8885,13 +9236,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkPeering"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPeeringsAsync(new ListNetworkPeeringsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeeringsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new network peering between the peer network and VMware Engine
@@ -9522,13 +9882,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutes(new ListPeeringRoutesRequest
+        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the network peering routes exchanged over a peering connection.
@@ -9550,13 +9919,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutesAsync(new ListPeeringRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the network peering routes exchanged over a peering connection.
@@ -9578,13 +9956,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(NetworkPeeringName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutes(new ListPeeringRoutesRequest
+        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(NetworkPeeringName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
             {
                 ParentAsNetworkPeeringName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the network peering routes exchanged over a peering connection.
@@ -9606,13 +9993,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(NetworkPeeringName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutesAsync(new ListPeeringRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(NetworkPeeringName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
             {
                 ParentAsNetworkPeeringName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new HCX activation key in a given private cloud.
@@ -9919,13 +10315,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeys(new ListHcxActivationKeysRequest
+        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `HcxActivationKey` resources in a given private cloud.
@@ -9948,13 +10353,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeysAsync(new ListHcxActivationKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `HcxActivationKey` resources in a given private cloud.
@@ -9977,13 +10391,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeys(new ListHcxActivationKeysRequest
+        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `HcxActivationKey` resources in a given private cloud.
@@ -10006,13 +10429,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeysAsync(new ListHcxActivationKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a `HcxActivationKey` resource by its resource name.
@@ -10309,13 +10741,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPolicies(new ListNetworkPoliciesRequest
+        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPolicy` resources in a specified project and location.
@@ -10336,13 +10777,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPoliciesAsync(new ListNetworkPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPolicy` resources in a specified project and location.
@@ -10363,13 +10813,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPolicies(new ListNetworkPoliciesRequest
+        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPolicy` resources in a specified project and location.
@@ -10390,13 +10849,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPoliciesAsync(new ListNetworkPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new network policy in a given VMware Engine network of a
@@ -11083,13 +11551,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementDnsZoneBindings(new ListManagementDnsZoneBindingsRequest
+        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
@@ -11112,13 +11589,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementDnsZoneBindingsAsync(new ListManagementDnsZoneBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
@@ -11141,13 +11627,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementDnsZoneBindings(new ListManagementDnsZoneBindingsRequest
+        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
@@ -11170,13 +11665,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagementDnsZoneBindingsAsync(new ListManagementDnsZoneBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
@@ -12891,13 +13395,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworks(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `VmwareEngineNetwork` resources in a given project and location.
@@ -12918,13 +13431,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworksAsync(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `VmwareEngineNetwork` resources in a given project and location.
@@ -12945,13 +13467,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworks(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `VmwareEngineNetwork` resources in a given project and location.
@@ -12972,13 +13503,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworksAsync(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new private connection that can be used for accessing private
@@ -13433,13 +13973,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnections(new ListPrivateConnectionsRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateConnection` resources in a given project and location.
@@ -13460,13 +14009,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateConnection` resources in a given project and location.
@@ -13487,13 +14045,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnections(new ListPrivateConnectionsRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateConnection` resources in a given project and location.
@@ -13514,13 +14081,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Modifies a `PrivateConnection` resource. Only `description` and
@@ -13861,13 +14437,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionPeeringRoutes(new ListPrivateConnectionPeeringRoutesRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the private connection routes exchanged over a peering connection.
@@ -13888,13 +14473,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionPeeringRoutesAsync(new ListPrivateConnectionPeeringRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the private connection routes exchanged over a peering connection.
@@ -13915,13 +14509,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionPeeringRoutes(new ListPrivateConnectionPeeringRoutesRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
             {
                 ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the private connection routes exchanged over a peering connection.
@@ -13942,13 +14545,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionPeeringRoutesAsync(new ListPrivateConnectionPeeringRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
             {
                 ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Grants the bind permission to the customer provided principal(user /

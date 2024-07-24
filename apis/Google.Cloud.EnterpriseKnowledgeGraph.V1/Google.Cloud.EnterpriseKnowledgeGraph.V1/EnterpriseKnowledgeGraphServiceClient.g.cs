@@ -637,13 +637,22 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityReconciliationJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityReconciliationJobs(new ListEntityReconciliationJobsRequest
+        public virtual gax::PagedEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityReconciliationJobsRequest request = new ListEntityReconciliationJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityReconciliationJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Entity Reconciliation Jobs.
@@ -662,13 +671,22 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityReconciliationJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityReconciliationJobsAsync(new ListEntityReconciliationJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityReconciliationJobsRequest request = new ListEntityReconciliationJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityReconciliationJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Entity Reconciliation Jobs.
@@ -687,13 +705,22 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityReconciliationJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityReconciliationJobs(new ListEntityReconciliationJobsRequest
+        public virtual gax::PagedEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityReconciliationJobsRequest request = new ListEntityReconciliationJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityReconciliationJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Entity Reconciliation Jobs.
@@ -712,13 +739,22 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityReconciliationJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityReconciliationJobsAsync(new ListEntityReconciliationJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityReconciliationJobsResponse, EntityReconciliationJob> ListEntityReconciliationJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityReconciliationJobsRequest request = new ListEntityReconciliationJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityReconciliationJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Cancels a EntityReconciliationJob. Success of cancellation is not

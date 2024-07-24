@@ -1782,13 +1782,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Detector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDetectorsResponse, Detector> ListDetectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDetectors(new ListDetectorsRequest
+        public virtual gax::PagedEnumerable<ListDetectorsResponse, Detector> ListDetectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDetectorsRequest request = new ListDetectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDetectors(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available detectors.
@@ -1808,13 +1817,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Detector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDetectorsResponse, Detector> ListDetectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDetectorsAsync(new ListDetectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDetectorsResponse, Detector> ListDetectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDetectorsRequest request = new ListDetectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDetectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available detectors.
@@ -1834,13 +1852,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Detector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDetectorsResponse, Detector> ListDetectors(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDetectors(new ListDetectorsRequest
+        public virtual gax::PagedEnumerable<ListDetectorsResponse, Detector> ListDetectors(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDetectorsRequest request = new ListDetectorsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDetectors(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available detectors.
@@ -1860,13 +1887,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Detector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDetectorsResponse, Detector> ListDetectorsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDetectorsAsync(new ListDetectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDetectorsResponse, Detector> ListDetectorsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDetectorsRequest request = new ListDetectorsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDetectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available SCC components.
@@ -1904,13 +1940,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListComponentsResponse, string> ListComponents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComponents(new ListComponentsRequest
+        public virtual gax::PagedEnumerable<ListComponentsResponse, string> ListComponents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListComponentsRequest request = new ListComponentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComponents(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available SCC components.
@@ -1930,13 +1975,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListComponentsResponse, string> ListComponentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComponentsAsync(new ListComponentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListComponentsResponse, string> ListComponentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListComponentsRequest request = new ListComponentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComponentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available SCC components.
@@ -1956,13 +2010,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListComponentsResponse, string> ListComponents(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComponents(new ListComponentsRequest
+        public virtual gax::PagedEnumerable<ListComponentsResponse, string> ListComponents(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListComponentsRequest request = new ListComponentsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComponents(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves an unordered list of available SCC components.
@@ -1982,13 +2045,22 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListComponentsResponse, string> ListComponentsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComponentsAsync(new ListComponentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListComponentsResponse, string> ListComponentsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListComponentsRequest request = new ListComponentsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComponentsAsync(request, callSettings);
+        }
     }
 
     /// <summary>SecurityCenterSettingsService client wrapper implementation, for convenient use.</summary>

@@ -496,13 +496,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists customer workloads for a given customer org id
@@ -522,13 +531,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists customer workloads for a given customer org id
@@ -548,13 +566,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists customer workloads for a given customer org id
@@ -574,13 +601,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single customer
@@ -728,13 +764,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Customer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomersResponse, Customer> ListCustomers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomers(new ListCustomersRequest
+        public virtual gax::PagedEnumerable<ListCustomersResponse, Customer> ListCustomers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomersRequest request = new ListCustomersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists customers of a partner identified by its Google Cloud organization ID
@@ -753,13 +798,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Customer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomersResponse, Customer> ListCustomersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomersAsync(new ListCustomersRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomersResponse, Customer> ListCustomersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomersRequest request = new ListCustomersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists customers of a partner identified by its Google Cloud organization ID
@@ -778,13 +832,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Customer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomersResponse, Customer> ListCustomers(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomers(new ListCustomersRequest
+        public virtual gax::PagedEnumerable<ListCustomersResponse, Customer> ListCustomers(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomersRequest request = new ListCustomersRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists customers of a partner identified by its Google Cloud organization ID
@@ -803,13 +866,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Customer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomersResponse, Customer> ListCustomersAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomersAsync(new ListCustomersRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomersResponse, Customer> ListCustomersAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomersRequest request = new ListCustomersRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the EKM connections associated with a workload
@@ -1075,13 +1147,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessApprovalRequests(new ListAccessApprovalRequestsRequest
+        public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessApprovalRequestsRequest request = new ListAccessApprovalRequestsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessApprovalRequests(request, callSettings);
+        }
 
         /// <summary>
         /// Deprecated: Only returns access approval requests directly associated with
@@ -1103,13 +1184,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessApprovalRequestsAsync(new ListAccessApprovalRequestsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessApprovalRequestsRequest request = new ListAccessApprovalRequestsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessApprovalRequestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deprecated: Only returns access approval requests directly associated with
@@ -1131,13 +1221,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessApprovalRequests(new ListAccessApprovalRequestsRequest
+        public virtual gax::PagedEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequests(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessApprovalRequestsRequest request = new ListAccessApprovalRequestsRequest
             {
                 ParentAsWorkloadName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessApprovalRequests(request, callSettings);
+        }
 
         /// <summary>
         /// Deprecated: Only returns access approval requests directly associated with
@@ -1159,13 +1258,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessApprovalRequest"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessApprovalRequestsAsync(new ListAccessApprovalRequestsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessApprovalRequestsResponse, AccessApprovalRequest> ListAccessApprovalRequestsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessApprovalRequestsRequest request = new ListAccessApprovalRequestsRequest
             {
                 ParentAsWorkloadName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessApprovalRequestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get details of a Partner.

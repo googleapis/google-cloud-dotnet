@@ -740,13 +740,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Study"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStudiesResponse, Study> ListStudies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStudies(new ListStudiesRequest
+        public virtual gax::PagedEnumerable<ListStudiesResponse, Study> ListStudies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStudiesRequest request = new ListStudiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStudies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the studies in a region for an associated project.
@@ -765,13 +774,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Study"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStudiesResponse, Study> ListStudiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStudiesAsync(new ListStudiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStudiesResponse, Study> ListStudiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStudiesRequest request = new ListStudiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStudiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the studies in a region for an associated project.
@@ -790,13 +808,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Study"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStudiesResponse, Study> ListStudies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStudies(new ListStudiesRequest
+        public virtual gax::PagedEnumerable<ListStudiesResponse, Study> ListStudies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStudiesRequest request = new ListStudiesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStudies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the studies in a region for an associated project.
@@ -815,13 +842,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Study"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStudiesResponse, Study> ListStudiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStudiesAsync(new ListStudiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStudiesResponse, Study> ListStudiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStudiesRequest request = new ListStudiesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStudiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a Study.
@@ -1407,13 +1443,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Trial"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTrialsResponse, Trial> ListTrials(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrials(new ListTrialsRequest
+        public virtual gax::PagedEnumerable<ListTrialsResponse, Trial> ListTrials(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrialsRequest request = new ListTrialsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrials(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Trials associated with a Study.
@@ -1432,13 +1477,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Trial"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTrialsResponse, Trial> ListTrialsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrialsAsync(new ListTrialsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTrialsResponse, Trial> ListTrialsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrialsRequest request = new ListTrialsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrialsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Trials associated with a Study.
@@ -1457,13 +1511,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Trial"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTrialsResponse, Trial> ListTrials(StudyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrials(new ListTrialsRequest
+        public virtual gax::PagedEnumerable<ListTrialsResponse, Trial> ListTrials(StudyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrialsRequest request = new ListTrialsRequest
             {
                 ParentAsStudyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrials(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Trials associated with a Study.
@@ -1482,13 +1545,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Trial"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTrialsResponse, Trial> ListTrialsAsync(StudyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrialsAsync(new ListTrialsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTrialsResponse, Trial> ListTrialsAsync(StudyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrialsRequest request = new ListTrialsRequest
             {
                 ParentAsStudyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrialsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Adds a measurement of the objective metrics to a Trial. This measurement

@@ -788,13 +788,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets with time and resource types and returns paged results in
@@ -817,13 +826,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets with time and resource types and returns paged results in
@@ -846,13 +864,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets with time and resource types and returns paged results in
@@ -875,13 +902,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Batch gets the update history of assets that overlap a time window.
@@ -1560,8 +1596,9 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ResourceSearchResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllResources(new SearchAllResourcesRequest
+        public virtual gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllResourcesRequest request = new SearchAllResourcesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
@@ -1569,9 +1606,17 @@ namespace Google.Cloud.Asset.V1
                 {
                     assetTypes ?? linq::Enumerable.Empty<string>(),
                 },
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllResources(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all Google Cloud resources within the specified scope, such as a
@@ -1701,8 +1746,9 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ResourceSearchResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllResourcesAsync(new SearchAllResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllResourcesRequest request = new SearchAllResourcesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
@@ -1710,9 +1756,17 @@ namespace Google.Cloud.Asset.V1
                 {
                     assetTypes ?? linq::Enumerable.Empty<string>(),
                 },
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all IAM policies within the specified scope, such as a project,
@@ -1812,14 +1866,23 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllIamPolicies(new SearchAllIamPoliciesRequest
+        public virtual gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllIamPoliciesRequest request = new SearchAllIamPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllIamPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all IAM policies within the specified scope, such as a project,
@@ -1895,14 +1958,23 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllIamPoliciesAsync(new SearchAllIamPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllIamPoliciesRequest request = new SearchAllIamPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllIamPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes IAM policies to answer which identities have what accesses on
@@ -2706,13 +2778,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2732,13 +2813,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2758,13 +2848,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2784,13 +2883,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2810,13 +2918,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2836,13 +2953,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2862,13 +2988,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2888,13 +3023,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a saved query.
@@ -3218,15 +3362,24 @@ namespace Google.Cloud.Asset.V1
         /// <returns>
         /// A pageable sequence of <see cref="AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPolicies(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicies(new AnalyzeOrgPoliciesRequest
+        public virtual gax::PagedEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPolicies(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPoliciesRequest request = new AnalyzeOrgPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies under a scope.
@@ -3268,15 +3421,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable asynchronous sequence of <see cref="AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPoliciesAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPoliciesAsync(new AnalyzeOrgPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPoliciesAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPoliciesRequest request = new AnalyzeOrgPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed containers (projects, folders or
@@ -3347,15 +3509,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable sequence of <see cref="AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainers(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedContainers(new AnalyzeOrgPolicyGovernedContainersRequest
+        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainers(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedContainersRequest request = new AnalyzeOrgPolicyGovernedContainersRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedContainers(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed containers (projects, folders or
@@ -3400,15 +3571,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable asynchronous sequence of
         /// <see cref="AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainersAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedContainersAsync(new AnalyzeOrgPolicyGovernedContainersRequest
+        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainersAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedContainersRequest request = new AnalyzeOrgPolicyGovernedContainersRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedContainersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
@@ -3634,15 +3814,24 @@ namespace Google.Cloud.Asset.V1
         /// <returns>
         /// A pageable sequence of <see cref="AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssets(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedAssets(new AnalyzeOrgPolicyGovernedAssetsRequest
+        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssets(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedAssetsRequest request = new AnalyzeOrgPolicyGovernedAssetsRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
@@ -3750,15 +3939,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable asynchronous sequence of <see cref="AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssetsAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedAssetsAsync(new AnalyzeOrgPolicyGovernedAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssetsAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedAssetsRequest request = new AnalyzeOrgPolicyGovernedAssetsRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedAssetsAsync(request, callSettings);
+        }
     }
 
     /// <summary>AssetService client wrapper implementation, for convenient use.</summary>

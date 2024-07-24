@@ -347,13 +347,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroups(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
@@ -374,13 +383,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroupsAsync(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
@@ -401,13 +419,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroups(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 ParentAsFlowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
@@ -428,13 +455,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroupsAsync(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 ParentAsFlowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
@@ -455,13 +491,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroups(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
@@ -482,13 +527,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroupsAsync(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified

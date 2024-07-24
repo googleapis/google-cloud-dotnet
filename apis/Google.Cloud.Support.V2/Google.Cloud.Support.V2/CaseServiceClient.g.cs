@@ -475,13 +475,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Case"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCasesResponse, Case> ListCases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCases(new ListCasesRequest
+        public virtual gax::PagedEnumerable<ListCasesResponse, Case> ListCases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCasesRequest request = new ListCasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCases(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all cases under the specified parent.
@@ -504,13 +513,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Case"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCasesResponse, Case> ListCasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCasesAsync(new ListCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCasesResponse, Case> ListCasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCasesRequest request = new ListCasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all cases under the specified parent.
@@ -533,13 +551,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Case"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCasesResponse, Case> ListCases(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCases(new ListCasesRequest
+        public virtual gax::PagedEnumerable<ListCasesResponse, Case> ListCases(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCasesRequest request = new ListCasesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCases(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all cases under the specified parent.
@@ -562,13 +589,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Case"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCasesResponse, Case> ListCasesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCasesAsync(new ListCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCasesResponse, Case> ListCasesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCasesRequest request = new ListCasesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all cases under the specified parent.
@@ -591,13 +627,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Case"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCasesResponse, Case> ListCases(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCases(new ListCasesRequest
+        public virtual gax::PagedEnumerable<ListCasesResponse, Case> ListCases(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCasesRequest request = new ListCasesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCases(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all cases under the specified parent.
@@ -620,13 +665,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Case"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCasesResponse, Case> ListCasesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCasesAsync(new ListCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCasesResponse, Case> ListCasesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCasesRequest request = new ListCasesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Search cases using the specified query.

@@ -544,13 +544,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCases(new ListTestCasesRequest
+        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCases(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
@@ -569,13 +578,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCasesAsync(new ListTestCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
@@ -594,13 +612,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCases(new ListTestCasesRequest
+        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCases(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
@@ -619,13 +646,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCasesAsync(new ListTestCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Batch deletes test cases.
@@ -1471,13 +1507,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResults(new ListTestCaseResultsRequest
+        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResults(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches the list of run results for the given test case. A maximum of 100
@@ -1499,13 +1544,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResultsAsync(new ListTestCaseResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches the list of run results for the given test case. A maximum of 100
@@ -1527,13 +1581,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResults(new ListTestCaseResultsRequest
+        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 ParentAsTestCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResults(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches the list of run results for the given test case. A maximum of 100
@@ -1555,13 +1618,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResultsAsync(new ListTestCaseResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 ParentAsTestCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a test case result.

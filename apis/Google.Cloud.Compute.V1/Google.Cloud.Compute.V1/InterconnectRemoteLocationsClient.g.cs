@@ -355,13 +355,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InterconnectRemoteLocation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<InterconnectRemoteLocationList, InterconnectRemoteLocation> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListInterconnectRemoteLocationsRequest
+        public virtual gax::PagedEnumerable<InterconnectRemoteLocationList, InterconnectRemoteLocation> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInterconnectRemoteLocationsRequest request = new ListInterconnectRemoteLocationsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of interconnect remote locations available to the specified project.
@@ -379,13 +388,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InterconnectRemoteLocation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<InterconnectRemoteLocationList, InterconnectRemoteLocation> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListInterconnectRemoteLocationsRequest
+        public virtual gax::PagedAsyncEnumerable<InterconnectRemoteLocationList, InterconnectRemoteLocation> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInterconnectRemoteLocationsRequest request = new ListInterconnectRemoteLocationsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
     }
 
     /// <summary>InterconnectRemoteLocations client wrapper implementation, for convenient use.</summary>

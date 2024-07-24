@@ -894,13 +894,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFolders(new ListFoldersRequest
+        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
@@ -920,13 +929,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFoldersAsync(new ListFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFoldersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
@@ -946,13 +964,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFolders(new ListFoldersRequest
+        public virtual gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of folders. This operation is only applicable to a
@@ -972,13 +999,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Folder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFoldersAsync(new ListFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFoldersRequest request = new ListFoldersRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFoldersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Renames a source folder to a destination folder. This operation is only
@@ -1718,13 +1754,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagedFolder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagedFolders(new ListManagedFoldersRequest
+        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagedFoldersRequest request = new ListManagedFoldersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagedFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of managed folders for a given bucket.
@@ -1742,13 +1787,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagedFolder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagedFoldersAsync(new ListManagedFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagedFoldersRequest request = new ListManagedFoldersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagedFoldersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of managed folders for a given bucket.
@@ -1766,13 +1820,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagedFolder"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagedFolders(new ListManagedFoldersRequest
+        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagedFoldersRequest request = new ListManagedFoldersRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagedFolders(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of managed folders for a given bucket.
@@ -1790,13 +1853,22 @@ namespace Google.Cloud.Storage.Control.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagedFolder"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagedFoldersAsync(new ListManagedFoldersRequest
+        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagedFoldersRequest request = new ListManagedFoldersRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagedFoldersAsync(request, callSettings);
+        }
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>

@@ -250,7 +250,7 @@ namespace Google.Cloud.BigQuery.Migration.V2
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MigrationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MigrationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -588,13 +588,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigrationWorkflow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationWorkflows(new ListMigrationWorkflowsRequest
+        public virtual gax::PagedEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationWorkflowsRequest request = new ListMigrationWorkflowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationWorkflows(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously created migration workflow.
@@ -613,13 +622,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigrationWorkflow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationWorkflowsAsync(new ListMigrationWorkflowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationWorkflowsRequest request = new ListMigrationWorkflowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationWorkflowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously created migration workflow.
@@ -638,13 +656,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigrationWorkflow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflows(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationWorkflows(new ListMigrationWorkflowsRequest
+        public virtual gax::PagedEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflows(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationWorkflowsRequest request = new ListMigrationWorkflowsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationWorkflows(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously created migration workflow.
@@ -663,13 +690,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigrationWorkflow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflowsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationWorkflowsAsync(new ListMigrationWorkflowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMigrationWorkflowsResponse, MigrationWorkflow> ListMigrationWorkflowsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationWorkflowsRequest request = new ListMigrationWorkflowsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationWorkflowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a migration workflow by name.
@@ -1066,13 +1102,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigrationSubtask"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationSubtasks(new ListMigrationSubtasksRequest
+        public virtual gax::PagedEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationSubtasksRequest request = new ListMigrationSubtasksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationSubtasks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously created migration subtasks.
@@ -1091,13 +1136,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigrationSubtask"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationSubtasksAsync(new ListMigrationSubtasksRequest
+        public virtual gax::PagedAsyncEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationSubtasksRequest request = new ListMigrationSubtasksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationSubtasksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously created migration subtasks.
@@ -1116,13 +1170,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigrationSubtask"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasks(MigrationWorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationSubtasks(new ListMigrationSubtasksRequest
+        public virtual gax::PagedEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasks(MigrationWorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationSubtasksRequest request = new ListMigrationSubtasksRequest
             {
                 ParentAsMigrationWorkflowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationSubtasks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously created migration subtasks.
@@ -1141,13 +1204,22 @@ namespace Google.Cloud.BigQuery.Migration.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigrationSubtask"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasksAsync(MigrationWorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationSubtasksAsync(new ListMigrationSubtasksRequest
+        public virtual gax::PagedAsyncEnumerable<ListMigrationSubtasksResponse, MigrationSubtask> ListMigrationSubtasksAsync(MigrationWorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationSubtasksRequest request = new ListMigrationSubtasksRequest
             {
                 ParentAsMigrationWorkflowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationSubtasksAsync(request, callSettings);
+        }
     }
 
     /// <summary>MigrationService client wrapper implementation, for convenient use.</summary>

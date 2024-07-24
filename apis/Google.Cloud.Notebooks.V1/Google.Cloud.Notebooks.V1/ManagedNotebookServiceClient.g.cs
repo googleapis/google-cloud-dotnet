@@ -639,13 +639,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimes(new ListRuntimesRequest
+        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -664,13 +673,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimesAsync(new ListRuntimesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -689,13 +707,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimes(new ListRuntimesRequest
+        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -714,13 +741,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimesAsync(new ListRuntimesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Runtime. The location must be a regional endpoint

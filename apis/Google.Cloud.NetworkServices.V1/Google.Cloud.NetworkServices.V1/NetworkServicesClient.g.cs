@@ -1199,13 +1199,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EndpointPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEndpointPolicies(new ListEndpointPoliciesRequest
+        public virtual gax::PagedEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEndpointPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EndpointPolicies in a given project and location.
@@ -1224,13 +1233,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EndpointPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEndpointPoliciesAsync(new ListEndpointPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEndpointPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EndpointPolicies in a given project and location.
@@ -1249,13 +1267,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EndpointPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEndpointPolicies(new ListEndpointPoliciesRequest
+        public virtual gax::PagedEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEndpointPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EndpointPolicies in a given project and location.
@@ -1274,13 +1301,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EndpointPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEndpointPoliciesAsync(new ListEndpointPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> ListEndpointPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEndpointPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single EndpointPolicy.
@@ -1870,13 +1906,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGateways(new ListGatewaysRequest
+        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -1895,13 +1940,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGatewaysAsync(new ListGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -1920,13 +1974,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGateways(new ListGatewaysRequest
+        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -1945,13 +2008,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGatewaysAsync(new ListGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Gateway.
@@ -2532,13 +2604,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GrpcRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrpcRoutes(new ListGrpcRoutesRequest
+        public virtual gax::PagedEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrpcRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GrpcRoutes in a given project and location.
@@ -2557,13 +2638,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GrpcRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrpcRoutesAsync(new ListGrpcRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrpcRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GrpcRoutes in a given project and location.
@@ -2582,13 +2672,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GrpcRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrpcRoutes(new ListGrpcRoutesRequest
+        public virtual gax::PagedEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrpcRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GrpcRoutes in a given project and location.
@@ -2607,13 +2706,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GrpcRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrpcRoutesAsync(new ListGrpcRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListGrpcRoutesResponse, GrpcRoute> ListGrpcRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrpcRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single GrpcRoute.
@@ -3194,13 +3302,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HttpRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHttpRoutes(new ListHttpRoutesRequest
+        public virtual gax::PagedEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHttpRoutesRequest request = new ListHttpRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHttpRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HttpRoute in a given project and location.
@@ -3219,13 +3336,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HttpRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHttpRoutesAsync(new ListHttpRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHttpRoutesRequest request = new ListHttpRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHttpRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HttpRoute in a given project and location.
@@ -3244,13 +3370,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HttpRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHttpRoutes(new ListHttpRoutesRequest
+        public virtual gax::PagedEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHttpRoutesRequest request = new ListHttpRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHttpRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HttpRoute in a given project and location.
@@ -3269,13 +3404,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HttpRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHttpRoutesAsync(new ListHttpRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListHttpRoutesResponse, HttpRoute> ListHttpRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHttpRoutesRequest request = new ListHttpRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHttpRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single HttpRoute.
@@ -3856,13 +4000,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TcpRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTcpRoutes(new ListTcpRoutesRequest
+        public virtual gax::PagedEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTcpRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TcpRoute in a given project and location.
@@ -3881,13 +4034,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TcpRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTcpRoutesAsync(new ListTcpRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTcpRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TcpRoute in a given project and location.
@@ -3906,13 +4068,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TcpRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTcpRoutes(new ListTcpRoutesRequest
+        public virtual gax::PagedEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTcpRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TcpRoute in a given project and location.
@@ -3931,13 +4102,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TcpRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTcpRoutesAsync(new ListTcpRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTcpRoutesResponse, TcpRoute> ListTcpRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTcpRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single TcpRoute.
@@ -4518,13 +4698,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TlsRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTlsRoutes(new ListTlsRoutesRequest
+        public virtual gax::PagedEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTlsRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TlsRoute in a given project and location.
@@ -4543,13 +4732,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TlsRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTlsRoutesAsync(new ListTlsRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTlsRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TlsRoute in a given project and location.
@@ -4568,13 +4766,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TlsRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTlsRoutes(new ListTlsRoutesRequest
+        public virtual gax::PagedEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTlsRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TlsRoute in a given project and location.
@@ -4593,13 +4800,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TlsRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTlsRoutesAsync(new ListTlsRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTlsRoutesResponse, TlsRoute> ListTlsRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTlsRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single TlsRoute.
@@ -5180,13 +5396,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceBindings(new ListServiceBindingsRequest
+        public virtual gax::PagedEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceBindingsRequest request = new ListServiceBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ServiceBinding in a given project and location.
@@ -5205,13 +5430,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceBindingsAsync(new ListServiceBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceBindingsRequest request = new ListServiceBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ServiceBinding in a given project and location.
@@ -5230,13 +5464,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceBindings(new ListServiceBindingsRequest
+        public virtual gax::PagedEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceBindingsRequest request = new ListServiceBindingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ServiceBinding in a given project and location.
@@ -5255,13 +5498,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceBindingsAsync(new ListServiceBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceBindingsResponse, ServiceBinding> ListServiceBindingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceBindingsRequest request = new ListServiceBindingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ServiceBinding.
@@ -5729,13 +5981,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Mesh"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMeshesResponse, Mesh> ListMeshes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeshes(new ListMeshesRequest
+        public virtual gax::PagedEnumerable<ListMeshesResponse, Mesh> ListMeshes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeshesRequest request = new ListMeshesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeshes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Meshes in a given project and location.
@@ -5754,13 +6015,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Mesh"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMeshesResponse, Mesh> ListMeshesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeshesAsync(new ListMeshesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMeshesResponse, Mesh> ListMeshesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeshesRequest request = new ListMeshesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeshesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Meshes in a given project and location.
@@ -5779,13 +6049,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Mesh"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMeshesResponse, Mesh> ListMeshes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeshes(new ListMeshesRequest
+        public virtual gax::PagedEnumerable<ListMeshesResponse, Mesh> ListMeshes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeshesRequest request = new ListMeshesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeshes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Meshes in a given project and location.
@@ -5804,13 +6083,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Mesh"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMeshesResponse, Mesh> ListMeshesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeshesAsync(new ListMeshesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMeshesResponse, Mesh> ListMeshesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeshesRequest request = new ListMeshesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeshesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Mesh.

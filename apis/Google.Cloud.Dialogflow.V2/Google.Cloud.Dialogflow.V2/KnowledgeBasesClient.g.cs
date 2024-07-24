@@ -336,13 +336,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KnowledgeBase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKnowledgeBases(new ListKnowledgeBasesRequest
+        public virtual gax::PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKnowledgeBases(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all knowledge bases of the specified agent.
@@ -361,13 +370,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KnowledgeBase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKnowledgeBasesAsync(new ListKnowledgeBasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKnowledgeBasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all knowledge bases of the specified agent.
@@ -386,13 +404,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KnowledgeBase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBases(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKnowledgeBases(new ListKnowledgeBasesRequest
+        public virtual gax::PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBases(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKnowledgeBases(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all knowledge bases of the specified agent.
@@ -411,13 +438,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KnowledgeBase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBasesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKnowledgeBasesAsync(new ListKnowledgeBasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBasesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKnowledgeBasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all knowledge bases of the specified agent.
@@ -436,13 +472,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KnowledgeBase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBases(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKnowledgeBases(new ListKnowledgeBasesRequest
+        public virtual gax::PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBases(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKnowledgeBases(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all knowledge bases of the specified agent.
@@ -461,13 +506,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KnowledgeBase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBasesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKnowledgeBasesAsync(new ListKnowledgeBasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> ListKnowledgeBasesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKnowledgeBasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified knowledge base.

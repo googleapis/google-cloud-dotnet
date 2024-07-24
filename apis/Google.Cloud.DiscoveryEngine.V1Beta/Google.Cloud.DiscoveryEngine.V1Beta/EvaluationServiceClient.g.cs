@@ -501,13 +501,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluations(new ListEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -532,13 +541,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationsAsync(new ListEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -563,13 +581,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluations(new ListEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -594,13 +621,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationsAsync(new ListEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a [Evaluation][google.cloud.discoveryengine.v1beta.Evaluation].
@@ -843,13 +879,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>
         /// A pageable sequence of <see cref="ListEvaluationResultsResponse.Types.EvaluationResult"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResults(string evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationResults(new ListEvaluationResultsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResults(string evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationResultsRequest request = new ListEvaluationResultsRequest
             {
                 Evaluation = gax::GaxPreconditions.CheckNotNullOrEmpty(evaluation, nameof(evaluation)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationResults(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of results for a given a
@@ -876,13 +921,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// A pageable asynchronous sequence of <see cref="ListEvaluationResultsResponse.Types.EvaluationResult"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResultsAsync(string evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationResultsAsync(new ListEvaluationResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResultsAsync(string evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationResultsRequest request = new ListEvaluationResultsRequest
             {
                 Evaluation = gax::GaxPreconditions.CheckNotNullOrEmpty(evaluation, nameof(evaluation)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of results for a given a
@@ -908,13 +962,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>
         /// A pageable sequence of <see cref="ListEvaluationResultsResponse.Types.EvaluationResult"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResults(EvaluationName evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationResults(new ListEvaluationResultsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResults(EvaluationName evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationResultsRequest request = new ListEvaluationResultsRequest
             {
                 EvaluationAsEvaluationName = gax::GaxPreconditions.CheckNotNull(evaluation, nameof(evaluation)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationResults(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of results for a given a
@@ -941,13 +1004,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// A pageable asynchronous sequence of <see cref="ListEvaluationResultsResponse.Types.EvaluationResult"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResultsAsync(EvaluationName evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationResultsAsync(new ListEvaluationResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationResultsResponse, ListEvaluationResultsResponse.Types.EvaluationResult> ListEvaluationResultsAsync(EvaluationName evaluation, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationResultsRequest request = new ListEvaluationResultsRequest
             {
                 EvaluationAsEvaluationName = gax::GaxPreconditions.CheckNotNull(evaluation, nameof(evaluation)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationResultsAsync(request, callSettings);
+        }
     }
 
     /// <summary>EvaluationService client wrapper implementation, for convenient use.</summary>

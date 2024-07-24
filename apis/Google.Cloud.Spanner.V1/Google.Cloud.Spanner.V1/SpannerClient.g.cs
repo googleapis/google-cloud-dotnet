@@ -1130,13 +1130,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessions(new ListSessionsRequest
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sessions in a given database.
@@ -1154,13 +1163,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionsAsync(new ListSessionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sessions in a given database.
@@ -1178,13 +1196,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessions(new ListSessionsRequest
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sessions in a given database.
@@ -1202,13 +1229,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionsAsync(new ListSessionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Ends a session, releasing server resources associated with it. This will

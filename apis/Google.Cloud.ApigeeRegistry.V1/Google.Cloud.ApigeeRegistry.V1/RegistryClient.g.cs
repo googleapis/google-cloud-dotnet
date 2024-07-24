@@ -1034,13 +1034,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApis(new ListApisRequest
+        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApis(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching APIs.
@@ -1059,13 +1068,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApisAsync(new ListApisRequest
+        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApisAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching APIs.
@@ -1084,13 +1102,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApis(new ListApisRequest
+        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApis(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching APIs.
@@ -1109,13 +1136,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApisAsync(new ListApisRequest
+        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApisAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a specified API.
@@ -1669,13 +1705,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiVersions(new ListApiVersionsRequest
+        public virtual gax::PagedEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiVersionsRequest request = new ListApiVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching versions.
@@ -1694,13 +1739,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiVersionsAsync(new ListApiVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiVersionsRequest request = new ListApiVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching versions.
@@ -1719,13 +1773,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersions(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiVersions(new ListApiVersionsRequest
+        public virtual gax::PagedEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersions(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiVersionsRequest request = new ListApiVersionsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching versions.
@@ -1744,13 +1807,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersionsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiVersionsAsync(new ListApiVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> ListApiVersionsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiVersionsRequest request = new ListApiVersionsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a specified version.
@@ -2304,13 +2376,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiSpec"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiSpecs(new ListApiSpecsRequest
+        public virtual gax::PagedEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiSpecsRequest request = new ListApiSpecsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiSpecs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching specs.
@@ -2329,13 +2410,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiSpec"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiSpecsAsync(new ListApiSpecsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiSpecsRequest request = new ListApiSpecsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiSpecsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching specs.
@@ -2354,13 +2444,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiSpec"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecs(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiSpecs(new ListApiSpecsRequest
+        public virtual gax::PagedEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecs(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiSpecsRequest request = new ListApiSpecsRequest
             {
                 ParentAsApiVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiSpecs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching specs.
@@ -2379,13 +2478,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiSpec"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecsAsync(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiSpecsAsync(new ListApiSpecsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> ListApiSpecsAsync(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiSpecsRequest request = new ListApiSpecsRequest
             {
                 ParentAsApiVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiSpecsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a specified spec.
@@ -3283,13 +3391,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiDeployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiDeployments(new ListApiDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiDeploymentsRequest request = new ListApiDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching deployments.
@@ -3308,13 +3425,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiDeployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiDeploymentsAsync(new ListApiDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiDeploymentsRequest request = new ListApiDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching deployments.
@@ -3333,13 +3459,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiDeployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeployments(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiDeployments(new ListApiDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeployments(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiDeploymentsRequest request = new ListApiDeploymentsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching deployments.
@@ -3358,13 +3493,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiDeployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeploymentsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiDeploymentsAsync(new ListApiDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> ListApiDeploymentsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiDeploymentsRequest request = new ListApiDeploymentsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a specified deployment.
@@ -4127,13 +4271,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4152,13 +4305,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4177,13 +4339,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4202,13 +4373,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4227,13 +4407,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4252,13 +4441,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4277,13 +4475,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4302,13 +4509,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4327,13 +4543,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiSpecName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiSpecName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiSpecName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4352,13 +4577,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiSpecName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiSpecName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiSpecName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4377,13 +4611,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiDeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifacts(new ListArtifactsRequest
+        public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(ApiDeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiDeploymentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns matching artifacts.
@@ -4402,13 +4645,22 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Artifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiDeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListArtifactsAsync(new ListArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(ApiDeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListArtifactsRequest request = new ListArtifactsRequest
             {
                 ParentAsApiDeploymentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a specified artifact.

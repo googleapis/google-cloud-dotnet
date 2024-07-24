@@ -636,13 +636,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PatchJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobs(new ListPatchJobsRequest
+        public virtual gax::PagedEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobsRequest request = new ListPatchJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of patch jobs.
@@ -660,13 +669,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PatchJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobsAsync(new ListPatchJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobsRequest request = new ListPatchJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of patch jobs.
@@ -684,13 +702,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PatchJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobs(new ListPatchJobsRequest
+        public virtual gax::PagedEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobsRequest request = new ListPatchJobsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of patch jobs.
@@ -708,13 +735,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PatchJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobsAsync(new ListPatchJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPatchJobsResponse, PatchJob> ListPatchJobsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobsRequest request = new ListPatchJobsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of instance details for a given patch job.
@@ -751,13 +787,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PatchJobInstanceDetails"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobInstanceDetails(new ListPatchJobInstanceDetailsRequest
+        public virtual gax::PagedEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobInstanceDetailsRequest request = new ListPatchJobInstanceDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobInstanceDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of instance details for a given patch job.
@@ -776,13 +821,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PatchJobInstanceDetails"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobInstanceDetailsAsync(new ListPatchJobInstanceDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobInstanceDetailsRequest request = new ListPatchJobInstanceDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobInstanceDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of instance details for a given patch job.
@@ -801,13 +855,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PatchJobInstanceDetails"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetails(PatchJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobInstanceDetails(new ListPatchJobInstanceDetailsRequest
+        public virtual gax::PagedEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetails(PatchJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobInstanceDetailsRequest request = new ListPatchJobInstanceDetailsRequest
             {
                 ParentAsPatchJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobInstanceDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Get a list of instance details for a given patch job.
@@ -826,13 +889,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PatchJobInstanceDetails"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetailsAsync(PatchJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchJobInstanceDetailsAsync(new ListPatchJobInstanceDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPatchJobInstanceDetailsResponse, PatchJobInstanceDetails> ListPatchJobInstanceDetailsAsync(PatchJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchJobInstanceDetailsRequest request = new ListPatchJobInstanceDetailsRequest
             {
                 ParentAsPatchJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchJobInstanceDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create an OS Config patch deployment.
@@ -1170,13 +1242,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PatchDeployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchDeployments(new ListPatchDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchDeploymentsRequest request = new ListPatchDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Get a page of OS Config patch deployments.
@@ -1194,13 +1275,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PatchDeployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchDeploymentsAsync(new ListPatchDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchDeploymentsRequest request = new ListPatchDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get a page of OS Config patch deployments.
@@ -1218,13 +1308,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PatchDeployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeployments(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchDeployments(new ListPatchDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeployments(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchDeploymentsRequest request = new ListPatchDeploymentsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Get a page of OS Config patch deployments.
@@ -1242,13 +1341,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PatchDeployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeploymentsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPatchDeploymentsAsync(new ListPatchDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPatchDeploymentsResponse, PatchDeployment> ListPatchDeploymentsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPatchDeploymentsRequest request = new ListPatchDeploymentsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPatchDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Delete an OS Config patch deployment.

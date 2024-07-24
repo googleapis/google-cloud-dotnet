@@ -816,13 +816,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotebookRuntimeTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimeTemplates(new ListNotebookRuntimeTemplatesRequest
+        public virtual gax::PagedEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimeTemplatesRequest request = new ListNotebookRuntimeTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimeTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NotebookRuntimeTemplates in a Location.
@@ -842,13 +851,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotebookRuntimeTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimeTemplatesAsync(new ListNotebookRuntimeTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimeTemplatesRequest request = new ListNotebookRuntimeTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimeTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NotebookRuntimeTemplates in a Location.
@@ -868,13 +886,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotebookRuntimeTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimeTemplates(new ListNotebookRuntimeTemplatesRequest
+        public virtual gax::PagedEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimeTemplatesRequest request = new ListNotebookRuntimeTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimeTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NotebookRuntimeTemplates in a Location.
@@ -894,13 +921,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotebookRuntimeTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimeTemplatesAsync(new ListNotebookRuntimeTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimeTemplatesResponse, NotebookRuntimeTemplate> ListNotebookRuntimeTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimeTemplatesRequest request = new ListNotebookRuntimeTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimeTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a NotebookRuntimeTemplate.
@@ -1522,13 +1558,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotebookRuntime"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimes(new ListNotebookRuntimesRequest
+        public virtual gax::PagedEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimesRequest request = new ListNotebookRuntimesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NotebookRuntimes in a Location.
@@ -1548,13 +1593,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotebookRuntime"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimesAsync(new ListNotebookRuntimesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimesRequest request = new ListNotebookRuntimesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NotebookRuntimes in a Location.
@@ -1574,13 +1628,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotebookRuntime"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimes(new ListNotebookRuntimesRequest
+        public virtual gax::PagedEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimesRequest request = new ListNotebookRuntimesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NotebookRuntimes in a Location.
@@ -1600,13 +1663,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotebookRuntime"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotebookRuntimesAsync(new ListNotebookRuntimesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotebookRuntimesResponse, NotebookRuntime> ListNotebookRuntimesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookRuntimesRequest request = new ListNotebookRuntimesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookRuntimesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a NotebookRuntime.

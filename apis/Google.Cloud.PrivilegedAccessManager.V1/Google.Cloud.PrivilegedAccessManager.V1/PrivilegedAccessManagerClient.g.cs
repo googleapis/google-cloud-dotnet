@@ -562,13 +562,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlements(new ListEntitlementsRequest
+        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlements(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -586,13 +595,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementsAsync(new ListEntitlementsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -610,13 +628,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlements(new ListEntitlementsRequest
+        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlements(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -634,13 +661,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementsAsync(new ListEntitlementsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -658,13 +694,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlements(new ListEntitlementsRequest
+        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlements(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -682,13 +727,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementsAsync(new ListEntitlementsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -706,13 +760,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlements(new ListEntitlementsRequest
+        public virtual gax::PagedEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlements(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlements(request, callSettings);
+        }
 
         /// <summary>
         /// Lists entitlements in a given project/folder/organization and location.
@@ -730,13 +793,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entitlement"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitlementsAsync(new ListEntitlementsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> ListEntitlementsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitlementsRequest request = new ListEntitlementsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitlementsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// `SearchEntitlements` returns entitlements on which the caller has the
@@ -1746,13 +1818,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Grant"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGrantsResponse, Grant> ListGrants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrants(new ListGrantsRequest
+        public virtual gax::PagedEnumerable<ListGrantsResponse, Grant> ListGrants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrantsRequest request = new ListGrantsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrants(request, callSettings);
+        }
 
         /// <summary>
         /// Lists grants for a given entitlement.
@@ -1770,13 +1851,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Grant"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGrantsResponse, Grant> ListGrantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrantsAsync(new ListGrantsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGrantsResponse, Grant> ListGrantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrantsRequest request = new ListGrantsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrantsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists grants for a given entitlement.
@@ -1794,13 +1884,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Grant"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGrantsResponse, Grant> ListGrants(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrants(new ListGrantsRequest
+        public virtual gax::PagedEnumerable<ListGrantsResponse, Grant> ListGrants(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrantsRequest request = new ListGrantsRequest
             {
                 ParentAsEntitlementName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrants(request, callSettings);
+        }
 
         /// <summary>
         /// Lists grants for a given entitlement.
@@ -1818,13 +1917,22 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Grant"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGrantsResponse, Grant> ListGrantsAsync(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGrantsAsync(new ListGrantsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGrantsResponse, Grant> ListGrantsAsync(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGrantsRequest request = new ListGrantsRequest
             {
                 ParentAsEntitlementName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGrantsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// `SearchGrants` returns grants that are related to the calling user in the

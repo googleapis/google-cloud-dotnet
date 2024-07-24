@@ -698,13 +698,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContacts(new ListContactsRequest
+        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -724,13 +733,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContactsAsync(new ListContactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -750,13 +768,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContacts(new ListContactsRequest
+        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -776,13 +803,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContactsAsync(new ListContactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -802,13 +838,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContacts(new ListContactsRequest
+        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -828,13 +873,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContactsAsync(new ListContactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -854,13 +908,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContacts(new ListContactsRequest
+        public virtual gax::PagedEnumerable<ListContactsResponse, Contact> ListContacts(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the contacts that have been set on a resource.
@@ -880,13 +943,22 @@ namespace Google.Cloud.EssentialContacts.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Contact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContactsAsync(new ListContactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContactsResponse, Contact> ListContactsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContactsRequest request = new ListContactsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single contact.

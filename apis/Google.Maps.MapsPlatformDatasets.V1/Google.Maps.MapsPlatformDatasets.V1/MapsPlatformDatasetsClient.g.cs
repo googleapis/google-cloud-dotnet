@@ -702,13 +702,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="gr::Status"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchDatasetErrors(new FetchDatasetErrorsRequest
+        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDatasetErrorsRequest request = new FetchDatasetErrorsRequest
             {
                 Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDatasetErrors(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all the errors of a dataset.
@@ -727,13 +736,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="gr::Status"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchDatasetErrorsAsync(new FetchDatasetErrorsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDatasetErrorsRequest request = new FetchDatasetErrorsRequest
             {
                 Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDatasetErrorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all the errors of a dataset.
@@ -752,13 +770,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="gr::Status"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchDatasetErrors(new FetchDatasetErrorsRequest
+        public virtual gax::PagedEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrors(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDatasetErrorsRequest request = new FetchDatasetErrorsRequest
             {
                 DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDatasetErrors(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all the errors of a dataset.
@@ -777,13 +804,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="gr::Status"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchDatasetErrorsAsync(new FetchDatasetErrorsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchDatasetErrorsResponse, gr::Status> FetchDatasetErrorsAsync(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDatasetErrorsRequest request = new FetchDatasetErrorsRequest
             {
                 DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDatasetErrorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the datasets for the specified project.
@@ -820,13 +856,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Dataset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatasetsResponse, Dataset> ListDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatasets(new ListDatasetsRequest
+        public virtual gax::PagedEnumerable<ListDatasetsResponse, Dataset> ListDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetsRequest request = new ListDatasetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the datasets for the specified project.
@@ -845,13 +890,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Dataset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatasetsAsync(new ListDatasetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetsRequest request = new ListDatasetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the datasets for the specified project.
@@ -870,13 +924,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Dataset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatasetsResponse, Dataset> ListDatasets(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatasets(new ListDatasetsRequest
+        public virtual gax::PagedEnumerable<ListDatasetsResponse, Dataset> ListDatasets(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetsRequest request = new ListDatasetsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the datasets for the specified project.
@@ -895,13 +958,22 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Dataset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatasetsAsync(new ListDatasetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetsRequest request = new ListDatasetsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified dataset.

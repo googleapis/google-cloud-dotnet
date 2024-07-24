@@ -381,13 +381,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnections(new ListEkmConnectionsRequest
+        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -407,13 +416,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnectionsAsync(new ListEkmConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -433,13 +451,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnections(new ListEkmConnectionsRequest
+        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -459,13 +486,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnectionsAsync(new ListEkmConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns metadata for a given

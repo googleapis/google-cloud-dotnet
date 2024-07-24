@@ -2540,13 +2540,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Glossary"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGlossariesResponse, Glossary> ListGlossaries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGlossaries(new ListGlossariesRequest
+        public virtual gax::PagedEnumerable<ListGlossariesResponse, Glossary> ListGlossaries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGlossariesRequest request = new ListGlossariesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGlossaries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
@@ -2565,13 +2574,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Glossary"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGlossariesResponse, Glossary> ListGlossariesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGlossariesAsync(new ListGlossariesRequest
+        public virtual gax::PagedAsyncEnumerable<ListGlossariesResponse, Glossary> ListGlossariesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGlossariesRequest request = new ListGlossariesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGlossariesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
@@ -2590,13 +2608,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Glossary"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGlossariesResponse, Glossary> ListGlossaries(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGlossaries(new ListGlossariesRequest
+        public virtual gax::PagedEnumerable<ListGlossariesResponse, Glossary> ListGlossaries(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGlossariesRequest request = new ListGlossariesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGlossaries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
@@ -2615,13 +2642,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Glossary"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGlossariesResponse, Glossary> ListGlossariesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGlossariesAsync(new ListGlossariesRequest
+        public virtual gax::PagedAsyncEnumerable<ListGlossariesResponse, Glossary> ListGlossariesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGlossariesRequest request = new ListGlossariesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGlossariesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
@@ -3285,13 +3321,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtDatasets(new ListAdaptiveMtDatasetsRequest
+        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtDatasetsRequest request = new ListAdaptiveMtDatasetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtDatasets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Adaptive MT datasets for which the caller has read permission.
@@ -3310,13 +3355,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtDatasetsAsync(new ListAdaptiveMtDatasetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtDatasetsRequest request = new ListAdaptiveMtDatasetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtDatasetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Adaptive MT datasets for which the caller has read permission.
@@ -3335,13 +3389,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtDatasets(new ListAdaptiveMtDatasetsRequest
+        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtDatasetsRequest request = new ListAdaptiveMtDatasetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtDatasets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Adaptive MT datasets for which the caller has read permission.
@@ -3360,13 +3423,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtDatasetsAsync(new ListAdaptiveMtDatasetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtDatasetsRequest request = new ListAdaptiveMtDatasetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtDatasetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Translate text using Adaptive MT.
@@ -3903,13 +3975,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtFiles(new ListAdaptiveMtFilesRequest
+        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtFilesRequest request = new ListAdaptiveMtFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtFiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
@@ -3929,13 +4010,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtFilesAsync(new ListAdaptiveMtFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtFilesRequest request = new ListAdaptiveMtFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
@@ -3955,13 +4045,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(AdaptiveMtDatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtFiles(new ListAdaptiveMtFilesRequest
+        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(AdaptiveMtDatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtFilesRequest request = new ListAdaptiveMtFilesRequest
             {
                 ParentAsAdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtFiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
@@ -3981,13 +4080,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(AdaptiveMtDatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtFilesAsync(new ListAdaptiveMtFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(AdaptiveMtDatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtFilesRequest request = new ListAdaptiveMtFilesRequest
             {
                 ParentAsAdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtSentences under a given file/dataset.
@@ -4027,13 +4135,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtSentences(new ListAdaptiveMtSentencesRequest
+        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtSentencesRequest request = new ListAdaptiveMtSentencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtSentences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtSentences under a given file/dataset.
@@ -4055,13 +4172,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtSentencesAsync(new ListAdaptiveMtSentencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtSentencesRequest request = new ListAdaptiveMtSentencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtSentencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtSentences under a given file/dataset.
@@ -4083,13 +4209,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(AdaptiveMtFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtSentences(new ListAdaptiveMtSentencesRequest
+        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(AdaptiveMtFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtSentencesRequest request = new ListAdaptiveMtSentencesRequest
             {
                 ParentAsAdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtSentences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all AdaptiveMtSentences under a given file/dataset.
@@ -4111,13 +4246,22 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(AdaptiveMtFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdaptiveMtSentencesAsync(new ListAdaptiveMtSentencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(AdaptiveMtFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdaptiveMtSentencesRequest request = new ListAdaptiveMtSentencesRequest
             {
                 ParentAsAdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdaptiveMtSentencesAsync(request, callSettings);
+        }
     }
 
     /// <summary>TranslationService client wrapper implementation, for convenient use.</summary>

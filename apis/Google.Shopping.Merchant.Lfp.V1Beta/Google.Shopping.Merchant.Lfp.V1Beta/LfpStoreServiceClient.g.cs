@@ -670,13 +670,22 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LfpStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLfpStores(new ListLfpStoresRequest
+        public virtual gax::PagedEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLfpStoresRequest request = new ListLfpStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLfpStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the stores of the target merchant, specified by the filter in
@@ -696,13 +705,22 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LfpStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLfpStoresAsync(new ListLfpStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLfpStoresRequest request = new ListLfpStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLfpStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the stores of the target merchant, specified by the filter in
@@ -722,13 +740,22 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LfpStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStores(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLfpStores(new ListLfpStoresRequest
+        public virtual gax::PagedEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStores(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLfpStoresRequest request = new ListLfpStoresRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLfpStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the stores of the target merchant, specified by the filter in
@@ -748,13 +775,22 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LfpStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStoresAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLfpStoresAsync(new ListLfpStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListLfpStoresResponse, LfpStore> ListLfpStoresAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLfpStoresRequest request = new ListLfpStoresRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLfpStoresAsync(request, callSettings);
+        }
     }
 
     /// <summary>LfpStoreService client wrapper implementation, for convenient use.</summary>

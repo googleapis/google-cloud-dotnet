@@ -1615,13 +1615,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoragePool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoragePools(new ListStoragePoolsRequest
+        public virtual gax::PagedEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoragePoolsRequest request = new ListStoragePoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoragePools(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -1639,13 +1648,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoragePool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoragePoolsAsync(new ListStoragePoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoragePoolsRequest request = new ListStoragePoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoragePoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -1663,13 +1681,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoragePool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoragePools(new ListStoragePoolsRequest
+        public virtual gax::PagedEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoragePoolsRequest request = new ListStoragePoolsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoragePools(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -1687,13 +1714,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoragePool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoragePoolsAsync(new ListStoragePoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoragePoolsResponse, StoragePool> ListStoragePoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoragePoolsRequest request = new ListStoragePoolsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoragePoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new storage pool.
@@ -2270,13 +2306,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumes(new ListVolumesRequest
+        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Volumes in a given project.
@@ -2294,13 +2339,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumesAsync(new ListVolumesRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Volumes in a given project.
@@ -2318,13 +2372,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumes(new ListVolumesRequest
+        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Volumes in a given project.
@@ -2342,13 +2405,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumesAsync(new ListVolumesRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Volume.
@@ -2983,13 +3055,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all snapshots for a volume.
@@ -3009,13 +3090,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all snapshots for a volume.
@@ -3035,13 +3125,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all snapshots for a volume.
@@ -3061,13 +3160,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Describe a snapshot for a volume.
@@ -3650,13 +3758,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ActiveDirectory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListActiveDirectories(new ListActiveDirectoriesRequest
+        public virtual gax::PagedEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListActiveDirectoriesRequest request = new ListActiveDirectoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListActiveDirectories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists active directories.
@@ -3674,13 +3791,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ActiveDirectory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListActiveDirectoriesAsync(new ListActiveDirectoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListActiveDirectoriesRequest request = new ListActiveDirectoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListActiveDirectoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists active directories.
@@ -3698,13 +3824,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ActiveDirectory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListActiveDirectories(new ListActiveDirectoriesRequest
+        public virtual gax::PagedEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListActiveDirectoriesRequest request = new ListActiveDirectoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListActiveDirectories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists active directories.
@@ -3722,13 +3857,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ActiveDirectory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListActiveDirectoriesAsync(new ListActiveDirectoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListActiveDirectoriesResponse, ActiveDirectory> ListActiveDirectoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListActiveDirectoriesRequest request = new ListActiveDirectoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListActiveDirectoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Describes a specified active directory.
@@ -4302,13 +4446,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KmsConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKmsConfigs(new ListKmsConfigsRequest
+        public virtual gax::PagedEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKmsConfigsRequest request = new ListKmsConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKmsConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all KMS configs owned by the caller.
@@ -4326,13 +4479,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KmsConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKmsConfigsAsync(new ListKmsConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKmsConfigsRequest request = new ListKmsConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKmsConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all KMS configs owned by the caller.
@@ -4350,13 +4512,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KmsConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKmsConfigs(new ListKmsConfigsRequest
+        public virtual gax::PagedEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKmsConfigsRequest request = new ListKmsConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKmsConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all KMS configs owned by the caller.
@@ -4374,13 +4545,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KmsConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKmsConfigsAsync(new ListKmsConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListKmsConfigsResponse, KmsConfig> ListKmsConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKmsConfigsRequest request = new ListKmsConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKmsConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new KMS config.
@@ -5039,13 +5219,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Replication"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReplicationsResponse, Replication> ListReplications(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplications(new ListReplicationsRequest
+        public virtual gax::PagedEnumerable<ListReplicationsResponse, Replication> ListReplications(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplicationsRequest request = new ListReplicationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplications(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all replications for a volume.
@@ -5065,13 +5254,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Replication"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReplicationsResponse, Replication> ListReplicationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplicationsAsync(new ListReplicationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReplicationsResponse, Replication> ListReplicationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplicationsRequest request = new ListReplicationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplicationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all replications for a volume.
@@ -5091,13 +5289,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Replication"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReplicationsResponse, Replication> ListReplications(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplications(new ListReplicationsRequest
+        public virtual gax::PagedEnumerable<ListReplicationsResponse, Replication> ListReplications(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplicationsRequest request = new ListReplicationsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplications(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all replications for a volume.
@@ -5117,13 +5324,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Replication"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReplicationsResponse, Replication> ListReplicationsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReplicationsAsync(new ListReplicationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReplicationsResponse, Replication> ListReplicationsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReplicationsRequest request = new ListReplicationsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReplicationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Describe a replication for a volume.
@@ -6204,13 +6420,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupVault"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupVaults(new ListBackupVaultsRequest
+        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupVaults(request, callSettings);
+        }
 
         /// <summary>
         /// Returns list of all available backup vaults.
@@ -6230,13 +6455,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupVault"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupVaultsAsync(new ListBackupVaultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupVaultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns list of all available backup vaults.
@@ -6256,13 +6490,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupVault"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupVaults(new ListBackupVaultsRequest
+        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupVaults(request, callSettings);
+        }
 
         /// <summary>
         /// Returns list of all available backup vaults.
@@ -6282,13 +6525,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupVault"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupVaultsAsync(new ListBackupVaultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupVaultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the settings of a specific backup vault.
@@ -6935,13 +7187,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all backups for a backupVault.
@@ -6967,13 +7228,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all backups for a backupVault.
@@ -6999,13 +7269,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupVaultName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupVaultName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsBackupVaultName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns descriptions of all backups for a backupVault.
@@ -7031,13 +7310,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupVaultName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupVaultName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsBackupVaultName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Warning! This operation will permanently delete the backup.
@@ -7636,13 +7924,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPolicies(new ListBackupPoliciesRequest
+        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPoliciesRequest request = new ListBackupPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Returns list of all available backup policies.
@@ -7660,13 +7957,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPoliciesAsync(new ListBackupPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPoliciesRequest request = new ListBackupPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns list of all available backup policies.
@@ -7684,13 +7990,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPolicies(new ListBackupPoliciesRequest
+        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPoliciesRequest request = new ListBackupPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Returns list of all available backup policies.
@@ -7708,13 +8023,22 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPoliciesAsync(new ListBackupPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPoliciesRequest request = new ListBackupPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates settings of a specific backup policy.

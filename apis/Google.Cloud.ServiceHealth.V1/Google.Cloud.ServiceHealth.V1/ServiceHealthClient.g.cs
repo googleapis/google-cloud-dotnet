@@ -359,13 +359,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvents(new ListEventsRequest
+        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists events under a given project and location.
@@ -390,13 +399,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventsAsync(new ListEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists events under a given project and location.
@@ -421,13 +439,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvents(new ListEventsRequest
+        public virtual gax::PagedEnumerable<ListEventsResponse, Event> ListEvents(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists events under a given project and location.
@@ -452,13 +479,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Event"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventsAsync(new ListEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, Event> ListEventsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a resource containing information about an event.
@@ -644,13 +680,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OrganizationEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationEvents(new ListOrganizationEventsRequest
+        public virtual gax::PagedEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationEventsRequest request = new ListOrganizationEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists organization events under a given organization and location.
@@ -677,13 +722,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OrganizationEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationEventsAsync(new ListOrganizationEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationEventsRequest request = new ListOrganizationEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists organization events under a given organization and location.
@@ -710,13 +764,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OrganizationEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEvents(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationEvents(new ListOrganizationEventsRequest
+        public virtual gax::PagedEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEvents(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationEventsRequest request = new ListOrganizationEventsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists organization events under a given organization and location.
@@ -743,13 +806,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OrganizationEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEventsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationEventsAsync(new ListOrganizationEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrganizationEventsResponse, OrganizationEvent> ListOrganizationEventsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationEventsRequest request = new ListOrganizationEventsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a resource containing information about an event affecting an
@@ -956,13 +1028,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OrganizationImpact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationImpacts(new ListOrganizationImpactsRequest
+        public virtual gax::PagedEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationImpactsRequest request = new ListOrganizationImpactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationImpacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets impacted by organization events under a given organization and
@@ -987,13 +1068,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OrganizationImpact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationImpactsAsync(new ListOrganizationImpactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationImpactsRequest request = new ListOrganizationImpactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationImpactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets impacted by organization events under a given organization and
@@ -1018,13 +1108,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OrganizationImpact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpacts(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationImpacts(new ListOrganizationImpactsRequest
+        public virtual gax::PagedEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpacts(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationImpactsRequest request = new ListOrganizationImpactsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationImpacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets impacted by organization events under a given organization and
@@ -1049,13 +1148,22 @@ namespace Google.Cloud.ServiceHealth.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OrganizationImpact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpactsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrganizationImpactsAsync(new ListOrganizationImpactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrganizationImpactsResponse, OrganizationImpact> ListOrganizationImpactsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrganizationImpactsRequest request = new ListOrganizationImpactsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrganizationImpactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a resource containing information about impact to an asset under

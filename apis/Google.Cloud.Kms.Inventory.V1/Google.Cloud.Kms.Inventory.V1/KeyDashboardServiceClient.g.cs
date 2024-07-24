@@ -250,13 +250,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeys(new ListCryptoKeysRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Returns cryptographic keys managed by Cloud KMS in a given Cloud project.
@@ -277,13 +286,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeysAsync(new ListCryptoKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns cryptographic keys managed by Cloud KMS in a given Cloud project.
@@ -304,13 +322,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeys(new ListCryptoKeysRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Returns cryptographic keys managed by Cloud KMS in a given Cloud project.
@@ -331,13 +358,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeysAsync(new ListCryptoKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeysAsync(request, callSettings);
+        }
     }
 
     /// <summary>KeyDashboardService client wrapper implementation, for convenient use.</summary>

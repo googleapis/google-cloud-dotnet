@@ -357,13 +357,22 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ClientGateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientGateways(new ListClientGatewaysRequest
+        public virtual gax::PagedEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientGatewaysRequest request = new ListClientGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ClientGateways in a given project and location.
@@ -381,13 +390,22 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ClientGateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientGatewaysAsync(new ListClientGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientGatewaysRequest request = new ListClientGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ClientGateways in a given project and location.
@@ -405,13 +423,22 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ClientGateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientGateways(new ListClientGatewaysRequest
+        public virtual gax::PagedEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientGatewaysRequest request = new ListClientGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ClientGateways in a given project and location.
@@ -429,13 +456,22 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ClientGateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientGatewaysAsync(new ListClientGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListClientGatewaysResponse, ClientGateway> ListClientGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientGatewaysRequest request = new ListClientGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ClientGateway.

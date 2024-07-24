@@ -291,13 +291,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolations(new ListViolationsRequest
+        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Violations for a workload
@@ -323,13 +332,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolationsAsync(new ListViolationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Violations for a workload
@@ -355,13 +373,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolations(new ListViolationsRequest
+        public virtual gax::PagedEnumerable<ListViolationsResponse, Violation> ListViolations(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 ParentAsWorkloadName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Violations for a workload
@@ -387,13 +414,22 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Violation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViolationsAsync(new ListViolationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViolationsResponse, Violation> ListViolationsAsync(WorkloadName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViolationsRequest request = new ListViolationsRequest
             {
                 ParentAsWorkloadName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViolationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Violation.

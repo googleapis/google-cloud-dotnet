@@ -306,13 +306,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LocalInventory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLocalInventories(new ListLocalInventoriesRequest
+        public virtual gax::PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLocalInventories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `LocalInventory` resources for the given product in your merchant
@@ -337,13 +346,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LocalInventory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLocalInventoriesAsync(new ListLocalInventoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLocalInventoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `LocalInventory` resources for the given product in your merchant
@@ -368,13 +386,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LocalInventory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventories(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLocalInventories(new ListLocalInventoriesRequest
+        public virtual gax::PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventories(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLocalInventories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `LocalInventory` resources for the given product in your merchant
@@ -399,13 +426,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LocalInventory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventoriesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLocalInventoriesAsync(new ListLocalInventoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventoriesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLocalInventoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Inserts a `LocalInventory` resource to a product in your merchant

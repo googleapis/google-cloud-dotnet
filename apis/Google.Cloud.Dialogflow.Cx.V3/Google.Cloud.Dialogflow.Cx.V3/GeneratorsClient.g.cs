@@ -333,13 +333,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Generator"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGeneratorsResponse, Generator> ListGenerators(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGenerators(new ListGeneratorsRequest
+        public virtual gax::PagedEnumerable<ListGeneratorsResponse, Generator> ListGenerators(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGeneratorsRequest request = new ListGeneratorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGenerators(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all generators in the specified agent.
@@ -358,13 +367,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Generator"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGeneratorsResponse, Generator> ListGeneratorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGeneratorsAsync(new ListGeneratorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGeneratorsResponse, Generator> ListGeneratorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGeneratorsRequest request = new ListGeneratorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGeneratorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all generators in the specified agent.
@@ -383,13 +401,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Generator"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGeneratorsResponse, Generator> ListGenerators(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGenerators(new ListGeneratorsRequest
+        public virtual gax::PagedEnumerable<ListGeneratorsResponse, Generator> ListGenerators(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGeneratorsRequest request = new ListGeneratorsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGenerators(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all generators in the specified agent.
@@ -408,13 +435,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Generator"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGeneratorsResponse, Generator> ListGeneratorsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGeneratorsAsync(new ListGeneratorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGeneratorsResponse, Generator> ListGeneratorsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGeneratorsRequest request = new ListGeneratorsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGeneratorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified generator.

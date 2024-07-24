@@ -360,13 +360,22 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PolicyBasedRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyBasedRoutes(new ListPolicyBasedRoutesRequest
+        public virtual gax::PagedEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyBasedRoutesRequest request = new ListPolicyBasedRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyBasedRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PolicyBasedRoutes in a given project and location.
@@ -384,13 +393,22 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PolicyBasedRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyBasedRoutesAsync(new ListPolicyBasedRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyBasedRoutesRequest request = new ListPolicyBasedRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyBasedRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PolicyBasedRoutes in a given project and location.
@@ -408,13 +426,22 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PolicyBasedRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyBasedRoutes(new ListPolicyBasedRoutesRequest
+        public virtual gax::PagedEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyBasedRoutesRequest request = new ListPolicyBasedRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyBasedRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PolicyBasedRoutes in a given project and location.
@@ -432,13 +459,22 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PolicyBasedRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyBasedRoutesAsync(new ListPolicyBasedRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPolicyBasedRoutesResponse, PolicyBasedRoute> ListPolicyBasedRoutesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyBasedRoutesRequest request = new ListPolicyBasedRoutesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyBasedRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single PolicyBasedRoute.

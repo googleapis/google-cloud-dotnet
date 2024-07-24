@@ -744,13 +744,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemas(new ListSchemasRequest
+        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists schemas in a project.
@@ -769,13 +778,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemasAsync(new ListSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists schemas in a project.
@@ -794,13 +812,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemas(new ListSchemasRequest
+        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists schemas in a project.
@@ -819,13 +846,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemasAsync(new ListSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -861,13 +897,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisions(new ListSchemaRevisionsRequest
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -885,13 +930,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisionsAsync(new ListSchemaRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -909,13 +963,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisions(new ListSchemaRevisionsRequest
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -933,13 +996,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisionsAsync(new ListSchemaRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Commits a new schema revision to an existing schema.

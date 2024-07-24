@@ -588,12 +588,19 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BillingAccount"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccounts(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBillingAccounts(new ListBillingAccountsRequest
+        public virtual gax::PagedEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccounts(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBillingAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the billing accounts that the current authenticated user has
@@ -610,12 +617,19 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BillingAccount"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccountsAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBillingAccountsAsync(new ListBillingAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccountsAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBillingAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the billing accounts that the current authenticated user has
@@ -640,13 +654,19 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BillingAccount"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccounts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBillingAccounts(new ListBillingAccountsRequest
+        public virtual gax::PagedEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccounts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBillingAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the billing accounts that the current authenticated user has
@@ -671,13 +691,19 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BillingAccount"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccountsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBillingAccountsAsync(new ListBillingAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccountsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBillingAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a billing account's fields.
@@ -1171,13 +1197,22 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProjectBillingInfo"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfo(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectBillingInfo(new ListProjectBillingInfoRequest
+        public virtual gax::PagedEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfo(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectBillingInfoRequest request = new ListProjectBillingInfoRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectBillingInfo(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the projects associated with a billing account. The current
@@ -1200,13 +1235,22 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProjectBillingInfo"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfoAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectBillingInfoAsync(new ListProjectBillingInfoRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfoAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectBillingInfoRequest request = new ListProjectBillingInfoRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectBillingInfoAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the projects associated with a billing account. The current
@@ -1229,13 +1273,22 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProjectBillingInfo"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfo(gagr::BillingAccountName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectBillingInfo(new ListProjectBillingInfoRequest
+        public virtual gax::PagedEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfo(gagr::BillingAccountName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectBillingInfoRequest request = new ListProjectBillingInfoRequest
             {
                 BillingAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectBillingInfo(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the projects associated with a billing account. The current
@@ -1258,13 +1311,22 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProjectBillingInfo"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfoAsync(gagr::BillingAccountName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectBillingInfoAsync(new ListProjectBillingInfoRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> ListProjectBillingInfoAsync(gagr::BillingAccountName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectBillingInfoRequest request = new ListProjectBillingInfoRequest
             {
                 BillingAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectBillingInfoAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user

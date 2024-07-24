@@ -397,13 +397,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Program"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProgramsResponse, Program> ListPrograms(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrograms(new ListProgramsRequest
+        public virtual gax::PagedEnumerable<ListProgramsResponse, Program> ListPrograms(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProgramsRequest request = new ListProgramsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrograms(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all programs for the account.
@@ -422,13 +431,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Program"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProgramsResponse, Program> ListProgramsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProgramsAsync(new ListProgramsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProgramsResponse, Program> ListProgramsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProgramsRequest request = new ListProgramsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProgramsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all programs for the account.
@@ -447,13 +465,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Program"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProgramsResponse, Program> ListPrograms(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrograms(new ListProgramsRequest
+        public virtual gax::PagedEnumerable<ListProgramsResponse, Program> ListPrograms(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProgramsRequest request = new ListProgramsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrograms(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all programs for the account.
@@ -472,13 +499,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Program"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProgramsResponse, Program> ListProgramsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProgramsAsync(new ListProgramsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProgramsResponse, Program> ListProgramsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProgramsRequest request = new ListProgramsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProgramsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Enable participation in the specified program for the account. Executing

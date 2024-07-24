@@ -459,13 +459,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Organization"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizations(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchOrganizations(new SearchOrganizationsRequest
+        public virtual gax::PagedEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizations(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchOrganizationsRequest request = new SearchOrganizationsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchOrganizations(request, callSettings);
+        }
 
         /// <summary>
         /// Searches organization resources that are visible to the user and satisfy
@@ -507,13 +513,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Organization"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizationsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchOrganizationsAsync(new SearchOrganizationsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizationsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchOrganizationsRequest request = new SearchOrganizationsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchOrganizationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the access control policy for an organization resource. The policy may

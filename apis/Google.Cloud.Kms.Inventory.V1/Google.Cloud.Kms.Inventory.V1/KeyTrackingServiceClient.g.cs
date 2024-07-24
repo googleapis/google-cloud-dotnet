@@ -413,14 +413,23 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProtectedResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResources(string scope, string cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProtectedResources(new SearchProtectedResourcesRequest
+        public virtual gax::PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResources(string scope, string cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 CryptoKey = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKey, nameof(cryptoKey)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProtectedResources(request, callSettings);
+        }
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
@@ -444,14 +453,23 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProtectedResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResourcesAsync(string scope, string cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProtectedResourcesAsync(new SearchProtectedResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResourcesAsync(string scope, string cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 CryptoKey = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKey, nameof(cryptoKey)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProtectedResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
@@ -475,14 +493,23 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProtectedResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResources(gagr::OrganizationName scope, gax::IResourceName cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProtectedResources(new SearchProtectedResourcesRequest
+        public virtual gax::PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResources(gagr::OrganizationName scope, gax::IResourceName cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
             {
                 ScopeAsOrganizationName = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
                 CryptoKeyAsResourceName = gax::GaxPreconditions.CheckNotNull(cryptoKey, nameof(cryptoKey)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProtectedResources(request, callSettings);
+        }
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
@@ -506,14 +533,23 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProtectedResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResourcesAsync(gagr::OrganizationName scope, gax::IResourceName cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProtectedResourcesAsync(new SearchProtectedResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResourcesAsync(gagr::OrganizationName scope, gax::IResourceName cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
             {
                 ScopeAsOrganizationName = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
                 CryptoKeyAsResourceName = gax::GaxPreconditions.CheckNotNull(cryptoKey, nameof(cryptoKey)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProtectedResourcesAsync(request, callSettings);
+        }
     }
 
     /// <summary>KeyTrackingService client wrapper implementation, for convenient use.</summary>

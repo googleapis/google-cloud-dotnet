@@ -1290,13 +1290,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigrationJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationJobs(new ListMigrationJobsRequest
+        public virtual gax::PagedEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationJobsRequest request = new ListMigrationJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists migration jobs in a given project and location.
@@ -1314,13 +1323,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigrationJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationJobsAsync(new ListMigrationJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationJobsRequest request = new ListMigrationJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists migration jobs in a given project and location.
@@ -1338,13 +1356,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigrationJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationJobs(new ListMigrationJobsRequest
+        public virtual gax::PagedEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationJobsRequest request = new ListMigrationJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists migration jobs in a given project and location.
@@ -1362,13 +1389,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigrationJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMigrationJobsAsync(new ListMigrationJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> ListMigrationJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMigrationJobsRequest request = new ListMigrationJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMigrationJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single migration job.
@@ -2337,13 +2373,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfiles(new ListConnectionProfilesRequest
+        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of all connection profiles in a given project and
@@ -2362,13 +2407,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfilesAsync(new ListConnectionProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of all connection profiles in a given project and
@@ -2387,13 +2441,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfiles(new ListConnectionProfilesRequest
+        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of all connection profiles in a given project and
@@ -2412,13 +2475,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfilesAsync(new ListConnectionProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single connection profile.
@@ -3273,13 +3345,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnections(new ListPrivateConnectionsRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of private connections in a given project and location.
@@ -3297,13 +3378,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of private connections in a given project and location.
@@ -3321,13 +3411,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnections(new ListPrivateConnectionsRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of private connections in a given project and location.
@@ -3345,13 +3444,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a single Database Migration Service private connection.
@@ -3624,13 +3732,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionWorkspace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspaces(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionWorkspaces(new ListConversionWorkspacesRequest
+        public virtual gax::PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspaces(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionWorkspacesRequest request = new ListConversionWorkspacesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionWorkspaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversion workspaces in a given project and location.
@@ -3648,13 +3765,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionWorkspace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspacesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionWorkspacesAsync(new ListConversionWorkspacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspacesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionWorkspacesRequest request = new ListConversionWorkspacesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionWorkspacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversion workspaces in a given project and location.
@@ -3672,13 +3798,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionWorkspace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspaces(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionWorkspaces(new ListConversionWorkspacesRequest
+        public virtual gax::PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspaces(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionWorkspacesRequest request = new ListConversionWorkspacesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionWorkspaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversion workspaces in a given project and location.
@@ -3696,13 +3831,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionWorkspace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspacesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionWorkspacesAsync(new ListConversionWorkspacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> ListConversionWorkspacesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionWorkspacesRequest request = new ListConversionWorkspacesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionWorkspacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new conversion workspace in a given project and location.
@@ -4421,13 +4565,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MappingRule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMappingRules(new ListMappingRulesRequest
+        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMappingRulesRequest request = new ListMappingRulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMappingRules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the mapping rules for a specific conversion workspace.
@@ -4447,13 +4600,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MappingRule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMappingRulesAsync(new ListMappingRulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMappingRulesRequest request = new ListMappingRulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMappingRulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the mapping rules for a specific conversion workspace.
@@ -4473,13 +4635,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MappingRule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(ConversionWorkspaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMappingRules(new ListMappingRulesRequest
+        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(ConversionWorkspaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMappingRulesRequest request = new ListMappingRulesRequest
             {
                 ParentAsConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMappingRules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the mapping rules for a specific conversion workspace.
@@ -4499,13 +4670,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MappingRule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(ConversionWorkspaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMappingRulesAsync(new ListMappingRulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(ConversionWorkspaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMappingRulesRequest request = new ListMappingRulesRequest
             {
                 ParentAsConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMappingRulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a mapping rule.
@@ -5116,13 +5296,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIps(new FetchStaticIpsRequest
+        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIps(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a set of static IP addresses that need to be allowlisted by the
@@ -5142,13 +5331,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIpsAsync(new FetchStaticIpsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIpsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a set of static IP addresses that need to be allowlisted by the
@@ -5168,13 +5366,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIps(new FetchStaticIpsRequest
+        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIps(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a set of static IP addresses that need to be allowlisted by the
@@ -5194,13 +5401,22 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIpsAsync(new FetchStaticIpsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIpsAsync(request, callSettings);
+        }
     }
 
     /// <summary>DataMigrationService client wrapper implementation, for convenient use.</summary>

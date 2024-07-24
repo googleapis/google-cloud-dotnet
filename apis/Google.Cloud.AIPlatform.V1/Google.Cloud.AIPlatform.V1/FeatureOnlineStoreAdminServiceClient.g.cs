@@ -885,13 +885,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FeatureOnlineStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureOnlineStores(new ListFeatureOnlineStoresRequest
+        public virtual gax::PagedEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureOnlineStoresRequest request = new ListFeatureOnlineStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureOnlineStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureOnlineStores in a given project and location.
@@ -911,13 +920,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FeatureOnlineStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureOnlineStoresAsync(new ListFeatureOnlineStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureOnlineStoresRequest request = new ListFeatureOnlineStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureOnlineStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureOnlineStores in a given project and location.
@@ -937,13 +955,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FeatureOnlineStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStores(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureOnlineStores(new ListFeatureOnlineStoresRequest
+        public virtual gax::PagedEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStores(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureOnlineStoresRequest request = new ListFeatureOnlineStoresRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureOnlineStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureOnlineStores in a given project and location.
@@ -963,13 +990,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FeatureOnlineStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStoresAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureOnlineStoresAsync(new ListFeatureOnlineStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeatureOnlineStoresResponse, FeatureOnlineStore> ListFeatureOnlineStoresAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureOnlineStoresRequest request = new ListFeatureOnlineStoresRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureOnlineStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the parameters of a single FeatureOnlineStore.
@@ -1684,13 +1720,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FeatureView"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViews(new ListFeatureViewsRequest
+        public virtual gax::PagedEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewsRequest request = new ListFeatureViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureViews in a given FeatureOnlineStore.
@@ -1710,13 +1755,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FeatureView"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViewsAsync(new ListFeatureViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewsRequest request = new ListFeatureViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureViews in a given FeatureOnlineStore.
@@ -1736,13 +1790,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FeatureView"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViews(FeatureOnlineStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViews(new ListFeatureViewsRequest
+        public virtual gax::PagedEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViews(FeatureOnlineStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewsRequest request = new ListFeatureViewsRequest
             {
                 ParentAsFeatureOnlineStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureViews in a given FeatureOnlineStore.
@@ -1762,13 +1825,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FeatureView"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViewsAsync(FeatureOnlineStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViewsAsync(new ListFeatureViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeatureViewsResponse, FeatureView> ListFeatureViewsAsync(FeatureOnlineStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewsRequest request = new ListFeatureViewsRequest
             {
                 ParentAsFeatureOnlineStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the parameters of a single FeatureView.
@@ -2321,13 +2393,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FeatureViewSync"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViewSyncs(new ListFeatureViewSyncsRequest
+        public virtual gax::PagedEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewSyncsRequest request = new ListFeatureViewSyncsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViewSyncs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureViewSyncs in a given FeatureView.
@@ -2347,13 +2428,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FeatureViewSync"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViewSyncsAsync(new ListFeatureViewSyncsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewSyncsRequest request = new ListFeatureViewSyncsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViewSyncsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureViewSyncs in a given FeatureView.
@@ -2373,13 +2463,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FeatureViewSync"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncs(FeatureViewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViewSyncs(new ListFeatureViewSyncsRequest
+        public virtual gax::PagedEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncs(FeatureViewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewSyncsRequest request = new ListFeatureViewSyncsRequest
             {
                 ParentAsFeatureViewName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViewSyncs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FeatureViewSyncs in a given FeatureView.
@@ -2399,13 +2498,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FeatureViewSync"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncsAsync(FeatureViewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatureViewSyncsAsync(new ListFeatureViewSyncsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeatureViewSyncsResponse, FeatureViewSync> ListFeatureViewSyncsAsync(FeatureViewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureViewSyncsRequest request = new ListFeatureViewSyncsRequest
             {
                 ParentAsFeatureViewName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureViewSyncsAsync(request, callSettings);
+        }
     }
 
     /// <summary>FeatureOnlineStoreAdminService client wrapper implementation, for convenient use.</summary>

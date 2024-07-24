@@ -524,13 +524,22 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Function"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFunctionsResponse, Function> ListFunctions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFunctions(new ListFunctionsRequest
+        public virtual gax::PagedEnumerable<ListFunctionsResponse, Function> ListFunctions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFunctionsRequest request = new ListFunctionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFunctions(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of functions that belong to the requested project.
@@ -553,13 +562,22 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Function"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFunctionsResponse, Function> ListFunctionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFunctionsAsync(new ListFunctionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFunctionsResponse, Function> ListFunctionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFunctionsRequest request = new ListFunctionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFunctionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of functions that belong to the requested project.
@@ -582,13 +600,22 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Function"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFunctionsResponse, Function> ListFunctions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFunctions(new ListFunctionsRequest
+        public virtual gax::PagedEnumerable<ListFunctionsResponse, Function> ListFunctions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFunctionsRequest request = new ListFunctionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFunctions(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of functions that belong to the requested project.
@@ -611,13 +638,22 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Function"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFunctionsResponse, Function> ListFunctionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFunctionsAsync(new ListFunctionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFunctionsResponse, Function> ListFunctionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFunctionsRequest request = new ListFunctionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFunctionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in

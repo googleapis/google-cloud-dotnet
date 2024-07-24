@@ -556,13 +556,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TuningJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTuningJobs(new ListTuningJobsRequest
+        public virtual gax::PagedEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTuningJobsRequest request = new ListTuningJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTuningJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TuningJobs in a Location.
@@ -581,13 +590,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TuningJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTuningJobsAsync(new ListTuningJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTuningJobsRequest request = new ListTuningJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTuningJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TuningJobs in a Location.
@@ -606,13 +624,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TuningJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTuningJobs(new ListTuningJobsRequest
+        public virtual gax::PagedEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTuningJobsRequest request = new ListTuningJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTuningJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TuningJobs in a Location.
@@ -631,13 +658,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TuningJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTuningJobsAsync(new ListTuningJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTuningJobsResponse, TuningJob> ListTuningJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTuningJobsRequest request = new ListTuningJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTuningJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Cancels a TuningJob.

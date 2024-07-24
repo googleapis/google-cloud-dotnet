@@ -245,13 +245,22 @@ namespace Google.Shopping.Merchant.Quota.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="QuotaGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaGroups(new ListQuotaGroupsRequest
+        public virtual gax::PagedEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaGroupsRequest request = new ListQuotaGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the daily call quota and usage per group for your Merchant
@@ -271,13 +280,22 @@ namespace Google.Shopping.Merchant.Quota.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="QuotaGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaGroupsAsync(new ListQuotaGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaGroupsRequest request = new ListQuotaGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the daily call quota and usage per group for your Merchant
@@ -297,13 +315,22 @@ namespace Google.Shopping.Merchant.Quota.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="QuotaGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroups(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaGroups(new ListQuotaGroupsRequest
+        public virtual gax::PagedEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroups(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaGroupsRequest request = new ListQuotaGroupsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the daily call quota and usage per group for your Merchant
@@ -323,13 +350,22 @@ namespace Google.Shopping.Merchant.Quota.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="QuotaGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroupsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListQuotaGroupsAsync(new ListQuotaGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListQuotaGroupsResponse, QuotaGroup> ListQuotaGroupsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaGroupsRequest request = new ListQuotaGroupsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaGroupsAsync(request, callSettings);
+        }
     }
 
     /// <summary>QuotaService client wrapper implementation, for convenient use.</summary>
