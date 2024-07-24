@@ -1,0 +1,222 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Reports.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.reports.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1beta_generated_ReportService_Search_sync",
+      "title": "SearchRequestObject",
+      "description": "Snippet for Search",
+      "file": "ReportServiceClient.SearchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Search",
+        "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient.Search",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reports.V1Beta.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Reports.V1Beta.SearchResponse, Google.Shopping.Merchant.Reports.V1Beta.ReportRow>",
+        "client": {
+          "shortName": "ReportServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.shopping.merchant.reports.v1beta.ReportService.Search",
+          "service": {
+            "shortName": "ReportService",
+            "fullName": "google.shopping.merchant.reports.v1beta.ReportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ReportService_Search_async",
+      "title": "SearchRequestObjectAsync",
+      "description": "Snippet for SearchAsync",
+      "file": "ReportServiceClient.SearchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAsync",
+        "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient.SearchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reports.V1Beta.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Reports.V1Beta.SearchResponse, Google.Shopping.Merchant.Reports.V1Beta.ReportRow>",
+        "client": {
+          "shortName": "ReportServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.shopping.merchant.reports.v1beta.ReportService.Search",
+          "service": {
+            "shortName": "ReportService",
+            "fullName": "google.shopping.merchant.reports.v1beta.ReportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ReportService_Search_sync_flattened",
+      "title": "Search",
+      "description": "Snippet for Search",
+      "file": "ReportServiceClient.SearchSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Search",
+        "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient.Search",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Reports.V1Beta.SearchResponse, Google.Shopping.Merchant.Reports.V1Beta.ReportRow>",
+        "client": {
+          "shortName": "ReportServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.shopping.merchant.reports.v1beta.ReportService.Search",
+          "service": {
+            "shortName": "ReportService",
+            "fullName": "google.shopping.merchant.reports.v1beta.ReportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ReportService_Search_async_flattened",
+      "title": "SearchAsync",
+      "description": "Snippet for SearchAsync",
+      "file": "ReportServiceClient.SearchAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAsync",
+        "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient.SearchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Reports.V1Beta.SearchResponse, Google.Shopping.Merchant.Reports.V1Beta.ReportRow>",
+        "client": {
+          "shortName": "ReportServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reports.V1Beta.ReportServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.shopping.merchant.reports.v1beta.ReportService.Search",
+          "service": {
+            "shortName": "ReportService",
+            "fullName": "google.shopping.merchant.reports.v1beta.ReportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

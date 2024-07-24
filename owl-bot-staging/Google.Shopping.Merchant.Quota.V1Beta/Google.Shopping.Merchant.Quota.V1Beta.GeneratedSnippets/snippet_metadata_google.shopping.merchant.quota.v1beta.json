@@ -1,0 +1,333 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Quota.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.quota.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1beta_generated_QuotaService_ListQuotaGroups_sync",
+      "title": "ListQuotaGroupsRequestObject",
+      "description": "Snippet for ListQuotaGroups",
+      "file": "QuotaServiceClient.ListQuotaGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroups",
+        "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient.ListQuotaGroups",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1Beta.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1beta.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1beta.QuotaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_QuotaService_ListQuotaGroups_async",
+      "title": "ListQuotaGroupsRequestObjectAsync",
+      "description": "Snippet for ListQuotaGroupsAsync",
+      "file": "QuotaServiceClient.ListQuotaGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroupsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient.ListQuotaGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1Beta.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1beta.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1beta.QuotaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_QuotaService_ListQuotaGroups_sync_flattened",
+      "title": "ListQuotaGroups",
+      "description": "Snippet for ListQuotaGroups",
+      "file": "QuotaServiceClient.ListQuotaGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroups",
+        "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient.ListQuotaGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1Beta.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1beta.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1beta.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_QuotaService_ListQuotaGroups_async_flattened",
+      "title": "ListQuotaGroupsAsync",
+      "description": "Snippet for ListQuotaGroupsAsync",
+      "file": "QuotaServiceClient.ListQuotaGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroupsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient.ListQuotaGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1Beta.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1beta.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1beta.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_QuotaService_ListQuotaGroups_sync_flattened_resourceNames",
+      "title": "ListQuotaGroupsResourceNames",
+      "description": "Snippet for ListQuotaGroups",
+      "file": "QuotaServiceClient.ListQuotaGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroups",
+        "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient.ListQuotaGroups",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1Beta.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1beta.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1beta.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_QuotaService_ListQuotaGroups_async_flattened_resourceNames",
+      "title": "ListQuotaGroupsResourceNamesAsync",
+      "description": "Snippet for ListQuotaGroupsAsync",
+      "file": "QuotaServiceClient.ListQuotaGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroupsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient.ListQuotaGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1Beta.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1Beta.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1Beta.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1beta.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1beta.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

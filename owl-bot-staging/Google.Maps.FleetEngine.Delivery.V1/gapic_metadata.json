@@ -1,0 +1,78 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "maps.fleetengine.delivery.v1",
+  "libraryPackage": "Google.Maps.FleetEngine.Delivery.V1",
+  "services": {
+    "DeliveryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DeliveryServiceClient",
+          "rpcs": {
+            "BatchCreateTasks": {
+              "methods": [
+                "BatchCreateTasks",
+                "BatchCreateTasksAsync"
+              ]
+            },
+            "CreateDeliveryVehicle": {
+              "methods": [
+                "CreateDeliveryVehicle",
+                "CreateDeliveryVehicleAsync"
+              ]
+            },
+            "CreateTask": {
+              "methods": [
+                "CreateTask",
+                "CreateTaskAsync"
+              ]
+            },
+            "GetDeliveryVehicle": {
+              "methods": [
+                "GetDeliveryVehicle",
+                "GetDeliveryVehicleAsync"
+              ]
+            },
+            "GetTask": {
+              "methods": [
+                "GetTask",
+                "GetTaskAsync"
+              ]
+            },
+            "GetTaskTrackingInfo": {
+              "methods": [
+                "GetTaskTrackingInfo",
+                "GetTaskTrackingInfoAsync"
+              ]
+            },
+            "ListDeliveryVehicles": {
+              "methods": [
+                "ListDeliveryVehicles",
+                "ListDeliveryVehiclesAsync"
+              ]
+            },
+            "ListTasks": {
+              "methods": [
+                "ListTasks",
+                "ListTasksAsync"
+              ]
+            },
+            "UpdateDeliveryVehicle": {
+              "methods": [
+                "UpdateDeliveryVehicle",
+                "UpdateDeliveryVehicleAsync"
+              ]
+            },
+            "UpdateTask": {
+              "methods": [
+                "UpdateTask",
+                "UpdateTaskAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

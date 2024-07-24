@@ -1,0 +1,1401 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Lfp.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.lfp.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpInventoryService_InsertLfpInventory_sync",
+      "title": "InsertLfpInventoryRequestObject",
+      "description": "Snippet for InsertLfpInventory",
+      "file": "LfpInventoryServiceClient.InsertLfpInventoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpInventory",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpInventoryServiceClient.InsertLfpInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.InsertLfpInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpInventory",
+        "client": {
+          "shortName": "LfpInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpInventory",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpInventoryService.InsertLfpInventory",
+          "service": {
+            "shortName": "LfpInventoryService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpInventoryService_InsertLfpInventory_async",
+      "title": "InsertLfpInventoryRequestObjectAsync",
+      "description": "Snippet for InsertLfpInventoryAsync",
+      "file": "LfpInventoryServiceClient.InsertLfpInventoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpInventoryServiceClient.InsertLfpInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.InsertLfpInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpInventory>",
+        "client": {
+          "shortName": "LfpInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpInventory",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpInventoryService.InsertLfpInventory",
+          "service": {
+            "shortName": "LfpInventoryService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpSaleService_InsertLfpSale_sync",
+      "title": "InsertLfpSaleRequestObject",
+      "description": "Snippet for InsertLfpSale",
+      "file": "LfpSaleServiceClient.InsertLfpSaleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpSale",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpSaleServiceClient.InsertLfpSale",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.InsertLfpSaleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpSale",
+        "client": {
+          "shortName": "LfpSaleServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpSaleServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpSale",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpSaleService.InsertLfpSale",
+          "service": {
+            "shortName": "LfpSaleService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpSaleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpSaleService_InsertLfpSale_async",
+      "title": "InsertLfpSaleRequestObjectAsync",
+      "description": "Snippet for InsertLfpSaleAsync",
+      "file": "LfpSaleServiceClient.InsertLfpSaleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpSaleAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpSaleServiceClient.InsertLfpSaleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.InsertLfpSaleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpSale>",
+        "client": {
+          "shortName": "LfpSaleServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpSaleServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpSale",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpSaleService.InsertLfpSale",
+          "service": {
+            "shortName": "LfpSaleService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpSaleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_GetLfpStore_sync",
+      "title": "GetLfpStoreRequestObject",
+      "description": "Snippet for GetLfpStore",
+      "file": "LfpStoreServiceClient.GetLfpStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.GetLfpStore",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.GetLfpStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.GetLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_GetLfpStore_async",
+      "title": "GetLfpStoreRequestObjectAsync",
+      "description": "Snippet for GetLfpStoreAsync",
+      "file": "LfpStoreServiceClient.GetLfpStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.GetLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.GetLfpStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.GetLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_GetLfpStore_sync_flattened",
+      "title": "GetLfpStore",
+      "description": "Snippet for GetLfpStore",
+      "file": "LfpStoreServiceClient.GetLfpStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.GetLfpStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.GetLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_GetLfpStore_async_flattened",
+      "title": "GetLfpStoreAsync",
+      "description": "Snippet for GetLfpStoreAsync",
+      "file": "LfpStoreServiceClient.GetLfpStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.GetLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.GetLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_GetLfpStore_sync_flattened_resourceNames",
+      "title": "GetLfpStoreResourceNames",
+      "description": "Snippet for GetLfpStore",
+      "file": "LfpStoreServiceClient.GetLfpStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.GetLfpStore",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.GetLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_GetLfpStore_async_flattened_resourceNames",
+      "title": "GetLfpStoreResourceNamesAsync",
+      "description": "Snippet for GetLfpStoreAsync",
+      "file": "LfpStoreServiceClient.GetLfpStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.GetLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.GetLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_InsertLfpStore_sync",
+      "title": "InsertLfpStoreRequestObject",
+      "description": "Snippet for InsertLfpStore",
+      "file": "LfpStoreServiceClient.InsertLfpStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.InsertLfpStore",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.InsertLfpStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.InsertLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_InsertLfpStore_async",
+      "title": "InsertLfpStoreRequestObjectAsync",
+      "description": "Snippet for InsertLfpStoreAsync",
+      "file": "LfpStoreServiceClient.InsertLfpStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.InsertLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.InsertLfpStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.InsertLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_InsertLfpStore_sync_flattened",
+      "title": "InsertLfpStore",
+      "description": "Snippet for InsertLfpStore",
+      "file": "LfpStoreServiceClient.InsertLfpStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.InsertLfpStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+            "name": "lfpStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.InsertLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_InsertLfpStore_async_flattened",
+      "title": "InsertLfpStoreAsync",
+      "description": "Snippet for InsertLfpStoreAsync",
+      "file": "LfpStoreServiceClient.InsertLfpStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.InsertLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+            "name": "lfpStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.InsertLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_InsertLfpStore_sync_flattened_resourceNames",
+      "title": "InsertLfpStoreResourceNames",
+      "description": "Snippet for InsertLfpStore",
+      "file": "LfpStoreServiceClient.InsertLfpStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.InsertLfpStore",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+            "name": "lfpStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.InsertLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_InsertLfpStore_async_flattened_resourceNames",
+      "title": "InsertLfpStoreResourceNamesAsync",
+      "description": "Snippet for InsertLfpStoreAsync",
+      "file": "LfpStoreServiceClient.InsertLfpStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.InsertLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStore",
+            "name": "lfpStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.InsertLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_DeleteLfpStore_sync",
+      "title": "DeleteLfpStoreRequestObject",
+      "description": "Snippet for DeleteLfpStore",
+      "file": "LfpStoreServiceClient.DeleteLfpStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.DeleteLfpStore",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.DeleteLfpStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.DeleteLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_DeleteLfpStore_async",
+      "title": "DeleteLfpStoreRequestObjectAsync",
+      "description": "Snippet for DeleteLfpStoreAsync",
+      "file": "LfpStoreServiceClient.DeleteLfpStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.DeleteLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.DeleteLfpStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.DeleteLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_DeleteLfpStore_sync_flattened",
+      "title": "DeleteLfpStore",
+      "description": "Snippet for DeleteLfpStore",
+      "file": "LfpStoreServiceClient.DeleteLfpStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.DeleteLfpStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.DeleteLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_DeleteLfpStore_async_flattened",
+      "title": "DeleteLfpStoreAsync",
+      "description": "Snippet for DeleteLfpStoreAsync",
+      "file": "LfpStoreServiceClient.DeleteLfpStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.DeleteLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.DeleteLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_DeleteLfpStore_sync_flattened_resourceNames",
+      "title": "DeleteLfpStoreResourceNames",
+      "description": "Snippet for DeleteLfpStore",
+      "file": "LfpStoreServiceClient.DeleteLfpStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLfpStore",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.DeleteLfpStore",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.DeleteLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_DeleteLfpStore_async_flattened_resourceNames",
+      "title": "DeleteLfpStoreResourceNamesAsync",
+      "description": "Snippet for DeleteLfpStoreAsync",
+      "file": "LfpStoreServiceClient.DeleteLfpStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLfpStoreAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.DeleteLfpStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLfpStore",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.DeleteLfpStore",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_ListLfpStores_sync",
+      "title": "ListLfpStoresRequestObject",
+      "description": "Snippet for ListLfpStores",
+      "file": "LfpStoreServiceClient.ListLfpStoresRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLfpStores",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.ListLfpStores",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresResponse, Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListLfpStores",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.ListLfpStores",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_ListLfpStores_async",
+      "title": "ListLfpStoresRequestObjectAsync",
+      "description": "Snippet for ListLfpStoresAsync",
+      "file": "LfpStoreServiceClient.ListLfpStoresRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLfpStoresAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.ListLfpStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresResponse, Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListLfpStores",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.ListLfpStores",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_ListLfpStores_sync_flattened",
+      "title": "ListLfpStores",
+      "description": "Snippet for ListLfpStores",
+      "file": "LfpStoreServiceClient.ListLfpStoresSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLfpStores",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.ListLfpStores",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresResponse, Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListLfpStores",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.ListLfpStores",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_ListLfpStores_async_flattened",
+      "title": "ListLfpStoresAsync",
+      "description": "Snippet for ListLfpStoresAsync",
+      "file": "LfpStoreServiceClient.ListLfpStoresAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLfpStoresAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.ListLfpStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresResponse, Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListLfpStores",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.ListLfpStores",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_ListLfpStores_sync_flattened_resourceNames",
+      "title": "ListLfpStoresResourceNames",
+      "description": "Snippet for ListLfpStores",
+      "file": "LfpStoreServiceClient.ListLfpStoresResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLfpStores",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.ListLfpStores",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresResponse, Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListLfpStores",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.ListLfpStores",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpStoreService_ListLfpStores_async_flattened_resourceNames",
+      "title": "ListLfpStoresResourceNamesAsync",
+      "description": "Snippet for ListLfpStoresAsync",
+      "file": "LfpStoreServiceClient.ListLfpStoresResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLfpStoresAsync",
+        "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient.ListLfpStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Lfp.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Lfp.V1Beta.ListLfpStoresResponse, Google.Shopping.Merchant.Lfp.V1Beta.LfpStore>",
+        "client": {
+          "shortName": "LfpStoreServiceClient",
+          "fullName": "Google.Shopping.Merchant.Lfp.V1Beta.LfpStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListLfpStores",
+          "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService.ListLfpStores",
+          "service": {
+            "shortName": "LfpStoreService",
+            "fullName": "google.shopping.merchant.lfp.v1beta.LfpStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

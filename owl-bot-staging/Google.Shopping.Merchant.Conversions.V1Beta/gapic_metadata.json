@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.shopping.merchant.conversions.v1beta",
+  "libraryPackage": "Google.Shopping.Merchant.Conversions.V1Beta",
+  "services": {
+    "ConversionSourcesService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConversionSourcesServiceClient",
+          "rpcs": {
+            "CreateConversionSource": {
+              "methods": [
+                "CreateConversionSource",
+                "CreateConversionSourceAsync"
+              ]
+            },
+            "DeleteConversionSource": {
+              "methods": [
+                "DeleteConversionSource",
+                "DeleteConversionSourceAsync"
+              ]
+            },
+            "GetConversionSource": {
+              "methods": [
+                "GetConversionSource",
+                "GetConversionSourceAsync"
+              ]
+            },
+            "ListConversionSources": {
+              "methods": [
+                "ListConversionSources",
+                "ListConversionSourcesAsync"
+              ]
+            },
+            "UndeleteConversionSource": {
+              "methods": [
+                "UndeleteConversionSource",
+                "UndeleteConversionSourceAsync"
+              ]
+            },
+            "UpdateConversionSource": {
+              "methods": [
+                "UpdateConversionSource",
+                "UpdateConversionSourceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
