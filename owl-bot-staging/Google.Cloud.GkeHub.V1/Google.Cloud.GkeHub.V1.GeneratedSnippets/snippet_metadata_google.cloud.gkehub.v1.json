@@ -1,0 +1,3173 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.GkeHub.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.gkehub.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListMemberships_sync",
+      "title": "ListMembershipsRequestObject",
+      "description": "Snippet for ListMemberships",
+      "file": "GkeHubClient.ListMembershipsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemberships",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMemberships",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListMemberships",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListMemberships",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListMemberships_async",
+      "title": "ListMembershipsRequestObjectAsync",
+      "description": "Snippet for ListMembershipsAsync",
+      "file": "GkeHubClient.ListMembershipsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembershipsAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMembershipsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListMemberships",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListMemberships",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListMemberships_sync_flattened",
+      "title": "ListMemberships",
+      "description": "Snippet for ListMemberships",
+      "file": "GkeHubClient.ListMembershipsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemberships",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMemberships",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListMemberships",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListMemberships",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListMemberships_async_flattened",
+      "title": "ListMembershipsAsync",
+      "description": "Snippet for ListMembershipsAsync",
+      "file": "GkeHubClient.ListMembershipsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembershipsAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMembershipsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListMemberships",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListMemberships",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListMemberships_sync_flattened_resourceNames",
+      "title": "ListMembershipsResourceNames",
+      "description": "Snippet for ListMemberships",
+      "file": "GkeHubClient.ListMembershipsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemberships",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMemberships",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListMemberships",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListMemberships",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListMemberships_async_flattened_resourceNames",
+      "title": "ListMembershipsResourceNamesAsync",
+      "description": "Snippet for ListMembershipsAsync",
+      "file": "GkeHubClient.ListMembershipsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembershipsAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMembershipsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListMemberships",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListMemberships",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListFeatures_sync",
+      "title": "ListFeaturesRequestObject",
+      "description": "Snippet for ListFeatures",
+      "file": "GkeHubClient.ListFeaturesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeatures",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeatures",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListFeaturesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListFeatures",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListFeatures",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListFeatures_async",
+      "title": "ListFeaturesRequestObjectAsync",
+      "description": "Snippet for ListFeaturesAsync",
+      "file": "GkeHubClient.ListFeaturesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeaturesAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListFeaturesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListFeatures",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListFeatures",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListFeatures_sync_flattened",
+      "title": "ListFeatures",
+      "description": "Snippet for ListFeatures",
+      "file": "GkeHubClient.ListFeaturesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeatures",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeatures",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListFeatures",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListFeatures",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListFeatures_async_flattened",
+      "title": "ListFeaturesAsync",
+      "description": "Snippet for ListFeaturesAsync",
+      "file": "GkeHubClient.ListFeaturesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeaturesAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListFeatures",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListFeatures",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListFeatures_sync_flattened_resourceNames",
+      "title": "ListFeaturesResourceNames",
+      "description": "Snippet for ListFeatures",
+      "file": "GkeHubClient.ListFeaturesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeatures",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeatures",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListFeatures",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListFeatures",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_ListFeatures_async_flattened_resourceNames",
+      "title": "ListFeaturesResourceNamesAsync",
+      "description": "Snippet for ListFeaturesAsync",
+      "file": "GkeHubClient.ListFeaturesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeaturesAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "ListFeatures",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.ListFeatures",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetMembership_sync",
+      "title": "GetMembershipRequestObject",
+      "description": "Snippet for GetMembership",
+      "file": "GkeHubClient.GetMembershipRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.Membership",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetMembership_async",
+      "title": "GetMembershipRequestObjectAsync",
+      "description": "Snippet for GetMembershipAsync",
+      "file": "GkeHubClient.GetMembershipRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetMembership_sync_flattened",
+      "title": "GetMembership",
+      "description": "Snippet for GetMembership",
+      "file": "GkeHubClient.GetMembershipSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.Membership",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetMembership_async_flattened",
+      "title": "GetMembershipAsync",
+      "description": "Snippet for GetMembershipAsync",
+      "file": "GkeHubClient.GetMembershipAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetMembership_sync_flattened_resourceNames",
+      "title": "GetMembershipResourceNames",
+      "description": "Snippet for GetMembership",
+      "file": "GkeHubClient.GetMembershipResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.Membership",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetMembership_async_flattened_resourceNames",
+      "title": "GetMembershipResourceNamesAsync",
+      "description": "Snippet for GetMembershipAsync",
+      "file": "GkeHubClient.GetMembershipResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Membership>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetFeature_sync",
+      "title": "GetFeatureRequestObject",
+      "description": "Snippet for GetFeature",
+      "file": "GkeHubClient.GetFeatureRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.Feature",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetFeature_async",
+      "title": "GetFeatureRequestObjectAsync",
+      "description": "Snippet for GetFeatureAsync",
+      "file": "GkeHubClient.GetFeatureRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetFeature_sync_flattened",
+      "title": "GetFeature",
+      "description": "Snippet for GetFeature",
+      "file": "GkeHubClient.GetFeatureSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.Feature",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetFeature_async_flattened",
+      "title": "GetFeatureAsync",
+      "description": "Snippet for GetFeatureAsync",
+      "file": "GkeHubClient.GetFeatureAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetFeature_sync_flattened_resourceNames",
+      "title": "GetFeatureResourceNames",
+      "description": "Snippet for GetFeature",
+      "file": "GkeHubClient.GetFeatureResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.Feature",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GetFeature_async_flattened_resourceNames",
+      "title": "GetFeatureResourceNamesAsync",
+      "description": "Snippet for GetFeatureAsync",
+      "file": "GkeHubClient.GetFeatureResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Feature>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GetFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GetFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateMembership_sync",
+      "title": "CreateMembershipRequestObject",
+      "description": "Snippet for CreateMembership",
+      "file": "GkeHubClient.CreateMembershipRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateMembership_async",
+      "title": "CreateMembershipRequestObjectAsync",
+      "description": "Snippet for CreateMembershipAsync",
+      "file": "GkeHubClient.CreateMembershipRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateMembership_sync_flattened",
+      "title": "CreateMembership",
+      "description": "Snippet for CreateMembership",
+      "file": "GkeHubClient.CreateMembershipSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateMembership_async_flattened",
+      "title": "CreateMembershipAsync",
+      "description": "Snippet for CreateMembershipAsync",
+      "file": "GkeHubClient.CreateMembershipAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateMembership_sync_flattened_resourceNames",
+      "title": "CreateMembershipResourceNames",
+      "description": "Snippet for CreateMembership",
+      "file": "GkeHubClient.CreateMembershipResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembership",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateMembership_async_flattened_resourceNames",
+      "title": "CreateMembershipResourceNamesAsync",
+      "description": "Snippet for CreateMembershipAsync",
+      "file": "GkeHubClient.CreateMembershipResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateFeature_sync",
+      "title": "CreateFeatureRequestObject",
+      "description": "Snippet for CreateFeature",
+      "file": "GkeHubClient.CreateFeatureRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateFeature_async",
+      "title": "CreateFeatureRequestObjectAsync",
+      "description": "Snippet for CreateFeatureAsync",
+      "file": "GkeHubClient.CreateFeatureRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateFeature_sync_flattened",
+      "title": "CreateFeature",
+      "description": "Snippet for CreateFeature",
+      "file": "GkeHubClient.CreateFeatureSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateFeature_async_flattened",
+      "title": "CreateFeatureAsync",
+      "description": "Snippet for CreateFeatureAsync",
+      "file": "GkeHubClient.CreateFeatureAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateFeature_sync_flattened_resourceNames",
+      "title": "CreateFeatureResourceNames",
+      "description": "Snippet for CreateFeature",
+      "file": "GkeHubClient.CreateFeatureResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeature",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_CreateFeature_async_flattened_resourceNames",
+      "title": "CreateFeatureResourceNamesAsync",
+      "description": "Snippet for CreateFeatureAsync",
+      "file": "GkeHubClient.CreateFeatureResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "CreateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.CreateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteMembership_sync",
+      "title": "DeleteMembershipRequestObject",
+      "description": "Snippet for DeleteMembership",
+      "file": "GkeHubClient.DeleteMembershipRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteMembership_async",
+      "title": "DeleteMembershipRequestObjectAsync",
+      "description": "Snippet for DeleteMembershipAsync",
+      "file": "GkeHubClient.DeleteMembershipRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteMembership_sync_flattened",
+      "title": "DeleteMembership",
+      "description": "Snippet for DeleteMembership",
+      "file": "GkeHubClient.DeleteMembershipSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteMembership_async_flattened",
+      "title": "DeleteMembershipAsync",
+      "description": "Snippet for DeleteMembershipAsync",
+      "file": "GkeHubClient.DeleteMembershipAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteMembership_sync_flattened_resourceNames",
+      "title": "DeleteMembershipResourceNames",
+      "description": "Snippet for DeleteMembership",
+      "file": "GkeHubClient.DeleteMembershipResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteMembership_async_flattened_resourceNames",
+      "title": "DeleteMembershipResourceNamesAsync",
+      "description": "Snippet for DeleteMembershipAsync",
+      "file": "GkeHubClient.DeleteMembershipResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteFeature_sync",
+      "title": "DeleteFeatureRequestObject",
+      "description": "Snippet for DeleteFeature",
+      "file": "GkeHubClient.DeleteFeatureRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteFeature_async",
+      "title": "DeleteFeatureRequestObjectAsync",
+      "description": "Snippet for DeleteFeatureAsync",
+      "file": "GkeHubClient.DeleteFeatureRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteFeature_sync_flattened",
+      "title": "DeleteFeature",
+      "description": "Snippet for DeleteFeature",
+      "file": "GkeHubClient.DeleteFeatureSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteFeature_async_flattened",
+      "title": "DeleteFeatureAsync",
+      "description": "Snippet for DeleteFeatureAsync",
+      "file": "GkeHubClient.DeleteFeatureAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteFeature_sync_flattened_resourceNames",
+      "title": "DeleteFeatureResourceNames",
+      "description": "Snippet for DeleteFeature",
+      "file": "GkeHubClient.DeleteFeatureResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_DeleteFeature_async_flattened_resourceNames",
+      "title": "DeleteFeatureResourceNamesAsync",
+      "description": "Snippet for DeleteFeatureAsync",
+      "file": "GkeHubClient.DeleteFeatureResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "DeleteFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.DeleteFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateMembership_sync",
+      "title": "UpdateMembershipRequestObject",
+      "description": "Snippet for UpdateMembership",
+      "file": "GkeHubClient.UpdateMembershipRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateMembership_async",
+      "title": "UpdateMembershipRequestObjectAsync",
+      "description": "Snippet for UpdateMembershipAsync",
+      "file": "GkeHubClient.UpdateMembershipRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateMembership_sync_flattened",
+      "title": "UpdateMembership",
+      "description": "Snippet for UpdateMembership",
+      "file": "GkeHubClient.UpdateMembershipSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateMembership_async_flattened",
+      "title": "UpdateMembershipAsync",
+      "description": "Snippet for UpdateMembershipAsync",
+      "file": "GkeHubClient.UpdateMembershipAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateMembership_sync_flattened_resourceNames",
+      "title": "UpdateMembershipResourceNames",
+      "description": "Snippet for UpdateMembership",
+      "file": "GkeHubClient.UpdateMembershipResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembership",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateMembership_async_flattened_resourceNames",
+      "title": "UpdateMembershipResourceNamesAsync",
+      "description": "Snippet for UpdateMembershipAsync",
+      "file": "GkeHubClient.UpdateMembershipResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembershipAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateMembership",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateFeature_sync",
+      "title": "UpdateFeatureRequestObject",
+      "description": "Snippet for UpdateFeature",
+      "file": "GkeHubClient.UpdateFeatureRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateFeature_async",
+      "title": "UpdateFeatureRequestObjectAsync",
+      "description": "Snippet for UpdateFeatureAsync",
+      "file": "GkeHubClient.UpdateFeatureRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateFeature_sync_flattened",
+      "title": "UpdateFeature",
+      "description": "Snippet for UpdateFeature",
+      "file": "GkeHubClient.UpdateFeatureSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateFeature_async_flattened",
+      "title": "UpdateFeatureAsync",
+      "description": "Snippet for UpdateFeatureAsync",
+      "file": "GkeHubClient.UpdateFeatureAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateFeature_sync_flattened_resourceNames",
+      "title": "UpdateFeatureResourceNames",
+      "description": "Snippet for UpdateFeature",
+      "file": "GkeHubClient.UpdateFeatureResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeature",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_UpdateFeature_async_flattened_resourceNames",
+      "title": "UpdateFeatureResourceNamesAsync",
+      "description": "Snippet for UpdateFeatureAsync",
+      "file": "GkeHubClient.UpdateFeatureResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeatureAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "UpdateFeature",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.UpdateFeature",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GenerateConnectManifest_sync",
+      "title": "GenerateConnectManifestRequestObject",
+      "description": "Snippet for GenerateConnectManifest",
+      "file": "GkeHubClient.GenerateConnectManifestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateConnectManifest",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GenerateConnectManifest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GenerateConnectManifest",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GenerateConnectManifest",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkehub_v1_generated_GkeHub_GenerateConnectManifest_async",
+      "title": "GenerateConnectManifestRequestObjectAsync",
+      "description": "Snippet for GenerateConnectManifestAsync",
+      "file": "GkeHubClient.GenerateConnectManifestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateConnectManifestAsync",
+        "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GenerateConnectManifestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse>",
+        "client": {
+          "shortName": "GkeHubClient",
+          "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient"
+        },
+        "method": {
+          "shortName": "GenerateConnectManifest",
+          "fullName": "google.cloud.gkehub.v1.GkeHub.GenerateConnectManifest",
+          "service": {
+            "shortName": "GkeHub",
+            "fullName": "google.cloud.gkehub.v1.GkeHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

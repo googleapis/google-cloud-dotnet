@@ -1,0 +1,162 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.firestore.admin.v1",
+  "libraryPackage": "Google.Cloud.Firestore.Admin.V1",
+  "services": {
+    "FirestoreAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FirestoreAdminClient",
+          "rpcs": {
+            "BulkDeleteDocuments": {
+              "methods": [
+                "BulkDeleteDocuments",
+                "BulkDeleteDocumentsAsync"
+              ]
+            },
+            "CreateBackupSchedule": {
+              "methods": [
+                "CreateBackupSchedule",
+                "CreateBackupScheduleAsync"
+              ]
+            },
+            "CreateDatabase": {
+              "methods": [
+                "CreateDatabase",
+                "CreateDatabaseAsync"
+              ]
+            },
+            "CreateIndex": {
+              "methods": [
+                "CreateIndex",
+                "CreateIndexAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteBackupSchedule": {
+              "methods": [
+                "DeleteBackupSchedule",
+                "DeleteBackupScheduleAsync"
+              ]
+            },
+            "DeleteDatabase": {
+              "methods": [
+                "DeleteDatabase",
+                "DeleteDatabaseAsync"
+              ]
+            },
+            "DeleteIndex": {
+              "methods": [
+                "DeleteIndex",
+                "DeleteIndexAsync"
+              ]
+            },
+            "ExportDocuments": {
+              "methods": [
+                "ExportDocuments",
+                "ExportDocumentsAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupSchedule": {
+              "methods": [
+                "GetBackupSchedule",
+                "GetBackupScheduleAsync"
+              ]
+            },
+            "GetDatabase": {
+              "methods": [
+                "GetDatabase",
+                "GetDatabaseAsync"
+              ]
+            },
+            "GetField": {
+              "methods": [
+                "GetField",
+                "GetFieldAsync"
+              ]
+            },
+            "GetIndex": {
+              "methods": [
+                "GetIndex",
+                "GetIndexAsync"
+              ]
+            },
+            "ImportDocuments": {
+              "methods": [
+                "ImportDocuments",
+                "ImportDocumentsAsync"
+              ]
+            },
+            "ListBackupSchedules": {
+              "methods": [
+                "ListBackupSchedules",
+                "ListBackupSchedulesAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
+            "ListFields": {
+              "methods": [
+                "ListFields",
+                "ListFieldsAsync"
+              ]
+            },
+            "ListIndexes": {
+              "methods": [
+                "ListIndexes",
+                "ListIndexesAsync"
+              ]
+            },
+            "RestoreDatabase": {
+              "methods": [
+                "RestoreDatabase",
+                "RestoreDatabaseAsync"
+              ]
+            },
+            "UpdateBackupSchedule": {
+              "methods": [
+                "UpdateBackupSchedule",
+                "UpdateBackupScheduleAsync"
+              ]
+            },
+            "UpdateDatabase": {
+              "methods": [
+                "UpdateDatabase",
+                "UpdateDatabaseAsync"
+              ]
+            },
+            "UpdateField": {
+              "methods": [
+                "UpdateField",
+                "UpdateFieldAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
