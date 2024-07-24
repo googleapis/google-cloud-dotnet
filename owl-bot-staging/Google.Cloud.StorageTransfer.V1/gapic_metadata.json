@@ -1,0 +1,102 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.storagetransfer.v1",
+  "libraryPackage": "Google.Cloud.StorageTransfer.V1",
+  "services": {
+    "StorageTransferService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "StorageTransferServiceClient",
+          "rpcs": {
+            "CreateAgentPool": {
+              "methods": [
+                "CreateAgentPool",
+                "CreateAgentPoolAsync"
+              ]
+            },
+            "CreateTransferJob": {
+              "methods": [
+                "CreateTransferJob",
+                "CreateTransferJobAsync"
+              ]
+            },
+            "DeleteAgentPool": {
+              "methods": [
+                "DeleteAgentPool",
+                "DeleteAgentPoolAsync"
+              ]
+            },
+            "DeleteTransferJob": {
+              "methods": [
+                "DeleteTransferJob",
+                "DeleteTransferJobAsync"
+              ]
+            },
+            "GetAgentPool": {
+              "methods": [
+                "GetAgentPool",
+                "GetAgentPoolAsync"
+              ]
+            },
+            "GetGoogleServiceAccount": {
+              "methods": [
+                "GetGoogleServiceAccount",
+                "GetGoogleServiceAccountAsync"
+              ]
+            },
+            "GetTransferJob": {
+              "methods": [
+                "GetTransferJob",
+                "GetTransferJobAsync"
+              ]
+            },
+            "ListAgentPools": {
+              "methods": [
+                "ListAgentPools",
+                "ListAgentPoolsAsync"
+              ]
+            },
+            "ListTransferJobs": {
+              "methods": [
+                "ListTransferJobs",
+                "ListTransferJobsAsync"
+              ]
+            },
+            "PauseTransferOperation": {
+              "methods": [
+                "PauseTransferOperation",
+                "PauseTransferOperationAsync"
+              ]
+            },
+            "ResumeTransferOperation": {
+              "methods": [
+                "ResumeTransferOperation",
+                "ResumeTransferOperationAsync"
+              ]
+            },
+            "RunTransferJob": {
+              "methods": [
+                "RunTransferJob",
+                "RunTransferJobAsync"
+              ]
+            },
+            "UpdateAgentPool": {
+              "methods": [
+                "UpdateAgentPool",
+                "UpdateAgentPoolAsync"
+              ]
+            },
+            "UpdateTransferJob": {
+              "methods": [
+                "UpdateTransferJob",
+                "UpdateTransferJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

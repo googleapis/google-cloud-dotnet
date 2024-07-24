@@ -1,0 +1,186 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.talent.v4",
+  "libraryPackage": "Google.Cloud.Talent.V4",
+  "services": {
+    "CompanyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompanyServiceClient",
+          "rpcs": {
+            "CreateCompany": {
+              "methods": [
+                "CreateCompany",
+                "CreateCompanyAsync"
+              ]
+            },
+            "DeleteCompany": {
+              "methods": [
+                "DeleteCompany",
+                "DeleteCompanyAsync"
+              ]
+            },
+            "GetCompany": {
+              "methods": [
+                "GetCompany",
+                "GetCompanyAsync"
+              ]
+            },
+            "ListCompanies": {
+              "methods": [
+                "ListCompanies",
+                "ListCompaniesAsync"
+              ]
+            },
+            "UpdateCompany": {
+              "methods": [
+                "UpdateCompany",
+                "UpdateCompanyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Completion": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompletionClient",
+          "rpcs": {
+            "CompleteQuery": {
+              "methods": [
+                "CompleteQuery",
+                "CompleteQueryAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "EventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EventServiceClient",
+          "rpcs": {
+            "CreateClientEvent": {
+              "methods": [
+                "CreateClientEvent",
+                "CreateClientEventAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JobService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "JobServiceClient",
+          "rpcs": {
+            "BatchCreateJobs": {
+              "methods": [
+                "BatchCreateJobs",
+                "BatchCreateJobsAsync"
+              ]
+            },
+            "BatchDeleteJobs": {
+              "methods": [
+                "BatchDeleteJobs",
+                "BatchDeleteJobsAsync"
+              ]
+            },
+            "BatchUpdateJobs": {
+              "methods": [
+                "BatchUpdateJobs",
+                "BatchUpdateJobsAsync"
+              ]
+            },
+            "CreateJob": {
+              "methods": [
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
+            "DeleteJob": {
+              "methods": [
+                "DeleteJob",
+                "DeleteJobAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "SearchJobs": {
+              "methods": [
+                "SearchJobs",
+                "SearchJobsAsync"
+              ]
+            },
+            "SearchJobsForAlert": {
+              "methods": [
+                "SearchJobsForAlert",
+                "SearchJobsForAlertAsync"
+              ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TenantService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TenantServiceClient",
+          "rpcs": {
+            "CreateTenant": {
+              "methods": [
+                "CreateTenant",
+                "CreateTenantAsync"
+              ]
+            },
+            "DeleteTenant": {
+              "methods": [
+                "DeleteTenant",
+                "DeleteTenantAsync"
+              ]
+            },
+            "GetTenant": {
+              "methods": [
+                "GetTenant",
+                "GetTenantAsync"
+              ]
+            },
+            "ListTenants": {
+              "methods": [
+                "ListTenants",
+                "ListTenantsAsync"
+              ]
+            },
+            "UpdateTenant": {
+              "methods": [
+                "UpdateTenant",
+                "UpdateTenantAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
