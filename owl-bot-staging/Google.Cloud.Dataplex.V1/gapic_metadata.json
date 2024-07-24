@@ -1,0 +1,639 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.dataplex.v1",
+  "libraryPackage": "Google.Cloud.Dataplex.V1",
+  "services": {
+    "CatalogService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CatalogServiceClient",
+          "rpcs": {
+            "CreateAspectType": {
+              "methods": [
+                "CreateAspectType",
+                "CreateAspectTypeAsync"
+              ]
+            },
+            "CreateEntry": {
+              "methods": [
+                "CreateEntry",
+                "CreateEntryAsync"
+              ]
+            },
+            "CreateEntryGroup": {
+              "methods": [
+                "CreateEntryGroup",
+                "CreateEntryGroupAsync"
+              ]
+            },
+            "CreateEntryType": {
+              "methods": [
+                "CreateEntryType",
+                "CreateEntryTypeAsync"
+              ]
+            },
+            "DeleteAspectType": {
+              "methods": [
+                "DeleteAspectType",
+                "DeleteAspectTypeAsync"
+              ]
+            },
+            "DeleteEntry": {
+              "methods": [
+                "DeleteEntry",
+                "DeleteEntryAsync"
+              ]
+            },
+            "DeleteEntryGroup": {
+              "methods": [
+                "DeleteEntryGroup",
+                "DeleteEntryGroupAsync"
+              ]
+            },
+            "DeleteEntryType": {
+              "methods": [
+                "DeleteEntryType",
+                "DeleteEntryTypeAsync"
+              ]
+            },
+            "GetAspectType": {
+              "methods": [
+                "GetAspectType",
+                "GetAspectTypeAsync"
+              ]
+            },
+            "GetEntry": {
+              "methods": [
+                "GetEntry",
+                "GetEntryAsync"
+              ]
+            },
+            "GetEntryGroup": {
+              "methods": [
+                "GetEntryGroup",
+                "GetEntryGroupAsync"
+              ]
+            },
+            "GetEntryType": {
+              "methods": [
+                "GetEntryType",
+                "GetEntryTypeAsync"
+              ]
+            },
+            "ListAspectTypes": {
+              "methods": [
+                "ListAspectTypes",
+                "ListAspectTypesAsync"
+              ]
+            },
+            "ListEntries": {
+              "methods": [
+                "ListEntries",
+                "ListEntriesAsync"
+              ]
+            },
+            "ListEntryGroups": {
+              "methods": [
+                "ListEntryGroups",
+                "ListEntryGroupsAsync"
+              ]
+            },
+            "ListEntryTypes": {
+              "methods": [
+                "ListEntryTypes",
+                "ListEntryTypesAsync"
+              ]
+            },
+            "LookupEntry": {
+              "methods": [
+                "LookupEntry",
+                "LookupEntryAsync"
+              ]
+            },
+            "SearchEntries": {
+              "methods": [
+                "SearchEntries",
+                "SearchEntriesAsync"
+              ]
+            },
+            "UpdateAspectType": {
+              "methods": [
+                "UpdateAspectType",
+                "UpdateAspectTypeAsync"
+              ]
+            },
+            "UpdateEntry": {
+              "methods": [
+                "UpdateEntry",
+                "UpdateEntryAsync"
+              ]
+            },
+            "UpdateEntryGroup": {
+              "methods": [
+                "UpdateEntryGroup",
+                "UpdateEntryGroupAsync"
+              ]
+            },
+            "UpdateEntryType": {
+              "methods": [
+                "UpdateEntryType",
+                "UpdateEntryTypeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ContentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ContentServiceClient",
+          "rpcs": {
+            "CreateContent": {
+              "methods": [
+                "CreateContent",
+                "CreateContentAsync"
+              ]
+            },
+            "DeleteContent": {
+              "methods": [
+                "DeleteContent",
+                "DeleteContentAsync"
+              ]
+            },
+            "GetContent": {
+              "methods": [
+                "GetContent",
+                "GetContentAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "ListContent": {
+              "methods": [
+                "ListContent",
+                "ListContentAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateContent": {
+              "methods": [
+                "UpdateContent",
+                "UpdateContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataScanService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataScanServiceClient",
+          "rpcs": {
+            "CreateDataScan": {
+              "methods": [
+                "CreateDataScan",
+                "CreateDataScanAsync"
+              ]
+            },
+            "DeleteDataScan": {
+              "methods": [
+                "DeleteDataScan",
+                "DeleteDataScanAsync"
+              ]
+            },
+            "GenerateDataQualityRules": {
+              "methods": [
+                "GenerateDataQualityRules",
+                "GenerateDataQualityRulesAsync"
+              ]
+            },
+            "GetDataScan": {
+              "methods": [
+                "GetDataScan",
+                "GetDataScanAsync"
+              ]
+            },
+            "GetDataScanJob": {
+              "methods": [
+                "GetDataScanJob",
+                "GetDataScanJobAsync"
+              ]
+            },
+            "ListDataScanJobs": {
+              "methods": [
+                "ListDataScanJobs",
+                "ListDataScanJobsAsync"
+              ]
+            },
+            "ListDataScans": {
+              "methods": [
+                "ListDataScans",
+                "ListDataScansAsync"
+              ]
+            },
+            "RunDataScan": {
+              "methods": [
+                "RunDataScan",
+                "RunDataScanAsync"
+              ]
+            },
+            "UpdateDataScan": {
+              "methods": [
+                "UpdateDataScan",
+                "UpdateDataScanAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataTaxonomyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTaxonomyServiceClient",
+          "rpcs": {
+            "CreateDataAttribute": {
+              "methods": [
+                "CreateDataAttribute",
+                "CreateDataAttributeAsync"
+              ]
+            },
+            "CreateDataAttributeBinding": {
+              "methods": [
+                "CreateDataAttributeBinding",
+                "CreateDataAttributeBindingAsync"
+              ]
+            },
+            "CreateDataTaxonomy": {
+              "methods": [
+                "CreateDataTaxonomy",
+                "CreateDataTaxonomyAsync"
+              ]
+            },
+            "DeleteDataAttribute": {
+              "methods": [
+                "DeleteDataAttribute",
+                "DeleteDataAttributeAsync"
+              ]
+            },
+            "DeleteDataAttributeBinding": {
+              "methods": [
+                "DeleteDataAttributeBinding",
+                "DeleteDataAttributeBindingAsync"
+              ]
+            },
+            "DeleteDataTaxonomy": {
+              "methods": [
+                "DeleteDataTaxonomy",
+                "DeleteDataTaxonomyAsync"
+              ]
+            },
+            "GetDataAttribute": {
+              "methods": [
+                "GetDataAttribute",
+                "GetDataAttributeAsync"
+              ]
+            },
+            "GetDataAttributeBinding": {
+              "methods": [
+                "GetDataAttributeBinding",
+                "GetDataAttributeBindingAsync"
+              ]
+            },
+            "GetDataTaxonomy": {
+              "methods": [
+                "GetDataTaxonomy",
+                "GetDataTaxonomyAsync"
+              ]
+            },
+            "ListDataAttributeBindings": {
+              "methods": [
+                "ListDataAttributeBindings",
+                "ListDataAttributeBindingsAsync"
+              ]
+            },
+            "ListDataAttributes": {
+              "methods": [
+                "ListDataAttributes",
+                "ListDataAttributesAsync"
+              ]
+            },
+            "ListDataTaxonomies": {
+              "methods": [
+                "ListDataTaxonomies",
+                "ListDataTaxonomiesAsync"
+              ]
+            },
+            "UpdateDataAttribute": {
+              "methods": [
+                "UpdateDataAttribute",
+                "UpdateDataAttributeAsync"
+              ]
+            },
+            "UpdateDataAttributeBinding": {
+              "methods": [
+                "UpdateDataAttributeBinding",
+                "UpdateDataAttributeBindingAsync"
+              ]
+            },
+            "UpdateDataTaxonomy": {
+              "methods": [
+                "UpdateDataTaxonomy",
+                "UpdateDataTaxonomyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataplexService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataplexServiceClient",
+          "rpcs": {
+            "CancelJob": {
+              "methods": [
+                "CancelJob",
+                "CancelJobAsync"
+              ]
+            },
+            "CreateAsset": {
+              "methods": [
+                "CreateAsset",
+                "CreateAssetAsync"
+              ]
+            },
+            "CreateEnvironment": {
+              "methods": [
+                "CreateEnvironment",
+                "CreateEnvironmentAsync"
+              ]
+            },
+            "CreateLake": {
+              "methods": [
+                "CreateLake",
+                "CreateLakeAsync"
+              ]
+            },
+            "CreateTask": {
+              "methods": [
+                "CreateTask",
+                "CreateTaskAsync"
+              ]
+            },
+            "CreateZone": {
+              "methods": [
+                "CreateZone",
+                "CreateZoneAsync"
+              ]
+            },
+            "DeleteAsset": {
+              "methods": [
+                "DeleteAsset",
+                "DeleteAssetAsync"
+              ]
+            },
+            "DeleteEnvironment": {
+              "methods": [
+                "DeleteEnvironment",
+                "DeleteEnvironmentAsync"
+              ]
+            },
+            "DeleteLake": {
+              "methods": [
+                "DeleteLake",
+                "DeleteLakeAsync"
+              ]
+            },
+            "DeleteTask": {
+              "methods": [
+                "DeleteTask",
+                "DeleteTaskAsync"
+              ]
+            },
+            "DeleteZone": {
+              "methods": [
+                "DeleteZone",
+                "DeleteZoneAsync"
+              ]
+            },
+            "GetAsset": {
+              "methods": [
+                "GetAsset",
+                "GetAssetAsync"
+              ]
+            },
+            "GetEnvironment": {
+              "methods": [
+                "GetEnvironment",
+                "GetEnvironmentAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "GetLake": {
+              "methods": [
+                "GetLake",
+                "GetLakeAsync"
+              ]
+            },
+            "GetTask": {
+              "methods": [
+                "GetTask",
+                "GetTaskAsync"
+              ]
+            },
+            "GetZone": {
+              "methods": [
+                "GetZone",
+                "GetZoneAsync"
+              ]
+            },
+            "ListAssetActions": {
+              "methods": [
+                "ListAssetActions",
+                "ListAssetActionsAsync"
+              ]
+            },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
+              ]
+            },
+            "ListEnvironments": {
+              "methods": [
+                "ListEnvironments",
+                "ListEnvironmentsAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "ListLakeActions": {
+              "methods": [
+                "ListLakeActions",
+                "ListLakeActionsAsync"
+              ]
+            },
+            "ListLakes": {
+              "methods": [
+                "ListLakes",
+                "ListLakesAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
+            "ListTasks": {
+              "methods": [
+                "ListTasks",
+                "ListTasksAsync"
+              ]
+            },
+            "ListZoneActions": {
+              "methods": [
+                "ListZoneActions",
+                "ListZoneActionsAsync"
+              ]
+            },
+            "ListZones": {
+              "methods": [
+                "ListZones",
+                "ListZonesAsync"
+              ]
+            },
+            "RunTask": {
+              "methods": [
+                "RunTask",
+                "RunTaskAsync"
+              ]
+            },
+            "UpdateAsset": {
+              "methods": [
+                "UpdateAsset",
+                "UpdateAssetAsync"
+              ]
+            },
+            "UpdateEnvironment": {
+              "methods": [
+                "UpdateEnvironment",
+                "UpdateEnvironmentAsync"
+              ]
+            },
+            "UpdateLake": {
+              "methods": [
+                "UpdateLake",
+                "UpdateLakeAsync"
+              ]
+            },
+            "UpdateTask": {
+              "methods": [
+                "UpdateTask",
+                "UpdateTaskAsync"
+              ]
+            },
+            "UpdateZone": {
+              "methods": [
+                "UpdateZone",
+                "UpdateZoneAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MetadataService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MetadataServiceClient",
+          "rpcs": {
+            "CreateEntity": {
+              "methods": [
+                "CreateEntity",
+                "CreateEntityAsync"
+              ]
+            },
+            "CreatePartition": {
+              "methods": [
+                "CreatePartition",
+                "CreatePartitionAsync"
+              ]
+            },
+            "DeleteEntity": {
+              "methods": [
+                "DeleteEntity",
+                "DeleteEntityAsync"
+              ]
+            },
+            "DeletePartition": {
+              "methods": [
+                "DeletePartition",
+                "DeletePartitionAsync"
+              ]
+            },
+            "GetEntity": {
+              "methods": [
+                "GetEntity",
+                "GetEntityAsync"
+              ]
+            },
+            "GetPartition": {
+              "methods": [
+                "GetPartition",
+                "GetPartitionAsync"
+              ]
+            },
+            "ListEntities": {
+              "methods": [
+                "ListEntities",
+                "ListEntitiesAsync"
+              ]
+            },
+            "ListPartitions": {
+              "methods": [
+                "ListPartitions",
+                "ListPartitionsAsync"
+              ]
+            },
+            "UpdateEntity": {
+              "methods": [
+                "UpdateEntity",
+                "UpdateEntityAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
