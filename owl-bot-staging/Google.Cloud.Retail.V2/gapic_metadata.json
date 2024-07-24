@@ -1,0 +1,417 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.retail.v2",
+  "libraryPackage": "Google.Cloud.Retail.V2",
+  "services": {
+    "AnalyticsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AnalyticsServiceClient",
+          "rpcs": {
+            "ExportAnalyticsMetrics": {
+              "methods": [
+                "ExportAnalyticsMetrics",
+                "ExportAnalyticsMetricsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CatalogService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CatalogServiceClient",
+          "rpcs": {
+            "AddCatalogAttribute": {
+              "methods": [
+                "AddCatalogAttribute",
+                "AddCatalogAttributeAsync"
+              ]
+            },
+            "GetAttributesConfig": {
+              "methods": [
+                "GetAttributesConfig",
+                "GetAttributesConfigAsync"
+              ]
+            },
+            "GetCompletionConfig": {
+              "methods": [
+                "GetCompletionConfig",
+                "GetCompletionConfigAsync"
+              ]
+            },
+            "GetDefaultBranch": {
+              "methods": [
+                "GetDefaultBranch",
+                "GetDefaultBranchAsync"
+              ]
+            },
+            "ListCatalogs": {
+              "methods": [
+                "ListCatalogs",
+                "ListCatalogsAsync"
+              ]
+            },
+            "RemoveCatalogAttribute": {
+              "methods": [
+                "RemoveCatalogAttribute",
+                "RemoveCatalogAttributeAsync"
+              ]
+            },
+            "ReplaceCatalogAttribute": {
+              "methods": [
+                "ReplaceCatalogAttribute",
+                "ReplaceCatalogAttributeAsync"
+              ]
+            },
+            "SetDefaultBranch": {
+              "methods": [
+                "SetDefaultBranch",
+                "SetDefaultBranchAsync"
+              ]
+            },
+            "UpdateAttributesConfig": {
+              "methods": [
+                "UpdateAttributesConfig",
+                "UpdateAttributesConfigAsync"
+              ]
+            },
+            "UpdateCatalog": {
+              "methods": [
+                "UpdateCatalog",
+                "UpdateCatalogAsync"
+              ]
+            },
+            "UpdateCompletionConfig": {
+              "methods": [
+                "UpdateCompletionConfig",
+                "UpdateCompletionConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CompletionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompletionServiceClient",
+          "rpcs": {
+            "CompleteQuery": {
+              "methods": [
+                "CompleteQuery",
+                "CompleteQueryAsync"
+              ]
+            },
+            "ImportCompletionData": {
+              "methods": [
+                "ImportCompletionData",
+                "ImportCompletionDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ControlService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ControlServiceClient",
+          "rpcs": {
+            "CreateControl": {
+              "methods": [
+                "CreateControl",
+                "CreateControlAsync"
+              ]
+            },
+            "DeleteControl": {
+              "methods": [
+                "DeleteControl",
+                "DeleteControlAsync"
+              ]
+            },
+            "GetControl": {
+              "methods": [
+                "GetControl",
+                "GetControlAsync"
+              ]
+            },
+            "ListControls": {
+              "methods": [
+                "ListControls",
+                "ListControlsAsync"
+              ]
+            },
+            "UpdateControl": {
+              "methods": [
+                "UpdateControl",
+                "UpdateControlAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ModelService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ModelServiceClient",
+          "rpcs": {
+            "CreateModel": {
+              "methods": [
+                "CreateModel",
+                "CreateModelAsync"
+              ]
+            },
+            "DeleteModel": {
+              "methods": [
+                "DeleteModel",
+                "DeleteModelAsync"
+              ]
+            },
+            "GetModel": {
+              "methods": [
+                "GetModel",
+                "GetModelAsync"
+              ]
+            },
+            "ListModels": {
+              "methods": [
+                "ListModels",
+                "ListModelsAsync"
+              ]
+            },
+            "PauseModel": {
+              "methods": [
+                "PauseModel",
+                "PauseModelAsync"
+              ]
+            },
+            "ResumeModel": {
+              "methods": [
+                "ResumeModel",
+                "ResumeModelAsync"
+              ]
+            },
+            "TuneModel": {
+              "methods": [
+                "TuneModel",
+                "TuneModelAsync"
+              ]
+            },
+            "UpdateModel": {
+              "methods": [
+                "UpdateModel",
+                "UpdateModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ProductService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProductServiceClient",
+          "rpcs": {
+            "AddFulfillmentPlaces": {
+              "methods": [
+                "AddFulfillmentPlaces",
+                "AddFulfillmentPlacesAsync"
+              ]
+            },
+            "AddLocalInventories": {
+              "methods": [
+                "AddLocalInventories",
+                "AddLocalInventoriesAsync"
+              ]
+            },
+            "CreateProduct": {
+              "methods": [
+                "CreateProduct",
+                "CreateProductAsync"
+              ]
+            },
+            "DeleteProduct": {
+              "methods": [
+                "DeleteProduct",
+                "DeleteProductAsync"
+              ]
+            },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
+            "ImportProducts": {
+              "methods": [
+                "ImportProducts",
+                "ImportProductsAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "PurgeProducts": {
+              "methods": [
+                "PurgeProducts",
+                "PurgeProductsAsync"
+              ]
+            },
+            "RemoveFulfillmentPlaces": {
+              "methods": [
+                "RemoveFulfillmentPlaces",
+                "RemoveFulfillmentPlacesAsync"
+              ]
+            },
+            "RemoveLocalInventories": {
+              "methods": [
+                "RemoveLocalInventories",
+                "RemoveLocalInventoriesAsync"
+              ]
+            },
+            "SetInventory": {
+              "methods": [
+                "SetInventory",
+                "SetInventoryAsync"
+              ]
+            },
+            "UpdateProduct": {
+              "methods": [
+                "UpdateProduct",
+                "UpdateProductAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SearchServiceClient",
+          "rpcs": {
+            "Search": {
+              "methods": [
+                "Search",
+                "SearchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ServingConfigService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServingConfigServiceClient",
+          "rpcs": {
+            "AddControl": {
+              "methods": [
+                "AddControl",
+                "AddControlAsync"
+              ]
+            },
+            "CreateServingConfig": {
+              "methods": [
+                "CreateServingConfig",
+                "CreateServingConfigAsync"
+              ]
+            },
+            "DeleteServingConfig": {
+              "methods": [
+                "DeleteServingConfig",
+                "DeleteServingConfigAsync"
+              ]
+            },
+            "GetServingConfig": {
+              "methods": [
+                "GetServingConfig",
+                "GetServingConfigAsync"
+              ]
+            },
+            "ListServingConfigs": {
+              "methods": [
+                "ListServingConfigs",
+                "ListServingConfigsAsync"
+              ]
+            },
+            "RemoveControl": {
+              "methods": [
+                "RemoveControl",
+                "RemoveControlAsync"
+              ]
+            },
+            "UpdateServingConfig": {
+              "methods": [
+                "UpdateServingConfig",
+                "UpdateServingConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "UserEventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UserEventServiceClient",
+          "rpcs": {
+            "CollectUserEvent": {
+              "methods": [
+                "CollectUserEvent",
+                "CollectUserEventAsync"
+              ]
+            },
+            "ImportUserEvents": {
+              "methods": [
+                "ImportUserEvents",
+                "ImportUserEventsAsync"
+              ]
+            },
+            "PurgeUserEvents": {
+              "methods": [
+                "PurgeUserEvents",
+                "PurgeUserEventsAsync"
+              ]
+            },
+            "RejoinUserEvents": {
+              "methods": [
+                "RejoinUserEvents",
+                "RejoinUserEventsAsync"
+              ]
+            },
+            "WriteUserEvent": {
+              "methods": [
+                "WriteUserEvent",
+                "WriteUserEventAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3361 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.PrivilegedAccessManager.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.privilegedaccessmanager.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CheckOnboardingStatus_sync",
+      "title": "CheckOnboardingStatusRequestObject",
+      "description": "Snippet for CheckOnboardingStatus",
+      "file": "PrivilegedAccessManagerClient.CheckOnboardingStatusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckOnboardingStatus",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CheckOnboardingStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.CheckOnboardingStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.CheckOnboardingStatusResponse",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CheckOnboardingStatus",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CheckOnboardingStatus",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CheckOnboardingStatus_async",
+      "title": "CheckOnboardingStatusRequestObjectAsync",
+      "description": "Snippet for CheckOnboardingStatusAsync",
+      "file": "PrivilegedAccessManagerClient.CheckOnboardingStatusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckOnboardingStatusAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CheckOnboardingStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.CheckOnboardingStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.CheckOnboardingStatusResponse>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CheckOnboardingStatus",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CheckOnboardingStatus",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_sync",
+      "title": "ListEntitlementsRequestObject",
+      "description": "Snippet for ListEntitlements",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlements",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_async",
+      "title": "ListEntitlementsRequestObjectAsync",
+      "description": "Snippet for ListEntitlementsAsync",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_sync_flattened",
+      "title": "ListEntitlements",
+      "description": "Snippet for ListEntitlements",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlements",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlements",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_async_flattened",
+      "title": "ListEntitlementsAsync",
+      "description": "Snippet for ListEntitlementsAsync",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_sync_flattened_resourceNames1",
+      "title": "ListEntitlementsResourceNames1",
+      "description": "Snippet for ListEntitlements",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlements",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_async_flattened_resourceNames1",
+      "title": "ListEntitlementsResourceNames1Async",
+      "description": "Snippet for ListEntitlementsAsync",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_sync_flattened_resourceNames2",
+      "title": "ListEntitlementsResourceNames2",
+      "description": "Snippet for ListEntitlements",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlements",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_async_flattened_resourceNames2",
+      "title": "ListEntitlementsResourceNames2Async",
+      "description": "Snippet for ListEntitlementsAsync",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_sync_flattened_resourceNames3",
+      "title": "ListEntitlementsResourceNames3",
+      "description": "Snippet for ListEntitlements",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlements",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListEntitlements_async_flattened_resourceNames3",
+      "title": "ListEntitlementsResourceNames3Async",
+      "description": "Snippet for ListEntitlementsAsync",
+      "file": "PrivilegedAccessManagerClient.ListEntitlementsResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListEntitlementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_SearchEntitlements_sync",
+      "title": "SearchEntitlementsRequestObject",
+      "description": "Snippet for SearchEntitlements",
+      "file": "PrivilegedAccessManagerClient.SearchEntitlementsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchEntitlements",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.SearchEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.SearchEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.SearchEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "SearchEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.SearchEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_SearchEntitlements_async",
+      "title": "SearchEntitlementsRequestObjectAsync",
+      "description": "Snippet for SearchEntitlementsAsync",
+      "file": "PrivilegedAccessManagerClient.SearchEntitlementsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchEntitlementsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.SearchEntitlementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.SearchEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.SearchEntitlementsResponse, Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "SearchEntitlements",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.SearchEntitlements",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetEntitlement_sync",
+      "title": "GetEntitlementRequestObject",
+      "description": "Snippet for GetEntitlement",
+      "file": "PrivilegedAccessManagerClient.GetEntitlementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.GetEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetEntitlement_async",
+      "title": "GetEntitlementRequestObjectAsync",
+      "description": "Snippet for GetEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.GetEntitlementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.GetEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetEntitlement_sync_flattened",
+      "title": "GetEntitlement",
+      "description": "Snippet for GetEntitlement",
+      "file": "PrivilegedAccessManagerClient.GetEntitlementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetEntitlement",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetEntitlement_async_flattened",
+      "title": "GetEntitlementAsync",
+      "description": "Snippet for GetEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.GetEntitlementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetEntitlement_sync_flattened_resourceNames",
+      "title": "GetEntitlementResourceNames",
+      "description": "Snippet for GetEntitlement",
+      "file": "PrivilegedAccessManagerClient.GetEntitlementResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetEntitlement_async_flattened_resourceNames",
+      "title": "GetEntitlementResourceNamesAsync",
+      "description": "Snippet for GetEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.GetEntitlementResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Entitlement>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_sync",
+      "title": "CreateEntitlementRequestObject",
+      "description": "Snippet for CreateEntitlement",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.CreateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_async",
+      "title": "CreateEntitlementRequestObjectAsync",
+      "description": "Snippet for CreateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.CreateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_sync_flattened",
+      "title": "CreateEntitlement",
+      "description": "Snippet for CreateEntitlement",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlement",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_async_flattened",
+      "title": "CreateEntitlementAsync",
+      "description": "Snippet for CreateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_sync_flattened_resourceNames1",
+      "title": "CreateEntitlementResourceNames1",
+      "description": "Snippet for CreateEntitlement",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_async_flattened_resourceNames1",
+      "title": "CreateEntitlementResourceNames1Async",
+      "description": "Snippet for CreateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_sync_flattened_resourceNames2",
+      "title": "CreateEntitlementResourceNames2",
+      "description": "Snippet for CreateEntitlement",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_async_flattened_resourceNames2",
+      "title": "CreateEntitlementResourceNames2Async",
+      "description": "Snippet for CreateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_sync_flattened_resourceNames3",
+      "title": "CreateEntitlementResourceNames3",
+      "description": "Snippet for CreateEntitlement",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateEntitlement_async_flattened_resourceNames3",
+      "title": "CreateEntitlementResourceNames3Async",
+      "description": "Snippet for CreateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.CreateEntitlementResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "System.String",
+            "name": "entitlementId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DeleteEntitlement_sync",
+      "title": "DeleteEntitlementRequestObject",
+      "description": "Snippet for DeleteEntitlement",
+      "file": "PrivilegedAccessManagerClient.DeleteEntitlementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DeleteEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.DeleteEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DeleteEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DeleteEntitlement_async",
+      "title": "DeleteEntitlementRequestObjectAsync",
+      "description": "Snippet for DeleteEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.DeleteEntitlementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DeleteEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.DeleteEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DeleteEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DeleteEntitlement_sync_flattened",
+      "title": "DeleteEntitlement",
+      "description": "Snippet for DeleteEntitlement",
+      "file": "PrivilegedAccessManagerClient.DeleteEntitlementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DeleteEntitlement",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DeleteEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DeleteEntitlement_async_flattened",
+      "title": "DeleteEntitlementAsync",
+      "description": "Snippet for DeleteEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.DeleteEntitlementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DeleteEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DeleteEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DeleteEntitlement_sync_flattened_resourceNames",
+      "title": "DeleteEntitlementResourceNames",
+      "description": "Snippet for DeleteEntitlement",
+      "file": "PrivilegedAccessManagerClient.DeleteEntitlementResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DeleteEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DeleteEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DeleteEntitlement_async_flattened_resourceNames",
+      "title": "DeleteEntitlementResourceNamesAsync",
+      "description": "Snippet for DeleteEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.DeleteEntitlementResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DeleteEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DeleteEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_UpdateEntitlement_sync",
+      "title": "UpdateEntitlementRequestObject",
+      "description": "Snippet for UpdateEntitlement",
+      "file": "PrivilegedAccessManagerClient.UpdateEntitlementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.UpdateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.UpdateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.UpdateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_UpdateEntitlement_async",
+      "title": "UpdateEntitlementRequestObjectAsync",
+      "description": "Snippet for UpdateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.UpdateEntitlementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.UpdateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.UpdateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.UpdateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_UpdateEntitlement_sync_flattened",
+      "title": "UpdateEntitlement",
+      "description": "Snippet for UpdateEntitlement",
+      "file": "PrivilegedAccessManagerClient.UpdateEntitlementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntitlement",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.UpdateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.UpdateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_UpdateEntitlement_async_flattened",
+      "title": "UpdateEntitlementAsync",
+      "description": "Snippet for UpdateEntitlementAsync",
+      "file": "PrivilegedAccessManagerClient.UpdateEntitlementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntitlementAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.UpdateEntitlementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Entitlement",
+            "name": "entitlement"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Entitlement, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEntitlement",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.UpdateEntitlement",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListGrants_sync",
+      "title": "ListGrantsRequestObject",
+      "description": "Snippet for ListGrants",
+      "file": "PrivilegedAccessManagerClient.ListGrantsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGrants",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListGrants",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.ListGrantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListGrants_async",
+      "title": "ListGrantsRequestObjectAsync",
+      "description": "Snippet for ListGrantsAsync",
+      "file": "PrivilegedAccessManagerClient.ListGrantsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGrantsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListGrantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.ListGrantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListGrants_sync_flattened",
+      "title": "ListGrants",
+      "description": "Snippet for ListGrants",
+      "file": "PrivilegedAccessManagerClient.ListGrantsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGrants",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListGrants",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListGrants_async_flattened",
+      "title": "ListGrantsAsync",
+      "description": "Snippet for ListGrantsAsync",
+      "file": "PrivilegedAccessManagerClient.ListGrantsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGrantsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListGrantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListGrants_sync_flattened_resourceNames",
+      "title": "ListGrantsResourceNames",
+      "description": "Snippet for ListGrants",
+      "file": "PrivilegedAccessManagerClient.ListGrantsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGrants",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListGrants",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ListGrants_async_flattened_resourceNames",
+      "title": "ListGrantsResourceNamesAsync",
+      "description": "Snippet for ListGrantsAsync",
+      "file": "PrivilegedAccessManagerClient.ListGrantsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGrantsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ListGrantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.ListGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ListGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ListGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_SearchGrants_sync",
+      "title": "SearchGrantsRequestObject",
+      "description": "Snippet for SearchGrants",
+      "file": "PrivilegedAccessManagerClient.SearchGrantsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchGrants",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.SearchGrants",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.SearchGrantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivilegedAccessManager.V1.SearchGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "SearchGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.SearchGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_SearchGrants_async",
+      "title": "SearchGrantsRequestObjectAsync",
+      "description": "Snippet for SearchGrantsAsync",
+      "file": "PrivilegedAccessManagerClient.SearchGrantsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchGrantsAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.SearchGrantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.SearchGrantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivilegedAccessManager.V1.SearchGrantsResponse, Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "SearchGrants",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.SearchGrants",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetGrant_sync",
+      "title": "GetGrantRequestObject",
+      "description": "Snippet for GetGrant",
+      "file": "PrivilegedAccessManagerClient.GetGrantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.GetGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetGrant_async",
+      "title": "GetGrantRequestObjectAsync",
+      "description": "Snippet for GetGrantAsync",
+      "file": "PrivilegedAccessManagerClient.GetGrantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.GetGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetGrant_sync_flattened",
+      "title": "GetGrant",
+      "description": "Snippet for GetGrant",
+      "file": "PrivilegedAccessManagerClient.GetGrantSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetGrant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetGrant_async_flattened",
+      "title": "GetGrantAsync",
+      "description": "Snippet for GetGrantAsync",
+      "file": "PrivilegedAccessManagerClient.GetGrantAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetGrant_sync_flattened_resourceNames",
+      "title": "GetGrantResourceNames",
+      "description": "Snippet for GetGrant",
+      "file": "PrivilegedAccessManagerClient.GetGrantResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.GrantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_GetGrant_async_flattened_resourceNames",
+      "title": "GetGrantResourceNamesAsync",
+      "description": "Snippet for GetGrantAsync",
+      "file": "PrivilegedAccessManagerClient.GetGrantResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.GetGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.GrantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "GetGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.GetGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateGrant_sync",
+      "title": "CreateGrantRequestObject",
+      "description": "Snippet for CreateGrant",
+      "file": "PrivilegedAccessManagerClient.CreateGrantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.CreateGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateGrant_async",
+      "title": "CreateGrantRequestObjectAsync",
+      "description": "Snippet for CreateGrantAsync",
+      "file": "PrivilegedAccessManagerClient.CreateGrantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.CreateGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateGrant_sync_flattened",
+      "title": "CreateGrant",
+      "description": "Snippet for CreateGrant",
+      "file": "PrivilegedAccessManagerClient.CreateGrantSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateGrant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+            "name": "grant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateGrant_async_flattened",
+      "title": "CreateGrantAsync",
+      "description": "Snippet for CreateGrantAsync",
+      "file": "PrivilegedAccessManagerClient.CreateGrantAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+            "name": "grant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateGrant_sync_flattened_resourceNames",
+      "title": "CreateGrantResourceNames",
+      "description": "Snippet for CreateGrant",
+      "file": "PrivilegedAccessManagerClient.CreateGrantResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+            "name": "grant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_CreateGrant_async_flattened_resourceNames",
+      "title": "CreateGrantResourceNamesAsync",
+      "description": "Snippet for CreateGrantAsync",
+      "file": "PrivilegedAccessManagerClient.CreateGrantResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.CreateGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.EntitlementName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+            "name": "grant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "CreateGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.CreateGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ApproveGrant_sync",
+      "title": "ApproveGrantRequestObject",
+      "description": "Snippet for ApproveGrant",
+      "file": "PrivilegedAccessManagerClient.ApproveGrantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ApproveGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.ApproveGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ApproveGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ApproveGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_ApproveGrant_async",
+      "title": "ApproveGrantRequestObjectAsync",
+      "description": "Snippet for ApproveGrantAsync",
+      "file": "PrivilegedAccessManagerClient.ApproveGrantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.ApproveGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.ApproveGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "ApproveGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.ApproveGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DenyGrant_sync",
+      "title": "DenyGrantRequestObject",
+      "description": "Snippet for DenyGrant",
+      "file": "PrivilegedAccessManagerClient.DenyGrantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DenyGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DenyGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.DenyGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PrivilegedAccessManager.V1.Grant",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DenyGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DenyGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_DenyGrant_async",
+      "title": "DenyGrantRequestObjectAsync",
+      "description": "Snippet for DenyGrantAsync",
+      "file": "PrivilegedAccessManagerClient.DenyGrantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DenyGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.DenyGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.DenyGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PrivilegedAccessManager.V1.Grant>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "DenyGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.DenyGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_RevokeGrant_sync",
+      "title": "RevokeGrantRequestObject",
+      "description": "Snippet for RevokeGrant",
+      "file": "PrivilegedAccessManagerClient.RevokeGrantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RevokeGrant",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.RevokeGrant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.RevokeGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Grant, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "RevokeGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.RevokeGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "privilegedaccessmanager_v1_generated_PrivilegedAccessManager_RevokeGrant_async",
+      "title": "RevokeGrantRequestObjectAsync",
+      "description": "Snippet for RevokeGrantAsync",
+      "file": "PrivilegedAccessManagerClient.RevokeGrantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RevokeGrantAsync",
+        "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient.RevokeGrantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivilegedAccessManager.V1.RevokeGrantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PrivilegedAccessManager.V1.Grant, Google.Cloud.PrivilegedAccessManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PrivilegedAccessManagerClient",
+          "fullName": "Google.Cloud.PrivilegedAccessManager.V1.PrivilegedAccessManagerClient"
+        },
+        "method": {
+          "shortName": "RevokeGrant",
+          "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager.RevokeGrant",
+          "service": {
+            "shortName": "PrivilegedAccessManager",
+            "fullName": "google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
