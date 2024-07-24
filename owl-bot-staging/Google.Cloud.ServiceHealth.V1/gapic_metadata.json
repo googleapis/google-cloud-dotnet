@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.servicehealth.v1",
+  "libraryPackage": "Google.Cloud.ServiceHealth.V1",
+  "services": {
+    "ServiceHealth": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServiceHealthClient",
+          "rpcs": {
+            "GetEvent": {
+              "methods": [
+                "GetEvent",
+                "GetEventAsync"
+              ]
+            },
+            "GetOrganizationEvent": {
+              "methods": [
+                "GetOrganizationEvent",
+                "GetOrganizationEventAsync"
+              ]
+            },
+            "GetOrganizationImpact": {
+              "methods": [
+                "GetOrganizationImpact",
+                "GetOrganizationImpactAsync"
+              ]
+            },
+            "ListEvents": {
+              "methods": [
+                "ListEvents",
+                "ListEventsAsync"
+              ]
+            },
+            "ListOrganizationEvents": {
+              "methods": [
+                "ListOrganizationEvents",
+                "ListOrganizationEventsAsync"
+              ]
+            },
+            "ListOrganizationImpacts": {
+              "methods": [
+                "ListOrganizationImpacts",
+                "ListOrganizationImpactsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
