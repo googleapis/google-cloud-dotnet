@@ -1308,13 +1308,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsClusters(new ListAwsClustersRequest
+        public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsClustersRequest request = new ListAwsClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
@@ -1339,13 +1348,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsClustersAsync(new ListAwsClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsClustersRequest request = new ListAwsClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
@@ -1370,13 +1388,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsClusters(new ListAwsClustersRequest
+        public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsClustersRequest request = new ListAwsClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
@@ -1401,13 +1428,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsClustersAsync(new ListAwsClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsClustersRequest request = new ListAwsClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
@@ -2668,13 +2704,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsNodePool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsNodePools(new ListAwsNodePoolsRequest
+        public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsNodePools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
@@ -2701,13 +2746,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsNodePool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsNodePoolsAsync(new ListAwsNodePoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsNodePoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
@@ -2734,13 +2788,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsNodePool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(AwsClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsNodePools(new ListAwsNodePoolsRequest
+        public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(AwsClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
             {
                 ParentAsAwsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsNodePools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
@@ -2767,13 +2830,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsNodePool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(AwsClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAwsNodePoolsAsync(new ListAwsNodePoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(AwsClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
             {
                 ParentAsAwsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAwsNodePoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]

@@ -1013,13 +1013,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedEnumerable<NetworkList, Network> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListNetworksRequest
+        public virtual gax::PagedEnumerable<NetworkList, Network> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of networks available to the specified project.
@@ -1037,13 +1046,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<NetworkList, Network> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<NetworkList, Network> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the peering routes exchanged over peering connection.
@@ -1082,14 +1100,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExchangedPeeringRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutes(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutes(new ListPeeringRoutesNetworksRequest
+        public virtual gax::PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutes(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
                 Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the peering routes exchanged over peering connection.
@@ -1110,14 +1137,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExchangedPeeringRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutesAsync(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutesAsync(new ListPeeringRoutesNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutesAsync(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
                 Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.

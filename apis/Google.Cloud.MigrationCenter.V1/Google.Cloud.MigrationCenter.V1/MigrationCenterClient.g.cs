@@ -1303,13 +1303,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the assets in a given project and location.
@@ -1327,13 +1336,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the assets in a given project and location.
@@ -1351,13 +1369,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the assets in a given project and location.
@@ -1375,13 +1402,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of an asset.
@@ -2244,13 +2280,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobs(new ListImportJobsRequest
+        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all import jobs.
@@ -2268,13 +2313,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobsAsync(new ListImportJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all import jobs.
@@ -2292,13 +2346,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobs(new ListImportJobsRequest
+        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all import jobs.
@@ -2316,13 +2379,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobsAsync(new ListImportJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of an import job.
@@ -3080,13 +3152,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImportDataFile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportDataFiles(new ListImportDataFilesRequest
+        public virtual gax::PagedEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportDataFilesRequest request = new ListImportDataFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportDataFiles(request, callSettings);
+        }
 
         /// <summary>
         /// List import data files.
@@ -3104,13 +3185,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImportDataFile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportDataFilesAsync(new ListImportDataFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportDataFilesRequest request = new ListImportDataFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportDataFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List import data files.
@@ -3128,13 +3218,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImportDataFile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFiles(ImportJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportDataFiles(new ListImportDataFilesRequest
+        public virtual gax::PagedEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFiles(ImportJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportDataFilesRequest request = new ListImportDataFilesRequest
             {
                 ParentAsImportJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportDataFiles(request, callSettings);
+        }
 
         /// <summary>
         /// List import data files.
@@ -3152,13 +3251,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImportDataFile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFilesAsync(ImportJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportDataFilesAsync(new ListImportDataFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListImportDataFilesResponse, ImportDataFile> ListImportDataFilesAsync(ImportJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportDataFilesRequest request = new ListImportDataFilesRequest
             {
                 ParentAsImportJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportDataFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates an import data file.
@@ -3502,13 +3610,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all groups in a given project and location.
@@ -3526,13 +3643,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all groups in a given project and location.
@@ -3550,13 +3676,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all groups in a given project and location.
@@ -3574,13 +3709,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a group.
@@ -4429,13 +4573,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ErrorFrame"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFrames(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListErrorFrames(new ListErrorFramesRequest
+        public virtual gax::PagedEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFrames(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListErrorFramesRequest request = new ListErrorFramesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListErrorFrames(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all error frames in a given source and location.
@@ -4453,13 +4606,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ErrorFrame"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFramesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListErrorFramesAsync(new ListErrorFramesRequest
+        public virtual gax::PagedAsyncEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFramesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListErrorFramesRequest request = new ListErrorFramesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListErrorFramesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all error frames in a given source and location.
@@ -4477,13 +4639,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ErrorFrame"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFrames(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListErrorFrames(new ListErrorFramesRequest
+        public virtual gax::PagedEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFrames(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListErrorFramesRequest request = new ListErrorFramesRequest
             {
                 ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListErrorFrames(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all error frames in a given source and location.
@@ -4501,13 +4672,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ErrorFrame"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFramesAsync(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListErrorFramesAsync(new ListErrorFramesRequest
+        public virtual gax::PagedAsyncEnumerable<ListErrorFramesResponse, ErrorFrame> ListErrorFramesAsync(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListErrorFramesRequest request = new ListErrorFramesRequest
             {
                 ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListErrorFramesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of an error frame.
@@ -4660,13 +4840,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSources(new ListSourcesRequest
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the sources in a given project and location.
@@ -4684,13 +4873,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSourcesAsync(new ListSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the sources in a given project and location.
@@ -4708,13 +4906,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSources(new ListSourcesRequest
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the sources in a given project and location.
@@ -4732,13 +4939,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSourcesAsync(new ListSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a source.
@@ -5327,13 +5543,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PreferenceSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreferenceSets(new ListPreferenceSetsRequest
+        public virtual gax::PagedEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreferenceSetsRequest request = new ListPreferenceSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreferenceSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the preference sets in a given project and location.
@@ -5351,13 +5576,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PreferenceSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreferenceSetsAsync(new ListPreferenceSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreferenceSetsRequest request = new ListPreferenceSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreferenceSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the preference sets in a given project and location.
@@ -5375,13 +5609,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PreferenceSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreferenceSets(new ListPreferenceSetsRequest
+        public virtual gax::PagedEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreferenceSetsRequest request = new ListPreferenceSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreferenceSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the preference sets in a given project and location.
@@ -5399,13 +5642,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PreferenceSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreferenceSetsAsync(new ListPreferenceSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPreferenceSetsResponse, PreferenceSet> ListPreferenceSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreferenceSetsRequest request = new ListPreferenceSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreferenceSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a preference set.
@@ -6531,13 +6783,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigs(new ListReportConfigsRequest
+        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -6555,13 +6816,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigsAsync(new ListReportConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -6579,13 +6849,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigs(new ListReportConfigsRequest
+        public virtual gax::PagedEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -6603,13 +6882,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportConfigsAsync(new ListReportConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportConfigsResponse, ReportConfig> ListReportConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportConfigsRequest request = new ListReportConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a ReportConfig.
@@ -7081,13 +7369,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Report"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReports(new ListReportsRequest
+        public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportsRequest request = new ListReportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Reports in a given ReportConfig.
@@ -7105,13 +7402,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Report"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportsAsync(new ListReportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportsRequest request = new ListReportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Reports in a given ReportConfig.
@@ -7129,13 +7435,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Report"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReports(new ListReportsRequest
+        public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportsRequest request = new ListReportsRequest
             {
                 ParentAsReportConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Reports in a given ReportConfig.
@@ -7153,13 +7468,22 @@ namespace Google.Cloud.MigrationCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Report"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportsAsync(new ListReportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(ReportConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportsRequest request = new ListReportsRequest
             {
                 ParentAsReportConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a Report.

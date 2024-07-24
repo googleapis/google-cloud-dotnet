@@ -325,14 +325,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ErrorGroupStats"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(string projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupStats(new ListGroupStatsRequest
+        public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(string projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupStatsRequest request = new ListGroupStatsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
                 TimeRange = timeRange,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupStats(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified groups.
@@ -382,14 +391,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(string projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupStatsAsync(new ListGroupStatsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(string projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupStatsRequest request = new ListGroupStatsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
                 TimeRange = timeRange,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupStatsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified groups.
@@ -439,14 +457,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ErrorGroupStats"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(gagr::ProjectName projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupStats(new ListGroupStatsRequest
+        public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(gagr::ProjectName projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupStatsRequest request = new ListGroupStatsRequest
             {
                 ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 TimeRange = timeRange,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupStats(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified groups.
@@ -496,14 +523,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(gagr::ProjectName projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupStatsAsync(new ListGroupStatsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(gagr::ProjectName projectName, QueryTimeRange timeRange, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupStatsRequest request = new ListGroupStatsRequest
             {
                 ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 TimeRange = timeRange,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupStatsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified events.
@@ -558,14 +594,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ErrorEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(string projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvents(new ListEventsRequest
+        public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(string projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
                 GroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified events.
@@ -602,14 +647,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(string projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventsAsync(new ListEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(string projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
                 GroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified events.
@@ -646,14 +700,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ErrorEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(gagr::ProjectName projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvents(new ListEventsRequest
+        public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(gagr::ProjectName projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 GroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified events.
@@ -690,14 +753,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(gagr::ProjectName projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventsAsync(new ListEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(gagr::ProjectName projectName, string groupId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
             {
                 ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 GroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes all error events of a given project.

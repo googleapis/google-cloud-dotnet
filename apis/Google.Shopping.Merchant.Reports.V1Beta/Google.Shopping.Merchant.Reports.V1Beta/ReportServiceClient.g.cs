@@ -250,13 +250,22 @@ namespace Google.Shopping.Merchant.Reports.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReportRow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchResponse, ReportRow> Search(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            Search(new SearchRequest
+        public virtual gax::PagedEnumerable<SearchResponse, ReportRow> Search(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchRequest request = new SearchRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return Search(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a report defined by a search query. The response might contain
@@ -277,13 +286,22 @@ namespace Google.Shopping.Merchant.Reports.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReportRow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchResponse, ReportRow> SearchAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAsync(new SearchRequest
+        public virtual gax::PagedAsyncEnumerable<SearchResponse, ReportRow> SearchAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchRequest request = new SearchRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAsync(request, callSettings);
+        }
     }
 
     /// <summary>ReportService client wrapper implementation, for convenient use.</summary>

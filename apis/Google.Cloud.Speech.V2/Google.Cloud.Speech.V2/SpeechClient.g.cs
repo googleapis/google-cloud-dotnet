@@ -1190,13 +1190,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizers(new ListRecognizersRequest
+        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Recognizers.
@@ -1215,13 +1224,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizersAsync(new ListRecognizersRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Recognizers.
@@ -1240,13 +1258,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizers(new ListRecognizersRequest
+        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Recognizers.
@@ -1265,13 +1292,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizersAsync(new ListRecognizersRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested
@@ -3246,13 +3282,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClasses(new ListCustomClassesRequest
+        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClasses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomClasses.
@@ -3271,13 +3316,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClassesAsync(new ListCustomClassesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClassesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomClasses.
@@ -3296,13 +3350,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClasses(new ListCustomClassesRequest
+        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClasses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomClasses.
@@ -3321,13 +3384,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClassesAsync(new ListCustomClassesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClassesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested
@@ -4096,13 +4168,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSets(new ListPhraseSetsRequest
+        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PhraseSets.
@@ -4121,13 +4202,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSetsAsync(new ListPhraseSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PhraseSets.
@@ -4146,13 +4236,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSets(new ListPhraseSetsRequest
+        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PhraseSets.
@@ -4171,13 +4270,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSetsAsync(new ListPhraseSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested

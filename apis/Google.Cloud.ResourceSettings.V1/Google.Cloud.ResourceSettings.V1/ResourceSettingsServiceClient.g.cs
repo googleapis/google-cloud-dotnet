@@ -321,13 +321,22 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettings(new ListSettingsRequest
+        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the settings that are available on the Cloud resource `parent`.
@@ -351,13 +360,22 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettingsAsync(new ListSettingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the settings that are available on the Cloud resource `parent`.
@@ -381,13 +399,22 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettings(new ListSettingsRequest
+        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the settings that are available on the Cloud resource `parent`.
@@ -411,13 +438,22 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettingsAsync(new ListSettingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a setting.

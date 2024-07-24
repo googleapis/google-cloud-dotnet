@@ -779,13 +779,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfiles(new ListConnectionProfilesRequest
+        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list connection profiles created in a project and
@@ -804,13 +813,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfilesAsync(new ListConnectionProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list connection profiles created in a project and
@@ -829,13 +847,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfiles(new ListConnectionProfilesRequest
+        public virtual gax::PagedEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list connection profiles created in a project and
@@ -854,13 +881,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectionProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionProfilesAsync(new ListConnectionProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> ListConnectionProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionProfilesRequest request = new ListConnectionProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to get details about a connection profile.
@@ -1461,13 +1497,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Stream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStreamsResponse, Stream> ListStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStreams(new ListStreamsRequest
+        public virtual gax::PagedEnumerable<ListStreamsResponse, Stream> ListStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStreamsRequest request = new ListStreamsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStreams(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list streams in a project and location.
@@ -1485,13 +1530,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Stream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStreamsResponse, Stream> ListStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStreamsAsync(new ListStreamsRequest
+        public virtual gax::PagedAsyncEnumerable<ListStreamsResponse, Stream> ListStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStreamsRequest request = new ListStreamsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStreamsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list streams in a project and location.
@@ -1509,13 +1563,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Stream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStreamsResponse, Stream> ListStreams(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStreams(new ListStreamsRequest
+        public virtual gax::PagedEnumerable<ListStreamsResponse, Stream> ListStreams(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStreamsRequest request = new ListStreamsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStreams(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list streams in a project and location.
@@ -1533,13 +1596,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Stream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStreamsResponse, Stream> ListStreamsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStreamsAsync(new ListStreamsRequest
+        public virtual gax::PagedAsyncEnumerable<ListStreamsResponse, Stream> ListStreamsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStreamsRequest request = new ListStreamsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStreamsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to get details about a stream.
@@ -2161,13 +2233,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIps(new FetchStaticIpsRequest
+        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIps(request, callSettings);
+        }
 
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
@@ -2188,13 +2269,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIpsAsync(new FetchStaticIpsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIpsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
@@ -2215,13 +2305,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIps(new FetchStaticIpsRequest
+        public virtual gax::PagedEnumerable<FetchStaticIpsResponse, string> FetchStaticIps(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIps(request, callSettings);
+        }
 
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
@@ -2242,13 +2341,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchStaticIpsAsync(new FetchStaticIpsRequest
+        public virtual gax::PagedAsyncEnumerable<FetchStaticIpsResponse, string> FetchStaticIpsAsync(gagr::LocationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
             {
                 LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStaticIpsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to create a private connectivity configuration.
@@ -2568,13 +2676,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnections(new ListPrivateConnectionsRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list private connectivity configurations in a project
@@ -2593,13 +2710,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list private connectivity configurations in a project
@@ -2618,13 +2744,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnections(new ListPrivateConnectionsRequest
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list private connectivity configurations in a project
@@ -2643,13 +2778,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to delete a private connectivity configuration.
@@ -3109,13 +3253,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Route"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRoutesResponse, Route> ListRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRoutes(new ListRoutesRequest
+        public virtual gax::PagedEnumerable<ListRoutesResponse, Route> ListRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutesRequest request = new ListRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list routes created for a private connectivity in a
@@ -3134,13 +3287,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Route"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRoutesResponse, Route> ListRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRoutesAsync(new ListRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRoutesResponse, Route> ListRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutesRequest request = new ListRoutesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list routes created for a private connectivity in a
@@ -3159,13 +3321,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Route"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRoutesResponse, Route> ListRoutes(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRoutes(new ListRoutesRequest
+        public virtual gax::PagedEnumerable<ListRoutesResponse, Route> ListRoutes(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutesRequest request = new ListRoutesRequest
             {
                 ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to list routes created for a private connectivity in a
@@ -3184,13 +3355,22 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Route"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRoutesResponse, Route> ListRoutesAsync(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRoutesAsync(new ListRoutesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRoutesResponse, Route> ListRoutesAsync(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutesRequest request = new ListRoutesRequest
             {
                 ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Use this method to delete a route.

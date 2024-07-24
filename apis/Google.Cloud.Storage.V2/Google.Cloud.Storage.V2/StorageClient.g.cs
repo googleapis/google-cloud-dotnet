@@ -1353,13 +1353,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Bucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, Bucket> ListBuckets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, Bucket> ListBuckets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of buckets for a given project.
@@ -1377,13 +1386,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Bucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, Bucket> ListBucketsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, Bucket> ListBucketsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of buckets for a given project.
@@ -1401,13 +1419,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Bucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, Bucket> ListBuckets(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, Bucket> ListBuckets(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of buckets for a given project.
@@ -1425,13 +1452,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Bucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, Bucket> ListBucketsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, Bucket> ListBucketsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Locks retention policy on a bucket.
@@ -2546,13 +2582,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigs(new ListNotificationConfigsRequest
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of NotificationConfigs for a given bucket.
@@ -2570,13 +2615,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of NotificationConfigs for a given bucket.
@@ -2594,13 +2648,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigs(new ListNotificationConfigsRequest
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of NotificationConfigs for a given bucket.
@@ -2618,13 +2681,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Concatenates a list of existing objects into a new object in the same
@@ -3879,13 +3951,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Object"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListObjectsResponse, Object> ListObjects(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListObjects(new ListObjectsRequest
+        public virtual gax::PagedEnumerable<ListObjectsResponse, Object> ListObjects(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListObjectsRequest request = new ListObjectsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListObjects(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
@@ -3903,13 +3984,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Object"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListObjectsResponse, Object> ListObjectsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListObjectsAsync(new ListObjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ListObjectsResponse, Object> ListObjectsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListObjectsRequest request = new ListObjectsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListObjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
@@ -3927,13 +4017,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Object"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListObjectsResponse, Object> ListObjects(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListObjects(new ListObjectsRequest
+        public virtual gax::PagedEnumerable<ListObjectsResponse, Object> ListObjects(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListObjectsRequest request = new ListObjectsRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListObjects(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
@@ -3951,13 +4050,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Object"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListObjectsResponse, Object> ListObjectsAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListObjectsAsync(new ListObjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ListObjectsResponse, Object> ListObjectsAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListObjectsRequest request = new ListObjectsRequest
             {
                 ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListObjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Rewrites a source object to a destination object. Optionally overrides
@@ -4727,13 +4835,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHmacKeys(new ListHmacKeysRequest
+        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHmacKeysRequest request = new ListHmacKeysRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHmacKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HMAC keys under a given project with the additional filters provided.
@@ -4753,13 +4870,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHmacKeysAsync(new ListHmacKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHmacKeysRequest request = new ListHmacKeysRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHmacKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HMAC keys under a given project with the additional filters provided.
@@ -4779,13 +4905,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHmacKeys(new ListHmacKeysRequest
+        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHmacKeysRequest request = new ListHmacKeysRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHmacKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HMAC keys under a given project with the additional filters provided.
@@ -4805,13 +4940,22 @@ namespace Google.Cloud.Storage.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHmacKeysAsync(new ListHmacKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHmacKeysRequest request = new ListHmacKeysRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHmacKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a given HMAC key state between ACTIVE and INACTIVE.

@@ -754,13 +754,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DocumentMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDocuments(new ListDocumentsRequest
+        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDocumentsRequest request = new ListDocumentsRequest
             {
                 Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDocuments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of documents present in the dataset.
@@ -780,13 +789,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DocumentMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDocumentsAsync(new ListDocumentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDocumentsRequest request = new ListDocumentsRequest
             {
                 Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDocumentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of documents present in the dataset.
@@ -806,13 +824,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DocumentMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDocuments(new ListDocumentsRequest
+        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDocumentsRequest request = new ListDocumentsRequest
             {
                 DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDocuments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of documents present in the dataset.
@@ -832,13 +859,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DocumentMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDocumentsAsync(new ListDocumentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDocumentsRequest request = new ListDocumentsRequest
             {
                 DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDocumentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a set of documents.

@@ -786,14 +786,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEvents(new ListUserEventsRequest
+        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of user events within a time range, with potential filtering.
@@ -846,14 +855,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEventsAsync(new ListUserEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of user events within a time range, with potential filtering.
@@ -906,14 +924,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEvents(new ListUserEventsRequest
+        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 ParentAsEventStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of user events within a time range, with potential filtering.
@@ -966,14 +993,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEventsAsync(new ListUserEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 ParentAsEventStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes permanently all user events specified by the filter provided.

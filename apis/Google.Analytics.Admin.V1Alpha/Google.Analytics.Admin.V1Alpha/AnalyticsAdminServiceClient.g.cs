@@ -4440,13 +4440,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FirebaseLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirebaseLinks(new ListFirebaseLinksRequest
+        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirebaseLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FirebaseLinks on a property.
@@ -4466,13 +4475,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FirebaseLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirebaseLinksAsync(new ListFirebaseLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirebaseLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FirebaseLinks on a property.
@@ -4492,13 +4510,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FirebaseLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirebaseLinks(new ListFirebaseLinksRequest
+        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirebaseLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists FirebaseLinks on a property.
@@ -4518,13 +4545,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FirebaseLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirebaseLinksAsync(new ListFirebaseLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirebaseLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the Site Tag for the specified web stream.
@@ -5010,13 +5046,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GoogleAdsLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGoogleAdsLinks(new ListGoogleAdsLinksRequest
+        public virtual gax::PagedEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleAdsLinksRequest request = new ListGoogleAdsLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleAdsLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GoogleAdsLinks on a property.
@@ -5034,13 +5079,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GoogleAdsLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGoogleAdsLinksAsync(new ListGoogleAdsLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleAdsLinksRequest request = new ListGoogleAdsLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleAdsLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GoogleAdsLinks on a property.
@@ -5058,13 +5112,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GoogleAdsLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGoogleAdsLinks(new ListGoogleAdsLinksRequest
+        public virtual gax::PagedEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleAdsLinksRequest request = new ListGoogleAdsLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleAdsLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists GoogleAdsLinks on a property.
@@ -5082,13 +5145,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GoogleAdsLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGoogleAdsLinksAsync(new ListGoogleAdsLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListGoogleAdsLinksResponse, GoogleAdsLink> ListGoogleAdsLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleAdsLinksRequest request = new ListGoogleAdsLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleAdsLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get data sharing settings on an account.
@@ -5372,13 +5444,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MeasurementProtocolSecret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeasurementProtocolSecrets(new ListMeasurementProtocolSecretsRequest
+        public virtual gax::PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeasurementProtocolSecretsRequest request = new ListMeasurementProtocolSecretsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeasurementProtocolSecrets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns child MeasurementProtocolSecrets under the specified parent
@@ -5399,13 +5480,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MeasurementProtocolSecret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeasurementProtocolSecretsAsync(new ListMeasurementProtocolSecretsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeasurementProtocolSecretsRequest request = new ListMeasurementProtocolSecretsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeasurementProtocolSecretsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns child MeasurementProtocolSecrets under the specified parent
@@ -5426,13 +5516,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MeasurementProtocolSecret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecrets(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeasurementProtocolSecrets(new ListMeasurementProtocolSecretsRequest
+        public virtual gax::PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecrets(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeasurementProtocolSecretsRequest request = new ListMeasurementProtocolSecretsRequest
             {
                 ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeasurementProtocolSecrets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns child MeasurementProtocolSecrets under the specified parent
@@ -5453,13 +5552,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MeasurementProtocolSecret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecretsAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMeasurementProtocolSecretsAsync(new ListMeasurementProtocolSecretsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecretsAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMeasurementProtocolSecretsRequest request = new ListMeasurementProtocolSecretsRequest
             {
                 ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMeasurementProtocolSecretsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a measurement protocol secret.
@@ -6319,13 +6427,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSKAdNetworkConversionValueSchemas(new ListSKAdNetworkConversionValueSchemasRequest
+        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSKAdNetworkConversionValueSchemasRequest request = new ListSKAdNetworkConversionValueSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSKAdNetworkConversionValueSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists SKAdNetworkConversionValueSchema on a stream.
@@ -6349,13 +6466,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSKAdNetworkConversionValueSchemasAsync(new ListSKAdNetworkConversionValueSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSKAdNetworkConversionValueSchemasRequest request = new ListSKAdNetworkConversionValueSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSKAdNetworkConversionValueSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists SKAdNetworkConversionValueSchema on a stream.
@@ -6377,13 +6503,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSKAdNetworkConversionValueSchemas(new ListSKAdNetworkConversionValueSchemasRequest
+        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSKAdNetworkConversionValueSchemasRequest request = new ListSKAdNetworkConversionValueSchemasRequest
             {
                 ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSKAdNetworkConversionValueSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists SKAdNetworkConversionValueSchema on a stream.
@@ -6407,13 +6542,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSKAdNetworkConversionValueSchemasAsync(new ListSKAdNetworkConversionValueSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSKAdNetworkConversionValueSchemasRequest request = new ListSKAdNetworkConversionValueSchemasRequest
             {
                 ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSKAdNetworkConversionValueSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches through all changes to an account or its children given the
@@ -7132,13 +7276,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionEvents(new ListConversionEventsRequest
+        public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionEventsRequest request = new ListConversionEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of conversion events in the specified parent property.
@@ -7159,13 +7312,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionEventsAsync(new ListConversionEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionEventsRequest request = new ListConversionEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of conversion events in the specified parent property.
@@ -7186,13 +7348,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionEvents(new ListConversionEventsRequest
+        public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionEventsRequest request = new ListConversionEventsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of conversion events in the specified parent property.
@@ -7213,13 +7384,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversionEventsAsync(new ListConversionEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversionEventsRequest request = new ListConversionEventsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversionEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Look up a single DisplayVideo360AdvertiserLink
@@ -7368,13 +7548,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinks(new ListDisplayVideo360AdvertiserLinksRequest
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinksRequest request = new ListDisplayVideo360AdvertiserLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all DisplayVideo360AdvertiserLinks on a property.
@@ -7394,13 +7583,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinksAsync(new ListDisplayVideo360AdvertiserLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinksRequest request = new ListDisplayVideo360AdvertiserLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all DisplayVideo360AdvertiserLinks on a property.
@@ -7418,13 +7616,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinks(new ListDisplayVideo360AdvertiserLinksRequest
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinksRequest request = new ListDisplayVideo360AdvertiserLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all DisplayVideo360AdvertiserLinks on a property.
@@ -7444,13 +7651,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinksAsync(new ListDisplayVideo360AdvertiserLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinksRequest request = new ListDisplayVideo360AdvertiserLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
@@ -7956,13 +8172,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinkProposals(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinkProposalsRequest request = new ListDisplayVideo360AdvertiserLinkProposalsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinkProposals(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
@@ -7982,13 +8207,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinkProposalsAsync(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinkProposalsRequest request = new ListDisplayVideo360AdvertiserLinkProposalsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinkProposalsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
@@ -8006,13 +8240,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinkProposals(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinkProposalsRequest request = new ListDisplayVideo360AdvertiserLinkProposalsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinkProposals(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
@@ -8032,13 +8275,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDisplayVideo360AdvertiserLinkProposalsAsync(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDisplayVideo360AdvertiserLinkProposalsRequest request = new ListDisplayVideo360AdvertiserLinkProposalsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDisplayVideo360AdvertiserLinkProposalsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLinkProposal.
@@ -8603,13 +8855,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomDimension"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomDimensions(new ListCustomDimensionsRequest
+        public virtual gax::PagedEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomDimensionsRequest request = new ListCustomDimensionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomDimensions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomDimensions on a property.
@@ -8627,13 +8888,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomDimension"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomDimensionsAsync(new ListCustomDimensionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomDimensionsRequest request = new ListCustomDimensionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomDimensionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomDimensions on a property.
@@ -8651,13 +8921,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomDimension"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensions(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomDimensions(new ListCustomDimensionsRequest
+        public virtual gax::PagedEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensions(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomDimensionsRequest request = new ListCustomDimensionsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomDimensions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomDimensions on a property.
@@ -8675,13 +8954,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomDimension"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensionsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomDimensionsAsync(new ListCustomDimensionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomDimensionsResponse, CustomDimension> ListCustomDimensionsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomDimensionsRequest request = new ListCustomDimensionsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomDimensionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Archives a CustomDimension on a property.
@@ -9149,13 +9437,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomMetric"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetrics(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomMetrics(new ListCustomMetricsRequest
+        public virtual gax::PagedEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetrics(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomMetricsRequest request = new ListCustomMetricsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomMetrics(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomMetrics on a property.
@@ -9173,13 +9470,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomMetric"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetricsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomMetricsAsync(new ListCustomMetricsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetricsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomMetricsRequest request = new ListCustomMetricsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomMetricsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomMetrics on a property.
@@ -9197,13 +9503,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomMetric"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetrics(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomMetrics(new ListCustomMetricsRequest
+        public virtual gax::PagedEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetrics(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomMetricsRequest request = new ListCustomMetricsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomMetrics(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomMetrics on a property.
@@ -9221,13 +9536,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomMetric"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetricsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomMetricsAsync(new ListCustomMetricsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomMetricsResponse, CustomMetric> ListCustomMetricsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomMetricsRequest request = new ListCustomMetricsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomMetricsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Archives a CustomMetric on a property.
@@ -10018,13 +10342,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataStreamsResponse, DataStream> ListDataStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStreams(new ListDataStreamsRequest
+        public virtual gax::PagedEnumerable<ListDataStreamsResponse, DataStream> ListDataStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStreamsRequest request = new ListDataStreamsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStreams(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataStreams on a property.
@@ -10042,13 +10375,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataStreamsResponse, DataStream> ListDataStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStreamsAsync(new ListDataStreamsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataStreamsResponse, DataStream> ListDataStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStreamsRequest request = new ListDataStreamsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStreamsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataStreams on a property.
@@ -10066,13 +10408,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataStreamsResponse, DataStream> ListDataStreams(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStreams(new ListDataStreamsRequest
+        public virtual gax::PagedEnumerable<ListDataStreamsResponse, DataStream> ListDataStreams(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStreamsRequest request = new ListDataStreamsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStreams(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataStreams on a property.
@@ -10090,13 +10441,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataStreamsResponse, DataStream> ListDataStreamsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStreamsAsync(new ListDataStreamsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataStreamsResponse, DataStream> ListDataStreamsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStreamsRequest request = new ListDataStreamsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStreamsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lookup for a single DataStream.
@@ -10378,13 +10738,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Audience"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudiences(new ListAudiencesRequest
+        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudiencesRequest request = new ListAudiencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudiences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Audiences on a property.
@@ -10404,13 +10773,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Audience"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudiencesAsync(new ListAudiencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudiencesRequest request = new ListAudiencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudiencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Audiences on a property.
@@ -10430,13 +10808,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Audience"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudiences(new ListAudiencesRequest
+        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudiencesRequest request = new ListAudiencesRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudiences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Audiences on a property.
@@ -10456,13 +10843,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Audience"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAudiencesAsync(new ListAudiencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAudiencesRequest request = new ListAudiencesRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAudiencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates an Audience.
@@ -10852,13 +11248,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SearchAds360Link"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSearchAds360Links(new ListSearchAds360LinksRequest
+        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSearchAds360LinksRequest request = new ListSearchAds360LinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSearchAds360Links(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all SearchAds360Links on a property.
@@ -10876,13 +11281,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SearchAds360Link"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSearchAds360LinksAsync(new ListSearchAds360LinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSearchAds360LinksRequest request = new ListSearchAds360LinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSearchAds360LinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all SearchAds360Links on a property.
@@ -10900,13 +11314,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SearchAds360Link"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSearchAds360Links(new ListSearchAds360LinksRequest
+        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSearchAds360LinksRequest request = new ListSearchAds360LinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSearchAds360Links(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all SearchAds360Links on a property.
@@ -10924,13 +11347,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SearchAds360Link"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSearchAds360LinksAsync(new ListSearchAds360LinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSearchAds360LinksRequest request = new ListSearchAds360LinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSearchAds360LinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a SearchAds360Link.
@@ -12059,13 +12491,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessBindings(new ListAccessBindingsRequest
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all access bindings on an account or property.
@@ -12085,13 +12526,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessBindingsAsync(new ListAccessBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all access bindings on an account or property.
@@ -12111,13 +12561,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessBindings(new ListAccessBindingsRequest
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all access bindings on an account or property.
@@ -12137,13 +12596,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessBindingsAsync(new ListAccessBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all access bindings on an account or property.
@@ -12163,13 +12631,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessBindings(new ListAccessBindingsRequest
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all access bindings on an account or property.
@@ -12189,13 +12666,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessBindingsAsync(new ListAccessBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates information about multiple access bindings to an account or
@@ -12465,13 +12951,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExpandedDataSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExpandedDataSets(new ListExpandedDataSetsRequest
+        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExpandedDataSetsRequest request = new ListExpandedDataSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExpandedDataSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ExpandedDataSets on a property.
@@ -12489,13 +12984,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExpandedDataSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExpandedDataSetsAsync(new ListExpandedDataSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExpandedDataSetsRequest request = new ListExpandedDataSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExpandedDataSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ExpandedDataSets on a property.
@@ -12513,13 +13017,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExpandedDataSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExpandedDataSets(new ListExpandedDataSetsRequest
+        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExpandedDataSetsRequest request = new ListExpandedDataSetsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExpandedDataSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ExpandedDataSets on a property.
@@ -12537,13 +13050,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExpandedDataSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExpandedDataSetsAsync(new ListExpandedDataSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExpandedDataSetsRequest request = new ListExpandedDataSetsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExpandedDataSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a ExpandedDataSet.
@@ -13015,13 +13537,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChannelGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelGroups(new ListChannelGroupsRequest
+        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelGroupsRequest request = new ListChannelGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ChannelGroups on a property.
@@ -13040,13 +13571,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ChannelGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelGroupsAsync(new ListChannelGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelGroupsRequest request = new ListChannelGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ChannelGroups on a property.
@@ -13065,13 +13605,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChannelGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelGroups(new ListChannelGroupsRequest
+        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelGroupsRequest request = new ListChannelGroupsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ChannelGroups on a property.
@@ -13090,13 +13639,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ChannelGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelGroupsAsync(new ListChannelGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelGroupsRequest request = new ListChannelGroupsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a ChannelGroup.
@@ -13653,13 +14211,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BigQueryLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryLinks(new ListBigQueryLinksRequest
+        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryLinksRequest request = new ListBigQueryLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery Links on a property.
@@ -13679,13 +14246,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BigQueryLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryLinksAsync(new ListBigQueryLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryLinksRequest request = new ListBigQueryLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery Links on a property.
@@ -13705,13 +14281,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BigQueryLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryLinks(new ListBigQueryLinksRequest
+        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryLinksRequest request = new ListBigQueryLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery Links on a property.
@@ -13731,13 +14316,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BigQueryLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryLinksAsync(new ListBigQueryLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryLinksRequest request = new ListBigQueryLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the enhanced measurement settings for this data stream.
@@ -14516,13 +15110,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdSenseLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdSenseLinks(new ListAdSenseLinksRequest
+        public virtual gax::PagedEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdSenseLinksRequest request = new ListAdSenseLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdSenseLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AdSenseLinks on a property.
@@ -14542,13 +15145,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdSenseLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdSenseLinksAsync(new ListAdSenseLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdSenseLinksRequest request = new ListAdSenseLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdSenseLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AdSenseLinks on a property.
@@ -14568,13 +15180,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AdSenseLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdSenseLinks(new ListAdSenseLinksRequest
+        public virtual gax::PagedEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdSenseLinksRequest request = new ListAdSenseLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdSenseLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AdSenseLinks on a property.
@@ -14594,13 +15215,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AdSenseLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAdSenseLinksAsync(new ListAdSenseLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListAdSenseLinksResponse, AdSenseLink> ListAdSenseLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdSenseLinksRequest request = new ListAdSenseLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdSenseLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lookup for a single EventCreateRule.
@@ -14747,13 +15377,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EventCreateRule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventCreateRules(new ListEventCreateRulesRequest
+        public virtual gax::PagedEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventCreateRulesRequest request = new ListEventCreateRulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventCreateRules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EventCreateRules on a web data stream.
@@ -14771,13 +15410,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EventCreateRule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventCreateRulesAsync(new ListEventCreateRulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventCreateRulesRequest request = new ListEventCreateRulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventCreateRulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EventCreateRules on a web data stream.
@@ -14795,13 +15443,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EventCreateRule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRules(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventCreateRules(new ListEventCreateRulesRequest
+        public virtual gax::PagedEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRules(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventCreateRulesRequest request = new ListEventCreateRulesRequest
             {
                 ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventCreateRules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EventCreateRules on a web data stream.
@@ -14819,13 +15476,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EventCreateRule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRulesAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEventCreateRulesAsync(new ListEventCreateRulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEventCreateRulesResponse, EventCreateRule> ListEventCreateRulesAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventCreateRulesRequest request = new ListEventCreateRulesRequest
             {
                 ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventCreateRulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates an EventCreateRule.
@@ -15717,13 +16383,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CalculatedMetric"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCalculatedMetrics(new ListCalculatedMetricsRequest
+        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCalculatedMetricsRequest request = new ListCalculatedMetricsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCalculatedMetrics(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CalculatedMetrics on a property.
@@ -15741,13 +16416,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CalculatedMetric"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCalculatedMetricsAsync(new ListCalculatedMetricsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCalculatedMetricsRequest request = new ListCalculatedMetricsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCalculatedMetricsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CalculatedMetrics on a property.
@@ -15765,13 +16449,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CalculatedMetric"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCalculatedMetrics(new ListCalculatedMetricsRequest
+        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCalculatedMetricsRequest request = new ListCalculatedMetricsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCalculatedMetrics(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CalculatedMetrics on a property.
@@ -15789,13 +16482,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CalculatedMetric"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCalculatedMetricsAsync(new ListCalculatedMetricsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCalculatedMetricsRequest request = new ListCalculatedMetricsRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCalculatedMetricsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a CalculatedMetric on a property.
@@ -16206,13 +16908,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RollupPropertySourceLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRollupPropertySourceLinks(new ListRollupPropertySourceLinksRequest
+        public virtual gax::PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRollupPropertySourceLinksRequest request = new ListRollupPropertySourceLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRollupPropertySourceLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists roll-up property source Links on a property.
@@ -16233,13 +16944,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RollupPropertySourceLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRollupPropertySourceLinksAsync(new ListRollupPropertySourceLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRollupPropertySourceLinksRequest request = new ListRollupPropertySourceLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRollupPropertySourceLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists roll-up property source Links on a property.
@@ -16260,13 +16980,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RollupPropertySourceLink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRollupPropertySourceLinks(new ListRollupPropertySourceLinksRequest
+        public virtual gax::PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRollupPropertySourceLinksRequest request = new ListRollupPropertySourceLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRollupPropertySourceLinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists roll-up property source Links on a property.
@@ -16287,13 +17016,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RollupPropertySourceLink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRollupPropertySourceLinksAsync(new ListRollupPropertySourceLinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> ListRollupPropertySourceLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRollupPropertySourceLinksRequest request = new ListRollupPropertySourceLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRollupPropertySourceLinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a roll-up property source link.
@@ -16903,13 +17641,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubpropertyEventFilters(new ListSubpropertyEventFiltersRequest
+        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertyEventFiltersRequest request = new ListSubpropertyEventFiltersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertyEventFilters(request, callSettings);
+        }
 
         /// <summary>
         /// List all subproperty Event Filters on a property.
@@ -16929,13 +17676,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubpropertyEventFiltersAsync(new ListSubpropertyEventFiltersRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertyEventFiltersRequest request = new ListSubpropertyEventFiltersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertyEventFiltersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all subproperty Event Filters on a property.
@@ -16955,13 +17711,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubpropertyEventFilters(new ListSubpropertyEventFiltersRequest
+        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertyEventFiltersRequest request = new ListSubpropertyEventFiltersRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertyEventFilters(request, callSettings);
+        }
 
         /// <summary>
         /// List all subproperty Event Filters on a property.
@@ -16981,13 +17746,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubpropertyEventFiltersAsync(new ListSubpropertyEventFiltersRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertyEventFiltersRequest request = new ListSubpropertyEventFiltersRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertyEventFiltersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a subproperty Event Filter.

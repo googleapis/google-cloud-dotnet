@@ -333,13 +333,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Webhook"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWebhooksResponse, Webhook> ListWebhooks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebhooks(new ListWebhooksRequest
+        public virtual gax::PagedEnumerable<ListWebhooksResponse, Webhook> ListWebhooks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWebhooksRequest request = new ListWebhooksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWebhooks(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all webhooks in the specified agent.
@@ -358,13 +367,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Webhook"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWebhooksResponse, Webhook> ListWebhooksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebhooksAsync(new ListWebhooksRequest
+        public virtual gax::PagedAsyncEnumerable<ListWebhooksResponse, Webhook> ListWebhooksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWebhooksRequest request = new ListWebhooksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWebhooksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all webhooks in the specified agent.
@@ -383,13 +401,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Webhook"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWebhooksResponse, Webhook> ListWebhooks(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebhooks(new ListWebhooksRequest
+        public virtual gax::PagedEnumerable<ListWebhooksResponse, Webhook> ListWebhooks(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWebhooksRequest request = new ListWebhooksRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWebhooks(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all webhooks in the specified agent.
@@ -408,13 +435,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Webhook"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWebhooksResponse, Webhook> ListWebhooksAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebhooksAsync(new ListWebhooksRequest
+        public virtual gax::PagedAsyncEnumerable<ListWebhooksResponse, Webhook> ListWebhooksAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWebhooksRequest request = new ListWebhooksRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWebhooksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified webhook.

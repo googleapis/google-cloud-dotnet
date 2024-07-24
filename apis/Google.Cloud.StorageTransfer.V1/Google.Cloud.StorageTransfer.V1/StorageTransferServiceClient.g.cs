@@ -1158,13 +1158,22 @@ namespace Google.Cloud.StorageTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AgentPool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPools(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAgentPools(new ListAgentPoolsRequest
+        public virtual gax::PagedEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPools(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAgentPoolsRequest request = new ListAgentPoolsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAgentPools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists agent pools.
@@ -1182,13 +1191,22 @@ namespace Google.Cloud.StorageTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AgentPool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPoolsAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAgentPoolsAsync(new ListAgentPoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPoolsAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAgentPoolsRequest request = new ListAgentPoolsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAgentPoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an agent pool.

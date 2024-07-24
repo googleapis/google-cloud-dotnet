@@ -1158,13 +1158,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessages(new ListMessagesRequest
+        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists messages in a space that the caller is a member of, including
@@ -1188,13 +1197,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessagesAsync(new ListMessagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists messages in a space that the caller is a member of, including
@@ -1218,13 +1236,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessages(new ListMessagesRequest
+        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists messages in a space that the caller is a member of, including
@@ -1248,13 +1275,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessagesAsync(new ListMessagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists memberships in a space. For an example, see [List users and Google
@@ -1347,13 +1383,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Membership"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMembershipsResponse, Membership> ListMemberships(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMemberships(new ListMembershipsRequest
+        public virtual gax::PagedEnumerable<ListMembershipsResponse, Membership> ListMemberships(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembershipsRequest request = new ListMembershipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMemberships(request, callSettings);
+        }
 
         /// <summary>
         /// Lists memberships in a space. For an example, see [List users and Google
@@ -1392,13 +1437,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Membership"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMembershipsResponse, Membership> ListMembershipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMembershipsAsync(new ListMembershipsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMembershipsResponse, Membership> ListMembershipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembershipsRequest request = new ListMembershipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMembershipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists memberships in a space. For an example, see [List users and Google
@@ -1437,13 +1491,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Membership"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMembershipsResponse, Membership> ListMemberships(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMemberships(new ListMembershipsRequest
+        public virtual gax::PagedEnumerable<ListMembershipsResponse, Membership> ListMemberships(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembershipsRequest request = new ListMembershipsRequest
             {
                 ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMemberships(request, callSettings);
+        }
 
         /// <summary>
         /// Lists memberships in a space. For an example, see [List users and Google
@@ -1482,13 +1545,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Membership"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMembershipsResponse, Membership> ListMembershipsAsync(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMembershipsAsync(new ListMembershipsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMembershipsResponse, Membership> ListMembershipsAsync(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembershipsRequest request = new ListMembershipsRequest
             {
                 ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMembershipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns details about a membership. For an example, see
@@ -2792,12 +2864,19 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Space"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSpacesResponse, Space> ListSpaces(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpaces(new ListSpacesRequest
+        public virtual gax::PagedEnumerable<ListSpacesResponse, Space> ListSpaces(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpacesRequest request = new ListSpacesRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists spaces the caller is a member of. Group chats and DMs aren't listed
@@ -2830,12 +2909,19 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Space"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSpacesResponse, Space> ListSpacesAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpacesAsync(new ListSpacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSpacesResponse, Space> ListSpacesAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpacesRequest request = new ListSpacesRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns details about a space. For an example, see
@@ -5069,13 +5155,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Reaction"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReactionsResponse, Reaction> ListReactions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReactions(new ListReactionsRequest
+        public virtual gax::PagedEnumerable<ListReactionsResponse, Reaction> ListReactions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReactionsRequest request = new ListReactionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReactions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reactions to a message. For an example, see
@@ -5099,13 +5194,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Reaction"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReactionsResponse, Reaction> ListReactionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReactionsAsync(new ListReactionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReactionsResponse, Reaction> ListReactionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReactionsRequest request = new ListReactionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReactionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reactions to a message. For an example, see
@@ -5129,13 +5233,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Reaction"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReactionsResponse, Reaction> ListReactions(MessageName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReactions(new ListReactionsRequest
+        public virtual gax::PagedEnumerable<ListReactionsResponse, Reaction> ListReactions(MessageName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReactionsRequest request = new ListReactionsRequest
             {
                 ParentAsMessageName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReactions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reactions to a message. For an example, see
@@ -5159,13 +5272,22 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Reaction"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReactionsResponse, Reaction> ListReactionsAsync(MessageName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReactionsAsync(new ListReactionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReactionsResponse, Reaction> ListReactionsAsync(MessageName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReactionsRequest request = new ListReactionsRequest
             {
                 ParentAsMessageName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReactionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a reaction to a message. Only unicode emojis are supported.
@@ -6371,14 +6493,23 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SpaceEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpaceEvents(new ListSpaceEventsRequest
+        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpaceEventsRequest request = new ListSpaceEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpaceEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists events from a Google Chat space. For each event, the
@@ -6467,14 +6598,23 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SpaceEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpaceEventsAsync(new ListSpaceEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpaceEventsRequest request = new ListSpaceEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpaceEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists events from a Google Chat space. For each event, the
@@ -6563,14 +6703,23 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SpaceEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpaceEvents(new ListSpaceEventsRequest
+        public virtual gax::PagedEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEvents(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpaceEventsRequest request = new ListSpaceEventsRequest
             {
                 ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpaceEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists events from a Google Chat space. For each event, the
@@ -6659,14 +6808,23 @@ namespace Google.Apps.Chat.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SpaceEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpaceEventsAsync(new ListSpaceEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSpaceEventsResponse, SpaceEvent> ListSpaceEventsAsync(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpaceEventsRequest request = new ListSpaceEventsRequest
             {
                 ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpaceEventsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ChatService client wrapper implementation, for convenient use.</summary>

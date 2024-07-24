@@ -1250,13 +1250,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypes(new ListProcessorTypesRequest
+        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processor types that exist.
@@ -1275,13 +1284,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypesAsync(new ListProcessorTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processor types that exist.
@@ -1300,13 +1318,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypes(new ListProcessorTypesRequest
+        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processor types that exist.
@@ -1325,13 +1352,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypesAsync(new ListProcessorTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a processor type detail.
@@ -1473,13 +1509,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessors(new ListProcessorsRequest
+        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -1498,13 +1543,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorsAsync(new ListProcessorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -1523,13 +1577,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessors(new ListProcessorsRequest
+        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -1548,13 +1611,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorsAsync(new ListProcessorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a processor detail.
@@ -1986,13 +2058,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersions(new ListProcessorVersionsRequest
+        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all versions of a processor.
@@ -2012,13 +2093,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersionsAsync(new ListProcessorVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all versions of a processor.
@@ -2038,13 +2128,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersions(new ListProcessorVersionsRequest
+        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all versions of a processor.
@@ -2064,13 +2163,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersionsAsync(new ListProcessorVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the processor version, all artifacts under the processor version
@@ -3471,13 +3579,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluations(new ListEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a set of evaluations for a given processor version.
@@ -3498,13 +3615,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationsAsync(new ListEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a set of evaluations for a given processor version.
@@ -3525,13 +3651,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluations(new ListEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 ParentAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a set of evaluations for a given processor version.
@@ -3552,13 +3687,22 @@ namespace Google.Cloud.DocumentAI.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationsAsync(new ListEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 ParentAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationsAsync(request, callSettings);
+        }
     }
 
     /// <summary>DocumentProcessorService client wrapper implementation, for convenient use.</summary>

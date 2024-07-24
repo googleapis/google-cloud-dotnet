@@ -515,13 +515,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraints(new ListConstraintsRequest
+        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -545,13 +554,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraintsAsync(new ListConstraintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -575,13 +593,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraints(new ListConstraintsRequest
+        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -605,13 +632,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraintsAsync(new ListConstraintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -635,13 +671,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraints(new ListConstraintsRequest
+        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -665,13 +710,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraintsAsync(new ListConstraintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -695,13 +749,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraints(new ListConstraintsRequest
+        public virtual gax::PagedEnumerable<ListConstraintsResponse, Constraint> ListConstraints(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists constraints that could be applied on the specified resource.
@@ -725,13 +788,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Constraint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConstraintsAsync(new ListConstraintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConstraintsResponse, Constraint> ListConstraintsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConstraintsRequest request = new ListConstraintsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConstraintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -774,13 +846,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicies(new ListPoliciesRequest
+        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -805,13 +886,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPoliciesAsync(new ListPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -836,13 +926,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicies(new ListPoliciesRequest
+        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -867,13 +966,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPoliciesAsync(new ListPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -898,13 +1006,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicies(new ListPoliciesRequest
+        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -929,13 +1046,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPoliciesAsync(new ListPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -960,13 +1086,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicies(new ListPoliciesRequest
+        public virtual gax::PagedEnumerable<ListPoliciesResponse, Policy> ListPolicies(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the policies that exist on a particular resource.
@@ -991,13 +1126,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPoliciesAsync(new ListPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPoliciesResponse, Policy> ListPoliciesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPoliciesRequest request = new ListPoliciesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a policy on a resource.
@@ -2393,13 +2537,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomConstraint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomConstraints(new ListCustomConstraintsRequest
+        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomConstraintsRequest request = new ListCustomConstraintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomConstraints(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the custom constraints that exist on a particular
@@ -2422,13 +2575,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomConstraint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomConstraintsAsync(new ListCustomConstraintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomConstraintsRequest request = new ListCustomConstraintsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomConstraintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the custom constraints that exist on a particular
@@ -2451,13 +2613,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomConstraint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomConstraints(new ListCustomConstraintsRequest
+        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomConstraintsRequest request = new ListCustomConstraintsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomConstraints(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves all of the custom constraints that exist on a particular
@@ -2480,13 +2651,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomConstraint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomConstraintsAsync(new ListCustomConstraintsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomConstraintsRequest request = new ListCustomConstraintsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomConstraintsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a custom constraint.

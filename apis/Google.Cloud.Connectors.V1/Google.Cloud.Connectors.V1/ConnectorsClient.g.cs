@@ -619,13 +619,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -644,13 +653,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -669,13 +687,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -694,13 +721,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Connection.
@@ -1321,13 +1357,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProviders(new ListProvidersRequest
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProviders(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Providers in a given project and location.
@@ -1347,13 +1392,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvidersAsync(new ListProvidersRequest
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvidersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Providers in a given project and location.
@@ -1373,13 +1427,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProviders(new ListProvidersRequest
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProviders(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Providers in a given project and location.
@@ -1399,13 +1462,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvidersAsync(new ListProvidersRequest
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvidersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a provider.
@@ -1560,13 +1632,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectorsResponse, Connector> ListConnectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectors(new ListConnectorsRequest
+        public virtual gax::PagedEnumerable<ListConnectorsResponse, Connector> ListConnectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorsRequest request = new ListConnectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connectors in a given project and location.
@@ -1586,13 +1667,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectorsResponse, Connector> ListConnectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectorsAsync(new ListConnectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectorsResponse, Connector> ListConnectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorsRequest request = new ListConnectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connectors in a given project and location.
@@ -1612,13 +1702,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectorsResponse, Connector> ListConnectors(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectors(new ListConnectorsRequest
+        public virtual gax::PagedEnumerable<ListConnectorsResponse, Connector> ListConnectors(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorsRequest request = new ListConnectorsRequest
             {
                 ParentAsProviderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connectors in a given project and location.
@@ -1638,13 +1737,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectorsResponse, Connector> ListConnectorsAsync(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectorsAsync(new ListConnectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectorsResponse, Connector> ListConnectorsAsync(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorsRequest request = new ListConnectorsRequest
             {
                 ParentAsProviderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Connector.
@@ -1799,13 +1907,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectorVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectorVersions(new ListConnectorVersionsRequest
+        public virtual gax::PagedEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorVersionsRequest request = new ListConnectorVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectorVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connector Versions in a given project and location.
@@ -1825,13 +1942,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectorVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectorVersionsAsync(new ListConnectorVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorVersionsRequest request = new ListConnectorVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectorVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connector Versions in a given project and location.
@@ -1851,13 +1977,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConnectorVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersions(ConnectorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectorVersions(new ListConnectorVersionsRequest
+        public virtual gax::PagedEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersions(ConnectorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorVersionsRequest request = new ListConnectorVersionsRequest
             {
                 ParentAsConnectorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectorVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connector Versions in a given project and location.
@@ -1877,13 +2012,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConnectorVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersionsAsync(ConnectorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectorVersionsAsync(new ListConnectorVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectorVersionsResponse, ConnectorVersion> ListConnectorVersionsAsync(ConnectorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectorVersionsRequest request = new ListConnectorVersionsRequest
             {
                 ParentAsConnectorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectorVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single connector version.
@@ -2308,13 +2452,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RuntimeEntitySchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeEntitySchemas(new ListRuntimeEntitySchemasRequest
+        public virtual gax::PagedEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeEntitySchemasRequest request = new ListRuntimeEntitySchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeEntitySchemas(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime entities filtered by entity name.
@@ -2334,13 +2487,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RuntimeEntitySchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeEntitySchemasAsync(new ListRuntimeEntitySchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeEntitySchemasRequest request = new ListRuntimeEntitySchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeEntitySchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime entities filtered by entity name.
@@ -2360,13 +2522,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RuntimeEntitySchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemas(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeEntitySchemas(new ListRuntimeEntitySchemasRequest
+        public virtual gax::PagedEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemas(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeEntitySchemasRequest request = new ListRuntimeEntitySchemasRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeEntitySchemas(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime entities filtered by entity name.
@@ -2386,13 +2557,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RuntimeEntitySchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemasAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeEntitySchemasAsync(new ListRuntimeEntitySchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimeEntitySchemasResponse, RuntimeEntitySchema> ListRuntimeEntitySchemasAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeEntitySchemasRequest request = new ListRuntimeEntitySchemasRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeEntitySchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime actions filtered by action name.
@@ -2430,13 +2610,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RuntimeActionSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeActionSchemas(new ListRuntimeActionSchemasRequest
+        public virtual gax::PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeActionSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime actions filtered by action name.
@@ -2456,13 +2645,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RuntimeActionSchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeActionSchemasAsync(new ListRuntimeActionSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeActionSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime actions filtered by action name.
@@ -2482,13 +2680,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RuntimeActionSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemas(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeActionSchemas(new ListRuntimeActionSchemasRequest
+        public virtual gax::PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemas(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeActionSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// List schema of a runtime actions filtered by action name.
@@ -2508,13 +2715,22 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RuntimeActionSchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemasAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimeActionSchemasAsync(new ListRuntimeActionSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemasAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimeActionSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the runtimeConfig of a location.

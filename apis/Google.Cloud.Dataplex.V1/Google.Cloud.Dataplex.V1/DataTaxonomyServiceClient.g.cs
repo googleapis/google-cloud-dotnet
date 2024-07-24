@@ -1103,13 +1103,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataTaxonomy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataTaxonomies(new ListDataTaxonomiesRequest
+        public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataTaxonomies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataTaxonomy resources in a project and location.
@@ -1129,13 +1138,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataTaxonomy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataTaxonomiesAsync(new ListDataTaxonomiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataTaxonomiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataTaxonomy resources in a project and location.
@@ -1155,13 +1173,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataTaxonomy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataTaxonomies(new ListDataTaxonomiesRequest
+        public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataTaxonomies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataTaxonomy resources in a project and location.
@@ -1181,13 +1208,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataTaxonomy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataTaxonomiesAsync(new ListDataTaxonomiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataTaxonomiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a DataTaxonomy resource.
@@ -1807,13 +1843,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttributeBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributeBindings(new ListDataAttributeBindingsRequest
+        public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributeBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataAttributeBinding resources in a project and location.
@@ -1832,13 +1877,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttributeBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributeBindingsAsync(new ListDataAttributeBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributeBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataAttributeBinding resources in a project and location.
@@ -1857,13 +1911,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttributeBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributeBindings(new ListDataAttributeBindingsRequest
+        public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributeBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataAttributeBinding resources in a project and location.
@@ -1882,13 +1945,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttributeBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributeBindingsAsync(new ListDataAttributeBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributeBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a DataAttributeBinding resource.
@@ -2490,13 +2562,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttribute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributes(new ListDataAttributesRequest
+        public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributesRequest request = new ListDataAttributesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Data Attribute resources in a DataTaxonomy.
@@ -2515,13 +2596,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttribute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributesAsync(new ListDataAttributesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributesRequest request = new ListDataAttributesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Data Attribute resources in a DataTaxonomy.
@@ -2540,13 +2630,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttribute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(DataTaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributes(new ListDataAttributesRequest
+        public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(DataTaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributesRequest request = new ListDataAttributesRequest
             {
                 ParentAsDataTaxonomyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Data Attribute resources in a DataTaxonomy.
@@ -2565,13 +2664,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttribute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(DataTaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataAttributesAsync(new ListDataAttributesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(DataTaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataAttributesRequest request = new ListDataAttributesRequest
             {
                 ParentAsDataTaxonomyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataAttributesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a Data Attribute resource.

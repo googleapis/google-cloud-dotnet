@@ -917,13 +917,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Key"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeys(new ListKeysRequest
+        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeysRequest request = new ListKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all keys that belong to a project.
@@ -942,13 +951,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeysAsync(new ListKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeysRequest request = new ListKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all keys that belong to a project.
@@ -967,13 +985,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Key"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeys(new ListKeysRequest
+        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeysRequest request = new ListKeysRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all keys that belong to a project.
@@ -992,13 +1019,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeysAsync(new ListKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeysRequest request = new ListKeysRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the secret key related to the specified public key.
@@ -1779,13 +1815,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirewallPolicies(new ListFirewallPoliciesRequest
+        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirewallPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all firewall policies that belong to a project.
@@ -1804,13 +1849,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirewallPoliciesAsync(new ListFirewallPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirewallPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all firewall policies that belong to a project.
@@ -1829,13 +1883,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirewallPolicies(new ListFirewallPoliciesRequest
+        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirewallPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all firewall policies that belong to a project.
@@ -1854,13 +1917,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFirewallPoliciesAsync(new ListFirewallPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFirewallPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified firewall policy.
@@ -2350,13 +2422,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroups(new ListRelatedAccountGroupsRequest
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupsRequest request = new ListRelatedAccountGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroups(request, callSettings);
+        }
 
         /// <summary>
         /// List groups of related accounts.
@@ -2375,13 +2456,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroupsAsync(new ListRelatedAccountGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupsRequest request = new ListRelatedAccountGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List groups of related accounts.
@@ -2400,13 +2490,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroups(new ListRelatedAccountGroupsRequest
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupsRequest request = new ListRelatedAccountGroupsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroups(request, callSettings);
+        }
 
         /// <summary>
         /// List groups of related accounts.
@@ -2425,13 +2524,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroupsAsync(new ListRelatedAccountGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupsRequest request = new ListRelatedAccountGroupsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get memberships in a group of related accounts.
@@ -2470,13 +2578,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroupMemberships(new ListRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupMembershipsRequest request = new ListRelatedAccountGroupMembershipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroupMemberships(request, callSettings);
+        }
 
         /// <summary>
         /// Get memberships in a group of related accounts.
@@ -2497,13 +2614,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroupMembershipsAsync(new ListRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupMembershipsRequest request = new ListRelatedAccountGroupMembershipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroupMembershipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get memberships in a group of related accounts.
@@ -2522,13 +2648,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(RelatedAccountGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroupMemberships(new ListRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(RelatedAccountGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupMembershipsRequest request = new ListRelatedAccountGroupMembershipsRequest
             {
                 ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroupMemberships(request, callSettings);
+        }
 
         /// <summary>
         /// Get memberships in a group of related accounts.
@@ -2549,13 +2684,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRelatedAccountGroupMembershipsAsync(new ListRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRelatedAccountGroupMembershipsRequest request = new ListRelatedAccountGroupMembershipsRequest
             {
                 ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRelatedAccountGroupMembershipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Search group memberships related to a given account.
@@ -2603,14 +2747,23 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchRelatedAccountGroupMemberships(request, callSettings);
+        }
 
         /// <summary>
         /// Search group memberships related to a given account.
@@ -2640,14 +2793,23 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchRelatedAccountGroupMembershipsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Search group memberships related to a given account.
@@ -2675,14 +2837,23 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(gagr::ProjectName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(gagr::ProjectName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchRelatedAccountGroupMemberships(request, callSettings);
+        }
 
         /// <summary>
         /// Search group memberships related to a given account.
@@ -2712,14 +2883,23 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(gagr::ProjectName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(gagr::ProjectName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchRelatedAccountGroupMembershipsAsync(request, callSettings);
+        }
     }
 
     /// <summary>RecaptchaEnterpriseService client wrapper implementation, for convenient use.</summary>

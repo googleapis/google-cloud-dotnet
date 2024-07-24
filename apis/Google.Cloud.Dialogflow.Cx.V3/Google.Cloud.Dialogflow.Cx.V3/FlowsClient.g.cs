@@ -772,13 +772,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Flow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFlowsResponse, Flow> ListFlows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFlows(new ListFlowsRequest
+        public virtual gax::PagedEnumerable<ListFlowsResponse, Flow> ListFlows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlowsRequest request = new ListFlowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlows(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all flows in the specified agent.
@@ -797,13 +806,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Flow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFlowsResponse, Flow> ListFlowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFlowsAsync(new ListFlowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFlowsResponse, Flow> ListFlowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlowsRequest request = new ListFlowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all flows in the specified agent.
@@ -822,13 +840,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Flow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFlowsResponse, Flow> ListFlows(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFlows(new ListFlowsRequest
+        public virtual gax::PagedEnumerable<ListFlowsResponse, Flow> ListFlows(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlowsRequest request = new ListFlowsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlows(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all flows in the specified agent.
@@ -847,13 +874,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Flow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFlowsResponse, Flow> ListFlowsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFlowsAsync(new ListFlowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFlowsResponse, Flow> ListFlowsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlowsRequest request = new ListFlowsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified flow.

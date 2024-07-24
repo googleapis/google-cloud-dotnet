@@ -339,13 +339,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagBindings(new ListTagBindingsRequest
+        public virtual gax::PagedEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagBindingsRequest request = new ListTagBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the TagBindings for the given Google Cloud resource, as specified
@@ -369,13 +378,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagBindingsAsync(new ListTagBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagBindingsRequest request = new ListTagBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the TagBindings for the given Google Cloud resource, as specified
@@ -399,13 +417,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindings(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagBindings(new ListTagBindingsRequest
+        public virtual gax::PagedEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindings(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagBindingsRequest request = new ListTagBindingsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the TagBindings for the given Google Cloud resource, as specified
@@ -429,13 +456,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindingsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagBindingsAsync(new ListTagBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagBindingsResponse, TagBinding> ListTagBindingsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagBindingsRequest request = new ListTagBindingsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a TagBinding between a TagValue and a Google Cloud resource.
@@ -711,13 +747,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EffectiveTag"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEffectiveTags(new ListEffectiveTagsRequest
+        public virtual gax::PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEffectiveTagsRequest request = new ListEffectiveTagsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEffectiveTags(request, callSettings);
+        }
 
         /// <summary>
         /// Return a list of effective tags for the given Google Cloud resource, as
@@ -738,13 +783,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EffectiveTag"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEffectiveTagsAsync(new ListEffectiveTagsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEffectiveTagsRequest request = new ListEffectiveTagsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEffectiveTagsAsync(request, callSettings);
+        }
     }
 
     /// <summary>TagBindings client wrapper implementation, for convenient use.</summary>

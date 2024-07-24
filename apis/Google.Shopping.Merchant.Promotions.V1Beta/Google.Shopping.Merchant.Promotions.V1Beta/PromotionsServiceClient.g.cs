@@ -464,13 +464,22 @@ namespace Google.Shopping.Merchant.Promotions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Promotion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPromotionsResponse, Promotion> ListPromotions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPromotions(new ListPromotionsRequest
+        public virtual gax::PagedEnumerable<ListPromotionsResponse, Promotion> ListPromotions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPromotionsRequest request = new ListPromotionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPromotions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the promotions in your Merchant Center account. The
@@ -494,13 +503,22 @@ namespace Google.Shopping.Merchant.Promotions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Promotion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPromotionsResponse, Promotion> ListPromotionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPromotionsAsync(new ListPromotionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPromotionsResponse, Promotion> ListPromotionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPromotionsRequest request = new ListPromotionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPromotionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>PromotionsService client wrapper implementation, for convenient use.</summary>

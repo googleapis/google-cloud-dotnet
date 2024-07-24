@@ -1784,13 +1784,22 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrations(new ListRegistrationsRequest
+        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `Registration` resources in a project.
@@ -1809,13 +1818,22 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrationsAsync(new ListRegistrationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `Registration` resources in a project.
@@ -1834,13 +1852,22 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrations(new ListRegistrationsRequest
+        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `Registration` resources in a project.
@@ -1859,13 +1886,22 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrationsAsync(new ListRegistrationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a `Registration` resource.

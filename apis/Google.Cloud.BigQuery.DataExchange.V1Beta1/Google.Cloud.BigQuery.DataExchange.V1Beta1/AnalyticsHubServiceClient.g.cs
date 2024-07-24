@@ -586,13 +586,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataExchange"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchanges(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataExchanges(new ListDataExchangesRequest
+        public virtual gax::PagedEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchanges(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataExchangesRequest request = new ListDataExchangesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataExchanges(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all data exchanges in a given project and location.
@@ -611,13 +620,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataExchange"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchangesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataExchangesAsync(new ListDataExchangesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchangesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataExchangesRequest request = new ListDataExchangesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataExchangesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all data exchanges in a given project and location.
@@ -636,13 +654,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataExchange"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchanges(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataExchanges(new ListDataExchangesRequest
+        public virtual gax::PagedEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchanges(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataExchangesRequest request = new ListDataExchangesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataExchanges(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all data exchanges in a given project and location.
@@ -661,13 +688,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataExchange"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchangesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataExchangesAsync(new ListDataExchangesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataExchangesResponse, DataExchange> ListDataExchangesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataExchangesRequest request = new ListDataExchangesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataExchangesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all data exchanges from projects in a given organization and
@@ -707,13 +743,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataExchange"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrgDataExchangesResponse, DataExchange> ListOrgDataExchanges(string organization, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrgDataExchanges(new ListOrgDataExchangesRequest
+        public virtual gax::PagedEnumerable<ListOrgDataExchangesResponse, DataExchange> ListOrgDataExchanges(string organization, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrgDataExchangesRequest request = new ListOrgDataExchangesRequest
             {
                 Organization = gax::GaxPreconditions.CheckNotNullOrEmpty(organization, nameof(organization)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrgDataExchanges(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all data exchanges from projects in a given organization and
@@ -733,13 +778,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataExchange"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrgDataExchangesResponse, DataExchange> ListOrgDataExchangesAsync(string organization, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrgDataExchangesAsync(new ListOrgDataExchangesRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrgDataExchangesResponse, DataExchange> ListOrgDataExchangesAsync(string organization, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrgDataExchangesRequest request = new ListOrgDataExchangesRequest
             {
                 Organization = gax::GaxPreconditions.CheckNotNullOrEmpty(organization, nameof(organization)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrgDataExchangesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a data exchange.
@@ -1214,13 +1268,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Listing"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListListingsResponse, Listing> ListListings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListListings(new ListListingsRequest
+        public virtual gax::PagedEnumerable<ListListingsResponse, Listing> ListListings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListListingsRequest request = new ListListingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListListings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all listings in a given project and location.
@@ -1239,13 +1302,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Listing"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListListingsResponse, Listing> ListListingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListListingsAsync(new ListListingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListListingsResponse, Listing> ListListingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListListingsRequest request = new ListListingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListListingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all listings in a given project and location.
@@ -1264,13 +1336,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Listing"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListListingsResponse, Listing> ListListings(DataExchangeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListListings(new ListListingsRequest
+        public virtual gax::PagedEnumerable<ListListingsResponse, Listing> ListListings(DataExchangeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListListingsRequest request = new ListListingsRequest
             {
                 ParentAsDataExchangeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListListings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all listings in a given project and location.
@@ -1289,13 +1370,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Listing"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListListingsResponse, Listing> ListListingsAsync(DataExchangeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListListingsAsync(new ListListingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListListingsResponse, Listing> ListListingsAsync(DataExchangeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListListingsRequest request = new ListListingsRequest
             {
                 ParentAsDataExchangeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListListingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a listing.

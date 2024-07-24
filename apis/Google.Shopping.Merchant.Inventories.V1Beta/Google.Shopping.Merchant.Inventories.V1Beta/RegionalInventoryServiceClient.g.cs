@@ -306,13 +306,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RegionalInventory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegionalInventories(new ListRegionalInventoriesRequest
+        public virtual gax::PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegionalInventories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `RegionalInventory` resources for the given product in your
@@ -336,13 +345,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RegionalInventory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegionalInventoriesAsync(new ListRegionalInventoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegionalInventoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `RegionalInventory` resources for the given product in your
@@ -366,13 +384,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RegionalInventory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventories(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegionalInventories(new ListRegionalInventoriesRequest
+        public virtual gax::PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventories(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegionalInventories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `RegionalInventory` resources for the given product in your
@@ -396,13 +423,22 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RegionalInventory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventoriesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegionalInventoriesAsync(new ListRegionalInventoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> ListRegionalInventoriesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegionalInventoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Inserts a `RegionalInventory` to a given product in your

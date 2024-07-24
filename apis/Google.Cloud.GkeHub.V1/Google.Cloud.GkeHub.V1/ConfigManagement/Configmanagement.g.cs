@@ -37,20 +37,31 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             "dGF0ZRgFIAEoCzI+Lmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdl",
             "bWVudC52MS5Qb2xpY3lDb250cm9sbGVyU3RhdGUSZQoaaGllcmFyY2h5X2Nv",
             "bnRyb2xsZXJfc3RhdGUYByABKAsyQS5nb29nbGUuY2xvdWQuZ2tlaHViLmNv",
-            "bmZpZ21hbmFnZW1lbnQudjEuSGllcmFyY2h5Q29udHJvbGxlclN0YXRlIqMC",
+            "bmZpZ21hbmFnZW1lbnQudjEuSGllcmFyY2h5Q29udHJvbGxlclN0YXRlIucD",
             "Cg5NZW1iZXJzaGlwU3BlYxJICgtjb25maWdfc3luYxgBIAEoCzIzLmdvb2ds",
             "ZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5Db25maWdTeW5j",
             "ElQKEXBvbGljeV9jb250cm9sbGVyGAIgASgLMjkuZ29vZ2xlLmNsb3VkLmdr",
             "ZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLlBvbGljeUNvbnRyb2xsZXISYAoU",
             "aGllcmFyY2h5X2NvbnRyb2xsZXIYBCABKAsyQi5nb29nbGUuY2xvdWQuZ2tl",
             "aHViLmNvbmZpZ21hbmFnZW1lbnQudjEuSGllcmFyY2h5Q29udHJvbGxlckNv",
-            "bmZpZxIPCgd2ZXJzaW9uGAogASgJImQKCkNvbmZpZ1N5bmMSPwoDZ2l0GAcg",
-            "ASgLMjIuZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYx",
-            "LkdpdENvbmZpZxIVCg1zb3VyY2VfZm9ybWF0GAggASgJIr4BCglHaXRDb25m",
-            "aWcSEQoJc3luY19yZXBvGAEgASgJEhMKC3N5bmNfYnJhbmNoGAIgASgJEhIK",
-            "CnBvbGljeV9kaXIYAyABKAkSFgoOc3luY193YWl0X3NlY3MYBCABKAMSEAoI",
-            "c3luY19yZXYYBSABKAkSEwoLc2VjcmV0X3R5cGUYBiABKAkSEwoLaHR0cHNf",
-            "cHJveHkYByABKAkSIQoZZ2NwX3NlcnZpY2VfYWNjb3VudF9lbWFpbBgIIAEo",
+            "bmZpZxIPCgd2ZXJzaW9uGAogASgJEg8KB2NsdXN0ZXIYCyABKAkSVgoKbWFu",
+            "YWdlbWVudBgMIAEoDjJCLmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFu",
+            "YWdlbWVudC52MS5NZW1iZXJzaGlwU3BlYy5NYW5hZ2VtZW50IlkKCk1hbmFn",
+            "ZW1lbnQSGgoWTUFOQUdFTUVOVF9VTlNQRUNJRklFRBAAEhgKFE1BTkFHRU1F",
+            "TlRfQVVUT01BVElDEAESFQoRTUFOQUdFTUVOVF9NQU5VQUwQAiKJAgoKQ29u",
+            "ZmlnU3luYxI/CgNnaXQYByABKAsyMi5nb29nbGUuY2xvdWQuZ2tlaHViLmNv",
+            "bmZpZ21hbmFnZW1lbnQudjEuR2l0Q29uZmlnEhUKDXNvdXJjZV9mb3JtYXQY",
+            "CCABKAkSFAoHZW5hYmxlZBgKIAEoCEgAiAEBEhUKDXByZXZlbnRfZHJpZnQY",
+            "CyABKAgSPwoDb2NpGAwgASgLMjIuZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25m",
+            "aWdtYW5hZ2VtZW50LnYxLk9jaUNvbmZpZxIpCiFtZXRyaWNzX2djcF9zZXJ2",
+            "aWNlX2FjY291bnRfZW1haWwYDyABKAlCCgoIX2VuYWJsZWQivgEKCUdpdENv",
+            "bmZpZxIRCglzeW5jX3JlcG8YASABKAkSEwoLc3luY19icmFuY2gYAiABKAkS",
+            "EgoKcG9saWN5X2RpchgDIAEoCRIWCg5zeW5jX3dhaXRfc2VjcxgEIAEoAxIQ",
+            "CghzeW5jX3JldhgFIAEoCRITCgtzZWNyZXRfdHlwZRgGIAEoCRITCgtodHRw",
+            "c19wcm94eRgHIAEoCRIhChlnY3Bfc2VydmljZV9hY2NvdW50X2VtYWlsGAgg",
+            "ASgJIoIBCglPY2lDb25maWcSEQoJc3luY19yZXBvGAEgASgJEhIKCnBvbGlj",
+            "eV9kaXIYAiABKAkSFgoOc3luY193YWl0X3NlY3MYAyABKAMSEwoLc2VjcmV0",
+            "X3R5cGUYBCABKAkSIQoZZ2NwX3NlcnZpY2VfYWNjb3VudF9lbWFpbBgFIAEo",
             "CSKJAgoQUG9saWN5Q29udHJvbGxlchIPCgdlbmFibGVkGAEgASgIEicKGnRl",
             "bXBsYXRlX2xpYnJhcnlfaW5zdGFsbGVkGAIgASgISACIAQESIwoWYXVkaXRf",
             "aW50ZXJ2YWxfc2Vjb25kcxgDIAEoA0gBiAEBEh0KFWV4ZW1wdGFibGVfbmFt",
@@ -74,72 +85,89 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             "dGUYAiABKA4yOC5nb29nbGUuY2xvdWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1l",
             "bnQudjEuRGVwbG95bWVudFN0YXRlEkUKBmVycm9ycxgDIAMoCzI1Lmdvb2ds",
             "ZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5JbnN0YWxsRXJy",
-            "b3IiJQoMSW5zdGFsbEVycm9yEhUKDWVycm9yX21lc3NhZ2UYASABKAkihAIK",
+            "b3IiJQoMSW5zdGFsbEVycm9yEhUKDWVycm9yX21lc3NhZ2UYASABKAkixAYK",
             "D0NvbmZpZ1N5bmNTdGF0ZRJLCgd2ZXJzaW9uGAEgASgLMjouZ29vZ2xlLmNs",
             "b3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkNvbmZpZ1N5bmNWZXJz",
             "aW9uElwKEGRlcGxveW1lbnRfc3RhdGUYAiABKAsyQi5nb29nbGUuY2xvdWQu",
             "Z2tlaHViLmNvbmZpZ21hbmFnZW1lbnQudjEuQ29uZmlnU3luY0RlcGxveW1l",
             "bnRTdGF0ZRJGCgpzeW5jX3N0YXRlGAMgASgLMjIuZ29vZ2xlLmNsb3VkLmdr",
-            "ZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLlN5bmNTdGF0ZSKNAQoRQ29uZmln",
-            "U3luY1ZlcnNpb24SEAoIaW1wb3J0ZXIYASABKAkSDgoGc3luY2VyGAIgASgJ",
-            "EhAKCGdpdF9zeW5jGAMgASgJEg8KB21vbml0b3IYBCABKAkSGgoScmVjb25j",
-            "aWxlcl9tYW5hZ2VyGAUgASgJEhcKD3Jvb3RfcmVjb25jaWxlchgGIAEoCSLx",
-            "AwoZQ29uZmlnU3luY0RlcGxveW1lbnRTdGF0ZRJKCghpbXBvcnRlchgBIAEo",
-            "DjI4Lmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5E",
-            "ZXBsb3ltZW50U3RhdGUSSAoGc3luY2VyGAIgASgOMjguZ29vZ2xlLmNsb3Vk",
-            "LmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkRlcGxveW1lbnRTdGF0ZRJK",
-            "CghnaXRfc3luYxgDIAEoDjI4Lmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmln",
-            "bWFuYWdlbWVudC52MS5EZXBsb3ltZW50U3RhdGUSSQoHbW9uaXRvchgEIAEo",
-            "DjI4Lmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5E",
-            "ZXBsb3ltZW50U3RhdGUSVAoScmVjb25jaWxlcl9tYW5hZ2VyGAUgASgOMjgu",
-            "Z29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkRlcGxv",
-            "eW1lbnRTdGF0ZRJRCg9yb290X3JlY29uY2lsZXIYBiABKA4yOC5nb29nbGUu",
-            "Y2xvdWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1lbnQudjEuRGVwbG95bWVudFN0",
-            "YXRlIrsDCglTeW5jU3RhdGUSFAoMc291cmNlX3Rva2VuGAEgASgJEhQKDGlt",
-            "cG9ydF90b2tlbhgCIAEoCRISCgpzeW5jX3Rva2VuGAMgASgJEhUKCWxhc3Rf",
-            "c3luYxgEIAEoCUICGAESMgoObGFzdF9zeW5jX3RpbWUYByABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEkkKBGNvZGUYBSABKA4yOy5nb29nbGUu",
-            "Y2xvdWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1lbnQudjEuU3luY1N0YXRlLlN5",
-            "bmNDb2RlEkIKBmVycm9ycxgGIAMoCzIyLmdvb2dsZS5jbG91ZC5na2VodWIu",
-            "Y29uZmlnbWFuYWdlbWVudC52MS5TeW5jRXJyb3IikwEKCFN5bmNDb2RlEhkK",
-            "FVNZTkNfQ09ERV9VTlNQRUNJRklFRBAAEgoKBlNZTkNFRBABEgsKB1BFTkRJ",
-            "TkcQAhIJCgVFUlJPUhADEhIKDk5PVF9DT05GSUdVUkVEEAQSEQoNTk9UX0lO",
-            "U1RBTExFRBAFEhAKDFVOQVVUSE9SSVpFRBAGEg8KC1VOUkVBQ0hBQkxFEAci",
-            "gQEKCVN5bmNFcnJvchIMCgRjb2RlGAEgASgJEhUKDWVycm9yX21lc3NhZ2UY",
-            "AiABKAkSTwoPZXJyb3JfcmVzb3VyY2VzGAMgAygLMjYuZ29vZ2xlLmNsb3Vk",
-            "LmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkVycm9yUmVzb3VyY2UiqAEK",
-            "DUVycm9yUmVzb3VyY2USEwoLc291cmNlX3BhdGgYASABKAkSFQoNcmVzb3Vy",
-            "Y2VfbmFtZRgCIAEoCRIaChJyZXNvdXJjZV9uYW1lc3BhY2UYAyABKAkSTwoM",
-            "cmVzb3VyY2VfZ3ZrGAQgASgLMjkuZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25m",
-            "aWdtYW5hZ2VtZW50LnYxLkdyb3VwVmVyc2lvbktpbmQiQAoQR3JvdXBWZXJz",
-            "aW9uS2luZBINCgVncm91cBgBIAEoCRIPCgd2ZXJzaW9uGAIgASgJEgwKBGtp",
-            "bmQYAyABKAkiyAEKFVBvbGljeUNvbnRyb2xsZXJTdGF0ZRJRCgd2ZXJzaW9u",
-            "GAEgASgLMkAuZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50",
-            "LnYxLlBvbGljeUNvbnRyb2xsZXJWZXJzaW9uElwKEGRlcGxveW1lbnRfc3Rh",
-            "dGUYAiABKAsyQi5nb29nbGUuY2xvdWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1l",
-            "bnQudjEuR2F0ZWtlZXBlckRlcGxveW1lbnRTdGF0ZSIqChdQb2xpY3lDb250",
-            "cm9sbGVyVmVyc2lvbhIPCgd2ZXJzaW9uGAEgASgJItYBChlHYXRla2VlcGVy",
-            "RGVwbG95bWVudFN0YXRlEmUKI2dhdGVrZWVwZXJfY29udHJvbGxlcl9tYW5h",
-            "Z2VyX3N0YXRlGAEgASgOMjguZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdt",
-            "YW5hZ2VtZW50LnYxLkRlcGxveW1lbnRTdGF0ZRJSChBnYXRla2VlcGVyX2F1",
-            "ZGl0GAIgASgOMjguZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2Vt",
-            "ZW50LnYxLkRlcGxveW1lbnRTdGF0ZSpgCg9EZXBsb3ltZW50U3RhdGUSIAoc",
-            "REVQTE9ZTUVOVF9TVEFURV9VTlNQRUNJRklFRBAAEhEKDU5PVF9JTlNUQUxM",
-            "RUQQARINCglJTlNUQUxMRUQQAhIJCgVFUlJPUhADQqECCitjb20uZ29vZ2xl",
-            "LmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxQhVDb25maWdNYW5h",
-            "Z2VtZW50UHJvdG9QAVpXY2xvdWQuZ29vZ2xlLmNvbS9nby9na2VodWIvY29u",
-            "ZmlnbWFuYWdlbWVudC9hcGl2MS9jb25maWdtYW5hZ2VtZW50cGI7Y29uZmln",
-            "bWFuYWdlbWVudHBiqgInR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5Db25maWdN",
-            "YW5hZ2VtZW50ygInR29vZ2xlXENsb3VkXEdrZUh1YlxDb25maWdNYW5hZ2Vt",
-            "ZW50XFYx6gIrR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpDb25maWdNYW5hZ2Vt",
-            "ZW50OjpWMWIGcHJvdG8z"));
+            "ZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLlN5bmNTdGF0ZRJICgZlcnJvcnMY",
+            "BCADKAsyOC5nb29nbGUuY2xvdWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1lbnQu",
+            "djEuQ29uZmlnU3luY0Vycm9yElcKDHJvb3RzeW5jX2NyZBgFIAEoDjJBLmdv",
+            "b2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5Db25maWdT",
+            "eW5jU3RhdGUuQ1JEU3RhdGUSVwoMcmVwb3N5bmNfY3JkGAYgASgOMkEuZ29v",
+            "Z2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkNvbmZpZ1N5",
+            "bmNTdGF0ZS5DUkRTdGF0ZRJNCgVzdGF0ZRgHIAEoDjI+Lmdvb2dsZS5jbG91",
+            "ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5Db25maWdTeW5jU3RhdGUu",
+            "U3RhdGUiaAoIQ1JEU3RhdGUSGQoVQ1JEX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "EQoNTk9UX0lOU1RBTExFRBABEg0KCUlOU1RBTExFRBACEg8KC1RFUk1JTkFU",
+            "SU5HEAMSDgoKSU5TVEFMTElORxAEIogBCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEh0KGUNPTkZJR19TWU5DX05PVF9JTlNUQUxMRUQQARIZChVD",
+            "T05GSUdfU1lOQ19JTlNUQUxMRUQQAhIVChFDT05GSUdfU1lOQ19FUlJPUhAD",
+            "EhcKE0NPTkZJR19TWU5DX1BFTkRJTkcQBCIoCg9Db25maWdTeW5jRXJyb3IS",
+            "FQoNZXJyb3JfbWVzc2FnZRgBIAEoCSKoAQoRQ29uZmlnU3luY1ZlcnNpb24S",
+            "EAoIaW1wb3J0ZXIYASABKAkSDgoGc3luY2VyGAIgASgJEhAKCGdpdF9zeW5j",
+            "GAMgASgJEg8KB21vbml0b3IYBCABKAkSGgoScmVjb25jaWxlcl9tYW5hZ2Vy",
+            "GAUgASgJEhcKD3Jvb3RfcmVjb25jaWxlchgGIAEoCRIZChFhZG1pc3Npb25f",
+            "d2ViaG9vaxgHIAEoCSLGBAoZQ29uZmlnU3luY0RlcGxveW1lbnRTdGF0ZRJK",
+            "CghpbXBvcnRlchgBIAEoDjI4Lmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmln",
+            "bWFuYWdlbWVudC52MS5EZXBsb3ltZW50U3RhdGUSSAoGc3luY2VyGAIgASgO",
+            "MjguZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkRl",
+            "cGxveW1lbnRTdGF0ZRJKCghnaXRfc3luYxgDIAEoDjI4Lmdvb2dsZS5jbG91",
+            "ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5EZXBsb3ltZW50U3RhdGUS",
+            "SQoHbW9uaXRvchgEIAEoDjI4Lmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmln",
+            "bWFuYWdlbWVudC52MS5EZXBsb3ltZW50U3RhdGUSVAoScmVjb25jaWxlcl9t",
+            "YW5hZ2VyGAUgASgOMjguZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5h",
+            "Z2VtZW50LnYxLkRlcGxveW1lbnRTdGF0ZRJRCg9yb290X3JlY29uY2lsZXIY",
+            "BiABKA4yOC5nb29nbGUuY2xvdWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1lbnQu",
+            "djEuRGVwbG95bWVudFN0YXRlElMKEWFkbWlzc2lvbl93ZWJob29rGAcgASgO",
+            "MjguZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLkRl",
+            "cGxveW1lbnRTdGF0ZSK7AwoJU3luY1N0YXRlEhQKDHNvdXJjZV90b2tlbhgB",
+            "IAEoCRIUCgxpbXBvcnRfdG9rZW4YAiABKAkSEgoKc3luY190b2tlbhgDIAEo",
+            "CRIVCglsYXN0X3N5bmMYBCABKAlCAhgBEjIKDmxhc3Rfc3luY190aW1lGAcg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJJCgRjb2RlGAUgASgO",
+            "MjsuZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLlN5",
+            "bmNTdGF0ZS5TeW5jQ29kZRJCCgZlcnJvcnMYBiADKAsyMi5nb29nbGUuY2xv",
+            "dWQuZ2tlaHViLmNvbmZpZ21hbmFnZW1lbnQudjEuU3luY0Vycm9yIpMBCghT",
+            "eW5jQ29kZRIZChVTWU5DX0NPREVfVU5TUEVDSUZJRUQQABIKCgZTWU5DRUQQ",
+            "ARILCgdQRU5ESU5HEAISCQoFRVJST1IQAxISCg5OT1RfQ09ORklHVVJFRBAE",
+            "EhEKDU5PVF9JTlNUQUxMRUQQBRIQCgxVTkFVVEhPUklaRUQQBhIPCgtVTlJF",
+            "QUNIQUJMRRAHIoEBCglTeW5jRXJyb3ISDAoEY29kZRgBIAEoCRIVCg1lcnJv",
+            "cl9tZXNzYWdlGAIgASgJEk8KD2Vycm9yX3Jlc291cmNlcxgDIAMoCzI2Lmdv",
+            "b2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5FcnJvclJl",
+            "c291cmNlIqgBCg1FcnJvclJlc291cmNlEhMKC3NvdXJjZV9wYXRoGAEgASgJ",
+            "EhUKDXJlc291cmNlX25hbWUYAiABKAkSGgoScmVzb3VyY2VfbmFtZXNwYWNl",
+            "GAMgASgJEk8KDHJlc291cmNlX2d2axgEIAEoCzI5Lmdvb2dsZS5jbG91ZC5n",
+            "a2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5Hcm91cFZlcnNpb25LaW5kIkAK",
+            "EEdyb3VwVmVyc2lvbktpbmQSDQoFZ3JvdXAYASABKAkSDwoHdmVyc2lvbhgC",
+            "IAEoCRIMCgRraW5kGAMgASgJIsgBChVQb2xpY3lDb250cm9sbGVyU3RhdGUS",
+            "UQoHdmVyc2lvbhgBIAEoCzJALmdvb2dsZS5jbG91ZC5na2VodWIuY29uZmln",
+            "bWFuYWdlbWVudC52MS5Qb2xpY3lDb250cm9sbGVyVmVyc2lvbhJcChBkZXBs",
+            "b3ltZW50X3N0YXRlGAIgASgLMkIuZ29vZ2xlLmNsb3VkLmdrZWh1Yi5jb25m",
+            "aWdtYW5hZ2VtZW50LnYxLkdhdGVrZWVwZXJEZXBsb3ltZW50U3RhdGUiKgoX",
+            "UG9saWN5Q29udHJvbGxlclZlcnNpb24SDwoHdmVyc2lvbhgBIAEoCSLWAQoZ",
+            "R2F0ZWtlZXBlckRlcGxveW1lbnRTdGF0ZRJlCiNnYXRla2VlcGVyX2NvbnRy",
+            "b2xsZXJfbWFuYWdlcl9zdGF0ZRgBIAEoDjI4Lmdvb2dsZS5jbG91ZC5na2Vo",
+            "dWIuY29uZmlnbWFuYWdlbWVudC52MS5EZXBsb3ltZW50U3RhdGUSUgoQZ2F0",
+            "ZWtlZXBlcl9hdWRpdBgCIAEoDjI4Lmdvb2dsZS5jbG91ZC5na2VodWIuY29u",
+            "ZmlnbWFuYWdlbWVudC52MS5EZXBsb3ltZW50U3RhdGUqbQoPRGVwbG95bWVu",
+            "dFN0YXRlEiAKHERFUExPWU1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIRCg1O",
+            "T1RfSU5TVEFMTEVEEAESDQoJSU5TVEFMTEVEEAISCQoFRVJST1IQAxILCgdQ",
+            "RU5ESU5HEARCoQIKK2NvbS5nb29nbGUuY2xvdWQuZ2tlaHViLmNvbmZpZ21h",
+            "bmFnZW1lbnQudjFCFUNvbmZpZ01hbmFnZW1lbnRQcm90b1ABWldjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2drZWh1Yi9jb25maWdtYW5hZ2VtZW50L2FwaXYxL2Nv",
+            "bmZpZ21hbmFnZW1lbnRwYjtjb25maWdtYW5hZ2VtZW50cGKqAidHb29nbGUu",
+            "Q2xvdWQuR2tlSHViLlYxLkNvbmZpZ01hbmFnZW1lbnTKAidHb29nbGVcQ2xv",
+            "dWRcR2tlSHViXENvbmZpZ01hbmFnZW1lbnRcVjHqAitHb29nbGU6OkNsb3Vk",
+            "OjpHa2VIdWI6OkNvbmZpZ01hbmFnZW1lbnQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipState), global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipState.Parser, new[]{ "ClusterName", "MembershipSpec", "OperatorState", "ConfigSyncState", "PolicyControllerState", "HierarchyControllerState" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec), global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Parser, new[]{ "ConfigSync", "PolicyController", "HierarchyController", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSync), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSync.Parser, new[]{ "Git", "SourceFormat" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec), global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Parser, new[]{ "ConfigSync", "PolicyController", "HierarchyController", "Version", "Cluster", "Management" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSync), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSync.Parser, new[]{ "Git", "SourceFormat", "Enabled", "PreventDrift", "Oci", "MetricsGcpServiceAccountEmail" }, new[]{ "Enabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.GitConfig), global::Google.Cloud.GkeHub.V1.ConfigManagement.GitConfig.Parser, new[]{ "SyncRepo", "SyncBranch", "PolicyDir", "SyncWaitSecs", "SyncRev", "SecretType", "HttpsProxy", "GcpServiceAccountEmail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig), global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig.Parser, new[]{ "SyncRepo", "PolicyDir", "SyncWaitSecs", "SecretType", "GcpServiceAccountEmail" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.PolicyController), global::Google.Cloud.GkeHub.V1.ConfigManagement.PolicyController.Parser, new[]{ "Enabled", "TemplateLibraryInstalled", "AuditIntervalSeconds", "ExemptableNamespaces", "ReferentialRulesEnabled", "LogDeniesEnabled" }, new[]{ "TemplateLibraryInstalled", "AuditIntervalSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerConfig), global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerConfig.Parser, new[]{ "Enabled", "EnablePodTreeLabels", "EnableHierarchicalResourceQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerDeploymentState), global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerDeploymentState.Parser, new[]{ "Hnc", "Extension" }, null, null, null, null),
@@ -147,9 +175,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerState), global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerState.Parser, new[]{ "Version", "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.OperatorState), global::Google.Cloud.GkeHub.V1.ConfigManagement.OperatorState.Parser, new[]{ "Version", "DeploymentState", "Errors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.InstallError), global::Google.Cloud.GkeHub.V1.ConfigManagement.InstallError.Parser, new[]{ "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Parser, new[]{ "Version", "DeploymentState", "SyncState" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncVersion), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncVersion.Parser, new[]{ "Importer", "Syncer", "GitSync", "Monitor", "ReconcilerManager", "RootReconciler" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncDeploymentState), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncDeploymentState.Parser, new[]{ "Importer", "Syncer", "GitSync", "Monitor", "ReconcilerManager", "RootReconciler" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Parser, new[]{ "Version", "DeploymentState", "SyncState", "Errors", "RootsyncCrd", "ReposyncCrd", "State" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState), typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError.Parser, new[]{ "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncVersion), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncVersion.Parser, new[]{ "Importer", "Syncer", "GitSync", "Monitor", "ReconcilerManager", "RootReconciler", "AdmissionWebhook" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncDeploymentState), global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncDeploymentState.Parser, new[]{ "Importer", "Syncer", "GitSync", "Monitor", "ReconcilerManager", "RootReconciler", "AdmissionWebhook" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState), global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState.Parser, new[]{ "SourceToken", "ImportToken", "SyncToken", "LastSync", "LastSyncTime", "Code", "Errors" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState.Types.SyncCode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncError), global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncError.Parser, new[]{ "Code", "ErrorMessage", "ErrorResources" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ConfigManagement.ErrorResource), global::Google.Cloud.GkeHub.V1.ConfigManagement.ErrorResource.Parser, new[]{ "SourcePath", "ResourceName", "ResourceNamespace", "ResourceGvk" }, null, null, null, null),
@@ -183,6 +212,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment was attempted to be installed, but has errors
     /// </summary>
     [pbr::OriginalName("ERROR")] Error = 3,
+    /// <summary>
+    /// Deployment is installing or terminating
+    /// </summary>
+    [pbr::OriginalName("PENDING")] Pending = 4,
   }
 
   #endregion
@@ -245,11 +278,8 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     public const int ClusterNameFieldNumber = 1;
     private string clusterName_ = "";
     /// <summary>
-    /// The user-defined name for the cluster used by ClusterSelectors to group
-    /// clusters together. This should match Membership's membership_name,
-    /// unless the user installed ACM on the cluster manually prior to enabling
-    /// the ACM hub feature.
-    /// Unique within a Anthos Config Management installation.
+    /// This field is set to the `cluster_name` field of the Membership Spec if it
+    /// is not empty. Otherwise, it is set to the cluster's fleet membership name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -678,6 +708,8 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       policyController_ = other.policyController_ != null ? other.policyController_.Clone() : null;
       hierarchyController_ = other.hierarchyController_ != null ? other.hierarchyController_.Clone() : null;
       version_ = other.version_;
+      cluster_ = other.cluster_;
+      management_ = other.management_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -747,6 +779,42 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
     }
 
+    /// <summary>Field number for the "cluster" field.</summary>
+    public const int ClusterFieldNumber = 11;
+    private string cluster_ = "";
+    /// <summary>
+    /// The user-specified cluster name used by Config Sync cluster-name-selector
+    /// annotation or ClusterSelector, for applying configs to only a subset
+    /// of clusters.
+    /// Omit this field if the cluster's fleet membership name is used by Config
+    /// Sync cluster-name-selector annotation or ClusterSelector.
+    /// Set this field if a name different from the cluster's fleet membership name
+    /// is used by Config Sync cluster-name-selector annotation or ClusterSelector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Cluster {
+      get { return cluster_; }
+      set {
+        cluster_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "management" field.</summary>
+    public const int ManagementFieldNumber = 12;
+    private global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management management_ = global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management.Unspecified;
+    /// <summary>
+    /// Enables automatic Feature management.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management Management {
+      get { return management_; }
+      set {
+        management_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -766,6 +834,8 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (!object.Equals(PolicyController, other.PolicyController)) return false;
       if (!object.Equals(HierarchyController, other.HierarchyController)) return false;
       if (Version != other.Version) return false;
+      if (Cluster != other.Cluster) return false;
+      if (Management != other.Management) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -777,6 +847,8 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (policyController_ != null) hash ^= PolicyController.GetHashCode();
       if (hierarchyController_ != null) hash ^= HierarchyController.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
+      if (Management != global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management.Unspecified) hash ^= Management.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -811,6 +883,14 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(82);
         output.WriteString(Version);
       }
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Cluster);
+      }
+      if (Management != global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Management);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -837,6 +917,14 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(82);
         output.WriteString(Version);
       }
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Cluster);
+      }
+      if (Management != global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Management);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -858,6 +946,12 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (Version.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (Cluster.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Cluster);
+      }
+      if (Management != global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Management);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -892,6 +986,12 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (other.Version.Length != 0) {
         Version = other.Version;
       }
+      if (other.Cluster.Length != 0) {
+        Cluster = other.Cluster;
+      }
+      if (other.Management != global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management.Unspecified) {
+        Management = other.Management;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -930,6 +1030,14 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
           }
           case 82: {
             Version = input.ReadString();
+            break;
+          }
+          case 90: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 96: {
+            Management = (global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management) input.ReadEnum();
             break;
           }
         }
@@ -972,10 +1080,44 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             Version = input.ReadString();
             break;
           }
+          case 90: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 96: {
+            Management = (global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec.Types.Management) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MembershipSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Whether to automatically manage the Feature.
+      /// </summary>
+      public enum Management {
+        /// <summary>
+        /// Unspecified
+        /// </summary>
+        [pbr::OriginalName("MANAGEMENT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Google will manage the Feature for the cluster.
+        /// </summary>
+        [pbr::OriginalName("MANAGEMENT_AUTOMATIC")] Automatic = 1,
+        /// <summary>
+        /// User will manually manage the Feature for the cluster.
+        /// </summary>
+        [pbr::OriginalName("MANAGEMENT_MANUAL")] Manual = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -990,6 +1132,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   {
     private static readonly pb::MessageParser<ConfigSync> _parser = new pb::MessageParser<ConfigSync>(() => new ConfigSync());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConfigSync> Parser { get { return _parser; } }
@@ -1017,8 +1160,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSync(ConfigSync other) : this() {
+      _hasBits0 = other._hasBits0;
       git_ = other.git_ != null ? other.git_.Clone() : null;
       sourceFormat_ = other.sourceFormat_;
+      enabled_ = other.enabled_;
+      preventDrift_ = other.preventDrift_;
+      oci_ = other.oci_ != null ? other.oci_.Clone() : null;
+      metricsGcpServiceAccountEmail_ = other.metricsGcpServiceAccountEmail_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1048,7 +1196,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private string sourceFormat_ = "";
     /// <summary>
     /// Specifies whether the Config Sync Repo is
-    /// in “hierarchical” or “unstructured” mode.
+    /// in "hierarchical" or "unstructured" mode.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1056,6 +1204,94 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       get { return sourceFormat_; }
       set {
         sourceFormat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enabled" field.</summary>
+    public const int EnabledFieldNumber = 10;
+    private readonly static bool EnabledDefaultValue = false;
+
+    private bool enabled_;
+    /// <summary>
+    /// Enables the installation of ConfigSync.
+    /// If set to true, ConfigSync resources will be created and the other
+    /// ConfigSync fields will be applied if exist.
+    /// If set to false, all other ConfigSync fields will be ignored, ConfigSync
+    /// resources will be deleted.
+    /// If omitted, ConfigSync resources will be managed depends on the presence
+    /// of the git or oci field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enabled {
+      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return EnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        enabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "prevent_drift" field.</summary>
+    public const int PreventDriftFieldNumber = 11;
+    private bool preventDrift_;
+    /// <summary>
+    /// Set to true to enable the Config Sync admission webhook to prevent drifts.
+    /// If set to `false`, disables the Config Sync admission webhook and does not
+    /// prevent drifts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PreventDrift {
+      get { return preventDrift_; }
+      set {
+        preventDrift_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "oci" field.</summary>
+    public const int OciFieldNumber = 12;
+    private global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig oci_;
+    /// <summary>
+    /// OCI repo configuration for the cluster
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig Oci {
+      get { return oci_; }
+      set {
+        oci_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metrics_gcp_service_account_email" field.</summary>
+    public const int MetricsGcpServiceAccountEmailFieldNumber = 15;
+    private string metricsGcpServiceAccountEmail_ = "";
+    /// <summary>
+    /// The Email of the Google Cloud Service Account (GSA) used for exporting
+    /// Config Sync metrics to Cloud Monitoring when Workload Identity is enabled.
+    /// The GSA should have the Monitoring Metric Writer
+    /// (roles/monitoring.metricWriter) IAM role.
+    /// The Kubernetes ServiceAccount `default` in the namespace
+    /// `config-management-monitoring` should be bound to the GSA.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MetricsGcpServiceAccountEmail {
+      get { return metricsGcpServiceAccountEmail_; }
+      set {
+        metricsGcpServiceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1076,6 +1312,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (!object.Equals(Git, other.Git)) return false;
       if (SourceFormat != other.SourceFormat) return false;
+      if (Enabled != other.Enabled) return false;
+      if (PreventDrift != other.PreventDrift) return false;
+      if (!object.Equals(Oci, other.Oci)) return false;
+      if (MetricsGcpServiceAccountEmail != other.MetricsGcpServiceAccountEmail) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1085,6 +1325,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       int hash = 1;
       if (git_ != null) hash ^= Git.GetHashCode();
       if (SourceFormat.Length != 0) hash ^= SourceFormat.GetHashCode();
+      if (HasEnabled) hash ^= Enabled.GetHashCode();
+      if (PreventDrift != false) hash ^= PreventDrift.GetHashCode();
+      if (oci_ != null) hash ^= Oci.GetHashCode();
+      if (MetricsGcpServiceAccountEmail.Length != 0) hash ^= MetricsGcpServiceAccountEmail.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1111,6 +1355,22 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(66);
         output.WriteString(SourceFormat);
       }
+      if (HasEnabled) {
+        output.WriteRawTag(80);
+        output.WriteBool(Enabled);
+      }
+      if (PreventDrift != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PreventDrift);
+      }
+      if (oci_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Oci);
+      }
+      if (MetricsGcpServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(MetricsGcpServiceAccountEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1129,6 +1389,22 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(66);
         output.WriteString(SourceFormat);
       }
+      if (HasEnabled) {
+        output.WriteRawTag(80);
+        output.WriteBool(Enabled);
+      }
+      if (PreventDrift != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PreventDrift);
+      }
+      if (oci_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Oci);
+      }
+      if (MetricsGcpServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(MetricsGcpServiceAccountEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1144,6 +1420,18 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (SourceFormat.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceFormat);
+      }
+      if (HasEnabled) {
+        size += 1 + 1;
+      }
+      if (PreventDrift != false) {
+        size += 1 + 1;
+      }
+      if (oci_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Oci);
+      }
+      if (MetricsGcpServiceAccountEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MetricsGcpServiceAccountEmail);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1165,6 +1453,21 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (other.SourceFormat.Length != 0) {
         SourceFormat = other.SourceFormat;
+      }
+      if (other.HasEnabled) {
+        Enabled = other.Enabled;
+      }
+      if (other.PreventDrift != false) {
+        PreventDrift = other.PreventDrift;
+      }
+      if (other.oci_ != null) {
+        if (oci_ == null) {
+          Oci = new global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig();
+        }
+        Oci.MergeFrom(other.Oci);
+      }
+      if (other.MetricsGcpServiceAccountEmail.Length != 0) {
+        MetricsGcpServiceAccountEmail = other.MetricsGcpServiceAccountEmail;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1192,6 +1495,25 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             SourceFormat = input.ReadString();
             break;
           }
+          case 80: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 88: {
+            PreventDrift = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (oci_ == null) {
+              Oci = new global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig();
+            }
+            input.ReadMessage(Oci);
+            break;
+          }
+          case 122: {
+            MetricsGcpServiceAccountEmail = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1216,6 +1538,25 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
           }
           case 66: {
             SourceFormat = input.ReadString();
+            break;
+          }
+          case 80: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 88: {
+            PreventDrift = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (oci_ == null) {
+              Oci = new global::Google.Cloud.GkeHub.V1.ConfigManagement.OciConfig();
+            }
+            input.ReadMessage(Oci);
+            break;
+          }
+          case 122: {
+            MetricsGcpServiceAccountEmail = input.ReadString();
             break;
           }
         }
@@ -1360,7 +1701,9 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     public const int SecretTypeFieldNumber = 6;
     private string secretType_ = "";
     /// <summary>
-    /// Type of secret configured for access to the Git repo.
+    /// Type of secret configured for access to the Git repo. Must be one of ssh,
+    /// cookiefile, gcenode, token, gcpserviceaccount or none. The
+    /// validation of this is case-sensitive. Required.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1390,7 +1733,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     public const int GcpServiceAccountEmailFieldNumber = 8;
     private string gcpServiceAccountEmail_ = "";
     /// <summary>
-    /// The GCP Service Account Email used for auth when secret_type is
+    /// The Google Cloud Service Account Email used for auth when secret_type is
     /// gcpServiceAccount.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1704,6 +2047,365 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   }
 
   /// <summary>
+  /// OCI repo configuration for a single cluster
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OciConfig : pb::IMessage<OciConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OciConfig> _parser = new pb::MessageParser<OciConfig>(() => new OciConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OciConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OciConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OciConfig(OciConfig other) : this() {
+      syncRepo_ = other.syncRepo_;
+      policyDir_ = other.policyDir_;
+      syncWaitSecs_ = other.syncWaitSecs_;
+      secretType_ = other.secretType_;
+      gcpServiceAccountEmail_ = other.gcpServiceAccountEmail_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OciConfig Clone() {
+      return new OciConfig(this);
+    }
+
+    /// <summary>Field number for the "sync_repo" field.</summary>
+    public const int SyncRepoFieldNumber = 1;
+    private string syncRepo_ = "";
+    /// <summary>
+    /// The OCI image repository URL for the package to sync from.
+    /// e.g. `LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/PACKAGE_NAME`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SyncRepo {
+      get { return syncRepo_; }
+      set {
+        syncRepo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "policy_dir" field.</summary>
+    public const int PolicyDirFieldNumber = 2;
+    private string policyDir_ = "";
+    /// <summary>
+    /// The absolute path of the directory that contains
+    /// the local resources.  Default: the root directory of the image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PolicyDir {
+      get { return policyDir_; }
+      set {
+        policyDir_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sync_wait_secs" field.</summary>
+    public const int SyncWaitSecsFieldNumber = 3;
+    private long syncWaitSecs_;
+    /// <summary>
+    /// Period in seconds between consecutive syncs. Default: 15.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long SyncWaitSecs {
+      get { return syncWaitSecs_; }
+      set {
+        syncWaitSecs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "secret_type" field.</summary>
+    public const int SecretTypeFieldNumber = 4;
+    private string secretType_ = "";
+    /// <summary>
+    /// Type of secret configured for access to the Git repo.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SecretType {
+      get { return secretType_; }
+      set {
+        secretType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "gcp_service_account_email" field.</summary>
+    public const int GcpServiceAccountEmailFieldNumber = 5;
+    private string gcpServiceAccountEmail_ = "";
+    /// <summary>
+    /// The Google Cloud Service Account Email used for auth when secret_type is
+    /// gcpServiceAccount.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GcpServiceAccountEmail {
+      get { return gcpServiceAccountEmail_; }
+      set {
+        gcpServiceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OciConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OciConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SyncRepo != other.SyncRepo) return false;
+      if (PolicyDir != other.PolicyDir) return false;
+      if (SyncWaitSecs != other.SyncWaitSecs) return false;
+      if (SecretType != other.SecretType) return false;
+      if (GcpServiceAccountEmail != other.GcpServiceAccountEmail) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SyncRepo.Length != 0) hash ^= SyncRepo.GetHashCode();
+      if (PolicyDir.Length != 0) hash ^= PolicyDir.GetHashCode();
+      if (SyncWaitSecs != 0L) hash ^= SyncWaitSecs.GetHashCode();
+      if (SecretType.Length != 0) hash ^= SecretType.GetHashCode();
+      if (GcpServiceAccountEmail.Length != 0) hash ^= GcpServiceAccountEmail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SyncRepo.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SyncRepo);
+      }
+      if (PolicyDir.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PolicyDir);
+      }
+      if (SyncWaitSecs != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(SyncWaitSecs);
+      }
+      if (SecretType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SecretType);
+      }
+      if (GcpServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(GcpServiceAccountEmail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SyncRepo.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SyncRepo);
+      }
+      if (PolicyDir.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PolicyDir);
+      }
+      if (SyncWaitSecs != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(SyncWaitSecs);
+      }
+      if (SecretType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SecretType);
+      }
+      if (GcpServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(GcpServiceAccountEmail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SyncRepo.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SyncRepo);
+      }
+      if (PolicyDir.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PolicyDir);
+      }
+      if (SyncWaitSecs != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SyncWaitSecs);
+      }
+      if (SecretType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SecretType);
+      }
+      if (GcpServiceAccountEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcpServiceAccountEmail);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OciConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SyncRepo.Length != 0) {
+        SyncRepo = other.SyncRepo;
+      }
+      if (other.PolicyDir.Length != 0) {
+        PolicyDir = other.PolicyDir;
+      }
+      if (other.SyncWaitSecs != 0L) {
+        SyncWaitSecs = other.SyncWaitSecs;
+      }
+      if (other.SecretType.Length != 0) {
+        SecretType = other.SecretType;
+      }
+      if (other.GcpServiceAccountEmail.Length != 0) {
+        GcpServiceAccountEmail = other.GcpServiceAccountEmail;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SyncRepo = input.ReadString();
+            break;
+          }
+          case 18: {
+            PolicyDir = input.ReadString();
+            break;
+          }
+          case 24: {
+            SyncWaitSecs = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            SecretType = input.ReadString();
+            break;
+          }
+          case 42: {
+            GcpServiceAccountEmail = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SyncRepo = input.ReadString();
+            break;
+          }
+          case 18: {
+            PolicyDir = input.ReadString();
+            break;
+          }
+          case 24: {
+            SyncWaitSecs = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            SecretType = input.ReadString();
+            break;
+          }
+          case 42: {
+            GcpServiceAccountEmail = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Configuration for Policy Controller
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1722,7 +2424,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2143,7 +2845,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2419,7 +3121,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2655,7 +3357,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2891,7 +3593,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3145,7 +3847,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3410,7 +4112,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3606,7 +4308,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3629,6 +4331,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       version_ = other.version_ != null ? other.version_.Clone() : null;
       deploymentState_ = other.deploymentState_ != null ? other.deploymentState_.Clone() : null;
       syncState_ = other.syncState_ != null ? other.syncState_.Clone() : null;
+      errors_ = other.errors_.Clone();
+      rootsyncCrd_ = other.rootsyncCrd_;
+      reposyncCrd_ = other.reposyncCrd_;
+      state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3684,6 +4390,66 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
     }
 
+    /// <summary>Field number for the "errors" field.</summary>
+    public const int ErrorsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError> _repeated_errors_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError> errors_ = new pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError>();
+    /// <summary>
+    /// Errors pertaining to the installation of Config Sync.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncError> Errors {
+      get { return errors_; }
+    }
+
+    /// <summary>Field number for the "rootsync_crd" field.</summary>
+    public const int RootsyncCrdFieldNumber = 5;
+    private global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState rootsyncCrd_ = global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified;
+    /// <summary>
+    /// The state of the RootSync CRD
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState RootsyncCrd {
+      get { return rootsyncCrd_; }
+      set {
+        rootsyncCrd_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reposync_crd" field.</summary>
+    public const int ReposyncCrdFieldNumber = 6;
+    private global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState reposyncCrd_ = global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified;
+    /// <summary>
+    /// The state of the Reposync CRD
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState ReposyncCrd {
+      get { return reposyncCrd_; }
+      set {
+        reposyncCrd_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State state_ = global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State.Unspecified;
+    /// <summary>
+    /// The state of CS
+    /// This field summarizes the other fields in this message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3702,6 +4468,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (!object.Equals(Version, other.Version)) return false;
       if (!object.Equals(DeploymentState, other.DeploymentState)) return false;
       if (!object.Equals(SyncState, other.SyncState)) return false;
+      if(!errors_.Equals(other.errors_)) return false;
+      if (RootsyncCrd != other.RootsyncCrd) return false;
+      if (ReposyncCrd != other.ReposyncCrd) return false;
+      if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3712,6 +4482,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (version_ != null) hash ^= Version.GetHashCode();
       if (deploymentState_ != null) hash ^= DeploymentState.GetHashCode();
       if (syncState_ != null) hash ^= SyncState.GetHashCode();
+      hash ^= errors_.GetHashCode();
+      if (RootsyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) hash ^= RootsyncCrd.GetHashCode();
+      if (ReposyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) hash ^= ReposyncCrd.GetHashCode();
+      if (State != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3742,6 +4516,19 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(26);
         output.WriteMessage(SyncState);
       }
+      errors_.WriteTo(output, _repeated_errors_codec);
+      if (RootsyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) RootsyncCrd);
+      }
+      if (ReposyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) ReposyncCrd);
+      }
+      if (State != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3764,6 +4551,19 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(26);
         output.WriteMessage(SyncState);
       }
+      errors_.WriteTo(ref output, _repeated_errors_codec);
+      if (RootsyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) RootsyncCrd);
+      }
+      if (ReposyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) ReposyncCrd);
+      }
+      if (State != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3782,6 +4582,16 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (syncState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SyncState);
+      }
+      size += errors_.CalculateSize(_repeated_errors_codec);
+      if (RootsyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RootsyncCrd);
+      }
+      if (ReposyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReposyncCrd);
+      }
+      if (State != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3812,6 +4622,16 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
           SyncState = new global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState();
         }
         SyncState.MergeFrom(other.SyncState);
+      }
+      errors_.Add(other.errors_);
+      if (other.RootsyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        RootsyncCrd = other.RootsyncCrd;
+      }
+      if (other.ReposyncCrd != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState.Unspecified) {
+        ReposyncCrd = other.ReposyncCrd;
+      }
+      if (other.State != global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State.Unspecified) {
+        State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3847,6 +4667,22 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
               SyncState = new global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState();
             }
             input.ReadMessage(SyncState);
+            break;
+          }
+          case 34: {
+            errors_.AddEntriesFrom(input, _repeated_errors_codec);
+            break;
+          }
+          case 40: {
+            RootsyncCrd = (global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            ReposyncCrd = (global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State) input.ReadEnum();
             break;
           }
         }
@@ -3885,6 +4721,275 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             input.ReadMessage(SyncState);
             break;
           }
+          case 34: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
+            break;
+          }
+          case 40: {
+            RootsyncCrd = (global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            ReposyncCrd = (global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.CRDState) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ConfigSyncState message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// CRDState representing the state of a CRD
+      /// </summary>
+      public enum CRDState {
+        /// <summary>
+        /// CRD's state cannot be determined
+        /// </summary>
+        [pbr::OriginalName("CRD_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// CRD is not installed
+        /// </summary>
+        [pbr::OriginalName("NOT_INSTALLED")] NotInstalled = 1,
+        /// <summary>
+        /// CRD is installed
+        /// </summary>
+        [pbr::OriginalName("INSTALLED")] Installed = 2,
+        /// <summary>
+        /// CRD is terminating (i.e., it has been deleted and is cleaning up)
+        /// </summary>
+        [pbr::OriginalName("TERMINATING")] Terminating = 3,
+        /// <summary>
+        /// CRD is installing
+        /// </summary>
+        [pbr::OriginalName("INSTALLING")] Installing = 4,
+      }
+
+      public enum State {
+        /// <summary>
+        /// CS's state cannot be determined.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// CS is not installed.
+        /// </summary>
+        [pbr::OriginalName("CONFIG_SYNC_NOT_INSTALLED")] ConfigSyncNotInstalled = 1,
+        /// <summary>
+        /// The expected CS version is installed successfully.
+        /// </summary>
+        [pbr::OriginalName("CONFIG_SYNC_INSTALLED")] ConfigSyncInstalled = 2,
+        /// <summary>
+        /// CS encounters errors.
+        /// </summary>
+        [pbr::OriginalName("CONFIG_SYNC_ERROR")] ConfigSyncError = 3,
+        /// <summary>
+        /// CS is installing or terminating.
+        /// </summary>
+        [pbr::OriginalName("CONFIG_SYNC_PENDING")] ConfigSyncPending = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Errors pertaining to the installation of Config Sync
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ConfigSyncError : pb::IMessage<ConfigSyncError>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConfigSyncError> _parser = new pb::MessageParser<ConfigSyncError>(() => new ConfigSyncError());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConfigSyncError> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfigSyncError() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfigSyncError(ConfigSyncError other) : this() {
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfigSyncError Clone() {
+      return new ConfigSyncError(this);
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 1;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// A string representing the user facing error message
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConfigSyncError);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConfigSyncError other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConfigSyncError other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3910,7 +5015,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3936,6 +5041,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       monitor_ = other.monitor_;
       reconcilerManager_ = other.reconcilerManager_;
       rootReconciler_ = other.rootReconciler_;
+      admissionWebhook_ = other.admissionWebhook_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4035,6 +5141,21 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
     }
 
+    /// <summary>Field number for the "admission_webhook" field.</summary>
+    public const int AdmissionWebhookFieldNumber = 7;
+    private string admissionWebhook_ = "";
+    /// <summary>
+    /// Version of the deployed admission_webhook pod
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdmissionWebhook {
+      get { return admissionWebhook_; }
+      set {
+        admissionWebhook_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4056,6 +5177,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (Monitor != other.Monitor) return false;
       if (ReconcilerManager != other.ReconcilerManager) return false;
       if (RootReconciler != other.RootReconciler) return false;
+      if (AdmissionWebhook != other.AdmissionWebhook) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4069,6 +5191,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (Monitor.Length != 0) hash ^= Monitor.GetHashCode();
       if (ReconcilerManager.Length != 0) hash ^= ReconcilerManager.GetHashCode();
       if (RootReconciler.Length != 0) hash ^= RootReconciler.GetHashCode();
+      if (AdmissionWebhook.Length != 0) hash ^= AdmissionWebhook.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4111,6 +5234,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(50);
         output.WriteString(RootReconciler);
       }
+      if (AdmissionWebhook.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AdmissionWebhook);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4145,6 +5272,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(50);
         output.WriteString(RootReconciler);
       }
+      if (AdmissionWebhook.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AdmissionWebhook);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4172,6 +5303,9 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (RootReconciler.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RootReconciler);
+      }
+      if (AdmissionWebhook.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdmissionWebhook);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4202,6 +5336,9 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (other.RootReconciler.Length != 0) {
         RootReconciler = other.RootReconciler;
+      }
+      if (other.AdmissionWebhook.Length != 0) {
+        AdmissionWebhook = other.AdmissionWebhook;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4240,6 +5377,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
           }
           case 50: {
             RootReconciler = input.ReadString();
+            break;
+          }
+          case 58: {
+            AdmissionWebhook = input.ReadString();
             break;
           }
         }
@@ -4281,6 +5422,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             RootReconciler = input.ReadString();
             break;
           }
+          case 58: {
+            AdmissionWebhook = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4306,7 +5451,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4332,6 +5477,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       monitor_ = other.monitor_;
       reconcilerManager_ = other.reconcilerManager_;
       rootReconciler_ = other.rootReconciler_;
+      admissionWebhook_ = other.admissionWebhook_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4431,6 +5577,21 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
     }
 
+    /// <summary>Field number for the "admission_webhook" field.</summary>
+    public const int AdmissionWebhookFieldNumber = 7;
+    private global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState admissionWebhook_ = global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified;
+    /// <summary>
+    /// Deployment state of admission-webhook
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState AdmissionWebhook {
+      get { return admissionWebhook_; }
+      set {
+        admissionWebhook_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4452,6 +5613,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (Monitor != other.Monitor) return false;
       if (ReconcilerManager != other.ReconcilerManager) return false;
       if (RootReconciler != other.RootReconciler) return false;
+      if (AdmissionWebhook != other.AdmissionWebhook) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4465,6 +5627,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       if (Monitor != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= Monitor.GetHashCode();
       if (ReconcilerManager != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= ReconcilerManager.GetHashCode();
       if (RootReconciler != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= RootReconciler.GetHashCode();
+      if (AdmissionWebhook != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= AdmissionWebhook.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4507,6 +5670,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(48);
         output.WriteEnum((int) RootReconciler);
       }
+      if (AdmissionWebhook != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) AdmissionWebhook);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4541,6 +5708,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
         output.WriteRawTag(48);
         output.WriteEnum((int) RootReconciler);
       }
+      if (AdmissionWebhook != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) AdmissionWebhook);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4568,6 +5739,9 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (RootReconciler != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RootReconciler);
+      }
+      if (AdmissionWebhook != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AdmissionWebhook);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4598,6 +5772,9 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
       }
       if (other.RootReconciler != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
         RootReconciler = other.RootReconciler;
+      }
+      if (other.AdmissionWebhook != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
+        AdmissionWebhook = other.AdmissionWebhook;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4636,6 +5813,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
           }
           case 48: {
             RootReconciler = (global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            AdmissionWebhook = (global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState) input.ReadEnum();
             break;
           }
         }
@@ -4677,6 +5858,10 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             RootReconciler = (global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState) input.ReadEnum();
             break;
           }
+          case 56: {
+            AdmissionWebhook = (global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -4702,7 +5887,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5127,32 +6312,31 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// An enum representing an ACM's status syncing configs to a cluster
+      /// An enum representing Config Sync's status of syncing configs to a cluster.
       /// </summary>
       public enum SyncCode {
         /// <summary>
-        /// ACM cannot determine a sync code
+        /// Config Sync cannot determine a sync code
         /// </summary>
         [pbr::OriginalName("SYNC_CODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// ACM successfully synced the git Repo with the cluster
+        /// Config Sync successfully synced the git Repo with the cluster
         /// </summary>
         [pbr::OriginalName("SYNCED")] Synced = 1,
         /// <summary>
-        /// ACM is in the progress of syncing a new change
+        /// Config Sync is in the progress of syncing a new change
         /// </summary>
         [pbr::OriginalName("PENDING")] Pending = 2,
         /// <summary>
-        /// Indicates an error configuring ACM, and user action is required
+        /// Indicates an error configuring Config Sync, and user action is required
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 3,
         /// <summary>
-        /// ACM has been installed (operator manifest deployed),
-        /// but not configured.
+        /// Config Sync has been installed but not configured
         /// </summary>
         [pbr::OriginalName("NOT_CONFIGURED")] NotConfigured = 4,
         /// <summary>
-        /// ACM has not been installed (no operator pod found)
+        /// Config Sync has not been installed
         /// </summary>
         [pbr::OriginalName("NOT_INSTALLED")] NotInstalled = 5,
         /// <summary>
@@ -5188,7 +6372,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5453,7 +6637,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5778,7 +6962,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6054,7 +7238,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6308,7 +7492,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6505,7 +7689,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

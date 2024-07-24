@@ -985,13 +985,22 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Collector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCollectorsResponse, Collector> ListCollectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCollectors(new ListCollectorsRequest
+        public virtual gax::PagedEnumerable<ListCollectorsResponse, Collector> ListCollectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCollectorsRequest request = new ListCollectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCollectors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Collectors in a given project and location.
@@ -1009,13 +1018,22 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Collector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCollectorsResponse, Collector> ListCollectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCollectorsAsync(new ListCollectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCollectorsResponse, Collector> ListCollectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCollectorsRequest request = new ListCollectorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCollectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Collectors in a given project and location.
@@ -1033,13 +1051,22 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Collector"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCollectorsResponse, Collector> ListCollectors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCollectors(new ListCollectorsRequest
+        public virtual gax::PagedEnumerable<ListCollectorsResponse, Collector> ListCollectors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCollectorsRequest request = new ListCollectorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCollectors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Collectors in a given project and location.
@@ -1057,13 +1084,22 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Collector"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCollectorsResponse, Collector> ListCollectorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCollectorsAsync(new ListCollectorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCollectorsResponse, Collector> ListCollectorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCollectorsRequest request = new ListCollectorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCollectorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Collector.

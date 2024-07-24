@@ -1240,13 +1240,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Task"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTasksResponse, Task> ListTasks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTasks(new ListTasksRequest
+        public virtual gax::PagedEnumerable<ListTasksResponse, Task> ListTasks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTasksRequest request = new ListTasksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTasks(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all `Task`s that meet the specified filtering criteria.
@@ -1266,13 +1275,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Task"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTasksResponse, Task> ListTasksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTasksAsync(new ListTasksRequest
+        public virtual gax::PagedAsyncEnumerable<ListTasksResponse, Task> ListTasksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTasksRequest request = new ListTasksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTasksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all `Task`s that meet the specified filtering criteria.
@@ -1292,13 +1310,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Task"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTasksResponse, Task> ListTasks(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTasks(new ListTasksRequest
+        public virtual gax::PagedEnumerable<ListTasksResponse, Task> ListTasks(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTasksRequest request = new ListTasksRequest
             {
                 ParentAsProviderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTasks(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all `Task`s that meet the specified filtering criteria.
@@ -1318,13 +1345,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Task"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTasksResponse, Task> ListTasksAsync(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTasksAsync(new ListTasksRequest
+        public virtual gax::PagedAsyncEnumerable<ListTasksResponse, Task> ListTasksAsync(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTasksRequest request = new ListTasksRequest
             {
                 ParentAsProviderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTasksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified `TaskTrackingInfo` instance.
@@ -1491,13 +1527,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeliveryVehicle"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehicles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeliveryVehicles(new ListDeliveryVehiclesRequest
+        public virtual gax::PagedEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehicles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeliveryVehiclesRequest request = new ListDeliveryVehiclesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeliveryVehicles(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all `DeliveryVehicle`s that meet the specified filtering criteria.
@@ -1517,13 +1562,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeliveryVehicle"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehiclesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeliveryVehiclesAsync(new ListDeliveryVehiclesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehiclesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeliveryVehiclesRequest request = new ListDeliveryVehiclesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeliveryVehiclesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all `DeliveryVehicle`s that meet the specified filtering criteria.
@@ -1543,13 +1597,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeliveryVehicle"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehicles(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeliveryVehicles(new ListDeliveryVehiclesRequest
+        public virtual gax::PagedEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehicles(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeliveryVehiclesRequest request = new ListDeliveryVehiclesRequest
             {
                 ParentAsProviderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeliveryVehicles(request, callSettings);
+        }
 
         /// <summary>
         /// Gets all `DeliveryVehicle`s that meet the specified filtering criteria.
@@ -1569,13 +1632,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeliveryVehicle"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehiclesAsync(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeliveryVehiclesAsync(new ListDeliveryVehiclesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeliveryVehiclesResponse, DeliveryVehicle> ListDeliveryVehiclesAsync(ProviderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeliveryVehiclesRequest request = new ListDeliveryVehiclesRequest
             {
                 ParentAsProviderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeliveryVehiclesAsync(request, callSettings);
+        }
     }
 
     /// <summary>DeliveryService client wrapper implementation, for convenient use.</summary>

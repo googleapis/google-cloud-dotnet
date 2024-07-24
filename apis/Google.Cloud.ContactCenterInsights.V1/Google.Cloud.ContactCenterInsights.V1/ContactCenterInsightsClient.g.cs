@@ -1611,13 +1611,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversations.
@@ -1635,13 +1644,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversations.
@@ -1659,13 +1677,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversations.
@@ -1683,13 +1710,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a conversation.
@@ -2097,13 +2133,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalyses(new ListAnalysesRequest
+        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalyses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists analyses.
@@ -2121,13 +2166,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalysesAsync(new ListAnalysesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists analyses.
@@ -2145,13 +2199,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalyses(new ListAnalysesRequest
+        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalyses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists analyses.
@@ -2169,13 +2232,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalysesAsync(new ListAnalysesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an analysis.
@@ -4536,13 +4608,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchers(new ListPhraseMatchersRequest
+        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists phrase matchers.
@@ -4560,13 +4641,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchersAsync(new ListPhraseMatchersRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists phrase matchers.
@@ -4584,13 +4674,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchers(new ListPhraseMatchersRequest
+        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists phrase matchers.
@@ -4608,13 +4707,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchersAsync(new ListPhraseMatchersRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a phrase matcher.
@@ -5369,13 +5477,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViews(new ListViewsRequest
+        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views.
@@ -5393,13 +5510,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViewsAsync(new ListViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views.
@@ -5417,13 +5543,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViews(new ListViewsRequest
+        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views.
@@ -5441,13 +5576,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViewsAsync(new ListViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a view.

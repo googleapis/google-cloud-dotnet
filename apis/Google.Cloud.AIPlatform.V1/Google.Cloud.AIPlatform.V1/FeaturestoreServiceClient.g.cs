@@ -1207,13 +1207,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Featurestore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturestores(new ListFeaturestoresRequest
+        public virtual gax::PagedEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturestoresRequest request = new ListFeaturestoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturestores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Featurestores in a given project and location.
@@ -1233,13 +1242,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Featurestore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturestoresAsync(new ListFeaturestoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturestoresRequest request = new ListFeaturestoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturestoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Featurestores in a given project and location.
@@ -1259,13 +1277,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Featurestore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestores(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturestores(new ListFeaturestoresRequest
+        public virtual gax::PagedEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestores(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturestoresRequest request = new ListFeaturestoresRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturestores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Featurestores in a given project and location.
@@ -1285,13 +1312,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Featurestore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestoresAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturestoresAsync(new ListFeaturestoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeaturestoresResponse, Featurestore> ListFeaturestoresAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturestoresRequest request = new ListFeaturestoresRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturestoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the parameters of a single Featurestore.
@@ -2213,13 +2249,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EntityTypes in a given Featurestore.
@@ -2239,13 +2284,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EntityTypes in a given Featurestore.
@@ -2265,13 +2319,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(FeaturestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(FeaturestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 ParentAsFeaturestoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists EntityTypes in a given Featurestore.
@@ -2291,13 +2354,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(FeaturestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(FeaturestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 ParentAsFeaturestoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the parameters of a single EntityType.
@@ -3596,13 +3668,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatures(new ListFeaturesRequest
+        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturesRequest request = new ListFeaturesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatures(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Features in a given EntityType.
@@ -3624,13 +3705,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturesAsync(new ListFeaturesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturesRequest request = new ListFeaturesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Features in a given EntityType.
@@ -3652,13 +3742,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(EntityTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatures(new ListFeaturesRequest
+        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(EntityTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturesRequest request = new ListFeaturesRequest
             {
                 ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatures(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Features in a given EntityType.
@@ -3680,13 +3779,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(EntityTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturesAsync(new ListFeaturesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(EntityTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturesRequest request = new ListFeaturesRequest
             {
                 ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Features in a given EntityType.
@@ -3708,13 +3816,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeatures(new ListFeaturesRequest
+        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturesRequest request = new ListFeaturesRequest
             {
                 ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatures(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Features in a given EntityType.
@@ -3736,13 +3853,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFeaturesAsync(new ListFeaturesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeaturesRequest request = new ListFeaturesRequest
             {
                 ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeaturesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the parameters of a single Feature.
@@ -4927,13 +5053,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(string location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeatures(new SearchFeaturesRequest
+        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(string location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
             {
                 Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeatures(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Features matching a query in a given project.
@@ -4953,13 +5088,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(string location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeaturesAsync(new SearchFeaturesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(string location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
             {
                 Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeaturesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Features matching a query in a given project.
@@ -4979,13 +5123,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(gagr::LocationName location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeatures(new SearchFeaturesRequest
+        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(gagr::LocationName location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
             {
                 LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeatures(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Features matching a query in a given project.
@@ -5005,191 +5158,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(gagr::LocationName location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeaturesAsync(new SearchFeaturesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(gagr::LocationName location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
             {
                 LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Searches Features matching a query in a given project.
-        /// </summary>
-        /// <param name="location">
-        /// Required. The resource name of the Location to search Features.
-        /// Format:
-        /// `projects/{project}/locations/{location}`
-        /// </param>
-        /// <param name="query">
-        /// Query string that is a conjunction of field-restricted queries and/or
-        /// field-restricted filters.  Field-restricted queries and filters can be
-        /// combined using `AND` to form a conjunction.
-        /// 
-        /// A field query is in the form FIELD:QUERY. This implicitly checks if QUERY
-        /// exists as a substring within Feature's FIELD. The QUERY
-        /// and the FIELD are converted to a sequence of words (i.e. tokens) for
-        /// comparison. This is done by:
-        /// 
-        /// * Removing leading/trailing whitespace and tokenizing the search value.
-        /// Characters that are not one of alphanumeric `[a-zA-Z0-9]`, underscore
-        /// `_`, or asterisk `*` are treated as delimiters for tokens. `*` is treated
-        /// as a wildcard that matches characters within a token.
-        /// * Ignoring case.
-        /// * Prepending an asterisk to the first and appending an asterisk to the
-        /// last token in QUERY.
-        /// 
-        /// A QUERY must be either a singular token or a phrase. A phrase is one or
-        /// multiple words enclosed in double quotation marks ("). With phrases, the
-        /// order of the words is important. Words in the phrase must be matching in
-        /// order and consecutively.
-        /// 
-        /// Supported FIELDs for field-restricted queries:
-        /// 
-        /// * `feature_id`
-        /// * `description`
-        /// * `entity_type_id`
-        /// 
-        /// Examples:
-        /// 
-        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
-        /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
-        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
-        /// substring `foo*feature` (eg. `foobarfeature`).
-        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
-        /// containing the substring `foo` and description containing the substring
-        /// `bar`.
-        /// 
-        /// 
-        /// Besides field queries, the following exact-match filters are
-        /// supported. The exact-match filters do not support wildcards. Unlike
-        /// field-restricted queries, exact-match filters are case-sensitive.
-        /// 
-        /// * `feature_id`: Supports = comparisons.
-        /// * `description`: Supports = comparisons. Multi-token filters should be
-        /// enclosed in quotes.
-        /// * `entity_type_id`: Supports = comparisons.
-        /// * `value_type`: Supports = and != comparisons.
-        /// * `labels`: Supports key-value equality as well as key presence.
-        /// * `featurestore_id`: Supports = comparisons.
-        /// 
-        /// Examples:
-        /// 
-        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
-        /// to `foo bar`
-        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
-        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
-        /// (active: yes) and (env: prod) labels.
-        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
-        /// key.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(string location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeatures(new SearchFeaturesRequest
+            };
+            if (pageToken != null)
             {
-                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Searches Features matching a query in a given project.
-        /// </summary>
-        /// <param name="location">
-        /// Required. The resource name of the Location to search Features.
-        /// Format:
-        /// `projects/{project}/locations/{location}`
-        /// </param>
-        /// <param name="query">
-        /// Query string that is a conjunction of field-restricted queries and/or
-        /// field-restricted filters.  Field-restricted queries and filters can be
-        /// combined using `AND` to form a conjunction.
-        /// 
-        /// A field query is in the form FIELD:QUERY. This implicitly checks if QUERY
-        /// exists as a substring within Feature's FIELD. The QUERY
-        /// and the FIELD are converted to a sequence of words (i.e. tokens) for
-        /// comparison. This is done by:
-        /// 
-        /// * Removing leading/trailing whitespace and tokenizing the search value.
-        /// Characters that are not one of alphanumeric `[a-zA-Z0-9]`, underscore
-        /// `_`, or asterisk `*` are treated as delimiters for tokens. `*` is treated
-        /// as a wildcard that matches characters within a token.
-        /// * Ignoring case.
-        /// * Prepending an asterisk to the first and appending an asterisk to the
-        /// last token in QUERY.
-        /// 
-        /// A QUERY must be either a singular token or a phrase. A phrase is one or
-        /// multiple words enclosed in double quotation marks ("). With phrases, the
-        /// order of the words is important. Words in the phrase must be matching in
-        /// order and consecutively.
-        /// 
-        /// Supported FIELDs for field-restricted queries:
-        /// 
-        /// * `feature_id`
-        /// * `description`
-        /// * `entity_type_id`
-        /// 
-        /// Examples:
-        /// 
-        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
-        /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
-        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
-        /// substring `foo*feature` (eg. `foobarfeature`).
-        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
-        /// containing the substring `foo` and description containing the substring
-        /// `bar`.
-        /// 
-        /// 
-        /// Besides field queries, the following exact-match filters are
-        /// supported. The exact-match filters do not support wildcards. Unlike
-        /// field-restricted queries, exact-match filters are case-sensitive.
-        /// 
-        /// * `feature_id`: Supports = comparisons.
-        /// * `description`: Supports = comparisons. Multi-token filters should be
-        /// enclosed in quotes.
-        /// * `entity_type_id`: Supports = comparisons.
-        /// * `value_type`: Supports = and != comparisons.
-        /// * `labels`: Supports key-value equality as well as key presence.
-        /// * `featurestore_id`: Supports = comparisons.
-        /// 
-        /// Examples:
-        /// 
-        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
-        /// to `foo bar`
-        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
-        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
-        /// (active: yes) and (env: prod) labels.
-        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
-        /// key.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(string location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeaturesAsync(new SearchFeaturesRequest
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
             {
-                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeaturesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Features matching a query in a given project.
@@ -5271,14 +5255,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(gagr::LocationName location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeatures(new SearchFeaturesRequest
+        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(string location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
             {
-                LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
+                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeatures(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Features matching a query in a given project.
@@ -5360,14 +5353,219 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(gagr::LocationName location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchFeaturesAsync(new SearchFeaturesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(string location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
+            {
+                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
+                Query = query ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeaturesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches Features matching a query in a given project.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The resource name of the Location to search Features.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Query string that is a conjunction of field-restricted queries and/or
+        /// field-restricted filters.  Field-restricted queries and filters can be
+        /// combined using `AND` to form a conjunction.
+        /// 
+        /// A field query is in the form FIELD:QUERY. This implicitly checks if QUERY
+        /// exists as a substring within Feature's FIELD. The QUERY
+        /// and the FIELD are converted to a sequence of words (i.e. tokens) for
+        /// comparison. This is done by:
+        /// 
+        /// * Removing leading/trailing whitespace and tokenizing the search value.
+        /// Characters that are not one of alphanumeric `[a-zA-Z0-9]`, underscore
+        /// `_`, or asterisk `*` are treated as delimiters for tokens. `*` is treated
+        /// as a wildcard that matches characters within a token.
+        /// * Ignoring case.
+        /// * Prepending an asterisk to the first and appending an asterisk to the
+        /// last token in QUERY.
+        /// 
+        /// A QUERY must be either a singular token or a phrase. A phrase is one or
+        /// multiple words enclosed in double quotation marks ("). With phrases, the
+        /// order of the words is important. Words in the phrase must be matching in
+        /// order and consecutively.
+        /// 
+        /// Supported FIELDs for field-restricted queries:
+        /// 
+        /// * `feature_id`
+        /// * `description`
+        /// * `entity_type_id`
+        /// 
+        /// Examples:
+        /// 
+        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
+        /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
+        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
+        /// substring `foo*feature` (eg. `foobarfeature`).
+        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
+        /// containing the substring `foo` and description containing the substring
+        /// `bar`.
+        /// 
+        /// 
+        /// Besides field queries, the following exact-match filters are
+        /// supported. The exact-match filters do not support wildcards. Unlike
+        /// field-restricted queries, exact-match filters are case-sensitive.
+        /// 
+        /// * `feature_id`: Supports = comparisons.
+        /// * `description`: Supports = comparisons. Multi-token filters should be
+        /// enclosed in quotes.
+        /// * `entity_type_id`: Supports = comparisons.
+        /// * `value_type`: Supports = and != comparisons.
+        /// * `labels`: Supports key-value equality as well as key presence.
+        /// * `featurestore_id`: Supports = comparisons.
+        /// 
+        /// Examples:
+        /// 
+        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
+        /// to `foo bar`
+        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
+        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
+        /// (active: yes) and (env: prod) labels.
+        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
+        /// key.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchFeaturesResponse, Feature> SearchFeatures(gagr::LocationName location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
             {
                 LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeatures(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches Features matching a query in a given project.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The resource name of the Location to search Features.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Query string that is a conjunction of field-restricted queries and/or
+        /// field-restricted filters.  Field-restricted queries and filters can be
+        /// combined using `AND` to form a conjunction.
+        /// 
+        /// A field query is in the form FIELD:QUERY. This implicitly checks if QUERY
+        /// exists as a substring within Feature's FIELD. The QUERY
+        /// and the FIELD are converted to a sequence of words (i.e. tokens) for
+        /// comparison. This is done by:
+        /// 
+        /// * Removing leading/trailing whitespace and tokenizing the search value.
+        /// Characters that are not one of alphanumeric `[a-zA-Z0-9]`, underscore
+        /// `_`, or asterisk `*` are treated as delimiters for tokens. `*` is treated
+        /// as a wildcard that matches characters within a token.
+        /// * Ignoring case.
+        /// * Prepending an asterisk to the first and appending an asterisk to the
+        /// last token in QUERY.
+        /// 
+        /// A QUERY must be either a singular token or a phrase. A phrase is one or
+        /// multiple words enclosed in double quotation marks ("). With phrases, the
+        /// order of the words is important. Words in the phrase must be matching in
+        /// order and consecutively.
+        /// 
+        /// Supported FIELDs for field-restricted queries:
+        /// 
+        /// * `feature_id`
+        /// * `description`
+        /// * `entity_type_id`
+        /// 
+        /// Examples:
+        /// 
+        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
+        /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
+        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
+        /// substring `foo*feature` (eg. `foobarfeature`).
+        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
+        /// containing the substring `foo` and description containing the substring
+        /// `bar`.
+        /// 
+        /// 
+        /// Besides field queries, the following exact-match filters are
+        /// supported. The exact-match filters do not support wildcards. Unlike
+        /// field-restricted queries, exact-match filters are case-sensitive.
+        /// 
+        /// * `feature_id`: Supports = comparisons.
+        /// * `description`: Supports = comparisons. Multi-token filters should be
+        /// enclosed in quotes.
+        /// * `entity_type_id`: Supports = comparisons.
+        /// * `value_type`: Supports = and != comparisons.
+        /// * `labels`: Supports key-value equality as well as key presence.
+        /// * `featurestore_id`: Supports = comparisons.
+        /// 
+        /// Examples:
+        /// 
+        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
+        /// to `foo bar`
+        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
+        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
+        /// (active: yes) and (env: prod) labels.
+        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
+        /// key.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchFeaturesResponse, Feature> SearchFeaturesAsync(gagr::LocationName location, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchFeaturesRequest request = new SearchFeaturesRequest
+            {
+                LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
+                Query = query ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchFeaturesAsync(request, callSettings);
+        }
     }
 
     /// <summary>FeaturestoreService client wrapper implementation, for convenient use.</summary>

@@ -722,13 +722,22 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceAccount"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccounts(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceAccounts(new ListServiceAccountsRequest
+        public virtual gax::PagedEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccounts(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceAccountsRequest request = new ListServiceAccountsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists every [ServiceAccount][google.iam.admin.v1.ServiceAccount] that belongs to a specific project.
@@ -747,13 +756,22 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceAccount"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccountsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceAccountsAsync(new ListServiceAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccountsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceAccountsRequest request = new ListServiceAccountsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists every [ServiceAccount][google.iam.admin.v1.ServiceAccount] that belongs to a specific project.
@@ -772,13 +790,22 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceAccount"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccounts(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceAccounts(new ListServiceAccountsRequest
+        public virtual gax::PagedEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccounts(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceAccountsRequest request = new ListServiceAccountsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceAccounts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists every [ServiceAccount][google.iam.admin.v1.ServiceAccount] that belongs to a specific project.
@@ -797,13 +824,22 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceAccount"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccountsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceAccountsAsync(new ListServiceAccountsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceAccountsResponse, ServiceAccount> ListServiceAccountsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceAccountsRequest request = new ListServiceAccountsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceAccountsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
@@ -3919,13 +3955,22 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Role"/> resources.</returns>
-        public virtual gax::PagedEnumerable<QueryGrantableRolesResponse, Role> QueryGrantableRoles(string fullResourceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            QueryGrantableRoles(new QueryGrantableRolesRequest
+        public virtual gax::PagedEnumerable<QueryGrantableRolesResponse, Role> QueryGrantableRoles(string fullResourceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryGrantableRolesRequest request = new QueryGrantableRolesRequest
             {
                 FullResourceName = gax::GaxPreconditions.CheckNotNullOrEmpty(fullResourceName, nameof(fullResourceName)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryGrantableRoles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists roles that can be granted on a Google Cloud resource. A role is
@@ -3949,13 +3994,22 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Role"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<QueryGrantableRolesResponse, Role> QueryGrantableRolesAsync(string fullResourceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            QueryGrantableRolesAsync(new QueryGrantableRolesRequest
+        public virtual gax::PagedAsyncEnumerable<QueryGrantableRolesResponse, Role> QueryGrantableRolesAsync(string fullResourceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryGrantableRolesRequest request = new QueryGrantableRolesRequest
             {
                 FullResourceName = gax::GaxPreconditions.CheckNotNullOrEmpty(fullResourceName, nameof(fullResourceName)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryGrantableRolesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists every predefined [Role][google.iam.admin.v1.Role] that IAM supports, or every custom role

@@ -980,13 +980,22 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Engine"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnginesResponse, Engine> ListEngines(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEngines(new ListEnginesRequest
+        public virtual gax::PagedEnumerable<ListEnginesResponse, Engine> ListEngines(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnginesRequest request = new ListEnginesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEngines(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [Engine][google.cloud.discoveryengine.v1.Engine]s associated
@@ -1006,13 +1015,22 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Engine"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnginesResponse, Engine> ListEnginesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnginesAsync(new ListEnginesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnginesResponse, Engine> ListEnginesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnginesRequest request = new ListEnginesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnginesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [Engine][google.cloud.discoveryengine.v1.Engine]s associated
@@ -1032,13 +1050,22 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Engine"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnginesResponse, Engine> ListEngines(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEngines(new ListEnginesRequest
+        public virtual gax::PagedEnumerable<ListEnginesResponse, Engine> ListEngines(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnginesRequest request = new ListEnginesRequest
             {
                 ParentAsCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEngines(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [Engine][google.cloud.discoveryengine.v1.Engine]s associated
@@ -1058,13 +1085,22 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Engine"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnginesResponse, Engine> ListEnginesAsync(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnginesAsync(new ListEnginesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnginesResponse, Engine> ListEnginesAsync(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnginesRequest request = new ListEnginesRequest
             {
                 ParentAsCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnginesAsync(request, callSettings);
+        }
     }
 
     /// <summary>EngineService client wrapper implementation, for convenient use.</summary>

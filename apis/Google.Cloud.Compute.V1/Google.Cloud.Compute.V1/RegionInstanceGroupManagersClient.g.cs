@@ -1732,14 +1732,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceGroupManager"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListRegionInstanceGroupManagersRequest
+        public virtual gax::PagedEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionInstanceGroupManagersRequest request = new ListRegionInstanceGroupManagersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of managed instance groups that are contained within the specified region.
@@ -1760,14 +1769,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroupManager"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListRegionInstanceGroupManagersRequest
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionInstanceGroupManagersRequest request = new ListRegionInstanceGroupManagersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
@@ -1809,15 +1827,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RegionInstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrors(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListErrors(new ListErrorsRegionInstanceGroupManagersRequest
+        public virtual gax::PagedEnumerable<RegionInstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrors(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListErrorsRegionInstanceGroupManagersRequest request = new ListErrorsRegionInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListErrors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
@@ -1841,15 +1868,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrorsAsync(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListErrorsAsync(new ListErrorsRegionInstanceGroupManagersRequest
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrorsAsync(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListErrorsRegionInstanceGroupManagersRequest request = new ListErrorsRegionInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListErrorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
@@ -1891,15 +1927,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagedInstance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RegionInstanceGroupManagersListInstancesResponse, ManagedInstance> ListManagedInstances(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagedInstances(new ListManagedInstancesRegionInstanceGroupManagersRequest
+        public virtual gax::PagedEnumerable<RegionInstanceGroupManagersListInstancesResponse, ManagedInstance> ListManagedInstances(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagedInstancesRegionInstanceGroupManagersRequest request = new ListManagedInstancesRegionInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagedInstances(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
@@ -1923,15 +1968,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagedInstance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagersListInstancesResponse, ManagedInstance> ListManagedInstancesAsync(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListManagedInstancesAsync(new ListManagedInstancesRegionInstanceGroupManagersRequest
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagersListInstancesResponse, ManagedInstance> ListManagedInstancesAsync(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagedInstancesRegionInstanceGroupManagersRequest request = new ListManagedInstancesRegionInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagedInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
@@ -1973,15 +2027,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PerInstanceConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigs(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPerInstanceConfigs(new ListPerInstanceConfigsRegionInstanceGroupManagersRequest
+        public virtual gax::PagedEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigs(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPerInstanceConfigsRegionInstanceGroupManagersRequest request = new ListPerInstanceConfigsRegionInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPerInstanceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
@@ -2005,15 +2068,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PerInstanceConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigsAsync(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPerInstanceConfigsAsync(new ListPerInstanceConfigsRegionInstanceGroupManagersRequest
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigsAsync(string project, string region, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPerInstanceConfigsRegionInstanceGroupManagersRequest request = new ListPerInstanceConfigsRegionInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPerInstanceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.

@@ -1038,13 +1038,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScans(new ListDataScansRequest
+        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScans.
@@ -1065,13 +1074,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScansAsync(new ListDataScansRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScans.
@@ -1092,13 +1110,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScans(new ListDataScansRequest
+        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScans.
@@ -1119,13 +1146,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScansAsync(new ListDataScansRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Runs an on-demand execution of a DataScan
@@ -1422,13 +1458,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobs(new ListDataScanJobsRequest
+        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScanJobs under the given DataScan.
@@ -1449,13 +1494,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobsAsync(new ListDataScanJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScanJobs under the given DataScan.
@@ -1476,13 +1530,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobs(new ListDataScanJobsRequest
+        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScanJobs under the given DataScan.
@@ -1503,13 +1566,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobsAsync(new ListDataScanJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Generates recommended data quality rules based on the results of a data

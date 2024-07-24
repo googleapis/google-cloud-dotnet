@@ -434,13 +434,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptors(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -471,13 +480,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptorsAsync(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -506,13 +524,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptors(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -543,13 +570,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptorsAsync(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -578,13 +614,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptors(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -615,13 +660,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptorsAsync(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -650,13 +704,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptors(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -687,13 +750,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptorsAsync(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -722,13 +794,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptors(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -759,13 +840,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelDescriptorsAsync(new ListNotificationChannelDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelDescriptorsRequest request = new ListNotificationChannelDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single channel descriptor. The descriptor indicates which fields
@@ -992,13 +1082,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannels(new ListNotificationChannelsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1029,13 +1128,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelsAsync(new ListNotificationChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1066,13 +1174,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannels(new ListNotificationChannelsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1103,13 +1220,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelsAsync(new ListNotificationChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1140,13 +1266,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannels(new ListNotificationChannelsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1177,13 +1312,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelsAsync(new ListNotificationChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1214,13 +1358,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannels(new ListNotificationChannelsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1251,13 +1404,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelsAsync(new ListNotificationChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1288,13 +1450,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannels(new ListNotificationChannelsRequest
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the notification channels that have been created for the project.
@@ -1325,13 +1496,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationChannelsAsync(new ListNotificationChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationChannelsRequest request = new ListNotificationChannelsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single notification channel. The channel includes the relevant

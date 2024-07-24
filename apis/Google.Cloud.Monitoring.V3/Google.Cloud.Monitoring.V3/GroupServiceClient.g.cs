@@ -354,13 +354,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -382,13 +391,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -410,13 +428,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -438,13 +465,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -466,13 +502,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -494,13 +539,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -522,13 +576,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -550,13 +613,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -578,13 +650,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
@@ -606,13 +687,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single group.
@@ -1404,13 +1494,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembers(new ListGroupMembersRequest
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1430,13 +1529,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembersAsync(new ListGroupMembersRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1456,13 +1564,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembers(new ListGroupMembersRequest
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 GroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1482,13 +1599,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembersAsync(new ListGroupMembersRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 GroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1508,13 +1634,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembers(new ListGroupMembersRequest
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1534,13 +1669,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembersAsync(new ListGroupMembersRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembersAsync(request, callSettings);
+        }
     }
 
     /// <summary>GroupService client wrapper implementation, for convenient use.</summary>

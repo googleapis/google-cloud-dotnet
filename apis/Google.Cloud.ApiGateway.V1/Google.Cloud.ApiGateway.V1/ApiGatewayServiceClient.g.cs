@@ -676,13 +676,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGateways(new ListGatewaysRequest
+        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -701,13 +710,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGatewaysAsync(new ListGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -726,13 +744,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGateways(new ListGatewaysRequest
+        public virtual gax::PagedEnumerable<ListGatewaysResponse, Gateway> ListGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -751,13 +778,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Gateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGatewaysAsync(new ListGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListGatewaysResponse, Gateway> ListGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewaysRequest request = new ListGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Gateway.
@@ -1344,13 +1380,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApis(new ListApisRequest
+        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApis(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Apis in a given project and location.
@@ -1369,13 +1414,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApisAsync(new ListApisRequest
+        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApisAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Apis in a given project and location.
@@ -1394,13 +1448,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApis(new ListApisRequest
+        public virtual gax::PagedEnumerable<ListApisResponse, Api> ListApis(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApis(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Apis in a given project and location.
@@ -1419,13 +1482,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Api"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApisAsync(new ListApisRequest
+        public virtual gax::PagedAsyncEnumerable<ListApisResponse, Api> ListApisAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApisRequest request = new ListApisRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApisAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Api.
@@ -2012,13 +2084,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiConfigs(new ListApiConfigsRequest
+        public virtual gax::PagedEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiConfigsRequest request = new ListApiConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ApiConfigs in a given project and location.
@@ -2037,13 +2118,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiConfigsAsync(new ListApiConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiConfigsRequest request = new ListApiConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ApiConfigs in a given project and location.
@@ -2062,13 +2152,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApiConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigs(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiConfigs(new ListApiConfigsRequest
+        public virtual gax::PagedEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigs(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiConfigsRequest request = new ListApiConfigsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ApiConfigs in a given project and location.
@@ -2087,13 +2186,22 @@ namespace Google.Cloud.ApiGateway.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApiConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApiConfigsAsync(new ListApiConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListApiConfigsResponse, ApiConfig> ListApiConfigsAsync(ApiName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApiConfigsRequest request = new ListApiConfigsRequest
             {
                 ParentAsApiName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApiConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ApiConfig.

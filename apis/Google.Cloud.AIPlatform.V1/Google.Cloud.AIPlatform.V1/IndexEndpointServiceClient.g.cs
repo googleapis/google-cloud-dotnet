@@ -734,13 +734,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="IndexEndpoint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpoints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexEndpoints(new ListIndexEndpointsRequest
+        public virtual gax::PagedEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpoints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexEndpointsRequest request = new ListIndexEndpointsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexEndpoints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists IndexEndpoints in a Location.
@@ -759,13 +768,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="IndexEndpoint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpointsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexEndpointsAsync(new ListIndexEndpointsRequest
+        public virtual gax::PagedAsyncEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpointsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexEndpointsRequest request = new ListIndexEndpointsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexEndpointsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists IndexEndpoints in a Location.
@@ -784,13 +802,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="IndexEndpoint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpoints(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexEndpoints(new ListIndexEndpointsRequest
+        public virtual gax::PagedEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpoints(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexEndpointsRequest request = new ListIndexEndpointsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexEndpoints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists IndexEndpoints in a Location.
@@ -809,13 +836,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="IndexEndpoint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpointsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexEndpointsAsync(new ListIndexEndpointsRequest
+        public virtual gax::PagedAsyncEnumerable<ListIndexEndpointsResponse, IndexEndpoint> ListIndexEndpointsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexEndpointsRequest request = new ListIndexEndpointsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexEndpointsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates an IndexEndpoint.

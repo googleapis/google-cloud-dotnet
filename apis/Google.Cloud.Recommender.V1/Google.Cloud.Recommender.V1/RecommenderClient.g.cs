@@ -456,13 +456,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Insight"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInsights(new ListInsightsRequest
+        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInsightsRequest request = new ListInsightsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInsights(request, callSettings);
+        }
 
         /// <summary>
         /// Lists insights for the specified Cloud Resource. Requires the
@@ -497,13 +506,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Insight"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInsightsAsync(new ListInsightsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInsightsRequest request = new ListInsightsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInsightsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists insights for the specified Cloud Resource. Requires the
@@ -538,13 +556,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Insight"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(InsightTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInsights(new ListInsightsRequest
+        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(InsightTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInsightsRequest request = new ListInsightsRequest
             {
                 ParentAsInsightTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInsights(request, callSettings);
+        }
 
         /// <summary>
         /// Lists insights for the specified Cloud Resource. Requires the
@@ -579,13 +606,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Insight"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(InsightTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInsightsAsync(new ListInsightsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(InsightTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInsightsRequest request = new ListInsightsRequest
             {
                 ParentAsInsightTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInsightsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the requested insight. Requires the recommender.*.get IAM permission
@@ -966,13 +1002,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendations(new ListRecommendationsRequest
+        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists recommendations for the specified Cloud Resource. Requires the
@@ -1007,13 +1052,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendationsAsync(new ListRecommendationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists recommendations for the specified Cloud Resource. Requires the
@@ -1048,13 +1102,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(RecommenderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendations(new ListRecommendationsRequest
+        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(RecommenderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
             {
                 ParentAsRecommenderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists recommendations for the specified Cloud Resource. Requires the
@@ -1089,157 +1152,22 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(RecommenderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendationsAsync(new ListRecommendationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(RecommenderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
             {
                 ParentAsRecommenderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lists recommendations for the specified Cloud Resource. Requires the
-        /// recommender.*.list IAM permission for the specified recommender.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The container resource on which to execute the request.
-        /// Acceptable formats:
-        /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// LOCATION here refers to GCP Locations:
-        /// https://cloud.google.com/about/locations/
-        /// RECOMMENDER_ID refers to supported recommenders:
-        /// https://cloud.google.com/recommender/docs/recommenders.
-        /// </param>
-        /// <param name="filter">
-        /// Filter expression to restrict the recommendations returned. Supported
-        /// filter fields:
-        /// 
-        /// * `state_info.state`
-        /// 
-        /// * `recommenderSubtype`
-        /// 
-        /// * `priority`
-        /// 
-        /// * `targetResources`
-        /// 
-        /// Examples:
-        /// 
-        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
-        /// 
-        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
-        /// 
-        /// * `priority = P1 OR priority = P2`
-        /// 
-        /// * `targetResources :
-        /// //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1`
-        /// 
-        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
-        /// 
-        /// The max allowed filter length is 500 characters.
-        /// 
-        /// (These expressions are based on the filter language described at
-        /// https://google.aip.dev/160)
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendations(new ListRecommendationsRequest
+            };
+            if (pageToken != null)
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lists recommendations for the specified Cloud Resource. Requires the
-        /// recommender.*.list IAM permission for the specified recommender.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The container resource on which to execute the request.
-        /// Acceptable formats:
-        /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-        /// 
-        /// LOCATION here refers to GCP Locations:
-        /// https://cloud.google.com/about/locations/
-        /// RECOMMENDER_ID refers to supported recommenders:
-        /// https://cloud.google.com/recommender/docs/recommenders.
-        /// </param>
-        /// <param name="filter">
-        /// Filter expression to restrict the recommendations returned. Supported
-        /// filter fields:
-        /// 
-        /// * `state_info.state`
-        /// 
-        /// * `recommenderSubtype`
-        /// 
-        /// * `priority`
-        /// 
-        /// * `targetResources`
-        /// 
-        /// Examples:
-        /// 
-        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
-        /// 
-        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
-        /// 
-        /// * `priority = P1 OR priority = P2`
-        /// 
-        /// * `targetResources :
-        /// //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1`
-        /// 
-        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
-        /// 
-        /// The max allowed filter length is 500 characters.
-        /// 
-        /// (These expressions are based on the filter language described at
-        /// https://google.aip.dev/160)
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendationsAsync(new ListRecommendationsRequest
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists recommendations for the specified Cloud Resource. Requires the
@@ -1304,14 +1232,23 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(RecommenderName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendations(new ListRecommendationsRequest
+        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
             {
-                ParentAsRecommenderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists recommendations for the specified Cloud Resource. Requires the
@@ -1376,14 +1313,185 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recommendation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(RecommenderName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecommendationsAsync(new ListRecommendationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The container resource on which to execute the request.
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// LOCATION here refers to GCP Locations:
+        /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
+        /// </param>
+        /// <param name="filter">
+        /// Filter expression to restrict the recommendations returned. Supported
+        /// filter fields:
+        /// 
+        /// * `state_info.state`
+        /// 
+        /// * `recommenderSubtype`
+        /// 
+        /// * `priority`
+        /// 
+        /// * `targetResources`
+        /// 
+        /// Examples:
+        /// 
+        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
+        /// 
+        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
+        /// 
+        /// * `priority = P1 OR priority = P2`
+        /// 
+        /// * `targetResources :
+        /// //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1`
+        /// 
+        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
+        /// 
+        /// The max allowed filter length is 500 characters.
+        /// 
+        /// (These expressions are based on the filter language described at
+        /// https://google.aip.dev/160)
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Recommendation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendations(RecommenderName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
             {
                 ParentAsRecommenderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The container resource on which to execute the request.
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// LOCATION here refers to GCP Locations:
+        /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
+        /// </param>
+        /// <param name="filter">
+        /// Filter expression to restrict the recommendations returned. Supported
+        /// filter fields:
+        /// 
+        /// * `state_info.state`
+        /// 
+        /// * `recommenderSubtype`
+        /// 
+        /// * `priority`
+        /// 
+        /// * `targetResources`
+        /// 
+        /// Examples:
+        /// 
+        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
+        /// 
+        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
+        /// 
+        /// * `priority = P1 OR priority = P2`
+        /// 
+        /// * `targetResources :
+        /// //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1`
+        /// 
+        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
+        /// 
+        /// The max allowed filter length is 500 characters.
+        /// 
+        /// (These expressions are based on the filter language described at
+        /// https://google.aip.dev/160)
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Recommendation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> ListRecommendationsAsync(RecommenderName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecommendationsRequest request = new ListRecommendationsRequest
+            {
+                ParentAsRecommenderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecommendationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the requested recommendation. Requires the recommender.*.get

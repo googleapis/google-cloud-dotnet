@@ -1110,13 +1110,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomJobs(new ListCustomJobsRequest
+        public virtual gax::PagedEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomJobsRequest request = new ListCustomJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomJobs in a Location.
@@ -1135,13 +1144,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomJobsAsync(new ListCustomJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomJobsRequest request = new ListCustomJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomJobs in a Location.
@@ -1160,13 +1178,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomJobs(new ListCustomJobsRequest
+        public virtual gax::PagedEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomJobsRequest request = new ListCustomJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomJobs in a Location.
@@ -1185,13 +1212,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomJobsAsync(new ListCustomJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomJobsResponse, CustomJob> ListCustomJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomJobsRequest request = new ListCustomJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a CustomJob.
@@ -1846,13 +1882,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataLabelingJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataLabelingJobs(new ListDataLabelingJobsRequest
+        public virtual gax::PagedEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataLabelingJobsRequest request = new ListDataLabelingJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataLabelingJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataLabelingJobs in a Location.
@@ -1871,13 +1916,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataLabelingJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataLabelingJobsAsync(new ListDataLabelingJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataLabelingJobsRequest request = new ListDataLabelingJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataLabelingJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataLabelingJobs in a Location.
@@ -1896,13 +1950,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataLabelingJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataLabelingJobs(new ListDataLabelingJobsRequest
+        public virtual gax::PagedEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataLabelingJobsRequest request = new ListDataLabelingJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataLabelingJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataLabelingJobs in a Location.
@@ -1921,13 +1984,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataLabelingJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataLabelingJobsAsync(new ListDataLabelingJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataLabelingJobsResponse, DataLabelingJob> ListDataLabelingJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataLabelingJobsRequest request = new ListDataLabelingJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataLabelingJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a DataLabelingJob.
@@ -2482,13 +2554,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HyperparameterTuningJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHyperparameterTuningJobs(new ListHyperparameterTuningJobsRequest
+        public virtual gax::PagedEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHyperparameterTuningJobsRequest request = new ListHyperparameterTuningJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHyperparameterTuningJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HyperparameterTuningJobs in a Location.
@@ -2508,13 +2589,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HyperparameterTuningJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHyperparameterTuningJobsAsync(new ListHyperparameterTuningJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHyperparameterTuningJobsRequest request = new ListHyperparameterTuningJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHyperparameterTuningJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HyperparameterTuningJobs in a Location.
@@ -2534,13 +2624,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HyperparameterTuningJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHyperparameterTuningJobs(new ListHyperparameterTuningJobsRequest
+        public virtual gax::PagedEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHyperparameterTuningJobsRequest request = new ListHyperparameterTuningJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHyperparameterTuningJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists HyperparameterTuningJobs in a Location.
@@ -2560,13 +2659,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HyperparameterTuningJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHyperparameterTuningJobsAsync(new ListHyperparameterTuningJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHyperparameterTuningJobsResponse, HyperparameterTuningJob> ListHyperparameterTuningJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHyperparameterTuningJobsRequest request = new ListHyperparameterTuningJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHyperparameterTuningJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a HyperparameterTuningJob.
@@ -3231,13 +3339,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NasJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasJobs(new ListNasJobsRequest
+        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasJobsRequest request = new ListNasJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NasJobs in a Location.
@@ -3256,13 +3373,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NasJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasJobsAsync(new ListNasJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasJobsRequest request = new ListNasJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NasJobs in a Location.
@@ -3281,13 +3407,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NasJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasJobs(new ListNasJobsRequest
+        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasJobsRequest request = new ListNasJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists NasJobs in a Location.
@@ -3306,13 +3441,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NasJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasJobsAsync(new ListNasJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasJobsRequest request = new ListNasJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a NasJob.
@@ -3835,13 +3979,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NasTrialDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasTrialDetails(new ListNasTrialDetailsRequest
+        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasTrialDetails(request, callSettings);
+        }
 
         /// <summary>
         /// List top NasTrialDetails of a NasJob.
@@ -3861,13 +4014,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NasTrialDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasTrialDetailsAsync(new ListNasTrialDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasTrialDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List top NasTrialDetails of a NasJob.
@@ -3887,13 +4049,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NasTrialDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(NasJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasTrialDetails(new ListNasTrialDetailsRequest
+        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(NasJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
             {
                 ParentAsNasJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasTrialDetails(request, callSettings);
+        }
 
         /// <summary>
         /// List top NasTrialDetails of a NasJob.
@@ -3913,13 +4084,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NasTrialDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(NasJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNasTrialDetailsAsync(new ListNasTrialDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(NasJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
             {
                 ParentAsNasJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNasTrialDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a BatchPredictionJob. A BatchPredictionJob once created will
@@ -4215,13 +4395,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BatchPredictionJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatchPredictionJobs(new ListBatchPredictionJobsRequest
+        public virtual gax::PagedEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchPredictionJobsRequest request = new ListBatchPredictionJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatchPredictionJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BatchPredictionJobs in a Location.
@@ -4240,13 +4429,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BatchPredictionJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatchPredictionJobsAsync(new ListBatchPredictionJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchPredictionJobsRequest request = new ListBatchPredictionJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatchPredictionJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BatchPredictionJobs in a Location.
@@ -4265,13 +4463,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BatchPredictionJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatchPredictionJobs(new ListBatchPredictionJobsRequest
+        public virtual gax::PagedEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchPredictionJobsRequest request = new ListBatchPredictionJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatchPredictionJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BatchPredictionJobs in a Location.
@@ -4290,13 +4497,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BatchPredictionJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatchPredictionJobsAsync(new ListBatchPredictionJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBatchPredictionJobsResponse, BatchPredictionJob> ListBatchPredictionJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchPredictionJobsRequest request = new ListBatchPredictionJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatchPredictionJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a BatchPredictionJob. Can only be called on jobs that already
@@ -4851,14 +5067,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(string modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchModelDeploymentMonitoringStatsAnomalies(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(string modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchModelDeploymentMonitoringStatsAnomaliesRequest request = new SearchModelDeploymentMonitoringStatsAnomaliesRequest
             {
                 ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNullOrEmpty(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
                 DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchModelDeploymentMonitoringStatsAnomalies(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Model Monitoring Statistics generated within a given time window.
@@ -4884,14 +5109,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(string modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchModelDeploymentMonitoringStatsAnomaliesAsync(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(string modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchModelDeploymentMonitoringStatsAnomaliesRequest request = new SearchModelDeploymentMonitoringStatsAnomaliesRequest
             {
                 ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNullOrEmpty(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
                 DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchModelDeploymentMonitoringStatsAnomaliesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Model Monitoring Statistics generated within a given time window.
@@ -4915,14 +5149,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchModelDeploymentMonitoringStatsAnomalies(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchModelDeploymentMonitoringStatsAnomaliesRequest request = new SearchModelDeploymentMonitoringStatsAnomaliesRequest
             {
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
                 DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchModelDeploymentMonitoringStatsAnomalies(request, callSettings);
+        }
 
         /// <summary>
         /// Searches Model Monitoring Statistics generated within a given time window.
@@ -4948,14 +5191,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchModelDeploymentMonitoringStatsAnomaliesAsync(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchModelDeploymentMonitoringStatsAnomaliesRequest request = new SearchModelDeploymentMonitoringStatsAnomaliesRequest
             {
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
                 DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchModelDeploymentMonitoringStatsAnomaliesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a ModelDeploymentMonitoringJob.
@@ -5109,13 +5361,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelDeploymentMonitoringJobs(new ListModelDeploymentMonitoringJobsRequest
+        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelDeploymentMonitoringJobsRequest request = new ListModelDeploymentMonitoringJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelDeploymentMonitoringJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelDeploymentMonitoringJobs in a Location.
@@ -5134,13 +5395,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelDeploymentMonitoringJobsAsync(new ListModelDeploymentMonitoringJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelDeploymentMonitoringJobsRequest request = new ListModelDeploymentMonitoringJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelDeploymentMonitoringJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelDeploymentMonitoringJobs in a Location.
@@ -5159,13 +5429,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelDeploymentMonitoringJobs(new ListModelDeploymentMonitoringJobsRequest
+        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelDeploymentMonitoringJobsRequest request = new ListModelDeploymentMonitoringJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelDeploymentMonitoringJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelDeploymentMonitoringJobs in a Location.
@@ -5184,13 +5463,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelDeploymentMonitoringJobsAsync(new ListModelDeploymentMonitoringJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelDeploymentMonitoringJobsRequest request = new ListModelDeploymentMonitoringJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelDeploymentMonitoringJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a ModelDeploymentMonitoringJob.

@@ -1420,13 +1420,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TargetSite"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSites(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTargetSites(new ListTargetSitesRequest
+        public virtual gax::PagedEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSites(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTargetSitesRequest request = new ListTargetSitesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTargetSites(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -1451,13 +1460,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TargetSite"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSitesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTargetSitesAsync(new ListTargetSitesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSitesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTargetSitesRequest request = new ListTargetSitesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTargetSitesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -1482,13 +1500,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TargetSite"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSites(SiteSearchEngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTargetSites(new ListTargetSitesRequest
+        public virtual gax::PagedEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSites(SiteSearchEngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTargetSitesRequest request = new ListTargetSitesRequest
             {
                 ParentAsSiteSearchEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTargetSites(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of
@@ -1513,13 +1540,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TargetSite"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSitesAsync(SiteSearchEngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTargetSitesAsync(new ListTargetSitesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTargetSitesResponse, TargetSite> ListTargetSitesAsync(SiteSearchEngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTargetSitesRequest request = new ListTargetSitesRequest
             {
                 ParentAsSiteSearchEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTargetSitesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Upgrade from basic site search to advanced site search.

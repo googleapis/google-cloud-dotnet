@@ -1116,13 +1116,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CdnKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCdnKeys(new ListCdnKeysRequest
+        public virtual gax::PagedEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCdnKeysRequest request = new ListCdnKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCdnKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all CDN keys in the specified project and location.
@@ -1141,13 +1150,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CdnKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCdnKeysAsync(new ListCdnKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCdnKeysRequest request = new ListCdnKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCdnKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all CDN keys in the specified project and location.
@@ -1166,13 +1184,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CdnKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeys(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCdnKeys(new ListCdnKeysRequest
+        public virtual gax::PagedEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeys(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCdnKeysRequest request = new ListCdnKeysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCdnKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all CDN keys in the specified project and location.
@@ -1191,13 +1218,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CdnKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCdnKeysAsync(new ListCdnKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> ListCdnKeysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCdnKeysRequest request = new ListCdnKeysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCdnKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified CDN key.
@@ -1862,13 +1898,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VodStitchDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodStitchDetails(new ListVodStitchDetailsRequest
+        public virtual gax::PagedEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodStitchDetailsRequest request = new ListVodStitchDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodStitchDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of detailed stitching information of the specified VOD
@@ -1888,13 +1933,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VodStitchDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodStitchDetailsAsync(new ListVodStitchDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodStitchDetailsRequest request = new ListVodStitchDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodStitchDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of detailed stitching information of the specified VOD
@@ -1914,13 +1968,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VodStitchDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetails(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodStitchDetails(new ListVodStitchDetailsRequest
+        public virtual gax::PagedEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetails(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodStitchDetailsRequest request = new ListVodStitchDetailsRequest
             {
                 ParentAsVodSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodStitchDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of detailed stitching information of the specified VOD
@@ -1940,13 +2003,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VodStitchDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetailsAsync(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodStitchDetailsAsync(new ListVodStitchDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> ListVodStitchDetailsAsync(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodStitchDetailsRequest request = new ListVodStitchDetailsRequest
             {
                 ParentAsVodSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodStitchDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified stitching information for the specified VOD session.
@@ -2100,13 +2172,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VodAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodAdTagDetails(new ListVodAdTagDetailsRequest
+        public virtual gax::PagedEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodAdTagDetailsRequest request = new ListVodAdTagDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodAdTagDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Return the list of ad tag details for the specified VOD session.
@@ -2125,13 +2206,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VodAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodAdTagDetailsAsync(new ListVodAdTagDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodAdTagDetailsRequest request = new ListVodAdTagDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodAdTagDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Return the list of ad tag details for the specified VOD session.
@@ -2150,13 +2240,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VodAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetails(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodAdTagDetails(new ListVodAdTagDetailsRequest
+        public virtual gax::PagedEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetails(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodAdTagDetailsRequest request = new ListVodAdTagDetailsRequest
             {
                 ParentAsVodSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodAdTagDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Return the list of ad tag details for the specified VOD session.
@@ -2175,13 +2274,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VodAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetailsAsync(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodAdTagDetailsAsync(new ListVodAdTagDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> ListVodAdTagDetailsAsync(VodSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodAdTagDetailsRequest request = new ListVodAdTagDetailsRequest
             {
                 ParentAsVodSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodAdTagDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified ad tag detail for the specified VOD session.
@@ -2335,13 +2443,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LiveAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveAdTagDetails(new ListLiveAdTagDetailsRequest
+        public virtual gax::PagedEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveAdTagDetailsRequest request = new ListLiveAdTagDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveAdTagDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Return the list of ad tag details for the specified live session.
@@ -2360,13 +2477,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LiveAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveAdTagDetailsAsync(new ListLiveAdTagDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveAdTagDetailsRequest request = new ListLiveAdTagDetailsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveAdTagDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Return the list of ad tag details for the specified live session.
@@ -2385,13 +2511,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LiveAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetails(LiveSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveAdTagDetails(new ListLiveAdTagDetailsRequest
+        public virtual gax::PagedEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetails(LiveSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveAdTagDetailsRequest request = new ListLiveAdTagDetailsRequest
             {
                 ParentAsLiveSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveAdTagDetails(request, callSettings);
+        }
 
         /// <summary>
         /// Return the list of ad tag details for the specified live session.
@@ -2410,13 +2545,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LiveAdTagDetail"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetailsAsync(LiveSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveAdTagDetailsAsync(new ListLiveAdTagDetailsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> ListLiveAdTagDetailsAsync(LiveSessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveAdTagDetailsRequest request = new ListLiveAdTagDetailsRequest
             {
                 ParentAsLiveSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveAdTagDetailsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified ad tag detail for the specified live session.
@@ -2763,13 +2907,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Slate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSlatesResponse, Slate> ListSlates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSlates(new ListSlatesRequest
+        public virtual gax::PagedEnumerable<ListSlatesResponse, Slate> ListSlates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSlatesRequest request = new ListSlatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSlates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all slates in the specified project and location.
@@ -2788,13 +2941,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Slate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSlatesResponse, Slate> ListSlatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSlatesAsync(new ListSlatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSlatesResponse, Slate> ListSlatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSlatesRequest request = new ListSlatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSlatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all slates in the specified project and location.
@@ -2813,13 +2975,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Slate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSlatesResponse, Slate> ListSlates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSlates(new ListSlatesRequest
+        public virtual gax::PagedEnumerable<ListSlatesResponse, Slate> ListSlates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSlatesRequest request = new ListSlatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSlates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all slates in the specified project and location.
@@ -2838,13 +3009,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Slate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSlatesResponse, Slate> ListSlatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSlatesAsync(new ListSlatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSlatesResponse, Slate> ListSlatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSlatesRequest request = new ListSlatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSlatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified slate.
@@ -3669,13 +3849,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LiveConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveConfigs(new ListLiveConfigsRequest
+        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveConfigsRequest request = new ListLiveConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all live configs managed by the Video Stitcher that
@@ -3695,13 +3884,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LiveConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveConfigsAsync(new ListLiveConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveConfigsRequest request = new ListLiveConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all live configs managed by the Video Stitcher that
@@ -3721,13 +3919,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LiveConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveConfigs(new ListLiveConfigsRequest
+        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveConfigsRequest request = new ListLiveConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all live configs managed by the Video Stitcher that
@@ -3747,13 +3954,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LiveConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLiveConfigsAsync(new ListLiveConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLiveConfigsRequest request = new ListLiveConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLiveConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified live config managed by the Video
@@ -4364,13 +4580,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VodConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodConfigs(new ListVodConfigsRequest
+        public virtual gax::PagedEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodConfigsRequest request = new ListVodConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all VOD configs managed by the Video Stitcher API that
@@ -4390,13 +4615,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VodConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodConfigsAsync(new ListVodConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodConfigsRequest request = new ListVodConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all VOD configs managed by the Video Stitcher API that
@@ -4416,13 +4650,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VodConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodConfigs(new ListVodConfigsRequest
+        public virtual gax::PagedEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodConfigsRequest request = new ListVodConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all VOD configs managed by the Video Stitcher API that
@@ -4442,13 +4685,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VodConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVodConfigsAsync(new ListVodConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> ListVodConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVodConfigsRequest request = new ListVodConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVodConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the specified VOD config managed by the Video

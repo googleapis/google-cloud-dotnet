@@ -1426,13 +1426,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessLevel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessLevels(new ListAccessLevelsRequest
+        public virtual gax::PagedEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessLevelsRequest request = new ListAccessLevelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessLevels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [access levels]
@@ -1456,13 +1465,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessLevel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessLevelsAsync(new ListAccessLevelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessLevelsRequest request = new ListAccessLevelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessLevelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [access levels]
@@ -1486,13 +1504,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccessLevel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevels(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessLevels(new ListAccessLevelsRequest
+        public virtual gax::PagedEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevels(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessLevelsRequest request = new ListAccessLevelsRequest
             {
                 ParentAsAccessPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessLevels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [access levels]
@@ -1516,13 +1543,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccessLevel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevelsAsync(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccessLevelsAsync(new ListAccessLevelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> ListAccessLevelsAsync(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccessLevelsRequest request = new ListAccessLevelsRequest
             {
                 ParentAsAccessPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccessLevelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets an [access level]
@@ -2426,13 +2462,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServicePerimeter"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimeters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicePerimeters(new ListServicePerimetersRequest
+        public virtual gax::PagedEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimeters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicePerimetersRequest request = new ListServicePerimetersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicePerimeters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [service perimeters]
@@ -2456,13 +2501,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServicePerimeter"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimetersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicePerimetersAsync(new ListServicePerimetersRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimetersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicePerimetersRequest request = new ListServicePerimetersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicePerimetersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [service perimeters]
@@ -2486,13 +2540,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServicePerimeter"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimeters(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicePerimeters(new ListServicePerimetersRequest
+        public virtual gax::PagedEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimeters(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicePerimetersRequest request = new ListServicePerimetersRequest
             {
                 ParentAsAccessPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicePerimeters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [service perimeters]
@@ -2516,13 +2579,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServicePerimeter"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimetersAsync(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicePerimetersAsync(new ListServicePerimetersRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> ListServicePerimetersAsync(AccessPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicePerimetersRequest request = new ListServicePerimetersRequest
             {
                 ParentAsAccessPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicePerimetersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a [service perimeter]
@@ -3506,13 +3578,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GcpUserAccessBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGcpUserAccessBindings(new ListGcpUserAccessBindingsRequest
+        public virtual gax::PagedEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGcpUserAccessBindingsRequest request = new ListGcpUserAccessBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGcpUserAccessBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [GcpUserAccessBindings]
@@ -3532,13 +3613,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GcpUserAccessBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGcpUserAccessBindingsAsync(new ListGcpUserAccessBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGcpUserAccessBindingsRequest request = new ListGcpUserAccessBindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGcpUserAccessBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [GcpUserAccessBindings]
@@ -3558,13 +3648,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GcpUserAccessBinding"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindings(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGcpUserAccessBindings(new ListGcpUserAccessBindingsRequest
+        public virtual gax::PagedEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindings(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGcpUserAccessBindingsRequest request = new ListGcpUserAccessBindingsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGcpUserAccessBindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [GcpUserAccessBindings]
@@ -3584,13 +3683,22 @@ namespace Google.Identity.AccessContextManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GcpUserAccessBinding"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindingsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGcpUserAccessBindingsAsync(new ListGcpUserAccessBindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> ListGcpUserAccessBindingsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGcpUserAccessBindingsRequest request = new ListGcpUserAccessBindingsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGcpUserAccessBindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the [GcpUserAccessBinding]

@@ -685,13 +685,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationDataset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationDatasets(new ListConversationDatasetsRequest
+        public virtual gax::PagedEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationDatasetsRequest request = new ListConversationDatasetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationDatasets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation datasets in the specified
@@ -711,13 +720,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationDataset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationDatasetsAsync(new ListConversationDatasetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationDatasetsRequest request = new ListConversationDatasetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationDatasetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation datasets in the specified
@@ -737,13 +755,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationDataset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationDatasets(new ListConversationDatasetsRequest
+        public virtual gax::PagedEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationDatasetsRequest request = new ListConversationDatasetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationDatasets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation datasets in the specified
@@ -763,13 +790,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationDataset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationDatasetsAsync(new ListConversationDatasetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationDatasetsResponse, ConversationDataset> ListConversationDatasetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationDatasetsRequest request = new ListConversationDatasetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationDatasetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified conversation dataset.

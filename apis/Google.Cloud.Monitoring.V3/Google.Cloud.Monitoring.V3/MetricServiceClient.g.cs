@@ -399,13 +399,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -429,13 +438,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -457,13 +475,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -487,13 +514,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -515,13 +551,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -545,13 +590,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -573,13 +627,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -603,13 +666,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -631,13 +703,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter.
@@ -661,13 +742,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single monitored resource descriptor.
@@ -896,13 +986,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -924,13 +1023,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -952,13 +1060,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -980,13 +1097,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -1008,13 +1134,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -1036,13 +1171,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -1064,13 +1208,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -1092,13 +1245,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -1120,13 +1282,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter.
@@ -1148,13 +1319,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single metric descriptor.
@@ -2076,16 +2256,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2127,16 +2316,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2178,16 +2376,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2229,16 +2436,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2280,16 +2496,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2331,16 +2556,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2382,16 +2616,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter.
@@ -2433,16 +2676,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates or adds data to one or more time series.

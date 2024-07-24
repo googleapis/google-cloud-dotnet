@@ -275,13 +275,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Changelog"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChangelogsResponse, Changelog> ListChangelogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangelogs(new ListChangelogsRequest
+        public virtual gax::PagedEnumerable<ListChangelogsResponse, Changelog> ListChangelogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangelogsRequest request = new ListChangelogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangelogs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of Changelogs.
@@ -300,13 +309,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Changelog"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChangelogsResponse, Changelog> ListChangelogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangelogsAsync(new ListChangelogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChangelogsResponse, Changelog> ListChangelogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangelogsRequest request = new ListChangelogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangelogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of Changelogs.
@@ -325,13 +343,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Changelog"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChangelogsResponse, Changelog> ListChangelogs(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangelogs(new ListChangelogsRequest
+        public virtual gax::PagedEnumerable<ListChangelogsResponse, Changelog> ListChangelogs(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangelogsRequest request = new ListChangelogsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangelogs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of Changelogs.
@@ -350,13 +377,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Changelog"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChangelogsResponse, Changelog> ListChangelogsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangelogsAsync(new ListChangelogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChangelogsResponse, Changelog> ListChangelogsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangelogsRequest request = new ListChangelogsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangelogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified Changelog.

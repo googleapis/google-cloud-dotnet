@@ -547,13 +547,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroups(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -576,13 +585,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroupsAsync(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -605,13 +623,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroups(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 ParentAsTunnelLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -634,13 +661,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroupsAsync(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 ParentAsTunnelLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new TunnelDestGroup.

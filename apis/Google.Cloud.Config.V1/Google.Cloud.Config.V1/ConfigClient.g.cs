@@ -684,13 +684,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeployments(new ListDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -711,13 +720,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentsAsync(new ListDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -738,13 +756,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeployments(new ListDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -765,13 +792,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentsAsync(new ListDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details about a [Deployment][google.cloud.config.v1.Deployment].
@@ -1374,13 +1410,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisions(new ListRevisionsRequest
+        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Revision][google.cloud.config.v1.Revision]s of a deployment.
@@ -1400,13 +1445,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisionsAsync(new ListRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Revision][google.cloud.config.v1.Revision]s of a deployment.
@@ -1426,13 +1480,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisions(new ListRevisionsRequest
+        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 ParentAsDeploymentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Revision][google.cloud.config.v1.Revision]s of a deployment.
@@ -1452,13 +1515,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisionsAsync(new ListRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(DeploymentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 ParentAsDeploymentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details about a [Revision][google.cloud.config.v1.Revision].
@@ -1727,13 +1799,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Resource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListResourcesResponse, Resource> ListResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResources(new ListResourcesRequest
+        public virtual gax::PagedEnumerable<ListResourcesResponse, Resource> ListResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourcesRequest request = new ListResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
@@ -1753,13 +1834,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Resource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListResourcesResponse, Resource> ListResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourcesAsync(new ListResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListResourcesResponse, Resource> ListResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourcesRequest request = new ListResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
@@ -1779,13 +1869,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Resource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListResourcesResponse, Resource> ListResources(RevisionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResources(new ListResourcesRequest
+        public virtual gax::PagedEnumerable<ListResourcesResponse, Resource> ListResources(RevisionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourcesRequest request = new ListResourcesRequest
             {
                 ParentAsRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
@@ -1805,13 +1904,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Resource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListResourcesResponse, Resource> ListResourcesAsync(RevisionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourcesAsync(new ListResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListResourcesResponse, Resource> ListResourcesAsync(RevisionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourcesRequest request = new ListResourcesRequest
             {
                 ParentAsRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Exports Terraform state file from a given deployment.
@@ -2847,13 +2955,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Preview"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreviews(new ListPreviewsRequest
+        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreviewsRequest request = new ListPreviewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreviews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
@@ -2873,13 +2990,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Preview"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreviewsAsync(new ListPreviewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreviewsRequest request = new ListPreviewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreviewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
@@ -2899,13 +3025,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Preview"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreviews(new ListPreviewsRequest
+        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreviewsRequest request = new ListPreviewsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreviews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
@@ -2925,13 +3060,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Preview"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPreviewsAsync(new ListPreviewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPreviewsRequest request = new ListPreviewsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPreviewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a [Preview][google.cloud.config.v1.Preview].
@@ -3136,13 +3280,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TerraformVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTerraformVersions(new ListTerraformVersionsRequest
+        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTerraformVersionsRequest request = new ListTerraformVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTerraformVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
@@ -3163,13 +3316,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TerraformVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTerraformVersionsAsync(new ListTerraformVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTerraformVersionsRequest request = new ListTerraformVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTerraformVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
@@ -3190,13 +3352,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TerraformVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTerraformVersions(new ListTerraformVersionsRequest
+        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTerraformVersionsRequest request = new ListTerraformVersionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTerraformVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
@@ -3217,13 +3388,22 @@ namespace Google.Cloud.Config.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TerraformVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTerraformVersionsAsync(new ListTerraformVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTerraformVersionsRequest request = new ListTerraformVersionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTerraformVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details about a

@@ -1020,13 +1020,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcesses(new ListProcessesRequest
+        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcesses(request, callSettings);
+        }
 
         /// <summary>
         /// List processes in the given project and location. List order is descending
@@ -1046,13 +1055,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessesAsync(new ListProcessesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List processes in the given project and location. List order is descending
@@ -1072,13 +1090,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcesses(new ListProcessesRequest
+        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcesses(request, callSettings);
+        }
 
         /// <summary>
         /// List processes in the given project and location. List order is descending
@@ -1098,13 +1125,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessesAsync(new ListProcessesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the process with the specified name.
@@ -1601,13 +1637,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuns(new ListRunsRequest
+        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Lists runs in the given project and location. List order is descending by
@@ -1626,13 +1671,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRunsAsync(new ListRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists runs in the given project and location. List order is descending by
@@ -1651,13 +1705,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuns(new ListRunsRequest
+        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 ParentAsProcessName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Lists runs in the given project and location. List order is descending by
@@ -1676,13 +1739,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRunsAsync(new ListRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 ParentAsProcessName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the run with the specified name.
@@ -2085,13 +2157,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEvents(new ListLineageEventsRequest
+        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists lineage events in the given project and location. The list order is
@@ -2111,13 +2192,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEventsAsync(new ListLineageEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists lineage events in the given project and location. The list order is
@@ -2137,13 +2227,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEvents(new ListLineageEventsRequest
+        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 ParentAsRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists lineage events in the given project and location. The list order is
@@ -2163,13 +2262,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEventsAsync(new ListLineageEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 ParentAsRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the lineage event with the specified name.

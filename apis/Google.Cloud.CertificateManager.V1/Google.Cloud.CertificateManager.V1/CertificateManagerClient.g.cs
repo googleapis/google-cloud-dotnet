@@ -1136,13 +1136,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificates(new ListCertificatesRequest
+        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Certificates in a given project and location.
@@ -1161,13 +1170,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificatesAsync(new ListCertificatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Certificates in a given project and location.
@@ -1186,13 +1204,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificates(new ListCertificatesRequest
+        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Certificates in a given project and location.
@@ -1211,13 +1238,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificatesAsync(new ListCertificatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Certificate.
@@ -1795,13 +1831,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateMap"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMaps(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMaps(new ListCertificateMapsRequest
+        public virtual gax::PagedEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMaps(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapsRequest request = new ListCertificateMapsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMaps(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateMaps in a given project and location.
@@ -1820,13 +1865,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateMap"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMapsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMapsAsync(new ListCertificateMapsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMapsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapsRequest request = new ListCertificateMapsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMapsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateMaps in a given project and location.
@@ -1845,13 +1899,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateMap"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMaps(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMaps(new ListCertificateMapsRequest
+        public virtual gax::PagedEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMaps(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapsRequest request = new ListCertificateMapsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMaps(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateMaps in a given project and location.
@@ -1870,13 +1933,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateMap"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMapsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMapsAsync(new ListCertificateMapsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> ListCertificateMapsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapsRequest request = new ListCertificateMapsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMapsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single CertificateMap.
@@ -2473,13 +2545,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateMapEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMapEntries(new ListCertificateMapEntriesRequest
+        public virtual gax::PagedEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapEntriesRequest request = new ListCertificateMapEntriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMapEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateMapEntries in a given project and location.
@@ -2499,13 +2580,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateMapEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMapEntriesAsync(new ListCertificateMapEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapEntriesRequest request = new ListCertificateMapEntriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMapEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateMapEntries in a given project and location.
@@ -2525,13 +2615,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateMapEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntries(CertificateMapName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMapEntries(new ListCertificateMapEntriesRequest
+        public virtual gax::PagedEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntries(CertificateMapName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapEntriesRequest request = new ListCertificateMapEntriesRequest
             {
                 ParentAsCertificateMapName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMapEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateMapEntries in a given project and location.
@@ -2551,13 +2650,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateMapEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntriesAsync(CertificateMapName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateMapEntriesAsync(new ListCertificateMapEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> ListCertificateMapEntriesAsync(CertificateMapName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateMapEntriesRequest request = new ListCertificateMapEntriesRequest
             {
                 ParentAsCertificateMapName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateMapEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single CertificateMapEntry.
@@ -3135,13 +3243,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DnsAuthorization"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDnsAuthorizations(new ListDnsAuthorizationsRequest
+        public virtual gax::PagedEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDnsAuthorizationsRequest request = new ListDnsAuthorizationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDnsAuthorizations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DnsAuthorizations in a given project and location.
@@ -3160,13 +3277,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DnsAuthorization"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDnsAuthorizationsAsync(new ListDnsAuthorizationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDnsAuthorizationsRequest request = new ListDnsAuthorizationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDnsAuthorizationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DnsAuthorizations in a given project and location.
@@ -3185,13 +3311,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DnsAuthorization"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDnsAuthorizations(new ListDnsAuthorizationsRequest
+        public virtual gax::PagedEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDnsAuthorizationsRequest request = new ListDnsAuthorizationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDnsAuthorizations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DnsAuthorizations in a given project and location.
@@ -3210,13 +3345,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DnsAuthorization"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDnsAuthorizationsAsync(new ListDnsAuthorizationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> ListDnsAuthorizationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDnsAuthorizationsRequest request = new ListDnsAuthorizationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDnsAuthorizationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single DnsAuthorization.
@@ -3794,13 +3938,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateIssuanceConfigs(new ListCertificateIssuanceConfigsRequest
+        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateIssuanceConfigsRequest request = new ListCertificateIssuanceConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateIssuanceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateIssuanceConfigs in a given project and location.
@@ -3819,13 +3972,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateIssuanceConfigsAsync(new ListCertificateIssuanceConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateIssuanceConfigsRequest request = new ListCertificateIssuanceConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateIssuanceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateIssuanceConfigs in a given project and location.
@@ -3844,13 +4006,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateIssuanceConfigs(new ListCertificateIssuanceConfigsRequest
+        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateIssuanceConfigsRequest request = new ListCertificateIssuanceConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateIssuanceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CertificateIssuanceConfigs in a given project and location.
@@ -3869,13 +4040,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateIssuanceConfigsAsync(new ListCertificateIssuanceConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateIssuanceConfigsRequest request = new ListCertificateIssuanceConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateIssuanceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single CertificateIssuanceConfig.
@@ -4343,13 +4523,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TrustConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrustConfigs(new ListTrustConfigsRequest
+        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrustConfigsRequest request = new ListTrustConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrustConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TrustConfigs in a given project and location.
@@ -4368,13 +4557,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TrustConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrustConfigsAsync(new ListTrustConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrustConfigsRequest request = new ListTrustConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrustConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TrustConfigs in a given project and location.
@@ -4393,13 +4591,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TrustConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrustConfigs(new ListTrustConfigsRequest
+        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrustConfigsRequest request = new ListTrustConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrustConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TrustConfigs in a given project and location.
@@ -4418,13 +4625,22 @@ namespace Google.Cloud.CertificateManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TrustConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTrustConfigsAsync(new ListTrustConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTrustConfigsRequest request = new ListTrustConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTrustConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single TrustConfig.

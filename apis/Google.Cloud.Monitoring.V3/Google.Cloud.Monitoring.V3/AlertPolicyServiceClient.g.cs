@@ -339,13 +339,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -373,13 +382,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -407,13 +425,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -441,13 +468,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -475,13 +511,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -509,13 +554,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -543,13 +597,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -577,13 +640,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -611,13 +683,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
@@ -645,13 +726,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single alerting policy.

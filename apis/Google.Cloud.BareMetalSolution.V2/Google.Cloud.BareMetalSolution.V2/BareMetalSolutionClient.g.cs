@@ -1142,13 +1142,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRequest
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// List servers in a given project and location.
@@ -1166,13 +1175,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List servers in a given project and location.
@@ -1190,13 +1208,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRequest
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// List servers in a given project and location.
@@ -1214,13 +1241,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get details about a single server.
@@ -2450,13 +2486,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SSHKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSSHKeys(new ListSSHKeysRequest
+        public virtual gax::PagedEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSSHKeysRequest request = new ListSSHKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSSHKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the public SSH keys registered for the specified project.
@@ -2476,13 +2521,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SSHKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSSHKeysAsync(new ListSSHKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSSHKeysRequest request = new ListSSHKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSSHKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the public SSH keys registered for the specified project.
@@ -2502,13 +2556,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SSHKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeys(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSSHKeys(new ListSSHKeysRequest
+        public virtual gax::PagedEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeys(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSSHKeysRequest request = new ListSSHKeysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSSHKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the public SSH keys registered for the specified project.
@@ -2528,13 +2591,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SSHKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSSHKeysAsync(new ListSSHKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> ListSSHKeysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSSHKeysRequest request = new ListSSHKeysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSSHKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Register a public SSH key in the specified project for use with the
@@ -2863,13 +2935,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumes(new ListVolumesRequest
+        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumes(request, callSettings);
+        }
 
         /// <summary>
         /// List storage volumes in a given project and location.
@@ -2887,13 +2968,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumesAsync(new ListVolumesRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List storage volumes in a given project and location.
@@ -2911,13 +3001,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumes(new ListVolumesRequest
+        public virtual gax::PagedEnumerable<ListVolumesResponse, Volume> ListVolumes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumes(request, callSettings);
+        }
 
         /// <summary>
         /// List storage volumes in a given project and location.
@@ -2935,13 +3034,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Volume"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumesAsync(new ListVolumesRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumesResponse, Volume> ListVolumesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumesRequest request = new ListVolumesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get details of a single storage volume.
@@ -3635,13 +3743,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworksResponse, Network> ListNetworks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworks(new ListNetworksRequest
+        public virtual gax::PagedEnumerable<ListNetworksResponse, Network> ListNetworks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworks(request, callSettings);
+        }
 
         /// <summary>
         /// List network in a given project and location.
@@ -3659,13 +3776,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworksResponse, Network> ListNetworksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworksAsync(new ListNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworksResponse, Network> ListNetworksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List network in a given project and location.
@@ -3683,13 +3809,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworksResponse, Network> ListNetworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworks(new ListNetworksRequest
+        public virtual gax::PagedEnumerable<ListNetworksResponse, Network> ListNetworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworks(request, callSettings);
+        }
 
         /// <summary>
         /// List network in a given project and location.
@@ -3707,13 +3842,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworksResponse, Network> ListNetworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworksAsync(new ListNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworksResponse, Network> ListNetworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all Networks (and used IPs for each Network) in the vendor account
@@ -4603,13 +4747,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VolumeSnapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeSnapshots(new ListVolumeSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeSnapshotsRequest request = new ListVolumeSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of snapshots for the specified volume.
@@ -4629,13 +4782,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VolumeSnapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeSnapshotsAsync(new ListVolumeSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeSnapshotsRequest request = new ListVolumeSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of snapshots for the specified volume.
@@ -4655,13 +4817,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VolumeSnapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshots(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeSnapshots(new ListVolumeSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshots(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeSnapshotsRequest request = new ListVolumeSnapshotsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of snapshots for the specified volume.
@@ -4681,13 +4852,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VolumeSnapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshotsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeSnapshotsAsync(new ListVolumeSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> ListVolumeSnapshotsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeSnapshotsRequest request = new ListVolumeSnapshotsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get details of a single storage logical unit number(LUN).
@@ -4828,13 +5008,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Lun"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLunsResponse, Lun> ListLuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLuns(new ListLunsRequest
+        public virtual gax::PagedEnumerable<ListLunsResponse, Lun> ListLuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLunsRequest request = new ListLunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLuns(request, callSettings);
+        }
 
         /// <summary>
         /// List storage volume luns for given storage volume.
@@ -4852,13 +5041,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Lun"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLunsResponse, Lun> ListLunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLunsAsync(new ListLunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLunsResponse, Lun> ListLunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLunsRequest request = new ListLunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List storage volume luns for given storage volume.
@@ -4876,13 +5074,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Lun"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLunsResponse, Lun> ListLuns(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLuns(new ListLunsRequest
+        public virtual gax::PagedEnumerable<ListLunsResponse, Lun> ListLuns(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLunsRequest request = new ListLunsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLuns(request, callSettings);
+        }
 
         /// <summary>
         /// List storage volume luns for given storage volume.
@@ -4900,13 +5107,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Lun"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLunsResponse, Lun> ListLunsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLunsAsync(new ListLunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLunsResponse, Lun> ListLunsAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLunsRequest request = new ListLunsRequest
             {
                 ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Skips lun's cooloff and deletes it now.
@@ -5187,13 +5403,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NfsShare"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNfsSharesResponse, NfsShare> ListNfsShares(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNfsShares(new ListNfsSharesRequest
+        public virtual gax::PagedEnumerable<ListNfsSharesResponse, NfsShare> ListNfsShares(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNfsSharesRequest request = new ListNfsSharesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNfsShares(request, callSettings);
+        }
 
         /// <summary>
         /// List NFS shares.
@@ -5211,13 +5436,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NfsShare"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNfsSharesResponse, NfsShare> ListNfsSharesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNfsSharesAsync(new ListNfsSharesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNfsSharesResponse, NfsShare> ListNfsSharesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNfsSharesRequest request = new ListNfsSharesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNfsSharesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List NFS shares.
@@ -5235,13 +5469,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NfsShare"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNfsSharesResponse, NfsShare> ListNfsShares(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNfsShares(new ListNfsSharesRequest
+        public virtual gax::PagedEnumerable<ListNfsSharesResponse, NfsShare> ListNfsShares(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNfsSharesRequest request = new ListNfsSharesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNfsShares(request, callSettings);
+        }
 
         /// <summary>
         /// List NFS shares.
@@ -5259,13 +5502,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NfsShare"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNfsSharesResponse, NfsShare> ListNfsSharesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNfsSharesAsync(new ListNfsSharesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNfsSharesResponse, NfsShare> ListNfsSharesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNfsSharesRequest request = new ListNfsSharesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNfsSharesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update details of a single NFS share.
@@ -5848,13 +6100,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProvisioningQuota"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvisioningQuotas(new ListProvisioningQuotasRequest
+        public virtual gax::PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvisioningQuotasRequest request = new ListProvisioningQuotasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvisioningQuotas(request, callSettings);
+        }
 
         /// <summary>
         /// List the budget details to provision resources on a given project.
@@ -5872,13 +6133,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProvisioningQuota"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvisioningQuotasAsync(new ListProvisioningQuotasRequest
+        public virtual gax::PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvisioningQuotasRequest request = new ListProvisioningQuotasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvisioningQuotasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the budget details to provision resources on a given project.
@@ -5896,13 +6166,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProvisioningQuota"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotas(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvisioningQuotas(new ListProvisioningQuotasRequest
+        public virtual gax::PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotas(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvisioningQuotasRequest request = new ListProvisioningQuotasRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvisioningQuotas(request, callSettings);
+        }
 
         /// <summary>
         /// List the budget details to provision resources on a given project.
@@ -5920,13 +6199,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProvisioningQuota"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotasAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvisioningQuotasAsync(new ListProvisioningQuotasRequest
+        public virtual gax::PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> ListProvisioningQuotasAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvisioningQuotasRequest request = new ListProvisioningQuotasRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvisioningQuotasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Submit a provisiong configuration for a given project.
@@ -6552,13 +6840,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSImagesResponse, OSImage> ListOSImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSImages(new ListOSImagesRequest
+        public virtual gax::PagedEnumerable<ListOSImagesResponse, OSImage> ListOSImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSImagesRequest request = new ListOSImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSImages(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of OS images which are currently approved.
@@ -6576,13 +6873,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSImagesResponse, OSImage> ListOSImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSImagesAsync(new ListOSImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSImagesResponse, OSImage> ListOSImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSImagesRequest request = new ListOSImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of OS images which are currently approved.
@@ -6600,13 +6906,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSImagesResponse, OSImage> ListOSImages(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSImages(new ListOSImagesRequest
+        public virtual gax::PagedEnumerable<ListOSImagesResponse, OSImage> ListOSImages(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSImagesRequest request = new ListOSImagesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSImages(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of OS images which are currently approved.
@@ -6624,13 +6939,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSImagesResponse, OSImage> ListOSImagesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSImagesAsync(new ListOSImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSImagesResponse, OSImage> ListOSImagesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSImagesRequest request = new ListOSImagesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSImagesAsync(request, callSettings);
+        }
     }
 
     /// <summary>BareMetalSolution client wrapper implementation, for convenient use.</summary>

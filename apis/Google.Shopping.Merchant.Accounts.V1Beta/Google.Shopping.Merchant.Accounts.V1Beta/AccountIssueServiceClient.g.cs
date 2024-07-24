@@ -241,13 +241,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccountIssue"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssues(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountIssues(new ListAccountIssuesRequest
+        public virtual gax::PagedEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssues(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountIssuesRequest request = new ListAccountIssuesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountIssues(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all account issues of a Merchant Center account.
@@ -266,13 +275,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccountIssue"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssuesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountIssuesAsync(new ListAccountIssuesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssuesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountIssuesRequest request = new ListAccountIssuesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountIssuesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all account issues of a Merchant Center account.
@@ -291,13 +309,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccountIssue"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssues(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountIssues(new ListAccountIssuesRequest
+        public virtual gax::PagedEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssues(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountIssuesRequest request = new ListAccountIssuesRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountIssues(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all account issues of a Merchant Center account.
@@ -316,13 +343,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccountIssue"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssuesAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountIssuesAsync(new ListAccountIssuesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccountIssuesResponse, AccountIssue> ListAccountIssuesAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountIssuesRequest request = new ListAccountIssuesRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountIssuesAsync(request, callSettings);
+        }
     }
 
     /// <summary>AccountIssueService client wrapper implementation, for convenient use.</summary>

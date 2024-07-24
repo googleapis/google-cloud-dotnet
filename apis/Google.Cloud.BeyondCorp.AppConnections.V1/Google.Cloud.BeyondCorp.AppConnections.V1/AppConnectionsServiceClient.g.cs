@@ -408,13 +408,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnections(new ListAppConnectionsRequest
+        public virtual gax::PagedEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectionsRequest request = new ListAppConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppConnections in a given project and location.
@@ -433,13 +442,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnectionsAsync(new ListAppConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectionsRequest request = new ListAppConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppConnections in a given project and location.
@@ -458,13 +476,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnections(new ListAppConnectionsRequest
+        public virtual gax::PagedEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectionsRequest request = new ListAppConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppConnections in a given project and location.
@@ -483,13 +510,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppConnectionsAsync(new ListAppConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppConnectionsResponse, AppConnection> ListAppConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppConnectionsRequest request = new ListAppConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single AppConnection.
@@ -1113,13 +1149,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// <returns>
         /// A pageable sequence of <see cref="ResolveAppConnectionsResponse.Types.AppConnectionDetails"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ResolveAppConnections(new ResolveAppConnectionsRequest
+        public virtual gax::PagedEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ResolveAppConnectionsRequest request = new ResolveAppConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ResolveAppConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Resolves AppConnections details for a given AppConnector.
@@ -1143,13 +1188,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// A pageable asynchronous sequence of <see cref="ResolveAppConnectionsResponse.Types.AppConnectionDetails"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ResolveAppConnectionsAsync(new ResolveAppConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ResolveAppConnectionsRequest request = new ResolveAppConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ResolveAppConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Resolves AppConnections details for a given AppConnector.
@@ -1172,13 +1226,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// <returns>
         /// A pageable sequence of <see cref="ResolveAppConnectionsResponse.Types.AppConnectionDetails"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ResolveAppConnections(new ResolveAppConnectionsRequest
+        public virtual gax::PagedEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ResolveAppConnectionsRequest request = new ResolveAppConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ResolveAppConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Resolves AppConnections details for a given AppConnector.
@@ -1202,13 +1265,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// A pageable asynchronous sequence of <see cref="ResolveAppConnectionsResponse.Types.AppConnectionDetails"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ResolveAppConnectionsAsync(new ResolveAppConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> ResolveAppConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ResolveAppConnectionsRequest request = new ResolveAppConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ResolveAppConnectionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>AppConnectionsService client wrapper implementation, for convenient use.</summary>

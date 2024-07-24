@@ -773,13 +773,22 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRowsResponse, Row> ListRows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRows(new ListRowsRequest
+        public virtual gax::PagedEnumerable<ListRowsResponse, Row> ListRows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRowsRequest request = new ListRowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRows(request, callSettings);
+        }
 
         /// <summary>
         /// Lists rows in a table. Returns NOT_FOUND if the table does not exist.
@@ -798,13 +807,22 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRowsResponse, Row> ListRowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRowsAsync(new ListRowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRowsResponse, Row> ListRowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRowsRequest request = new ListRowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a row.

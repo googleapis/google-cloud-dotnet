@@ -382,13 +382,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccountTax"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTax(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountTax(new ListAccountTaxRequest
+        public virtual gax::PagedEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTax(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountTaxRequest request = new ListAccountTaxRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountTax(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the tax settings of the sub-accounts only in your
@@ -410,13 +419,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccountTax"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTaxAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountTaxAsync(new ListAccountTaxRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTaxAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountTaxRequest request = new ListAccountTaxRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountTaxAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the tax settings of the sub-accounts only in your
@@ -438,13 +456,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AccountTax"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTax(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountTax(new ListAccountTaxRequest
+        public virtual gax::PagedEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTax(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountTaxRequest request = new ListAccountTaxRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountTax(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the tax settings of the sub-accounts only in your
@@ -466,13 +493,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AccountTax"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTaxAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAccountTaxAsync(new ListAccountTaxRequest
+        public virtual gax::PagedAsyncEnumerable<ListAccountTaxResponse, AccountTax> ListAccountTaxAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountTaxRequest request = new ListAccountTaxRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountTaxAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the tax settings of the account.

@@ -792,13 +792,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataStoresResponse, DataStore> ListDataStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStores(new ListDataStoresRequest
+        public virtual gax::PagedEnumerable<ListDataStoresResponse, DataStore> ListDataStores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStoresRequest request = new ListDataStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [DataStore][google.cloud.discoveryengine.v1beta.DataStore]s
@@ -823,13 +832,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataStoresResponse, DataStore> ListDataStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStoresAsync(new ListDataStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataStoresResponse, DataStore> ListDataStoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStoresRequest request = new ListDataStoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [DataStore][google.cloud.discoveryengine.v1beta.DataStore]s
@@ -854,13 +872,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataStore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataStoresResponse, DataStore> ListDataStores(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStores(new ListDataStoresRequest
+        public virtual gax::PagedEnumerable<ListDataStoresResponse, DataStore> ListDataStores(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStoresRequest request = new ListDataStoresRequest
             {
                 ParentAsCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the [DataStore][google.cloud.discoveryengine.v1beta.DataStore]s
@@ -885,13 +912,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataStore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataStoresResponse, DataStore> ListDataStoresAsync(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataStoresAsync(new ListDataStoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataStoresResponse, DataStore> ListDataStoresAsync(CollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataStoresRequest request = new ListDataStoresRequest
             {
                 ParentAsCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataStoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a [DataStore][google.cloud.discoveryengine.v1beta.DataStore].

@@ -376,13 +376,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperiments(new ListExperimentsRequest
+        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperiments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all experiments in the specified
@@ -404,13 +413,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperimentsAsync(new ListExperimentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperimentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all experiments in the specified
@@ -432,13 +450,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperiments(new ListExperimentsRequest
+        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperiments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all experiments in the specified
@@ -460,13 +487,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperimentsAsync(new ListExperimentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperimentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified

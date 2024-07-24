@@ -4537,14 +4537,23 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GroupResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<GroupFindingsResponse, GroupResult> GroupFindings(string parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GroupFindings(new GroupFindingsRequest
+        public virtual gax::PagedEnumerable<GroupFindingsResponse, GroupResult> GroupFindings(string parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GroupFindingsRequest request = new GroupFindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 GroupBy = gax::GaxPreconditions.CheckNotNullOrEmpty(groupBy, nameof(groupBy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GroupFindings(request, callSettings);
+        }
 
         /// <summary>
         /// Filters an organization or source's findings and groups them by their
@@ -4600,14 +4609,23 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GroupResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> GroupFindingsAsync(string parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GroupFindingsAsync(new GroupFindingsRequest
+        public virtual gax::PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> GroupFindingsAsync(string parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GroupFindingsRequest request = new GroupFindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 GroupBy = gax::GaxPreconditions.CheckNotNullOrEmpty(groupBy, nameof(groupBy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GroupFindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Filters an organization or source's findings and groups them by their
@@ -4663,14 +4681,23 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GroupResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<GroupFindingsResponse, GroupResult> GroupFindings(SourceName parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GroupFindings(new GroupFindingsRequest
+        public virtual gax::PagedEnumerable<GroupFindingsResponse, GroupResult> GroupFindings(SourceName parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GroupFindingsRequest request = new GroupFindingsRequest
             {
                 ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 GroupBy = gax::GaxPreconditions.CheckNotNullOrEmpty(groupBy, nameof(groupBy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GroupFindings(request, callSettings);
+        }
 
         /// <summary>
         /// Filters an organization or source's findings and groups them by their
@@ -4726,14 +4753,23 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GroupResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> GroupFindingsAsync(SourceName parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GroupFindingsAsync(new GroupFindingsRequest
+        public virtual gax::PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> GroupFindingsAsync(SourceName parent, string groupBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GroupFindingsRequest request = new GroupFindingsRequest
             {
                 ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 GroupBy = gax::GaxPreconditions.CheckNotNullOrEmpty(groupBy, nameof(groupBy)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GroupFindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the attack paths for a set of simulation results or valued resources
@@ -4778,13 +4814,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttackPaths(new ListAttackPathsRequest
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttackPathsRequest request = new ListAttackPathsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttackPaths(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the attack paths for a set of simulation results or valued resources
@@ -4809,13 +4854,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttackPathsAsync(new ListAttackPathsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttackPathsRequest request = new ListAttackPathsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttackPathsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the attack paths for a set of simulation results or valued resources
@@ -4840,13 +4894,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(OrganizationValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttackPaths(new ListAttackPathsRequest
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(OrganizationValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttackPathsRequest request = new ListAttackPathsRequest
             {
                 ParentAsOrganizationValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttackPaths(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the attack paths for a set of simulation results or valued resources
@@ -4871,13 +4934,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(OrganizationValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttackPathsAsync(new ListAttackPathsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(OrganizationValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttackPathsRequest request = new ListAttackPathsRequest
             {
                 ParentAsOrganizationValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttackPathsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the attack paths for a set of simulation results or valued resources
@@ -4902,13 +4974,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttackPath"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(ValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttackPaths(new ListAttackPathsRequest
+        public virtual gax::PagedEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPaths(ValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttackPathsRequest request = new ListAttackPathsRequest
             {
                 ParentAsValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttackPaths(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the attack paths for a set of simulation results or valued resources
@@ -4933,13 +5014,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttackPath"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(ValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttackPathsAsync(new ListAttackPathsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttackPathsResponse, AttackPath> ListAttackPathsAsync(ValuedResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttackPathsRequest request = new ListAttackPathsRequest
             {
                 ParentAsValuedResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttackPathsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -4990,13 +5080,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExports(new ListBigQueryExportsRequest
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5021,13 +5120,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5052,13 +5160,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExports(new ListBigQueryExportsRequest
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5083,13 +5200,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5114,13 +5240,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExports(new ListBigQueryExportsRequest
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5145,13 +5280,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5176,13 +5320,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExports(new ListBigQueryExportsRequest
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
@@ -5207,13 +5360,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBigQueryExportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists an organization or source's findings.
@@ -5298,13 +5460,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <returns>
         /// A pageable sequence of <see cref="ListFindingsResponse.Types.ListFindingsResult"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFindings(new ListFindingsRequest
+        public virtual gax::PagedEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFindingsRequest request = new ListFindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists an organization or source's findings.
@@ -5351,13 +5522,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ListFindingsResponse.Types.ListFindingsResult"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFindingsAsync(new ListFindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFindingsRequest request = new ListFindingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists an organization or source's findings.
@@ -5404,13 +5584,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <returns>
         /// A pageable sequence of <see cref="ListFindingsResponse.Types.ListFindingsResult"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindings(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFindings(new ListFindingsRequest
+        public virtual gax::PagedEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindings(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFindingsRequest request = new ListFindingsRequest
             {
                 ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFindings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists an organization or source's findings.
@@ -5457,13 +5646,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ListFindingsResponse.Types.ListFindingsResult"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindingsAsync(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFindingsAsync(new ListFindingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> ListFindingsAsync(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFindingsRequest request = new ListFindingsRequest
             {
                 ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFindingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5507,13 +5705,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5537,13 +5744,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5567,13 +5783,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5597,13 +5822,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5627,13 +5861,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5657,13 +5900,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5687,13 +5939,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5717,13 +5978,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5747,13 +6017,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5777,13 +6056,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5807,13 +6095,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5837,13 +6134,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5867,13 +6173,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigs(new ListMuteConfigsRequest
+        public virtual gax::PagedEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists mute configs. If no location is specified, default is
@@ -5897,13 +6212,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MuteConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMuteConfigsAsync(new ListMuteConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> ListMuteConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMuteConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -5943,13 +6267,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigs(new ListNotificationConfigsRequest
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -5971,13 +6304,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -5999,13 +6341,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigs(new ListNotificationConfigsRequest
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -6027,13 +6378,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -6055,13 +6415,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigs(new ListNotificationConfigsRequest
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -6083,13 +6452,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -6111,13 +6489,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigs(new ListNotificationConfigsRequest
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notification configs.
@@ -6139,13 +6526,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotificationConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ResourceValueConfigs.
@@ -6183,13 +6579,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourceValueConfigs(new ListResourceValueConfigsRequest
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceValueConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ResourceValueConfigs.
@@ -6209,13 +6614,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceValueConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ResourceValueConfigs.
@@ -6235,13 +6649,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourceValueConfigs(new ListResourceValueConfigsRequest
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceValueConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ResourceValueConfigs.
@@ -6261,13 +6684,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceValueConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ResourceValueConfigs.
@@ -6287,13 +6719,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ResourceValueConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourceValueConfigs(new ListResourceValueConfigsRequest
+        public virtual gax::PagedEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceValueConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ResourceValueConfigs.
@@ -6313,13 +6754,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ResourceValueConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListResourceValueConfigsAsync(new ListResourceValueConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListResourceValueConfigsResponse, ResourceValueConfig> ListResourceValueConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceValueConfigsRequest request = new ListResourceValueConfigsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceValueConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6357,13 +6807,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSources(new ListSourcesRequest
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6383,13 +6842,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSourcesAsync(new ListSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6409,13 +6877,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSources(new ListSourcesRequest
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6435,13 +6912,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSourcesAsync(new ListSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6461,13 +6947,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSources(new ListSourcesRequest
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6487,13 +6982,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSourcesAsync(new ListSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6513,13 +7017,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSources(new ListSourcesRequest
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sources belonging to an organization.
@@ -6539,13 +7052,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSourcesAsync(new ListSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSourcesRequest request = new ListSourcesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the valued resources for a set of simulation results and filter.
@@ -6586,13 +7108,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListValuedResources(new ListValuedResourcesRequest
+        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListValuedResourcesRequest request = new ListValuedResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListValuedResources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the valued resources for a set of simulation results and filter.
@@ -6615,13 +7146,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListValuedResourcesAsync(new ListValuedResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListValuedResourcesRequest request = new ListValuedResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListValuedResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the valued resources for a set of simulation results and filter.
@@ -6644,13 +7184,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ValuedResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(SimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListValuedResources(new ListValuedResourcesRequest
+        public virtual gax::PagedEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResources(SimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListValuedResourcesRequest request = new ListValuedResourcesRequest
             {
                 ParentAsSimulationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListValuedResources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the valued resources for a set of simulation results and filter.
@@ -6673,13 +7222,22 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ValuedResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(SimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListValuedResourcesAsync(new ListValuedResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListValuedResourcesResponse, ValuedResource> ListValuedResourcesAsync(SimulationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListValuedResourcesRequest request = new ListValuedResourcesRequest
             {
                 ParentAsSimulationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListValuedResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the state of a finding. If no location is specified, finding is

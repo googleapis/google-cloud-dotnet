@@ -407,13 +407,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CssProduct"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCssProductsResponse, CssProduct> ListCssProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCssProducts(new ListCssProductsRequest
+        public virtual gax::PagedEnumerable<ListCssProductsResponse, CssProduct> ListCssProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCssProductsRequest request = new ListCssProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCssProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processed CSS Products in your CSS Center account. The response
@@ -438,13 +447,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CssProduct"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCssProductsResponse, CssProduct> ListCssProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCssProductsAsync(new ListCssProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCssProductsResponse, CssProduct> ListCssProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCssProductsRequest request = new ListCssProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCssProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processed CSS Products in your CSS Center account. The response
@@ -469,13 +487,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CssProduct"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCssProductsResponse, CssProduct> ListCssProducts(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCssProducts(new ListCssProductsRequest
+        public virtual gax::PagedEnumerable<ListCssProductsResponse, CssProduct> ListCssProducts(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCssProductsRequest request = new ListCssProductsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCssProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processed CSS Products in your CSS Center account. The response
@@ -500,13 +527,22 @@ namespace Google.Shopping.Css.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CssProduct"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCssProductsResponse, CssProduct> ListCssProductsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCssProductsAsync(new ListCssProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCssProductsResponse, CssProduct> ListCssProductsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCssProductsRequest request = new ListCssProductsRequest
             {
                 ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCssProductsAsync(request, callSettings);
+        }
     }
 
     /// <summary>CssProductsService client wrapper implementation, for convenient use.</summary>

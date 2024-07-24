@@ -714,13 +714,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Participant"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListParticipantsResponse, Participant> ListParticipants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipants(new ListParticipantsRequest
+        public virtual gax::PagedEnumerable<ListParticipantsResponse, Participant> ListParticipants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantsRequest request = new ListParticipantsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipants(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the participants in a conference record. By default, ordered by join
@@ -742,13 +751,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Participant"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListParticipantsResponse, Participant> ListParticipantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipantsAsync(new ListParticipantsRequest
+        public virtual gax::PagedAsyncEnumerable<ListParticipantsResponse, Participant> ListParticipantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantsRequest request = new ListParticipantsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipantsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the participants in a conference record. By default, ordered by join
@@ -770,13 +788,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Participant"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListParticipantsResponse, Participant> ListParticipants(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipants(new ListParticipantsRequest
+        public virtual gax::PagedEnumerable<ListParticipantsResponse, Participant> ListParticipants(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantsRequest request = new ListParticipantsRequest
             {
                 ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipants(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the participants in a conference record. By default, ordered by join
@@ -798,13 +825,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Participant"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListParticipantsResponse, Participant> ListParticipantsAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipantsAsync(new ListParticipantsRequest
+        public virtual gax::PagedAsyncEnumerable<ListParticipantsResponse, Participant> ListParticipantsAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantsRequest request = new ListParticipantsRequest
             {
                 ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipantsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a participant session by participant session ID.
@@ -958,13 +994,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ParticipantSession"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipantSessions(new ListParticipantSessionsRequest
+        public virtual gax::PagedEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantSessionsRequest request = new ListParticipantSessionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipantSessions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the participant sessions of a participant in a conference record. By
@@ -987,13 +1032,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ParticipantSession"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipantSessionsAsync(new ListParticipantSessionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantSessionsRequest request = new ListParticipantSessionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipantSessionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the participant sessions of a participant in a conference record. By
@@ -1016,13 +1070,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ParticipantSession"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessions(ParticipantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipantSessions(new ListParticipantSessionsRequest
+        public virtual gax::PagedEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessions(ParticipantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantSessionsRequest request = new ListParticipantSessionsRequest
             {
                 ParentAsParticipantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipantSessions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the participant sessions of a participant in a conference record. By
@@ -1045,13 +1108,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ParticipantSession"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessionsAsync(ParticipantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListParticipantSessionsAsync(new ListParticipantSessionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListParticipantSessionsResponse, ParticipantSession> ListParticipantSessionsAsync(ParticipantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListParticipantSessionsRequest request = new ListParticipantSessionsRequest
             {
                 ParentAsParticipantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListParticipantSessionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a recording by recording ID.
@@ -1195,13 +1267,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recording"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecordingsResponse, Recording> ListRecordings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecordings(new ListRecordingsRequest
+        public virtual gax::PagedEnumerable<ListRecordingsResponse, Recording> ListRecordings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecordingsRequest request = new ListRecordingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecordings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the recording resources from the conference record. By default,
@@ -1220,13 +1301,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recording"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecordingsResponse, Recording> ListRecordingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecordingsAsync(new ListRecordingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecordingsResponse, Recording> ListRecordingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecordingsRequest request = new ListRecordingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecordingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the recording resources from the conference record. By default,
@@ -1245,13 +1335,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recording"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecordingsResponse, Recording> ListRecordings(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecordings(new ListRecordingsRequest
+        public virtual gax::PagedEnumerable<ListRecordingsResponse, Recording> ListRecordings(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecordingsRequest request = new ListRecordingsRequest
             {
                 ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecordings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the recording resources from the conference record. By default,
@@ -1270,13 +1369,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recording"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecordingsResponse, Recording> ListRecordingsAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecordingsAsync(new ListRecordingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecordingsResponse, Recording> ListRecordingsAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecordingsRequest request = new ListRecordingsRequest
             {
                 ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecordingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a transcript by transcript ID.
@@ -1420,13 +1528,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Transcript"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTranscriptsResponse, Transcript> ListTranscripts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscripts(new ListTranscriptsRequest
+        public virtual gax::PagedEnumerable<ListTranscriptsResponse, Transcript> ListTranscripts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptsRequest request = new ListTranscriptsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscripts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the set of transcripts from the conference record. By default,
@@ -1445,13 +1562,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Transcript"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTranscriptsResponse, Transcript> ListTranscriptsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscriptsAsync(new ListTranscriptsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTranscriptsResponse, Transcript> ListTranscriptsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptsRequest request = new ListTranscriptsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscriptsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the set of transcripts from the conference record. By default,
@@ -1470,13 +1596,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Transcript"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTranscriptsResponse, Transcript> ListTranscripts(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscripts(new ListTranscriptsRequest
+        public virtual gax::PagedEnumerable<ListTranscriptsResponse, Transcript> ListTranscripts(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptsRequest request = new ListTranscriptsRequest
             {
                 ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscripts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the set of transcripts from the conference record. By default,
@@ -1495,13 +1630,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Transcript"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTranscriptsResponse, Transcript> ListTranscriptsAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscriptsAsync(new ListTranscriptsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTranscriptsResponse, Transcript> ListTranscriptsAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptsRequest request = new ListTranscriptsRequest
             {
                 ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscriptsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a `TranscriptEntry` resource by entry ID.
@@ -1694,13 +1838,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TranscriptEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscriptEntries(new ListTranscriptEntriesRequest
+        public virtual gax::PagedEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptEntriesRequest request = new ListTranscriptEntriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscriptEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the structured transcript entries per transcript. By default, ordered
@@ -1724,13 +1877,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TranscriptEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscriptEntriesAsync(new ListTranscriptEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptEntriesRequest request = new ListTranscriptEntriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscriptEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the structured transcript entries per transcript. By default, ordered
@@ -1754,13 +1916,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TranscriptEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntries(TranscriptName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscriptEntries(new ListTranscriptEntriesRequest
+        public virtual gax::PagedEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntries(TranscriptName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptEntriesRequest request = new ListTranscriptEntriesRequest
             {
                 ParentAsTranscriptName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscriptEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the structured transcript entries per transcript. By default, ordered
@@ -1784,13 +1955,22 @@ namespace Google.Apps.Meet.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TranscriptEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntriesAsync(TranscriptName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTranscriptEntriesAsync(new ListTranscriptEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTranscriptEntriesResponse, TranscriptEntry> ListTranscriptEntriesAsync(TranscriptName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTranscriptEntriesRequest request = new ListTranscriptEntriesRequest
             {
                 ParentAsTranscriptName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTranscriptEntriesAsync(request, callSettings);
+        }
     }
 
     /// <summary>ConferenceRecordsService client wrapper implementation, for convenient use.</summary>

@@ -418,13 +418,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntents(new ListIntentsRequest
+        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all intents in the specified agent.
@@ -451,13 +460,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntentsAsync(new ListIntentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all intents in the specified agent.
@@ -484,13 +502,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntents(new ListIntentsRequest
+        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all intents in the specified agent.
@@ -517,95 +544,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntentsAsync(new ListIntentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all intents in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
-        /// 
-        /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
-        /// Note: training phrases of the intents will not be returned for non-draft
-        /// environment.
-        /// </param>
-        /// <param name="languageCode">
-        /// Optional. The language used to access language-specific data.
-        /// If not specified, the agent's default language is used.
-        /// For more information, see
-        /// [Multilingual intent and entity
-        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntents(new ListIntentsRequest
+            };
+            if (pageToken != null)
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all intents in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
-        /// 
-        /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
-        /// Note: training phrases of the intents will not be returned for non-draft
-        /// environment.
-        /// </param>
-        /// <param name="languageCode">
-        /// Optional. The language used to access language-specific data.
-        /// If not specified, the agent's default language is used.
-        /// For more information, see
-        /// [Multilingual intent and entity
-        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntentsAsync(new ListIntentsRequest
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all intents in the specified agent.
@@ -639,14 +593,23 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntents(new ListIntentsRequest
+        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
             {
-                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all intents in the specified agent.
@@ -680,14 +643,123 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Intent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIntentsAsync(new ListIntentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LanguageCode = languageCode ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all intents in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all intents from.
+        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
+        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
+        /// </param>
+        /// <param name="languageCode">
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Intent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntentsResponse, Intent> ListIntents(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all intents in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all intents from.
+        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
+        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
+        /// </param>
+        /// <param name="languageCode">
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Intent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntentsResponse, Intent> ListIntentsAsync(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntentsRequest request = new ListIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LanguageCode = languageCode ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified intent.

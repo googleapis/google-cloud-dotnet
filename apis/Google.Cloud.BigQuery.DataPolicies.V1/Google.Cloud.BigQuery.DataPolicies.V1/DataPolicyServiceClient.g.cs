@@ -960,13 +960,22 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataPolicies(new ListDataPoliciesRequest
+        public virtual gax::PagedEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataPoliciesRequest request = new ListDataPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// List all of the data policies in the specified parent project.
@@ -985,13 +994,22 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataPoliciesAsync(new ListDataPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataPoliciesRequest request = new ListDataPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List all of the data policies in the specified parent project.
@@ -1010,13 +1028,22 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataPolicies(new ListDataPoliciesRequest
+        public virtual gax::PagedEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataPoliciesRequest request = new ListDataPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// List all of the data policies in the specified parent project.
@@ -1035,13 +1062,22 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataPoliciesAsync(new ListDataPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataPoliciesResponse, DataPolicy> ListDataPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataPoliciesRequest request = new ListDataPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the IAM policy for the specified data policy.

@@ -728,13 +728,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeploymentResourcePool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentResourcePools(new ListDeploymentResourcePoolsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentResourcePoolsRequest request = new ListDeploymentResourcePoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentResourcePools(request, callSettings);
+        }
 
         /// <summary>
         /// List DeploymentResourcePools in a location.
@@ -753,13 +762,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeploymentResourcePool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentResourcePoolsAsync(new ListDeploymentResourcePoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentResourcePoolsRequest request = new ListDeploymentResourcePoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentResourcePoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List DeploymentResourcePools in a location.
@@ -778,13 +796,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeploymentResourcePool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePools(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentResourcePools(new ListDeploymentResourcePoolsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePools(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentResourcePoolsRequest request = new ListDeploymentResourcePoolsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentResourcePools(request, callSettings);
+        }
 
         /// <summary>
         /// List DeploymentResourcePools in a location.
@@ -803,13 +830,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeploymentResourcePool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePoolsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentResourcePoolsAsync(new ListDeploymentResourcePoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentResourcePoolsResponse, DeploymentResourcePool> ListDeploymentResourcePoolsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentResourcePoolsRequest request = new ListDeploymentResourcePoolsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentResourcePoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update a DeploymentResourcePool.
@@ -1110,13 +1146,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeployedModelRef"/> resources.</returns>
-        public virtual gax::PagedEnumerable<QueryDeployedModelsResponse, DeployedModelRef> QueryDeployedModels(string deploymentResourcePool, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            QueryDeployedModels(new QueryDeployedModelsRequest
+        public virtual gax::PagedEnumerable<QueryDeployedModelsResponse, DeployedModelRef> QueryDeployedModels(string deploymentResourcePool, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryDeployedModelsRequest request = new QueryDeployedModelsRequest
             {
                 DeploymentResourcePool = gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentResourcePool, nameof(deploymentResourcePool)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryDeployedModels(request, callSettings);
+        }
 
         /// <summary>
         /// List DeployedModels that have been deployed on this DeploymentResourcePool.
@@ -1136,13 +1181,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeployedModelRef"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<QueryDeployedModelsResponse, DeployedModelRef> QueryDeployedModelsAsync(string deploymentResourcePool, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            QueryDeployedModelsAsync(new QueryDeployedModelsRequest
+        public virtual gax::PagedAsyncEnumerable<QueryDeployedModelsResponse, DeployedModelRef> QueryDeployedModelsAsync(string deploymentResourcePool, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryDeployedModelsRequest request = new QueryDeployedModelsRequest
             {
                 DeploymentResourcePool = gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentResourcePool, nameof(deploymentResourcePool)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryDeployedModelsAsync(request, callSettings);
+        }
     }
 
     /// <summary>DeploymentResourcePoolService client wrapper implementation, for convenient use.</summary>

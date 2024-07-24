@@ -748,13 +748,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationModel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModels(new ListConversationModelsRequest
+        public virtual gax::PagedEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelsRequest request = new ListConversationModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversation models.
@@ -773,13 +782,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationModel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModelsAsync(new ListConversationModelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelsRequest request = new ListConversationModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a model.
@@ -1218,13 +1236,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModelEvaluations(new ListConversationModelEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelEvaluationsRequest request = new ListConversationModelEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModelEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists evaluations of a conversation model.
@@ -1243,13 +1270,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModelEvaluationsAsync(new ListConversationModelEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelEvaluationsRequest request = new ListConversationModelEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModelEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates evaluation of a conversation model.

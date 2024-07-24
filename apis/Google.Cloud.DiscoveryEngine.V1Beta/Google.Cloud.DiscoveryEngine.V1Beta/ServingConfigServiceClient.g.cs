@@ -519,13 +519,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServingConfigs(new ListServingConfigsRequest
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ServingConfigs linked to this dataStore.
@@ -544,13 +553,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServingConfigsAsync(new ListServingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ServingConfigs linked to this dataStore.
@@ -569,13 +587,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServingConfigs(new ListServingConfigsRequest
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
             {
                 ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ServingConfigs linked to this dataStore.
@@ -594,13 +621,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServingConfigsAsync(new ListServingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
             {
                 ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ServingConfigs linked to this dataStore.
@@ -619,13 +655,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(DataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServingConfigs(new ListServingConfigsRequest
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(DataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
             {
                 ParentAsDataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all ServingConfigs linked to this dataStore.
@@ -644,13 +689,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(DataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServingConfigsAsync(new ListServingConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(DataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
             {
                 ParentAsDataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ServingConfigService client wrapper implementation, for convenient use.</summary>

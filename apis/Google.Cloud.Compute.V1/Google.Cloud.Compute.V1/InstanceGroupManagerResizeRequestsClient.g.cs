@@ -864,15 +864,24 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceGroupManagerResizeRequest"/> resources.</returns>
-        public virtual gax::PagedEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> List(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListInstanceGroupManagerResizeRequestsRequest
+        public virtual gax::PagedEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> List(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceGroupManagerResizeRequestsRequest request = new ListInstanceGroupManagerResizeRequestsRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of resize requests that are contained in the managed instance group.
@@ -898,15 +907,24 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="InstanceGroupManagerResizeRequest"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> ListAsync(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListInstanceGroupManagerResizeRequestsRequest
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> ListAsync(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceGroupManagerResizeRequestsRequest request = new ListInstanceGroupManagerResizeRequestsRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
     }
 
     /// <summary>InstanceGroupManagerResizeRequests client wrapper implementation, for convenient use.</summary>

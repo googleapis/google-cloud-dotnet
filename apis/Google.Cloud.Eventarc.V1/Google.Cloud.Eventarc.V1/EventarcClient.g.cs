@@ -739,13 +739,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Trigger"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTriggersResponse, Trigger> ListTriggers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTriggers(new ListTriggersRequest
+        public virtual gax::PagedEnumerable<ListTriggersResponse, Trigger> ListTriggers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTriggersRequest request = new ListTriggersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTriggers(request, callSettings);
+        }
 
         /// <summary>
         /// List triggers.
@@ -763,13 +772,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Trigger"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTriggersResponse, Trigger> ListTriggersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTriggersAsync(new ListTriggersRequest
+        public virtual gax::PagedAsyncEnumerable<ListTriggersResponse, Trigger> ListTriggersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTriggersRequest request = new ListTriggersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTriggersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List triggers.
@@ -787,13 +805,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Trigger"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTriggersResponse, Trigger> ListTriggers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTriggers(new ListTriggersRequest
+        public virtual gax::PagedEnumerable<ListTriggersResponse, Trigger> ListTriggers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTriggersRequest request = new ListTriggersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTriggers(request, callSettings);
+        }
 
         /// <summary>
         /// List triggers.
@@ -811,13 +838,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Trigger"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTriggersResponse, Trigger> ListTriggersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTriggersAsync(new ListTriggersRequest
+        public virtual gax::PagedAsyncEnumerable<ListTriggersResponse, Trigger> ListTriggersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTriggersRequest request = new ListTriggersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTriggersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create a new trigger in a particular project and location.
@@ -1415,13 +1451,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannels(new ListChannelsRequest
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannels(request, callSettings);
+        }
 
         /// <summary>
         /// List channels.
@@ -1439,13 +1484,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelsAsync(new ListChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List channels.
@@ -1463,13 +1517,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannels(new ListChannelsRequest
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannels(request, callSettings);
+        }
 
         /// <summary>
         /// List channels.
@@ -1487,13 +1550,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelsAsync(new ListChannelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelsRequest request = new ListChannelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create a new channel in a particular project and location.
@@ -2049,13 +2121,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProviders(new ListProvidersRequest
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProviders(request, callSettings);
+        }
 
         /// <summary>
         /// List providers.
@@ -2073,13 +2154,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvidersAsync(new ListProvidersRequest
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvidersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List providers.
@@ -2097,13 +2187,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProviders(new ListProvidersRequest
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProviders(request, callSettings);
+        }
 
         /// <summary>
         /// List providers.
@@ -2121,13 +2220,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProvidersAsync(new ListProvidersRequest
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProvidersRequest request = new ListProvidersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProvidersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get a single ChannelConnection.
@@ -2268,13 +2376,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChannelConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelConnections(new ListChannelConnectionsRequest
+        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelConnectionsRequest request = new ListChannelConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelConnections(request, callSettings);
+        }
 
         /// <summary>
         /// List channel connections.
@@ -2292,13 +2409,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ChannelConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelConnectionsAsync(new ListChannelConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelConnectionsRequest request = new ListChannelConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List channel connections.
@@ -2316,13 +2442,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChannelConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelConnections(new ListChannelConnectionsRequest
+        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelConnectionsRequest request = new ListChannelConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelConnections(request, callSettings);
+        }
 
         /// <summary>
         /// List channel connections.
@@ -2340,13 +2475,22 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ChannelConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChannelConnectionsAsync(new ListChannelConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChannelConnectionsRequest request = new ListChannelConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChannelConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create a new ChannelConnection in a particular project and location.

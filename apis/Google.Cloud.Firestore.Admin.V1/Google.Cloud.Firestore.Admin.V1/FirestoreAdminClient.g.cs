@@ -991,13 +991,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexes(new ListIndexesRequest
+        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists composite indexes.
@@ -1016,13 +1025,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexesAsync(new ListIndexesRequest
+        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists composite indexes.
@@ -1041,13 +1059,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexes(new ListIndexesRequest
+        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists composite indexes.
@@ -1066,13 +1093,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexesAsync(new ListIndexesRequest
+        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a composite index.
@@ -1648,13 +1684,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFields(new ListFieldsRequest
+        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFields(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the field configuration and metadata for this database.
@@ -1681,13 +1726,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFieldsAsync(new ListFieldsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFieldsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the field configuration and metadata for this database.
@@ -1714,13 +1768,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFields(new ListFieldsRequest
+        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFields(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the field configuration and metadata for this database.
@@ -1747,13 +1810,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFieldsAsync(new ListFieldsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFieldsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Exports a copy of all or a subset of documents from Google Cloud Firestore

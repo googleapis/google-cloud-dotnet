@@ -299,13 +299,22 @@ namespace Google.Cloud.Trace.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Trace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTraces(new ListTracesRequest
+        public virtual gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTracesRequest request = new ListTracesRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTraces(request, callSettings);
+        }
 
         /// <summary>
         /// Returns of a list of traces that match the specified filter conditions.
@@ -323,13 +332,22 @@ namespace Google.Cloud.Trace.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Trace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTracesAsync(new ListTracesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTracesRequest request = new ListTracesRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTracesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single trace by its ID.

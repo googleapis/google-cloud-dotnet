@@ -251,13 +251,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Attachment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachments(new ListAttachmentsRequest
+        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachments(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all attachments associated with a support case.
@@ -276,13 +285,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Attachment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachmentsAsync(new ListAttachmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all attachments associated with a support case.
@@ -301,13 +319,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Attachment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachments(new ListAttachmentsRequest
+        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
             {
                 ParentAsCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachments(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve all attachments associated with a support case.
@@ -326,13 +353,22 @@ namespace Google.Cloud.Support.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Attachment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachmentsAsync(new ListAttachmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(CaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
             {
                 ParentAsCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachmentsAsync(request, callSettings);
+        }
     }
 
     /// <summary>CaseAttachmentService client wrapper implementation, for convenient use.</summary>

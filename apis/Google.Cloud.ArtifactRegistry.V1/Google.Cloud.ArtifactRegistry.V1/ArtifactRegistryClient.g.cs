@@ -857,13 +857,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DockerImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDockerImages(new ListDockerImagesRequest
+        public virtual gax::PagedEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDockerImagesRequest request = new ListDockerImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDockerImages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists docker images.
@@ -882,13 +891,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DockerImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDockerImagesAsync(new ListDockerImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDockerImagesRequest request = new ListDockerImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDockerImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a docker image.
@@ -1030,13 +1048,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifacts(new ListMavenArtifactsRequest
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists maven artifacts.
@@ -1055,13 +1082,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifactsAsync(new ListMavenArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists maven artifacts.
@@ -1080,13 +1116,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifacts(new ListMavenArtifactsRequest
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists maven artifacts.
@@ -1105,13 +1150,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifactsAsync(new ListMavenArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a maven artifact.
@@ -1253,13 +1307,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackages(new ListNpmPackagesRequest
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists npm packages.
@@ -1278,13 +1341,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackagesAsync(new ListNpmPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists npm packages.
@@ -1303,13 +1375,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackages(new ListNpmPackagesRequest
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists npm packages.
@@ -1328,13 +1409,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackagesAsync(new ListNpmPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a npm package.
@@ -1476,13 +1566,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackages(new ListPythonPackagesRequest
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists python packages.
@@ -1501,13 +1600,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackagesAsync(new ListPythonPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists python packages.
@@ -1526,13 +1634,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackages(new ListPythonPackagesRequest
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists python packages.
@@ -1551,13 +1668,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackagesAsync(new ListPythonPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a python package.
@@ -1825,13 +1951,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists repositories.
@@ -1850,13 +1985,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists repositories.
@@ -1875,13 +2019,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists repositories.
@@ -1900,13 +2053,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a repository.
@@ -2469,13 +2631,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackages(new ListPackagesRequest
+        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists packages.
@@ -2493,13 +2664,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackagesAsync(new ListPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists packages.
@@ -2517,13 +2697,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackages(new ListPackagesRequest
+        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists packages.
@@ -2541,13 +2730,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackagesAsync(new ListPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a package.
@@ -2828,13 +3026,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVersionsResponse, Version> ListVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVersions(new ListVersionsRequest
+        public virtual gax::PagedEnumerable<ListVersionsResponse, Version> ListVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVersionsRequest request = new ListVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists versions.
@@ -2852,13 +3056,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVersionsResponse, Version> ListVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVersionsAsync(new ListVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVersionsResponse, Version> ListVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVersionsRequest request = new ListVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a version
@@ -3228,13 +3438,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFiles(new ListFilesRequest
+        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists files.
@@ -3253,13 +3472,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFilesAsync(new ListFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists files.
@@ -3278,13 +3506,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFiles(new ListFilesRequest
+        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists files.
@@ -3303,13 +3540,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFilesAsync(new ListFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a file.
@@ -3452,13 +3698,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tag"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTags(new ListTagsRequest
+        public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagsRequest request = new ListTagsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTags(request, callSettings);
+        }
 
         /// <summary>
         /// Lists tags.
@@ -3478,13 +3730,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tag"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagsAsync(new ListTagsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagsRequest request = new ListTagsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a tag.

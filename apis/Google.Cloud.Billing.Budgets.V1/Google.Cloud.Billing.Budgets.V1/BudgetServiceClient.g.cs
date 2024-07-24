@@ -773,13 +773,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgets(new ListBudgetsRequest
+        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of budgets for a billing account.
@@ -803,13 +812,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgetsAsync(new ListBudgetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of budgets for a billing account.
@@ -833,13 +851,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgets(new ListBudgetsRequest
+        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of budgets for a billing account.
@@ -863,13 +890,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgetsAsync(new ListBudgetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a budget. Returns successfully if already deleted.

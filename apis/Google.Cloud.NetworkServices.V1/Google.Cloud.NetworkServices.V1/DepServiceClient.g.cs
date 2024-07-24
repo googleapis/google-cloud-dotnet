@@ -493,13 +493,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LbTrafficExtension"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbTrafficExtensions(new ListLbTrafficExtensionsRequest
+        public virtual gax::PagedEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbTrafficExtensionsRequest request = new ListLbTrafficExtensionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbTrafficExtensions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `LbTrafficExtension` resources in a given project and location.
@@ -519,13 +528,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LbTrafficExtension"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbTrafficExtensionsAsync(new ListLbTrafficExtensionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbTrafficExtensionsRequest request = new ListLbTrafficExtensionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbTrafficExtensionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `LbTrafficExtension` resources in a given project and location.
@@ -545,13 +563,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LbTrafficExtension"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbTrafficExtensions(new ListLbTrafficExtensionsRequest
+        public virtual gax::PagedEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbTrafficExtensionsRequest request = new ListLbTrafficExtensionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbTrafficExtensions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `LbTrafficExtension` resources in a given project and location.
@@ -571,13 +598,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LbTrafficExtension"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbTrafficExtensionsAsync(new ListLbTrafficExtensionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLbTrafficExtensionsResponse, LbTrafficExtension> ListLbTrafficExtensionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbTrafficExtensionsRequest request = new ListLbTrafficExtensionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbTrafficExtensionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of the specified `LbTrafficExtension` resource.
@@ -1189,13 +1225,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LbRouteExtension"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbRouteExtensions(new ListLbRouteExtensionsRequest
+        public virtual gax::PagedEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbRouteExtensionsRequest request = new ListLbRouteExtensionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbRouteExtensions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `LbRouteExtension` resources in a given project and location.
@@ -1215,13 +1260,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LbRouteExtension"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbRouteExtensionsAsync(new ListLbRouteExtensionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbRouteExtensionsRequest request = new ListLbRouteExtensionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbRouteExtensionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `LbRouteExtension` resources in a given project and location.
@@ -1241,13 +1295,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LbRouteExtension"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbRouteExtensions(new ListLbRouteExtensionsRequest
+        public virtual gax::PagedEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbRouteExtensionsRequest request = new ListLbRouteExtensionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbRouteExtensions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `LbRouteExtension` resources in a given project and location.
@@ -1267,13 +1330,22 @@ namespace Google.Cloud.NetworkServices.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LbRouteExtension"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLbRouteExtensionsAsync(new ListLbRouteExtensionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLbRouteExtensionsResponse, LbRouteExtension> ListLbRouteExtensionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbRouteExtensionsRequest request = new ListLbRouteExtensionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbRouteExtensionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of the specified `LbRouteExtension` resource.

@@ -2500,13 +2500,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplates(new ListInspectTemplatesRequest
+        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2546,13 +2555,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplatesAsync(new ListInspectTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2592,13 +2610,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplates(new ListInspectTemplatesRequest
+        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2638,13 +2665,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplatesAsync(new ListInspectTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2684,13 +2720,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplates(new ListInspectTemplatesRequest
+        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2730,13 +2775,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplatesAsync(new ListInspectTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2776,13 +2830,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplates(new ListInspectTemplatesRequest
+        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2822,13 +2885,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplatesAsync(new ListInspectTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2868,13 +2940,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplates(new ListInspectTemplatesRequest
+        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists InspectTemplates.
@@ -2914,13 +2995,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInspectTemplatesAsync(new ListInspectTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInspectTemplatesRequest request = new ListInspectTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInspectTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an InspectTemplate.
@@ -4100,13 +4190,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplates(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4146,13 +4245,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplatesAsync(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4192,13 +4300,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplates(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4238,13 +4355,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplatesAsync(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4284,13 +4410,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplates(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4330,13 +4465,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplatesAsync(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4376,13 +4520,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplates(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4422,13 +4575,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplatesAsync(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4468,13 +4630,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplates(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DeidentifyTemplates.
@@ -4514,13 +4685,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeidentifyTemplatesAsync(new ListDeidentifyTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeidentifyTemplatesRequest request = new ListDeidentifyTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeidentifyTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
@@ -5539,13 +5719,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="JobTrigger"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTriggers(new ListJobTriggersRequest
+        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTriggersRequest request = new ListJobTriggersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTriggers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job triggers.
@@ -5581,13 +5770,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTriggersAsync(new ListJobTriggersRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTriggersRequest request = new ListJobTriggersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTriggersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job triggers.
@@ -5623,13 +5821,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="JobTrigger"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTriggers(new ListJobTriggersRequest
+        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTriggersRequest request = new ListJobTriggersRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTriggers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job triggers.
@@ -5665,13 +5872,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTriggersAsync(new ListJobTriggersRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTriggersRequest request = new ListJobTriggersRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTriggersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job triggers.
@@ -5707,13 +5923,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="JobTrigger"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTriggers(new ListJobTriggersRequest
+        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTriggersRequest request = new ListJobTriggersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTriggers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job triggers.
@@ -5749,13 +5974,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTriggersAsync(new ListJobTriggersRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTriggersRequest request = new ListJobTriggersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTriggersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a job trigger.
@@ -6445,13 +6679,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DiscoveryConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveryConfigs(new ListDiscoveryConfigsRequest
+        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveryConfigsRequest request = new ListDiscoveryConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveryConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists discovery configurations.
@@ -6478,13 +6721,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DiscoveryConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveryConfigsAsync(new ListDiscoveryConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveryConfigsRequest request = new ListDiscoveryConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveryConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists discovery configurations.
@@ -6511,13 +6763,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DiscoveryConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveryConfigs(new ListDiscoveryConfigsRequest
+        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveryConfigsRequest request = new ListDiscoveryConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveryConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists discovery configurations.
@@ -6544,13 +6805,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DiscoveryConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDiscoveryConfigsAsync(new ListDiscoveryConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiscoveryConfigsRequest request = new ListDiscoveryConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiscoveryConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a discovery configuration.
@@ -7522,13 +7792,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DlpJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDlpJobs(new ListDlpJobsRequest
+        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDlpJobsRequest request = new ListDlpJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDlpJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
@@ -7566,13 +7845,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DlpJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDlpJobsAsync(new ListDlpJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDlpJobsRequest request = new ListDlpJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDlpJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
@@ -7610,13 +7898,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DlpJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDlpJobs(new ListDlpJobsRequest
+        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDlpJobsRequest request = new ListDlpJobsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDlpJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
@@ -7654,13 +7951,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DlpJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDlpJobsAsync(new ListDlpJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDlpJobsRequest request = new ListDlpJobsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDlpJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
@@ -7698,13 +8004,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DlpJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDlpJobs(new ListDlpJobsRequest
+        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDlpJobsRequest request = new ListDlpJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDlpJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
@@ -7742,13 +8057,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DlpJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDlpJobsAsync(new ListDlpJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDlpJobsRequest request = new ListDlpJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDlpJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
@@ -9143,13 +9467,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypes(new ListStoredInfoTypesRequest
+        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9185,13 +9518,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypesAsync(new ListStoredInfoTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9227,13 +9569,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypes(new ListStoredInfoTypesRequest
+        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9269,13 +9620,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypesAsync(new ListStoredInfoTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9311,13 +9671,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypes(new ListStoredInfoTypesRequest
+        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9353,13 +9722,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypesAsync(new ListStoredInfoTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9395,13 +9773,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypes(new ListStoredInfoTypesRequest
+        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9437,13 +9824,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypesAsync(new ListStoredInfoTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9479,13 +9875,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypes(new ListStoredInfoTypesRequest
+        public virtual gax::PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists stored infoTypes.
@@ -9521,13 +9926,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StoredInfoType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListStoredInfoTypesAsync(new ListStoredInfoTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> ListStoredInfoTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListStoredInfoTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a stored infoType.
@@ -9707,13 +10121,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProjectDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectDataProfiles(new ListProjectDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists project data profiles for an organization.
@@ -9731,13 +10154,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProjectDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectDataProfilesAsync(new ListProjectDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists project data profiles for an organization.
@@ -9755,13 +10187,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProjectDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectDataProfiles(new ListProjectDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists project data profiles for an organization.
@@ -9779,13 +10220,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProjectDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectDataProfilesAsync(new ListProjectDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists project data profiles for an organization.
@@ -9803,13 +10253,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProjectDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectDataProfiles(new ListProjectDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists project data profiles for an organization.
@@ -9827,13 +10286,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProjectDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectDataProfilesAsync(new ListProjectDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> ListProjectDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists table data profiles for an organization.
@@ -9871,13 +10339,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TableDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTableDataProfiles(new ListTableDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTableDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists table data profiles for an organization.
@@ -9897,13 +10374,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TableDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTableDataProfilesAsync(new ListTableDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTableDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists table data profiles for an organization.
@@ -9923,13 +10409,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TableDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTableDataProfiles(new ListTableDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTableDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists table data profiles for an organization.
@@ -9949,13 +10444,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TableDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTableDataProfilesAsync(new ListTableDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTableDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists table data profiles for an organization.
@@ -9975,13 +10479,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TableDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTableDataProfiles(new ListTableDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTableDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists table data profiles for an organization.
@@ -10001,13 +10514,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TableDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTableDataProfilesAsync(new ListTableDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> ListTableDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTableDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists column data profiles for an organization.
@@ -10045,13 +10567,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ColumnDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListColumnDataProfiles(new ListColumnDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListColumnDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists column data profiles for an organization.
@@ -10071,13 +10602,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ColumnDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListColumnDataProfilesAsync(new ListColumnDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListColumnDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists column data profiles for an organization.
@@ -10097,13 +10637,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ColumnDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListColumnDataProfiles(new ListColumnDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListColumnDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists column data profiles for an organization.
@@ -10123,13 +10672,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ColumnDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListColumnDataProfilesAsync(new ListColumnDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListColumnDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists column data profiles for an organization.
@@ -10149,13 +10707,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ColumnDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListColumnDataProfiles(new ListColumnDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListColumnDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists column data profiles for an organization.
@@ -10175,13 +10742,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ColumnDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListColumnDataProfilesAsync(new ListColumnDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> ListColumnDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListColumnDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a project data profile.
@@ -10330,13 +10906,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFileStoreDataProfiles(new ListFileStoreDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFileStoreDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists file store data profiles for an organization.
@@ -10356,13 +10941,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFileStoreDataProfilesAsync(new ListFileStoreDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFileStoreDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists file store data profiles for an organization.
@@ -10382,13 +10976,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFileStoreDataProfiles(new ListFileStoreDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFileStoreDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists file store data profiles for an organization.
@@ -10408,13 +11011,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFileStoreDataProfilesAsync(new ListFileStoreDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFileStoreDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists file store data profiles for an organization.
@@ -10434,13 +11046,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFileStoreDataProfiles(new ListFileStoreDataProfilesRequest
+        public virtual gax::PagedEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFileStoreDataProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists file store data profiles for an organization.
@@ -10460,13 +11081,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FileStoreDataProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFileStoreDataProfilesAsync(new ListFileStoreDataProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> ListFileStoreDataProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFileStoreDataProfilesRequest request = new ListFileStoreDataProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFileStoreDataProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a file store data profile.
@@ -11467,13 +12097,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a parent.
@@ -11492,13 +12131,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a parent.
@@ -11517,13 +12165,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a parent.
@@ -11542,13 +12199,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches for Connections in a parent.
@@ -11585,13 +12251,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchConnections(new SearchConnectionsRequest
+        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchConnectionsRequest request = new SearchConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Searches for Connections in a parent.
@@ -11610,13 +12285,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchConnectionsAsync(new SearchConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchConnectionsRequest request = new SearchConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches for Connections in a parent.
@@ -11635,13 +12319,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchConnections(new SearchConnectionsRequest
+        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchConnectionsRequest request = new SearchConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Searches for Connections in a parent.
@@ -11660,13 +12353,22 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchConnectionsAsync(new SearchConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchConnectionsRequest request = new SearchConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Delete a Connection.

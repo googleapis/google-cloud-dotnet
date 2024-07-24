@@ -367,13 +367,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypes(new ListSessionEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
@@ -408,13 +417,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypesAsync(new ListSessionEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
@@ -449,13 +467,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypes(new ListSessionEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
@@ -490,13 +517,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypesAsync(new ListSessionEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified session entity type.

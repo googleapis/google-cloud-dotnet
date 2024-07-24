@@ -527,13 +527,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all entity types in the specified agent.
@@ -554,13 +563,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all entity types in the specified agent.
@@ -581,13 +599,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all entity types in the specified agent.
@@ -608,83 +635,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all entity types from.
-        /// Supported formats:
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
-        /// </param>
-        /// <param name="languageCode">
-        /// Optional. The language used to access language-specific data.
-        /// If not specified, the agent's default language is used.
-        /// For more information, see
-        /// [Multilingual intent and entity
-        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
+            };
+            if (pageToken != null)
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all entity types from.
-        /// Supported formats:
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
-        /// </param>
-        /// <param name="languageCode">
-        /// Optional. The language used to access language-specific data.
-        /// If not specified, the agent's default language is used.
-        /// For more information, see
-        /// [Multilingual intent and entity
-        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all entity types in the specified agent.
@@ -712,14 +678,23 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
-                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all entity types in the specified agent.
@@ -747,14 +722,111 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LanguageCode = languageCode ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all entity types from.
+        /// Supported formats:
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// </param>
+        /// <param name="languageCode">
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 LanguageCode = languageCode ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all entity types from.
+        /// Supported formats:
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// </param>
+        /// <param name="languageCode">
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(AgentName parent, string languageCode, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntityTypesRequest request = new ListEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LanguageCode = languageCode ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified entity type.

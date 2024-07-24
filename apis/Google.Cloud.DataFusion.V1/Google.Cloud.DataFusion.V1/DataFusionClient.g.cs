@@ -400,13 +400,22 @@ namespace Google.Cloud.DataFusion.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAvailableVersions(new ListAvailableVersionsRequest
+        public virtual gax::PagedEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAvailableVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists possible versions for Data Fusion instances in the specified project
@@ -426,13 +435,22 @@ namespace Google.Cloud.DataFusion.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAvailableVersionsAsync(new ListAvailableVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAvailableVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists possible versions for Data Fusion instances in the specified project
@@ -452,13 +470,22 @@ namespace Google.Cloud.DataFusion.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAvailableVersions(new ListAvailableVersionsRequest
+        public virtual gax::PagedEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAvailableVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists possible versions for Data Fusion instances in the specified project
@@ -478,13 +505,22 @@ namespace Google.Cloud.DataFusion.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAvailableVersionsAsync(new ListAvailableVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAvailableVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Data Fusion instances in the specified project and location.

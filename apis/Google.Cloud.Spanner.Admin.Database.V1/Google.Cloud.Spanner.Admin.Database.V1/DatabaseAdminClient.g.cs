@@ -849,13 +849,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabases(new ListDatabasesRequest
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabases(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -874,13 +883,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabasesAsync(new ListDatabasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -899,13 +917,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabases(new ListDatabasesRequest
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabases(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -924,13 +951,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabasesAsync(new ListDatabasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
@@ -3829,13 +3865,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists completed and pending backups.
@@ -3856,13 +3901,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists completed and pending backups.
@@ -3883,13 +3937,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists completed and pending backups.
@@ -3910,13 +3973,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create a new database by restoring from a completed backup. The new
@@ -4341,13 +4413,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperations(new ListDatabaseOperationsRequest
+        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
@@ -4373,13 +4454,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperationsAsync(new ListDatabaseOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
@@ -4405,13 +4495,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperations(new ListDatabaseOperationsRequest
+        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
@@ -4437,13 +4536,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperationsAsync(new ListDatabaseOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4507,13 +4615,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperations(new ListBackupOperationsRequest
+        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4541,13 +4658,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperationsAsync(new ListBackupOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4575,13 +4701,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperations(new ListBackupOperationsRequest
+        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4609,13 +4744,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperationsAsync(new ListBackupOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4653,13 +4797,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRoles(new ListDatabaseRolesRequest
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRoles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4679,13 +4832,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRolesAsync(new ListDatabaseRolesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRolesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4705,13 +4867,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRoles(new ListDatabaseRolesRequest
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRoles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4731,13 +4902,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRolesAsync(new ListDatabaseRolesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRolesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new backup schedule.
@@ -5265,13 +5445,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupSchedules(new ListBackupSchedulesRequest
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the backup schedules for the database.
@@ -5291,13 +5480,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupSchedulesAsync(new ListBackupSchedulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the backup schedules for the database.
@@ -5317,13 +5515,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupSchedules(new ListBackupSchedulesRequest
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
             {
                 ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedules(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the backup schedules for the database.
@@ -5343,13 +5550,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupSchedulesAsync(new ListBackupSchedulesRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
             {
                 ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedulesAsync(request, callSettings);
+        }
     }
 
     /// <summary>DatabaseAdmin client wrapper implementation, for convenient use.</summary>

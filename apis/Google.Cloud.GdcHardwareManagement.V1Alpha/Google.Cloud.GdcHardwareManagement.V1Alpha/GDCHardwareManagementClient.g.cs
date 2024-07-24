@@ -1163,13 +1163,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Order"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrdersResponse, Order> ListOrders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrders(new ListOrdersRequest
+        public virtual gax::PagedEnumerable<ListOrdersResponse, Order> ListOrders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrdersRequest request = new ListOrdersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrders(request, callSettings);
+        }
 
         /// <summary>
         /// Lists orders in a given project and location.
@@ -1188,13 +1197,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Order"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrdersResponse, Order> ListOrdersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrdersAsync(new ListOrdersRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrdersResponse, Order> ListOrdersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrdersRequest request = new ListOrdersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrdersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists orders in a given project and location.
@@ -1213,13 +1231,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Order"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOrdersResponse, Order> ListOrders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrders(new ListOrdersRequest
+        public virtual gax::PagedEnumerable<ListOrdersResponse, Order> ListOrders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrdersRequest request = new ListOrdersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrders(request, callSettings);
+        }
 
         /// <summary>
         /// Lists orders in a given project and location.
@@ -1238,13 +1265,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Order"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOrdersResponse, Order> ListOrdersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOrdersAsync(new ListOrdersRequest
+        public virtual gax::PagedAsyncEnumerable<ListOrdersResponse, Order> ListOrdersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOrdersRequest request = new ListOrdersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOrdersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of an order.
@@ -1995,13 +2031,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Site"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSitesResponse, Site> ListSites(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSites(new ListSitesRequest
+        public virtual gax::PagedEnumerable<ListSitesResponse, Site> ListSites(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSitesRequest request = new ListSitesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSites(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sites in a given project and location.
@@ -2020,13 +2065,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Site"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSitesResponse, Site> ListSitesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSitesAsync(new ListSitesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSitesResponse, Site> ListSitesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSitesRequest request = new ListSitesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSitesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sites in a given project and location.
@@ -2045,13 +2099,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Site"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSitesResponse, Site> ListSites(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSites(new ListSitesRequest
+        public virtual gax::PagedEnumerable<ListSitesResponse, Site> ListSites(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSitesRequest request = new ListSitesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSites(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sites in a given project and location.
@@ -2070,13 +2133,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Site"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSitesResponse, Site> ListSitesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSitesAsync(new ListSitesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSitesResponse, Site> ListSitesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSitesRequest request = new ListSitesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSitesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a site.
@@ -2559,13 +2631,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HardwareGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardwareGroups(new ListHardwareGroupsRequest
+        public virtual gax::PagedEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareGroupsRequest request = new ListHardwareGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardwareGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hardware groups in a given order.
@@ -2584,13 +2665,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HardwareGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardwareGroupsAsync(new ListHardwareGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareGroupsRequest request = new ListHardwareGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardwareGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hardware groups in a given order.
@@ -2609,13 +2699,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HardwareGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroups(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardwareGroups(new ListHardwareGroupsRequest
+        public virtual gax::PagedEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroups(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareGroupsRequest request = new ListHardwareGroupsRequest
             {
                 ParentAsOrderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardwareGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hardware groups in a given order.
@@ -2634,13 +2733,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HardwareGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroupsAsync(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardwareGroupsAsync(new ListHardwareGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHardwareGroupsResponse, HardwareGroup> ListHardwareGroupsAsync(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareGroupsRequest request = new ListHardwareGroupsRequest
             {
                 ParentAsOrderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardwareGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a hardware group.
@@ -3278,13 +3386,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Hardware"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHardwareResponse, Hardware> ListHardware(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardware(new ListHardwareRequest
+        public virtual gax::PagedEnumerable<ListHardwareResponse, Hardware> ListHardware(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareRequest request = new ListHardwareRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardware(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hardware in a given project and location.
@@ -3303,13 +3420,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Hardware"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHardwareResponse, Hardware> ListHardwareAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardwareAsync(new ListHardwareRequest
+        public virtual gax::PagedAsyncEnumerable<ListHardwareResponse, Hardware> ListHardwareAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareRequest request = new ListHardwareRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardwareAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hardware in a given project and location.
@@ -3328,13 +3454,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Hardware"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHardwareResponse, Hardware> ListHardware(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardware(new ListHardwareRequest
+        public virtual gax::PagedEnumerable<ListHardwareResponse, Hardware> ListHardware(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareRequest request = new ListHardwareRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardware(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hardware in a given project and location.
@@ -3353,13 +3488,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Hardware"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHardwareResponse, Hardware> ListHardwareAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHardwareAsync(new ListHardwareRequest
+        public virtual gax::PagedAsyncEnumerable<ListHardwareResponse, Hardware> ListHardwareAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHardwareRequest request = new ListHardwareRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHardwareAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets hardware details.
@@ -3979,13 +4123,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComments(new ListCommentsRequest
+        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the comments on an order.
@@ -4004,13 +4157,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCommentsAsync(new ListCommentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCommentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the comments on an order.
@@ -4029,13 +4191,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListComments(new ListCommentsRequest
+        public virtual gax::PagedEnumerable<ListCommentsResponse, Comment> ListComments(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 ParentAsOrderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListComments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the comments on an order.
@@ -4054,13 +4225,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Comment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCommentsAsync(new ListCommentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCommentsResponse, Comment> ListCommentsAsync(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCommentsRequest request = new ListCommentsRequest
             {
                 ParentAsOrderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCommentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the content of a comment.
@@ -4437,13 +4617,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChangeLogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangeLogEntries(new ListChangeLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangeLogEntriesRequest request = new ListChangeLogEntriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangeLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the changes made to an order.
@@ -4462,13 +4651,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ChangeLogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangeLogEntriesAsync(new ListChangeLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangeLogEntriesRequest request = new ListChangeLogEntriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangeLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the changes made to an order.
@@ -4487,13 +4685,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ChangeLogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntries(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangeLogEntries(new ListChangeLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntries(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangeLogEntriesRequest request = new ListChangeLogEntriesRequest
             {
                 ParentAsOrderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangeLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the changes made to an order.
@@ -4512,13 +4719,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ChangeLogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntriesAsync(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListChangeLogEntriesAsync(new ListChangeLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListChangeLogEntriesResponse, ChangeLogEntry> ListChangeLogEntriesAsync(OrderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListChangeLogEntriesRequest request = new ListChangeLogEntriesRequest
             {
                 ParentAsOrderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListChangeLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a change to an order.
@@ -4672,13 +4888,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkus(new ListSkusRequest
+        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkus(request, callSettings);
+        }
 
         /// <summary>
         /// Lists SKUs for a given project and location.
@@ -4697,13 +4922,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkusAsync(new ListSkusRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkusAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists SKUs for a given project and location.
@@ -4722,13 +4956,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkus(new ListSkusRequest
+        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkus(request, callSettings);
+        }
 
         /// <summary>
         /// Lists SKUs for a given project and location.
@@ -4747,13 +4990,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkusAsync(new ListSkusRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkusAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of an SKU.
@@ -4901,13 +5153,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Zone"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListZones(new ListZonesRequest
+        public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListZonesRequest request = new ListZonesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListZones(request, callSettings);
+        }
 
         /// <summary>
         /// Lists zones in a given project and location.
@@ -4926,13 +5187,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Zone"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListZonesAsync(new ListZonesRequest
+        public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListZonesRequest request = new ListZonesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListZonesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists zones in a given project and location.
@@ -4951,13 +5221,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Zone"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListZones(new ListZonesRequest
+        public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListZonesRequest request = new ListZonesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListZones(request, callSettings);
+        }
 
         /// <summary>
         /// Lists zones in a given project and location.
@@ -4976,13 +5255,22 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Zone"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListZonesAsync(new ListZonesRequest
+        public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListZonesRequest request = new ListZonesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListZonesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a zone.

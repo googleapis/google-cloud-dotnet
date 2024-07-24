@@ -239,13 +239,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImageVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImageVersions(new ListImageVersionsRequest
+        public virtual gax::PagedEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageVersionsRequest request = new ListImageVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageVersions(request, callSettings);
+        }
 
         /// <summary>
         /// List ImageVersions for provided location.
@@ -264,13 +270,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImageVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImageVersionsAsync(new ListImageVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageVersionsRequest request = new ListImageVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageVersionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ImageVersions client wrapper implementation, for convenient use.</summary>

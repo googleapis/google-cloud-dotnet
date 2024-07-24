@@ -292,14 +292,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PredictResponse.Types.PredictionResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> Predict(string name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            Predict(new PredictRequest
+        public virtual gax::PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> Predict(string name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            PredictRequest request = new PredictRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 UserEvent = gax::GaxPreconditions.CheckNotNull(userEvent, nameof(userEvent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return Predict(request, callSettings);
+        }
 
         /// <summary>
         /// Makes a recommendation prediction. If using API Key based authentication,
@@ -356,14 +365,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="PredictResponse.Types.PredictionResult"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> PredictAsync(string name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            PredictAsync(new PredictRequest
+        public virtual gax::PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> PredictAsync(string name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            PredictRequest request = new PredictRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 UserEvent = gax::GaxPreconditions.CheckNotNull(userEvent, nameof(userEvent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return PredictAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Makes a recommendation prediction. If using API Key based authentication,
@@ -418,14 +436,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PredictResponse.Types.PredictionResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> Predict(PlacementName name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            Predict(new PredictRequest
+        public virtual gax::PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> Predict(PlacementName name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            PredictRequest request = new PredictRequest
             {
                 PlacementName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 UserEvent = gax::GaxPreconditions.CheckNotNull(userEvent, nameof(userEvent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return Predict(request, callSettings);
+        }
 
         /// <summary>
         /// Makes a recommendation prediction. If using API Key based authentication,
@@ -482,14 +509,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="PredictResponse.Types.PredictionResult"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> PredictAsync(PlacementName name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            PredictAsync(new PredictRequest
+        public virtual gax::PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> PredictAsync(PlacementName name, UserEvent userEvent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            PredictRequest request = new PredictRequest
             {
                 PlacementName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 UserEvent = gax::GaxPreconditions.CheckNotNull(userEvent, nameof(userEvent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return PredictAsync(request, callSettings);
+        }
     }
 
     /// <summary>PredictionService client wrapper implementation, for convenient use.</summary>

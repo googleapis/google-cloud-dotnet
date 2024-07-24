@@ -1150,8 +1150,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<string> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntries(new ListLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<string> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNames =
                 {
@@ -1159,9 +1160,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1213,8 +1222,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<string> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntriesAsync(new ListLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<string> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNames =
                 {
@@ -1222,9 +1232,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1276,8 +1294,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::ProjectName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntries(new ListLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::ProjectName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsProjectNames =
                 {
@@ -1285,9 +1304,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1339,8 +1366,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::ProjectName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntriesAsync(new ListLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::ProjectName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsProjectNames =
                 {
@@ -1348,9 +1376,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1402,8 +1438,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::OrganizationName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntries(new ListLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::OrganizationName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsOrganizationNames =
                 {
@@ -1411,9 +1448,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1465,8 +1510,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::OrganizationName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntriesAsync(new ListLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::OrganizationName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsOrganizationNames =
                 {
@@ -1474,9 +1520,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1528,8 +1582,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::FolderName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntries(new ListLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::FolderName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsFolderNames =
                 {
@@ -1537,9 +1592,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1591,8 +1654,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::FolderName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntriesAsync(new ListLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::FolderName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsFolderNames =
                 {
@@ -1600,9 +1664,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1654,8 +1726,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::BillingAccountName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntries(new ListLogEntriesRequest
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::BillingAccountName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsBillingAccountNames =
                 {
@@ -1663,9 +1736,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
@@ -1717,8 +1798,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::BillingAccountName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogEntriesAsync(new ListLogEntriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::BillingAccountName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
             {
                 ResourceNamesAsBillingAccountNames =
                 {
@@ -1726,9 +1808,17 @@ namespace Google.Cloud.Logging.V2
                 },
                 Filter = filter ?? "",
                 OrderBy = orderBy ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogEntriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the descriptors for monitored resource types used by Logging.
@@ -1792,13 +1882,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogs(new ListLogsRequest
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -1822,13 +1921,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogsAsync(new ListLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -1852,13 +1960,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogs(new ListLogsRequest
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -1882,13 +1999,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogsAsync(new ListLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -1912,13 +2038,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogs(new ListLogsRequest
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -1942,13 +2077,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogsAsync(new ListLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -1972,13 +2116,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogs(new ListLogsRequest
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -2002,13 +2155,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogsAsync(new ListLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -2032,13 +2194,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogs(new ListLogsRequest
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the logs in projects, organizations, folders, or billing accounts.
@@ -2062,13 +2233,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLogsAsync(new ListLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Bidirectional streaming methods for

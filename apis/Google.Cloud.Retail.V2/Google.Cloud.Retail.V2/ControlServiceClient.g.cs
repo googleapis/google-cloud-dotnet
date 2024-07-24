@@ -885,13 +885,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Control"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListControlsResponse, Control> ListControls(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListControls(new ListControlsRequest
+        public virtual gax::PagedEnumerable<ListControlsResponse, Control> ListControls(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListControlsRequest request = new ListControlsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListControls(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Controls by their parent
@@ -911,13 +920,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Control"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListControlsResponse, Control> ListControlsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListControlsAsync(new ListControlsRequest
+        public virtual gax::PagedAsyncEnumerable<ListControlsResponse, Control> ListControlsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListControlsRequest request = new ListControlsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListControlsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Controls by their parent
@@ -937,13 +955,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Control"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListControlsResponse, Control> ListControls(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListControls(new ListControlsRequest
+        public virtual gax::PagedEnumerable<ListControlsResponse, Control> ListControls(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListControlsRequest request = new ListControlsRequest
             {
                 ParentAsCatalogName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListControls(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all Controls by their parent
@@ -963,13 +990,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Control"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListControlsResponse, Control> ListControlsAsync(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListControlsAsync(new ListControlsRequest
+        public virtual gax::PagedAsyncEnumerable<ListControlsResponse, Control> ListControlsAsync(CatalogName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListControlsRequest request = new ListControlsRequest
             {
                 ParentAsCatalogName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListControlsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ControlService client wrapper implementation, for convenient use.</summary>

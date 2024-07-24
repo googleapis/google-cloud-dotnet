@@ -423,13 +423,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeys(new ListTagKeysRequest
+        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagKeys for a parent resource.
@@ -449,13 +458,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeysAsync(new ListTagKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagKeys for a parent resource.
@@ -475,13 +493,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeys(new ListTagKeysRequest
+        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagKeys for a parent resource.
@@ -501,13 +528,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeysAsync(new ListTagKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the
