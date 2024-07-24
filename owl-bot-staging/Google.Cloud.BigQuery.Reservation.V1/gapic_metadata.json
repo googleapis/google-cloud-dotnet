@@ -1,0 +1,144 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.bigquery.reservation.v1",
+  "libraryPackage": "Google.Cloud.BigQuery.Reservation.V1",
+  "services": {
+    "ReservationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReservationServiceClient",
+          "rpcs": {
+            "CreateAssignment": {
+              "methods": [
+                "CreateAssignment",
+                "CreateAssignmentAsync"
+              ]
+            },
+            "CreateCapacityCommitment": {
+              "methods": [
+                "CreateCapacityCommitment",
+                "CreateCapacityCommitmentAsync"
+              ]
+            },
+            "CreateReservation": {
+              "methods": [
+                "CreateReservation",
+                "CreateReservationAsync"
+              ]
+            },
+            "DeleteAssignment": {
+              "methods": [
+                "DeleteAssignment",
+                "DeleteAssignmentAsync"
+              ]
+            },
+            "DeleteCapacityCommitment": {
+              "methods": [
+                "DeleteCapacityCommitment",
+                "DeleteCapacityCommitmentAsync"
+              ]
+            },
+            "DeleteReservation": {
+              "methods": [
+                "DeleteReservation",
+                "DeleteReservationAsync"
+              ]
+            },
+            "GetBiReservation": {
+              "methods": [
+                "GetBiReservation",
+                "GetBiReservationAsync"
+              ]
+            },
+            "GetCapacityCommitment": {
+              "methods": [
+                "GetCapacityCommitment",
+                "GetCapacityCommitmentAsync"
+              ]
+            },
+            "GetReservation": {
+              "methods": [
+                "GetReservation",
+                "GetReservationAsync"
+              ]
+            },
+            "ListAssignments": {
+              "methods": [
+                "ListAssignments",
+                "ListAssignmentsAsync"
+              ]
+            },
+            "ListCapacityCommitments": {
+              "methods": [
+                "ListCapacityCommitments",
+                "ListCapacityCommitmentsAsync"
+              ]
+            },
+            "ListReservations": {
+              "methods": [
+                "ListReservations",
+                "ListReservationsAsync"
+              ]
+            },
+            "MergeCapacityCommitments": {
+              "methods": [
+                "MergeCapacityCommitments",
+                "MergeCapacityCommitmentsAsync"
+              ]
+            },
+            "MoveAssignment": {
+              "methods": [
+                "MoveAssignment",
+                "MoveAssignmentAsync"
+              ]
+            },
+            "SearchAllAssignments": {
+              "methods": [
+                "SearchAllAssignments",
+                "SearchAllAssignmentsAsync"
+              ]
+            },
+            "SearchAssignments": {
+              "methods": [
+                "SearchAssignments",
+                "SearchAssignmentsAsync"
+              ]
+            },
+            "SplitCapacityCommitment": {
+              "methods": [
+                "SplitCapacityCommitment",
+                "SplitCapacityCommitmentAsync"
+              ]
+            },
+            "UpdateAssignment": {
+              "methods": [
+                "UpdateAssignment",
+                "UpdateAssignmentAsync"
+              ]
+            },
+            "UpdateBiReservation": {
+              "methods": [
+                "UpdateBiReservation",
+                "UpdateBiReservationAsync"
+              ]
+            },
+            "UpdateCapacityCommitment": {
+              "methods": [
+                "UpdateCapacityCommitment",
+                "UpdateCapacityCommitmentAsync"
+              ]
+            },
+            "UpdateReservation": {
+              "methods": [
+                "UpdateReservation",
+                "UpdateReservationAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.certificatemanager.v1",
+  "libraryPackage": "Google.Cloud.CertificateManager.V1",
+  "services": {
+    "CertificateManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CertificateManagerClient",
+          "rpcs": {
+            "CreateCertificate": {
+              "methods": [
+                "CreateCertificate",
+                "CreateCertificateAsync"
+              ]
+            },
+            "CreateCertificateIssuanceConfig": {
+              "methods": [
+                "CreateCertificateIssuanceConfig",
+                "CreateCertificateIssuanceConfigAsync"
+              ]
+            },
+            "CreateCertificateMap": {
+              "methods": [
+                "CreateCertificateMap",
+                "CreateCertificateMapAsync"
+              ]
+            },
+            "CreateCertificateMapEntry": {
+              "methods": [
+                "CreateCertificateMapEntry",
+                "CreateCertificateMapEntryAsync"
+              ]
+            },
+            "CreateDnsAuthorization": {
+              "methods": [
+                "CreateDnsAuthorization",
+                "CreateDnsAuthorizationAsync"
+              ]
+            },
+            "CreateTrustConfig": {
+              "methods": [
+                "CreateTrustConfig",
+                "CreateTrustConfigAsync"
+              ]
+            },
+            "DeleteCertificate": {
+              "methods": [
+                "DeleteCertificate",
+                "DeleteCertificateAsync"
+              ]
+            },
+            "DeleteCertificateIssuanceConfig": {
+              "methods": [
+                "DeleteCertificateIssuanceConfig",
+                "DeleteCertificateIssuanceConfigAsync"
+              ]
+            },
+            "DeleteCertificateMap": {
+              "methods": [
+                "DeleteCertificateMap",
+                "DeleteCertificateMapAsync"
+              ]
+            },
+            "DeleteCertificateMapEntry": {
+              "methods": [
+                "DeleteCertificateMapEntry",
+                "DeleteCertificateMapEntryAsync"
+              ]
+            },
+            "DeleteDnsAuthorization": {
+              "methods": [
+                "DeleteDnsAuthorization",
+                "DeleteDnsAuthorizationAsync"
+              ]
+            },
+            "DeleteTrustConfig": {
+              "methods": [
+                "DeleteTrustConfig",
+                "DeleteTrustConfigAsync"
+              ]
+            },
+            "GetCertificate": {
+              "methods": [
+                "GetCertificate",
+                "GetCertificateAsync"
+              ]
+            },
+            "GetCertificateIssuanceConfig": {
+              "methods": [
+                "GetCertificateIssuanceConfig",
+                "GetCertificateIssuanceConfigAsync"
+              ]
+            },
+            "GetCertificateMap": {
+              "methods": [
+                "GetCertificateMap",
+                "GetCertificateMapAsync"
+              ]
+            },
+            "GetCertificateMapEntry": {
+              "methods": [
+                "GetCertificateMapEntry",
+                "GetCertificateMapEntryAsync"
+              ]
+            },
+            "GetDnsAuthorization": {
+              "methods": [
+                "GetDnsAuthorization",
+                "GetDnsAuthorizationAsync"
+              ]
+            },
+            "GetTrustConfig": {
+              "methods": [
+                "GetTrustConfig",
+                "GetTrustConfigAsync"
+              ]
+            },
+            "ListCertificateIssuanceConfigs": {
+              "methods": [
+                "ListCertificateIssuanceConfigs",
+                "ListCertificateIssuanceConfigsAsync"
+              ]
+            },
+            "ListCertificateMapEntries": {
+              "methods": [
+                "ListCertificateMapEntries",
+                "ListCertificateMapEntriesAsync"
+              ]
+            },
+            "ListCertificateMaps": {
+              "methods": [
+                "ListCertificateMaps",
+                "ListCertificateMapsAsync"
+              ]
+            },
+            "ListCertificates": {
+              "methods": [
+                "ListCertificates",
+                "ListCertificatesAsync"
+              ]
+            },
+            "ListDnsAuthorizations": {
+              "methods": [
+                "ListDnsAuthorizations",
+                "ListDnsAuthorizationsAsync"
+              ]
+            },
+            "ListTrustConfigs": {
+              "methods": [
+                "ListTrustConfigs",
+                "ListTrustConfigsAsync"
+              ]
+            },
+            "UpdateCertificate": {
+              "methods": [
+                "UpdateCertificate",
+                "UpdateCertificateAsync"
+              ]
+            },
+            "UpdateCertificateMap": {
+              "methods": [
+                "UpdateCertificateMap",
+                "UpdateCertificateMapAsync"
+              ]
+            },
+            "UpdateCertificateMapEntry": {
+              "methods": [
+                "UpdateCertificateMapEntry",
+                "UpdateCertificateMapEntryAsync"
+              ]
+            },
+            "UpdateDnsAuthorization": {
+              "methods": [
+                "UpdateDnsAuthorization",
+                "UpdateDnsAuthorizationAsync"
+              ]
+            },
+            "UpdateTrustConfig": {
+              "methods": [
+                "UpdateTrustConfig",
+                "UpdateTrustConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
