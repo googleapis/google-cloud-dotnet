@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.17.0, released 2024-07-25
+
+### Bug fixes
+
+- Fix pagination for optional fields ([issue 13311](https://github.com/googleapis/google-cloud-dotnet/issues/13311))
+
 ## Version 2.16.0, released 2024-05-08
 
 ### New features

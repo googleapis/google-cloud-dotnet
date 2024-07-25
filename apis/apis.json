@@ -1427,7 +1427,7 @@
     },
     {
       "id": "Google.Cloud.Compute.V1",
-      "version": "2.16.0",
+      "version": "2.17.0",
       "type": "regapic",
       "productName": "Compute Engine",
       "productUrl": "https://cloud.google.com/compute",
@@ -1436,7 +1436,7 @@
         "compute"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/compute/v1",
