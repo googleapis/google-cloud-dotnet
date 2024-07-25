@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             ModerateTextRequest request = new ModerateTextRequest
             {
                 Document = new Document(),
+                ModelVersion = ModerateTextRequest.Types.ModelVersion.Unspecified,
             };
             // Make the request
             ModerateTextResponse response = await languageServiceClient.ModerateTextAsync(request);

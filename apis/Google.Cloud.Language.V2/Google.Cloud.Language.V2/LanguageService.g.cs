@@ -53,78 +53,82 @@ namespace Google.Cloud.Language.V2 {
             "ZW50GAMgASgLMiMuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLlNlbnRpbWVu",
             "dBITCgtwcm9iYWJpbGl0eRgEIAEoAiIwCgRUeXBlEhAKDFRZUEVfVU5LTk9X",
             "ThAAEgoKBlBST1BFUhABEgoKBkNPTU1PThACIjEKCFRleHRTcGFuEg8KB2Nv",
-            "bnRlbnQYASABKAkSFAoMYmVnaW5fb2Zmc2V0GAIgASgFIjoKFkNsYXNzaWZp",
+            "bnRlbnQYASABKAkSFAoMYmVnaW5fb2Zmc2V0GAIgASgFIlEKFkNsYXNzaWZp",
             "Y2F0aW9uQ2F0ZWdvcnkSDAoEbmFtZRgBIAEoCRISCgpjb25maWRlbmNlGAIg",
-            "ASgCIpMBChdBbmFseXplU2VudGltZW50UmVxdWVzdBI5Cghkb2N1bWVudBgB",
-            "IAEoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5Eb2N1bWVudEID4EEC",
-            "Ej0KDWVuY29kaW5nX3R5cGUYAiABKA4yJi5nb29nbGUuY2xvdWQubGFuZ3Vh",
-            "Z2UudjIuRW5jb2RpbmdUeXBlIsUBChhBbmFseXplU2VudGltZW50UmVzcG9u",
-            "c2USPwoSZG9jdW1lbnRfc2VudGltZW50GAEgASgLMiMuZ29vZ2xlLmNsb3Vk",
-            "Lmxhbmd1YWdlLnYyLlNlbnRpbWVudBIVCg1sYW5ndWFnZV9jb2RlGAIgASgJ",
-            "EjUKCXNlbnRlbmNlcxgDIAMoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52",
-            "Mi5TZW50ZW5jZRIaChJsYW5ndWFnZV9zdXBwb3J0ZWQYBCABKAgikgEKFkFu",
-            "YWx5emVFbnRpdGllc1JlcXVlc3QSOQoIZG9jdW1lbnQYASABKAsyIi5nb29n",
-            "bGUuY2xvdWQubGFuZ3VhZ2UudjIuRG9jdW1lbnRCA+BBAhI9Cg1lbmNvZGlu",
-            "Z190eXBlGAIgASgOMiYuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLkVuY29k",
-            "aW5nVHlwZSKAAQoXQW5hbHl6ZUVudGl0aWVzUmVzcG9uc2USMgoIZW50aXRp",
-            "ZXMYASADKAsyIC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuRW50aXR5EhUK",
-            "DWxhbmd1YWdlX2NvZGUYAiABKAkSGgoSbGFuZ3VhZ2Vfc3VwcG9ydGVkGAMg",
-            "ASgIIlAKE0NsYXNzaWZ5VGV4dFJlcXVlc3QSOQoIZG9jdW1lbnQYASABKAsy",
-            "Ii5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuRG9jdW1lbnRCA+BBAiKPAQoU",
-            "Q2xhc3NpZnlUZXh0UmVzcG9uc2USRAoKY2F0ZWdvcmllcxgBIAMoCzIwLmdv",
-            "b2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5",
-            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSGgoSbGFuZ3VhZ2Vfc3VwcG9ydGVk",
-            "GAMgASgIIlAKE01vZGVyYXRlVGV4dFJlcXVlc3QSOQoIZG9jdW1lbnQYASAB",
-            "KAsyIi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuRG9jdW1lbnRCA+BBAiKa",
-            "AQoUTW9kZXJhdGVUZXh0UmVzcG9uc2USTwoVbW9kZXJhdGlvbl9jYXRlZ29y",
-            "aWVzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLkNsYXNzaWZp",
-            "Y2F0aW9uQ2F0ZWdvcnkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIaChJsYW5n",
-            "dWFnZV9zdXBwb3J0ZWQYAyABKAgi6wIKE0Fubm90YXRlVGV4dFJlcXVlc3QS",
-            "OQoIZG9jdW1lbnQYASABKAsyIi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIu",
-            "RG9jdW1lbnRCA+BBAhJNCghmZWF0dXJlcxgCIAEoCzI2Lmdvb2dsZS5jbG91",
-            "ZC5sYW5ndWFnZS52Mi5Bbm5vdGF0ZVRleHRSZXF1ZXN0LkZlYXR1cmVzQgPg",
-            "QQISPQoNZW5jb2RpbmdfdHlwZRgDIAEoDjImLmdvb2dsZS5jbG91ZC5sYW5n",
-            "dWFnZS52Mi5FbmNvZGluZ1R5cGUaigEKCEZlYXR1cmVzEh0KEGV4dHJhY3Rf",
-            "ZW50aXRpZXMYASABKAhCA+BBARInChpleHRyYWN0X2RvY3VtZW50X3NlbnRp",
-            "bWVudBgCIAEoCEID4EEBEhoKDWNsYXNzaWZ5X3RleHQYBCABKAhCA+BBARIa",
-            "Cg1tb2RlcmF0ZV90ZXh0GAUgASgIQgPgQQEijAMKFEFubm90YXRlVGV4dFJl",
-            "c3BvbnNlEjUKCXNlbnRlbmNlcxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5sYW5n",
-            "dWFnZS52Mi5TZW50ZW5jZRIyCghlbnRpdGllcxgCIAMoCzIgLmdvb2dsZS5j",
-            "bG91ZC5sYW5ndWFnZS52Mi5FbnRpdHkSPwoSZG9jdW1lbnRfc2VudGltZW50",
-            "GAMgASgLMiMuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLlNlbnRpbWVudBIV",
-            "Cg1sYW5ndWFnZV9jb2RlGAQgASgJEkQKCmNhdGVnb3JpZXMYBSADKAsyMC5n",
-            "b29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuQ2xhc3NpZmljYXRpb25DYXRlZ29y",
-            "eRJPChVtb2RlcmF0aW9uX2NhdGVnb3JpZXMYBiADKAsyMC5nb29nbGUuY2xv",
-            "dWQubGFuZ3VhZ2UudjIuQ2xhc3NpZmljYXRpb25DYXRlZ29yeRIaChJsYW5n",
-            "dWFnZV9zdXBwb3J0ZWQYByABKAgqOAoMRW5jb2RpbmdUeXBlEggKBE5PTkUQ",
-            "ABIICgRVVEY4EAESCQoFVVRGMTYQAhIJCgVVVEYzMhADMrAICg9MYW5ndWFn",
-            "ZVNlcnZpY2USyAEKEEFuYWx5emVTZW50aW1lbnQSMS5nb29nbGUuY2xvdWQu",
-            "bGFuZ3VhZ2UudjIuQW5hbHl6ZVNlbnRpbWVudFJlcXVlc3QaMi5nb29nbGUu",
-            "Y2xvdWQubGFuZ3VhZ2UudjIuQW5hbHl6ZVNlbnRpbWVudFJlc3BvbnNlIk3a",
-            "QRZkb2N1bWVudCxlbmNvZGluZ190eXBl2kEIZG9jdW1lbnSC0+STAiMiHi92",
-            "Mi9kb2N1bWVudHM6YW5hbHl6ZVNlbnRpbWVudDoBKhLEAQoPQW5hbHl6ZUVu",
-            "dGl0aWVzEjAuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLkFuYWx5emVFbnRp",
-            "dGllc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuQW5hbHl6",
-            "ZUVudGl0aWVzUmVzcG9uc2UiTNpBFmRvY3VtZW50LGVuY29kaW5nX3R5cGXa",
-            "QQhkb2N1bWVudILT5JMCIiIdL3YyL2RvY3VtZW50czphbmFseXplRW50aXRp",
-            "ZXM6ASoSnwEKDENsYXNzaWZ5VGV4dBItLmdvb2dsZS5jbG91ZC5sYW5ndWFn",
-            "ZS52Mi5DbGFzc2lmeVRleHRSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmxhbmd1",
-            "YWdlLnYyLkNsYXNzaWZ5VGV4dFJlc3BvbnNlIjDaQQhkb2N1bWVudILT5JMC",
-            "HyIaL3YyL2RvY3VtZW50czpjbGFzc2lmeVRleHQ6ASoSnwEKDE1vZGVyYXRl",
-            "VGV4dBItLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5Nb2RlcmF0ZVRleHRS",
-            "ZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLk1vZGVyYXRlVGV4",
-            "dFJlc3BvbnNlIjDaQQhkb2N1bWVudILT5JMCHyIaL3YyL2RvY3VtZW50czpt",
-            "b2RlcmF0ZVRleHQ6ASoSygEKDEFubm90YXRlVGV4dBItLmdvb2dsZS5jbG91",
-            "ZC5sYW5ndWFnZS52Mi5Bbm5vdGF0ZVRleHRSZXF1ZXN0Gi4uZ29vZ2xlLmNs",
-            "b3VkLmxhbmd1YWdlLnYyLkFubm90YXRlVGV4dFJlc3BvbnNlIlvaQR9kb2N1",
-            "bWVudCxmZWF0dXJlcyxlbmNvZGluZ190eXBl2kERZG9jdW1lbnQsZmVhdHVy",
-            "ZXOC0+STAh8iGi92Mi9kb2N1bWVudHM6YW5ub3RhdGVUZXh0OgEqGnrKQRds",
-            "YW5ndWFnZS5nb29nbGVhcGlzLmNvbdJBXWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtbGFuZ3VhZ2UsaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJwChxjb20uZ29vZ2xlLmNs",
-            "b3VkLmxhbmd1YWdlLnYyQhRMYW5ndWFnZVNlcnZpY2VQcm90b1ABWjhjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2xhbmd1YWdlL2FwaXYyL2xhbmd1YWdlcGI7bGFu",
-            "Z3VhZ2VwYmIGcHJvdG8z"));
+            "ASgCEhUKCHNldmVyaXR5GAMgASgCQgPgQQEikwEKF0FuYWx5emVTZW50aW1l",
+            "bnRSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYyLkRvY3VtZW50QgPgQQISPQoNZW5jb2RpbmdfdHlwZRgCIAEo",
+            "DjImLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5FbmNvZGluZ1R5cGUixQEK",
+            "GEFuYWx5emVTZW50aW1lbnRSZXNwb25zZRI/ChJkb2N1bWVudF9zZW50aW1l",
+            "bnQYASABKAsyIy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuU2VudGltZW50",
+            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSNQoJc2VudGVuY2VzGAMgAygLMiIu",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLlNlbnRlbmNlEhoKEmxhbmd1YWdl",
+            "X3N1cHBvcnRlZBgEIAEoCCKSAQoWQW5hbHl6ZUVudGl0aWVzUmVxdWVzdBI5",
+            "Cghkb2N1bWVudBgBIAEoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5E",
+            "b2N1bWVudEID4EECEj0KDWVuY29kaW5nX3R5cGUYAiABKA4yJi5nb29nbGUu",
+            "Y2xvdWQubGFuZ3VhZ2UudjIuRW5jb2RpbmdUeXBlIoABChdBbmFseXplRW50",
+            "aXRpZXNSZXNwb25zZRIyCghlbnRpdGllcxgBIAMoCzIgLmdvb2dsZS5jbG91",
+            "ZC5sYW5ndWFnZS52Mi5FbnRpdHkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIa",
+            "ChJsYW5ndWFnZV9zdXBwb3J0ZWQYAyABKAgiUAoTQ2xhc3NpZnlUZXh0UmVx",
+            "dWVzdBI5Cghkb2N1bWVudBgBIAEoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFn",
+            "ZS52Mi5Eb2N1bWVudEID4EECIo8BChRDbGFzc2lmeVRleHRSZXNwb25zZRJE",
+            "CgpjYXRlZ29yaWVzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYy",
+            "LkNsYXNzaWZpY2F0aW9uQ2F0ZWdvcnkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEo",
+            "CRIaChJsYW5ndWFnZV9zdXBwb3J0ZWQYAyABKAgigQIKE01vZGVyYXRlVGV4",
+            "dFJlcXVlc3QSOQoIZG9jdW1lbnQYASABKAsyIi5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjIuRG9jdW1lbnRCA+BBAhJWCg1tb2RlbF92ZXJzaW9uGAIgASgO",
+            "MjouZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLk1vZGVyYXRlVGV4dFJlcXVl",
+            "c3QuTW9kZWxWZXJzaW9uQgPgQQEiVwoMTW9kZWxWZXJzaW9uEh0KGU1PREVM",
+            "X1ZFUlNJT05fVU5TUEVDSUZJRUQQABITCg9NT0RFTF9WRVJTSU9OXzEQARIT",
+            "Cg9NT0RFTF9WRVJTSU9OXzIQAiKaAQoUTW9kZXJhdGVUZXh0UmVzcG9uc2US",
+            "TwoVbW9kZXJhdGlvbl9jYXRlZ29yaWVzGAEgAygLMjAuZ29vZ2xlLmNsb3Vk",
+            "Lmxhbmd1YWdlLnYyLkNsYXNzaWZpY2F0aW9uQ2F0ZWdvcnkSFQoNbGFuZ3Vh",
+            "Z2VfY29kZRgCIAEoCRIaChJsYW5ndWFnZV9zdXBwb3J0ZWQYAyABKAgi6wIK",
+            "E0Fubm90YXRlVGV4dFJlcXVlc3QSOQoIZG9jdW1lbnQYASABKAsyIi5nb29n",
+            "bGUuY2xvdWQubGFuZ3VhZ2UudjIuRG9jdW1lbnRCA+BBAhJNCghmZWF0dXJl",
+            "cxgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5Bbm5vdGF0ZVRl",
+            "eHRSZXF1ZXN0LkZlYXR1cmVzQgPgQQISPQoNZW5jb2RpbmdfdHlwZRgDIAEo",
+            "DjImLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5FbmNvZGluZ1R5cGUaigEK",
+            "CEZlYXR1cmVzEh0KEGV4dHJhY3RfZW50aXRpZXMYASABKAhCA+BBARInChpl",
+            "eHRyYWN0X2RvY3VtZW50X3NlbnRpbWVudBgCIAEoCEID4EEBEhoKDWNsYXNz",
+            "aWZ5X3RleHQYBCABKAhCA+BBARIaCg1tb2RlcmF0ZV90ZXh0GAUgASgIQgPg",
+            "QQEijAMKFEFubm90YXRlVGV4dFJlc3BvbnNlEjUKCXNlbnRlbmNlcxgBIAMo",
+            "CzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5TZW50ZW5jZRIyCghlbnRp",
+            "dGllcxgCIAMoCzIgLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5FbnRpdHkS",
+            "PwoSZG9jdW1lbnRfc2VudGltZW50GAMgASgLMiMuZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYyLlNlbnRpbWVudBIVCg1sYW5ndWFnZV9jb2RlGAQgASgJEkQK",
+            "CmNhdGVnb3JpZXMYBSADKAsyMC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIu",
+            "Q2xhc3NpZmljYXRpb25DYXRlZ29yeRJPChVtb2RlcmF0aW9uX2NhdGVnb3Jp",
+            "ZXMYBiADKAsyMC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuQ2xhc3NpZmlj",
+            "YXRpb25DYXRlZ29yeRIaChJsYW5ndWFnZV9zdXBwb3J0ZWQYByABKAgqOAoM",
+            "RW5jb2RpbmdUeXBlEggKBE5PTkUQABIICgRVVEY4EAESCQoFVVRGMTYQAhIJ",
+            "CgVVVEYzMhADMrAICg9MYW5ndWFnZVNlcnZpY2USyAEKEEFuYWx5emVTZW50",
+            "aW1lbnQSMS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuQW5hbHl6ZVNlbnRp",
+            "bWVudFJlcXVlc3QaMi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjIuQW5hbHl6",
+            "ZVNlbnRpbWVudFJlc3BvbnNlIk3aQRZkb2N1bWVudCxlbmNvZGluZ190eXBl",
+            "2kEIZG9jdW1lbnSC0+STAiMiHi92Mi9kb2N1bWVudHM6YW5hbHl6ZVNlbnRp",
+            "bWVudDoBKhLEAQoPQW5hbHl6ZUVudGl0aWVzEjAuZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYyLkFuYWx5emVFbnRpdGllc1JlcXVlc3QaMS5nb29nbGUuY2xv",
+            "dWQubGFuZ3VhZ2UudjIuQW5hbHl6ZUVudGl0aWVzUmVzcG9uc2UiTNpBFmRv",
+            "Y3VtZW50LGVuY29kaW5nX3R5cGXaQQhkb2N1bWVudILT5JMCIiIdL3YyL2Rv",
+            "Y3VtZW50czphbmFseXplRW50aXRpZXM6ASoSnwEKDENsYXNzaWZ5VGV4dBIt",
+            "Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5DbGFzc2lmeVRleHRSZXF1ZXN0",
+            "Gi4uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLkNsYXNzaWZ5VGV4dFJlc3Bv",
+            "bnNlIjDaQQhkb2N1bWVudILT5JMCHyIaL3YyL2RvY3VtZW50czpjbGFzc2lm",
+            "eVRleHQ6ASoSnwEKDE1vZGVyYXRlVGV4dBItLmdvb2dsZS5jbG91ZC5sYW5n",
+            "dWFnZS52Mi5Nb2RlcmF0ZVRleHRSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYyLk1vZGVyYXRlVGV4dFJlc3BvbnNlIjDaQQhkb2N1bWVudILT",
+            "5JMCHyIaL3YyL2RvY3VtZW50czptb2RlcmF0ZVRleHQ6ASoSygEKDEFubm90",
+            "YXRlVGV4dBItLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52Mi5Bbm5vdGF0ZVRl",
+            "eHRSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyLkFubm90YXRl",
+            "VGV4dFJlc3BvbnNlIlvaQR9kb2N1bWVudCxmZWF0dXJlcyxlbmNvZGluZ190",
+            "eXBl2kERZG9jdW1lbnQsZmVhdHVyZXOC0+STAh8iGi92Mi9kb2N1bWVudHM6",
+            "YW5ub3RhdGVUZXh0OgEqGnrKQRdsYW5ndWFnZS5nb29nbGVhcGlzLmNvbdJB",
+            "XWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtbGFuZ3Vh",
+            "Z2UsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybUJwChxjb20uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYyQhRMYW5ndWFn",
+            "ZVNlcnZpY2VQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2xhbmd1YWdl",
+            "L2FwaXYyL2xhbmd1YWdlcGI7bGFuZ3VhZ2VwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V2.EncodingType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -134,14 +138,14 @@ namespace Google.Cloud.Language.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.Sentiment), global::Google.Cloud.Language.V2.Sentiment.Parser, new[]{ "Magnitude", "Score" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.EntityMention), global::Google.Cloud.Language.V2.EntityMention.Parser, new[]{ "Text", "Type", "Sentiment", "Probability" }, null, new[]{ typeof(global::Google.Cloud.Language.V2.EntityMention.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.TextSpan), global::Google.Cloud.Language.V2.TextSpan.Parser, new[]{ "Content", "BeginOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ClassificationCategory), global::Google.Cloud.Language.V2.ClassificationCategory.Parser, new[]{ "Name", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ClassificationCategory), global::Google.Cloud.Language.V2.ClassificationCategory.Parser, new[]{ "Name", "Confidence", "Severity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnalyzeSentimentRequest), global::Google.Cloud.Language.V2.AnalyzeSentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnalyzeSentimentResponse), global::Google.Cloud.Language.V2.AnalyzeSentimentResponse.Parser, new[]{ "DocumentSentiment", "LanguageCode", "Sentences", "LanguageSupported" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnalyzeEntitiesRequest), global::Google.Cloud.Language.V2.AnalyzeEntitiesRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnalyzeEntitiesResponse), global::Google.Cloud.Language.V2.AnalyzeEntitiesResponse.Parser, new[]{ "Entities", "LanguageCode", "LanguageSupported" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ClassifyTextRequest), global::Google.Cloud.Language.V2.ClassifyTextRequest.Parser, new[]{ "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ClassifyTextResponse), global::Google.Cloud.Language.V2.ClassifyTextResponse.Parser, new[]{ "Categories", "LanguageCode", "LanguageSupported" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ModerateTextRequest), global::Google.Cloud.Language.V2.ModerateTextRequest.Parser, new[]{ "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ModerateTextRequest), global::Google.Cloud.Language.V2.ModerateTextRequest.Parser, new[]{ "Document", "ModelVersion" }, null, new[]{ typeof(global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.ModerateTextResponse), global::Google.Cloud.Language.V2.ModerateTextResponse.Parser, new[]{ "ModerationCategories", "LanguageCode", "LanguageSupported" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnnotateTextRequest), global::Google.Cloud.Language.V2.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V2.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractEntities", "ExtractDocumentSentiment", "ClassifyText", "ModerateText" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V2.AnnotateTextResponse), global::Google.Cloud.Language.V2.AnnotateTextResponse.Parser, new[]{ "Sentences", "Entities", "DocumentSentiment", "LanguageCode", "Categories", "ModerationCategories", "LanguageSupported" }, null, null, null, null)
@@ -950,8 +954,7 @@ namespace Google.Cloud.Language.V2 {
     /// <summary>
     /// Metadata associated with the entity.
     ///
-    /// For most entity types, the metadata is a Wikipedia URL (`wikipedia_url`)
-    /// and Knowledge Graph MID (`mid`), if they are available. For the metadata
+    /// For the metadata
     /// associated with other entity types, see the Type table below.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1215,8 +1218,7 @@ namespace Google.Cloud.Language.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The type of the entity. For most entity types, the associated metadata is a
-      /// Wikipedia URL (`wikipedia_url`) and Knowledge Graph MID (`mid`). The table
+      /// The type of the entity. The table
       /// below lists the associated fields for entities that have different
       /// metadata.
       /// </summary>
@@ -1277,7 +1279,7 @@ namespace Google.Cloud.Language.V2 {
         /// * `locality` - city or town
         /// * `street_name` - street/route name, if detected
         /// * `postal_code` - postal code, if detected
-        /// * `country` - country, if detected&lt;
+        /// * `country` - country, if detected
         /// * `broad_region` - administrative area, such as the state, if detected
         /// * `narrow_region` - smaller administrative area, such as county, if
         /// detected
@@ -2200,6 +2202,7 @@ namespace Google.Cloud.Language.V2 {
     public ClassificationCategory(ClassificationCategory other) : this() {
       name_ = other.name_;
       confidence_ = other.confidence_;
+      severity_ = other.severity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2240,6 +2243,23 @@ namespace Google.Cloud.Language.V2 {
       }
     }
 
+    /// <summary>Field number for the "severity" field.</summary>
+    public const int SeverityFieldNumber = 3;
+    private float severity_;
+    /// <summary>
+    /// Optional. The classifier's severity of the category. This is only present
+    /// when the ModerateTextRequest.ModelVersion is set to MODEL_VERSION_2, and
+    /// the corresponding category has a severity score.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Severity {
+      get { return severity_; }
+      set {
+        severity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2257,6 +2277,7 @@ namespace Google.Cloud.Language.V2 {
       }
       if (Name != other.Name) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Severity, other.Severity)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2266,6 +2287,7 @@ namespace Google.Cloud.Language.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
+      if (Severity != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Severity);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2292,6 +2314,10 @@ namespace Google.Cloud.Language.V2 {
         output.WriteRawTag(21);
         output.WriteFloat(Confidence);
       }
+      if (Severity != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2310,6 +2336,10 @@ namespace Google.Cloud.Language.V2 {
         output.WriteRawTag(21);
         output.WriteFloat(Confidence);
       }
+      if (Severity != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2324,6 +2354,9 @@ namespace Google.Cloud.Language.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (Confidence != 0F) {
+        size += 1 + 4;
+      }
+      if (Severity != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -2343,6 +2376,9 @@ namespace Google.Cloud.Language.V2 {
       }
       if (other.Confidence != 0F) {
         Confidence = other.Confidence;
+      }
+      if (other.Severity != 0F) {
+        Severity = other.Severity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2367,6 +2403,10 @@ namespace Google.Cloud.Language.V2 {
             Confidence = input.ReadFloat();
             break;
           }
+          case 29: {
+            Severity = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -2388,6 +2428,10 @@ namespace Google.Cloud.Language.V2 {
           }
           case 21: {
             Confidence = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Severity = input.ReadFloat();
             break;
           }
         }
@@ -3987,6 +4031,7 @@ namespace Google.Cloud.Language.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModerateTextRequest(ModerateTextRequest other) : this() {
       document_ = other.document_ != null ? other.document_.Clone() : null;
+      modelVersion_ = other.modelVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4011,6 +4056,21 @@ namespace Google.Cloud.Language.V2 {
       }
     }
 
+    /// <summary>Field number for the "model_version" field.</summary>
+    public const int ModelVersionFieldNumber = 2;
+    private global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion modelVersion_ = global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion.Unspecified;
+    /// <summary>
+    /// Optional. The model version to use for ModerateText.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion ModelVersion {
+      get { return modelVersion_; }
+      set {
+        modelVersion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4027,6 +4087,7 @@ namespace Google.Cloud.Language.V2 {
         return true;
       }
       if (!object.Equals(Document, other.Document)) return false;
+      if (ModelVersion != other.ModelVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4035,6 +4096,7 @@ namespace Google.Cloud.Language.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
+      if (ModelVersion != global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion.Unspecified) hash ^= ModelVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4057,6 +4119,10 @@ namespace Google.Cloud.Language.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
+      if (ModelVersion != global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ModelVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4071,6 +4137,10 @@ namespace Google.Cloud.Language.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
+      if (ModelVersion != global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ModelVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4083,6 +4153,9 @@ namespace Google.Cloud.Language.V2 {
       int size = 0;
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      }
+      if (ModelVersion != global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4101,6 +4174,9 @@ namespace Google.Cloud.Language.V2 {
           Document = new global::Google.Cloud.Language.V2.Document();
         }
         Document.MergeFrom(other.Document);
+      }
+      if (other.ModelVersion != global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion.Unspecified) {
+        ModelVersion = other.ModelVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4122,6 +4198,10 @@ namespace Google.Cloud.Language.V2 {
               Document = new global::Google.Cloud.Language.V2.Document();
             }
             input.ReadMessage(Document);
+            break;
+          }
+          case 16: {
+            ModelVersion = (global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion) input.ReadEnum();
             break;
           }
         }
@@ -4146,10 +4226,44 @@ namespace Google.Cloud.Language.V2 {
             input.ReadMessage(Document);
             break;
           }
+          case 16: {
+            ModelVersion = (global::Google.Cloud.Language.V2.ModerateTextRequest.Types.ModelVersion) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ModerateTextRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The model version to use for ModerateText.
+      /// </summary>
+      public enum ModelVersion {
+        /// <summary>
+        /// The default model version.
+        /// </summary>
+        [pbr::OriginalName("MODEL_VERSION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Use the v1 model, this model is used by default when not provided.
+        /// The v1 model only returns probability (confidence) score for each
+        /// category.
+        /// </summary>
+        [pbr::OriginalName("MODEL_VERSION_1")] _1 = 1,
+        /// <summary>
+        /// Use the v2 model.
+        /// The v2 model only returns probability (confidence) score for each
+        /// category, and returns severity score for a subset of the categories.
+        /// </summary>
+        [pbr::OriginalName("MODEL_VERSION_2")] _2 = 2,
+      }
+
+    }
+    #endregion
 
   }
 
