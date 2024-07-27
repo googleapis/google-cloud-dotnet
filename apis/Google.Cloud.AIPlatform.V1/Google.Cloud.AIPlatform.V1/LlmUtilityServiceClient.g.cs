@@ -274,7 +274,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token counting call.
+        /// Optional. The instances that are the input to token counting call.
         /// Schema is identical to the prediction schema of the underlying model.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -285,7 +285,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -298,7 +298,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token counting call.
+        /// Optional. The instances that are the input to token counting call.
         /// Schema is identical to the prediction schema of the underlying model.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -309,7 +309,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -322,7 +322,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token counting call.
+        /// Optional. The instances that are the input to token counting call.
         /// Schema is identical to the prediction schema of the underlying model.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -339,7 +339,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token counting call.
+        /// Optional. The instances that are the input to token counting call.
         /// Schema is identical to the prediction schema of the underlying model.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -350,7 +350,7 @@ namespace Google.Cloud.AIPlatform.V1
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -363,7 +363,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token counting call.
+        /// Optional. The instances that are the input to token counting call.
         /// Schema is identical to the prediction schema of the underlying model.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -374,7 +374,7 @@ namespace Google.Cloud.AIPlatform.V1
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
                 Instances =
                 {
-                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                    instances ?? linq::Enumerable.Empty<wkt::Value>(),
                 },
             }, callSettings);
 
@@ -387,7 +387,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="instances">
-        /// Required. The instances that are the input to token counting call.
+        /// Optional. The instances that are the input to token counting call.
         /// Schema is identical to the prediction schema of the underlying model.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

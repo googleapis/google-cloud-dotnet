@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 PublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
                 LanguageCode = "",
                 View = PublisherModelView.Unspecified,
+                IsHuggingFaceModel = false,
             };
             // Make the request
             PublisherModel response = modelGardenServiceClient.GetPublisherModel(request);

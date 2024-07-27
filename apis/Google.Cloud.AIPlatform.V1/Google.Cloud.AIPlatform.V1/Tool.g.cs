@@ -40,23 +40,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             "DEZ1bmN0aW9uQ2FsbBIRCgRuYW1lGAEgASgJQgPgQQISKgoEYXJncxgCIAEo",
             "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBASJVChBGdW5jdGlvblJl",
             "c3BvbnNlEhEKBG5hbWUYASABKAlCA+BBAhIuCghyZXNwb25zZRgCIAEoCzIX",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAiJ/CglSZXRyaWV2YWwSRgoQ",
-            "dmVydGV4X2FpX3NlYXJjaBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLlZlcnRleEFJU2VhcmNoSAASIAoTZGlzYWJsZV9hdHRyaWJ1dGlv",
-            "bhgDIAEoCEID4EEBQggKBnNvdXJjZSIoCg5WZXJ0ZXhBSVNlYXJjaBIWCglk",
-            "YXRhc3RvcmUYASABKAlCA+BBAiIXChVHb29nbGVTZWFyY2hSZXRyaWV2YWwi",
-            "ZQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZpZxgBIAEo",
-            "CzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGlu",
-            "Z0NvbmZpZ0ID4EEBIsIBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSSQoEbW9k",
-            "ZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9u",
-            "Q2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoWYWxsb3dlZF9mdW5jdGlvbl9u",
-            "YW1lcxgCIAMoCUID4EEBIjkKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAA",
-            "EggKBEFVVE8QARIHCgNBTlkQAhIICgROT05FEANCxwEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIJVG9vbFByb3RvUAFaPmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
-            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
-            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
-            "cm06OlYxYgZwcm90bzM="));
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAiKBAQoJUmV0cmlldmFsEkYK",
+            "EHZlcnRleF9haV9zZWFyY2gYAiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5WZXJ0ZXhBSVNlYXJjaEgAEiIKE2Rpc2FibGVfYXR0cmlidXRp",
+            "b24YAyABKAhCBRgB4EEBQggKBnNvdXJjZSIoCg5WZXJ0ZXhBSVNlYXJjaBIW",
+            "CglkYXRhc3RvcmUYASABKAlCA+BBAiIXChVHb29nbGVTZWFyY2hSZXRyaWV2",
+            "YWwiZQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZpZxgB",
+            "IAEoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uQ2Fs",
+            "bGluZ0NvbmZpZ0ID4EEBIsIBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSSQoE",
+            "bW9kZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0",
+            "aW9uQ2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoWYWxsb3dlZF9mdW5jdGlv",
+            "bl9uYW1lcxgCIAMoCUID4EEBIjkKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklF",
+            "RBAAEggKBEFVVE8QARIHCgNBTlkQAhIICgROT05FEANCxwEKHmNvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIJVG9vbFByb3RvUAFaPmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
+            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1252,10 +1252,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int DisableAttributionFieldNumber = 3;
     private bool disableAttribution_;
     /// <summary>
-    /// Optional. Disable using the result from this tool in detecting grounding
-    /// attribution. This does not affect how the result is given to the model for
-    /// generation.
+    /// Optional. Deprecated. This option is no longer supported.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableAttribution {

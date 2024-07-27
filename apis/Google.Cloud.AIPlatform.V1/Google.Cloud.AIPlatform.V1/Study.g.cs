@@ -1596,9 +1596,6 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   }
 
-  /// <summary>
-  /// Next ID: 3
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrialContext : pb::IMessage<TrialContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

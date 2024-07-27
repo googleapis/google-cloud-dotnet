@@ -1399,10 +1399,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     /// Updatable fields:
     ///
-    ///   * `big_query_source`
-    ///   * `bigtable`
     ///   * `labels`
-    ///   * `sync_config`
+    ///   * `description`
+    ///   * `bigtable`
+    ///   * `bigtable.auto_scaling`
+    ///   * `bigtable.enable_multi_region_replica`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3068,7 +3069,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Updatable fields:
     ///
     ///   * `labels`
-    ///   * `serviceAgentType`
+    ///   * `service_agent_type`
+    ///   * `big_query_source`
+    ///   * `big_query_source.uri`
+    ///   * `big_query_source.entity_id_columns`
+    ///   * `feature_registry_source`
+    ///   * `feature_registry_source.feature_groups`
+    ///   * `sync_config`
+    ///   * `sync_config.cron`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

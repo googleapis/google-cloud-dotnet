@@ -1332,6 +1332,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Updatable fields:
     ///
     ///   * `labels`
+    ///   * `description`
+    ///   * `big_query`
+    ///   * `big_query.entity_id_columns`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

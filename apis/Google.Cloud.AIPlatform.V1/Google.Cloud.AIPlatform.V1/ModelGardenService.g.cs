@@ -29,30 +29,31 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
             "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
             "YXBpL3Jlc291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
-            "MS9wdWJsaXNoZXJfbW9kZWwucHJvdG8iuQEKGEdldFB1Ymxpc2hlck1vZGVs",
+            "MS9wdWJsaXNoZXJfbW9kZWwucHJvdG8i3QEKGEdldFB1Ymxpc2hlck1vZGVs",
             "UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGFpcGxhdGZvcm0uZ29v",
             "Z2xlYXBpcy5jb20vUHVibGlzaGVyTW9kZWwSGgoNbGFuZ3VhZ2VfY29kZRgC",
             "IAEoCUID4EEBEkEKBHZpZXcYAyABKA4yLi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5QdWJsaXNoZXJNb2RlbFZpZXdCA+BBASqhAQoSUHVibGlzaGVy",
-            "TW9kZWxWaWV3EiQKIFBVQkxJU0hFUl9NT0RFTF9WSUVXX1VOU1BFQ0lGSUVE",
-            "EAASHgoaUFVCTElTSEVSX01PREVMX1ZJRVdfQkFTSUMQARIdChlQVUJMSVNI",
-            "RVJfTU9ERUxfVklFV19GVUxMEAISJgoiUFVCTElTSEVSX01PREVMX1ZFUlNJ",
-            "T05fVklFV19CQVNJQxADMowCChJNb2RlbEdhcmRlblNlcnZpY2USpgEKEUdl",
-            "dFB1Ymxpc2hlck1vZGVsEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "R2V0UHVibGlzaGVyTW9kZWxSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuUHVibGlzaGVyTW9kZWwiL9pBBG5hbWWC0+STAiISIC92MS97",
-            "bmFtZT1wdWJsaXNoZXJzLyovbW9kZWxzLyp9Gk3KQRlhaXBsYXRmb3JtLmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxQhdNb2RlbEdhcmRlblNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29n",
-            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxh",
-            "dGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
-            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
-            "b3JtOjpWMWIGcHJvdG8z"));
+            "Zm9ybS52MS5QdWJsaXNoZXJNb2RlbFZpZXdCA+BBARIiChVpc19odWdnaW5n",
+            "X2ZhY2VfbW9kZWwYBSABKAhCA+BBASqhAQoSUHVibGlzaGVyTW9kZWxWaWV3",
+            "EiQKIFBVQkxJU0hFUl9NT0RFTF9WSUVXX1VOU1BFQ0lGSUVEEAASHgoaUFVC",
+            "TElTSEVSX01PREVMX1ZJRVdfQkFTSUMQARIdChlQVUJMSVNIRVJfTU9ERUxf",
+            "VklFV19GVUxMEAISJgoiUFVCTElTSEVSX01PREVMX1ZFUlNJT05fVklFV19C",
+            "QVNJQxADMowCChJNb2RlbEdhcmRlblNlcnZpY2USpgEKEUdldFB1Ymxpc2hl",
+            "ck1vZGVsEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0UHVibGlz",
+            "aGVyTW9kZWxSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "UHVibGlzaGVyTW9kZWwiL9pBBG5hbWWC0+STAiISIC92MS97bmFtZT1wdWJs",
+            "aXNoZXJzLyovbW9kZWxzLyp9Gk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
+            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhdN",
+            "b2RlbEdhcmRlblNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
+            "L2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
+            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
+            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PublisherModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PublisherModelView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest), global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest.Parser, new[]{ "Name", "LanguageCode", "View" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest), global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest.Parser, new[]{ "Name", "LanguageCode", "View", "IsHuggingFaceModel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -127,6 +128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       name_ = other.name_;
       languageCode_ = other.languageCode_;
       view_ = other.view_;
+      isHuggingFaceModel_ = other.isHuggingFaceModel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -158,7 +160,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string languageCode_ = "";
     /// <summary>
     /// Optional. The IETF BCP-47 language code representing the language in which
-    /// the publisher model's text information should be written in (see go/bcp47).
+    /// the publisher model's text information should be written in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,6 +186,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "is_hugging_face_model" field.</summary>
+    public const int IsHuggingFaceModelFieldNumber = 5;
+    private bool isHuggingFaceModel_;
+    /// <summary>
+    /// Optional. Boolean indicates whether the requested model is a Hugging Face
+    /// model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsHuggingFaceModel {
+      get { return isHuggingFaceModel_; }
+      set {
+        isHuggingFaceModel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -202,6 +220,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Name != other.Name) return false;
       if (LanguageCode != other.LanguageCode) return false;
       if (View != other.View) return false;
+      if (IsHuggingFaceModel != other.IsHuggingFaceModel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -212,6 +231,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (View != global::Google.Cloud.AIPlatform.V1.PublisherModelView.Unspecified) hash ^= View.GetHashCode();
+      if (IsHuggingFaceModel != false) hash ^= IsHuggingFaceModel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -242,6 +262,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) View);
       }
+      if (IsHuggingFaceModel != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsHuggingFaceModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -264,6 +288,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) View);
       }
+      if (IsHuggingFaceModel != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsHuggingFaceModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -282,6 +310,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (View != global::Google.Cloud.AIPlatform.V1.PublisherModelView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
+      }
+      if (IsHuggingFaceModel != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -303,6 +334,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.View != global::Google.Cloud.AIPlatform.V1.PublisherModelView.Unspecified) {
         View = other.View;
+      }
+      if (other.IsHuggingFaceModel != false) {
+        IsHuggingFaceModel = other.IsHuggingFaceModel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -331,6 +365,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             View = (global::Google.Cloud.AIPlatform.V1.PublisherModelView) input.ReadEnum();
             break;
           }
+          case 40: {
+            IsHuggingFaceModel = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -356,6 +394,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 24: {
             View = (global::Google.Cloud.AIPlatform.V1.PublisherModelView) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            IsHuggingFaceModel = input.ReadBool();
             break;
           }
         }

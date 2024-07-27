@@ -40475,12 +40475,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 50,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 48,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -40524,12 +40524,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 51,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 49,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -51220,12 +51220,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -51269,12 +51269,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -59998,6 +59998,1218 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookExecutionJob_sync",
+      "title": "CreateNotebookExecutionJobRequestObject",
+      "description": "Snippet for CreateNotebookExecutionJob",
+      "file": "NotebookServiceClient.CreateNotebookExecutionJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookExecutionJob, Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookExecutionJob_async",
+      "title": "CreateNotebookExecutionJobRequestObjectAsync",
+      "description": "Snippet for CreateNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.CreateNotebookExecutionJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookExecutionJob, Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookExecutionJob_sync_flattened",
+      "title": "CreateNotebookExecutionJob",
+      "description": "Snippet for CreateNotebookExecutionJob",
+      "file": "NotebookServiceClient.CreateNotebookExecutionJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+            "name": "notebookExecutionJob"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookExecutionJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookExecutionJob, Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookExecutionJob_async_flattened",
+      "title": "CreateNotebookExecutionJobAsync",
+      "description": "Snippet for CreateNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.CreateNotebookExecutionJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+            "name": "notebookExecutionJob"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookExecutionJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookExecutionJob, Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookExecutionJob_sync_flattened_resourceNames",
+      "title": "CreateNotebookExecutionJobResourceNames",
+      "description": "Snippet for CreateNotebookExecutionJob",
+      "file": "NotebookServiceClient.CreateNotebookExecutionJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+            "name": "notebookExecutionJob"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookExecutionJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookExecutionJob, Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookExecutionJob_async_flattened_resourceNames",
+      "title": "CreateNotebookExecutionJobResourceNamesAsync",
+      "description": "Snippet for CreateNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.CreateNotebookExecutionJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+            "name": "notebookExecutionJob"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookExecutionJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookExecutionJob, Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_sync",
+      "title": "GetNotebookExecutionJobRequestObject",
+      "description": "Snippet for GetNotebookExecutionJob",
+      "file": "NotebookServiceClient.GetNotebookExecutionJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetNotebookExecutionJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_async",
+      "title": "GetNotebookExecutionJobRequestObjectAsync",
+      "description": "Snippet for GetNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.GetNotebookExecutionJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetNotebookExecutionJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_sync_flattened",
+      "title": "GetNotebookExecutionJob",
+      "description": "Snippet for GetNotebookExecutionJob",
+      "file": "NotebookServiceClient.GetNotebookExecutionJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_async_flattened",
+      "title": "GetNotebookExecutionJobAsync",
+      "description": "Snippet for GetNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.GetNotebookExecutionJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_sync_flattened_resourceNames",
+      "title": "GetNotebookExecutionJobResourceNames",
+      "description": "Snippet for GetNotebookExecutionJob",
+      "file": "NotebookServiceClient.GetNotebookExecutionJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookExecutionJob",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_async_flattened_resourceNames",
+      "title": "GetNotebookExecutionJobResourceNamesAsync",
+      "description": "Snippet for GetNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.GetNotebookExecutionJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookExecutionJobs_sync",
+      "title": "ListNotebookExecutionJobsRequestObject",
+      "description": "Snippet for ListNotebookExecutionJobs",
+      "file": "NotebookServiceClient.ListNotebookExecutionJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookExecutionJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookExecutionJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse, Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookExecutionJobs",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookExecutionJobs",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookExecutionJobs_async",
+      "title": "ListNotebookExecutionJobsRequestObjectAsync",
+      "description": "Snippet for ListNotebookExecutionJobsAsync",
+      "file": "NotebookServiceClient.ListNotebookExecutionJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookExecutionJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookExecutionJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse, Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookExecutionJobs",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookExecutionJobs",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookExecutionJobs_sync_flattened",
+      "title": "ListNotebookExecutionJobs",
+      "description": "Snippet for ListNotebookExecutionJobs",
+      "file": "NotebookServiceClient.ListNotebookExecutionJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookExecutionJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookExecutionJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse, Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookExecutionJobs",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookExecutionJobs",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookExecutionJobs_async_flattened",
+      "title": "ListNotebookExecutionJobsAsync",
+      "description": "Snippet for ListNotebookExecutionJobsAsync",
+      "file": "NotebookServiceClient.ListNotebookExecutionJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookExecutionJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookExecutionJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse, Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookExecutionJobs",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookExecutionJobs",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookExecutionJobs_sync_flattened_resourceNames",
+      "title": "ListNotebookExecutionJobsResourceNames",
+      "description": "Snippet for ListNotebookExecutionJobs",
+      "file": "NotebookServiceClient.ListNotebookExecutionJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookExecutionJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookExecutionJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse, Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookExecutionJobs",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookExecutionJobs",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookExecutionJobs_async_flattened_resourceNames",
+      "title": "ListNotebookExecutionJobsResourceNamesAsync",
+      "description": "Snippet for ListNotebookExecutionJobsAsync",
+      "file": "NotebookServiceClient.ListNotebookExecutionJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookExecutionJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookExecutionJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse, Google.Cloud.AIPlatform.V1.NotebookExecutionJob>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookExecutionJobs",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookExecutionJobs",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookExecutionJob_sync",
+      "title": "DeleteNotebookExecutionJobRequestObject",
+      "description": "Snippet for DeleteNotebookExecutionJob",
+      "file": "NotebookServiceClient.DeleteNotebookExecutionJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteNotebookExecutionJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookExecutionJob_async",
+      "title": "DeleteNotebookExecutionJobRequestObjectAsync",
+      "description": "Snippet for DeleteNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.DeleteNotebookExecutionJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteNotebookExecutionJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookExecutionJob_sync_flattened",
+      "title": "DeleteNotebookExecutionJob",
+      "description": "Snippet for DeleteNotebookExecutionJob",
+      "file": "NotebookServiceClient.DeleteNotebookExecutionJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookExecutionJob_async_flattened",
+      "title": "DeleteNotebookExecutionJobAsync",
+      "description": "Snippet for DeleteNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.DeleteNotebookExecutionJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookExecutionJob_sync_flattened_resourceNames",
+      "title": "DeleteNotebookExecutionJobResourceNames",
+      "description": "Snippet for DeleteNotebookExecutionJob",
+      "file": "NotebookServiceClient.DeleteNotebookExecutionJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookExecutionJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookExecutionJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookExecutionJob_async_flattened_resourceNames",
+      "title": "DeleteNotebookExecutionJobResourceNamesAsync",
+      "description": "Snippet for DeleteNotebookExecutionJobAsync",
+      "file": "NotebookServiceClient.DeleteNotebookExecutionJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookExecutionJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookExecutionJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookExecutionJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookExecutionJob",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookExecutionJob",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]
