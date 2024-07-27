@@ -20,7 +20,7 @@
      - this binary refers to. Without this, we end up loading the netstandard2.0 TFM
      - for libraries which target that, and that then fails to use the channel.
      -->
-    <PackageReference Include="Grpc.Net.Client" Version="2.61.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.65.0" />
   </ItemGroup>
 
 </Project>
